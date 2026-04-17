@@ -17,6 +17,12 @@
   --slate:#A0A0B8;
   --text:#1a1535;
   --muted:#777;
+  --color-maths:#D4573E;
+  --color-biology:#2E7D32;
+  --color-chemistry:#1565C0;
+  --color-physics:#6A3D6A;
+  --color-english:#8B4513;
+  --color-history:#C4622D;
 }
 *{margin:0;padding:0;box-sizing:border-box}
 html{scroll-behavior:smooth}
@@ -28,6 +34,9 @@ body{
   line-height:1.5;
 }
 h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
+
+/* Logo */
+.logo{height:45px;width:auto;margin-bottom:1rem}
 
 /* Header */
 .site-header{
@@ -225,6 +234,56 @@ input[type="range"]::-moz-range-thumb{
 /* Commitment grid */
 .commit-grid{display:grid;grid-template-columns:1.3fr 0.8fr 0.8fr 1.5fr;gap:0.5rem}
 
+/* Topics list */
+.topics-list{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:0.75rem}
+.topic-tag{
+  display:inline-flex;
+  align-items:center;
+  gap:0.4rem;
+  background:var(--purple);
+  color:var(--cream);
+  padding:0.4rem 0.8rem;
+  border-radius:20px;
+  font-size:0.8rem;
+  font-weight:500;
+}
+.topic-tag button{
+  background:transparent;
+  border:none;
+  color:var(--cream);
+  cursor:pointer;
+  font-size:1rem;
+  padding:0;
+  line-height:1;
+}
+.topic-tag button:hover{color:#ff6b6b}
+.add-topic-inline{
+  display:inline-flex;
+  gap:0.4rem;
+  margin-bottom:0.75rem;
+}
+.add-topic-inline input{
+  flex:1;
+  min-width:150px;
+  padding:0.5rem 0.6rem;
+  border:1.5px solid var(--cream-dark);
+  border-radius:5px;
+  font-size:0.85rem;
+}
+.add-topic-inline button{
+  padding:0.5rem 0.9rem;
+  background:var(--purple);
+  color:var(--cream);
+  border:none;
+  border-radius:5px;
+  cursor:pointer;
+  font-size:0.8rem;
+  font-weight:600;
+  transition:background 0.2s;
+}
+.add-topic-inline button:hover{background:var(--purple-light)}
+.help-text-topics{font-size:0.75rem;color:var(--muted);font-style:italic;margin-top:-0.5rem;margin-bottom:0.8rem}
+
 /* Add button */
 .add-btn{
   width:100%;
@@ -318,6 +377,13 @@ input[type="range"]::-moz-range-thumb{
 .slot--fixed{background:var(--slate);color:#fff}
 .slot--free{background:#f5f5f5;color:#bbb;text-align:center;font-size:0.6rem}
 .slot--none{background:#fafafa;color:#aaa;text-align:center;padding:1rem 0.5rem;border:1px dashed #ddd;font-style:italic;font-size:0.65rem}
+.slot-label{border-left:3px solid transparent;padding-left:0.3rem}
+.slot-label.subj-maths{border-left-color:var(--color-maths);color:var(--color-maths)}
+.slot-label.subj-biology{border-left-color:var(--color-biology);color:var(--color-biology)}
+.slot-label.subj-chemistry{border-left-color:var(--color-chemistry);color:var(--color-chemistry)}
+.slot-label.subj-physics{border-left-color:var(--color-physics);color:var(--color-physics)}
+.slot-label.subj-english{border-left-color:var(--color-english);color:var(--color-english)}
+.slot-label.subj-history{border-left-color:var(--color-history);color:var(--color-history)}
 
 /* Legend */
 .legend-wrap{
@@ -392,6 +458,7 @@ input[type="range"]::-moz-range-thumb{
 <body>
 
 <header class="site-header">
+  <img src="YOUR_LOGO_URL_HERE" alt="Brand Logo" class="logo">
   <div class="badge">Free Workshop Gift</div>
   <h1>Your A-Level Revision Tracker</h1>
   <p>Answer a few questions. Get your personalised weekly plan.</p>
@@ -419,7 +486,10 @@ input[type="range"]::-moz-range-thumb{
     <label for="wake-time">Wake-up time</label>
     <input type="time" id="wake-time" value="07:00">
 
-    <div class="info-line">Study cut-off is fixed at <strong>9:00 PM</strong> — non-negotiable. Sleep is part of the system.</div>
+    <label for="sleep-time">Sleep time (target bedtime)</label>
+    <input type="time" id="sleep-time" value="23:00">
+
+    <div class="info-line">Sleep is part of the system. Your wake time and sleep time must be at least <strong>8 hours apart</strong> — non-negotiable. This ensures you're getting the rest you need to perform at your best.</div>
   </div>
 
   <!-- Card 2 -->
@@ -448,9 +518,10 @@ input[type="range"]::-moz-range-thumb{
 <!-- TIMETABLE -->
 <section id="timetable-section">
   <div class="tt-header">
+    <img src="YOUR_LOGO_URL_HERE" alt="Brand Logo" class="logo">
     <div class="badge">Your Personal Plan</div>
     <h2 id="tt-heading">Your Week</h2>
-    <p>90-minute deep-work blocks · 15-minute breaks · Study cut-off 9:00 PM</p>
+    <p>Deep Work · Active Recall · Light Review · Breaks</p>
   </div>
 
   <div class="week-wrap">
@@ -475,7 +546,10 @@ input[type="range"]::-moz-range-thumb{
 
   <div class="action-row">
     <button type="button" class="btn-outline" id="edit-btn">← Edit My Answers</button>
-    <button type="button" class="btn-solid" id="print-btn">Print / Save as PDF</button>
+    <button type="button" class="btn-solid" id="print-btn">Save as PDF</button>
+  </div>
+  <div class="tips" style="margin-top:1rem;background:var(--cream);color:var(--text);border-left:4px solid var(--gold)">
+    <strong style="color:var(--gold)">Tip:</strong> After saving, you can open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
   </div>
 </section>
 
@@ -509,34 +583,137 @@ input[type="range"]::-moz-range-thumb{
 
   // ---------- Dynamic subject rows ----------
   let subjectCounter=0;
+  const topicPlaceholders={
+    'Mathematics':'Differentiation, Integration',
+    'Biology':'Cardiac cycle, Photosynthesis',
+    'Chemistry':'Organic mechanisms, Electrochemistry',
+    'Physics':'Forces, Energy, Waves',
+    'English':'Themes, Character analysis',
+    'History':'Key dates, Causes and effects',
+    'Economics':'Supply and demand, GDP',
+    'Geography':'Physical processes, Human impact'
+  };
+
+  function getSubjColorClass(name){
+    const lower=name.toLowerCase();
+    if(lower.includes('math')) return 'subj-maths';
+    if(lower.includes('biol')) return 'subj-biology';
+    if(lower.includes('chem')) return 'subj-chemistry';
+    if(lower.includes('phys')) return 'subj-physics';
+    if(lower.includes('english')) return 'subj-english';
+    if(lower.includes('history')) return 'subj-history';
+    return '';
+  }
+
   function addSubjectRow(name='',topics='',priority='medium',confidence=3){
     subjectCounter++;
     const id='subject-'+subjectCounter;
     const el=document.createElement('div');
     el.className='item-row subject-row';
     el.id=id;
+
+    const topicsArray=topics ? topics.split('|').filter(t=>t.trim()) : [];
+    let topicsHtml='<div class="topics-list">';
+    topicsArray.forEach(topic=>{
+      topicsHtml+='<span class="topic-tag">'+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button></span>';
+    });
+    topicsHtml+='</div>';
+
+    const placeholder=topicPlaceholders[name] || 'e.g. Topic 1, Topic 2';
+
     el.innerHTML=
       '<button type="button" class="remove-btn" aria-label="Remove" title="Remove">×</button>'+
       '<label>Subject name</label>'+
       '<input type="text" class="subject-name" placeholder="e.g. Mathematics" value="'+escapeHTML(name)+'" maxlength="40">'+
       '<label>Topics to prioritise this week</label>'+
-      '<input type="text" class="subject-topics" placeholder="e.g. Organic mechanisms, Electrochemistry" value="'+escapeHTML(topics)+'" maxlength="120">'+
-      '<p class="help-text">Comma-separated. These appear on the timetable slots.</p>'+
+      topicsHtml+
+      '<div class="add-topic-inline">'+
+        '<input type="text" class="subject-topic-input" placeholder="'+placeholder+'" maxlength="50">'+
+        '<button type="button">Add</button>'+
+      '</div>'+
+      '<p class="help-text-topics">Limit to 5 topics. Click Add after each one.</p>'+
       '<label>Priority level</label>'+
       '<select class="subject-priority">'+
-        '<option value="high"'+(priority==='high'?' selected':'')+'>High — I need this grade</option>'+
-        '<option value="medium"'+(priority==='medium'?' selected':'')+'>Medium — Important but manageable</option>'+
+        '<option value="high"'+(priority==='high'?' selected':'')+'>High — Really struggling with it</option>'+
+        '<option value="medium"'+(priority==='medium'?' selected':'')+'>Medium — Important, manageable</option>'+
         '<option value="low"'+(priority==='low'?' selected':'')+'>Low — Fairly confident</option>'+
       '</select>'+
       '<div class="slider-wrap">'+
-        '<div class="slider-head"><label>Confidence level</label><span class="conf-badge">'+confidence+'/5</span></div>'+
+        '<div class="slider-head"><label>Exam focus</label><span class="conf-badge">'+confidence+'/5</span></div>'+
         '<input type="range" class="subject-confidence" min="1" max="5" value="'+confidence+'">'+
-        '<div class="slider-labels"><span>1 · very low</span><span>3 · okay</span><span>5 · very high</span></div>'+
+        '<div class="slider-labels"><span>1 · low priority</span><span>3 · medium</span><span>5 · high priority</span></div>'+
       '</div>';
+
     document.getElementById('subjects-list').appendChild(el);
+
+    // Topics list management
+    const topicInput=el.querySelector('.subject-topic-input');
+    const addTopicBtn=el.querySelector('.add-topic-inline button');
+    const topicsList=el.querySelector('.topics-list');
+
+    function renderTopics(){
+      const topics=[];
+      el.querySelectorAll('.topic-tag').forEach(tag=>{
+        const text=tag.textContent.trim().slice(0,-1);
+        if(text) topics.push(text);
+      });
+      return topics;
+    }
+
+    function updateTopicsList(){
+      const topics=renderTopics();
+      topicsList.innerHTML='';
+      topics.forEach(topic=>{
+        const tag=document.createElement('span');
+        tag.className='topic-tag';
+        tag.innerHTML=''+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button>';
+        tag.querySelector('button').addEventListener('click',()=>{
+          tag.remove();
+          updateTopicInput();
+        });
+        topicsList.appendChild(tag);
+      });
+      updateTopicInput();
+    }
+
+    function updateTopicInput(){
+      const topics=renderTopics();
+      topicInput.disabled=topics.length>=5;
+      addTopicBtn.disabled=topics.length>=5;
+      if(topics.length>=5) topicInput.placeholder='Max 5 topics reached';
+    }
+
+    addTopicBtn.addEventListener('click',()=>{
+      const topic=topicInput.value.trim();
+      if(topic && renderTopics().length<5){
+        const tag=document.createElement('span');
+        tag.className='topic-tag';
+        tag.innerHTML=''+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button>';
+        tag.querySelector('button').addEventListener('click',()=>{
+          tag.remove();
+          updateTopicInput();
+        });
+        topicsList.appendChild(tag);
+        topicInput.value='';
+        updateTopicInput();
+      }
+    });
+
+    topicInput.addEventListener('keypress',e=>{
+      if(e.key==='Enter'){
+        addTopicBtn.click();
+        e.preventDefault();
+      }
+    });
+
+    updateTopicInput();
+
+    // Confidence slider
     const range=el.querySelector('.subject-confidence');
     const badge=el.querySelector('.conf-badge');
     range.addEventListener('input',()=>{ badge.textContent=range.value+'/5'; });
+
+    // Remove subject
     el.querySelector('.remove-btn').addEventListener('click',()=>el.remove());
   }
 
@@ -564,14 +741,40 @@ input[type="range"]::-moz-range-thumb{
   function collectState(){
     const name=document.getElementById('student-name').value.trim();
     const wakeTime=document.getElementById('wake-time').value || '07:00';
+    const sleepTime=document.getElementById('sleep-time').value || '23:00';
+
+    // Validate 8-hour sleep gap
+    const wakeMin=toMinutes(wakeTime);
+    const sleepMin=toMinutes(sleepTime);
+    if(isNaN(wakeMin)||isNaN(sleepMin)){
+      alert('Please set valid wake and sleep times.');
+      return null;
+    }
+
+    let gap;
+    if(sleepMin>wakeMin){
+      gap=sleepMin-wakeMin;
+    } else {
+      gap=(1440-wakeMin)+sleepMin;
+    }
+
+    if(gap<480){
+      alert('You need at least 8 hours between wake time and sleep time to ensure sufficient rest. Current gap: '+Math.floor(gap/60)+'h '+String(gap%60).padStart(2,'0')+'m');
+      return null;
+    }
 
     const subjects=[];
     document.querySelectorAll('.subject-row').forEach(row=>{
       const sname=row.querySelector('.subject-name').value.trim();
       if(!sname) return;
+      const topicTags=[];
+      row.querySelectorAll('.topic-tag').forEach(tag=>{
+        const text=tag.textContent.trim().slice(0,-1);
+        if(text) topicTags.push(text);
+      });
       subjects.push({
         name:sname,
-        topics:row.querySelector('.subject-topics').value.trim(),
+        topics:topicTags.join('|'),
         priority:row.querySelector('.subject-priority').value,
         confidence:parseInt(row.querySelector('.subject-confidence').value,10)||3
       });
@@ -598,13 +801,20 @@ input[type="range"]::-moz-range-thumb{
       });
     });
 
-    return {name,wakeTime,subjects,commitments};
+    return {name,wakeTime,sleepTime,subjects,commitments};
   }
 
   // ---------- Generate timetable ----------
   function buildDaySlots(dayIndex,state,sortedSubjects){
-    const DEEP=90, BRK=15, LUNCH=60;
-    const CUTOFF=toMinutes('21:00');
+    const DEEP=90, RECALL=60, REVIEW=50, BRK=15, LUNCH=60;
+    const sleepMin=toMinutes(state.sleepTime);
+    const wakeMin=toMinutes(state.wakeTime);
+    let CUTOFF;
+    if(sleepMin>wakeMin){
+      CUTOFF=sleepMin-30;
+    } else {
+      CUTOFF=(1440-wakeMin)+sleepMin-30;
+    }
     const EVENING=toMinutes('18:00');
     const LUNCH_START=toMinutes('12:00');
 
@@ -615,12 +825,13 @@ input[type="range"]::-moz-range-thumb{
       .filter(c=>c.day===dayName)
       .sort((a,b)=>a.startMin-b.startMin);
 
-    let current=toMinutes(state.wakeTime)+60;
+    let current=wakeMin+60;
     if(isNaN(current)) current=toMinutes('08:00');
 
     let lunchTaken=false;
     let deepCount=0;
     let recallCount=0;
+    let reviewCount=0;
     let eveningDone=false;
     const added=new Set();
     let guard=0;
@@ -630,10 +841,15 @@ input[type="range"]::-moz-range-thumb{
       return sortedSubjects[(dayIndex+offset)%n];
     }
     function subjSub(s){
-      return s.topics ? s.topics : 'Deep focus — no distractions';
+      const topics=s.topics ? s.topics.split('|') : [];
+      return topics.length>0 ? topics.slice(0,2).join(', ') : 'Deep focus — no distractions';
     }
     function recallSub(s){
-      return s.topics ? s.topics : 'Past papers · blurting · Anki';
+      const topics=s.topics ? s.topics.split('|') : [];
+      return topics.length>0 ? 'Past papers: '+topics.slice(0,2).join(', ') : 'Past papers · blurting · Anki';
+    }
+    function getSubjColor(name){
+      return getSubjColorClass(name);
     }
 
     while(current<CUTOFF && guard<60){
@@ -642,7 +858,7 @@ input[type="range"]::-moz-range-thumb{
       // Inside a commitment?
       const active=todayCommits.find(c=>c.startMin<=current && c.endMin>current && !added.has(c));
       if(active){
-        slots.push({type:'fixed',time:fmtTimeRange(active.startMin,active.endMin),label:active.label,sub:''});
+        slots.push({type:'fixed',time:fmtTimeRange(active.startMin,active.endMin),label:active.label,sub:'',colorClass:''});
         added.add(active);
         current=active.endMin;
         continue;
@@ -655,7 +871,7 @@ input[type="range"]::-moz-range-thumb{
       const upcoming=todayCommits.find(c=>c.startMin>current && c.startMin<current+DEEP && !added.has(c));
       if(upcoming){
         if(upcoming.startMin-current>=20){
-          slots.push({type:'free',time:fmtTimeRange(current,upcoming.startMin),label:'Free / Buffer',sub:''});
+          slots.push({type:'free',time:fmtTimeRange(current,upcoming.startMin),label:'Free / Buffer',sub:'',colorClass:''});
         }
         current=upcoming.startMin;
         continue;
@@ -664,15 +880,14 @@ input[type="range"]::-moz-range-thumb{
       // Lunch
       if(!lunchTaken && current>=LUNCH_START && current<EVENING){
         const lunchEnd=current+LUNCH;
-        // don't schedule lunch over a commitment
         const conflict=todayCommits.find(c=>c.startMin<lunchEnd && c.endMin>current);
         if(!conflict){
-          slots.push({type:'lunch',time:fmtTimeRange(current,lunchEnd),label:'Lunch Break',sub:'Step away from the desk'});
+          slots.push({type:'lunch',time:fmtTimeRange(current,lunchEnd),label:'Lunch Break',sub:'Step away from the desk',colorClass:''});
           current=lunchEnd;
           lunchTaken=true;
           continue;
         } else {
-          lunchTaken=true; // skip rather than loop
+          lunchTaken=true;
         }
       }
 
@@ -682,13 +897,16 @@ input[type="range"]::-moz-range-thumb{
       if(current>=EVENING){
         if(eveningDone) break;
         const subj=nextSubj(0);
+        const dur=REVIEW;
         slots.push({
           type:'review',
-          time:fmtTimeRange(current,current+DEEP),
+          time:fmtTimeRange(current,current+dur),
           label:'Light Review: '+subj.name,
-          sub:'Consolidate notes · mind maps'
+          sub:'Consolidate notes',
+          colorClass:getSubjColor(subj.name)
         });
-        current+=DEEP;
+        current+=dur;
+        reviewCount++;
         eveningDone=true;
         continue;
       }
@@ -699,7 +917,8 @@ input[type="range"]::-moz-range-thumb{
           type:'deep',
           time:fmtTimeRange(current,current+DEEP),
           label:subj.name,
-          sub:subjSub(subj)
+          sub:subjSub(subj),
+          colorClass:getSubjColor(subj.name)
         });
         current+=DEEP;
         deepCount++;
@@ -707,35 +926,35 @@ input[type="range"]::-moz-range-thumb{
         const subj=nextSubj(deepCount+recallCount);
         slots.push({
           type:'recall',
-          time:fmtTimeRange(current,current+DEEP),
+          time:fmtTimeRange(current,current+RECALL),
           label:'Active Recall: '+subj.name,
-          sub:recallSub(subj)
+          sub:recallSub(subj),
+          colorClass:getSubjColor(subj.name)
         });
-        current+=DEEP;
+        current+=RECALL;
         recallCount++;
       }
 
-      // Short break after a work block (if more time and not past commitment)
-      if(current+BRK<CUTOFF && current+DEEP+BRK<=CUTOFF){
+      // Short break after a work block
+      if(current+BRK<CUTOFF && current+BRK<=CUTOFF){
         const brkEnd=current+BRK;
         const conflict=todayCommits.find(c=>c.startMin<brkEnd && c.endMin>current && !added.has(c));
         if(!conflict){
-          slots.push({type:'break',time:fmtTimeRange(current,brkEnd),label:'Short Break',sub:'Hydrate · move · reset'});
+          slots.push({type:'break',time:fmtTimeRange(current,brkEnd),label:'Short Break',sub:'Hydrate · move',colorClass:''});
           current=brkEnd;
         }
       }
     }
 
-    // Any commitments not yet added (e.g. late evening after cutoff)?
+    // Any commitments not yet added?
     todayCommits.forEach(c=>{
       if(!added.has(c)){
-        slots.push({type:'fixed',time:fmtTimeRange(c.startMin,c.endMin),label:c.label,sub:'',_sortKey:c.startMin});
+        slots.push({type:'fixed',time:fmtTimeRange(c.startMin,c.endMin),label:c.label,sub:'',colorClass:'',_sortKey:c.startMin});
       }
     });
-    // Keep chronological (the late ones appended at end is fine)
 
     if(slots.length===0){
-      slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake time or commitments'});
+      slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake time or commitments',colorClass:''});
     }
     return slots;
   }
@@ -769,7 +988,8 @@ input[type="range"]::-moz-range-thumb{
         s.className='slot slot--'+slot.type;
         let html='';
         if(slot.time) html+='<span class="slot-time">'+escapeHTML(slot.time)+'</span>';
-        html+='<span class="slot-label">'+escapeHTML(slot.label)+'</span>';
+        const labelClass=slot.colorClass ? 'slot-label '+slot.colorClass : 'slot-label';
+        html+='<span class="'+labelClass+'">'+escapeHTML(slot.label)+'</span>';
         if(slot.sub) html+='<span class="slot-sub">'+escapeHTML(slot.sub)+'</span>';
         s.innerHTML=html;
         col.appendChild(s);
