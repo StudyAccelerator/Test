@@ -36,13 +36,16 @@ body{
 h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
 
 /* Logo */
-.logo{height:45px;width:auto;margin-bottom:1rem}
+.logo{height:50px;width:auto}
+.header-content{display:flex;align-items:flex-start;justify-content:space-between;gap:2rem}
+.header-logo{flex-shrink:0}
+.header-text{flex:1;text-align:center}
 
 /* Header */
 .site-header{
   background:var(--purple);
   color:var(--cream);
-  padding:2.5rem 1.5rem 2rem;
+  padding:2rem 1.5rem;
   text-align:center;
 }
 .badge{
@@ -458,10 +461,16 @@ input[type="range"]::-moz-range-thumb{
 <body>
 
 <header class="site-header">
-  <img src="./logo.png" alt="A-Level Accelerators Logo" class="logo">
-  <div class="badge">Free Workshop Gift</div>
-  <h1>Your A-Level Revision Tracker</h1>
-  <p>Answer a few questions. Get your personalised weekly plan.</p>
+  <div class="header-content">
+    <div class="header-logo">
+      <img src="./logo.png" alt="A-Level Accelerators Logo" class="logo">
+    </div>
+    <div class="header-text">
+      <div class="badge">Free Workshop Gift</div>
+      <h1>Your A-Level Revision Tracker</h1>
+      <p>Answer a few questions. Get your personalised weekly plan.</p>
+    </div>
+  </div>
 </header>
 
 <div class="container">
@@ -518,10 +527,16 @@ input[type="range"]::-moz-range-thumb{
 <!-- TIMETABLE -->
 <section id="timetable-section">
   <div class="tt-header">
-    <img src="./logo.png" alt="A-Level Accelerators Logo" class="logo">
-    <div class="badge">Your Personal Plan</div>
-    <h2 id="tt-heading">Your Week</h2>
-    <p>Deep Work · Active Recall · Light Review · Breaks</p>
+    <div style="display:flex;align-items:flex-start;justify-content:space-between;gap:2rem;width:100%">
+      <div style="flex-shrink:0">
+        <img src="./logo.png" alt="A-Level Accelerators Logo" class="logo">
+      </div>
+      <div style="flex:1;text-align:center">
+        <div class="badge">Your Personal Plan</div>
+        <h2 id="tt-heading">Your Week</h2>
+        <p>Deep Work · Active Recall · Light Review · Breaks</p>
+      </div>
+    </div>
   </div>
 
   <div class="week-wrap">
@@ -584,14 +599,14 @@ input[type="range"]::-moz-range-thumb{
   // ---------- Dynamic subject rows ----------
   let subjectCounter=0;
   const topicPlaceholders={
-    'Mathematics':'Differentiation, Integration',
-    'Biology':'Cardiac cycle, Photosynthesis',
-    'Chemistry':'Organic mechanisms, Electrochemistry',
-    'Physics':'Forces, Energy, Waves',
-    'English':'Themes, Character analysis',
-    'History':'Key dates, Causes and effects',
-    'Economics':'Supply and demand, GDP',
-    'Geography':'Physical processes, Human impact'
+    'Mathematics':'Differentiation',
+    'Biology':'Cardiac cycle',
+    'Chemistry':'Organic mechanisms',
+    'Physics':'Forces',
+    'English':'Themes',
+    'History':'Key dates',
+    'Economics':'Supply and demand',
+    'Geography':'Physical processes'
   };
 
   function getSubjColorClass(name){
@@ -631,7 +646,7 @@ input[type="range"]::-moz-range-thumb{
         '<input type="text" class="subject-topic-input" placeholder="'+placeholder+'" maxlength="50">'+
         '<button type="button">Add</button>'+
       '</div>'+
-      '<p class="help-text-topics">Limit to 5 topics. Click Add after each one.</p>'+
+      '<p class="help-text-topics">Limit to 4 topics. Click Add after each one.</p>'+
       '<label>Priority level</label>'+
       '<select class="subject-priority">'+
         '<option value="high"'+(priority==='high'?' selected':'')+'>High — Really struggling with it</option>'+
@@ -678,14 +693,14 @@ input[type="range"]::-moz-range-thumb{
 
     function updateTopicInput(){
       const topics=renderTopics();
-      topicInput.disabled=topics.length>=5;
-      addTopicBtn.disabled=topics.length>=5;
-      if(topics.length>=5) topicInput.placeholder='Max 5 topics reached';
+      topicInput.disabled=topics.length>=4;
+      addTopicBtn.disabled=topics.length>=4;
+      if(topics.length>=4) topicInput.placeholder='Max 4 topics reached';
     }
 
     addTopicBtn.addEventListener('click',()=>{
       const topic=topicInput.value.trim();
-      if(topic && renderTopics().length<5){
+      if(topic && renderTopics().length<4){
         const tag=document.createElement('span');
         tag.className='topic-tag';
         tag.innerHTML=''+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button>';
@@ -743,7 +758,7 @@ input[type="range"]::-moz-range-thumb{
     const wakeTime=document.getElementById('wake-time').value || '07:00';
     const sleepTime=document.getElementById('sleep-time').value || '23:00';
 
-    // Validate 8-hour sleep gap
+    // Validate 8-hour sleep gap (sleep must be at least 8 hours from wake)
     const wakeMin=toMinutes(wakeTime);
     const sleepMin=toMinutes(sleepTime);
     if(isNaN(wakeMin)||isNaN(sleepMin)){
@@ -751,15 +766,24 @@ input[type="range"]::-moz-range-thumb{
       return null;
     }
 
+    // Calculate time between wake and sleep
     let gap;
     if(sleepMin>wakeMin){
+      // Sleep is later same day (e.g. 7am wake, 11pm sleep)
       gap=sleepMin-wakeMin;
+    } else if(sleepMin===wakeMin){
+      alert('Wake time and sleep time must be different.');
+      return null;
     } else {
+      // Sleep is next day (e.g. 7am wake, 2am sleep next day)
       gap=(1440-wakeMin)+sleepMin;
     }
 
+    // Require at least 8 hours (480 minutes)
     if(gap<480){
-      alert('You need at least 8 hours between wake time and sleep time to ensure sufficient rest. Current gap: '+Math.floor(gap/60)+'h '+String(gap%60).padStart(2,'0')+'m');
+      const hours=Math.floor(gap/60);
+      const mins=gap%60;
+      alert('You need at least 8 hours between wake time and sleep time for sufficient rest.\n\nCurrent gap: '+hours+'h '+String(mins).padStart(2,'0')+'m\n\nPlease adjust your times.');
       return null;
     }
 
@@ -805,7 +829,7 @@ input[type="range"]::-moz-range-thumb{
   }
 
   // ---------- Generate timetable ----------
-  function buildDaySlots(dayIndex,state,sortedSubjects){
+  function buildDaySlots(dayIndex,state,sortedSubjects,topicSchedule){
     const DEEP=90, RECALL=60, REVIEW=50, BRK=15, LUNCH=60;
     const sleepMin=toMinutes(state.sleepTime);
     const wakeMin=toMinutes(state.wakeTime);
@@ -840,13 +864,21 @@ input[type="range"]::-moz-range-thumb{
       const n=sortedSubjects.length;
       return sortedSubjects[(dayIndex+offset)%n];
     }
-    function subjSub(s){
-      const topics=s.topics ? s.topics.split('|') : [];
-      return topics.length>0 ? topics.slice(0,2).join(', ') : 'Deep focus — no distractions';
+    function getNextUncoveredTopic(subjName){
+      if(!topicSchedule[subjName]) return null;
+      const ts=topicSchedule[subjName];
+      for(let t of ts.topics){
+        if(!ts.covered[t]) return t;
+      }
+      return null;
     }
-    function recallSub(s){
-      const topics=s.topics ? s.topics.split('|') : [];
-      return topics.length>0 ? 'Past papers: '+topics.slice(0,2).join(', ') : 'Past papers · blurting · Anki';
+    function getRecentlysCoveredTopic(subjName){
+      if(!topicSchedule[subjName]) return null;
+      const ts=topicSchedule[subjName];
+      for(let t of ts.topics){
+        if(ts.covered[t]) return t;
+      }
+      return null;
     }
     function getSubjColor(name){
       return getSubjColorClass(name);
@@ -896,13 +928,14 @@ input[type="range"]::-moz-range-thumb{
 
       if(current>=EVENING){
         if(eveningDone) break;
-        const subj=nextSubj(0);
+        const subj=nextSubj(reviewCount);
+        const topic=getRecentlysCoveredTopic(subj.name);
         const dur=REVIEW;
         slots.push({
           type:'review',
           time:fmtTimeRange(current,current+dur),
           label:'Light Review: '+subj.name,
-          sub:'Consolidate notes',
+          sub:topic ? 'Review: '+topic : 'Consolidate notes',
           colorClass:getSubjColor(subj.name)
         });
         current+=dur;
@@ -913,22 +946,27 @@ input[type="range"]::-moz-range-thumb{
 
       if(deepCount<2){
         const subj=nextSubj(deepCount);
+        const topic=getNextUncoveredTopic(subj.name);
+        if(topic){
+          topicSchedule[subj.name].covered[topic]=true;
+        }
         slots.push({
           type:'deep',
           time:fmtTimeRange(current,current+DEEP),
           label:subj.name,
-          sub:subjSub(subj),
+          sub:topic ? topic : 'Deep focus — no distractions',
           colorClass:getSubjColor(subj.name)
         });
         current+=DEEP;
         deepCount++;
       } else {
         const subj=nextSubj(deepCount+recallCount);
+        const topic=getRecentlysCoveredTopic(subj.name);
         slots.push({
           type:'recall',
           time:fmtTimeRange(current,current+RECALL),
           label:'Active Recall: '+subj.name,
-          sub:recallSub(subj),
+          sub:topic ? 'Practice: '+topic : 'Past papers · blurting · Anki',
           colorClass:getSubjColor(subj.name)
         });
         current+=RECALL;
@@ -964,9 +1002,18 @@ input[type="range"]::-moz-range-thumb{
       (PRIORITY_WEIGHT[b.priority]*(6-b.confidence)) -
       (PRIORITY_WEIGHT[a.priority]*(6-a.confidence))
     );
+
+    // Build topic schedule - track which topics have been covered
+    const topicSchedule={};
+    sorted.forEach(subj=>{
+      const topics=subj.topics ? subj.topics.split('|').filter(t=>t.trim()) : [];
+      topicSchedule[subj.name]={topics,covered:{}};
+      topics.forEach(t=>{ topicSchedule[subj.name].covered[t]=false; });
+    });
+
     const week=[];
     for(let i=0;i<7;i++){
-      week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted)});
+      week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted,topicSchedule)});
     }
     return week;
   }
@@ -1021,7 +1068,13 @@ input[type="range"]::-moz-range-thumb{
     showTimetable();
   });
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
-  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+  document.getElementById('print-btn').addEventListener('click',()=>{
+    const printWindow=window.open('','PRINT','width=800,height=600');
+    printWindow.document.write(document.documentElement.outerHTML);
+    printWindow.document.close();
+    printWindow.focus();
+    setTimeout(()=>{ printWindow.print(); printWindow.close(); },250);
+  });
 
   // Defaults
   addSubjectRow('Mathematics','','high',3);
