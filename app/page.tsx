@@ -18,7 +18,7 @@ export default function Home() {
             alt="A-Level Accelerators"
             width={200}
             height={50}
-            className="h-12 w-auto"
+            className="h-60 w-auto"
             priority
           />
           <nav className="flex flex-wrap justify-center gap-6">
@@ -73,10 +73,9 @@ export default function Home() {
             Why Trust Us
           </h2>
 
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
             {[
               { number: '1000+', text: 'Students helped achieve their dream universities through tailored applications and study strategies' },
-              { number: '200+', text: 'Five-star reviews from my Medical Interview Masterclass series' },
               { number: 'Med Degree', text: 'Qualified medical doctor who knows exactly what it takes to excel at A-Level' },
             ].map((cred, i) => (
               <div key={i} className="bg-white p-8 rounded-lg border-l-4 border-brand-gold shadow-sm">
@@ -124,7 +123,7 @@ export default function Home() {
               <tbody>
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Price</td>
-                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">£89</span> (from £189)</td>
+                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">£119</span></td>
                   <td className="p-6"><span className="text-xl font-bold text-brand-gold">£499</span></td>
                   <td className="p-6"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
                 </tr>
@@ -147,16 +146,10 @@ export default function Home() {
                   <td className="p-6"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-6 font-semibold text-brand-purple">WhatsApp Access</td>
-                  <td className="p-6"></td>
-                  <td className="p-6"><span className="text-green-700 font-bold">✓</span></td>
-                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> 24/7</td>
-                </tr>
-                <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">1:1 Coaching</td>
                   <td className="p-6"></td>
-                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> Weekly</td>
+                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> Coaching community access</td>
+                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> Weekly - 24/7</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Personal Plan</td>
@@ -208,7 +201,7 @@ export default function Home() {
             alt="A-Level Accelerators"
             width={160}
             height={40}
-            className="h-10 w-auto mx-auto mb-4"
+            className="h-48 w-auto mx-auto mb-4"
           />
           <h3 className="text-xl text-brand-gold font-serif mb-6">Get in Touch</h3>
           <p className="mb-6">Questions? Get in touch directly:</p>
