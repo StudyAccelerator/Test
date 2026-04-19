@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import PricingSection from '@/components/ui/pricing-section'
 import FaqSection from '@/components/ui/faq-section'
+import { ScrollFade } from '@/components/ui/scroll-fade'
 
 export const metadata = {
   title: 'Top 1% Study System - A-Level Excellence Programme',
@@ -48,11 +49,12 @@ export default function Home() {
       </section>
 
       {/* Problem Statement */}
-      <section className="py-16 px-4 bg-brand-light-gray">
-        <div className="max-w-3xl mx-auto text-center">
-          <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
-            The Challenge Every A-Level Student Faces
-          </h2>
+      <ScrollFade>
+        <section className="py-16 px-4 bg-brand-light-gray">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
+              The Challenge Every A-Level Student Faces
+            </h2>
           <p className="text-lg mb-6 text-brand-text">
             You&apos;re juggling mocks, coursework, personal statements, university applications, and mountains of content to revise. The pressure is overwhelming, and{' '}
             <span className="text-brand-gold font-semibold">working harder isn&apos;t the answer</span>.
@@ -63,11 +65,13 @@ export default function Home() {
           <p className="text-lg text-brand-text">
             <span className="text-brand-gold font-semibold">The secret isn&apos;t more work — it&apos;s better systems.</span>
           </p>
-        </div>
-      </section>
+          </div>
+        </section>
+      </ScrollFade>
 
       {/* Credentials Section */}
-      <section className="py-16 px-4 bg-white">
+      <ScrollFade delay={0.2}>
+        <section className="py-16 px-4 bg-white">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
             Why Trust Us
@@ -100,11 +104,13 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
+          </div>
+        </section>
+      </ScrollFade>
 
       {/* Tier Comparison Table */}
-      <section id="tiers" className="py-16 px-4 bg-brand-light-gray">
+      <ScrollFade delay={0.2}>
+        <section id="tiers" className="py-16 px-4 bg-brand-light-gray">
         <div className="max-w-6xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
             Three Paths to Excellence
@@ -168,30 +174,41 @@ export default function Home() {
           </div>
         </div>
       </section>
+      </ScrollFade>
 
       {/* Pricing Section (detailed cards) */}
-      <PricingSection />
+      <ScrollFade delay={0.2}>
+        <div>
+          <PricingSection />
+        </div>
+      </ScrollFade>
 
       {/* FAQ Section */}
-      <FaqSection />
+      <ScrollFade delay={0.2}>
+        <div>
+          <FaqSection />
+        </div>
+      </ScrollFade>
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-white text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
-            Ready to Transform Your A-Levels?
-          </h2>
-          <p className="text-lg text-brand-text mb-8">
-            Choose the programme that fits your needs and start applying proven systems today.
-          </p>
-          <a
-            href="#tiers"
-            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-          >
-            View All Programmes
-          </a>
-        </div>
-      </section>
+      <ScrollFade delay={0.2}>
+        <section className="py-16 px-4 bg-white text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
+              Ready to Transform Your A-Levels?
+            </h2>
+            <p className="text-lg text-brand-text mb-8">
+              Choose the programme that fits your needs and start applying proven systems today.
+            </p>
+            <a
+              href="#tiers"
+              className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
+            >
+              View All Programmes
+            </a>
+          </div>
+        </section>
+      </ScrollFade>
 
       {/* Footer */}
       <footer id="contact" className="bg-brand-purple text-brand-cream py-12 px-8 text-center">
