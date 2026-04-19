@@ -12,17 +12,17 @@ export default function Home() {
   return (
     <main>
       {/* Header */}
-      <header className="bg-brand-cream text-brand-purple py-2 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-2">
+      <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
+        <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
           <Image
-            src="/logo.png"
+            src="/logo-black.png"
             alt="A-Level Accelerators"
             width={200}
-            height={50}
-            className="h-32 w-auto"
+            height={200}
+            className="h-20 w-auto"
             priority
           />
-          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
+          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-3">
             <a href="#tiers" className="text-brand-purple hover:text-brand-gold font-semibold transition">Our Programmes</a>
             <a href="#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
             <a href="#contact" className="text-brand-purple hover:text-brand-gold font-semibold transition">Contact</a>
@@ -211,26 +211,24 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-6 px-8 text-center">
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-4 px-8 text-center">
         <div className="max-w-3xl mx-auto">
           <Image
-            src="/logo.png"
+            src="/logo-black.png"
             alt="A-Level Accelerators"
             width={160}
-            height={40}
-            className="h-96 w-auto mx-auto mb-2"
+            height={160}
+            className="h-48 w-auto mx-auto mb-1"
           />
-          <h3 className="text-xl text-brand-gold font-serif mb-4">Get in Touch</h3>
-          <p className="mb-4">Questions? Get in touch directly:</p>
-          <div className="flex flex-wrap justify-center gap-6 mb-8">
+          <h3 className="text-xl text-brand-gold font-serif mb-3">Get in Touch</h3>
+          <p className="mb-3">Questions? Get in touch directly:</p>
+          <div className="flex flex-wrap justify-center gap-6 mb-6">
             <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
             <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
             <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
           </div>
-          <p className="opacity-80 text-sm">
-            &copy; 2026 A-Level Accelerators. All rights reserved.
-            <br />
-            Helping A-Level students become the top of their class.
+          <p className="opacity-80 text-xs">
+            &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
           </p>
         </div>
       </footer>
