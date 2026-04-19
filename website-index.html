@@ -1,803 +1,804 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Top 1% Study System - A-Level Excellence Programme</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        :root {
-       --purple: #8B5CF6;
---purple-light: #A78BFA;
---cream: #F5F0E8;
---cream-dark: #EBE5D9;
---gold: #8B5CF6;
---text: #333333;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
-            background: var(--cream);
-            color: var(--text);
-            line-height: 1.6;
-        }
-
-        h1, h2, h3 {
-            font-family: Georgia, "Times New Roman", serif;
-            font-weight: normal;
-            margin-bottom: 1rem;
-        }
-
-        h1 {
-            font-size: 3rem;
-            line-height: 1.2;
-        }
-
-        h2 {
-            font-size: 2rem;
-            color: var(--purple);
-        }
-
-        h3 {
-            font-size: 1.25rem;
-            color: var(--purple);
-        }
-
-        p {
-            margin-bottom: 1rem;
-            font-size: 1.05rem;
-        }
-
-        a {
-            color: var(--gold);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        a:hover {
-            color: var(--purple);
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
-
-            /* Header */
-        header {
-            background: white;
-            color: var(--text);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-
-        .header-content {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            height: 50px;
-            width: auto;
-        }
-
-        nav a {
-            margin-left: 2rem;
-            color: var(--cream);
-            transition: color 0.3s;
-        }
-
-        nav a:hover {
-            color: var(--gold);
-        }
-
-        /* Hero Section */
-        .hero {
-            background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
-            color: var(--cream);
-            padding: 6rem 2rem;
-            text-align: center;
-        }
-
-        .hero h1 {
-            color: var(--gold);
-            margin-bottom: 1.5rem;
-            font-size: 3.5rem;
-        }
-
-        .hero p {
-            font-size: 1.3rem;
-            margin-bottom: 2rem;
-            opacity: 0.95;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-         .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: #333333;
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            background: #555555;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-        }
-
-
-        /* Sections */
-        section {
-            padding: 4rem 2rem;
-        }
-
-        .section-light {
-            background: var(--light-gray);
-        }
-
-        .section-white {
-            background: white;
-        }
-
-        /* Problem Statement */
-        .problem {
-            text-align: center;
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .problem p {
-            font-size: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
-
-        .highlight {
-            color: var(--gold);
-            font-weight: 600;
-        }
-
-        /* Credentials Section */
-        .credentials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
-        }
-
-        .credential-card {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--gold);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        .credential-card h3 {
-            color: var(--purple);
-            margin-bottom: 0.5rem;
-        }
-
-        .credential-number {
-            font-size: 2.5rem;
-            color: var(--gold);
-            font-weight: bold;
-        }
-
-        /* Testimonials */
-        .testimonials {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .testimonial {
-            background: white;
-            padding: 2rem;
-            border-radius: 10px;
-            border-top: 4px solid var(--gold);
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-            font-style: italic;
-            color: var(--text);
-        }
-
-        .testimonial::before {
-            content: '"';
-            font-size: 3rem;
-            color: var(--gold);
-            line-height: 0.5;
-            display: block;
-            margin-bottom: 0.5rem;
-        }
-
-        /* Tier Comparison */
-        .tier-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 2rem 0;
-            background: white;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .tier-table th {
-            background: var(--purple);
-            color: var(--cream);
-            padding: 1.5rem;
-            text-align: left;
-            font-weight: 600;
-            border: none;
-        }
-
-        .tier-table td {
-            padding: 1.5rem;
-            border-bottom: 1px solid var(--cream-dark);
-        }
-
-        .tier-table tbody tr:last-child td {
-            border-bottom: none;
-        }
-
-        .tier-name {
-            font-weight: 600;
-            color: var(--purple);
-        }
-
-        .price {
-            font-size: 1.3rem;
-            color: var(--gold);
-            font-weight: bold;
-        }
-
-        .check {
-            color: #2E7D32;
-            font-weight: bold;
-        }
-
-        /* Tier Details */
-        .tier-details {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
-        }
-
-        .tier-card {
-            background: #FDFAF2;
-            padding: 2.5rem;
-            border-radius: 10px;
-            border: 1px solid #E8E2D5;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-
-        .tier-card h3 {
-            color: var(--purple);
-            margin-bottom: 1rem;
-        }
-
-        .tier-card .price {
-            display: block;
-            margin: 1rem 0 1.5rem 0;
-        }
-
-        .tier-card ul {
-            list-style: none;
-            margin: 1.5rem 0;
-        }
-
-        .tier-card li {
-            padding: 0.5rem 0 0.5rem 2rem;
-            position: relative;
-            color: var(--text);
-        }
-
-        .tier-card li::before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: var(--gold);
-            font-weight: bold;
-            font-size: 1.2rem;
-        }
-
-        .tier-card .btn {
-            width: 100%;
-            display: block;
-            text-align: center;
-            margin-top: 2rem;
-        }
-
-        /* FAQ */
-        .faq-item {
-            background: white;
-            margin-bottom: 1rem;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
-        }
-
-        .faq-question {
-            background: var(--purple);
-            color: var(--cream);
-            padding: 1.5rem;
-            cursor: pointer;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-weight: 600;
-            transition: background 0.3s;
-        }
-
-        .faq-question:hover {
-            background: var(--purple-light);
-        }
-
-        .faq-toggle {
-            font-size: 1.5rem;
-            transition: transform 0.3s;
-        }
-
-        .faq-toggle.active {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease;
-            padding: 0 1.5rem;
-        }
-
-        .faq-answer.active {
-            padding: 1.5rem;
-            max-height: 500px;
-        }
-
-        .faq-answer p {
-            color: var(--text);
-            line-height: 1.7;
-        }
-
-        /* Footer */
-        footer {
-            background: var(--purple);
-            color: var(--cream);
-            padding: 3rem 2rem;
-            text-align: center;
-        }
-
-        .footer-content {
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        .footer-links {
-            margin: 2rem 0;
-        }
-
-        .footer-links a {
-            color: var(--gold);
-            margin: 0 1.5rem;
-            display: inline-block;
-        }
-
-        /* Responsive */
-        @media (max-width: 768px) {
-            .header-content {
-                flex-direction: column;
-                gap: 1rem;
-            }
-
-            nav {
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                gap: 1rem;
-            }
-
-            nav a {
-                margin: 0;
-            }
-
-            h1 {
-                font-size: 2rem;
-            }
-
-            .hero {
-                padding: 3rem 2rem;
-            }
-
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-
-            .tier-table {
-                font-size: 0.9rem;
-            }
-
-            .tier-table td, .tier-table th {
-                padding: 1rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <img src="./logo.png" alt="A-Level Accelerators" class="logo">
-                <nav>
-                    <a href="#tiers">Our Programmes</a>
-                    <a href="#faq">FAQs</a>
-                    <a href="https://alevelaccelerators.com/" target="_blank">Subject Accelerators</a>
-                    <a href="#contact">Contact</a>
-                </nav>
-            </div>
-        </div>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="container">
-            <h1>Master Your A-Levels</h1>
-            <p>Learn the exact systems used by top students. Transform your study habits, boost your confidence, and achieve your dream grades.</p>
-            <a href="#tiers" class="btn">View Our Programmes</a>
-        </div>
-    </section>
-
-    <!-- Problem Statement -->
-    <section class="section-light">
-        <div class="container">
-            <div class="problem">
-                <h2>The Challenge Every A-Level Student Faces</h2>
-                <p>You're juggling mocks, coursework, personal statements, university applications, and mountains of content to revise. The pressure is overwhelming, and <span class="highlight">working harder isn't the answer</span>.</p>
-                <p>Most students spend hours studying without a system. They revise topics that feel easy, hide from their weaknesses, and wonder why they're not improving despite the effort.</p>
-                <p><span class="highlight">The secret isn't more work — it's better systems.</span></p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Credentials Section -->
-    <section class="section-white">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem;">Why You Can Trust Me</h2>
-            <div class="credentials">
-                <div class="credential-card">
-                    <div class="credential-number">1000+</div>
-                    <p>Students helped achieve their dream universities through tailored applications and study strategies</p>
-                </div>
-                <div class="credential-card">
-                    <div class="credential-number">200+</div>
-                    <p>Five-star reviews from my Medical Interview Masterclass series</p>
-                </div>
-                <div class="credential-card">
-                    <div class="credential-number">Med Degree</div>
-                    <p>Qualified medical doctor who knows exactly what it takes to excel at A-Level</p>
-                </div>
-            </div>
-
-            <h3 style="text-align: center; margin: 3rem 0 2rem 0;">What Students Say</h3>
-            <div class="testimonials">
-                <div class="testimonial">
-                    Dr Waleed Ahmad is a great speaker and host! The sessions were very engaging and incredibly helpful."
-                </div>
-                <div class="testimonial">
-                    I found it really helpful and I liked all of the examples you used. It was a very engaging session. Thank you!"
-                </div>
-                <div class="testimonial">
-                    I love each session because it is highly interactive. We can give answers which Dr Waleed gives feedback on — that's incredibly valuable."
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Tier Comparison -->
-    <section class="section-light">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 2rem;" id="tiers">Three Paths to Excellence</h2>
-
-            <table class="tier-table">
-                <thead>
-                    <tr>
-                        <th></th>
-                        <th>Study Series</th>
-                        <th>Study Accelerator</th>
-                        <th>Study System</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td class="tier-name">Price</td>
-                        <td><span class="price">£89</span> (from £189)</td>
-                        <td><span class="price">£89 + £50/mo</span></td>
-                        <td><span class="price">From £2,000/yr</span></td>
-                    </tr>
-                    <tr>
-                        <td class="tier-name">Format</td>
-                        <td>4 live group sessions</td>
-                        <td>Everything in Series + more</td>
-                        <td>Complete 1:1 programme</td>
-                    </tr>
-                    <tr>
-                        <td class="tier-name">Live Sessions</td>
-                        <td><span class="check">✓</span> 4 sessions</td>
-                        <td><span class="check">✓</span> 4 sessions</td>
-                        <td><span class="check">✓</span> Weekly 1:1 calls</td>
-                    </tr>
-                    <tr>
-                        <td class="tier-name">Group Q&A</td>
-                        <td><span class="check">✓</span> Fortnightly</td>
-                        <td><span class="check">✓</span> Fortnightly</td>
-                        <td><span class="check">✓</span> Ongoing</td>
-                    </tr>
-                    <tr>
-                        <td class="tier-name">WhatsApp Access</td>
-                        <td></td>
-                        <td><span class="check">✓</span></td>
-                        <td><span class="check">✓</span> 24/7</td>
-                    </tr>
-                    <tr>
-                        <td class="tier-name">1:1 Coaching</td>
-                        <td></td>
-                        <td><span class="check">✓</span> Fortnightly</td>
-                        <td><span class="check">✓</span> Weekly</td>
-                    </tr>
-                    <tr>
-                        <td class="tier-name">Personal Plan</td>
-                        <td></td>
-                        <td></td>
-                        <td><span class="check">✓</span> Fully customised</td>
-                    </tr>
-                    <tr>
-                        <td class="tier-name">Best For</td>
-                        <td>Getting the core system</td>
-                        <td>Extra support & accountability</td>
-                        <td>Complete transformation</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-    </section>
-
-    <!-- Tier Details -->
-    <section class="section-white">
-        <div class="container">
-            <div class="tier-details">
-                <!-- Tier 1 -->
-                <div class="tier-card">
-                    <h3>Top 1% Study Series</h3>
-                    <div class="price">£89 (from £189)</div>
-                    <p>The core system delivered live. Perfect for students who want to implement immediately.</p>
-                    <ul>
-                        <li>4 live sessions (2 hours each, twice weekly)</li>
-                        <li>Session 1: Mastering Your Week (80/20 Study Plan)</li>
-                        <li>Session 2: Overcoming Procrastination</li>
-                        <li>Session 3: Preventing Burnout</li>
-                        <li>Session 4: Revising That Works (Active Recall & Spaced Repetition)</li>
-                        <li>Fortnightly group Q&A (1 hour)</li>
-                        <li>Money-back guarantee after week 1</li>
-                    </ul>
-                    <a href="STRIPE_LINK_SERIES" class="btn">Enrol Now</a>
-                </div>
-
-                <!-- Tier 2 -->
-                <div class="tier-card">
-                    <h3>Top 1% Study Accelerator</h3>
-                    <div class="price">£89 + £50/month</div>
-                    <p>Everything in Series plus direct access and personal accountability.</p>
-                    <ul>
-                        <li>All Series content & sessions</li>
-                        <li>Private WhatsApp group</li>
-                        <li>Direct answers from me (48-hour turnaround)</li>
-                        <li>Fortnightly 30-min 1:1 calls</li>
-                        <li>Personalised onboarding call</li>
-                        <li>Monthly accountability check-ins</li>
-                        <li>Access to A-Level Biology & Chemistry resources</li>
-                    </ul>
-                    <a href="STRIPE_LINK_ACCELERATOR" class="btn">Enrol Now</a>
-                </div>
-
-                <!-- Tier 3 -->
-                <div class="tier-card">
-                    <h3>Top 1% Study System</h3>
-                    <div class="price">From £2,000/year</div>
-                    <p>Complete 1:1 transformation. For serious students. Invite-only (5 spaces).</p>
-                    <ul>
-                        <li>Comprehensive diagnostic breakdown session</li>
-                        <li>Personalised analysis report & custom roadmap</li>
-                        <li>Weekly 1:1 coaching calls (1-2 hours each)</li>
-                        <li>Monthly deep-dive review meetings</li>
-                        <li>24/7 WhatsApp access to me</li>
-                        <li>Subject-specific support tailored to you</li>
-                        <li>Custom AI tutors for your subjects</li>
-                        <li>Discounted access to A-Level programmes</li>
-                    </ul>
-                    <a href="ZOOM_BOOKING_LINK" class="btn">Book Free Consultation</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="section-light" id="faq">
-        <div class="container">
-            <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>I'm already swamped with schoolwork. Will this take up even more time?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>The programmes require just <strong>2-3 hours per week of your time</strong>. Yes, that's an investment upfront. But here's the reality: those 2-3 hours will save you <strong>weeks and months</strong> over your study journey.</p>
-                    <p>Why? Because you'll stop wasting time on ineffective study methods. You'll revise smarter, not harder. Students who use proper systems complete the same work in half the time and retain it better. It's not about adding more work — it's about working strategically.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How is this different from 1-to-1 subject tutoring?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>Most 1-to-1 tutoring focuses on going through content — explaining what you need to know. That's not where students actually struggle.</p>
-                    <p>The real gap is in <strong>study technique</strong>. Students don't know how to prioritise effectively, manage their time, stay focused, or revise efficiently. These struggles apply to every subject.</p>
-                    <p>This programme teaches you <strong>how to become a better student</strong> — systems that work across all your subjects, now and for life. You'll learn to:</p>
-                    <ul style="margin: 1rem 0; padding-left: 2rem;">
-                        <li>Identify which topics matter most (80/20 principle)</li>
-                        <li>Study at optimal times (peak energy blocks)</li>
-                        <li>Revise that actually sticks (active recall, spaced repetition)</li>
-                        <li>Overcome procrastination and burnout</li>
-                    </ul>
-                    <p>Combined, these systems elevate your performance across all A-Levels.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How quickly will I see results?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>You'll see immediate improvements:</p>
-                    <ul style="margin: 1rem 0; padding-left: 2rem;">
-                        <li><strong>Week 1:</strong> Clarity on what to prioritise. Less overwhelm.</li>
-                        <li><strong>Weeks 2-4:</strong> Better time management. More efficient study sessions.</li>
-                        <li><strong>Months 2-3:</strong> Noticeable grade improvements as systems compound.</li>
-                        <li><strong>By exam season:</strong> Significant confidence boost. Better results.</li>
-                    </ul>
-                    <p>The key is consistency. Apply the systems from day one, and you'll outpace peers who don't.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Do you cover all A-Level subjects?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p><strong>Yes.</strong> The study systems work for any subject. You're not learning content; you're learning the <strong>meta-skills</strong> of how to study effectively.</p>
-                    <p>Whether it's Mathematics, Biology, History, or Languages — the principles of prioritisation, active recall, spaced repetition, and time management apply universally.</p>
-                    <p>In the Study System tier, you also get subject-specific support for your particular A-Levels.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>What if I'm not happy with the programme?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>The Study Series and Accelerator programmes come with a <strong>30-day money-back guarantee</strong>. If it's not for you, get a full refund — no questions asked.</p>
-                    <p>For the Study System, book your free consultation first. We'll discuss if it's the right fit for you.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>When does the next cohort start?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>New cohorts start regularly. For exact dates and availability, reach out to me directly or check the course page when you enrol.</p>
-                    <p>The Study System is by appointment — we schedule 1:1s based on your availability.</p>
-                </div>
-            </div>
-
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>Can parents attend or get updates?</span>
-                    <span class="faq-toggle">▼</span>
-                </div>
-                <div class="faq-answer">
-                    <p>The programmes are designed for students. However, parents are welcome to understand the systems so they can support at home.</p>
-                    <p>For the Study System tier, we can include periodic updates with parents if that's helpful.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="section-white">
-        <div class="container" style="text-align: center;">
-            <h2>Ready to Transform Your A-Levels?</h2>
-            <p style="font-size: 1.2rem; margin: 1.5rem 0;">Choose the programme that fits your needs and start applying proven systems today.</p>
-            <a href="#tiers" class="btn">View All Programmes</a>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer id="contact">
-        <div class="footer-content">
-            <img src="./logo.png" alt="A-Level Accelerators" class="logo" style="height: 40px; margin-bottom: 1rem;">
-            <h3 style="color: var(--gold); margin-bottom: 1.5rem;">Get in Touch</h3>
-            <p>Questions? Get in touch directly:</p>
-            <div class="footer-links">
-                <a href="mailto:contact@alevelallerators.com">Email</a>
-                <a href="ZOOM_BOOKING_LINK">Book a Call</a>
-                <a href="./revision-tracker.html">Free Revision Tracker</a>
-            </div>
-            <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">
-                © 2026 A-Level Accelerators. All rights reserved.<br>
-                Helping A-Level students become the top of their class.
-            </p>
-        </div>
-    </footer>
-
-    <script>
-        function toggleFAQ(element) {
-            const question = element;
-            const answer = element.nextElementSibling;
-            const toggle = element.querySelector('.faq-toggle');
-
-            // Close other FAQs
-            document.querySelectorAll('.faq-answer.active').forEach(item => {
-                if (item !== answer) {
-                    item.classList.remove('active');
-                    item.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
-                }
-            });
-
-            // Toggle current
-            answer.classList.toggle('active');
-            toggle.classList.toggle('active');
-        }
-
-        // Smooth scroll
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth' });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+1	<!DOCTYPE html>
+2	<html lang="en">
+3	<head>
+4	    <meta charset="UTF-8">
+5	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+6	    <title>Top 1% Study System - A-Level Excellence Programme</title>
+7	    <style>
+8	        * {
+9	            margin: 0;
+10	            padding: 0;
+11	            box-sizing: border-box;
+12	        }
+13	
+14	        :root {
+15	            --purple: #2E2557;
+16	            --purple-light: #3d3370;
+17	            --cream: #F3EBD8;
+18	            --cream-dark: #E8D9BF;
+19	            --gold: #C9A96E;
+20	            --text: #1a1535;
+21	            --muted: #777;
+22	            --light-gray: #f8f7f5;
+23	        }
+24	
+25	        html {
+26	            scroll-behavior: smooth;
+27	        }
+28	
+29	        body {
+30	            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif;
+31	            background: var(--cream);
+32	            color: var(--text);
+33	            line-height: 1.6;
+34	        }
+35	
+36	        h1, h2, h3 {
+37	            font-family: Georgia, "Times New Roman", serif;
+38	            font-weight: normal;
+39	            margin-bottom: 1rem;
+40	        }
+41	
+42	        h1 {
+43	            font-size: 3rem;
+44	            line-height: 1.2;
+45	        }
+46	
+47	        h2 {
+48	            font-size: 2rem;
+49	            color: var(--purple);
+50	        }
+51	
+52	        h3 {
+53	            font-size: 1.25rem;
+54	            color: var(--purple);
+55	        }
+56	
+57	        p {
+58	            margin-bottom: 1rem;
+59	            font-size: 1.05rem;
+60	        }
+61	
+62	        a {
+63	            color: var(--gold);
+64	            text-decoration: none;
+65	            transition: color 0.3s;
+66	        }
+67	
+68	        a:hover {
+69	            color: var(--purple);
+70	        }
+71	
+72	        .container {
+73	            max-width: 1200px;
+74	            margin: 0 auto;
+75	            padding: 0 2rem;
+76	        }
+77	
+78	        /* Header */
+79	        header {
+80	            background: var(--purple);
+81	            color: var(--cream);
+82	            padding: 1.5rem 0;
+83	            position: sticky;
+84	            top: 0;
+85	            z-index: 100;
+86	            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+87	        }
+88	
+89	        .header-content {
+90	            display: flex;
+91	            justify-content: space-between;
+92	            align-items: center;
+93	        }
+94	
+95	        .logo {
+96	            height: 50px;
+97	            width: auto;
+98	        }
+99	
+100	        nav a {
+101	            margin-left: 2rem;
+102	            color: var(--cream);
+103	            transition: color 0.3s;
+104	        }
+105	
+106	        nav a:hover {
+107	            color: var(--gold);
+108	        }
+109	
+110	        /* Hero Section */
+111	        .hero {
+112	            background: linear-gradient(135deg, var(--purple) 0%, var(--purple-light) 100%);
+113	            color: var(--cream);
+114	            padding: 6rem 2rem;
+115	            text-align: center;
+116	        }
+117	
+118	        .hero h1 {
+119	            color: var(--gold);
+120	            margin-bottom: 1.5rem;
+121	            font-size: 3.5rem;
+122	        }
+123	
+124	        .hero p {
+125	            font-size: 1.3rem;
+126	            margin-bottom: 2rem;
+127	            opacity: 0.95;
+128	            max-width: 700px;
+129	            margin-left: auto;
+130	            margin-right: auto;
+131	        }
+132	
+133	        .btn {
+134	            display: inline-block;
+135	            padding: 1rem 2.5rem;
+136	            background: var(--gold);
+137	            color: var(--purple);
+138	            border: none;
+139	            border-radius: 6px;
+140	            font-size: 1.1rem;
+141	            font-weight: 600;
+142	            cursor: pointer;
+143	            transition: all 0.3s;
+144	            text-decoration: none;
+145	        }
+146	
+147	        .btn:hover {
+148	            background: #e0b577;
+149	            transform: translateY(-2px);
+150	            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+151	        }
+152	
+153	        /* Sections */
+154	        section {
+155	            padding: 4rem 2rem;
+156	        }
+157	
+158	        .section-light {
+159	            background: var(--light-gray);
+160	        }
+161	
+162	        .section-white {
+163	            background: white;
+164	        }
+165	
+166	        /* Problem Statement */
+167	        .problem {
+168	            text-align: center;
+169	            max-width: 800px;
+170	            margin: 0 auto;
+171	        }
+172	
+173	        .problem p {
+174	            font-size: 1.2rem;
+175	            margin-bottom: 1.5rem;
+176	        }
+177	
+178	        .highlight {
+179	            color: var(--gold);
+180	            font-weight: 600;
+181	        }
+182	
+183	        /* Credentials Section */
+184	        .credentials {
+185	            display: grid;
+186	            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+187	            gap: 2rem;
+188	            margin-bottom: 3rem;
+189	        }
+190	
+191	        .credential-card {
+192	            background: white;
+193	            padding: 2rem;
+194	            border-radius: 10px;
+195	            border-left: 4px solid var(--gold);
+196	            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+197	        }
+198	
+199	        .credential-card h3 {
+200	            color: var(--purple);
+201	            margin-bottom: 0.5rem;
+202	        }
+203	
+204	        .credential-number {
+205	            font-size: 2.5rem;
+206	            color: var(--gold);
+207	            font-weight: bold;
+208	        }
+209	
+210	        /* Testimonials */
+211	        .testimonials {
+212	            display: grid;
+213	            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+214	            gap: 2rem;
+215	            margin: 2rem 0;
+216	        }
+217	
+218	        .testimonial {
+219	            background: white;
+220	            padding: 2rem;
+221	            border-radius: 10px;
+222	            border-top: 4px solid var(--gold);
+223	            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+224	            font-style: italic;
+225	            color: var(--text);
+226	        }
+227	
+228	        .testimonial::before {
+229	            content: '"';
+230	            font-size: 3rem;
+231	            color: var(--gold);
+232	            line-height: 0.5;
+233	            display: block;
+234	            margin-bottom: 0.5rem;
+235	        }
+236	
+237	        /* Tier Comparison */
+238	        .tier-table {
+239	            width: 100%;
+240	            border-collapse: collapse;
+241	            margin: 2rem 0;
+242	            background: white;
+243	            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+244	            border-radius: 10px;
+245	            overflow: hidden;
+246	        }
+247	
+248	        .tier-table th {
+249	            background: var(--purple);
+250	            color: var(--cream);
+251	            padding: 1.5rem;
+252	            text-align: left;
+253	            font-weight: 600;
+254	            border: none;
+255	        }
+256	
+257	        .tier-table td {
+258	            padding: 1.5rem;
+259	            border-bottom: 1px solid var(--cream-dark);
+260	        }
+261	
+262	        .tier-table tbody tr:last-child td {
+263	            border-bottom: none;
+264	        }
+265	
+266	        .tier-name {
+267	            font-weight: 600;
+268	            color: var(--purple);
+269	        }
+270	
+271	        .price {
+272	            font-size: 1.3rem;
+273	            color: var(--gold);
+274	            font-weight: bold;
+275	        }
+276	
+277	        .check {
+278	            color: #2E7D32;
+279	            font-weight: bold;
+280	        }
+281	
+282	        /* Tier Details */
+283	        .tier-details {
+284	            display: grid;
+285	            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+286	            gap: 2rem;
+287	            margin: 2rem 0;
+288	        }
+289	
+290	        .tier-card {
+291	            background: white;
+292	            padding: 2.5rem;
+293	            border-radius: 10px;
+294	            border-top: 4px solid var(--gold);
+295	            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+296	        }
+297	
+298	        .tier-card h3 {
+299	            color: var(--purple);
+300	            margin-bottom: 1rem;
+301	        }
+302	
+303	        .tier-card .price {
+304	            display: block;
+305	            margin: 1rem 0 1.5rem 0;
+306	        }
+307	
+308	        .tier-card ul {
+309	            list-style: none;
+310	            margin: 1.5rem 0;
+311	        }
+312	
+313	        .tier-card li {
+314	            padding: 0.5rem 0 0.5rem 2rem;
+315	            position: relative;
+316	            color: var(--text);
+317	        }
+318	
+319	        .tier-card li::before {
+320	            content: "✓";
+321	            position: absolute;
+322	            left: 0;
+323	            color: var(--gold);
+324	            font-weight: bold;
+325	            font-size: 1.2rem;
+326	        }
+327	
+328	        .tier-card .btn {
+329	            width: 100%;
+330	            display: block;
+331	            text-align: center;
+332	            margin-top: 2rem;
+333	        }
+334	
+335	        /* FAQ */
+336	        .faq-item {
+337	            background: white;
+338	            margin-bottom: 1rem;
+339	            border-radius: 8px;
+340	            overflow: hidden;
+341	            box-shadow: 0 2px 6px rgba(0,0,0,0.06);
+342	        }
+343	
+344	        .faq-question {
+345	            background: var(--purple);
+346	            color: var(--cream);
+347	            padding: 1.5rem;
+348	            cursor: pointer;
+349	            display: flex;
+350	            justify-content: space-between;
+351	            align-items: center;
+352	            font-weight: 600;
+353	            transition: background 0.3s;
+354	        }
+355	
+356	        .faq-question:hover {
+357	            background: var(--purple-light);
+358	        }
+359	
+360	        .faq-toggle {
+361	            font-size: 1.5rem;
+362	            transition: transform 0.3s;
+363	        }
+364	
+365	        .faq-toggle.active {
+366	            transform: rotate(180deg);
+367	        }
+368	
+369	        .faq-answer {
+370	            max-height: 0;
+371	            overflow: hidden;
+372	            transition: max-height 0.3s ease;
+373	            padding: 0 1.5rem;
+374	        }
+375	
+376	        .faq-answer.active {
+377	            padding: 1.5rem;
+378	            max-height: 500px;
+379	        }
+380	
+381	        .faq-answer p {
+382	            color: var(--text);
+383	            line-height: 1.7;
+384	        }
+385	
+386	        /* Footer */
+387	        footer {
+388	            background: var(--purple);
+389	            color: var(--cream);
+390	            padding: 3rem 2rem;
+391	            text-align: center;
+392	        }
+393	
+394	        .footer-content {
+395	            max-width: 800px;
+396	            margin: 0 auto;
+397	        }
+398	
+399	        .footer-links {
+400	            margin: 2rem 0;
+401	        }
+402	
+403	        .footer-links a {
+404	            color: var(--gold);
+405	            margin: 0 1.5rem;
+406	            display: inline-block;
+407	        }
+408	
+409	        /* Responsive */
+410	        @media (max-width: 768px) {
+411	            .header-content {
+412	                flex-direction: column;
+413	                gap: 1rem;
+414	            }
+415	
+416	            nav {
+417	                display: flex;
+418	                flex-wrap: wrap;
+419	                justify-content: center;
+420	                gap: 1rem;
+421	            }
+422	
+423	            nav a {
+424	                margin: 0;
+425	            }
+426	
+427	            h1 {
+428	                font-size: 2rem;
+429	            }
+430	
+431	            .hero {
+432	                padding: 3rem 2rem;
+433	            }
+434	
+435	            .hero h1 {
+436	                font-size: 2.5rem;
+437	            }
+438	
+439	            .tier-table {
+440	                font-size: 0.9rem;
+441	            }
+442	
+443	            .tier-table td, .tier-table th {
+444	                padding: 1rem;
+445	            }
+446	        }
+447	    </style>
+448	</head>
+449	<body>
+450	    <!-- Header -->
+451	    <header>
+452	        <div class="container">
+453	            <div class="header-content">
+454	                <img src="./logo.png" alt="A-Level Accelerators" class="logo">
+455	                <nav>
+456	                    <a href="#tiers">Our Programmes</a>
+457	                    <a href="#faq">FAQs</a>
+458	                    <a href="#contact">Contact</a>
+459	                </nav>
+460	            </div>
+461	        </div>
+462	    </header>
+463	
+464	    <!-- Hero Section -->
+465	    <section class="hero">
+466	        <div class="container">
+467	            <h1 style="color: var(--purple); font-weight: bold;">Master Your A-Levels</h1>
+468	            <p>Learn the exact systems used by top students. Transform your study habits, boost your confidence, and achieve your dream grades.</p>
+469	            <a href="#tiers" class="btn">View Our Programmes</a>
+470	        </div>
+471	    </section>
+472	
+473	    <!-- Problem Statement -->
+474	    <section class="section-light">
+475	        <div class="container">
+476	            <div class="problem">
+477	                <h2>The Challenge Every A-Level Student Faces</h2>
+478	                <p>You're juggling mocks, coursework, personal statements, university applications, and mountains of content to revise. The pressure is overwhelming, and <span class="highlight">working harder isn't the answer</span>.</p>
+479	                <p>Most students spend hours studying without a system. They revise topics that feel easy, hide from their weaknesses, and wonder why they're not improving despite the effort.</p>
+480	                <p><span class="highlight">The secret isn't more work — it's better systems.</span></p>
+481	            </div>
+482	        </div>
+483	    </section>
+484	
+485	    <!-- Credentials Section -->
+486	    <section class="section-white">
+487	        <div class="container">
+488	            <h2 style="text-align: center; margin-bottom: 3rem;">Why Trust Us</h2>
+489	            <div class="credentials">
+490	                <div class="credential-card">
+491	                    <div class="credential-number">1000+</div>
+492	                    <p>Students helped achieve their dream universities through tailored applications and study strategies</p>
+493	                </div>
+494	                <div class="credential-card">
+495	                    <div class="credential-number">200+</div>
+496	                    <p>Five-star reviews from my Medical Interview Masterclass series</p>
+497	                </div>
+498	                <div class="credential-card">
+499	                    <div class="credential-number">Med Degree</div>
+500	                    <p>Qualified medical doctor who knows exactly what it takes to excel at A-Level</p>
+501	                </div>
+502	            </div>
+503	
+504	            <h3 style="text-align: center; margin: 3rem 0 2rem 0;">What Students Say</h3>
+505	            <div class="testimonials">
+506	                <div class="testimonial">
+507	                    Dr Waleed Ahmad is a great speaker and host! The sessions were very engaging and incredibly helpful."
+508	                </div>
+509	                <div class="testimonial">
+510	                    I found it really helpful and I liked all of the examples you used. It was a very engaging session. Thank you!"
+511	                </div>
+512	                <div class="testimonial">
+513	                    I love each session because it is highly interactive. We can give answers which Dr Waleed gives feedback on — that's incredibly valuable."
+514	                </div>
+515	            </div>
+516	        </div>
+517	    </section>
+518	
+519	    <!-- Tier Comparison -->
+520	    <section class="section-light">
+521	        <div class="container">
+522	            <h2 style="text-align: center; margin-bottom: 2rem;" id="tiers">Three Paths to Excellence</h2>
+523	
+524	            <table class="tier-table">
+525	                <thead>
+526	                    <tr>
+527	                        <th></th>
+528	                        <th>Study Series</th>
+529	                        <th>Study Accelerator</th>
+530	                        <th>Study System</th>
+531	                    </tr>
+532	                </thead>
+533	                <tbody>
+534	                    <tr>
+535	                        <td class="tier-name">Price</td>
+536	                        <td><span class="price">£89</span> (from £189)</td>
+537	                        <td><span class="price">£499</span></td>
+538	                        <td><span class="price">From £2,000/yr</span></td>
+539	                    </tr>
+540	                    <tr>
+541	                        <td class="tier-name">Format</td>
+542	                        <td>4 live group sessions</td>
+543	                        <td>Everything in Series + more</td>
+544	                        <td>Complete 1:1 programme</td>
+545	                    </tr>
+546	                    <tr>
+547	                        <td class="tier-name">Live Sessions</td>
+548	                        <td><span class="check">✓</span> 4 sessions</td>
+549	                        <td><span class="check">✓</span> 4 sessions</td>
+550	                        <td><span class="check">✓</span> Weekly 1:1 calls</td>
+551	                    </tr>
+552	                    <tr>
+553	                        <td class="tier-name">Group Q&A</td>
+554	                        <td><span class="check">✓</span> Fortnightly</td>
+555	                        <td><span class="check">✓</span> Fortnightly</td>
+556	                        <td><span class="check">✓</span> Ongoing</td>
+557	                    </tr>
+558	                    <tr>
+559	                        <td class="tier-name">WhatsApp Access</td>
+560	                        <td></td>
+561	                        <td><span class="check">✓</span></td>
+562	                        <td><span class="check">✓</span> 24/7</td>
+563	                    </tr>
+564	                    <tr>
+565	                        <td class="tier-name">1:1 Coaching</td>
+566	                        <td></td>
+567	                        <td><span class="check">✓</span> Fortnightly</td>
+568	                        <td><span class="check">✓</span> Weekly</td>
+569	                    </tr>
+570	                    <tr>
+571	                        <td class="tier-name">Personal Plan</td>
+572	                        <td></td>
+573	                        <td></td>
+574	                        <td><span class="check">✓</span> Fully customised</td>
+575	                    </tr>
+576	                    <tr>
+577	                        <td class="tier-name">Best For</td>
+578	                        <td>Getting the core system</td>
+579	                        <td>Extra support & accountability</td>
+580	                        <td>Complete transformation</td>
+581	                    </tr>
+582	                </tbody>
+583	            </table>
+584	        </div>
+585	    </section>
+586	
+587	    <!-- Tier Details -->
+588	    <section class="section-white">
+589	        <div class="container">
+590	            <div class="tier-details">
+591	                <!-- Tier 1 -->
+592	                <div class="tier-card">
+593	                    <h3>Top 1% Study Series</h3>
+594	                    <div class="price">£119</div>
+595	                    <p>The core system delivered live. Perfect for students who want to implement immediately.</p>
+596	                    <ul>
+597	                        <li>4 live sessions (2 hours each, twice weekly)</li>
+598	                        <li>Session 1: Mastering Your Week (80/20 Study Plan)</li>
+599	                        <li>Session 2: Overcoming Procrastination</li>
+600	                        <li>Session 3: Preventing Burnout</li>
+601	                        <li>Session 4: Revising That Works (Active Recall & Spaced Repetition)</li>
+602	                        <li>Fortnightly group Q&A (1 hour)</li>
+603	                        <li>Money-back guarantee after week 1</li>
+604	                    </ul>
+605	                    <a href="STRIPE_LINK_SERIES" class="btn">Enrol Now</a>
+606	                </div>
+607	
+608	                <!-- Tier 2 -->
+609	                <div class="tier-card">
+610	                    <h3>Top 1% Study Accelerator</h3>
+611	                    <div class="price">£499</div>
+612	                    <p>Everything in Series plus direct access and personal accountability.</p>
+613	                    <ul>
+614	                        <li>All Series content & sessions</li>
+615	                        <li>Private WhatsApp group</li>
+616	                        <li>Direct answers from me (48-hour turnaround)</li>
+617	                        <li>Fortnightly 30-min 1:1 calls</li>
+618	                        <li>Personalised onboarding call</li>
+619	                        <li>Monthly accountability check-ins</li>
+620	                        <li>Access to A-Level Biology & Chemistry resources</li>
+621	                    </ul>
+622	                    <a href="STRIPE_LINK_ACCELERATOR" class="btn">Enrol Now</a>
+623	                </div>
+624	
+625	                <!-- Tier 3 -->
+626	                <div class="tier-card">
+627	                    <h3>Top 1% Study System</h3>
+628	                    <div class="price">From £2,000/year</div>
+629	                    <p>Complete 1:1 transformation. For serious students. Invite-only (5 spaces).</p>
+630	                    <ul>
+631	                        <li>Comprehensive diagnostic breakdown session</li>
+632	                        <li>Personalised analysis report & custom roadmap</li>
+633	                        <li>Weekly 1:1 coaching calls (1-2 hours each)</li>
+634	                        <li>Monthly deep-dive review meetings</li>
+635	                        <li>24/7 WhatsApp access to me</li>
+636	                        <li>Subject-specific support tailored to you</li>
+637	                        <li>Custom AI tutors for your subjects</li>
+638	                        <li>Discounted access to A-Level programmes</li>
+639	                    </ul>
+640	                    <a href="ZOOM_BOOKING_LINK" class="btn">Book Free Consultation</a>
+641	                </div>
+642	            </div>
+643	        </div>
+644	    </section>
+645	
+646	    <!-- FAQ Section -->
+647	    <section class="section-light" id="faq">
+648	        <div class="container">
+649	            <h2 style="text-align: center; margin-bottom: 3rem;">Frequently Asked Questions</h2>
+650	
+651	            <div class="faq-item">
+652	                <div class="faq-question" onclick="toggleFAQ(this)">
+653	                    <span>I'm already swamped with schoolwork. Will this take up even more time?</span>
+654	                    <span class="faq-toggle">▼</span>
+655	                </div>
+656	                <div class="faq-answer">
+657	                    <p>The programmes require just <strong>2-3 hours per week of your time</strong>. Yes, that's an investment upfront. But here's the reality: those 2-3 hours will save you <strong>weeks and months</strong> over your study journey.</p>
+658	                    <p>Why? Because you'll stop wasting time on ineffective study methods. You'll revise smarter, not harder. Students who use proper systems complete the same work in half the time and retain it better. It's not about adding more work — it's about working strategically.</p>
+659	                </div>
+660	            </div>
+661	
+662	            <div class="faq-item">
+663	                <div class="faq-question" onclick="toggleFAQ(this)">
+664	                    <span>How is this different from 1-to-1 subject tutoring?</span>
+665	                    <span class="faq-toggle">▼</span>
+666	                </div>
+667	                <div class="faq-answer">
+668	                    <p>Most 1-to-1 tutoring focuses on going through content — explaining what you need to know. That's not where students actually struggle.</p>
+669	                    <p>The real gap is in <strong>study technique</strong>. Students don't know how to prioritise effectively, manage their time, stay focused, or revise efficiently. These struggles apply to every subject.</p>
+670	                    <p>This programme teaches you <strong>how to become a better student</strong> — systems that work across all your subjects, now and for life. You'll learn to:</p>
+671	                    <ul style="margin: 1rem 0; padding-left: 2rem;">
+672	                        <li>Identify which topics matter most (80/20 principle)</li>
+673	                        <li>Study at optimal times (peak energy blocks)</li>
+674	                        <li>Revise that actually sticks (active recall, spaced repetition)</li>
+675	                        <li>Overcome procrastination and burnout</li>
+676	                    </ul>
+677	                    <p>Combined, these systems elevate your performance across all A-Levels.</p>
+678	                </div>
+679	            </div>
+680	
+681	            <div class="faq-item">
+682	                <div class="faq-question" onclick="toggleFAQ(this)">
+683	                    <span>How quickly will I see results?</span>
+684	                    <span class="faq-toggle">▼</span>
+685	                </div>
+686	                <div class="faq-answer">
+687	                    <p>You'll see immediate improvements:</p>
+688	                    <ul style="margin: 1rem 0; padding-left: 2rem;">
+689	                        <li><strong>Week 1:</strong> Clarity on what to prioritise. Less overwhelm.</li>
+690	                        <li><strong>Weeks 2-4:</strong> Better time management. More efficient study sessions.</li>
+691	                        <li><strong>Months 2-3:</strong> Noticeable grade improvements as systems compound.</li>
+692	                        <li><strong>By exam season:</strong> Significant confidence boost. Better results.</li>
+693	                    </ul>
+694	                    <p>The key is consistency. Apply the systems from day one, and you'll outpace peers who don't.</p>
+695	                </div>
+696	            </div>
+697	
+698	            <div class="faq-item">
+699	                <div class="faq-question" onclick="toggleFAQ(this)">
+700	                    <span>Do you cover all A-Level subjects?</span>
+701	                    <span class="faq-toggle">▼</span>
+702	                </div>
+703	                <div class="faq-answer">
+704	                    <p><strong>Yes.</strong> The study systems work for any subject. You're not learning content; you're learning the <strong>meta-skills</strong> of how to study effectively.</p>
+705	                    <p>Whether it's Mathematics, Biology, History, or Languages — the principles of prioritisation, active recall, spaced repetition, and time management apply universally.</p>
+706	                    <p>In the Study System tier, you also get subject-specific support for your particular A-Levels.</p>
+707	                </div>
+708	            </div>
+709	
+710	            <div class="faq-item">
+711	                <div class="faq-question" onclick="toggleFAQ(this)">
+712	                    <span>What if I'm not happy with the programme?</span>
+713	                    <span class="faq-toggle">▼</span>
+714	                </div>
+715	                <div class="faq-answer">
+716	                    <p>The Study Series and Accelerator programmes come with a <strong>30-day money-back guarantee</strong>. If it's not for you, get a full refund — no questions asked.</p>
+717	                    <p>For the Study System, book your free consultation first. We'll discuss if it's the right fit for you.</p>
+718	                </div>
+719	            </div>
+720	
+721	            <div class="faq-item">
+722	                <div class="faq-question" onclick="toggleFAQ(this)">
+723	                    <span>When does the next cohort start?</span>
+724	                    <span class="faq-toggle">▼</span>
+725	                </div>
+726	                <div class="faq-answer">
+727	                    <p>New cohorts start regularly. For exact dates and availability, reach out to me directly or check the course page when you enrol.</p>
+728	                    <p>The Study System is by appointment — we schedule 1:1s based on your availability.</p>
+729	                </div>
+730	            </div>
+731	
+732	            <div class="faq-item">
+733	                <div class="faq-question" onclick="toggleFAQ(this)">
+734	                    <span>Can parents attend or get updates?</span>
+735	                    <span class="faq-toggle">▼</span>
+736	                </div>
+737	                <div class="faq-answer">
+738	                    <p>The programmes are designed for students. However, parents are welcome to understand the systems so they can support at home.</p>
+739	                    <p>For the Study System tier, we can include periodic updates with parents if that's helpful.</p>
+740	                </div>
+741	            </div>
+742	        </div>
+743	    </section>
+744	
+745	    <!-- CTA Section -->
+746	    <section class="section-white">
+747	        <div class="container" style="text-align: center;">
+748	            <h2>Ready to Transform Your A-Levels?</h2>
+749	            <p style="font-size: 1.2rem; margin: 1.5rem 0;">Choose the programme that fits your needs and start applying proven systems today.</p>
+750	            <a href="#tiers" class="btn">View All Programmes</a>
+751	        </div>
+752	    </section>
+753	
+754	    <!-- Footer -->
+755	    <footer id="contact">
+756	        <div class="footer-content">
+757	            <img src="./logo.png" alt="A-Level Accelerators" class="logo" style="height: 40px; margin-bottom: 1rem;">
+758	            <h3 style="color: var(--gold); margin-bottom: 1.5rem;">Get in Touch</h3>
+759	            <p>Questions? Get in touch directly:</p>
+760	            <div class="footer-links">
+761	                <a href="mailto:contact@alevelallerators.com">Email</a>
+762	                <a href="ZOOM_BOOKING_LINK">Book a Call</a>
+763	                <a href="./revision-tracker.html">Free Revision Tracker</a>
+764	            </div>
+765	            <p style="margin-top: 2rem; opacity: 0.8; font-size: 0.9rem;">
+766	                © 2026 A-Level Accelerators. All rights reserved.<br>
+767	                Helping A-Level students become the top of their class.
+768	            </p>
+769	        </div>
+770	    </footer>
+771	
+772	    <script>
+773	        function toggleFAQ(element) {
+774	            const question = element;
+775	            const answer = element.nextElementSibling;
+776	            const toggle = element.querySelector('.faq-toggle');
+777	
+778	            // Close other FAQs
+779	            document.querySelectorAll('.faq-answer.active').forEach(item => {
+780	                if (item !== answer) {
+781	                    item.classList.remove('active');
+782	                    item.previousElementSibling.querySelector('.faq-toggle').classList.remove('active');
+783	                }
+784	            });
+785	
+786	            // Toggle current
+787	            answer.classList.toggle('active');
+788	            toggle.classList.toggle('active');
+789	        }
+790	
+791	        // Smooth scroll
+792	        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+793	            anchor.addEventListener('click', function (e) {
+794	                e.preventDefault();
+795	                const target = document.querySelector(this.getAttribute('href'));
+796	                if (target) {
+797	                    target.scrollIntoView({ behavior: 'smooth' });
+798	                }
+799	            });
+800	        });
+801	    </script>
+802	</body>
+803	</html>
+804	
