@@ -74,8 +74,8 @@ export default function PricingSection() {
               <div
                 className={`relative h-full flex flex-col rounded-xl transition-all ${
                   tier.highlight
-                    ? 'border-4 border-brand-gold shadow-2xl bg-gradient-to-b from-brand-cream/20 to-white'
-                    : 'border-2 border-brand-cream-dark shadow-lg bg-white'
+                    ? 'border-4 border-brand-gold shadow-2xl bg-brand-light-gray'
+                    : 'border-2 border-brand-cream-dark shadow-lg bg-brand-light-gray'
                 } ${tier.popular ? 'md:scale-105 md:-mt-8' : ''} p-10`}
               >
                 {tier.popular && (

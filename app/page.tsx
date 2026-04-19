@@ -19,11 +19,13 @@ export default function Home() {
             alt="A-Level Accelerators"
             width={200}
             height={200}
-            className="h-20 w-auto"
+            className="h-16 w-auto"
             priority
+            unoptimized
           />
           <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-3">
             <a href="#tiers" className="text-brand-purple hover:text-brand-gold font-semibold transition">Our Programmes</a>
+            <a href="#" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject-Specific Support</a>
             <a href="#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
             <a href="#contact" className="text-brand-purple hover:text-brand-gold font-semibold transition">Contact</a>
           </nav>
@@ -116,7 +118,7 @@ export default function Home() {
             Three Paths to Excellence
           </h2>
 
-          <div className="overflow-x-auto bg-white rounded-lg shadow-md">
+          <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-16">
             <table className="w-full">
               <thead>
                 <tr>
@@ -211,14 +213,15 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-4 px-8 text-center">
-        <div className="max-w-3xl mx-auto">
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-0 px-8 text-center">
+        <div className="max-w-3xl mx-auto py-4">
           <Image
             src="/logo-black.png"
             alt="A-Level Accelerators"
             width={160}
             height={160}
-            className="h-48 w-auto mx-auto mb-1"
+            className="h-72 w-auto mx-auto mb-0"
+            unoptimized
           />
           <h3 className="text-xl text-brand-gold font-serif mb-3">Get in Touch</h3>
           <p className="mb-3">Questions? Get in touch directly:</p>
