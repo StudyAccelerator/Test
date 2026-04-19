@@ -16,7 +16,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
           <a href="#top" className="h-20 w-auto flex items-center">
             <Image
-              src="/logo-header.png?v=2"
+              src="/logo-dark.png?v=1"
               alt="A-Level Accelerators"
               width={200}
               height={200}
@@ -81,16 +81,13 @@ export default function Home() {
             Why Trust Us
           </h2>
 
-          <div className="grid md:grid-cols-2 gap-8 mb-16">
-            {[
-              { number: '1000+', text: 'Students helped achieve their dream universities through tailored applications and study strategies' },
-              { number: 'Med Degree', text: 'Qualified medical doctor who knows exactly what it takes to excel at A-Level' },
-            ].map((cred, i) => (
-              <div key={i} className="bg-white p-8 rounded-lg border-l-4 border-brand-gold shadow-sm">
-                <div className="text-4xl font-bold text-brand-gold mb-2">{cred.number}</div>
-                <p className="text-brand-text">{cred.text}</p>
-              </div>
-            ))}
+          <div className="max-w-4xl mx-auto mb-16 bg-brand-light-gray p-8 rounded-lg">
+            <p className="text-lg text-brand-text mb-4">
+              All teaching is delivered by <span className="font-semibold text-brand-gold">Dr. Umleet Ahmad</span>, a qualified medical doctor who has worked with thousands of students and consistently scores within the <span className="font-semibold text-brand-gold">top 1%</span>. He knows exactly what it takes to excel at A-Level because he's done it himself — and helped countless others achieve the same level of excellence.
+            </p>
+            <p className="text-lg text-brand-text">
+              Whether through university applications, exam preparation, or study strategy coaching, Dr. Ahmad has helped over <span className="font-semibold text-brand-gold">1000+ students</span> achieve their dream universities and master the systems that set top performers apart.
+            </p>
           </div>
 
           <h3 className="text-2xl text-brand-purple font-serif text-center mb-8">
@@ -133,9 +130,9 @@ export default function Home() {
               <tbody>
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Price</td>
-                  <td className="p-6 text-center"><span className="text-xl font-bold text-brand-gold">£119</span></td>
-                  <td className="p-6 text-center"><span className="text-xl font-bold text-brand-gold">£499</span></td>
-                  <td className="p-6 text-center"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
+                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">£119</span></td>
+                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">£499</span></td>
+                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Format</td>
@@ -215,19 +212,19 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-2 px-8 text-center">
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-0.5 px-8 text-center">
         <div className="max-w-3xl mx-auto">
           <Image
             src="/logo-header.png?v=2"
             alt="A-Level Accelerators"
             width={160}
             height={160}
-            className="h-72 w-auto mx-auto"
+            className="h-40 w-auto mx-auto"
             unoptimized
           />
-          <div className="py-2">
-            <h3 className="text-lg text-brand-gold font-serif mb-2">Get in Touch</h3>
-            <div className="flex flex-wrap justify-center gap-6 mb-2 text-sm">
+          <div className="py-0.5">
+            <h3 className="text-lg text-brand-gold font-serif mb-1">Get in Touch</h3>
+            <div className="flex flex-wrap justify-center gap-6 mb-1 text-sm">
               <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
               <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
               <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
