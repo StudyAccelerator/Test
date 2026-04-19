@@ -19,6 +19,8 @@ export default function PricingSection() {
       ],
       cta: 'Enrol Now',
       ctaLink: 'STRIPE_LINK_SERIES',
+      popular: false,
+      highlight: false,
     },
     {
       name: 'Top 1% Study Accelerator',
@@ -35,6 +37,8 @@ export default function PricingSection() {
       ],
       cta: 'Enrol Now',
       ctaLink: 'STRIPE_LINK_ACCELERATOR',
+      popular: true,
+      highlight: true,
     },
     {
       name: 'Top 1% Study System',
@@ -52,40 +56,64 @@ export default function PricingSection() {
       ],
       cta: 'Book Free Consultation',
       ctaLink: 'ZOOM_BOOKING_LINK',
+      popular: false,
+      highlight: true,
     },
   ]
 
   return (
     <section className="py-16 px-4 bg-white">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 items-end">
           {tiers.map((tier, index) => (
             <TimelineContent
               key={tier.name}
               animationNum={index}
               className="h-full"
             >
-              <div className="bg-white p-10 rounded-lg border-t-4 border-brand-gold shadow-md h-full flex flex-col">
-                <h3 className="text-2xl font-serif text-brand-purple mb-4">
+              <div
+                className={`relative h-full flex flex-col rounded-xl transition-all ${
+                  tier.highlight
+                    ? 'border-4 border-brand-gold shadow-2xl bg-gradient-to-b from-brand-cream/20 to-white'
+                    : 'border-2 border-brand-cream-dark shadow-lg bg-white'
+                } ${tier.popular ? 'md:scale-105 md:-mt-8' : ''} p-10`}
+              >
+                {tier.popular && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
+                    <span className="bg-brand-gold text-brand-purple px-6 py-2 rounded-full text-sm font-bold shadow-md">
+                      Most Popular
+                    </span>
+                  </div>
+                )}
+
+                <h3 className="text-2xl font-serif text-brand-purple mb-2">
                   {tier.name}
                 </h3>
-                <div className="text-2xl font-bold text-brand-gold my-4">
+                <div className="text-4xl font-bold text-brand-gold my-4">
                   {tier.price}
                 </div>
-                <p className="text-brand-text mb-6">{tier.description}</p>
+                <p className="text-sm text-brand-text mb-6 opacity-90">{tier.description}</p>
 
                 <ul className="space-y-3 mb-8 flex-grow">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
-                      <span className="text-brand-text">{feature}</span>
+                      <span className={`font-bold text-lg flex-shrink-0 ${
+                        tier.highlight ? 'text-brand-gold' : 'text-brand-gold'
+                      }`}>
+                        ✓
+                      </span>
+                      <span className="text-brand-text text-sm leading-snug">{feature}</span>
                     </li>
                   ))}
                 </ul>
 
                 <a
                   href={tier.ctaLink}
-                  className="block text-center w-full py-4 px-6 bg-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
+                  className={`block text-center w-full py-4 px-6 font-semibold rounded-lg transition-all transform hover:-translate-y-1 ${
+                    tier.highlight
+                      ? 'bg-brand-gold text-brand-purple hover:bg-brand-gold-light shadow-lg hover:shadow-xl'
+                      : 'bg-brand-cream-dark text-brand-purple hover:bg-brand-gold shadow-md hover:shadow-lg'
+                  }`}
                 >
                   {tier.cta}
                 </a>

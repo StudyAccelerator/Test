@@ -12,31 +12,31 @@ export default function Home() {
   return (
     <main>
       {/* Header */}
-      <header className="bg-brand-purple text-brand-cream py-6 sticky top-0 z-50 shadow-md">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-4">
+      <header className="bg-brand-cream text-brand-purple py-2 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
+        <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-2">
           <Image
             src="/logo.png"
             alt="A-Level Accelerators"
             width={200}
             height={50}
-            className="h-60 w-auto"
+            className="h-32 w-auto"
             priority
           />
-          <nav className="flex flex-wrap justify-center gap-6">
-            <a href="#tiers" className="text-brand-cream hover:text-brand-gold transition">Our Programmes</a>
-            <a href="#faq" className="text-brand-cream hover:text-brand-gold transition">FAQs</a>
-            <a href="#contact" className="text-brand-cream hover:text-brand-gold transition">Contact</a>
+          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
+            <a href="#tiers" className="text-brand-purple hover:text-brand-gold font-semibold transition">Our Programmes</a>
+            <a href="#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
+            <a href="#contact" className="text-brand-purple hover:text-brand-gold font-semibold transition">Contact</a>
           </nav>
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-24 px-8 text-center">
+      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-32 px-8 text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-6 font-bold">
+          <h1 className="text-6xl md:text-7xl font-serif text-brand-gold mb-6 font-bold">
             Master Your A-Levels
           </h1>
-          <p className="text-xl md:text-2xl mb-8 opacity-95 max-w-2xl mx-auto">
+          <p className="text-2xl md:text-3xl mb-8 opacity-95 max-w-2xl mx-auto">
             Learn the exact systems used by top students. Transform your study habits, boost your confidence, and achieve your dream grades.
           </p>
           <a
@@ -155,12 +155,12 @@ export default function Home() {
                   <td className="p-6 font-semibold text-brand-purple">1:1 Coaching</td>
                   <td className="p-6"></td>
                   <td className="p-6"><span className="text-green-700 font-bold">✓</span> Coaching community access</td>
-                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> Weekly - 24/7</td>
+                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> 24/7 Access to Dr. Waleed</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Personal Plan</td>
                   <td className="p-6"></td>
-                  <td className="p-6"></td>
+                  <td className="p-6"><span className="text-green-700 font-bold">✓</span> Templates & deep dives</td>
                   <td className="p-6"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
                 </tr>
                 <tr>
@@ -211,17 +211,17 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-12 px-8 text-center">
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-6 px-8 text-center">
         <div className="max-w-3xl mx-auto">
           <Image
             src="/logo.png"
             alt="A-Level Accelerators"
             width={160}
             height={40}
-            className="h-48 w-auto mx-auto mb-4"
+            className="h-96 w-auto mx-auto mb-2"
           />
-          <h3 className="text-xl text-brand-gold font-serif mb-6">Get in Touch</h3>
-          <p className="mb-6">Questions? Get in touch directly:</p>
+          <h3 className="text-xl text-brand-gold font-serif mb-4">Get in Touch</h3>
+          <p className="mb-4">Questions? Get in touch directly:</p>
           <div className="flex flex-wrap justify-center gap-6 mb-8">
             <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
             <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
