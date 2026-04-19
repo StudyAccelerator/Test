@@ -15,11 +15,11 @@ export default function Home() {
       <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
           <Image
-            src="/logo-black.png"
+            src="/logo-header.png"
             alt="A-Level Accelerators"
             width={200}
             height={200}
-            className="h-16 w-auto"
+            className="h-20 w-auto"
             priority
             unoptimized
           />
