@@ -14,18 +14,20 @@ export default function Home() {
       {/* Header */}
       <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
-          <Image
-            src="/logo-header.png"
-            alt="A-Level Accelerators"
-            width={200}
-            height={200}
-            className="h-20 w-auto"
-            priority
-            unoptimized
-          />
+          <a href="#top" className="h-20 w-auto flex items-center">
+            <Image
+              src="/logo-header.png?v=2"
+              alt="A-Level Accelerators"
+              width={200}
+              height={200}
+              className="h-20 w-auto"
+              priority
+              unoptimized
+            />
+          </a>
           <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-3">
             <a href="#tiers" className="text-brand-purple hover:text-brand-gold font-semibold transition">Our Programmes</a>
-            <a href="#" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject-Specific Support</a>
+            <a href="https://alevelaccelerators.com" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
             <a href="#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
             <a href="#contact" className="text-brand-purple hover:text-brand-gold font-semibold transition">Contact</a>
           </nav>
@@ -131,14 +133,14 @@ export default function Home() {
               <tbody>
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Price</td>
-                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">£119</span></td>
-                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">£499</span></td>
-                  <td className="p-6"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
+                  <td className="p-6 text-center"><span className="text-xl font-bold text-brand-gold">£119</span></td>
+                  <td className="p-6 text-center"><span className="text-xl font-bold text-brand-gold">£499</span></td>
+                  <td className="p-6 text-center"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Format</td>
                   <td className="p-6">4 live group sessions</td>
-                  <td className="p-6">Everything in Series + more</td>
+                  <td className="p-6">3 months of support - 12 weekly sessions. Focus on actual application of advice</td>
                   <td className="p-6">Complete 1:1 programme</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
@@ -213,26 +215,27 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-0 px-8 text-center">
-        <div className="max-w-3xl mx-auto py-4">
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-2 px-8 text-center">
+        <div className="max-w-3xl mx-auto">
           <Image
-            src="/logo-black.png"
+            src="/logo-header.png?v=2"
             alt="A-Level Accelerators"
             width={160}
             height={160}
-            className="h-72 w-auto mx-auto mb-0"
+            className="h-72 w-auto mx-auto"
             unoptimized
           />
-          <h3 className="text-xl text-brand-gold font-serif mb-3">Get in Touch</h3>
-          <p className="mb-3">Questions? Get in touch directly:</p>
-          <div className="flex flex-wrap justify-center gap-6 mb-6">
-            <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
-            <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
-            <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+          <div className="py-2">
+            <h3 className="text-lg text-brand-gold font-serif mb-2">Get in Touch</h3>
+            <div className="flex flex-wrap justify-center gap-6 mb-2 text-sm">
+              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
+              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
+              <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+            </div>
+            <p className="opacity-80 text-xs">
+              &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
+            </p>
           </div>
-          <p className="opacity-80 text-xs">
-            &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
-          </p>
         </div>
       </footer>
     </main>

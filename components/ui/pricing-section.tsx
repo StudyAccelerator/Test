@@ -72,7 +72,7 @@ export default function PricingSection() {
               className="h-full"
             >
               <div
-                className={`relative h-full flex flex-col rounded-xl transition-all ${
+                className={`relative h-full flex flex-col rounded-xl transition-all hover:shadow-2xl hover:-translate-y-2 ${
                   tier.highlight
                     ? 'border-4 border-brand-gold shadow-2xl bg-brand-light-gray'
                     : 'border-2 border-brand-cream-dark shadow-lg bg-brand-light-gray'
