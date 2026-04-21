@@ -74,8 +74,8 @@ export default function PricingSection() {
               <div
                 className={`relative h-full flex flex-col rounded-xl transition-all hover:shadow-2xl hover:-translate-y-2 ${
                   tier.highlight
-                    ? 'border-4 border-brand-gold shadow-2xl bg-brand-purple'
-                    : 'border-2 border-brand-cream-dark shadow-lg bg-brand-purple'
+                    ? 'border-4 border-brand-gold shadow-2xl bg-brand-cream'
+                    : 'border-2 border-brand-cream-dark shadow-lg bg-brand-cream'
                 } ${tier.popular ? 'md:scale-105 md:-mt-8' : ''} p-10`}
               >
                 {tier.popular && (
@@ -86,13 +86,13 @@ export default function PricingSection() {
                   </div>
                 )}
 
-                <h3 className="text-2xl font-serif text-brand-cream mb-2">
+                <h3 className="text-3xl font-serif font-bold text-brand-purple mb-3 text-center">
                   {tier.name}
                 </h3>
-                <div className="text-4xl font-bold text-brand-gold my-4">
+                <div className="text-4xl font-bold text-brand-gold my-4 text-center">
                   {tier.price}
                 </div>
-                <p className="text-sm text-brand-cream mb-6 opacity-90">{tier.description}</p>
+                <p className="text-sm text-brand-text mb-6 opacity-90">{tier.description}</p>
 
                 <ul className="space-y-3 mb-8 flex-grow">
                   {tier.features.map((feature, i) => (
@@ -102,7 +102,7 @@ export default function PricingSection() {
                       }`}>
                         ✓
                       </span>
-                      <span className="text-brand-cream text-sm leading-snug">{feature}</span>
+                      <span className="text-brand-text text-sm leading-snug">{feature}</span>
                     </li>
                   ))}
                 </ul>

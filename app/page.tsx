@@ -16,7 +16,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
           <a href="#top" className="h-20 w-auto flex items-center">
             <Image
-              src="/logo-dark.png?v=1"
+              src="/logo-dark.png?v=3"
               alt="A-Level Accelerators"
               width={200}
               height={200}
@@ -118,13 +118,13 @@ export default function Home() {
           </h2>
 
           <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-16">
-            <table className="w-full">
+            <table className="w-full table-fixed">
               <thead>
                 <tr>
-                  <th className="bg-brand-purple text-brand-cream p-6 text-left"></th>
-                  <th className="bg-brand-purple text-brand-cream p-6 text-left font-semibold">Study Series</th>
-                  <th className="bg-brand-purple text-brand-cream p-6 text-left font-semibold">Study Accelerator</th>
-                  <th className="bg-brand-purple text-brand-cream p-6 text-left font-semibold">Study System</th>
+                  <th className="bg-brand-purple text-brand-cream p-6 text-left w-1/4"></th>
+                  <th className="bg-brand-purple text-brand-cream p-6 text-left font-semibold w-1/4">Study Series</th>
+                  <th className="bg-brand-purple text-brand-cream p-6 text-left font-semibold w-1/4">Study Accelerator</th>
+                  <th className="bg-brand-purple text-brand-cream p-6 text-left font-semibold w-1/4">Study System</th>
                 </tr>
               </thead>
               <tbody>
@@ -137,7 +137,7 @@ export default function Home() {
                 <tr className="border-b border-brand-cream-dark">
                   <td className="p-6 font-semibold text-brand-purple">Format</td>
                   <td className="p-6">4 live group sessions</td>
-                  <td className="p-6">3 months of support - 12 weekly sessions. Focus on actual application of advice</td>
+                  <td className="p-6">Three Months of Application-Focused Support</td>
                   <td className="p-6">Complete 1:1 programme</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
@@ -217,9 +217,9 @@ export default function Home() {
           <Image
             src="/logo-header.png?v=2"
             alt="A-Level Accelerators"
-            width={160}
-            height={160}
-            className="h-40 w-auto mx-auto"
+            width={300}
+            height={300}
+            className="h-64 w-auto mx-auto -my-8"
             unoptimized
           />
           <div className="py-0.5">
