@@ -121,54 +121,54 @@ export default function Home() {
             <table className="w-full table-fixed">
               <thead>
                 <tr>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left w-1/4"></th>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/4">Study Series</th>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/4">Study Accelerator</th>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/4">Study System</th>
+                  <th className="bg-brand-purple text-brand-cream p-4 text-left w-1/5"></th>
+                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/5">Study Series</th>
+                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-3/10">Study Accelerator</th>
+                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-3/10">Study System</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Price</td>
-                  <td className="p-4"><span className="text-xl font-bold text-brand-gold">£119</span></td>
-                  <td className="p-4"><span className="text-xl font-bold text-brand-gold">£499</span></td>
-                  <td className="p-4"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
+                  <td className="p-4 font-semibold text-brand-purple w-1/5">Price</td>
+                  <td className="p-4 w-1/5"><span className="text-xl font-bold text-brand-gold">£119</span></td>
+                  <td className="p-4 w-3/10"><span className="text-xl font-bold text-brand-gold">£499</span></td>
+                  <td className="p-4 w-3/10"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Format</td>
-                  <td className="p-4">4 live group sessions</td>
-                  <td className="p-4">Three Months of Application-Focused Support</td>
-                  <td className="p-4">Complete 1:1 programme</td>
+                  <td className="p-4 font-semibold text-brand-purple w-1/5">Format</td>
+                  <td className="p-4 w-1/5">4 live group sessions</td>
+                  <td className="p-4 w-3/10">Three Months of Application-Focused Support</td>
+                  <td className="p-4 w-3/10">Complete 1:1 programme</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Live Sessions</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Weekly 1:1 calls</td>
+                  <td className="p-4 font-semibold text-brand-purple w-1/5">Live Sessions</td>
+                  <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Weekly 1:1 calls</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Group Q&amp;A</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
+                  <td className="p-4 font-semibold text-brand-purple w-1/5">Group Q&amp;A</td>
+                  <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">1:1 Coaching</td>
-                  <td className="p-4"></td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Coaching community access</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> 24/7 Access to Dr Waleed</td>
+                  <td className="p-4 font-semibold text-brand-purple w-1/5">1:1 Coaching</td>
+                  <td className="p-4 w-1/5"></td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Coaching community access</td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> 24/7 Access to Dr Waleed</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Personal Plan</td>
-                  <td className="p-4"></td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Templates & deep dives</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
+                  <td className="p-4 font-semibold text-brand-purple w-1/5">Personal Plan</td>
+                  <td className="p-4 w-1/5"></td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Templates & deep dives</td>
+                  <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-brand-purple">Best For</td>
-                  <td className="p-4">Getting the core system</td>
-                  <td className="p-4">Extra support &amp; accountability</td>
-                  <td className="p-4">Complete transformation</td>
+                  <td className="p-4 font-semibold text-brand-purple w-1/5">Best For</td>
+                  <td className="p-4 w-1/5">Getting the core system</td>
+                  <td className="p-4 w-3/10">Extra support &amp; accountability</td>
+                  <td className="p-4 w-3/10">Complete transformation</td>
                 </tr>
               </tbody>
             </table>
@@ -192,24 +192,22 @@ export default function Home() {
       </ScrollFade>
 
       {/* CTA Section */}
-      <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-white text-center pb-8">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
-              Ready to Transform Your A-Levels?
-            </h2>
-            <p className="text-lg text-brand-text mb-8">
-              Choose the programme that fits your needs and start applying proven systems today.
-            </p>
-            <a
-              href="#tiers"
-              className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-            >
-              View All Programmes
-            </a>
-          </div>
-        </section>
-      </ScrollFade>
+      <section className="py-16 px-4 bg-white text-center pb-8">
+        <div className="max-w-3xl mx-auto">
+          <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
+            Ready to Transform Your A-Levels?
+          </h2>
+          <p className="text-lg text-brand-text mb-8">
+            Choose the programme that fits your needs and start applying proven systems today.
+          </p>
+          <a
+            href="#tiers"
+            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
+          >
+            View All Programmes
+          </a>
+        </div>
+      </section>
 
       {/* Footer */}
       <footer id="contact" className="bg-brand-purple text-brand-cream py-0 px-8 text-center">
