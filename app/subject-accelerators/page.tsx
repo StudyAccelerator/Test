@@ -1,34 +1,11 @@
-'use client'
-
 import Image from 'next/image'
 import Header from '@/components/header'
 import { ScrollFade } from '@/components/ui/scroll-fade'
-import { useState } from 'react'
+import FAQItem from '@/components/ui/faq-item'
 
 export const metadata = {
   title: 'A-Level Accelerators - Live 12-Week Exam Programs',
   description: 'Specialist-led live 12-week exam programs for A-Level Maths, Biology and Chemistry.',
-}
-
-function FAQItem({ question, answer }) {
-  const [isOpen, setIsOpen] = useState(false)
-
-  return (
-    <div className="bg-white rounded-lg overflow-hidden shadow-sm">
-      <button
-        onClick={() => setIsOpen(!isOpen)}
-        className="w-full bg-brand-purple text-brand-cream p-6 flex justify-between items-center font-semibold text-left hover:bg-brand-purple-light transition"
-      >
-        <span>{question}</span>
-        <span className={`text-xl transition-transform ${isOpen ? 'rotate-180' : ''}`}>▼</span>
-      </button>
-      {isOpen && (
-        <div className="p-6 text-brand-text leading-relaxed">
-          {answer}
-        </div>
-      )}
-    </div>
-  )
 }
 
 export default function SubjectAccelerators() {
