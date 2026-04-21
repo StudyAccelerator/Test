@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Header from '@/components/header'
 import PricingSection from '@/components/ui/pricing-section'
 import FaqSection from '@/components/ui/faq-section'
 import { ScrollFade } from '@/components/ui/scroll-fade'
@@ -11,28 +12,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
-      {/* Header */}
-      <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
-        <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
-          <a href="#top" className="h-80 w-auto flex items-center -my-12">
-            <Image
-              src="/logo-header-new.png"
-              alt="A-Level Accelerators"
-              width={450}
-              height={450}
-              className="h-80 w-auto"
-              priority
-              unoptimized
-            />
-          </a>
-          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-0 -my-6">
-            <a href="#tiers" className="text-brand-purple hover:text-brand-gold font-semibold transition">Our Programmes</a>
-            <a href="https://alevelaccelerators.com" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
-            <a href="#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
-            <a href="#contact" className="text-brand-purple hover:text-brand-gold font-semibold transition">Contact</a>
-          </nav>
-        </div>
-      </header>
+      <Header />
 
       {/* Hero Section */}
       <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-32 px-8 text-center">
