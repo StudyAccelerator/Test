@@ -212,7 +212,7 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-0.5 px-8 text-center">
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-0 px-8 text-center">
         <div className="max-w-3xl mx-auto">
           <a href="#top" className="block">
             <Image
@@ -220,11 +220,11 @@ export default function Home() {
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-96 w-auto mx-auto -my-16 hover:opacity-80 transition"
+              className="h-96 w-auto mx-auto -my-24 hover:opacity-80 transition"
               unoptimized
             />
           </a>
-          <div className="py-0.5">
+          <div className="py-0">
             <h3 className="text-lg text-brand-gold font-serif mb-1">Get in Touch</h3>
             <div className="flex flex-wrap justify-center gap-6 mb-1 text-sm">
               <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
