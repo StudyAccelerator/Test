@@ -220,7 +220,7 @@ export default function Home() {
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-96 w-auto mx-auto -my-24 hover:opacity-80 transition"
+              className="h-96 w-auto mx-auto -my-32 hover:opacity-80 transition"
               unoptimized
             />
           </a>
