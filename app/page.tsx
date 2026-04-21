@@ -14,7 +14,7 @@ export default function Home() {
       {/* Header */}
       <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
-          <a href="#top" className="h-48 w-auto flex items-center -my-3">
+          <a href="#top" className="h-48 w-auto flex items-center -my-6">
             <Image
               src="/logo-header-new.png"
               alt="A-Level Accelerators"
@@ -193,7 +193,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-white text-center">
+        <section className="py-16 px-4 bg-white text-center pb-32">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
               Ready to Transform Your A-Levels?
@@ -224,9 +224,9 @@ export default function Home() {
               unoptimized
             />
           </a>
-          <div className="py-6">
-            <h3 className="text-lg text-brand-gold font-serif mb-4">Get in Touch</h3>
-            <div className="flex flex-wrap justify-center gap-6 mb-3 text-sm">
+          <div className="py-6 w-full">
+            <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
+            <div className="flex flex-wrap justify-center gap-6 mb-3 text-sm w-full">
               <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition px-3 py-2">Email</a>
               <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition px-3 py-2">Book a Call</a>
               <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition px-3 py-2">Free Revision Tracker</a>
