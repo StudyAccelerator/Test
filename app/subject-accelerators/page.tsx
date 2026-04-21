@@ -77,25 +77,37 @@ export default function SubjectAccelerators() {
       {/* What is A-Level Accelerators */}
       <ScrollFade>
         <section className="py-16 px-4 bg-white">
-          <div className="max-w-6xl mx-auto">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               What is A-Level Accelerators?
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-12">
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-brand-purple mb-3">The Programmes</h3>
-                <p className="text-brand-text">[Instructor bio and programme description]</p>
+            <p className="text-lg text-brand-text mb-8">
+              A-Level Accelerators is a set of live, subject-specific exam programmes, each taught by a specialist A-level tutor.
+            </p>
+
+            <div className="space-y-8">
+              <div className="bg-brand-light-gray p-8 rounded-lg">
+                <h3 className="text-2xl font-semibold text-brand-purple mb-4">The Programme</h3>
+                <ul className="space-y-3 text-brand-text">
+                  <li>We offer three subjects: Maths, Biology and Chemistry, each delivered as a dedicated 12-week accelerator.</li>
+                  <li>Every subject follows a structured weekly syllabus, taught live by a subject specialist, with a clear focus on exam technique and progression.</li>
+                  <li>Students can enrol in one subject, combine two or all three for broader academic support.</li>
+                </ul>
               </div>
 
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-brand-purple mb-3">The Focus</h3>
-                <p className="text-brand-text">[Instructor bio and focus description]</p>
+              <div className="bg-brand-light-gray p-8 rounded-lg">
+                <h3 className="text-2xl font-semibold text-brand-purple mb-4">The Focus</h3>
+                <ul className="space-y-3 text-brand-text">
+                  <li>Teaching explicitly aligned to A-level mark schemes</li>
+                  <li>Regular breakdowns of examiner reports and common errors</li>
+                  <li>Clear guidance on how marks are gained and lost in real exam questions</li>
+                </ul>
               </div>
 
-              <div className="text-center">
-                <h3 className="text-xl font-semibold text-brand-purple mb-3">This is Not 1:1 Tutoring</h3>
-                <p className="text-brand-text">[Instructor bio and explanation]</p>
+              <div className="bg-brand-light-gray p-8 rounded-lg">
+                <h3 className="text-2xl font-semibold text-brand-purple mb-4">This is Not 1:1 Tutoring</h3>
+                <p className="text-brand-text">It's a structured, high-quality accelerator for students who benefit from routine, clarity, and exam focus.</p>
               </div>
             </div>
           </div>
@@ -112,37 +124,45 @@ export default function SubjectAccelerators() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-white p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-brand-purple mb-4">This programme is ideal for students who:</h3>
+                <h3 className="text-xl font-semibold text-brand-purple mb-4">This programme is ideal for students who want:</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-3">
                     <span className="text-green-700 font-bold text-lg">✓</span>
-                    <span>[Ideal for bullet point 1]</span>
+                    <span>Structured progression — a clear 12-week plan rather than isolated sessions</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-green-700 font-bold text-lg">✓</span>
-                    <span>[Ideal for bullet point 2]</span>
+                    <span>Subject specialists — each subject taught by a dedicated expert, not a generalist</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-green-700 font-bold text-lg">✓</span>
-                    <span>[Ideal for bullet point 3]</span>
+                    <span>Exam-led teaching — consistent focus on exam technique and mark schemes</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-700 font-bold text-lg">✓</span>
+                    <span>Repetition & reinforcement — concepts revisited and applied weekly</span>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-green-700 font-bold text-lg">✓</span>
+                    <span>Recordings included — students can rewatch explanations, which 1:1 tutoring doesn't allow</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-white p-8 rounded-lg">
-                <h3 className="text-xl font-semibold text-brand-purple mb-4">This programme is not ideal for students who:</h3>
+                <h3 className="text-xl font-semibold text-brand-purple mb-4">This programme may not be suitable for students who:</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-3">
                     <span className="text-red-600 font-bold text-lg">✕</span>
-                    <span>[Not ideal bullet point 1]</span>
+                    <span>Want purely ad-hoc, unstructured 1:1 sessions</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-600 font-bold text-lg">✕</span>
-                    <span>[Not ideal bullet point 2]</span>
+                    <span>Prefer last-minute tutoring rather than consistent weekly teaching</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-600 font-bold text-lg">✕</span>
-                    <span>[Not ideal bullet point 3]</span>
+                    <span>Are unable to commit to a structured programme</span>
                   </li>
                 </ul>
               </div>
@@ -161,12 +181,12 @@ export default function SubjectAccelerators() {
 
             <div className="space-y-4">
               {[
-                { title: '12 Week Specialist-Led Teaching', desc: '[Description from old page]' },
-                { title: 'Topic-by-Topic Guides', desc: '[Description from old page]' },
-                { title: 'Past Paper Questions', desc: '[Description from old page]' },
-                { title: 'Formula Sheets', desc: '[Description from old page]' },
-                { title: 'Study Notes', desc: '[Description from old page]' },
-                { title: 'Mark Scheme Walkthroughs', desc: '[Description from old page]' },
+                { title: '12 weeks of live, specialist-led teaching', desc: 'Structured weekly sessions designed to build understanding and exam confidence over time.' },
+                { title: 'Full access to session recordings & slides', desc: 'Revisit difficult topics and consolidate learning at your own pace.' },
+                { title: 'Weekly structured worksheets', desc: 'Focused practice aligned to the topics and skills covered each week.' },
+                { title: 'Exam-style questions with guided walkthroughs', desc: 'Learn how marks are awarded and how to approach questions effectively.' },
+                { title: 'Clear weekly progression', desc: 'A defined syllabus that avoids gaps, repetition, and last-minute cramming.' },
+                { title: 'Weekly Q&A support', desc: 'Dedicated time to clarify misunderstandings and refine exam technique.' },
               ].map((item, i) => (
                 <div key={i} className="bg-brand-light-gray p-6 rounded-lg border-l-4 border-brand-gold">
                   <h3 className="text-lg font-semibold text-brand-purple mb-2">{item.title}</h3>
@@ -189,88 +209,88 @@ export default function SubjectAccelerators() {
             <div className="grid md:grid-cols-3 gap-8">
               <div className="bg-white p-8 rounded-lg border-2 border-blue-300">
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Maths Accelerator</h3>
-                <p className="text-brand-gold font-semibold mb-4">Saturdays 1 p.m. to 3 p.m. (13:00-15:00)</p>
+                <p className="text-brand-gold font-semibold mb-4">Saturdays · 13:00–15:00</p>
                 <ul className="space-y-2 text-brand-text mb-6">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 1]</span>
+                    <span>Core A-level Maths explained step-by-step</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 2]</span>
+                    <span>Problem-solving & exam technique focus</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 3]</span>
+                    <span>Common pitfalls and how to avoid them</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 4]</span>
+                    <span>Weekly exam-style practice</span>
                   </li>
                 </ul>
                 <a
                   href="#pricing"
                   className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition"
                 >
-                  View Pricing
+                  Join Maths ➗
                 </a>
               </div>
 
               <div className="bg-white p-8 rounded-lg border-2 border-green-300">
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Biology Accelerator</h3>
-                <p className="text-brand-gold font-semibold mb-4">Saturdays [Time]</p>
+                <p className="text-brand-gold font-semibold mb-4">Sundays · 10:00–12:00</p>
                 <ul className="space-y-2 text-brand-text mb-6">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 1]</span>
+                    <span>Clear explanations of difficult biological concepts</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 2]</span>
+                    <span>Exam-board-focused teaching</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 3]</span>
+                    <span>Data interpretation & long-answer technique</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 4]</span>
+                    <span>Weekly exam-style questions</span>
                   </li>
                 </ul>
                 <a
                   href="#pricing"
                   className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition"
                 >
-                  View Pricing
+                  Join Biology 🧬
                 </a>
               </div>
 
               <div className="bg-white p-8 rounded-lg border-2 border-purple-300">
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Chemistry Accelerator</h3>
-                <p className="text-brand-gold font-semibold mb-4">Saturdays [Time]</p>
+                <p className="text-brand-gold font-semibold mb-4">Sundays · 13:00–15:00</p>
                 <ul className="space-y-2 text-brand-text mb-6">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 1]</span>
+                    <span>Organic, inorganic & physical chemistry</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 2]</span>
+                    <span>Step-by-step exam question walkthroughs</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 3]</span>
+                    <span>Method marks & calculations made clear</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Bullet point 4]</span>
+                    <span>Weekly exam-style questions</span>
                   </li>
                 </ul>
                 <a
                   href="#pricing"
                   className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition"
                 >
-                  View Pricing
+                  Join Chemistry 🧪
                 </a>
               </div>
             </div>
@@ -293,13 +313,16 @@ export default function SubjectAccelerators() {
                 <ul className="text-brand-text mb-6 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Benefit 1]</span>
+                    <span>Full 12-Week Accelerator</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Benefit 2]</span>
+                    <span>Choose Maths, Biology or Chemistry</span>
                   </li>
                 </ul>
+                <a href="#subjects" className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition">
+                  Join 1 Subject
+                </a>
               </div>
 
               <div className="bg-brand-cream p-8 rounded-lg text-center shadow-lg">
@@ -308,32 +331,38 @@ export default function SubjectAccelerators() {
                 <ul className="text-brand-text mb-6 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Benefit 1]</span>
+                    <span>Any two subjects</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Benefit 2]</span>
+                    <span>Save £49 compared to individual enrolment</span>
                   </li>
                 </ul>
+                <a href="#subjects" className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition">
+                  Join 2 Subjects
+                </a>
               </div>
 
-              <div className="bg-brand-cream p-8 rounded-lg text-center shadow-lg">
+              <div className="bg-brand-cream p-8 rounded-lg text-center shadow-lg border-2 border-brand-gold">
                 <h3 className="text-2xl font-bold text-brand-purple mb-4">All Three Subjects</h3>
                 <p className="text-3xl font-bold text-brand-gold mb-6">£699</p>
                 <ul className="text-brand-text mb-6 space-y-2">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Benefit 1]</span>
+                    <span>Maths + Biology + Chemistry</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Benefit 2]</span>
+                    <span>Save £168 compared to individual enrolment</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold">•</span>
-                    <span>[Benefit 3]</span>
+                    <span>Best value option</span>
                   </li>
                 </ul>
+                <a href="#subjects" className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition">
+                  Join All Subjects
+                </a>
               </div>
             </div>
 
