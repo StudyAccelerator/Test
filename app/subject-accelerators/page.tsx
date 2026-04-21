@@ -12,19 +12,150 @@ export default function SubjectAccelerators() {
   const faqs = [
     {
       question: "How long is each programme?",
-      answer: "Each programme runs for 12 weeks with specialist-led teaching and structured exam preparation."
+      answer: (
+        <>
+          <p className="mb-4">Each programme runs for <strong>12 weeks</strong> with structured, specialist-led teaching.</p>
+          <p className="mb-4">This timeframe is carefully designed to:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li>Build understanding progressively, week by week</li>
+            <li>Cover key exam topics and techniques without rushing</li>
+            <li>Allow time for practice and consolidation</li>
+            <li>Prepare you thoroughly before your actual A-Level exams</li>
+          </ul>
+          <p>Each week builds on the previous one, so consistency and attendance matter. However, all sessions are recorded, so you can catch up if you need to.</p>
+        </>
+      )
     },
     {
       question: "Can I study multiple subjects?",
-      answer: "Yes, you can enrol in 1, 2, or all 3 subjects (Maths, Biology, and Chemistry)."
+      answer: (
+        <>
+          <p className="mb-4"><strong>Yes, absolutely.</strong> You can enrol in:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li>1 subject (Maths, Biology, or Chemistry)</li>
+            <li>Any 2 subjects</li>
+            <li>All 3 subjects for complete coverage</li>
+          </ul>
+          <p className="mb-4">There are <strong>no clashes between sessions</strong>, so you can attend all three accelerators without scheduling conflicts:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li><strong>Maths:</strong> Saturdays 13:00–15:00</li>
+            <li><strong>Biology:</strong> Sundays 10:00–12:00</li>
+            <li><strong>Chemistry:</strong> Sundays 13:00–15:00</li>
+          </ul>
+          <p>If you're taking all three subjects, the bundle pricing (£699) gives you significant savings compared to enrolling individually.</p>
+        </>
+      )
     },
     {
       question: "Are the sessions recorded?",
-      answer: "All teaching is repeated so students can catch up anytime if they miss a session."
+      answer: (
+        <>
+          <p className="mb-4"><strong>Yes, all sessions are fully recorded and available to all students.</strong></p>
+          <p className="mb-4">This means:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li>If you miss a live session, you can watch the recording anytime</li>
+            <li>You can rewatch difficult explanations as many times as you need</li>
+            <li>Recordings stay available for the full duration of the programme</li>
+            <li>You can study at your own pace while keeping up with the weekly structure</li>
+            <li>Perfect for consolidating concepts you find challenging</li>
+          </ul>
+          <p>However, live sessions provide real-time Q&A where you can ask questions immediately, so we encourage attendance whenever possible.</p>
+        </>
+      )
     },
     {
       question: "What times do the sessions run?",
-      answer: "Sessions run on Saturdays from 1 p.m. to 3 p.m. (13:00-15:00). There are no clashes between sessions."
+      answer: (
+        <>
+          <p className="mb-4">Sessions are scheduled to minimize clashes with school and other commitments:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li><strong>Maths:</strong> Saturdays, 1:00 PM – 3:00 PM (13:00–15:00)</li>
+            <li><strong>Biology:</strong> Sundays, 10:00 AM – 12:00 PM (10:00–12:00)</li>
+            <li><strong>Chemistry:</strong> Sundays, 1:00 PM – 3:00 PM (13:00–15:00)</li>
+          </ul>
+          <p>Each session is <strong>2 hours long</strong> with time for teaching, practice, Q&A, and consolidation. The weekend timing allows you to focus on schoolwork during the week.</p>
+        </>
+      )
+    },
+    {
+      question: "What's the expected workload outside of sessions?",
+      answer: (
+        <>
+          <p className="mb-4">Each accelerator requires approximately <strong>2–3 hours of independent work per week</strong> outside the live sessions.</p>
+          <p className="mb-4">This work includes:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li>Completing weekly worksheets and practice questions</li>
+            <li>Reviewing the session recordings and notes</li>
+            <li>Attempting exam-style questions to apply what you've learned</li>
+            <li>Reinforcing challenging concepts</li>
+          </ul>
+          <p>This is a manageable amount — less than many students spend on a single subject otherwise, but far more focused and effective. Remember, this isn't busy work; it's strategic practice aligned to your exam board and mark scheme.</p>
+        </>
+      )
+    },
+    {
+      question: "What if I can't attend a session?",
+      answer: (
+        <>
+          <p className="mb-4">If you miss a live session, <strong>don't worry</strong> — all teaching is recorded.</p>
+          <p className="mb-4">Here's what you do:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li>Watch the session recording at your own pace</li>
+            <li>Review the slides and notes provided</li>
+            <li>Complete the weekly worksheet and practice questions</li>
+            <li>Ask questions during the next session's Q&A time</li>
+          </ul>
+          <p>However, we do encourage consistent attendance when possible, as the live Q&A and peer learning element adds value. If you're going to miss a session, let us know so we can provide any additional support.</p>
+        </>
+      )
+    },
+    {
+      question: "Is this suitable for all ability levels?",
+      answer: (
+        <>
+          <p className="mb-4"><strong>Yes, this programme is designed for all ability levels.</strong></p>
+          <p className="mb-4">Here's why:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li><strong>Teaching to the mark scheme:</strong> We focus on exactly what examiners are looking for, so students at any level can improve</li>
+            <li><strong>Structured progression:</strong> Each week builds systematically, so no one is left behind</li>
+            <li><strong>Repeat access:</strong> You can rewatch sessions as many times as you need</li>
+            <li><strong>Weekly Q&A:</strong> Any confusion gets cleared up before moving forward</li>
+            <li><strong>Exam-style practice:</strong> Everyone practices the same questions, so you can benchmark your progress</li>
+          </ul>
+          <p>Whether you're aiming for an A*, struggling to grasp concepts, or wanting to consolidate your understanding, this programme is designed to help you improve.</p>
+        </>
+      )
+    },
+    {
+      question: "How will my progress be tracked?",
+      answer: (
+        <>
+          <p className="mb-4">You'll track your own progress through:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li><strong>Weekly practice questions:</strong> Attempt these and see how your accuracy improves week by week</li>
+            <li><strong>Exam-style question walkthroughs:</strong> Compare your approach to the model solutions provided</li>
+            <li><strong>Feedback during Q&A:</strong> Ask about specific questions you found tricky</li>
+            <li><strong>Concept consolidation:</strong> Revisit earlier recordings to see how much clearer things are</li>
+          </ul>
+          <p>This is structured learning with clear, measurable progression — not vague feedback. You'll see tangible improvement in your exam technique and understanding as weeks progress.</p>
+        </>
+      )
+    },
+    {
+      question: "What if I need more support than the weekly sessions offer?",
+      answer: (
+        <>
+          <p className="mb-4">This accelerator is designed to be comprehensive, but if you need additional 1:1 support:</p>
+          <ul className="list-disc ml-8 mb-4 space-y-1">
+            <li>Use the weekly Q&A time to ask detailed questions</li>
+            <li>Share specific practice questions you're stuck on</li>
+            <li>Access the recordings and worksheets to reinforce learning at your own pace</li>
+            <li>Reach out directly for personalized coaching (available through our Study System tier)</li>
+          </ul>
+          <p className="mb-4">For students needing comprehensive 1:1 support, weekly accountability, and a fully customised approach, our <strong>Study System</strong> programme is available separately and can complement these accelerators perfectly.</p>
+          <p>Book a free consultation to discuss which option suits your needs.</p>
+        </>
+      )
     },
   ]
 
