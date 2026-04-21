@@ -14,18 +14,18 @@ export default function Home() {
       {/* Header */}
       <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
-          <a href="#top" className="h-20 w-auto flex items-center">
+          <a href="#top" className="h-28 w-auto flex items-center">
             <Image
-              src="/logo-dark.png?v=3"
+              src="/logo-header-new.png"
               alt="A-Level Accelerators"
-              width={200}
-              height={200}
-              className="h-20 w-auto"
+              width={300}
+              height={300}
+              className="h-28 w-auto"
               priority
               unoptimized
             />
           </a>
-          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-3">
+          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-0.5">
             <a href="#tiers" className="text-brand-purple hover:text-brand-gold font-semibold transition">Our Programmes</a>
             <a href="https://alevelaccelerators.com" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
             <a href="#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
@@ -214,14 +214,16 @@ export default function Home() {
       {/* Footer */}
       <footer id="contact" className="bg-brand-purple text-brand-cream py-0.5 px-8 text-center">
         <div className="max-w-3xl mx-auto">
-          <Image
-            src="/logo-header.png?v=2"
-            alt="A-Level Accelerators"
-            width={300}
-            height={300}
-            className="h-64 w-auto mx-auto -my-8"
-            unoptimized
-          />
+          <a href="#top" className="block">
+            <Image
+              src="/logo-header.png?v=2"
+              alt="A-Level Accelerators"
+              width={400}
+              height={400}
+              className="h-96 w-auto mx-auto -my-16 hover:opacity-80 transition"
+              unoptimized
+            />
+          </a>
           <div className="py-0.5">
             <h3 className="text-lg text-brand-gold font-serif mb-1">Get in Touch</h3>
             <div className="flex flex-wrap justify-center gap-6 mb-1 text-sm">
