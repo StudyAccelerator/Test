@@ -64,7 +64,7 @@ export default function PricingSection() {
   return (
     <section className="py-16 px-4 bg-brand-purple">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8 items-end">
+        <div className="grid md:grid-cols-3 gap-4 items-end">
           {tiers.map((tier, index) => (
             <TimelineContent
               key={tier.name}
