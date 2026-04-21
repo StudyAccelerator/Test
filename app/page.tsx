@@ -14,13 +14,13 @@ export default function Home() {
       {/* Header */}
       <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
-          <a href="#top" className="h-96 w-auto flex items-center -my-24">
+          <a href="#top" className="h-80 w-auto flex items-center -my-20">
             <Image
               src="/logo-header-new.png"
               alt="A-Level Accelerators"
-              width={500}
-              height={500}
-              className="h-96 w-auto"
+              width={450}
+              height={450}
+              className="h-80 w-auto"
               priority
               unoptimized
             />
@@ -193,7 +193,7 @@ export default function Home() {
 
       {/* CTA Section */}
       <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-white text-center pb-32">
+        <section className="py-16 px-4 bg-white text-center pb-8">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
               Ready to Transform Your A-Levels?
