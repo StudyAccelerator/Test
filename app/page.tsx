@@ -14,18 +14,18 @@ export default function Home() {
       {/* Header */}
       <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
-          <a href="#top" className="h-28 w-auto flex items-center">
+          <a href="#top" className="h-48 w-auto flex items-center">
             <Image
               src="/logo-header-new.png"
               alt="A-Level Accelerators"
-              width={300}
-              height={300}
-              className="h-28 w-auto"
+              width={400}
+              height={400}
+              className="h-48 w-auto"
               priority
               unoptimized
             />
           </a>
-          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-0.5">
+          <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base py-0">
             <a href="#tiers" className="text-brand-purple hover:text-brand-gold font-semibold transition">Our Programmes</a>
             <a href="https://alevelaccelerators.com" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
             <a href="#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
@@ -220,12 +220,12 @@ export default function Home() {
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-96 w-auto mx-auto -my-24 hover:opacity-80 transition"
+              className="h-96 w-auto mx-auto -my-32 hover:opacity-80 transition"
               unoptimized
             />
           </a>
           <div className="py-0">
-            <h3 className="text-lg text-brand-gold font-serif mb-1">Get in Touch</h3>
+            <h3 className="text-lg text-brand-gold font-serif mb-0.5">Get in Touch</h3>
             <div className="flex flex-wrap justify-center gap-6 mb-1 text-sm">
               <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
               <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
