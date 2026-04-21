@@ -185,19 +185,15 @@ export default function Home() {
       </ScrollFade>
 
       {/* FAQ Section */}
-      <ScrollFade delay={0.2}>
-        <div>
-          <FaqSection />
-        </div>
-      </ScrollFade>
+      <FaqSection />
 
       {/* CTA Section */}
-      <section className="py-16 px-4 bg-white text-center pb-8">
+      <section className="py-32 px-4 bg-white text-center">
         <div className="max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
             Ready to Transform Your A-Levels?
           </h2>
-          <p className="text-lg text-brand-text mb-8">
+          <p className="text-lg text-brand-text mb-12">
             Choose the programme that fits your needs and start applying proven systems today.
           </p>
           <a
@@ -210,7 +206,7 @@ export default function Home() {
       </section>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-0 px-8 text-center">
+      <footer id="contact" className="bg-brand-purple text-brand-cream pt-8 px-8 text-center pb-8">
         <div className="max-w-3xl mx-auto">
           <a href="#top" className="block">
             <Image
@@ -218,7 +214,7 @@ export default function Home() {
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-96 w-auto mx-auto -my-32 hover:opacity-80 transition"
+              className="h-96 w-auto mx-auto -my-16 hover:opacity-80 transition"
               unoptimized
             />
           </a>
