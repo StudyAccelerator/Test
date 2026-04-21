@@ -14,13 +14,13 @@ export default function Home() {
       {/* Header */}
       <header className="bg-brand-cream text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold">
         <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0">
-          <a href="#top" className="h-48 w-auto flex items-center -my-6">
+          <a href="#top" className="h-96 w-auto flex items-center -my-24">
             <Image
               src="/logo-header-new.png"
               alt="A-Level Accelerators"
-              width={400}
-              height={400}
-              className="h-48 w-auto"
+              width={500}
+              height={500}
+              className="h-96 w-auto"
               priority
               unoptimized
             />
