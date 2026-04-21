@@ -121,54 +121,54 @@ export default function Home() {
             <table className="w-full table-fixed">
               <thead>
                 <tr>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left w-1/4"></th>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/4">Study Series</th>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/4">Study Accelerator</th>
-                  <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/4">Study System</th>
+                  <th className="bg-brand-purple text-brand-cream p-2 text-left w-1/4"></th>
+                  <th className="bg-brand-purple text-brand-cream p-2 text-left font-semibold w-1/4">Study Series</th>
+                  <th className="bg-brand-purple text-brand-cream p-2 text-left font-semibold w-1/4">Study Accelerator</th>
+                  <th className="bg-brand-purple text-brand-cream p-2 text-left font-semibold w-1/4">Study System</th>
                 </tr>
               </thead>
               <tbody>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Price</td>
-                  <td className="p-4"><span className="text-xl font-bold text-brand-gold">£119</span></td>
-                  <td className="p-4"><span className="text-xl font-bold text-brand-gold">£499</span></td>
-                  <td className="p-4"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
+                  <td className="p-2 font-semibold text-brand-purple">Price</td>
+                  <td className="p-2"><span className="text-xl font-bold text-brand-gold">£119</span></td>
+                  <td className="p-2"><span className="text-xl font-bold text-brand-gold">£499</span></td>
+                  <td className="p-2"><span className="text-xl font-bold text-brand-gold">From £2,000/yr</span></td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Format</td>
-                  <td className="p-4">4 live group sessions</td>
-                  <td className="p-4">Three Months of Application-Focused Support</td>
-                  <td className="p-4">Complete 1:1 programme</td>
+                  <td className="p-2 font-semibold text-brand-purple">Format</td>
+                  <td className="p-2">4 live group sessions</td>
+                  <td className="p-2">Three Months of Application-Focused Support</td>
+                  <td className="p-2">Complete 1:1 programme</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Live Sessions</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Weekly 1:1 calls</td>
+                  <td className="p-2 font-semibold text-brand-purple">Live Sessions</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> Weekly 1:1 calls</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Group Q&amp;A</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
+                  <td className="p-2 font-semibold text-brand-purple">Group Q&amp;A</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">1:1 Coaching</td>
-                  <td className="p-4"></td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Coaching community access</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> 24/7 Access to Dr Waleed</td>
+                  <td className="p-2 font-semibold text-brand-purple">1:1 Coaching</td>
+                  <td className="p-2"></td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> Coaching community access</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> 24/7 Access to Dr Waleed</td>
                 </tr>
                 <tr className="border-b border-brand-cream-dark">
-                  <td className="p-4 font-semibold text-brand-purple">Personal Plan</td>
-                  <td className="p-4"></td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Templates & deep dives</td>
-                  <td className="p-4"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
+                  <td className="p-2 font-semibold text-brand-purple">Personal Plan</td>
+                  <td className="p-2"></td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> Templates & deep dives</td>
+                  <td className="p-2"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
                 </tr>
                 <tr>
-                  <td className="p-4 font-semibold text-brand-purple">Best For</td>
-                  <td className="p-4">Getting the core system</td>
-                  <td className="p-4">Extra support &amp; accountability</td>
-                  <td className="p-4">Complete transformation</td>
+                  <td className="p-2 font-semibold text-brand-purple">Best For</td>
+                  <td className="p-2">Getting the core system</td>
+                  <td className="p-2">Extra support &amp; accountability</td>
+                  <td className="p-2">Complete transformation</td>
                 </tr>
               </tbody>
             </table>
