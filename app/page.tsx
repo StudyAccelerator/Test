@@ -185,25 +185,29 @@ export default function Home() {
       </ScrollFade>
 
       {/* FAQ Section */}
-      <FaqSection />
+      <ScrollFade delay={0.2}>
+        <FaqSection />
+      </ScrollFade>
 
       {/* CTA Section */}
-      <section className="py-32 px-4 bg-white text-center">
-        <div className="max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
-            Ready to Transform Your A-Levels?
-          </h2>
-          <p className="text-lg text-brand-text mb-12">
-            Choose the programme that fits your needs and start applying proven systems today.
-          </p>
-          <a
-            href="#tiers"
-            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-          >
-            View All Programmes
-          </a>
-        </div>
-      </section>
+      <ScrollFade delay={0.2}>
+        <section className="py-32 px-4 bg-white text-center">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
+              Ready to Transform Your A-Levels?
+            </h2>
+            <p className="text-lg text-brand-text mb-12">
+              Choose the programme that fits your needs and start applying proven systems today.
+            </p>
+            <a
+              href="#tiers"
+              className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
+            >
+              View All Programmes
+            </a>
+          </div>
+        </section>
+      </ScrollFade>
 
       {/* Footer */}
       <footer id="contact" className="bg-brand-purple text-brand-cream pt-8 px-8 text-center pb-8">
@@ -218,12 +222,12 @@ export default function Home() {
               unoptimized
             />
           </a>
-          <div className="py-6 w-full">
+          <div className="py-6">
             <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
-            <div className="flex flex-wrap justify-center gap-6 mb-3 text-sm w-full">
-              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition px-3 py-2">Email</a>
-              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition px-3 py-2">Book a Call</a>
-              <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition px-3 py-2">Free Revision Tracker</a>
+            <div className="flex flex-wrap justify-center items-center gap-6 mb-3 text-sm">
+              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
+              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
+              <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
             </div>
             <p className="opacity-80 text-xs">
               &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
