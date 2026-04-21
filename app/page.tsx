@@ -224,12 +224,12 @@ export default function Home() {
               unoptimized
             />
           </a>
-          <div className="py-0">
-            <h3 className="text-lg text-brand-gold font-serif mb-1">Get in Touch</h3>
-            <div className="flex flex-wrap justify-center gap-6 mb-1 text-sm">
-              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
-              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
-              <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+          <div className="py-6">
+            <h3 className="text-lg text-brand-gold font-serif mb-4">Get in Touch</h3>
+            <div className="flex flex-wrap justify-center gap-6 mb-3 text-sm">
+              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition px-3 py-2">Email</a>
+              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition px-3 py-2">Book a Call</a>
+              <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition px-3 py-2">Free Revision Tracker</a>
             </div>
             <p className="opacity-80 text-xs">
               &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
