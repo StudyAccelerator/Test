@@ -220,7 +220,7 @@ export default function Home() {
               <div className="border-2 border-brand-gold rounded-xl p-6 bg-white max-w-md">
                 <div className="space-y-4">
                   <p className="text-lg text-brand-text leading-relaxed">
-                    As a medical doctor and former top-performing A-Level student, I have worked with over 1,000 students to help them improve their grades, manage their workload, and build study systems that actually work.
+                    As a doctor and former top-performing A-Level student, I have worked with over 1,000 students to help them improve their grades, manage their workload, and build study systems that actually work.
                   </p>
                   <p className="text-lg text-brand-text leading-relaxed">
                     I built these systems myself while going through A-Levels, and I know first-hand what it takes to perform under pressure without burning out. Now I teach students how to use them across every subject.
