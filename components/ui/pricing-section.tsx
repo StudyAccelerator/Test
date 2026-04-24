@@ -37,7 +37,8 @@ export default function PricingSection() {
       ctaLink: 'STRIPE_LINK_ACCELERATOR',
       popular: true,
       highlight: true,
-      extraNote: 'This is where students actually start seeing real results.',
+      extraNote: 'Best for students who want results, not just information.',
+      badge: 'Best for Accountability',
     },
     {
       name: 'Top 1% Mentorship',
@@ -46,7 +47,6 @@ export default function PricingSection() {
       description: 'For serious students aiming for top grades and competitive universities',
       features: [
         'Personalised performance plan',
-        '24/7 access to Dr Waleed',
         'Bi-weekly follow-up calls',
         'Monthly performance reviews',
         'Priority support',
@@ -80,7 +80,7 @@ export default function PricingSection() {
                 {tier.popular && (
                   <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
                     <span className="bg-brand-gold text-brand-purple px-6 py-2 rounded-full text-sm font-bold shadow-md">
-                      Most Popular
+                      {tier.badge || 'Most Popular'}
                     </span>
                   </div>
                 )}
