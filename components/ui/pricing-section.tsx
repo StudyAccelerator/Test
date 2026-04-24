@@ -5,59 +5,58 @@ import { TimelineContent } from './timeline-animation'
 export default function PricingSection() {
   const tiers = [
     {
-      name: 'Top 1% Study Series',
+      name: 'Study Series',
+      tagline: 'Learn the System',
       price: '£119',
-      description: 'The core system delivered live. Perfect for students who want to implement immediately.',
+      description: 'Best for: Students who want clarity and structure',
       features: [
-        '4 live sessions (2 hours each, twice weekly)',
-        'Session 1: Mastering Your Week (80/20 Study Plan)',
-        'Session 2: Overcoming Procrastination',
-        'Session 3: Preventing Burnout',
-        'Session 4: Revising That Works (Active Recall & Spaced Repetition)',
-        'Fortnightly group Q&A (1 hour)',
-        'Money-back guarantee',
+        '4 live sessions (2 hours each)',
+        'Full Top 1% Study System',
+        'Worksheets + templates',
+        'Fortnightly group Q&A',
       ],
-      cta: 'Enrol Now',
+      cta: 'Join Study Series',
       ctaLink: 'STRIPE_LINK_SERIES',
       popular: false,
       highlight: false,
+      extraNote: '',
     },
     {
-      name: 'Top 1% Study Accelerator',
+      name: 'Study Accelerator',
+      tagline: 'Implement the System',
       price: '£499',
-      description: 'Everything in Series plus direct access and personal accountability.',
+      description: 'Best for: Students who want support, accountability, and faster progress',
       features: [
-        'All Series content & sessions',
-        'Private WhatsApp group',
-        'Direct answers from me (48-hour turnaround)',
-        'Fortnightly 30-min 1:1 calls',
-        'Personalised onboarding call',
-        'Coaching community access',
-        'Access to A-Level Biology & Chemistry resources',
+        'Everything in Study Series, plus:',
+        'Weekly accountability sessions',
+        'Personalised guidance',
+        'Direct feedback on your progress',
+        'Community support',
       ],
-      cta: 'Enrol Now',
+      cta: 'Join Study Accelerator',
       ctaLink: 'STRIPE_LINK_ACCELERATOR',
       popular: true,
       highlight: true,
+      extraNote: 'This is where students actually start seeing real results.',
     },
     {
-      name: 'Top 1% Study System',
-      price: 'From £2,000/year',
-      description: 'Complete 1:1 transformation. For serious students. Invite-only (5 spaces).',
+      name: 'Top 1% Mentorship',
+      tagline: 'Optimise and Accelerate',
+      price: '£2,000/year',
+      description: 'For serious students aiming for top grades and competitive universities',
       features: [
-        'Comprehensive diagnostic breakdown session',
-        'Personalised analysis report & custom roadmap',
-        'Weekly 1:1 coaching calls (1-2 hours each)',
-        'Monthly deep-dive review meetings',
-        '24/7 WhatsApp access to me',
-        'Subject-specific support tailored to you',
-        'Custom AI tutors for your subjects',
-        'Discounted access to A-Level programmes',
+        'Personalised performance plan',
+        '24/7 access to Dr Waleed',
+        'Bi-weekly follow-up calls',
+        'Monthly performance reviews',
+        'Priority support',
+        'Full access to all systems',
       ],
       cta: 'Book Free Consultation',
       ctaLink: 'ZOOM_BOOKING_LINK',
       popular: false,
       highlight: true,
+      extraNote: '',
     },
   ]
 
@@ -86,26 +85,33 @@ export default function PricingSection() {
                   </div>
                 )}
 
-                <h3 className="text-3xl font-serif font-bold text-brand-purple mb-3 text-center">
+                <h3 className="text-3xl font-serif font-bold text-brand-purple mb-1 text-center">
                   {tier.name}
                 </h3>
+                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide text-center mb-3">
+                  {tier.tagline}
+                </p>
                 <div className="text-4xl font-bold text-brand-gold my-4 text-center">
                   {tier.price}
                 </div>
-                <p className="text-sm text-brand-text mb-6 opacity-90">{tier.description}</p>
+                <p className="text-sm text-brand-text mb-6 opacity-90 text-center font-medium">{tier.description}</p>
 
-                <ul className="space-y-3 mb-8 flex-grow">
+                <ul className="space-y-3 mb-6 flex-grow">
                   {tier.features.map((feature, i) => (
                     <li key={i} className="flex items-start gap-3">
-                      <span className={`font-bold text-lg flex-shrink-0 ${
-                        tier.highlight ? 'text-brand-gold' : 'text-brand-gold'
-                      }`}>
+                      <span className="font-bold text-lg flex-shrink-0 text-brand-gold">
                         ✓
                       </span>
                       <span className="text-brand-text text-sm leading-snug">{feature}</span>
                     </li>
                   ))}
                 </ul>
+
+                {tier.extraNote && (
+                  <p className="text-sm text-brand-purple italic font-semibold mb-6 text-center bg-brand-gold bg-opacity-20 p-3 rounded">
+                    {tier.extraNote}
+                  </p>
+                )}
 
                 <a
                   href={tier.ctaLink}
