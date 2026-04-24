@@ -198,7 +198,7 @@ export default function Home() {
               Why Trust Us
             </h2>
 
-            <div className="flex flex-col md:flex-row gap-6 items-center mb-16">
+            <div className="flex flex-col md:flex-row gap-6 items-center justify-center mb-16">
               <div className="flex-shrink-0">
                 <div
                   className="w-80 h-80 overflow-hidden rounded-2xl"
@@ -351,7 +351,7 @@ export default function Home() {
                 Try Your First Session Risk-Free
               </h2>
               <p className="text-lg text-brand-text">
-                If the first session is not valuable, you can request a full refund.
+                If the first session is not valuable, you can request a full refund <span className="italic text-brand-text opacity-75">(no questions asked)</span>.
               </p>
             </div>
           </div>
