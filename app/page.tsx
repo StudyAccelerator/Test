@@ -210,22 +210,24 @@ export default function Home() {
                     width={288}
                     height={288}
                     className="w-full h-full object-cover"
-                    style={{objectPosition: 'center 15%'}}
+                    style={{objectPosition: 'center 32%'}}
                     unoptimized
                   />
                 </div>
               </div>
 
-              <div className="space-y-4">
-                <p className="text-lg text-brand-text leading-relaxed">
-                  I have worked with over 1,000 students to help them improve their grades, manage their workload and build study systems that actually work.
-                </p>
-                <p className="text-lg text-brand-text leading-relaxed">
-                  As a medical doctor and former top-performing A-Level student, I understand what it takes to perform under pressure without burning out.
-                </p>
-                <p className="text-lg text-brand-text leading-relaxed">
-                  I built these systems myself while going through A-Levels, and now I teach students how to use them across every subject.
-                </p>
+              <div className="border-2 border-brand-gold rounded-xl p-6 bg-white">
+                <div className="space-y-2">
+                  <p className="text-lg text-brand-text leading-relaxed">
+                    I have worked with over 1,000 students to help them improve their grades, manage their workload and build study systems that actually work.
+                  </p>
+                  <p className="text-lg text-brand-text leading-relaxed">
+                    As a medical doctor and former top-performing A-Level student, I understand what it takes to perform under pressure without burning out.
+                  </p>
+                  <p className="text-lg text-brand-text leading-relaxed">
+                    I built these systems myself while going through A-Levels, and now I teach students how to use them across every subject.
+                  </p>
+                </div>
               </div>
             </div>
 
