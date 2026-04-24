@@ -103,7 +103,8 @@ const faqs = [
     question: "What happens if I fall behind during the programme?",
     answer: (
       <>
-        <p>The programme is designed to help you reset quickly. You will learn how to simplify your workload, prioritise what matters most and get back on track without trying to catch up on everything at once.</p>
+        <p className="mb-4">The programme is designed to help you reset quickly. You will learn how to simplify your workload, prioritise what matters most and get back on track without trying to catch up on everything at once.</p>
+        <p className="text-brand-gold font-semibold">👉 All lessons and sessions are recorded, so you can catch up any time that works for you.</p>
       </>
     ),
   },

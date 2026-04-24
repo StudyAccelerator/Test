@@ -103,15 +103,16 @@ export default function Home() {
 
       {/* Programme Breakdown - 4 Weeks */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-brand-light-gray">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               What You&apos;ll Learn Over 4 Weeks
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-gradient-to-br from-brand-gold from-10% to-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 1: Take Control of Your Workload</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <div className="inline-block px-3 py-1 bg-brand-gold bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 1</div>
+                <h3 className="text-xl font-bold text-brand-purple mb-4">Take Control of Your Workload</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -128,8 +129,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-brand-purple-light from-10% to-white p-8 rounded-lg shadow-md border-l-4 border-brand-purple-light">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 2: Stop Procrastinating and Start Executing</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-purple hover:shadow-xl transition-shadow">
+                <div className="inline-block px-3 py-1 bg-brand-purple bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 2</div>
+                <h3 className="text-xl font-bold text-brand-purple mb-4">Stop Procrastinating and Start Executing</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -146,8 +148,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-brand-cream from-10% to-white p-8 rounded-lg shadow-md border-l-4 border-brand-cream-dark">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 3: Handle a Heavy Workload Without Burning Out</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <div className="inline-block px-3 py-1 bg-brand-gold bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 3</div>
+                <h3 className="text-xl font-bold text-brand-purple mb-4">Handle a Heavy Workload Without Burning Out</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -164,8 +167,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-gradient-to-br from-brand-light-gray from-10% to-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 4: Revise and Improve Like a Top Student</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-purple hover:shadow-xl transition-shadow">
+                <div className="inline-block px-3 py-1 bg-brand-purple bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 4</div>
+                <h3 className="text-xl font-bold text-brand-purple mb-4">Revise and Improve Like a Top Student</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -198,7 +202,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <div className="w-full max-w-xs">
                   <Image
-                    src="/Graduation.png"
+                    src="/graduation.jpg"
                     alt="Dr Waleed Ahmad"
                     width={300}
                     height={400}

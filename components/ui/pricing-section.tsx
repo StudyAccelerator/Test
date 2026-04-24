@@ -78,8 +78,8 @@ export default function PricingSection() {
                 } ${tier.popular ? 'md:scale-105 md:-mt-8' : ''} p-10`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-brand-gold text-brand-purple px-6 py-2 rounded-full text-sm font-bold shadow-md">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-max">
+                    <span className="bg-brand-gold text-brand-purple px-6 py-2 rounded-full text-sm font-bold shadow-md whitespace-nowrap">
                       {tier.badge || 'Most Popular'}
                     </span>
                   </div>
