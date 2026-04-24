@@ -24,7 +24,7 @@ export default function Home() {
             Build a system to stay on top of your workload and improve your grades without wasting time.
           </p>
           <a
-            href="#pricing-cards"
+            href="#tiers"
             className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
           >
             See How It Works
@@ -110,9 +110,9 @@ export default function Home() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-gold hover:shadow-xl transition-shadow">
-                <div className="inline-block px-3 py-1 bg-brand-gold bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 1</div>
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Take Control of Your Workload</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 1</h3>
+                <p className="text-brand-gold font-semibold mb-4">Take Control of Your Workload</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -129,9 +129,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-purple hover:shadow-xl transition-shadow">
-                <div className="inline-block px-3 py-1 bg-brand-purple bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 2</div>
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Stop Procrastinating and Start Executing</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 2</h3>
+                <p className="text-brand-gold font-semibold mb-4">Stop Procrastinating and Start Executing</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -148,9 +148,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-gold hover:shadow-xl transition-shadow">
-                <div className="inline-block px-3 py-1 bg-brand-gold bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 3</div>
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Handle a Heavy Workload Without Burning Out</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 3</h3>
+                <p className="text-brand-gold font-semibold mb-4">Handle a Heavy Workload Without Burning Out</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -167,9 +167,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-t-4 border-brand-purple hover:shadow-xl transition-shadow">
-                <div className="inline-block px-3 py-1 bg-brand-purple bg-opacity-20 text-brand-purple text-xs font-bold uppercase tracking-wide rounded-full mb-3">Week 4</div>
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Revise and Improve Like a Top Student</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 4</h3>
+                <p className="text-brand-gold font-semibold mb-4">Revise and Improve Like a Top Student</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -198,17 +198,20 @@ export default function Home() {
               Why Trust Us
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid md:grid-cols-2 gap-6 items-center mb-16">
               <div className="flex justify-center">
-                <div className="w-full max-w-xs">
-                  <Image
-                    src="/graduation.jpg"
-                    alt="Dr Waleed Ahmad"
-                    width={300}
-                    height={400}
-                    className="rounded-lg shadow-lg w-full h-auto"
-                    unoptimized
-                  />
+                <div className="relative w-full max-w-xs">
+                  <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-xl bg-brand-purple-light opacity-30"></div>
+                  <div className="relative w-full overflow-hidden rounded-xl shadow-xl" style={{height: '380px'}}>
+                    <Image
+                      src="/graduation.jpg"
+                      alt="Dr Waleed Ahmad"
+                      fill
+                      className="object-cover object-top"
+                      style={{objectPosition: 'center 8%'}}
+                      unoptimized
+                    />
+                  </div>
                 </div>
               </div>
 
@@ -304,7 +307,7 @@ export default function Home() {
                     <td className="p-4 font-semibold text-brand-purple w-1/5">Live Sessions</td>
                     <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
                     <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> 12 sessions + weekly accountability</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Bi-weekly calls</td>
+                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fortnightly calls, year-round</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
                     <td className="p-4 font-semibold text-brand-purple w-1/5">Group Q&amp;A</td>

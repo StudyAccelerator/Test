@@ -38,7 +38,7 @@ export default function PricingSection() {
       popular: true,
       highlight: true,
       extraNote: '',
-      badge: 'Best for Accountability',
+      badge: 'Most Popular',
     },
     {
       name: 'Top 1% Mentorship',
@@ -47,7 +47,7 @@ export default function PricingSection() {
       description: 'Best for: Serious students aiming for top grades and competitive universities',
       features: [
         'Personalised performance plan',
-        'Bi-weekly follow-up calls',
+        'Fortnightly calls, year-round',
         'Monthly performance reviews',
         'Priority support',
         'Full access to all systems',
@@ -56,7 +56,7 @@ export default function PricingSection() {
       ctaLink: 'ZOOM_BOOKING_LINK',
       popular: false,
       highlight: true,
-      extraNote: '',
+      extraNote: 'Invite only · 5 spaces available',
     },
   ]
 
