@@ -198,24 +198,25 @@ export default function Home() {
               Why Trust Us
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-2 items-start md:items-center mb-16">
-              <div className="flex justify-center">
-                <div className="relative w-48">
-                  <div className="absolute -bottom-2 -left-2 w-full h-full rounded-lg bg-brand-purple opacity-15"></div>
-                  <div className="relative w-full overflow-hidden rounded-lg" style={{height: '280px'}}>
-                    <Image
-                      src="/graduation.jpg"
-                      alt="Dr Waleed Ahmad"
-                      fill
-                      className="object-cover"
-                      style={{objectPosition: 'center -20px'}}
-                      unoptimized
-                    />
-                  </div>
+            <div className="flex flex-col md:flex-row gap-8 items-center mb-16">
+              <div className="flex-shrink-0">
+                <div
+                  className="w-72 h-72 overflow-hidden rounded-2xl"
+                  style={{boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)'}}
+                >
+                  <Image
+                    src="/graduation.jpg"
+                    alt="Dr Waleed Ahmad"
+                    width={288}
+                    height={288}
+                    className="w-full h-full object-cover"
+                    style={{objectPosition: 'center 15%'}}
+                    unoptimized
+                  />
                 </div>
               </div>
 
-              <div className="space-y-4 md:text-left">
+              <div className="space-y-4">
                 <p className="text-lg text-brand-text leading-relaxed">
                   I have worked with over 1,000 students to help them improve their grades, manage their workload and build study systems that actually work.
                 </p>
@@ -392,11 +393,11 @@ export default function Home() {
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-80 w-auto mx-auto -my-12 hover:opacity-80 transition"
+              className="h-80 w-auto mx-auto -my-14 hover:opacity-80 transition"
               unoptimized
             />
           </a>
-          <div className="py-2">
+          <div className="pt-0 pb-1">
             <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
             <div className="flex flex-wrap justify-center items-center gap-6 mb-3 text-sm">
               <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>

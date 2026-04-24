@@ -108,7 +108,7 @@ export default function PricingSection() {
                 </ul>
 
                 {tier.extraNote && (
-                  <p className="text-sm text-brand-purple italic font-semibold mb-6 text-center bg-brand-gold bg-opacity-20 p-3 rounded">
+                  <p className="text-sm text-brand-gold italic font-semibold mb-6 text-center">
                     {tier.extraNote}
                   </p>
                 )}
