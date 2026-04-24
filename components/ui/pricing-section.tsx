@@ -25,7 +25,7 @@ export default function PricingSection() {
       name: 'Study Accelerator',
       tagline: 'Implement the System',
       price: '£499',
-      description: 'Best for: Students who want support, accountability, and faster progress',
+      description: 'Best for: Students who want results, not just information',
       features: [
         'Everything in Study Series, plus:',
         'Weekly accountability sessions',
@@ -37,14 +37,14 @@ export default function PricingSection() {
       ctaLink: 'STRIPE_LINK_ACCELERATOR',
       popular: true,
       highlight: true,
-      extraNote: 'Best for students who want results, not just information.',
+      extraNote: '',
       badge: 'Best for Accountability',
     },
     {
       name: 'Top 1% Mentorship',
       tagline: 'Optimise and Accelerate',
       price: '£2,000/year',
-      description: 'For serious students aiming for top grades and competitive universities',
+      description: 'Best for: Serious students aiming for top grades and competitive universities',
       features: [
         'Personalised performance plan',
         'Bi-weekly follow-up calls',
