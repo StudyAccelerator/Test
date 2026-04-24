@@ -198,25 +198,25 @@ export default function Home() {
               Why Trust Us
             </h2>
 
-            <div className="flex flex-col md:flex-row gap-8 items-center mb-16">
+            <div className="flex flex-col md:flex-row gap-6 items-center mb-16">
               <div className="flex-shrink-0">
                 <div
-                  className="w-72 h-72 overflow-hidden rounded-2xl"
+                  className="w-80 h-80 overflow-hidden rounded-2xl"
                   style={{boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)'}}
                 >
                   <Image
                     src="/graduation.jpg"
                     alt="Dr Waleed Ahmad"
-                    width={288}
-                    height={288}
+                    width={320}
+                    height={320}
                     className="w-full h-full object-cover"
-                    style={{objectPosition: 'center 32%'}}
+                    style={{objectPosition: 'center 45%'}}
                     unoptimized
                   />
                 </div>
               </div>
 
-              <div className="border-2 border-brand-gold rounded-xl p-6 bg-white">
+              <div className="border-2 border-brand-gold rounded-xl p-6 bg-white max-w-md">
                 <div className="space-y-2">
                   <p className="text-lg text-brand-text leading-relaxed">
                     I have worked with over 1,000 students to help them improve their grades, manage their workload and build study systems that actually work.
