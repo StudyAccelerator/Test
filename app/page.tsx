@@ -21,7 +21,7 @@ export default function Home() {
             Why Most A-Level Students Fall Behind <span className="text-brand-cream">And How to Stay Ahead Without Burning Out</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Build a system to stay on top of your workload and improve your grades without wasting time.
+            Build a system to stay on top of your workload, improve your grades, and stop feeling behind!
           </p>
           <a
             href="#tiers"
@@ -37,7 +37,7 @@ export default function Home() {
         <section className="py-20 px-4 bg-brand-light-gray">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              The Real Challenge Isn&apos;t the Content—It&apos;s Managing Everything
+              The Real Challenge Isn&apos;t the Content, It&apos;s Managing Everything
             </h2>
             <div className="space-y-6 text-lg text-brand-text text-center">
               <p>You are juggling lessons, homework, revision, exams and university applications all at once.</p>
@@ -58,36 +58,36 @@ export default function Home() {
 
             <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
               <div className="bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-2xl font-bold text-brand-purple mb-6">Top students do not:</h3>
+                <h3 className="text-2xl font-bold text-brand-purple mb-6">Most students:</h3>
                 <ul className="space-y-3 text-lg text-brand-text">
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold text-xl">✗</span>
-                    <span>Try to do everything</span>
+                    <span className="text-red-500 font-bold text-xl">✗</span>
+                    <span>Try to do everything at once</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold text-xl">✗</span>
-                    <span>Study longer just to feel productive</span>
+                    <span className="text-red-500 font-bold text-xl">✗</span>
+                    <span>Study for hours and see no improvement</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold text-xl">✗</span>
-                    <span>Rely on motivation</span>
+                    <span className="text-red-500 font-bold text-xl">✗</span>
+                    <span>Rely on willpower and burn out</span>
                   </li>
                 </ul>
               </div>
 
               <div className="bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-2xl font-bold text-brand-purple mb-6">Instead, they:</h3>
+                <h3 className="text-2xl font-bold text-brand-purple mb-6">Top students:</h3>
                 <ul className="space-y-3 text-lg text-brand-text">
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold text-xl">✓</span>
-                    <span>Focus on high-impact work</span>
+                    <span className="text-green-600 font-bold text-xl">✓</span>
+                    <span>Focus only on what moves the needle</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold text-xl">✓</span>
-                    <span>Follow a clear system</span>
+                    <span className="text-green-600 font-bold text-xl">✓</span>
+                    <span>Follow a system, not a feeling</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold text-xl">✓</span>
+                    <span className="text-green-600 font-bold text-xl">✓</span>
                     <span>Stay consistent without burning out</span>
                   </li>
                 </ul>
@@ -112,7 +112,7 @@ export default function Home() {
             <div className="grid md:grid-cols-2 gap-6">
               <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 1</h3>
-                <p className="text-brand-gold font-semibold mb-4">Take Control of Your Workload</p>
+                <p className="text-brand-gold font-bold mb-4">Take Control of Your Workload</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -131,7 +131,7 @@ export default function Home() {
 
               <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 2</h3>
-                <p className="text-brand-gold font-semibold mb-4">Stop Procrastinating and Start Executing</p>
+                <p className="text-brand-gold font-bold mb-4">Stop Procrastinating and Start Executing</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -150,7 +150,7 @@ export default function Home() {
 
               <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 3</h3>
-                <p className="text-brand-gold font-semibold mb-4">Handle a Heavy Workload Without Burning Out</p>
+                <p className="text-brand-gold font-bold mb-4">Handle a Heavy Workload Without Burning Out</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -169,7 +169,7 @@ export default function Home() {
 
               <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 4</h3>
-                <p className="text-brand-gold font-semibold mb-4">Revise and Improve Like a Top Student</p>
+                <p className="text-brand-gold font-bold mb-4">Revise and Improve Like a Top Student</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -217,15 +217,12 @@ export default function Home() {
               </div>
 
               <div className="border-2 border-brand-gold rounded-xl p-6 bg-white max-w-md">
-                <div className="space-y-2">
+                <div className="space-y-4">
                   <p className="text-lg text-brand-text leading-relaxed">
-                    I have worked with over 1,000 students to help them improve their grades, manage their workload and build study systems that actually work.
+                    As a medical doctor and former top-performing A-Level student, I have worked with over 1,000 students to help them improve their grades, manage their workload, and build study systems that actually work.
                   </p>
                   <p className="text-lg text-brand-text leading-relaxed">
-                    As a medical doctor and former top-performing A-Level student, I understand what it takes to perform under pressure without burning out.
-                  </p>
-                  <p className="text-lg text-brand-text leading-relaxed">
-                    I built these systems myself while going through A-Levels, and now I teach students how to use them across every subject.
+                    I built these systems myself while going through A-Levels, and I know first-hand what it takes to perform under pressure without burning out. Now I teach students how to use them across every subject.
                   </p>
                 </div>
               </div>
@@ -350,7 +347,7 @@ export default function Home() {
           <div className="max-w-2xl mx-auto">
             <div className="bg-white p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
               <div className="text-5xl mb-6">🛡️</div>
-              <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
+              <h2 className="text-3xl md:text-4xl text-brand-purple font-serif font-bold mb-6">
                 Try Your First Session Risk-Free
               </h2>
               <p className="text-lg text-brand-text">

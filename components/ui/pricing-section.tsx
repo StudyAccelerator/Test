@@ -94,7 +94,7 @@ export default function PricingSection() {
                 <div className="text-4xl font-bold text-brand-gold my-4 text-center">
                   {tier.price}
                 </div>
-                <p className="text-sm text-brand-text mb-6 opacity-90 text-center font-medium">{tier.description}</p>
+                <p className="text-sm text-brand-text mb-6 opacity-90 text-center font-bold">{tier.description}</p>
 
                 <ul className="space-y-3 mb-6 flex-grow">
                   {tier.features.map((feature, i) => (
