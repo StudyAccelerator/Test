@@ -198,24 +198,24 @@ export default function Home() {
               Why Trust Us
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-6 items-center mb-16">
+            <div className="grid md:grid-cols-2 gap-4 items-center mb-16">
               <div className="flex justify-center">
-                <div className="relative w-full max-w-xs">
-                  <div className="absolute inset-0 translate-x-3 translate-y-3 rounded-xl bg-brand-purple-light opacity-30"></div>
-                  <div className="relative w-full overflow-hidden rounded-xl shadow-xl" style={{height: '380px'}}>
+                <div className="relative w-56">
+                  <div className="absolute -bottom-2 -left-2 w-full h-full rounded-xl bg-brand-purple opacity-15"></div>
+                  <div className="relative w-full overflow-hidden rounded-xl" style={{height: '300px'}}>
                     <Image
                       src="/graduation.jpg"
                       alt="Dr Waleed Ahmad"
                       fill
-                      className="object-cover object-top"
-                      style={{objectPosition: 'center 8%'}}
+                      className="object-cover"
+                      style={{objectPosition: 'center 5%', transform: 'scale(1.4)', transformOrigin: 'center 18%'}}
                       unoptimized
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-6">
+              <div className="space-y-5 text-center md:text-left">
                 <p className="text-lg text-brand-text leading-relaxed">
                   I have worked with over 1,000 students to help them improve their grades, manage their workload and build study systems that actually work.
                 </p>
@@ -384,7 +384,7 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream pt-8 px-8 text-center pb-8">
+      <footer id="contact" className="bg-brand-purple text-brand-cream pt-3 px-8 text-center pb-4">
         <div className="max-w-3xl mx-auto">
           <a href="#top" className="block">
             <Image

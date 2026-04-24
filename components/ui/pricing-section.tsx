@@ -28,7 +28,7 @@ export default function PricingSection() {
       description: 'Best for: Students who want results, not just information',
       features: [
         'Everything in Study Series, plus:',
-        'Weekly accountability sessions',
+        '12 weekly live sessions — 3 full months of support',
         'Personalised guidance',
         'Direct feedback on your progress',
         'Community support',
