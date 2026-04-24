@@ -10,6 +10,8 @@ const config: Config = {
       colors: {
         card: "hsl(var(--card))",
         "card-foreground": "hsl(var(--card-foreground))",
+        primary: "var(--primary)",
+        "primary-light": "var(--primary-light)",
         brand: {
           purple: "#2E2557",
           "purple-light": "#3d3370",

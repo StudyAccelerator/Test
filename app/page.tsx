@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/header'
 import PricingSection from '@/components/ui/pricing-section'
 import FaqSection from '@/components/ui/faq-section'
+import TestimonialSlider from '@/components/ui/testimonial-slider'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 
 export const metadata = {
@@ -229,46 +230,12 @@ export default function Home() {
               </div>
             </div>
 
-            <h3 className="text-2xl text-brand-purple font-serif text-center mb-8">
-              What Students Say
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  before: 'Was falling behind and unsure how to catch up',
-                  after: 'Now has a clear system that works',
-                  result: 'Caught up with her workload and improved her grades'
-                },
-                {
-                  before: 'Studied for hours but saw no improvement',
-                  after: 'Learned to study strategically',
-                  result: 'Improved grades while studying less'
-                },
-                {
-                  before: 'Felt overwhelmed and burnt out',
-                  after: 'Now has a sustainable approach',
-                  result: 'This helped me improve without burning out'
-                },
-              ].map((testimonial, i) => (
-                <div key={i} className="bg-brand-light-gray p-8 rounded-lg shadow-sm">
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-brand-gold mb-2">Before</p>
-                    <p className="text-brand-text">{testimonial.before}</p>
-                  </div>
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-brand-gold mb-2">After</p>
-                    <p className="text-brand-text">{testimonial.after}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-brand-gold mb-2">Result</p>
-                    <p className="text-brand-text font-semibold">{testimonial.result}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
         </section>
       </ScrollFade>
+
+      {/* Testimonials Slider */}
+      <TestimonialSlider />
 
       {/* Tier Comparison Table */}
       <ScrollFade delay={0.2}>
