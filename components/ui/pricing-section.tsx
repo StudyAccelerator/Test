@@ -56,7 +56,7 @@ export default function PricingSection() {
       ctaLink: 'ZOOM_BOOKING_LINK',
       popular: false,
       highlight: true,
-      extraNote: 'Invite only · 5 spaces available',
+      extraNote: 'Invite only · limited to 5 spaces',
     },
   ]
 
@@ -118,7 +118,7 @@ export default function PricingSection() {
                   className={`block text-center w-full py-4 px-6 font-semibold rounded-lg transition-all transform hover:-translate-y-1 ${
                     tier.highlight
                       ? 'bg-brand-gold text-brand-purple hover:bg-brand-gold-light shadow-lg hover:shadow-xl'
-                      : 'bg-brand-cream-dark text-brand-purple hover:bg-brand-gold shadow-md hover:shadow-lg'
+                      : 'bg-brand-gold bg-opacity-70 text-brand-purple hover:bg-brand-gold shadow-md hover:shadow-lg'
                   }`}
                 >
                   {tier.cta}

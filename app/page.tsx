@@ -198,24 +198,24 @@ export default function Home() {
               Why Trust Us
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-4 items-center mb-16">
+            <div className="grid md:grid-cols-2 gap-2 items-start md:items-center mb-16">
               <div className="flex justify-center">
-                <div className="relative w-56">
-                  <div className="absolute -bottom-2 -left-2 w-full h-full rounded-xl bg-brand-purple opacity-15"></div>
-                  <div className="relative w-full overflow-hidden rounded-xl" style={{height: '300px'}}>
+                <div className="relative w-48">
+                  <div className="absolute -bottom-2 -left-2 w-full h-full rounded-lg bg-brand-purple opacity-15"></div>
+                  <div className="relative w-full overflow-hidden rounded-lg" style={{height: '280px'}}>
                     <Image
                       src="/graduation.jpg"
                       alt="Dr Waleed Ahmad"
                       fill
                       className="object-cover"
-                      style={{objectPosition: 'center 5%', transform: 'scale(1.4)', transformOrigin: 'center 18%'}}
+                      style={{objectPosition: 'center -20px'}}
                       unoptimized
                     />
                   </div>
                 </div>
               </div>
 
-              <div className="space-y-5 text-center md:text-left">
+              <div className="space-y-4 md:text-left">
                 <p className="text-lg text-brand-text leading-relaxed">
                   I have worked with over 1,000 students to help them improve their grades, manage their workload and build study systems that actually work.
                 </p>
@@ -384,7 +384,7 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream pt-3 px-8 text-center pb-4">
+      <footer id="contact" className="bg-brand-purple text-brand-cream pt-2 px-8 text-center pb-2">
         <div className="max-w-3xl mx-auto">
           <a href="#top" className="block">
             <Image
@@ -392,11 +392,11 @@ export default function Home() {
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-96 w-auto mx-auto -my-16 hover:opacity-80 transition"
+              className="h-80 w-auto mx-auto -my-12 hover:opacity-80 transition"
               unoptimized
             />
           </a>
-          <div className="py-6">
+          <div className="py-2">
             <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
             <div className="flex flex-wrap justify-center items-center gap-6 mb-3 text-sm">
               <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
