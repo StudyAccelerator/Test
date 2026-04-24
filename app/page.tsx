@@ -199,7 +199,7 @@ export default function Home() {
             </h2>
 
             <div className="flex flex-col md:flex-row gap-6 items-center justify-center mb-16">
-              <div className="flex-shrink-0">
+              <div className="flex-shrink-0 flex flex-col items-center">
                 <div
                   className="w-80 h-80 overflow-hidden rounded-2xl"
                   style={{boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)'}}
@@ -210,10 +210,11 @@ export default function Home() {
                     width={320}
                     height={320}
                     className="w-full h-full object-cover"
-                    style={{objectPosition: 'center 45%'}}
+                    style={{objectPosition: 'center 45%', transform: 'scale(1.25)', transformOrigin: 'center 45%'}}
                     unoptimized
                   />
                 </div>
+                <p className="mt-3 text-sm italic text-brand-gold font-semibold">Dr. Waleed Ahmad, MBBS</p>
               </div>
 
               <div className="border-2 border-brand-gold rounded-xl p-6 bg-white max-w-md">
