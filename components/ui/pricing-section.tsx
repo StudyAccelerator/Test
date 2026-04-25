@@ -27,8 +27,10 @@ export default function PricingSection() {
       price: '£499',
       description: 'Best for: Students who want results, not just information',
       features: [
-        'Everything in Study Series, plus:',
         '12 weekly live sessions — 3 full months of support',
+        'Full Top 1% Study System',
+        'Worksheets + templates',
+        'Fortnightly group Q&A',
         'Personalised guidance',
         'Direct feedback on your progress',
         'Community support',

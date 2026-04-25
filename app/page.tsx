@@ -35,7 +35,7 @@ export default function Home() {
 
       {/* Problem Statement */}
       <ScrollFade>
-        <section className="py-20 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               The Real Challenge Isn&apos;t the Content, It&apos;s Managing Everything
@@ -51,7 +51,7 @@ export default function Home() {
 
       {/* Solution Section - What Top Students Do Differently */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-16">
               What Top Students Do Differently
@@ -104,7 +104,7 @@ export default function Home() {
 
       {/* Programme Breakdown - 4 Weeks */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               What You&apos;ll Learn Over 4 Weeks
@@ -193,7 +193,7 @@ export default function Home() {
 
       {/* Why Trust Us - With Image */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-16">
               Why Trust Us
@@ -239,7 +239,7 @@ export default function Home() {
 
       {/* Tier Comparison Table */}
       <ScrollFade delay={0.2}>
-        <section id="tiers" className="py-20 px-4 bg-brand-light-gray">
+        <section id="tiers" className="pt-20 pb-6 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
               Choose Your Level of Support
@@ -248,7 +248,7 @@ export default function Home() {
               Most students choose the Accelerator for faster results, accountability and direct support.
             </p>
 
-            <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-16">
+            <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-4">
               <table className="w-full table-fixed">
                 <thead>
                   <tr>
@@ -304,7 +304,7 @@ export default function Home() {
 
       {/* Cohort Start Date */}
       <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="pt-6 pb-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-2xl mx-auto">
             <div className="text-center">
               <div className="inline-block bg-gradient-to-r from-yellow-200 to-pink-200 rounded-full px-6 py-2 mb-4">
@@ -336,7 +336,7 @@ export default function Home() {
 
       {/* Guarantee Section */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-2xl mx-auto">
             <div className="bg-white p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
               <div className="text-5xl mb-6">🛡️</div>
@@ -358,7 +358,7 @@ export default function Home() {
 
       {/* Final CTA Section */}
       <ScrollFade delay={0.2}>
-        <section className="py-24 px-4 bg-white text-center">
+        <section className="py-24 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50 text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-8">
               Stop Falling Behind, Fix Your Systems Now!
