@@ -596,21 +596,21 @@ export default function SubjectAccelerators() {
       {/* Footer */}
       <footer id="contact" className="bg-brand-purple text-brand-cream pt-8 px-8 text-center pb-8">
         <div className="max-w-3xl mx-auto">
-          <a href="/" className="block">
+          <div className="block">
             <Image
               src="/logo-header.png?v=2"
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-96 w-auto mx-auto -my-16 hover:opacity-80 transition"
+              className="h-96 w-auto mx-auto -my-16"
               unoptimized
             />
-          </a>
+          </div>
           <div className="py-6">
             <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
             <div className="flex flex-wrap justify-center items-center gap-6 mb-3 text-sm">
-              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
-              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
+              <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
+              <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition">Book a Call</a>
               <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
             </div>
             <p className="opacity-80 text-xs">

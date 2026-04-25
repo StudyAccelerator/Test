@@ -399,21 +399,21 @@ export default function Home() {
       {/* Footer */}
       <footer id="contact" className="bg-brand-purple text-brand-cream pt-2 px-8 text-center pb-2">
         <div className="max-w-3xl mx-auto">
-          <a href="#top" className="block">
+          <div className="block">
             <Image
               src="/logo-header.png?v=2"
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="h-80 w-auto mx-auto -my-14 hover:opacity-80 transition"
+              className="h-80 w-auto mx-auto -my-14"
               unoptimized
             />
-          </a>
+          </div>
           <div className="pt-0 pb-1">
             <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
             <div className="flex flex-wrap justify-center items-center gap-6 mb-3 text-sm">
-              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
-              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
+              <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
+              <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition">Book a Call</a>
               <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
             </div>
             <p className="opacity-80 text-xs">
