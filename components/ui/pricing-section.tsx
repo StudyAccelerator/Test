@@ -26,6 +26,8 @@ export default function PricingSection() {
       tagline: 'Implement the System',
       price: '£499',
       description: 'Best for: Students who want results, not just information',
+      highlightLine: 'Includes full 12-week implementation support',
+      subLine: 'Not just learning the system — actually applying it with guidance and feedback',
       features: [
         '12 weekly live sessions — 3 full months of support',
         'Full Top 1% Study System',
@@ -96,7 +98,16 @@ export default function PricingSection() {
                 <div className="text-4xl font-bold text-brand-gold my-4 text-center">
                   {tier.price}
                 </div>
-                <p className="text-sm text-brand-text mb-6 opacity-90 text-center font-bold">{tier.description}</p>
+                <p className="text-sm text-brand-text mb-4 opacity-90 text-center font-bold">{tier.description}</p>
+
+                {tier.highlightLine && (
+                  <div className="mb-6 mx-auto bg-brand-gold/15 border border-brand-gold/40 rounded-lg p-3 text-center">
+                    <p className="text-sm font-bold text-brand-purple">{tier.highlightLine}</p>
+                    {tier.subLine && (
+                      <p className="text-xs text-brand-text mt-1 italic">{tier.subLine}</p>
+                    )}
+                  </div>
+                )}
 
                 <ul className="space-y-3 mb-6 flex-grow">
                   {tier.features.map((feature, i) => (
