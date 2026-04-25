@@ -16,31 +16,31 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: 'Was falling behind and unsure how to catch up. Now has a clear system that works.',
-    name: 'Student 1',
-    username: '@student1',
-    avatar: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
+    quote: "I was falling behind and didn't know how to catch up. Now I have a clear system to follow!",
+    name: 'Year 13 Student',
+    username: '@student',
+    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=400&h=400&fit=crop',
   },
   {
     id: 2,
-    quote: 'Studied for hours but saw no improvement. Now studies strategically and improved grades.',
-    name: 'Student 2',
-    username: '@student2',
-    avatar: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
+    quote: 'Dr Waleed broke everything down in a way that actually made sense. The session was really clear in helping me know what I should be doing. Thank you :)',
+    name: 'Year 12 Student',
+    username: '@student',
+    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=jpg&q=60&w=400&h=400&fit=crop',
   },
   {
     id: 3,
-    quote: 'Finally understand how to prioritise and manage my workload without burning out.',
-    name: 'Student 3',
-    username: '@student3',
-    avatar: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
+    quote: 'It was really structured and focused, which made it much easier to actually apply',
+    name: 'Year 13 Student',
+    username: '@student',
+    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=400&h=400&fit=crop',
   },
   {
     id: 4,
-    quote: 'The systems work across all my subjects. No more feeling lost with different topics.',
-    name: 'Student 4',
-    username: '@student4',
-    avatar: 'https://images.unsplash.com/photo-1633332755192-727a05c4013d?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8dXNlcnxlbnwwfHwwfHx8MA%3D%3D',
+    quote: 'I found the tips and examples really helpful, and I could actually apply them to myself',
+    name: 'Year 12 Student',
+    username: '@student',
+    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=jpg&q=60&w=400&h=400&fit=crop',
   },
 ]
 
@@ -164,7 +164,7 @@ const TestimonialSlider: React.FC = () => {
             Success Stories
           </span>
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-brand-purple to-brand-purple/70 bg-clip-text text-transparent mt-3 sm:mt-4 px-4">
-            What Students Achieve
+            Hear From Our Students
           </h3>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-brand-purple to-brand-gold mx-auto mt-4 sm:mt-6"></div>
         </motion.div>

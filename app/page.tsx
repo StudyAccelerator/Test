@@ -247,6 +247,11 @@ export default function Home() {
             <p className="text-center text-lg text-brand-text mb-12 max-w-2xl mx-auto">
               Most students choose the Accelerator for faster results, accountability and direct support.
             </p>
+            <div className="text-center mb-12 bg-brand-gold bg-opacity-15 py-4 px-6 rounded-lg border-2 border-brand-gold inline-block mx-auto block">
+              <p className="text-brand-purple font-semibold text-lg">
+                ⏰ Next cohort starts <span className="font-bold">Wednesday May 9th</span>
+              </p>
+            </div>
 
             <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-16">
               <table className="w-full table-fixed">
