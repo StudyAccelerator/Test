@@ -325,7 +325,7 @@ export default function Home() {
                 <p className="text-brand-purple font-semibold text-sm uppercase tracking-wide">Limited Spots Available</p>
               </div>
               <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-purple mb-4">
-                Next Cohort Starts Wednesday, May 9th
+                Next Cohort Starts Wednesday, May 6th
               </h3>
               <p className="text-lg text-brand-text mb-6">
                 Secure your spot before the programme fills up
