@@ -613,7 +613,7 @@ export default function SubjectAccelerators() {
       <footer id="contact" className="bg-brand-purple text-brand-cream py-8 px-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
-            <div className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center">
+            <a href="/#hero" className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center hover:opacity-80 transition">
               <Image
                 src="/logo-header.png?v=2"
                 alt="A-Level Accelerators"
@@ -622,7 +622,7 @@ export default function SubjectAccelerators() {
                 className="absolute h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 unoptimized
               />
-            </div>
+            </a>
             <div className="hidden md:block w-px h-36 bg-brand-gold opacity-40 flex-shrink-0"></div>
             <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
             <div className="md:flex-1 text-center">
