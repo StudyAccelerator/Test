@@ -405,7 +405,7 @@ export default function SubjectAccelerators() {
                   </li>
                 </ul>
                 <a
-                  href="#pricing"
+                  href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00"
                   className="block w-full text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition"
                 >
                   Join Maths ➗
@@ -432,7 +432,7 @@ export default function SubjectAccelerators() {
                   </li>
                 </ul>
                 <a
-                  href="#pricing"
+                  href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00"
                   className="block w-full text-center px-6 py-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition"
                 >
                   Join Biology 🧬
@@ -459,7 +459,7 @@ export default function SubjectAccelerators() {
                   </li>
                 </ul>
                 <a
-                  href="#pricing"
+                  href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00"
                   className="block w-full text-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-md hover:bg-purple-700 transition"
                 >
                   Join Chemistry 🧪
@@ -495,7 +495,7 @@ export default function SubjectAccelerators() {
                     <span>Maths, Biology or Chemistry</span>
                   </li>
                 </ul>
-                <a href="#subjects" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join 1 Subject
                 </a>
               </div>
@@ -520,7 +520,7 @@ export default function SubjectAccelerators() {
                       <span>Save £49 vs individual enrolment</span>
                     </li>
                   </ul>
-                  <a href="#subjects" className="block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
+                  <a href="https://buy.stripe.com/14A3cwe9Igyq6fwcHic3m01" className="block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
                     Join 2 Subjects
                   </a>
                 </div>
@@ -542,7 +542,7 @@ export default function SubjectAccelerators() {
                     <span>Save £168 vs individual enrolment</span>
                   </li>
                 </ul>
-                <a href="#subjects" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href="https://buy.stripe.com/5kQeVeghQciacDUfTuc3m02" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join All Subjects
                 </a>
               </div>
