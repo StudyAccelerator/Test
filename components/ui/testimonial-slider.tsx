@@ -247,34 +247,9 @@ const TestimonialSlider: React.FC = () => {
                       </p>
 
                       <div className="mt-auto pt-3 sm:pt-4 border-t border-gray-100">
-                        <div className="flex items-center">
-                          <div className="relative flex-shrink-0">
-                            <img
-                              width={48}
-                              height={48}
-                              src={testimonial.avatar}
-                              alt={testimonial.name}
-                              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-white shadow-sm"
-                            />
-                            <motion.div
-                              className="absolute inset-0 rounded-full bg-brand-purple/20"
-                              animate={{
-                                scale: [1, 1.2, 1],
-                                opacity: [0, 0.3, 0],
-                              }}
-                              transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatDelay: 1,
-                              }}
-                            />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-bold text-sm sm:text-base text-gray-900">
-                              {testimonial.name}
-                            </h4>
-                          </div>
-                        </div>
+                        <h4 className="font-bold text-sm sm:text-base text-gray-900">
+                          {testimonial.name}
+                        </h4>
                       </div>
                     </div>
                   </motion.div>
