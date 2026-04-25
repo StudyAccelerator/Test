@@ -555,6 +555,23 @@ export default function SubjectAccelerators() {
         </section>
       </ScrollFade>
 
+      {/* Guarantee */}
+      <ScrollFade delay={0.2}>
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-2xl mx-auto">
+            <div className="bg-brand-cream p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
+              <div className="text-5xl mb-6">🛡️</div>
+              <h2 className="text-3xl md:text-4xl text-brand-purple font-serif font-bold mb-6">
+                Try Your First Session Risk-Free
+              </h2>
+              <p className="text-lg text-brand-text">
+                If the first session is not valuable, you can request a full refund <span className="italic text-brand-text opacity-75">(no questions asked)</span>.
+              </p>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
       {/* FAQ */}
       <ScrollFade delay={0.2}>
         <section className="py-16 px-4 bg-brand-cream">
