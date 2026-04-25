@@ -478,60 +478,71 @@ export default function SubjectAccelerators() {
               Pricing
             </h2>
 
-            <div className="grid md:grid-cols-3 gap-8 mb-6">
-              <div className="bg-brand-cream p-8 rounded-lg text-center shadow-lg">
-                <h3 className="text-2xl font-bold text-brand-purple mb-4">Single Subject</h3>
-                <p className="text-3xl font-bold text-brand-gold mb-6">£289</p>
-                <ul className="text-brand-text mb-6 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold">•</span>
-                    <span>Full 12-Week Accelerator</span>
+            <div className="grid md:grid-cols-3 gap-6 items-end mb-6">
+              {/* Single Subject */}
+              <div className="bg-brand-cream rounded-xl p-8 text-center shadow-lg border-2 border-brand-cream-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                <h3 className="text-2xl font-serif font-bold text-brand-purple mb-2">Single Subject</h3>
+                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Choose one</p>
+                <p className="text-4xl font-bold text-brand-gold mb-2">£289</p>
+                <p className="text-xs text-brand-text opacity-60 mb-6">per subject</p>
+                <ul className="text-brand-text mb-8 space-y-3">
+                  <li className="flex items-center gap-2 justify-center">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Full 12-week Accelerator</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold">•</span>
-                    <span>Choose Maths, Biology or Chemistry</span>
+                  <li className="flex items-center gap-2 justify-center">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Maths, Biology or Chemistry</span>
                   </li>
                 </ul>
-                <a href="#subjects" className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition">
+                <a href="#subjects" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join 1 Subject
                 </a>
               </div>
 
-              <div className="bg-brand-cream p-8 rounded-lg text-center shadow-lg border-4 border-brand-gold relative">
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-brand-gold text-brand-purple px-4 py-1 rounded-full text-sm font-bold">
+              {/* Two Subjects — featured */}
+              <div className="bg-brand-cream rounded-xl text-center shadow-2xl border-4 border-brand-gold transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(46,37,87,0.25)] md:scale-105 md:-mt-4 overflow-hidden">
+                <div className="bg-brand-gold text-brand-purple py-2 px-4 text-sm font-bold text-center">
                   Best value for most students
                 </div>
-                <h3 className="text-2xl font-bold text-brand-purple mb-4">Two Subjects</h3>
-                <p className="text-3xl font-bold text-brand-gold mb-6">£529</p>
-                <ul className="text-brand-text mb-6 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold">•</span>
-                    <span>Any two subjects</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold">•</span>
-                    <span>Save £49 compared to individual enrolment</span>
-                  </li>
-                </ul>
-                <a href="#subjects" className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition">
-                  Join 2 Subjects
-                </a>
+                <div className="p-8">
+                  <h3 className="text-2xl font-serif font-bold text-brand-purple mb-2">Two Subjects</h3>
+                  <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Most popular</p>
+                  <p className="text-4xl font-bold text-brand-gold mb-2">£529</p>
+                  <p className="text-xs text-brand-text opacity-60 mb-6">save £49</p>
+                  <ul className="text-brand-text mb-8 space-y-3">
+                    <li className="flex items-center gap-2 justify-center">
+                      <span className="text-brand-gold font-bold">✓</span>
+                      <span>Any two subjects</span>
+                    </li>
+                    <li className="flex items-center gap-2 justify-center">
+                      <span className="text-brand-gold font-bold">✓</span>
+                      <span>Save £49 vs individual enrolment</span>
+                    </li>
+                  </ul>
+                  <a href="#subjects" className="block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
+                    Join 2 Subjects
+                  </a>
+                </div>
               </div>
 
-              <div className="bg-brand-cream p-8 rounded-lg text-center shadow-lg">
-                <h3 className="text-2xl font-bold text-brand-purple mb-4">All Three Subjects</h3>
-                <p className="text-3xl font-bold text-brand-gold mb-6">£699</p>
-                <ul className="text-brand-text mb-6 space-y-2">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold">•</span>
-                    <span>Maths, Biology and Chemistry</span>
+              {/* All Three */}
+              <div className="bg-brand-cream rounded-xl p-8 text-center shadow-lg border-2 border-brand-cream-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
+                <h3 className="text-2xl font-serif font-bold text-brand-purple mb-2">All Three Subjects</h3>
+                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Complete coverage</p>
+                <p className="text-4xl font-bold text-brand-gold mb-2">£699</p>
+                <p className="text-xs text-brand-text opacity-60 mb-6">save £168</p>
+                <ul className="text-brand-text mb-8 space-y-3">
+                  <li className="flex items-center gap-2 justify-center">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Maths, Biology &amp; Chemistry</span>
                   </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold">•</span>
-                    <span>Save £168 compared to individual enrolment</span>
+                  <li className="flex items-center gap-2 justify-center">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Save £168 vs individual enrolment</span>
                   </li>
                 </ul>
-                <a href="#subjects" className="inline-block px-6 py-3 bg-brand-purple text-brand-cream font-semibold rounded-md hover:bg-brand-purple-light transition">
+                <a href="#subjects" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join All Subjects
                 </a>
               </div>
@@ -546,7 +557,7 @@ export default function SubjectAccelerators() {
 
       {/* FAQ */}
       <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-brand-light-gray">
+        <section className="py-16 px-4 bg-brand-cream">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               Frequently Asked Questions
