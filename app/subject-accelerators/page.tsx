@@ -183,7 +183,7 @@ export default function SubjectAccelerators() {
       <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-32 px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-6 font-bold">
-            Struggling with A-Level Biology, Chemistry or Maths?
+            Struggling with A-Level <span className="text-green-400">Biology</span>, <span className="text-purple-300">Chemistry</span> or <span className="text-blue-300">Maths</span>?
           </h1>
           <p className="text-2xl md:text-3xl mb-8 opacity-95 max-w-3xl mx-auto">
             Get structured, high-impact support that actually improves your grades, without relying on endless tutoring.
