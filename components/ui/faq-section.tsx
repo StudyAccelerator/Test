@@ -114,7 +114,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+    <section id="faq" className="py-16 px-4 bg-brand-cream">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl text-brand-purple text-center mb-12 font-serif">
           Frequently Asked Questions

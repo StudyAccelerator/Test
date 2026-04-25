@@ -10,6 +10,10 @@ export const metadata = {
   description: 'Build a system to stay on top of your A-Level workload and improve your grades without wasting time.',
 }
 
+const Divider = () => (
+  <div aria-hidden="true" className="h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent" />
+)
+
 export default function Home() {
   return (
     <main>
@@ -35,7 +39,7 @@ export default function Home() {
 
       {/* Problem Statement */}
       <ScrollFade>
-        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               The Real Challenge Isn&apos;t the Content, It&apos;s Managing Everything
@@ -49,6 +53,8 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Solution Section - What Top Students Do Differently */}
       <ScrollFade delay={0.2}>
         <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
@@ -58,7 +64,7 @@ export default function Home() {
             </h2>
 
             <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
-              <div className="bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
                 <h3 className="text-2xl font-bold text-brand-purple mb-6">Most students:</h3>
                 <ul className="space-y-3 text-lg text-brand-text">
                   <li className="flex items-start gap-3">
@@ -76,7 +82,7 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
                 <h3 className="text-2xl font-bold text-brand-purple mb-6">Top students:</h3>
                 <ul className="space-y-3 text-lg text-brand-text">
                   <li className="flex items-start gap-3">
@@ -102,9 +108,11 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Programme Breakdown - 4 Weeks */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="py-20 px-4 bg-brand-cream">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               What You&apos;ll Learn Over 4 Weeks
@@ -191,9 +199,11 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Why Trust Us - With Image */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-16">
               Why Trust Us
@@ -234,8 +244,12 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Testimonials Slider */}
       <TestimonialSlider />
+
+      <Divider />
 
       {/* Tier Comparison Table */}
       <ScrollFade delay={0.2}>
@@ -302,7 +316,7 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* Cohort Start Date */}
+      {/* Cohort Start Date — seamlessly continues the gradient section above */}
       <ScrollFade delay={0.2}>
         <section className="pt-6 pb-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-2xl mx-auto">
@@ -334,11 +348,13 @@ export default function Home() {
         </div>
       </ScrollFade>
 
+      <Divider />
+
       {/* Guarantee Section */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
+            <div className="bg-brand-cream p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
               <div className="text-5xl mb-6">🛡️</div>
               <h2 className="text-3xl md:text-4xl text-brand-purple font-serif font-bold mb-6">
                 Try Your First Session Risk-Free
@@ -351,14 +367,18 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* FAQ Section */}
       <ScrollFade delay={0.2}>
         <FaqSection />
       </ScrollFade>
 
+      <Divider />
+
       {/* Final CTA Section */}
       <ScrollFade delay={0.2}>
-        <section className="py-24 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50 text-center">
+        <section className="py-24 px-4 bg-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-8">
               Stop Falling Behind, Fix Your Systems Now!
