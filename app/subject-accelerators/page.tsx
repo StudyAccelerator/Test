@@ -315,42 +315,42 @@ export default function SubjectAccelerators() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div>
+              <div className="text-center">
                 <h3 className="text-xl font-bold text-brand-purple mb-6 text-center border-b-2 border-brand-gold pb-4">High-Impact Teaching</h3>
                 <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
-                    <span>Live weekly sessions</span>
+                    <span>12 live weekly sessions</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
                     <span>Focus on key topics</span>
                   </li>
                 </ul>
               </div>
 
-              <div>
+              <div className="text-center">
                 <h3 className="text-xl font-bold text-brand-purple mb-6 text-center border-b-2 border-brand-gold pb-4">Exam-Focused Practice</h3>
                 <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
                     <span>Past paper questions</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
                     <span>Mark scheme breakdowns</span>
                   </li>
                 </ul>
               </div>
 
-              <div>
+              <div className="text-center">
                 <h3 className="text-xl font-bold text-brand-purple mb-6 text-center border-b-2 border-brand-gold pb-4">Structured Support</h3>
                 <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
                     <span>Weekly guidance</span>
                   </li>
-                  <li className="flex items-start gap-2">
+                  <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
                     <span>Clear focus each session</span>
                   </li>
@@ -359,15 +359,15 @@ export default function SubjectAccelerators() {
             </div>
 
             <div className="mt-12 space-y-3 text-brand-text max-w-2xl mx-auto">
-              <div className="flex items-start gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
                 <span>Full access to session recordings and slides</span>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
                 <span>Weekly structured worksheets and practice</span>
               </div>
-              <div className="flex items-start gap-3">
+              <div className="flex items-center justify-center gap-3">
                 <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
                 <span>Weekly Q&A support to clarify misunderstandings</span>
               </div>
