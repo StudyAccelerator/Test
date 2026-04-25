@@ -400,20 +400,20 @@ export default function Home() {
       <footer id="contact" className="bg-brand-purple text-brand-cream py-8 px-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
-            <div className="flex justify-center md:justify-start md:flex-1">
+            <div className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center">
               <Image
                 src="/logo-header.png?v=2"
                 alt="A-Level Accelerators"
                 width={400}
-                height={160}
-                className="h-36 w-auto"
+                height={400}
+                className="absolute h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 unoptimized
               />
             </div>
-            <div className="hidden md:block w-px h-28 bg-brand-gold opacity-40 flex-shrink-0"></div>
+            <div className="hidden md:block w-px h-36 bg-brand-gold opacity-40 flex-shrink-0"></div>
             <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
             <div className="md:flex-1 text-center">
-              <h3 className="text-base text-brand-gold font-serif mb-4">Get in Touch</h3>
+              <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
               <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
                 <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
                 <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
