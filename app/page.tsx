@@ -20,7 +20,7 @@ export default function Home() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-24 px-8 text-center">
+      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-24 px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-8 font-bold leading-tight">
             Why Most A-Level Students Fall Behind <span className="text-brand-cream">And How to Stay Ahead Without Burning Out</span>
