@@ -15,13 +15,13 @@ const config: Config = {
         brand: {
           purple: "#2E2557",
           "purple-light": "#3d3370",
-          cream: "#F3EBD8",
-          "cream-dark": "#E8D9BF",
+          cream: "#FBF8F3",
+          "cream-dark": "#F3EBD8",
           gold: "#C9A96E",
           "gold-light": "#e0b577",
           text: "#1a1535",
           muted: "#777",
-          "light-gray": "#f8f7f5",
+          "light-gray": "#FAF8F4",
         },
       },
       fontFamily: {

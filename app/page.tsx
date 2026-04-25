@@ -247,11 +247,6 @@ export default function Home() {
             <p className="text-center text-lg text-brand-text mb-12 max-w-2xl mx-auto">
               Most students choose the Accelerator for faster results, accountability and direct support.
             </p>
-            <div className="text-center mb-12 bg-brand-gold bg-opacity-15 py-4 px-6 rounded-lg border-2 border-brand-gold inline-block mx-auto block">
-              <p className="text-brand-purple font-semibold text-lg">
-                ⏰ Next cohort starts <span className="font-bold">Wednesday May 9th</span>
-              </p>
-            </div>
 
             <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-16">
               <table className="w-full table-fixed">
@@ -312,6 +307,31 @@ export default function Home() {
         <div id="pricing-cards">
           <PricingSection />
         </div>
+      </ScrollFade>
+
+      {/* Cohort Start Date */}
+      <ScrollFade delay={0.2}>
+        <section className="py-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block bg-gradient-to-r from-yellow-200 to-pink-200 rounded-full px-6 py-2 mb-4">
+                <p className="text-brand-purple font-semibold text-sm uppercase tracking-wide">Limited Spots Available</p>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-purple mb-4">
+                Next Cohort Starts Wednesday, May 9th
+              </h3>
+              <p className="text-lg text-brand-text mb-6">
+                Secure your spot before the programme fills up
+              </p>
+              <a
+                href="#pricing-cards"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-purple-light text-brand-cream font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-1"
+              >
+                Join Now →
+              </a>
+            </div>
+          </div>
+        </section>
       </ScrollFade>
 
       {/* Guarantee Section */}

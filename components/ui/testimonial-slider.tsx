@@ -18,29 +18,29 @@ const testimonials: Testimonial[] = [
     id: 1,
     quote: "I was falling behind and didn't know how to catch up. Now I have a clear system to follow!",
     name: 'Year 13 Student',
-    username: '@student',
-    avatar: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?fm=jpg&q=60&w=400&h=400&fit=crop',
+    username: '',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student1&backgroundColor=random',
   },
   {
     id: 2,
     quote: 'Dr Waleed broke everything down in a way that actually made sense. The session was really clear in helping me know what I should be doing. Thank you :)',
     name: 'Year 12 Student',
-    username: '@student',
-    avatar: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?fm=jpg&q=60&w=400&h=400&fit=crop',
+    username: '',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student2&backgroundColor=random',
   },
   {
     id: 3,
     quote: 'It was really structured and focused, which made it much easier to actually apply',
     name: 'Year 13 Student',
-    username: '@student',
-    avatar: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?fm=jpg&q=60&w=400&h=400&fit=crop',
+    username: '',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student3&backgroundColor=random',
   },
   {
     id: 4,
     quote: 'I found the tips and examples really helpful, and I could actually apply them to myself',
     name: 'Year 12 Student',
-    username: '@student',
-    avatar: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?fm=jpg&q=60&w=400&h=400&fit=crop',
+    username: '',
+    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student4&backgroundColor=random',
   },
 ]
 
@@ -277,7 +277,6 @@ const TestimonialSlider: React.FC = () => {
                             <h4 className="font-bold text-sm sm:text-base text-gray-900">
                               {testimonial.name}
                             </h4>
-                            <p className="text-gray-600 text-xs sm:text-sm">{testimonial.username}</p>
                           </div>
                         </div>
                       </div>
