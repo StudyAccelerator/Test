@@ -385,12 +385,12 @@ export default function SubjectAccelerators() {
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border-2 border-blue-400 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-semibold mb-4">Maths</div>
-                <h3 className="text-2xl font-bold text-brand-purple mb-2">Maths Accelerator</h3>
+              <div className="flex flex-col bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border-2 border-blue-400 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-semibold mb-4 self-start">Maths</div>
+                <h3 className="text-3xl font-serif font-bold text-brand-purple mb-2">Maths Accelerator</h3>
                 <p className="text-blue-600 font-semibold mb-2">Saturdays · 13:00–15:00</p>
                 <p className="text-brand-purple font-semibold mb-4">For students who need structure and consistent practice to improve</p>
-                <ul className="space-y-2 text-brand-text mb-6">
+                <ul className="space-y-2 text-brand-text mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500 font-bold">✓</span>
                     <span>Problem-solving and exam technique focus</span>
@@ -406,18 +406,18 @@ export default function SubjectAccelerators() {
                 </ul>
                 <a
                   href="#pricing"
-                  className="inline-block px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition"
+                  className="block w-full text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition"
                 >
                   Join Maths ➗
                 </a>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg border-2 border-green-500 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="inline-block px-3 py-1 bg-green-600 text-white rounded-full text-sm font-semibold mb-4">Biology</div>
-                <h3 className="text-2xl font-bold text-brand-purple mb-2">Biology Accelerator</h3>
+              <div className="flex flex-col bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg border-2 border-green-500 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <div className="inline-block px-3 py-1 bg-green-600 text-white rounded-full text-sm font-semibold mb-4 self-start">Biology</div>
+                <h3 className="text-3xl font-serif font-bold text-brand-purple mb-2">Biology Accelerator</h3>
                 <p className="text-green-700 font-semibold mb-2">Sundays · 10:00–12:00</p>
                 <p className="text-brand-purple font-semibold mb-4">Perfect for students struggling with application and exam questions</p>
-                <ul className="space-y-2 text-brand-text mb-6">
+                <ul className="space-y-2 text-brand-text mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>Exam question analysis and technique</span>
@@ -433,18 +433,18 @@ export default function SubjectAccelerators() {
                 </ul>
                 <a
                   href="#pricing"
-                  className="inline-block px-6 py-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition"
+                  className="block w-full text-center px-6 py-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition"
                 >
                   Join Biology 🧬
                 </a>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg border-2 border-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
-                <div className="inline-block px-3 py-1 bg-purple-600 text-white rounded-full text-sm font-semibold mb-4">Chemistry</div>
-                <h3 className="text-2xl font-bold text-brand-purple mb-2">Chemistry Accelerator</h3>
+              <div className="flex flex-col bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg border-2 border-purple-500 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
+                <div className="inline-block px-3 py-1 bg-purple-600 text-white rounded-full text-sm font-semibold mb-4 self-start">Chemistry</div>
+                <h3 className="text-3xl font-serif font-bold text-brand-purple mb-2">Chemistry Accelerator</h3>
                 <p className="text-purple-700 font-semibold mb-2">Sundays · 13:00–15:00</p>
                 <p className="text-brand-purple font-semibold mb-4">Ideal for students who understand content but lose marks in exams</p>
-                <ul className="space-y-2 text-brand-text mb-6">
+                <ul className="space-y-2 text-brand-text mb-6 flex-grow">
                   <li className="flex items-start gap-2">
                     <span className="text-purple-600 font-bold">✓</span>
                     <span>How to structure answers to score maximum marks</span>
@@ -460,7 +460,7 @@ export default function SubjectAccelerators() {
                 </ul>
                 <a
                   href="#pricing"
-                  className="inline-block px-6 py-3 bg-purple-600 text-white font-semibold rounded-md hover:bg-purple-700 transition"
+                  className="block w-full text-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-md hover:bg-purple-700 transition"
                 >
                   Join Chemistry 🧪
                 </a>
