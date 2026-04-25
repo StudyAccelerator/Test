@@ -381,20 +381,16 @@ export default function SubjectAccelerators() {
         <section id="subjects" className="py-16 px-4 bg-brand-light-gray">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              Choose your A-Level accelerator
+              Choose your A-Level Accelerator
             </h2>
 
             <div className="grid md:grid-cols-3 gap-8">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border-2 border-blue-400 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border-2 border-blue-400 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-semibold mb-4">Maths</div>
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Maths Accelerator</h3>
                 <p className="text-blue-600 font-semibold mb-2">Saturdays · 13:00–15:00</p>
                 <p className="text-brand-purple font-semibold mb-4">For students who need structure and consistent practice to improve</p>
                 <ul className="space-y-2 text-brand-text mb-6">
-                  <li className="flex items-start gap-2">
-                    <span className="text-blue-500 font-bold">✓</span>
-                    <span>Core A-level Maths explained step-by-step</span>
-                  </li>
                   <li className="flex items-start gap-2">
                     <span className="text-blue-500 font-bold">✓</span>
                     <span>Problem-solving and exam technique focus</span>
@@ -416,16 +412,12 @@ export default function SubjectAccelerators() {
                 </a>
               </div>
 
-              <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg border-2 border-green-500 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg border-2 border-green-500 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="inline-block px-3 py-1 bg-green-600 text-white rounded-full text-sm font-semibold mb-4">Biology</div>
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Biology Accelerator</h3>
                 <p className="text-green-700 font-semibold mb-2">Sundays · 10:00–12:00</p>
                 <p className="text-brand-purple font-semibold mb-4">Perfect for students struggling with application and exam questions</p>
                 <ul className="space-y-2 text-brand-text mb-6">
-                  <li className="flex items-start gap-2">
-                    <span className="text-green-600 font-bold">✓</span>
-                    <span>Cell biology, genetics, ecology and physiology mastery</span>
-                  </li>
                   <li className="flex items-start gap-2">
                     <span className="text-green-600 font-bold">✓</span>
                     <span>Exam question analysis and technique</span>
@@ -447,7 +439,7 @@ export default function SubjectAccelerators() {
                 </a>
               </div>
 
-              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg border-2 border-purple-500 shadow-lg hover:shadow-xl transition-shadow">
+              <div className="bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg border-2 border-purple-500 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="inline-block px-3 py-1 bg-purple-600 text-white rounded-full text-sm font-semibold mb-4">Chemistry</div>
                 <h3 className="text-2xl font-bold text-brand-purple mb-2">Chemistry Accelerator</h3>
                 <p className="text-purple-700 font-semibold mb-2">Sundays · 13:00–15:00</p>
@@ -455,11 +447,7 @@ export default function SubjectAccelerators() {
                 <ul className="space-y-2 text-brand-text mb-6">
                   <li className="flex items-start gap-2">
                     <span className="text-purple-600 font-bold">✓</span>
-                    <span>Organic, inorganic, and physical chemistry clarity</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-600 font-bold">✓</span>
-                    <span>Mechanism explanations and exam technique</span>
+                    <span>How to structure answers to score maximum marks</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-purple-600 font-bold">✓</span>
