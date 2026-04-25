@@ -3,7 +3,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
-import Image from 'next/image'
 
 interface Testimonial {
   id: number
@@ -250,15 +249,12 @@ const TestimonialSlider: React.FC = () => {
                       <div className="mt-auto pt-3 sm:pt-4 border-t border-gray-100">
                         <div className="flex items-center">
                           <div className="relative flex-shrink-0">
-                            <Image
+                            <img
                               width={48}
                               height={48}
                               src={testimonial.avatar}
                               alt={testimonial.name}
                               className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-white shadow-sm"
-                              onError={(e) => {
-                                ;(e.target as HTMLImageElement).src = '/api/placeholder/48/48'
-                              }}
                             />
                             <motion.div
                               className="absolute inset-0 rounded-full bg-brand-purple/20"

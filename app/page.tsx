@@ -302,13 +302,6 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* Pricing Section (detailed cards) */}
-      <ScrollFade delay={0.2}>
-        <div id="pricing-cards">
-          <PricingSection />
-        </div>
-      </ScrollFade>
-
       {/* Cohort Start Date */}
       <ScrollFade delay={0.2}>
         <section className="py-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
@@ -332,6 +325,13 @@ export default function Home() {
             </div>
           </div>
         </section>
+      </ScrollFade>
+
+      {/* Pricing Section (detailed cards) */}
+      <ScrollFade delay={0.2}>
+        <div id="pricing-cards">
+          <PricingSection />
+        </div>
       </ScrollFade>
 
       {/* Guarantee Section */}
