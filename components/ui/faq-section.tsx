@@ -8,7 +8,7 @@ const faqs = [
     answer: (
       <>
         <p className="mb-4">The programmes require just <strong>2-3 hours per week of your time</strong>. Yes, that&apos;s an investment upfront. But here&apos;s the reality: those 2-3 hours will save you <strong>weeks and months</strong> over your study journey.</p>
-        <p className="mb-4">Why? Because you&apos;ll stop wasting time on ineffective study methods. You&apos;ll revise smarter, not harder. Students who use proper systems complete the same work in half the time and retain it better. It&apos;s not about adding more work — it&apos;s about working strategically.</p>
+        <p className="mb-4">Why? Because you&apos;ll stop wasting time on ineffective study methods. You&apos;ll revise smarter, not harder. Students who use proper systems complete the same work in half the time and retain it better. It&apos;s not about adding more work, it&apos;s about working strategically.</p>
         <p className="text-brand-gold font-semibold">👉 This replaces wasted study time, it doesn&apos;t add more.</p>
       </>
     ),
@@ -18,13 +18,13 @@ const faqs = [
     answer: (
       <>
         <p className="mb-4 text-brand-gold font-semibold">Tutors help you understand content. This programme helps you manage everything that determines your results.</p>
-        <p className="mb-4">Most 1-to-1 tutoring focuses on going through content — explaining what you need to know. That&apos;s not where students actually struggle.</p>
+        <p className="mb-4">Most 1-to-1 tutoring focuses on going through content, explaining what you need to know. That&apos;s not where students actually struggle.</p>
         <p className="mb-4">The real gap is in <strong>study technique</strong>. Students don&apos;t know how to prioritise effectively, manage their time, stay focused, or revise efficiently. These struggles apply to every subject.</p>
-        <p className="mb-4">This programme teaches you <strong>how to become a better student</strong> — systems that work across all your subjects, now and for life. You&apos;ll learn to:</p>
+        <p className="mb-4">This programme teaches you <strong>how to become a better student</strong>, systems that work across all your subjects, now and for life. You&apos;ll learn to:</p>
         <ul className="list-disc ml-8 mb-4 space-y-1">
           <li>Identify which topics matter most (80/20 principle)</li>
           <li>Study at optimal times (peak energy blocks)</li>
-          <li>Revise that actually sticks (active recall, spaced repetition)</li>
+          <li>Revision that actually sticks (active recall, spaced repetition)</li>
           <li>Overcome procrastination and burnout</li>
         </ul>
         <p>Combined, these systems elevate your performance across all A-Levels.</p>
@@ -67,7 +67,7 @@ const faqs = [
     answer: (
       <>
         <p className="mb-4"><strong>Yes.</strong> The study systems work for any subject. You&apos;re not learning content; you&apos;re learning the <strong>meta-skills</strong> of how to study effectively.</p>
-        <p className="mb-4">Whether it&apos;s Mathematics, Biology, History, or Languages — the principles of prioritisation, active recall, spaced repetition, and time management apply universally.</p>
+        <p className="mb-4">Whether it&apos;s Mathematics, Biology, History, or Languages, the principles of prioritisation, active recall, spaced repetition, and time management apply universally.</p>
         <p>In the Top 1% Mentorship tier, you also get subject-specific support for your particular A-Levels.</p>
       </>
     ),
@@ -86,7 +86,7 @@ const faqs = [
     answer: (
       <>
         <p className="mb-4 text-brand-gold font-semibold">👉 Next cohort starts Wednesday May 6th.</p>
-        <p>The Top 1% Mentorship is by appointment — we schedule 1:1s based on your availability.</p>
+        <p>The Top 1% Mentorship is by appointment, we schedule 1:1s based on your availability.</p>
       </>
     ),
   },
@@ -103,7 +103,8 @@ const faqs = [
     question: "What happens if I fall behind during the programme?",
     answer: (
       <>
-        <p>The programme is designed to help you reset quickly. You will learn how to simplify your workload, prioritise what matters most and get back on track without trying to catch up on everything at once.</p>
+        <p className="mb-4">The programme is designed to help you reset quickly. You will learn how to simplify your workload, prioritise what matters most and get back on track without trying to catch up on everything at once.</p>
+        <p className="text-brand-gold font-semibold">👉 All sessions are recorded, so you can catch up any time that works for you.</p>
       </>
     ),
   },
@@ -113,7 +114,7 @@ export default function FaqSection() {
   const [openIndex, setOpenIndex] = useState<number | null>(null)
 
   return (
-    <section id="faq" className="py-16 px-4 bg-brand-light-gray">
+    <section id="faq" className="py-16 px-4 bg-brand-cream">
       <div className="max-w-4xl mx-auto">
         <h2 className="text-3xl md:text-4xl text-brand-purple text-center mb-12 font-serif">
           Frequently Asked Questions

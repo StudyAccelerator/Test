@@ -16,7 +16,7 @@ export default function PricingSection() {
         'Fortnightly group Q&A',
       ],
       cta: 'Join Study Series',
-      ctaLink: 'STRIPE_LINK_SERIES',
+      ctaLink: 'https://buy.stripe.com/9B6fZid5Egyq6fwazac3m03',
       popular: false,
       highlight: false,
       extraNote: '',
@@ -25,38 +25,42 @@ export default function PricingSection() {
       name: 'Study Accelerator',
       tagline: 'Implement the System',
       price: '£499',
-      description: 'Best for: Students who want support, accountability, and faster progress',
+      description: 'Best for: Students who want results, not just information',
+      highlightLine: 'Includes full 12-week implementation support',
+      subLine: 'Not just learning the system — actually applying it with guidance and feedback',
       features: [
-        'Everything in Study Series, plus:',
-        'Weekly accountability sessions',
+        '12 weekly live sessions — 3 full months of support',
+        'Full Top 1% Study System',
+        'Worksheets + templates',
+        'Fortnightly group Q&A',
         'Personalised guidance',
         'Direct feedback on your progress',
         'Community support',
       ],
       cta: 'Join Study Accelerator',
-      ctaLink: 'STRIPE_LINK_ACCELERATOR',
+      ctaLink: 'https://buy.stripe.com/bJe14o8Po1DweM27mYc3m04',
       popular: true,
       highlight: true,
-      extraNote: 'Best for students who want results, not just information.',
-      badge: 'Best for Accountability',
+      extraNote: '',
+      badge: 'Most Popular',
     },
     {
       name: 'Top 1% Mentorship',
       tagline: 'Optimise and Accelerate',
       price: '£2,000/year',
-      description: 'For serious students aiming for top grades and competitive universities',
+      description: 'Best for: Serious students aiming for top grades and competitive universities',
       features: [
         'Personalised performance plan',
-        'Bi-weekly follow-up calls',
+        'Fortnightly calls, year-round',
         'Monthly performance reviews',
         'Priority support',
         'Full access to all systems',
       ],
       cta: 'Book Free Consultation',
-      ctaLink: 'ZOOM_BOOKING_LINK',
+      ctaLink: 'https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting',
       popular: false,
       highlight: true,
-      extraNote: '',
+      extraNote: 'Invite only · limited to 5 spaces',
     },
   ]
 
@@ -78,8 +82,8 @@ export default function PricingSection() {
                 } ${tier.popular ? 'md:scale-105 md:-mt-8' : ''} p-10`}
               >
                 {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                    <span className="bg-brand-gold text-brand-purple px-6 py-2 rounded-full text-sm font-bold shadow-md">
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-max">
+                    <span className="bg-brand-gold text-brand-purple px-6 py-2 rounded-full text-sm font-bold shadow-md whitespace-nowrap">
                       {tier.badge || 'Most Popular'}
                     </span>
                   </div>
@@ -94,7 +98,16 @@ export default function PricingSection() {
                 <div className="text-4xl font-bold text-brand-gold my-4 text-center">
                   {tier.price}
                 </div>
-                <p className="text-sm text-brand-text mb-6 opacity-90 text-center font-medium">{tier.description}</p>
+                <p className="text-sm text-brand-text mb-4 opacity-90 text-center font-bold">{tier.description}</p>
+
+                {tier.highlightLine && (
+                  <div className="mb-6 mx-auto bg-brand-gold/15 border border-brand-gold/40 rounded-lg p-3 text-center">
+                    <p className="text-sm font-bold text-brand-purple">{tier.highlightLine}</p>
+                    {tier.subLine && (
+                      <p className="text-xs text-brand-text mt-1 italic">{tier.subLine}</p>
+                    )}
+                  </div>
+                )}
 
                 <ul className="space-y-3 mb-6 flex-grow">
                   {tier.features.map((feature, i) => (
@@ -108,7 +121,7 @@ export default function PricingSection() {
                 </ul>
 
                 {tier.extraNote && (
-                  <p className="text-sm text-brand-purple italic font-semibold mb-6 text-center bg-brand-gold bg-opacity-20 p-3 rounded">
+                  <p className="text-sm text-brand-gold italic font-semibold mb-6 text-center">
                     {tier.extraNote}
                   </p>
                 )}
@@ -118,7 +131,7 @@ export default function PricingSection() {
                   className={`block text-center w-full py-4 px-6 font-semibold rounded-lg transition-all transform hover:-translate-y-1 ${
                     tier.highlight
                       ? 'bg-brand-gold text-brand-purple hover:bg-brand-gold-light shadow-lg hover:shadow-xl'
-                      : 'bg-brand-cream-dark text-brand-purple hover:bg-brand-gold shadow-md hover:shadow-lg'
+                      : 'bg-brand-gold bg-opacity-70 text-brand-purple hover:bg-brand-gold shadow-md hover:shadow-lg'
                   }`}
                 >
                   {tier.cta}

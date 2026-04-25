@@ -7,10 +7,12 @@
   --card-foreground: 0 0% 3.6%;
   --purple: #2E2557;
   --purple-light: #3d3370;
-  --cream: #F3EBD8;
-  --cream-dark: #E8D9BF;
+  --cream: #FBF8F3;
+  --cream-dark: #F3EBD8;
   --gold: #C9A96E;
   --text: #1a1535;
+  --primary: #2E2557;
+  --primary-light: #C9A96E;
 }
 
 html {

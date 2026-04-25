@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/header'
 import PricingSection from '@/components/ui/pricing-section'
 import FaqSection from '@/components/ui/faq-section'
+import TestimonialSlider from '@/components/ui/testimonial-slider'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 
 export const metadata = {
@@ -9,19 +10,23 @@ export const metadata = {
   description: 'Build a system to stay on top of your A-Level workload and improve your grades without wasting time.',
 }
 
+const Divider = () => (
+  <div aria-hidden="true" className="h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent" />
+)
+
 export default function Home() {
   return (
     <main>
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-24 px-8 text-center">
+      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-24 px-8 text-center">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-8 font-bold leading-tight">
             Why Most A-Level Students Fall Behind <span className="text-brand-cream">And How to Stay Ahead Without Burning Out</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Build a system to stay on top of your workload and improve your grades without wasting time.
+            Build a system to stay on top of your workload, improve your grades, and stop feeling behind!
           </p>
           <a
             href="#tiers"
@@ -34,60 +39,62 @@ export default function Home() {
 
       {/* Problem Statement */}
       <ScrollFade>
-        <section className="py-20 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              The Real Challenge Isn&apos;t the Content. It&apos;s Managing Everything.
+              The Real Challenge Isn&apos;t the Content, It&apos;s Managing Everything
             </h2>
-            <div className="space-y-6 text-lg text-brand-text">
+            <div className="space-y-6 text-lg text-brand-text text-center">
               <p>You are juggling lessons, homework, revision, exams and university applications all at once.</p>
               <p>Most students respond by working harder. But that is exactly why they stay stuck.</p>
-              <p className="text-brand-gold font-semibold text-center pt-4">Most students are not struggling because they are lazy. They are struggling because they are using the wrong system.</p>
+              <p className="text-brand-gold font-semibold pt-4">You&apos;re not struggling because you&apos;re lazy. You&apos;re struggling because you&apos;re using the wrong system.</p>
             </div>
           </div>
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Solution Section - What Top Students Do Differently */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-16">
               What Top Students Do Differently
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-12 mb-12">
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-brand-purple mb-6">Top students do not:</h3>
+            <div className="grid md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                <h3 className="text-2xl font-bold text-brand-purple mb-6">Most students:</h3>
                 <ul className="space-y-3 text-lg text-brand-text">
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold">✗</span>
-                    <span>Try to do everything</span>
+                    <span className="text-red-500 font-bold text-xl">✗</span>
+                    <span>Try to do everything at once</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold">✗</span>
-                    <span>Study longer just to feel productive</span>
+                    <span className="text-red-500 font-bold text-xl">✗</span>
+                    <span>Study for hours and see no improvement</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold">✗</span>
-                    <span>Rely on motivation</span>
+                    <span className="text-red-500 font-bold text-xl">✗</span>
+                    <span>Rely on willpower and burn out</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="space-y-6">
-                <h3 className="text-2xl font-bold text-brand-purple mb-6">They:</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
+                <h3 className="text-2xl font-bold text-brand-purple mb-6">Top students:</h3>
                 <ul className="space-y-3 text-lg text-brand-text">
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold">✓</span>
-                    <span>Focus on high-impact work</span>
+                    <span className="text-green-600 font-bold text-xl">✓</span>
+                    <span>Focus only on what moves the needle</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold">✓</span>
-                    <span>Follow a clear system</span>
+                    <span className="text-green-600 font-bold text-xl">✓</span>
+                    <span>Follow a system, not a feeling</span>
                   </li>
                   <li className="flex items-start gap-3">
-                    <span className="text-brand-gold font-bold">✓</span>
+                    <span className="text-green-600 font-bold text-xl">✓</span>
                     <span>Stay consistent without burning out</span>
                   </li>
                 </ul>
@@ -101,17 +108,23 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Programme Breakdown - 4 Weeks */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-brand-cream">
           <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              What You&apos;ll Learn Over 4 Weeks
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
+              The System You&apos;ll Learn in the First 4 Weeks
             </h2>
+            <p className="text-center text-lg text-brand-text mb-12 max-w-3xl mx-auto italic">
+              This is the foundation. The Accelerator continues with 8 additional weeks of implementation, feedback, and optimisation.
+            </p>
 
             <div className="grid md:grid-cols-2 gap-6">
-              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 1: Take Control of Your Workload</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 1</h3>
+                <p className="text-brand-gold font-bold mb-4">Take Control of Your Workload</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -128,8 +141,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 2: Stop Procrastinating and Start Executing</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 2</h3>
+                <p className="text-brand-gold font-bold mb-4">Stop Procrastinating and Start Executing</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -146,8 +160,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 3: Handle a Heavy Workload Without Burning Out</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 3</h3>
+                <p className="text-brand-gold font-bold mb-4">Handle a Heavy Workload Without Burning Out</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -164,8 +179,9 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold">
-                <h3 className="text-xl font-bold text-brand-purple mb-4">Week 4: Revise and Improve Like a Top Student</h3>
+              <div className="bg-white p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Week 4</h3>
+                <p className="text-brand-gold font-bold mb-4">Revise and Improve Like a Top Student</p>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold">✓</span>
@@ -186,6 +202,87 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
+      {/* Accelerator 12-Week Breakdown */}
+      <ScrollFade delay={0.2}>
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
+              What Happens Inside the Study Accelerator (12 Weeks)
+            </h2>
+            <p className="text-center text-lg text-brand-text mb-12 max-w-3xl mx-auto italic">
+              The first 4 weeks build your system. The next 8 weeks make sure it actually works.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <p className="text-sm font-bold text-brand-gold uppercase tracking-wide mb-1">Phase 1 · Weeks 1–4</p>
+                <h3 className="text-2xl font-bold text-brand-purple mb-4">Build your system</h3>
+                <ul className="space-y-3 text-brand-text">
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Learn how to manage your workload</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Create a structured weekly plan</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Understand how to revise effectively</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <p className="text-sm font-bold text-brand-gold uppercase tracking-wide mb-1">Phase 2 · Weeks 5–8</p>
+                <h3 className="text-2xl font-bold text-brand-purple mb-4">Fix what&apos;s not working</h3>
+                <ul className="space-y-3 text-brand-text">
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Identify why you&apos;re not improving</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Fix inefficient revision methods</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Learn what to prioritise and what to cut</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <p className="text-sm font-bold text-brand-gold uppercase tracking-wide mb-1">Phase 3 · Weeks 9–12</p>
+                <h3 className="text-2xl font-bold text-brand-purple mb-4">Optimise your performance</h3>
+                <ul className="space-y-3 text-brand-text">
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Improve how you approach exam questions</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Learn from mistakes properly</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Refine your system so you keep improving</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <p className="text-center text-lg text-brand-purple font-bold mt-12 max-w-3xl mx-auto">
+              This is where most students start seeing real results.
+            </p>
+          </div>
+        </section>
+      </ScrollFade>
+
+      <Divider />
+
       {/* Why Trust Us - With Image */}
       <ScrollFade delay={0.2}>
         <section className="py-20 px-4 bg-white">
@@ -194,77 +291,51 @@ export default function Home() {
               Why Trust Us
             </h2>
 
-            <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-              <div className="flex justify-center">
-                <div className="w-full max-w-xs">
+            <div className="flex flex-col md:flex-row gap-6 items-center justify-center mb-16">
+              <div className="flex-shrink-0 flex flex-col items-center">
+                <div
+                  className="w-80 h-80 overflow-hidden rounded-2xl"
+                  style={{boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)'}}
+                >
                   <Image
-                    src="/Graduation.png"
+                    src="/graduation.jpg"
                     alt="Dr Waleed Ahmad"
-                    width={300}
-                    height={400}
-                    className="rounded-lg shadow-lg w-full h-auto"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                    style={{objectPosition: 'center 45%', transform: 'scale(1.25)', transformOrigin: 'center 45%'}}
                     unoptimized
                   />
                 </div>
+                <p className="mt-3 text-sm italic text-brand-gold font-semibold">Dr. Waleed Ahmad, MBBS</p>
               </div>
 
-              <div className="space-y-6">
-                <p className="text-lg text-brand-text leading-relaxed">
-                  I have worked with over 100 students to help them improve their grades, manage their workload and build study systems that actually work.
-                </p>
-                <p className="text-lg text-brand-text leading-relaxed">
-                  As a medical doctor and former top-performing A-Level student, I understand what it takes to perform under pressure without burning out.
-                </p>
-                <p className="text-lg text-brand-text leading-relaxed">
-                  I built these systems myself while going through A-Levels, and now I teach students how to use them across every subject.
-                </p>
-              </div>
-            </div>
-
-            <h3 className="text-2xl text-brand-purple font-serif text-center mb-8">
-              What Students Say
-            </h3>
-            <div className="grid md:grid-cols-3 gap-8">
-              {[
-                {
-                  before: 'Was falling behind and unsure how to catch up',
-                  after: 'Now has a clear system that works',
-                  result: 'Caught up with her workload and improved her grades'
-                },
-                {
-                  before: 'Studied for hours but saw no improvement',
-                  after: 'Learned to study strategically',
-                  result: 'Improved grades while studying less'
-                },
-                {
-                  before: 'Felt overwhelmed and burnt out',
-                  after: 'Now has a sustainable approach',
-                  result: 'This helped me improve without burning out'
-                },
-              ].map((testimonial, i) => (
-                <div key={i} className="bg-brand-light-gray p-8 rounded-lg shadow-sm">
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-brand-gold mb-2">Before</p>
-                    <p className="text-brand-text">{testimonial.before}</p>
-                  </div>
-                  <div className="mb-4">
-                    <p className="text-sm font-semibold text-brand-gold mb-2">After</p>
-                    <p className="text-brand-text">{testimonial.after}</p>
-                  </div>
-                  <div>
-                    <p className="text-sm font-semibold text-brand-gold mb-2">Result</p>
-                    <p className="text-brand-text font-semibold">{testimonial.result}</p>
-                  </div>
+              <div className="border-2 border-brand-gold rounded-xl p-6 bg-white max-w-md">
+                <div className="space-y-4">
+                  <p className="text-lg text-brand-text leading-relaxed">
+                    As a doctor and former top-performing A-Level student, I have worked with over 1,000 students to help them improve their grades, manage their workload, and build study systems that actually work.
+                  </p>
+                  <p className="text-lg text-brand-text leading-relaxed">
+                    I built these systems myself while going through A-Levels, and I know first-hand what it takes to perform under pressure without burning out. Now I teach students how to use them across every subject.
+                  </p>
                 </div>
-              ))}
+              </div>
             </div>
+
           </div>
         </section>
       </ScrollFade>
 
+      <Divider />
+
+      {/* Testimonials Slider */}
+      <TestimonialSlider />
+
+      <Divider />
+
       {/* Tier Comparison Table */}
       <ScrollFade delay={0.2}>
-        <section id="tiers" className="py-20 px-4 bg-brand-light-gray">
+        <section id="tiers" className="pt-20 pb-6 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
               Choose Your Level of Support
@@ -273,7 +344,7 @@ export default function Home() {
               Most students choose the Accelerator for faster results, accountability and direct support.
             </p>
 
-            <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-16">
+            <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-4">
               <table className="w-full table-fixed">
                 <thead>
                   <tr>
@@ -299,8 +370,8 @@ export default function Home() {
                   <tr className="border-b border-brand-cream-dark">
                     <td className="p-4 font-semibold text-brand-purple w-1/5">Live Sessions</td>
                     <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> 4 + weekly accountability</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Bi-weekly calls</td>
+                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> 12 sessions + weekly accountability</td>
+                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fortnightly calls, year-round</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
                     <td className="p-4 font-semibold text-brand-purple w-1/5">Group Q&amp;A</td>
@@ -312,7 +383,7 @@ export default function Home() {
                     <td className="p-4 font-semibold text-brand-purple w-1/5">1:1 Support</td>
                     <td className="p-4 w-1/5"></td>
                     <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Personalised guidance</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Bi-weekly calls</td>
+                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> 24/7 access to Dr. Waleed</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
                     <td className="p-4 font-semibold text-brand-purple w-1/5">Personal Plan</td>
@@ -327,50 +398,87 @@ export default function Home() {
         </section>
       </ScrollFade>
 
+      {/* Cohort Start Date — seamlessly continues the gradient section above */}
+      <ScrollFade delay={0.2}>
+        <section className="pt-6 pb-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center">
+              <div className="inline-block bg-gradient-to-r from-yellow-200 to-pink-200 rounded-full px-6 py-2 mb-4">
+                <p className="text-brand-purple font-semibold text-sm uppercase tracking-wide">Limited Spots Available</p>
+              </div>
+              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-purple mb-4">
+                Next Cohort Starts Wednesday, May 6th
+              </h3>
+              <p className="text-lg text-brand-text mb-6">
+                Secure your spot before the programme fills up
+              </p>
+              <a
+                href="#pricing-cards"
+                className="inline-block px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-purple-light text-brand-cream font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-1"
+              >
+                Join Now →
+              </a>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
       {/* Pricing Section (detailed cards) */}
       <ScrollFade delay={0.2}>
-        <div>
+        <div id="pricing-cards">
+          <div className="bg-brand-purple pt-12 px-4">
+            <div className="max-w-4xl mx-auto text-center">
+              <p className="text-xl md:text-2xl text-brand-cream font-serif">
+                <span className="text-brand-gold font-bold">Study Series</span> = Learn the system
+                <span className="mx-3 text-brand-gold opacity-50">|</span>
+                <span className="text-brand-gold font-bold">Study Accelerator</span> = Apply it and see results
+              </p>
+            </div>
+          </div>
           <PricingSection />
         </div>
       </ScrollFade>
 
+      <Divider />
+
       {/* Guarantee Section */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-2xl mx-auto">
-            <div className="bg-white p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
+            <div className="bg-brand-cream p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
               <div className="text-5xl mb-6">🛡️</div>
-              <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
+              <h2 className="text-3xl md:text-4xl text-brand-purple font-serif font-bold mb-6">
                 Try Your First Session Risk-Free
               </h2>
               <p className="text-lg text-brand-text">
-                If the first session is not valuable, you can request a full refund.
+                If the first session is not valuable, you can request a full refund <span className="italic text-brand-text opacity-75">(no questions asked)</span>.
               </p>
             </div>
           </div>
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* FAQ Section */}
       <ScrollFade delay={0.2}>
         <FaqSection />
       </ScrollFade>
 
+      <Divider />
+
       {/* Final CTA Section */}
       <ScrollFade delay={0.2}>
         <section className="py-24 px-4 bg-white text-center">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
-              Stop Falling Behind. Fix Your System Now.
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-8">
+              Stop Falling Behind, Fix Your Systems Now!
             </h2>
-            <p className="text-lg text-brand-text mb-4">
-              The earlier you fix this, the easier A-Levels become.
-            </p>
-            <p className="text-lg text-brand-text mb-12">
-              The longer you wait, the harder it is to catch up.
+            <p className="text-base italic text-brand-text mb-8 leading-relaxed">
+              The earlier you fix this, the easier A-Levels become. The longer you wait, the harder it is to catch up.
             </p>
             <a
-              href="#tiers"
+              href="#pricing-cards"
               className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
             >
               Join the Programme
@@ -380,29 +488,34 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream pt-8 px-8 text-center pb-8">
-        <div className="max-w-3xl mx-auto">
-          <a href="#top" className="block">
-            <Image
-              src="/logo-header.png?v=2"
-              alt="A-Level Accelerators"
-              width={400}
-              height={400}
-              className="h-96 w-auto mx-auto -my-16 hover:opacity-80 transition"
-              unoptimized
-            />
-          </a>
-          <div className="py-6">
-            <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
-            <div className="flex flex-wrap justify-center items-center gap-6 mb-3 text-sm">
-              <a href="mailto:contact@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
-              <a href="ZOOM_BOOKING_LINK" className="text-brand-gold hover:text-white transition">Book a Call</a>
-              <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-8 px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
+            <a href="/#hero" className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center hover:opacity-80 transition">
+              <Image
+                src="/logo-header.png?v=2"
+                alt="A-Level Accelerators"
+                width={400}
+                height={400}
+                className="absolute h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                unoptimized
+              />
+            </a>
+            <div className="hidden md:block w-px h-36 bg-brand-gold opacity-40 flex-shrink-0"></div>
+            <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
+            <div className="md:flex-1 text-center">
+              <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
+              <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
+                <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
+                <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
+                <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition text-center whitespace-nowrap">Free Revision Tracker</a>
+              </div>
             </div>
-            <p className="opacity-80 text-xs">
-              &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
-            </p>
           </div>
+          <div className="h-px bg-brand-gold opacity-20 my-4"></div>
+          <p className="text-center text-xs opacity-60">
+            &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
+          </p>
         </div>
       </footer>
     </main>
