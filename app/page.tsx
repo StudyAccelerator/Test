@@ -397,26 +397,32 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-10 px-8">
-        <div className="max-w-5xl mx-auto flex flex-col items-center gap-5 text-center">
-          <Image
-            src="/logo-header.png?v=2"
-            alt="A-Level Accelerators"
-            width={400}
-            height={160}
-            className="h-48 w-auto"
-            unoptimized
-          />
-          <div className="h-px w-40 bg-brand-gold opacity-30"></div>
-          <div className="w-full">
-            <h3 className="text-base text-brand-gold font-serif mb-3">Get in Touch</h3>
-            <div className="flex flex-wrap justify-center items-center gap-12 text-sm">
-              <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
-              <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition">Book a Call</a>
-              <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-8 px-8">
+        <div className="max-w-5xl mx-auto">
+          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
+            <div className="flex justify-center md:justify-start md:flex-1">
+              <Image
+                src="/logo-header.png?v=2"
+                alt="A-Level Accelerators"
+                width={400}
+                height={160}
+                className="h-36 w-auto"
+                unoptimized
+              />
+            </div>
+            <div className="hidden md:block w-px h-28 bg-brand-gold opacity-40 flex-shrink-0"></div>
+            <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
+            <div className="md:flex-1 text-center">
+              <h3 className="text-base text-brand-gold font-serif mb-4">Get in Touch</h3>
+              <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
+                <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
+                <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
+                <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition text-center whitespace-nowrap">Free Revision Tracker</a>
+              </div>
             </div>
           </div>
-          <p className="opacity-60 text-xs">
+          <div className="h-px bg-brand-gold opacity-20 my-4"></div>
+          <p className="text-center text-xs opacity-60">
             &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
           </p>
         </div>
