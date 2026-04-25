@@ -593,29 +593,28 @@ export default function SubjectAccelerators() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream pt-8 px-8 text-center pb-8">
-        <div className="max-w-3xl mx-auto">
-          <div className="block">
-            <Image
-              src="/logo-header.png?v=2"
-              alt="A-Level Accelerators"
-              width={400}
-              height={400}
-              className="h-96 w-auto mx-auto -my-16"
-              unoptimized
-            />
-          </div>
-          <div className="py-6">
-            <h3 className="text-lg text-brand-gold font-serif mb-4 text-center">Get in Touch</h3>
-            <div className="flex flex-wrap justify-center items-center gap-6 mb-3 text-sm">
+      <footer id="contact" className="bg-brand-purple text-brand-cream py-10 px-8">
+        <div className="max-w-5xl mx-auto flex flex-col items-center gap-5 text-center">
+          <Image
+            src="/logo-header.png?v=2"
+            alt="A-Level Accelerators"
+            width={200}
+            height={80}
+            className="h-20 w-auto"
+            unoptimized
+          />
+          <div className="h-px w-40 bg-brand-gold opacity-30"></div>
+          <div>
+            <h3 className="text-base text-brand-gold font-serif mb-3">Get in Touch</h3>
+            <div className="flex flex-wrap justify-center items-center gap-8 text-sm">
               <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
               <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition">Book a Call</a>
-              <a href="/revision-tracker.html" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+              <a href="/revision-tracker.html" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
             </div>
-            <p className="opacity-80 text-xs">
-              &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
-            </p>
           </div>
+          <p className="opacity-60 text-xs">
+            &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
+          </p>
         </div>
       </footer>
     </main>
