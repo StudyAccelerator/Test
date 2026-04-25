@@ -615,18 +615,18 @@ export default function SubjectAccelerators() {
           <Image
             src="/logo-header.png?v=2"
             alt="A-Level Accelerators"
-            width={200}
-            height={80}
-            className="h-32 w-auto"
+            width={400}
+            height={160}
+            className="h-48 w-auto"
             unoptimized
           />
           <div className="h-px w-40 bg-brand-gold opacity-30"></div>
           <div className="w-full">
             <h3 className="text-base text-brand-gold font-serif mb-3">Get in Touch</h3>
-            <div className="flex flex-wrap justify-end items-center gap-8 text-sm">
+            <div className="flex flex-wrap justify-center items-center gap-12 text-sm">
               <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
               <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition">Book a Call</a>
-              <a href="/revision-tracker.html" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+              <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
             </div>
           </div>
           <p className="opacity-60 text-xs">
