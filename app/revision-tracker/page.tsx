@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect } from 'react'
+import Header from '@/components/header'
 
 const css = `
 :root{
@@ -27,10 +28,7 @@ html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--text);min-height:100vh;line-height:1.5}
 h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
 .logo{height:45px;width:auto;margin-bottom:1rem}
-.site-header{background:var(--purple);color:var(--cream);padding:2.5rem 1.5rem 2rem;text-align:center}
 .badge{display:inline-block;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:0.3rem 0.9rem;border-radius:20px;margin-bottom:0.9rem}
-.site-header h1{font-size:2rem;letter-spacing:0.03em;margin-bottom:0.5rem}
-.site-header p{font-size:0.9rem;opacity:0.75;font-style:italic}
 .container{max-width:940px;margin:0 auto;padding:2rem 1.2rem 3rem}
 .intro{background:var(--purple);color:var(--cream);border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.5rem;font-size:0.9rem;line-height:1.65}
 .intro strong{display:block;margin-bottom:0.35rem;font-size:1rem;color:var(--gold)}
@@ -197,35 +195,23 @@ const js = `
     return {name,wakeTime,sleepTime,subjects,commitments};
   }
   function buildDaySlots(dayIndex,state,sortedSubjects){
-    const DEEP=90,RECALL=60,REVIEW=50,BRK=15,LUNCH=60;
+    const DEEP=90,RECALL=60,REVIEW=30,BRK=15,LUNCH=60;
     const sleepMin=toMinutes(state.sleepTime);const wakeMin=toMinutes(state.wakeTime);
-    let CUTOFF;if(sleepMin>wakeMin){CUTOFF=sleepMin-30}else{CUTOFF=(1440-wakeMin)+sleepMin-30}
-    const EVENING=toMinutes('18:00');const LUNCH_START=toMinutes('12:00');
+    let CUTOFF;if(sleepMin>wakeMin){CUTOFF=sleepMin}else{CUTOFF=(1440-wakeMin)+sleepMin}
+    const LUNCH_START=toMinutes('12:00');const LUNCH_END=toMinutes('13:00');
     const slots=[];const dayName=DAYS[dayIndex];
     const todayCommits=state.commitments.filter(c=>c.day===dayName).sort((a,b)=>a.startMin-b.startMin);
-    let current=wakeMin+60;if(isNaN(current))current=toMinutes('08:00');
-    let lunchTaken=false,deepCount=0,recallCount=0,reviewCount=0,eveningDone=false;
-    const added=new Set();let guard=0;
-    function nextSubj(offset){const n=sortedSubjects.length;return sortedSubjects[(dayIndex+offset)%n]}
-    function subjSub(s){const topics=s.topics?s.topics.split('|'):[];return topics.length>0?topics.slice(0,2).join(', '):'Deep focus — no distractions'}
-    function recallSub(s){const topics=s.topics?s.topics.split('|'):[];return topics.length>0?'Past papers: '+topics.slice(0,2).join(', '):'Past papers · blurting · Anki'}
+    let current=wakeMin;const topicsWithDeepWork=new Set();const added=new Set();let subjIndex=0;
     function getSubjColor(name){return getSubjColorClass(name)}
-    while(current<CUTOFF&&guard<60){
-      guard++;
-      const active=todayCommits.find(c=>c.startMin<=current&&c.endMin>current&&!added.has(c));
-      if(active){slots.push({type:'fixed',time:fmtTimeRange(active.startMin,active.endMin),label:active.label,sub:'',colorClass:''});added.add(active);current=active.endMin;continue}
-      const pastActive=todayCommits.find(c=>c.startMin<=current&&c.endMin>current&&added.has(c));
-      if(pastActive){current=pastActive.endMin;continue}
-      const upcoming=todayCommits.find(c=>c.startMin>current&&c.startMin<current+DEEP&&!added.has(c));
-      if(upcoming){if(upcoming.startMin-current>=20){slots.push({type:'free',time:fmtTimeRange(current,upcoming.startMin),label:'Free / Buffer',sub:'',colorClass:''})}current=upcoming.startMin;continue}
-      if(!lunchTaken&&current>=LUNCH_START&&current<EVENING){const lunchEnd=current+LUNCH;const conflict=todayCommits.find(c=>c.startMin<lunchEnd&&c.endMin>current);if(!conflict){slots.push({type:'lunch',time:fmtTimeRange(current,lunchEnd),label:'Lunch Break',sub:'Step away from the desk',colorClass:''});current=lunchEnd;lunchTaken=true;continue}else{lunchTaken=true}}
-      if(current+DEEP>CUTOFF)break;
-      if(current>=EVENING){if(eveningDone)break;const subj=nextSubj(0);const dur=REVIEW;slots.push({type:'review',time:fmtTimeRange(current,current+dur),label:'Light Review: '+subj.name,sub:'Consolidate notes',colorClass:getSubjColor(subj.name)});current+=dur;reviewCount++;eveningDone=true;continue}
-      if(deepCount<2){const subj=nextSubj(deepCount);slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:subj.name,sub:subjSub(subj),colorClass:getSubjColor(subj.name)});current+=DEEP;deepCount++}else{const subj=nextSubj(deepCount+recallCount);slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+subj.name,sub:recallSub(subj),colorClass:getSubjColor(subj.name)});current+=RECALL;recallCount++}
-      if(current+BRK<CUTOFF&&current+BRK<=CUTOFF){const brkEnd=current+BRK;const conflict=todayCommits.find(c=>c.startMin<brkEnd&&c.endMin>current&&!added.has(c));if(!conflict){slots.push({type:'break',time:fmtTimeRange(current,brkEnd),label:'Short Break',sub:'Hydrate · move',colorClass:''});current=brkEnd}}
+    function subjSub(s){const topics=s.topics?s.topics.split('|'):[];return topics.length>0?topics[0]:'Deep focus'}
+    function recallSub(s){const topics=s.topics?s.topics.split('|'):[];return topics.length>0?'Recall: '+topics[0]:'Active recall'}
+    while(current<CUTOFF){
+      const overlap=todayCommits.find(c=>c.startMin<=current&&c.endMin>current&&!added.has(c));
+      if(overlap){slots.push({type:'fixed',time:fmtTimeRange(overlap.startMin,overlap.endMin),label:overlap.label,sub:'',colorClass:''});added.add(overlap);current=overlap.endMin;continue}
+      if(!todayCommits.find(c=>c.startMin<current+DEEP&&c.endMin>current&&!added.has(c))&&current+DEEP<=CUTOFF){if(current<LUNCH_START&&current+DEEP>LUNCH_START&&current+DEEP<=LUNCH_END+60){current=LUNCH_END;continue}if(current>=LUNCH_START&&current<LUNCH_END){slots.push({type:'lunch',time:fmtTimeRange(LUNCH_START,LUNCH_END),label:'Lunch Break',sub:'Step away',colorClass:''});current=LUNCH_END;continue}
+      const subj=sortedSubjects[subjIndex%sortedSubjects.length];slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:subj.name,sub:subjSub(subj),colorClass:getSubjColor(subj.name)});topicsWithDeepWork.add(subj.name);subjIndex++;current+=DEEP;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Short Break',sub:'Rest',colorClass:''});current+=BRK}}else if(!todayCommits.find(c=>c.startMin<current+RECALL&&c.endMin>current&&!added.has(c))&&current+RECALL<=CUTOFF){const subjForRecall=sortedSubjects.find(s=>topicsWithDeepWork.has(s.name));if(subjForRecall){slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+subjForRecall.name,sub:recallSub(subjForRecall),colorClass:getSubjColor(subjForRecall.name)});topicsWithDeepWork.delete(subjForRecall.name);current+=RECALL;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Short Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK}}else if(!todayCommits.find(c=>c.startMin<current+REVIEW&&c.endMin>current&&!added.has(c))&&current+REVIEW<=CUTOFF){const subjForReview=sortedSubjects[0];if(subjForReview){slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subjForReview.name,sub:'Consolidate notes',colorClass:getSubjColor(subjForReview.name)});current+=REVIEW;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Short Break',sub:'Rest',colorClass:''});current+=BRK}}else{break}}else{break}
     }
-    todayCommits.forEach(c=>{if(!added.has(c)){slots.push({type:'fixed',time:fmtTimeRange(c.startMin,c.endMin),label:c.label,sub:'',colorClass:'',_sortKey:c.startMin})}});
-    if(slots.length===0){slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake time or commitments',colorClass:''})}
+    if(slots.length===0){slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake and sleep times',colorClass:''})}
     return slots;
   }
   function generatePlan(state){
@@ -256,7 +242,12 @@ const js = `
   document.getElementById('add-commit-btn').addEventListener('click',()=>addCommitmentRow());
   document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
-  document.getElementById('print-btn').addEventListener('click',()=>window.print());
+  document.getElementById('print-btn').addEventListener('click',()=>{
+    const element=document.getElementById('timetable-section');
+    const name=document.getElementById('student-name').value.trim()||'revision-timetable';
+    if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
+    html2pdf().set({margin:10,filename:name+'.pdf',image:{type:'jpeg',quality:0.98},html2canvas:{scale:2},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}}).from(element).save();
+  });
   addSubjectRow('Mathematics','','high',3);
   addSubjectRow('Biology','','medium',4);
   addSubjectRow('Chemistry','','high',2);
@@ -265,11 +256,18 @@ const js = `
 
 export default function RevisionTrackerPage() {
   useEffect(() => {
-    const script = document.createElement('script')
-    script.textContent = js
-    document.body.appendChild(script)
+    const html2pdfScript = document.createElement('script')
+    html2pdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'
+    html2pdfScript.onload = () => {
+      const appScript = document.createElement('script')
+      appScript.textContent = js
+      document.body.appendChild(appScript)
+    }
+    document.body.appendChild(html2pdfScript)
     return () => {
-      document.body.removeChild(script)
+      if (document.body.contains(html2pdfScript)) {
+        document.body.removeChild(html2pdfScript)
+      }
     }
   }, [])
 
@@ -277,17 +275,13 @@ export default function RevisionTrackerPage() {
     <>
       <style dangerouslySetInnerHTML={{ __html: css }} />
 
-      <header className="site-header">
-        <div className="badge">Free Workshop Gift</div>
-        <h1>Your A-Level Revision Tracker</h1>
-        <p>Answer a few questions. Get your personalised weekly plan.</p>
-      </header>
+      <Header />
 
       <div className="container">
         <section id="questionnaire-section">
           <div className="intro">
             <strong>How this works</strong>
-            Tell us your subjects, the topics you want to prioritise this week, your confidence in each, and anything fixed in your schedule. We'll build a timetable with 90-minute deep-work blocks — your hardest material scheduled at your peak energy times.
+            Tell us your subjects, the topics you want to prioritise this week, your confidence in each, and anything fixed in your schedule. We'll build a timetable with 90-minute deep-work blocks with your hardest material scheduled at your peak energy times.
           </div>
 
           <div className="card">
@@ -300,7 +294,7 @@ export default function RevisionTrackerPage() {
             <input type="time" id="wake-time" defaultValue="07:00" />
             <label htmlFor="sleep-time">Sleep time (target bedtime)</label>
             <input type="time" id="sleep-time" defaultValue="23:00" />
-            <div className="info-line">Sleep is part of the system. Your wake time and sleep time must be at least <strong>8 hours apart</strong> — non-negotiable. This ensures you're getting the rest you need to perform at your best.</div>
+            <div className="info-line">Sleep is part of the system. Your wake time and sleep time must be at least <strong>8 hours apart</strong>. This is non-negotiable and ensures you're getting the rest you need to perform at your best.</div>
           </div>
 
           <div className="card">
@@ -346,7 +340,7 @@ export default function RevisionTrackerPage() {
 
           <div className="tips">
             <strong>How to use this plan</strong>
-            Deep Work slots are for your hardest, highest-priority topics — phone in another room, no distractions. Active Recall slots are for past papers, blurting, and Anki. Light Review is for consolidating notes. Always take your breaks — they're part of the system, not a reward.
+            Deep Work slots are for your hardest, highest-priority topics. Phone in another room, no distractions. Active Recall slots are for past papers, blurting, and Anki. Light Review is for consolidating notes. Always take your breaks as they're part of the system, not a reward.
           </div>
 
           <div className="action-row">
