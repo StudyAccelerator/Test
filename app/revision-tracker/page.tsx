@@ -330,23 +330,23 @@ export default function RevisionTrackerPage() {
               <p style={{fontSize:'0.85rem',color:'var(--muted)',marginBottom:'0.8rem'}}>Select which days you have school and enter your hours (include commuting time):</p>
               <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(120px,1fr))',gap:'0.6rem',marginBottom:'1rem'}}>
                 <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
-                  <input type="checkbox" class="school-day" value="Monday" style={{marginRight:'0.4rem'}} />
+                  <input type="checkbox" className="school-day" value="Monday" style={{marginRight:'0.4rem'}} />
                   Monday
                 </label>
                 <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
-                  <input type="checkbox" class="school-day" value="Tuesday" style={{marginRight:'0.4rem'}} />
+                  <input type="checkbox" className="school-day" value="Tuesday" style={{marginRight:'0.4rem'}} />
                   Tuesday
                 </label>
                 <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
-                  <input type="checkbox" class="school-day" value="Wednesday" style={{marginRight:'0.4rem'}} />
+                  <input type="checkbox" className="school-day" value="Wednesday" style={{marginRight:'0.4rem'}} />
                   Wednesday
                 </label>
                 <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
-                  <input type="checkbox" class="school-day" value="Thursday" style={{marginRight:'0.4rem'}} />
+                  <input type="checkbox" className="school-day" value="Thursday" style={{marginRight:'0.4rem'}} />
                   Thursday
                 </label>
                 <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
-                  <input type="checkbox" class="school-day" value="Friday" style={{marginRight:'0.4rem'}} />
+                  <input type="checkbox" className="school-day" value="Friday" style={{marginRight:'0.4rem'}} />
                   Friday
                 </label>
               </div>
