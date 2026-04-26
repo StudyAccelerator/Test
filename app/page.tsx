@@ -505,14 +505,23 @@ export default function Home() {
             <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
             <div className="md:flex-1 text-center">
               <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
-              <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
+              <div className="flex gap-8 justify-center text-sm">
                 <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
                 <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
-                <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition text-center whitespace-nowrap">Free Revision Tracker</a>
               </div>
             </div>
           </div>
           <div className="h-px bg-brand-gold opacity-20 my-4"></div>
+          <div className="flex justify-center mb-4">
+            <a
+              href="/revision-tracker"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-brand-cream opacity-50 hover:opacity-80 border border-brand-cream/20 hover:border-brand-cream/40 rounded px-4 py-1.5 transition"
+            >
+              Free Revision Tracker
+            </a>
+          </div>
           <p className="text-center text-xs opacity-60">
             &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
           </p>
