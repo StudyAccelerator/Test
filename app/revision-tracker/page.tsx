@@ -128,6 +128,7 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 @media (max-width:640px){
   .two-col{grid-template-columns:1fr}
   .commit-grid{grid-template-columns:1fr 1fr;gap:0.6rem}
+  .site-header h1{font-size:1.55rem}
   .container{padding:1.5rem 1rem 2rem}
   .card{padding:1.2rem}
 }
@@ -199,7 +200,7 @@ const js = `
     if(hasSchool){document.querySelectorAll('.school-day:checked').forEach(cb=>{schoolDays.push(cb.value)});schoolStart=toMinutes(document.getElementById('school-start').value);schoolEnd=toMinutes(document.getElementById('school-end').value);if(schoolDays.length>0&&schoolStart<schoolEnd){schoolDays.forEach(day=>{commitments.push({day:day,startMin:schoolStart,endMin:schoolEnd,label:'School'})})}}
     return {name,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
   }
-  function buildDaySlots(dayIndex,state,sortedSubjects){
+  function buildDaySlots(dayIndex,state,sortedSubjects,topicDeepWorkCount,topicLastDeepWork,topicLastRecall){
     const DEEP=90,RECALL=60,REVIEW=30,BRK=15;
     const sleepMin=toMinutes(state.sleepTime);const wakeMin=toMinutes(state.wakeTime);
     let CUTOFF;if(sleepMin>wakeMin){CUTOFF=sleepMin}else{CUTOFF=(1440-wakeMin)+sleepMin}
@@ -216,14 +217,20 @@ const js = `
       if(current>=breakfastMin&&current<breakfastMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(breakfastMin,breakfastMin+mealDurations),label:'Breakfast',sub:'Fuel up',colorClass:''});current=breakfastMin+mealDurations;continue}
       if(current>=lunchMin&&current<lunchMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(lunchMin,lunchMin+mealDurations),label:'Lunch',sub:'Step away',colorClass:''});current=lunchMin+mealDurations;continue}
       if(current>=dinnerMin&&current<dinnerMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(dinnerMin,dinnerMin+mealDurations),label:'Dinner',sub:'Rest',colorClass:''});current=dinnerMin+mealDurations;continue}
-      if(current+DEEP<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+DEEP&&c.endMin>current)){const subj=sortedSubjects[subjIndex%subjCount];slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:subj.name,sub:getBestTopic(subj),colorClass:getSubjColor(subj.name)});current+=DEEP;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}subjIndex++}else if(current+RECALL<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+RECALL&&c.endMin>current)){const subj=sortedSubjects[(subjIndex+1)%subjCount];slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+subj.name,sub:getBestTopic(subj),colorClass:getSubjColor(subj.name)});current+=RECALL;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else if(current+REVIEW<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+REVIEW&&c.endMin>current)){const subj=sortedSubjects[0];slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subj.name,sub:getBestTopic(subj),colorClass:getSubjColor(subj.name)});current+=REVIEW;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{break}
+      if(current+DEEP<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+DEEP&&c.endMin>current)){
+        let selectedSubj=null;for(let i=0;i<subjCount;i++){const s=sortedSubjects[(subjIndex+i)%subjCount];const topic=getBestTopic(s);if(topic&&!topicDeepWorkCount.has(s.name+'.'+topic)){topicDeepWorkCount.set(s.name+'.'+topic,0)}const count=topicDeepWorkCount.get(s.name+'.'+topic)||0;if(count<3){selectedSubj=s;break}}
+        if(selectedSubj){const topic=getBestTopic(selectedSubj);slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:selectedSubj.name,sub:topic,colorClass:getSubjColor(selectedSubj.name)});topicDeepWorkCount.set(selectedSubj.name+'.'+topic,(topicDeepWorkCount.get(selectedSubj.name+'.'+topic)||0)+1);topicLastDeepWork.set(selectedSubj.name+'.'+topic,dayIndex);current+=DEEP;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK;subjIndex++}}else if(current+RECALL<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+RECALL&&c.endMin>current)){
+        let selectedSubj=null;for(const subj of sortedSubjects){const topic=getBestTopic(subj);const key=subj.name+'.'+topic;const lastDeep=topicLastDeepWork.get(key);if(lastDeep!==undefined&&(dayIndex-lastDeep>=1)&&(dayIndex-lastDeep<=7)){const lastRecall=topicLastRecall.get(key);if(!lastRecall||dayIndex-lastRecall>=3){selectedSubj=subj;topicLastRecall.set(key,dayIndex);break}}}
+        if(selectedSubj){const topic=getBestTopic(selectedSubj);slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+selectedSubj.name,sub:topic,colorClass:getSubjColor(selectedSubj.name)});current+=RECALL;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK}}else if(current+REVIEW<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+REVIEW&&c.endMin>current)){
+        const subjForReview=sortedSubjects[0];if(subjForReview){const topic=getBestTopic(subjForReview);slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subjForReview.name,sub:topic,colorClass:getSubjColor(subjForReview.name)});current+=REVIEW;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{break}}else{break}
     }
     if(slots.length===0){slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake and sleep times',colorClass:''})}
     return slots;
   }
   function generatePlan(state){
     const sorted=[...state.subjects].sort((a,b)=>(PRIORITY_WEIGHT[b.priority]*(6-b.confidence))-(PRIORITY_WEIGHT[a.priority]*(6-a.confidence)));
-    const week=[];for(let i=0;i<7;i++){week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted)})}
+    const topicDeepWorkCount=new Map();const topicLastDeepWork=new Map();const topicLastRecall=new Map();
+    const week=[];for(let i=0;i<7;i++){week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted,topicDeepWorkCount,topicLastDeepWork,topicLastRecall)})}
     return week;
   }
   function renderTimetable(week,name){
