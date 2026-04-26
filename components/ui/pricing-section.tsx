@@ -27,7 +27,7 @@ export default function PricingSection() {
       price: '£499',
       description: 'Best for: Students who want results, not just information',
       highlightLine: 'Includes full 12-week implementation support',
-      subLine: 'Not just learning the system — actually applying it with guidance and feedback',
+      subLine: 'Not just learning the system, actually applying it with guidance and feedback',
       features: [
         '12 weekly live sessions — 3 full months of support',
         'Full Top 1% Study System',

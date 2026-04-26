@@ -15,31 +15,38 @@ interface Testimonial {
 const testimonials: Testimonial[] = [
   {
     id: 1,
-    quote: "I was falling behind and didn't know how to catch up. Now I have a clear system to follow!",
-    name: 'Year 13 Student',
+    quote: 'I love each session because it is highly interactive and allows us to give answers which Dr Waleed gives feedback on which is very helpful',
+    name: 'Year 12 Student',
     username: '',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student1&backgroundColor=random',
+    avatar: '',
   },
   {
     id: 2,
-    quote: 'Dr Waleed broke everything down in a way that actually made sense. The session was really clear in helping me know what I should be doing. Thank you :)',
-    name: 'Year 12 Student',
+    quote: 'We had real examples and feedback which really put it into perspective and allows us to develop good points for ourselves and ensure we don\'t make the same mistakes as well',
+    name: 'Year 13 Student',
     username: '',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student2&backgroundColor=random',
+    avatar: '',
   },
   {
     id: 3,
-    quote: 'It was really structured and focused, which made it much easier to actually apply',
-    name: 'Year 13 Student',
+    quote: 'Interactive, well explained concepts, easy to follow. Very informative, gave good points to research. The feedback on ourselves was great, even the best answers had something to improve on.',
+    name: 'Year 12 Student',
     username: '',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student3&backgroundColor=random',
+    avatar: '',
   },
   {
     id: 4,
-    quote: 'I found the tips and examples really helpful, and I could actually apply them to myself',
+    quote: 'I really liked the wide range of examples used and discussed throughout the session. This made the session very interactive because there was more active learning.',
+    name: 'Year 13 Student',
+    username: '',
+    avatar: '',
+  },
+  {
+    id: 5,
+    quote: 'I like how interactive it was and that many different examples were explained and discussed',
     name: 'Year 12 Student',
     username: '',
-    avatar: 'https://api.dicebear.com/7.x/avataaars/svg?seed=student4&backgroundColor=random',
+    avatar: '',
   },
 ]
 
@@ -247,34 +254,9 @@ const TestimonialSlider: React.FC = () => {
                       </p>
 
                       <div className="mt-auto pt-3 sm:pt-4 border-t border-gray-100">
-                        <div className="flex items-center">
-                          <div className="relative flex-shrink-0">
-                            <img
-                              width={48}
-                              height={48}
-                              src={testimonial.avatar}
-                              alt={testimonial.name}
-                              className="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover border-2 border-white shadow-sm"
-                            />
-                            <motion.div
-                              className="absolute inset-0 rounded-full bg-brand-purple/20"
-                              animate={{
-                                scale: [1, 1.2, 1],
-                                opacity: [0, 0.3, 0],
-                              }}
-                              transition={{
-                                duration: 2,
-                                repeat: Infinity,
-                                repeatDelay: 1,
-                              }}
-                            />
-                          </div>
-                          <div className="ml-3">
-                            <h4 className="font-bold text-sm sm:text-base text-gray-900">
-                              {testimonial.name}
-                            </h4>
-                          </div>
-                        </div>
+                        <h4 className="font-bold text-sm sm:text-base text-gray-900">
+                          {testimonial.name}
+                        </h4>
                       </div>
                     </div>
                   </motion.div>

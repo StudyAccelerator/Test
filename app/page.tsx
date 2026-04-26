@@ -206,18 +206,21 @@ export default function Home() {
 
       {/* Accelerator 12-Week Breakdown */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-gradient-to-b from-white via-yellow-50 to-white">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
               What Happens Inside the Study Accelerator (12 Weeks)
             </h2>
             <p className="text-center text-lg text-brand-text mb-12 max-w-3xl mx-auto italic">
-              The first 4 weeks build your system. The next 8 weeks make sure it actually works.
+              The first 4 weeks build your system. The next 8 weeks perfect it to your specific needs.
             </p>
 
             <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
-                <p className="text-sm font-bold text-brand-gold uppercase tracking-wide mb-1">Phase 1 · Weeks 1–4</p>
+              <div className="bg-gradient-to-br from-yellow-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
+                <div className="inline-block bg-brand-gold text-brand-purple px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  Phase 1
+                </div>
+                <p className="text-xs text-brand-text italic mb-3">Weeks 1–4</p>
                 <h3 className="text-2xl font-bold text-brand-purple mb-4">Build your system</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
@@ -235,39 +238,45 @@ export default function Home() {
                 </ul>
               </div>
 
-              <div className="bg-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
-                <p className="text-sm font-bold text-brand-gold uppercase tracking-wide mb-1">Phase 2 · Weeks 5–8</p>
+              <div className="bg-gradient-to-br from-pink-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-pink-400 hover:shadow-xl transition-shadow">
+                <div className="inline-block bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  Phase 2
+                </div>
+                <p className="text-xs text-brand-text italic mb-3">Weeks 5–8</p>
                 <h3 className="text-2xl font-bold text-brand-purple mb-4">Fix what&apos;s not working</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
+                    <span className="text-pink-400 font-bold">✓</span>
                     <span>Identify why you&apos;re not improving</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
+                    <span className="text-pink-400 font-bold">✓</span>
                     <span>Fix inefficient revision methods</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
+                    <span className="text-pink-400 font-bold">✓</span>
                     <span>Learn what to prioritise and what to cut</span>
                   </li>
                 </ul>
               </div>
 
-              <div className="bg-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
-                <p className="text-sm font-bold text-brand-gold uppercase tracking-wide mb-1">Phase 3 · Weeks 9–12</p>
+              <div className="bg-gradient-to-br from-purple-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-purple-400 hover:shadow-xl transition-shadow">
+                <div className="inline-block bg-purple-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  Phase 3
+                </div>
+                <p className="text-xs text-brand-text italic mb-3">Weeks 9–12</p>
                 <h3 className="text-2xl font-bold text-brand-purple mb-4">Optimise your performance</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
+                    <span className="text-purple-400 font-bold">✓</span>
                     <span>Improve how you approach exam questions</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
+                    <span className="text-purple-400 font-bold">✓</span>
                     <span>Learn from mistakes properly</span>
                   </li>
                   <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
+                    <span className="text-purple-400 font-bold">✓</span>
                     <span>Refine your system so you keep improving</span>
                   </li>
                 </ul>
@@ -275,7 +284,7 @@ export default function Home() {
             </div>
 
             <p className="text-center text-lg text-brand-purple font-bold mt-12 max-w-3xl mx-auto">
-              This is where most students start seeing real results.
+              This is where students start making long-lasting changes.
             </p>
           </div>
         </section>
@@ -426,15 +435,6 @@ export default function Home() {
       {/* Pricing Section (detailed cards) */}
       <ScrollFade delay={0.2}>
         <div id="pricing-cards">
-          <div className="bg-brand-purple pt-12 px-4">
-            <div className="max-w-4xl mx-auto text-center">
-              <p className="text-xl md:text-2xl text-brand-cream font-serif">
-                <span className="text-brand-gold font-bold">Study Series</span> = Learn the system
-                <span className="mx-3 text-brand-gold opacity-50">|</span>
-                <span className="text-brand-gold font-bold">Study Accelerator</span> = Apply it and see results
-              </p>
-            </div>
-          </div>
           <PricingSection />
         </div>
       </ScrollFade>
