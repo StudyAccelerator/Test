@@ -505,12 +505,21 @@ export default function Home() {
             <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
             <div className="md:flex-1 text-center">
               <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
-              <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
+              <div className="flex gap-8 justify-center text-sm">
                 <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
                 <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
-                <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition text-center whitespace-nowrap">Free Revision Tracker</a>
               </div>
             </div>
+          </div>
+          <div className="flex justify-center my-6">
+            <a
+              href="/revision-tracker"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm text-brand-cream bg-brand-gold/10 hover:bg-brand-gold/20 border border-brand-gold/40 hover:border-brand-gold/70 rounded-lg px-6 py-2.5 transition font-medium"
+            >
+              Free Revision Tracker
+            </a>
           </div>
           <div className="h-px bg-brand-gold opacity-20 my-4"></div>
           <p className="text-center text-xs opacity-60">
