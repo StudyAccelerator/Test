@@ -174,6 +174,9 @@ const js = `
   function collectState(){
     const name=document.getElementById('student-name').value.trim();
     const wakeTime=document.getElementById('wake-time').value||'07:00';
+    const breakfastTime=document.getElementById('breakfast-time').value||'07:30';
+    const lunchTime=document.getElementById('lunch-time').value||'12:00';
+    const dinnerTime=document.getElementById('dinner-time').value||'18:00';
     const sleepTime=document.getElementById('sleep-time').value||'23:00';
     const wakeMin=toMinutes(wakeTime);const sleepMin=toMinutes(sleepTime);
     if(isNaN(wakeMin)||isNaN(sleepMin)){alert('Please set valid wake and sleep times.');return null}
@@ -192,31 +195,42 @@ const js = `
       if(!lbl||!start||!end)return;const sMin=toMinutes(start),eMin=toMinutes(end);if(isNaN(sMin)||isNaN(eMin)||eMin<=sMin)return;
       commitments.push({day:row.querySelector('.commit-day').value,startMin:sMin,endMin:eMin,label:lbl});
     });
-    return {name,wakeTime,sleepTime,subjects,commitments};
+    const hasSchool=document.getElementById('has-school').checked;
+    let schoolDays=[];let schoolStart=toMinutes('08:30'),schoolEnd=toMinutes('16:00');
+    if(hasSchool){document.querySelectorAll('.school-day:checked').forEach(cb=>{schoolDays.push(cb.value)});schoolStart=toMinutes(document.getElementById('school-start').value);schoolEnd=toMinutes(document.getElementById('school-end').value);if(schoolDays.length>0&&schoolStart<schoolEnd){schoolDays.forEach(day=>{commitments.push({day:day,startMin:schoolStart,endMin:schoolEnd,label:'School'})})}}
+    return {name,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
   }
-  function buildDaySlots(dayIndex,state,sortedSubjects){
-    const DEEP=90,RECALL=60,REVIEW=30,BRK=15,LUNCH=60;
+  function buildDaySlots(dayIndex,state,sortedSubjects,topicDeepWorkCount,topicLastDeepWork,topicLastRecall){
+    const DEEP=90,RECALL=60,REVIEW=30,BRK=15;
     const sleepMin=toMinutes(state.sleepTime);const wakeMin=toMinutes(state.wakeTime);
     let CUTOFF;if(sleepMin>wakeMin){CUTOFF=sleepMin}else{CUTOFF=(1440-wakeMin)+sleepMin}
-    const LUNCH_START=toMinutes('12:00');const LUNCH_END=toMinutes('13:00');
+    const breakfastMin=toMinutes(state.breakfastTime);const lunchMin=toMinutes(state.lunchTime);const dinnerMin=toMinutes(state.dinnerTime);
     const slots=[];const dayName=DAYS[dayIndex];
     const todayCommits=state.commitments.filter(c=>c.day===dayName).sort((a,b)=>a.startMin-b.startMin);
-    let current=wakeMin;const topicsWithDeepWork=new Set();const added=new Set();let subjIndex=0;
+    const mealDurations=30;
+    let current=wakeMin;let subjIndex=0;const subjCount=sortedSubjects.length;
     function getSubjColor(name){return getSubjColorClass(name)}
-    function subjSub(s){const topics=s.topics?s.topics.split('|'):[];return topics.length>0?topics[0]:'Deep focus'}
-    function recallSub(s){const topics=s.topics?s.topics.split('|'):[];return topics.length>0?'Recall: '+topics[0]:'Active recall'}
+    function getBestTopic(subj){const topics=subj.topics?subj.topics.split('|'):[];return topics[0]||''}
     while(current<CUTOFF){
-      const overlap=todayCommits.find(c=>c.startMin<=current&&c.endMin>current&&!added.has(c));
-      if(overlap){slots.push({type:'fixed',time:fmtTimeRange(overlap.startMin,overlap.endMin),label:overlap.label,sub:'',colorClass:''});added.add(overlap);current=overlap.endMin;continue}
-      if(!todayCommits.find(c=>c.startMin<current+DEEP&&c.endMin>current&&!added.has(c))&&current+DEEP<=CUTOFF){if(current<LUNCH_START&&current+DEEP>LUNCH_START&&current+DEEP<=LUNCH_END+60){current=LUNCH_END;continue}if(current>=LUNCH_START&&current<LUNCH_END){slots.push({type:'lunch',time:fmtTimeRange(LUNCH_START,LUNCH_END),label:'Lunch Break',sub:'Step away',colorClass:''});current=LUNCH_END;continue}
-      const subj=sortedSubjects[subjIndex%sortedSubjects.length];slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:subj.name,sub:subjSub(subj),colorClass:getSubjColor(subj.name)});topicsWithDeepWork.add(subj.name);subjIndex++;current+=DEEP;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Short Break',sub:'Rest',colorClass:''});current+=BRK}}else if(!todayCommits.find(c=>c.startMin<current+RECALL&&c.endMin>current&&!added.has(c))&&current+RECALL<=CUTOFF){const subjForRecall=sortedSubjects.find(s=>topicsWithDeepWork.has(s.name));if(subjForRecall){slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+subjForRecall.name,sub:recallSub(subjForRecall),colorClass:getSubjColor(subjForRecall.name)});topicsWithDeepWork.delete(subjForRecall.name);current+=RECALL;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Short Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK}}else if(!todayCommits.find(c=>c.startMin<current+REVIEW&&c.endMin>current&&!added.has(c))&&current+REVIEW<=CUTOFF){const subjForReview=sortedSubjects[0];if(subjForReview){slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subjForReview.name,sub:'Consolidate notes',colorClass:getSubjColor(subjForReview.name)});current+=REVIEW;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Short Break',sub:'Rest',colorClass:''});current+=BRK}}else{break}}else{break}
+      const overlap=todayCommits.find(c=>c.startMin<=current&&c.endMin>current);
+      if(overlap){slots.push({type:'fixed',time:fmtTimeRange(overlap.startMin,overlap.endMin),label:overlap.label,sub:'',colorClass:''});current=overlap.endMin;continue}
+      if(current>=breakfastMin&&current<breakfastMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(breakfastMin,breakfastMin+mealDurations),label:'Breakfast',sub:'Fuel up',colorClass:''});current=breakfastMin+mealDurations;continue}
+      if(current>=lunchMin&&current<lunchMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(lunchMin,lunchMin+mealDurations),label:'Lunch',sub:'Step away',colorClass:''});current=lunchMin+mealDurations;continue}
+      if(current>=dinnerMin&&current<dinnerMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(dinnerMin,dinnerMin+mealDurations),label:'Dinner',sub:'Rest',colorClass:''});current=dinnerMin+mealDurations;continue}
+      if(current+DEEP<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+DEEP&&c.endMin>current)){
+        let selectedSubj=null;for(let i=0;i<subjCount;i++){const s=sortedSubjects[(subjIndex+i)%subjCount];const topic=getBestTopic(s);if(topic&&!topicDeepWorkCount.has(s.name+'.'+topic)){topicDeepWorkCount.set(s.name+'.'+topic,0)}const count=topicDeepWorkCount.get(s.name+'.'+topic)||0;if(count<3){selectedSubj=s;break}}
+        if(selectedSubj){const topic=getBestTopic(selectedSubj);slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:selectedSubj.name,sub:topic,colorClass:getSubjColor(selectedSubj.name)});topicDeepWorkCount.set(selectedSubj.name+'.'+topic,(topicDeepWorkCount.get(selectedSubj.name+'.'+topic)||0)+1);topicLastDeepWork.set(selectedSubj.name+'.'+topic,dayIndex);current+=DEEP;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK;subjIndex++}}else if(current+RECALL<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+RECALL&&c.endMin>current)){
+        let selectedSubj=null;for(const subj of sortedSubjects){const topic=getBestTopic(subj);const key=subj.name+'.'+topic;const lastDeep=topicLastDeepWork.get(key);if(lastDeep!==undefined&&(dayIndex-lastDeep>=1)&&(dayIndex-lastDeep<=7)){const lastRecall=topicLastRecall.get(key);if(!lastRecall||dayIndex-lastRecall>=3){selectedSubj=subj;topicLastRecall.set(key,dayIndex);break}}}
+        if(selectedSubj){const topic=getBestTopic(selectedSubj);slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+selectedSubj.name,sub:topic,colorClass:getSubjColor(selectedSubj.name)});current+=RECALL;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK}}else if(current+REVIEW<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+REVIEW&&c.endMin>current)){
+        const subjForReview=sortedSubjects[0];if(subjForReview){const topic=getBestTopic(subjForReview);slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subjForReview.name,sub:topic,colorClass:getSubjColor(subjForReview.name)});current+=REVIEW;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{break}}else{break}
     }
     if(slots.length===0){slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake and sleep times',colorClass:''})}
     return slots;
   }
   function generatePlan(state){
     const sorted=[...state.subjects].sort((a,b)=>(PRIORITY_WEIGHT[b.priority]*(6-b.confidence))-(PRIORITY_WEIGHT[a.priority]*(6-a.confidence)));
-    const week=[];for(let i=0;i<7;i++){week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted)})}
+    const topicDeepWorkCount=new Map();const topicLastDeepWork=new Map();const topicLastRecall=new Map();
+    const week=[];for(let i=0;i<7;i++){week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted,topicDeepWorkCount,topicLastDeepWork,topicLastRecall)})}
     return week;
   }
   function renderTimetable(week,name){
@@ -240,17 +254,18 @@ const js = `
   function showQuestionnaire(){document.getElementById('timetable-section').style.display='none';document.getElementById('questionnaire-section').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
   document.getElementById('add-subject-btn').addEventListener('click',()=>addSubjectRow());
   document.getElementById('add-commit-btn').addEventListener('click',()=>addCommitmentRow());
+  document.getElementById('has-school').addEventListener('change',()=>{document.getElementById('school-section').style.display=document.getElementById('has-school').checked?'block':'none'});
   document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
   document.getElementById('print-btn').addEventListener('click',()=>{
     const element=document.getElementById('timetable-section');
     const name=document.getElementById('student-name').value.trim()||'revision-timetable';
     if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
-    html2pdf().set({margin:10,filename:name+'.pdf',image:{type:'jpeg',quality:0.98},html2canvas:{scale:2},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}}).from(element).save();
+    html2pdf().set({margin:10,filename:name+'.pdf',image:{type:'jpeg',quality:0.98},html2canvas:{scale:2,useCORS:true,logging:false},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}}).from(element).save();
   });
-  addSubjectRow('Mathematics','','high',3);
-  addSubjectRow('Biology','','medium',4);
-  addSubjectRow('Chemistry','','high',2);
+  addSubjectRow('Mathematics','Differentiation,Integration,Limits','high',3);
+  addSubjectRow('Biology','Photosynthesis,Respiration,DNA','medium',4);
+  addSubjectRow('Chemistry','Bonding,Equations,Reactions','high',2);
 })();
 `
 
@@ -292,9 +307,60 @@ export default function RevisionTrackerPage() {
             <input type="text" id="student-name" placeholder="e.g. Aisha" maxLength={30} />
             <label htmlFor="wake-time">Wake-up time</label>
             <input type="time" id="wake-time" defaultValue="07:00" />
+            <label htmlFor="breakfast-time">Breakfast time</label>
+            <input type="time" id="breakfast-time" defaultValue="07:30" />
+            <label htmlFor="lunch-time">Lunch time</label>
+            <input type="time" id="lunch-time" defaultValue="12:00" />
+            <label htmlFor="dinner-time">Dinner time</label>
+            <input type="time" id="dinner-time" defaultValue="18:00" />
             <label htmlFor="sleep-time">Sleep time (target bedtime)</label>
             <input type="time" id="sleep-time" defaultValue="23:00" />
             <div className="info-line">Sleep is part of the system. Your wake time and sleep time must be at least <strong>8 hours apart</strong>. This is non-negotiable and ensures you're getting the rest you need to perform at your best.</div>
+          </div>
+
+          <div className="card">
+            <div className="card-num">1b</div>
+            <h2 className="card-title">School This Week</h2>
+            <p className="card-subtitle">Do you have school this week? If yes, select which days and the hours (including commuting).</p>
+            <label style={{marginBottom:'0.5rem'}}>
+              <input type="checkbox" id="has-school" style={{marginRight:'0.5rem'}} />
+              <span style={{fontSize:'0.9rem'}}>I have school this week</span>
+            </label>
+            <div id="school-section" style={{display:'none'}}>
+              <p style={{fontSize:'0.85rem',color:'var(--muted)',marginBottom:'0.8rem'}}>Select which days you have school and enter your hours (include commuting time):</p>
+              <div style={{display:'grid',gridTemplateColumns:'repeat(auto-fit,minmax(120px,1fr))',gap:'0.6rem',marginBottom:'1rem'}}>
+                <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
+                  <input type="checkbox" class="school-day" value="Monday" style={{marginRight:'0.4rem'}} />
+                  Monday
+                </label>
+                <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
+                  <input type="checkbox" class="school-day" value="Tuesday" style={{marginRight:'0.4rem'}} />
+                  Tuesday
+                </label>
+                <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
+                  <input type="checkbox" class="school-day" value="Wednesday" style={{marginRight:'0.4rem'}} />
+                  Wednesday
+                </label>
+                <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
+                  <input type="checkbox" class="school-day" value="Thursday" style={{marginRight:'0.4rem'}} />
+                  Thursday
+                </label>
+                <label style={{display:'flex',alignItems:'center',marginBottom:0,fontSize:'0.9rem'}}>
+                  <input type="checkbox" class="school-day" value="Friday" style={{marginRight:'0.4rem'}} />
+                  Friday
+                </label>
+              </div>
+              <div className="two-col">
+                <div>
+                  <label htmlFor="school-start">School start time</label>
+                  <input type="time" id="school-start" defaultValue="08:30" />
+                </div>
+                <div>
+                  <label htmlFor="school-end">School end time (+ commute)</label>
+                  <input type="time" id="school-end" defaultValue="16:00" />
+                </div>
+              </div>
+            </div>
           </div>
 
           <div className="card">
