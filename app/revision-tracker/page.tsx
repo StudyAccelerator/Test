@@ -257,9 +257,6 @@ const js = `
   document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
   document.getElementById('print-btn').addEventListener('click',()=>window.print());
-  addSubjectRow('Mathematics','','high',3);
-  addSubjectRow('Biology','','medium',4);
-  addSubjectRow('Chemistry','','high',2);
 })();
 `
 
