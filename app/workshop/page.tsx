@@ -33,7 +33,7 @@ export default function WorkshopLanding() {
             Free Live Workshop
           </div>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-brand-gold leading-tight mb-6">
-            Feeling <span className="text-white font-bold">Overwhelmed</span> Trying to Keep Up With School,
+            Feeling <span className="text-white font-bold">Overwhelmed</span>{' '}Trying to Keep Up With School,
             Revision &amp; Everything Else?
           </h1>
           <p className="text-lg md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
@@ -85,7 +85,8 @@ export default function WorkshopLanding() {
                 ['Stay consistent', 'even when motivation drops'],
                 ['Revise', 'in a way that actually works'],
                 ['Handle pressure', 'during exams and deadlines'],
-                ['Study like the top 1%', 'using systems, not willpower'],
+                ['Maximise your performance', 'in the final stretch before exams'],
+                ['Study like the top 1%', 'using systems, not just willpower'],
               ].map(([bold, rest]) => (
                 <li
                   key={bold}
