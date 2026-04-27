@@ -2,18 +2,7 @@
 
 import { useState } from 'react'
 
-// ─────────────────────────────────────────────────────────────────────────────
-// PASTE YOUR MAILERLITE HOSTED FORM ACTION URL BELOW.
-// To find it: in MailerLite, open the workshop sign-up form → Embed →
-// "HTML form" tab → copy the URL from the <form action="..."> attribute.
-// It will look like: https://assets.mailerlite.com/jsonp/<account_id>/forms/<form_id>/subscribe
-// ─────────────────────────────────────────────────────────────────────────────
-const MAILERLITE_FORM_ACTION = 'PASTE_MAILERLITE_FORM_ACTION_URL_HERE'
-
-// The `name` attributes on the inputs below must match the field keys in your
-// MailerLite form. The defaults below use MailerLite's standard convention
-// (fields[<key>]). If your form uses different custom-field keys, update the
-// `name=` props on each input to match what the embed code shows.
+const MAILERLITE_FORM_ACTION = 'https://assets.mailerlite.com/jsonp/2113061/forms/184389361466344885/subscribe'
 
 const SUBJECT_OPTIONS = ['Maths', 'Biology', 'Chemistry', 'Other'] as const
 
@@ -25,21 +14,20 @@ export default function WorkshopForm() {
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
     setError(null)
-
-    if (MAILERLITE_FORM_ACTION.startsWith('PASTE_')) {
-      setError('Form is not yet wired up. Add your MailerLite action URL in workshop-form.tsx.')
-      return
-    }
-
     setSubmitting(true)
     try {
+      // Build URL-encoded body — MailerLite's endpoint expects
+      // application/x-www-form-urlencoded, not multipart/form-data.
       const formData = new FormData(e.currentTarget)
-      // MailerLite hosted forms accept a standard POST. We use no-cors so the
-      // browser doesn't block on the opaque response — MailerLite still
-      // receives and processes the submission.
+      const params = new URLSearchParams()
+      for (const [key, value] of formData.entries()) {
+        params.append(key, value as string)
+      }
+      // no-cors: browser blocks reading the opaque response but MailerLite
+      // still receives and processes the subscription.
       await fetch(MAILERLITE_FORM_ACTION, {
         method: 'POST',
-        body: formData,
+        body: params,
         mode: 'no-cors',
       })
       setSubmitted(true)
