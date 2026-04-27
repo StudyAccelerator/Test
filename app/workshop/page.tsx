@@ -11,15 +11,15 @@ export const metadata = {
 export default function WorkshopLanding() {
   return (
     <main className="bg-brand-cream">
-      {/* Minimal logo bar — no nav, to keep ad traffic focused */}
+      {/* Minimal logo bar, no nav, to keep ad traffic focused */}
       <header className="bg-brand-cream-dark border-b-4 border-brand-gold">
         <div className="max-w-5xl mx-auto px-6 h-20 flex items-center justify-center">
           <Image
             src="/logo-header-new.png"
             alt="A-Level Accelerators"
-            width={220}
-            height={60}
-            className="h-40 w-auto"
+            width={550}
+            height={150}
+            className="h-96 w-auto"
             priority
             unoptimized
           />
@@ -33,7 +33,7 @@ export default function WorkshopLanding() {
             Free Live Workshop
           </div>
           <h1 className="text-4xl md:text-6xl font-serif font-bold text-brand-gold leading-tight mb-6">
-            Feeling Overwhelmed Trying to Keep Up With School,
+            Feeling <span className="text-white font-bold">Overwhelmed</span> Trying to Keep Up With School,
             Revision &amp; Everything Else?
           </h1>
           <p className="text-lg md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
@@ -64,7 +64,7 @@ export default function WorkshopLanding() {
           >
             Reserve My Free Spot →
           </a>
-          <p className="text-sm opacity-80 mt-4">Limited spots — workshop runs live, not recorded.</p>
+          <p className="text-sm opacity-80 mt-4">Limited spots, workshop runs live online.</p>
         </div>
       </section>
 
@@ -76,7 +76,7 @@ export default function WorkshopLanding() {
               What You&apos;ll Learn in 1 Hour
             </h2>
             <p className="text-center text-brand-text mb-12 text-lg">
-              Focused, structured and interactive — come ready to think and participate.
+              Focused, structured and interactive, come ready to think and participate.
             </p>
 
             <ul className="space-y-4">
@@ -113,8 +113,9 @@ export default function WorkshopLanding() {
               </h3>
               <p className="text-lg text-brand-text">
                 As a thank you for showing up live, there will also be an{' '}
-                <strong className="text-brand-gold">Exclusive Gift</strong> shared during the session.
-                Trust me — you don&apos;t want to miss it.
+                <strong className="text-brand-gold">Exclusive Gift</strong>{' '}
+                shared during the session.
+                Trust me, you don&apos;t want to miss it.
               </p>
             </div>
           </div>
@@ -156,7 +157,7 @@ export default function WorkshopLanding() {
                   manage their workload, and build study systems that actually work.
                 </p>
                 <p className="text-base md:text-lg text-brand-text leading-relaxed">
-                  I built these systems myself going through A-Levels — and I know first-hand what it takes to
+                  I built these systems myself going through A-Levels, and I know first-hand what it takes to
                   perform under pressure without burning out.
                 </p>
               </div>
