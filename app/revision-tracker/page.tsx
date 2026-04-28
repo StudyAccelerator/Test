@@ -155,9 +155,9 @@ const js = `
     const errEl=document.getElementById('sleep-time-error');
     const btn=document.getElementById('generate-btn');
     if(isNaN(w)||isNaN(s)){if(errEl)errEl.style.display='none';return true}
-    const gap=s>w?s-w:(1440-w)+s;
-    if(gap<480){
-      if(errEl){errEl.textContent='Sleep must be at least 8 hours after wake-up. Current gap: '+Math.floor(gap/60)+'h '+String(gap%60).padStart(2,'0')+'m';errEl.style.display='block'}
+    const sleepDur=s<=w?(w-s):((1440-s)+w);
+    if(sleepDur<480){
+      if(errEl){errEl.textContent='You need at least 8 hours of sleep. Current sleep duration: '+Math.floor(sleepDur/60)+'h '+String(sleepDur%60).padStart(2,'0')+'m';errEl.style.display='block'}
       if(btn){btn.disabled=true;btn.style.opacity='0.5';btn.style.cursor='not-allowed'}
       return false
     }
@@ -205,8 +205,8 @@ const js = `
     const sleepTime=document.getElementById('sleep-time').value||'23:00';
     const wakeMin=toMinutes(wakeTime);const sleepMin=toMinutes(sleepTime);
     if(isNaN(wakeMin)||isNaN(sleepMin)){alert('Please set valid wake and sleep times.');return null}
-    let gap;if(sleepMin>wakeMin){gap=sleepMin-wakeMin}else{gap=(1440-wakeMin)+sleepMin}
-    if(gap<480){alert('You need at least 8 hours between wake time and sleep time. Current gap: '+Math.floor(gap/60)+'h '+String(gap%60).padStart(2,'0')+'m');return null}
+    const sleepDur=sleepMin<=wakeMin?(wakeMin-sleepMin):((1440-sleepMin)+wakeMin);
+    if(sleepDur<480){alert('You need at least 8 hours of sleep. Current sleep duration: '+Math.floor(sleepDur/60)+'h '+String(sleepDur%60).padStart(2,'0')+'m');return null}
     const subjects=[];
     document.querySelectorAll('.subject-row').forEach(row=>{
       const sname=row.querySelector('.subject-name').value.trim();if(!sname)return;
