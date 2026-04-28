@@ -226,60 +226,117 @@ const js = `
     return {name,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
   }
 
-  function buildDaySlots(dayIndex,state,sortedSubjects,sharedState){
-    const DEEP=90,RECALL=60,REVIEW=30,BRK=15,MEAL_DUR=30;
-    const sleepMin=toMinutes(state.sleepTime);const wakeMin=toMinutes(state.wakeTime);
-    const CUTOFF=sleepMin>wakeMin?sleepMin:sleepMin+1440;
-    const breakfastMin=toMinutes(state.breakfastTime);const lunchMin=toMinutes(state.lunchTime);const dinnerMin=toMinutes(state.dinnerTime);
-    const slots=[];const dayName=DAYS[dayIndex];
-    const todayCommits=state.commitments.filter(c=>c.day===dayName).sort((a,b)=>a.startMin-b.startMin);
-
-    const blockers=[];
-    [{startMin:breakfastMin,endMin:breakfastMin+MEAL_DUR,type:'break',label:'Breakfast',sub:'Fuel up'},{startMin:lunchMin,endMin:lunchMin+MEAL_DUR,type:'lunch',label:'Lunch',sub:'Step away'},{startMin:dinnerMin,endMin:dinnerMin+MEAL_DUR,type:'break',label:'Dinner',sub:'Rest'}].forEach(m=>{if(m.startMin>=wakeMin&&m.startMin<CUTOFF)blockers.push(m)});
-    todayCommits.forEach(c=>{blockers.push({startMin:c.startMin,endMin:c.endMin,type:'fixed',label:c.label,sub:''})});
-    blockers.sort((a,b)=>a.startMin-b.startMin);
-
-    function getCurrentBlocker(at){return blockers.find(b=>b.startMin<=at&&b.endMin>at)||null}
-    function getNextBlockerStart(from){for(const b of blockers){if(b.startMin>from)return b.startMin}return CUTOFF}
-
-    function pickTopic(subj){const topics=subj.topics?subj.topics.split('|').filter(t=>t.trim()):[];if(!topics.length)return '';const idx=sharedState.topicIdx[subj.name]||0;sharedState.topicIdx[subj.name]=idx+1;return topics[idx%topics.length]}
-    function markDeepWorked(subjName,topic){if(!sharedState.done[subjName])sharedState.done[subjName]=[];if(topic&&!sharedState.done[subjName].includes(topic))sharedState.done[subjName].push(topic);if(!sharedState.done[subjName].includes('__done__'))sharedState.done[subjName].push('__done__')}
-    function getRecallSubj(){const recallable=sortedSubjects.filter(s=>sharedState.done[s.name]&&sharedState.done[s.name].length>0);if(!recallable.length)return null;const s=recallable[sharedState.recallIdx%recallable.length];sharedState.recallIdx++;return s}
-    function getRecallTopic(subj){const topics=(sharedState.done[subj.name]||[]).filter(t=>t!=='__done__');return topics.length?topics[topics.length-1]:''}
-
-    let current=wakeMin;
-    while(current<CUTOFF){
-      const blocker=getCurrentBlocker(current);
-      if(blocker){const endMin=Math.min(blocker.endMin,CUTOFF);slots.push({type:blocker.type,time:fmtTimeRange(blocker.startMin,endMin),label:blocker.label,sub:blocker.sub,colorClass:''});current=endMin;continue}
-      const nextB=getNextBlockerStart(current);const avail=nextB-current;
-      if(avail>=DEEP){const subj=sortedSubjects[sharedState.subjIdx%sortedSubjects.length];const topic=pickTopic(subj);slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:subj.name,sub:topic,colorClass:getSubjColorClass(subj.name)});markDeepWorked(subj.name,topic);current+=DEEP;sharedState.subjIdx++;const nb2=getNextBlockerStart(current);if(current<CUTOFF&&nb2-current>=BRK){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else if(avail>=RECALL){const rs=getRecallSubj();if(rs){const topic=getRecallTopic(rs);slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+rs.name,sub:topic,colorClass:getSubjColorClass(rs.name)});current+=RECALL;const nb2=getNextBlockerStart(current);if(current<CUTOFF&&nb2-current>=BRK){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else if(avail>=REVIEW){const subj=sortedSubjects[0];slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subj.name,sub:getBestTopic(subj),colorClass:getSubjColorClass(subj.name)});current+=REVIEW}else{current=nextB}}else if(avail>=REVIEW){const subj=sortedSubjects[0];slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subj.name,sub:getBestTopic(subj),colorClass:getSubjColorClass(subj.name)});current+=REVIEW}else{current=nextB>current?nextB:CUTOFF}}
-    if(slots.length===0)slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake and sleep times',colorClass:''});
-    return slots;
-  }
-
-  function getBestTopic(subj){const topics=subj.topics?subj.topics.split('|'):[];return topics[0]||''}
-
-  function generatePlan(state){
-    const sorted=[...state.subjects].sort((a,b)=>(PRIORITY_WEIGHT[b.priority]*(6-b.confidence))-(PRIORITY_WEIGHT[a.priority]*(6-a.confidence)));
-    const sharedState={topicIdx:{},done:{},recallIdx:0,subjIdx:0};
-    const week=[];for(let i=0;i<7;i++)week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted,sharedState)});
+  function planWeekSessions(sortedSubjects){
+    const N=sortedSubjects.length;
+    const topicIdx={};
+    function nextTopic(subj){
+      const topics=subj.topics?subj.topics.split('|').filter(function(t){return t.trim()}):[];
+      if(!topics.length)return '';
+      const i=topicIdx[subj.name]||0;topicIdx[subj.name]=i+1;
+      return topics[i%topics.length];
+    }
+    const week=[[],[],[],[],[],[],[]];
+    for(let d=0;d<7;d++){
+      const subj=sortedSubjects[d%N];
+      const topic=nextTopic(subj);
+      const cc=getSubjColorClass(subj.name);
+      week[d].push({type:'deep',subject:subj.name,topic:topic,dur:90,colorClass:cc});
+      if(d+1<7)week[d+1].push({type:'recall',subject:subj.name,topic:topic,dur:60,colorClass:cc});
+      if(d+3<7)week[d+3].push({type:'review',subject:subj.name,topic:topic,dur:30,colorClass:cc});
+    }
+    const order={deep:0,recall:1,review:2};
+    for(let i=0;i<7;i++)week[i].sort(function(a,b){return order[a.type]-order[b.type]});
     return week;
   }
 
-  function renderTimetable(week,name){
+  function buildDayEvents(dayIndex,state,plannedSessions){
+    const MEAL_DUR=30,BRK=15;
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const CUTOFF=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const breakfastMin=toMinutes(state.breakfastTime);
+    const lunchMin=toMinutes(state.lunchTime);
+    const dinnerMin=toMinutes(state.dinnerTime);
+    const dayName=DAYS[dayIndex];
+
+    const blockers=[];
+    [{startMin:breakfastMin,endMin:breakfastMin+MEAL_DUR,type:'break',label:'Breakfast',sub:'Fuel up'},
+     {startMin:lunchMin,endMin:lunchMin+MEAL_DUR,type:'lunch',label:'Lunch',sub:'Step away'},
+     {startMin:dinnerMin,endMin:dinnerMin+MEAL_DUR,type:'break',label:'Dinner',sub:'Rest'}
+    ].forEach(function(m){if(m.startMin>=wakeMin&&m.startMin<CUTOFF)blockers.push(m)});
+    state.commitments.filter(function(c){return c.day===dayName}).forEach(function(c){blockers.push({startMin:c.startMin,endMin:c.endMin,type:'fixed',label:c.label,sub:''})});
+    blockers.sort(function(a,b){return a.startMin-b.startMin});
+
+    const freeWins=[];
+    let cur=wakeMin;
+    blockers.forEach(function(b){
+      if(b.startMin>cur)freeWins.push({start:cur,end:b.startMin,pos:cur});
+      cur=Math.max(cur,b.endMin);
+    });
+    if(cur<CUTOFF)freeWins.push({start:cur,end:CUTOFF,pos:cur});
+
+    const placed=[];
+    plannedSessions.forEach(function(sess){
+      for(let i=0;i<freeWins.length;i++){
+        const win=freeWins[i];
+        const space=win.end-win.pos;
+        if(space>=sess.dur){
+          placed.push({startMin:win.pos,endMin:win.pos+sess.dur,type:sess.type,subject:sess.subject,topic:sess.topic,label:'',sub:'',colorClass:sess.colorClass});
+          win.pos+=sess.dur;
+          if(sess.type==='deep'&&win.pos+BRK<=win.end){
+            placed.push({startMin:win.pos,endMin:win.pos+BRK,type:'break',subject:'',topic:'',label:'Break',sub:'Rest',colorClass:''});
+            win.pos+=BRK;
+          }
+          break;
+        }
+      }
+    });
+
+    const allEvents=[];
+    blockers.filter(function(b){return b.startMin>=wakeMin&&b.startMin<CUTOFF}).forEach(function(b){
+      allEvents.push({startMin:b.startMin,endMin:Math.min(b.endMin,CUTOFF),type:b.type,subject:'',topic:'',label:b.label,sub:b.sub,colorClass:''});
+    });
+    placed.forEach(function(e){allEvents.push(e)});
+    allEvents.sort(function(a,b){return a.startMin-b.startMin});
+    return allEvents;
+  }
+
+  function generatePlan(state){
+    const sorted=[].concat(state.subjects).sort(function(a,b){return(PRIORITY_WEIGHT[b.priority]*(6-b.confidence))-(PRIORITY_WEIGHT[a.priority]*(6-a.confidence))});
+    const weekPlanned=planWeekSessions(sorted);
+    const week=[];
+    for(let i=0;i<7;i++){
+      week.push({dayName:DAYS[i],events:buildDayEvents(i,state,weekPlanned[i])});
+    }
+    return week;
+  }
+
+  function renderTimetable(week,state,name){
     document.getElementById('tt-heading').textContent=name?(name+"'s Week"):'Your Week';
     const grid=document.getElementById('week-grid');grid.innerHTML='';
-    week.forEach(day=>{
+    week.forEach(function(day){
       const col=document.createElement('div');col.className='day-col';
       const head=document.createElement('div');head.className='day-head';head.innerHTML=DAY_SHORT[day.dayName];col.appendChild(head);
-      day.slots.forEach(slot=>{
-        const s=document.createElement('div');s.className='slot slot--'+slot.type;
-        let html='';if(slot.time)html+='<span class="slot-time">'+escapeHTML(slot.time)+'</span>';
-        const labelClass=slot.colorClass?'slot-label '+slot.colorClass:'slot-label';
-        html+='<span class="'+labelClass+'">'+escapeHTML(slot.label)+'</span>';
-        if(slot.sub)html+='<span class="slot-sub">'+escapeHTML(slot.sub)+'</span>';
-        s.innerHTML=html;col.appendChild(s);
-      });
+      if(!day.events||day.events.length===0){
+        const s=document.createElement('div');s.className='slot slot--none';
+        s.innerHTML='<span class="slot-label">No study slots</span>';
+        col.appendChild(s);
+      }else{
+        day.events.forEach(function(evt){
+          const s=document.createElement('div');s.className='slot slot--'+evt.type;
+          let displayLabel='';
+          if(evt.type==='deep')displayLabel=evt.subject;
+          else if(evt.type==='recall')displayLabel='Recall: '+evt.subject;
+          else if(evt.type==='review')displayLabel='Review: '+evt.subject;
+          else displayLabel=evt.label||evt.subject||'';
+          const labelClass=evt.colorClass?'slot-label '+evt.colorClass:'slot-label';
+          let html='<span class="slot-time">'+escapeHTML(fmtTimeRange(evt.startMin,evt.endMin))+'</span>';
+          html+='<span class="'+labelClass+'">'+escapeHTML(displayLabel)+'</span>';
+          const sub=evt.topic||evt.sub||'';
+          if(sub)html+='<span class="slot-sub">'+escapeHTML(sub)+'</span>';
+          s.innerHTML=html;col.appendChild(s);
+        });
+      }
       grid.appendChild(col);
     });
   }
@@ -292,7 +349,7 @@ const js = `
   document.getElementById('add-subject-btn').addEventListener('click',()=>addSubjectRow());
   document.getElementById('add-commit-btn').addEventListener('click',()=>addCommitmentRow());
   document.getElementById('has-school').addEventListener('change',()=>{document.getElementById('school-section').style.display=document.getElementById('has-school').checked?'block':'none'});
-  document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state.name);showTimetable()});
+  document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
 
   document.getElementById('print-btn').addEventListener('click',()=>{
