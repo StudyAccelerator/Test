@@ -12,14 +12,14 @@ export default function WorkshopLanding() {
   return (
     <main className="bg-brand-cream">
       {/* Minimal logo bar, no nav, to keep ad traffic focused */}
-      <header className="bg-brand-cream-dark border-b-4 border-brand-gold">
-        <div className="max-w-5xl mx-auto px-6 py-3 flex items-center justify-center">
+      <header className="bg-brand-cream-dark border-b-4 border-brand-gold h-24 overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-center">
           <Image
             src="/logo-header-new.png"
             alt="A-Level Accelerators"
-            width={220}
-            height={60}
-            className="h-16 w-auto"
+            width={450}
+            height={450}
+            className="h-64 w-auto"
             priority
             unoptimized
           />
