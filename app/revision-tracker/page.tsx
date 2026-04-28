@@ -76,29 +76,33 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 .tt-header h2{font-size:1.6rem;margin-bottom:0.35rem}
 .tt-header p{font-size:0.8rem;opacity:0.7;font-style:italic}
 #pdf-logo{display:none;height:55px;width:auto;margin-bottom:0.6rem}
-.week-wrap{background:#fff;border-radius:0 0 10px 10px;padding:1rem;box-shadow:0 1px 8px rgba(46,37,87,0.08);overflow-x:auto}
-.week-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:0.4rem}
-.day-col{display:flex;flex-direction:column;gap:0.3rem;min-width:0}
-.day-head{background:var(--purple);color:var(--cream);text-align:center;padding:0.5rem 0.3rem;border-radius:5px;font-size:0.72rem;font-weight:bold;letter-spacing:0.08em;text-transform:uppercase;font-family:Georgia,serif}
-.slot{border-radius:5px;padding:0.45rem 0.5rem;font-size:0.68rem;line-height:1.35;word-break:break-word}
-.slot-time{font-size:0.58rem;opacity:0.75;margin-bottom:0.15rem;display:block;font-weight:500}
-.slot-label{font-weight:bold;display:block;font-size:0.72rem}
-.slot-sub{font-size:0.6rem;opacity:0.8;font-style:italic;display:block;margin-top:0.18rem}
-.slot--deep{background:var(--purple);color:var(--cream)}
-.slot--recall{background:var(--purple-mid);color:#fff}
-.slot--review{background:var(--purple-soft);color:#fff}
-.slot--break{background:var(--cream-dark);color:#666}
-.slot--lunch{background:var(--cream-warm);color:#666}
-.slot--fixed{background:var(--slate);color:#fff}
-.slot--free{background:#f5f5f5;color:#bbb;text-align:center;font-size:0.6rem}
-.slot--none{background:#fafafa;color:#aaa;text-align:center;padding:1rem 0.5rem;border:1px dashed #ddd;font-style:italic;font-size:0.65rem}
-.slot-label{border-left:3px solid transparent;padding-left:0.3rem}
-.slot-label.subj-maths{border-left-color:var(--color-maths);color:var(--color-maths)}
-.slot-label.subj-biology{border-left-color:var(--color-biology);color:var(--color-biology)}
-.slot-label.subj-chemistry{border-left-color:var(--color-chemistry);color:var(--color-chemistry)}
-.slot-label.subj-physics{border-left-color:var(--color-physics);color:var(--color-physics)}
-.slot-label.subj-english{border-left-color:var(--color-english);color:var(--color-english)}
-.slot-label.subj-history{border-left-color:var(--color-history);color:var(--color-history)}
+.week-wrap{background:#fff;border-radius:0 0 10px 10px;padding:0.4rem;box-shadow:0 1px 8px rgba(46,37,87,0.08);overflow-x:auto}
+.week-grid{display:block;min-width:720px}
+.tt-header-row{display:flex;border-bottom:2px solid var(--cream-dark);position:sticky;top:0;z-index:5;background:#fff}
+.tt-axis-spacer{width:52px;flex-shrink:0;border-right:1px solid var(--cream-dark);background:#fff}
+.tt-day-head{flex:1;background:var(--purple);color:var(--cream);text-align:center;padding:0.5rem 0.3rem;font-size:0.72rem;font-weight:bold;letter-spacing:0.08em;text-transform:uppercase;font-family:Georgia,serif;min-width:88px;margin:0 1px;border-radius:5px 5px 0 0}
+.tt-body-row{display:flex;align-items:flex-start}
+.tt-axis{width:52px;flex-shrink:0;position:relative;border-right:1px solid var(--cream-dark);background:#fff}
+.tt-hour-label{position:absolute;right:6px;font-size:0.58rem;color:var(--muted);white-space:nowrap;transform:translateY(-50%);font-variant-numeric:tabular-nums;line-height:1}
+.tt-day-col{flex:1;position:relative;min-width:88px;background:#fbfaf6;border-right:1px solid rgba(200,200,200,0.3);margin:0 1px}
+.tt-day-col:last-child{border-right:none}
+.tt-hour-line{position:absolute;left:0;right:0;height:1px;background:rgba(190,190,190,0.45);pointer-events:none;z-index:0}
+.tt-slot{position:absolute;left:2px;right:2px;border-radius:4px;padding:3px 5px;overflow:hidden;box-sizing:border-box;z-index:1;min-height:16px;line-height:1.25;word-break:break-word}
+.tt-slot-time{font-size:0.5rem;opacity:0.8;display:block;font-weight:500;letter-spacing:0.01em}
+.tt-slot-label{font-weight:bold;display:block;font-size:0.62rem;border-left:3px solid transparent;padding-left:4px;margin-top:1px}
+.tt-slot-sub{font-size:0.52rem;opacity:0.85;font-style:italic;display:block;margin-top:1px}
+.tt-slot--deep{background:var(--purple);color:var(--cream)}
+.tt-slot--recall{background:var(--purple-mid);color:#fff}
+.tt-slot--review{background:var(--purple-soft);color:#fff}
+.tt-slot--break{background:var(--cream-dark);color:#5a5a5a}
+.tt-slot--lunch{background:var(--cream-warm);color:#5a5a5a;border:1px solid #d4c5a0}
+.tt-slot--fixed{background:var(--slate);color:#fff}
+.tt-slot-label.subj-maths{border-left-color:var(--color-maths)}
+.tt-slot-label.subj-biology{border-left-color:var(--color-biology)}
+.tt-slot-label.subj-chemistry{border-left-color:var(--color-chemistry)}
+.tt-slot-label.subj-physics{border-left-color:var(--color-physics)}
+.tt-slot-label.subj-english{border-left-color:var(--color-english)}
+.tt-slot-label.subj-history{border-left-color:var(--color-history)}
 .legend-wrap{margin-top:0.9rem;background:#fff;border-radius:8px;padding:0.9rem 1.1rem;box-shadow:0 1px 4px rgba(46,37,87,0.06)}
 .legend{display:flex;flex-wrap:wrap;gap:0.7rem 1.4rem}
 .legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:#555}
@@ -121,12 +125,14 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
   .tt-header p{font-size:0.7rem}
   #pdf-logo{display:block !important}
   .week-wrap{box-shadow:none;padding:0.3rem;overflow:visible}
-  .week-grid{grid-template-columns:repeat(7,1fr);gap:0.2rem;min-width:0}
-  .slot{font-size:0.55rem;padding:0.25rem 0.3rem}
-  .slot-time{font-size:0.48rem}
-  .slot-label{font-size:0.58rem}
-  .slot-sub{font-size:0.5rem}
-  .day-head{font-size:0.6rem;padding:0.3rem 0.15rem}
+  .week-grid{min-width:0}
+  .tt-header-row{position:static}
+  .tt-day-head{font-size:0.6rem;padding:0.3rem 0.15rem;min-width:0}
+  .tt-day-col{min-width:0}
+  .tt-slot{padding:2px 3px}
+  .tt-slot-time{font-size:0.46rem}
+  .tt-slot-label{font-size:0.56rem}
+  .tt-slot-sub{font-size:0.48rem}
   @page{size:A4 landscape;margin:0.8cm}
 }
 @media (max-width:640px){
@@ -312,33 +318,66 @@ const js = `
   }
 
   function renderTimetable(week,state,name){
+    const PX_PER_MIN=1.2;
     document.getElementById('tt-heading').textContent=name?(name+"'s Week"):'Your Week';
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const CUTOFF=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const totalMins=CUTOFF-wakeMin;
+    const totalH=Math.round(totalMins*PX_PER_MIN);
     const grid=document.getElementById('week-grid');grid.innerHTML='';
+
+    const hrow=document.createElement('div');hrow.className='tt-header-row';
+    const spacer=document.createElement('div');spacer.className='tt-axis-spacer';hrow.appendChild(spacer);
     week.forEach(function(day){
-      const col=document.createElement('div');col.className='day-col';
-      const head=document.createElement('div');head.className='day-head';head.innerHTML=DAY_SHORT[day.dayName];col.appendChild(head);
-      if(!day.events||day.events.length===0){
-        const s=document.createElement('div');s.className='slot slot--none';
-        s.innerHTML='<span class="slot-label">No study slots</span>';
-        col.appendChild(s);
-      }else{
-        day.events.forEach(function(evt){
-          const s=document.createElement('div');s.className='slot slot--'+evt.type;
-          let displayLabel='';
-          if(evt.type==='deep')displayLabel=evt.subject;
-          else if(evt.type==='recall')displayLabel='Recall: '+evt.subject;
-          else if(evt.type==='review')displayLabel='Review: '+evt.subject;
-          else displayLabel=evt.label||evt.subject||'';
-          const labelClass=evt.colorClass?'slot-label '+evt.colorClass:'slot-label';
-          let html='<span class="slot-time">'+escapeHTML(fmtTimeRange(evt.startMin,evt.endMin))+'</span>';
-          html+='<span class="'+labelClass+'">'+escapeHTML(displayLabel)+'</span>';
-          const sub=evt.topic||evt.sub||'';
-          if(sub)html+='<span class="slot-sub">'+escapeHTML(sub)+'</span>';
-          s.innerHTML=html;col.appendChild(s);
-        });
-      }
-      grid.appendChild(col);
+      const h=document.createElement('div');h.className='tt-day-head';h.textContent=DAY_SHORT[day.dayName];hrow.appendChild(h);
     });
+    grid.appendChild(hrow);
+
+    const bodyRow=document.createElement('div');bodyRow.className='tt-body-row';
+
+    const axis=document.createElement('div');axis.className='tt-axis';axis.style.height=totalH+'px';
+    const startHour=Math.ceil(wakeMin/60);
+    const endHour=Math.floor(CUTOFF/60);
+    for(let h=startHour;h<=endHour;h++){
+      const topPx=Math.round((h*60-wakeMin)*PX_PER_MIN);
+      const lbl=document.createElement('div');lbl.className='tt-hour-label';lbl.style.top=topPx+'px';
+      lbl.textContent=String(((h%24)+24)%24).padStart(2,'0')+':00';
+      axis.appendChild(lbl);
+    }
+    bodyRow.appendChild(axis);
+
+    week.forEach(function(day){
+      const col=document.createElement('div');col.className='tt-day-col';col.style.height=totalH+'px';
+      for(let hh=startHour;hh<=endHour;hh++){
+        const ltp=Math.round((hh*60-wakeMin)*PX_PER_MIN);
+        const line=document.createElement('div');line.className='tt-hour-line';line.style.top=ltp+'px';
+        col.appendChild(line);
+      }
+      day.events.forEach(function(evt){
+        const top=Math.round((evt.startMin-wakeMin)*PX_PER_MIN);
+        const height=Math.max(16,Math.round((evt.endMin-evt.startMin)*PX_PER_MIN));
+        const slot=document.createElement('div');
+        slot.className='tt-slot tt-slot--'+evt.type;
+        slot.style.top=top+'px';slot.style.height=height+'px';
+
+        let displayLabel='';
+        if(evt.type==='deep')displayLabel=evt.subject;
+        else if(evt.type==='recall')displayLabel='Recall: '+evt.subject;
+        else if(evt.type==='review')displayLabel='Review: '+evt.subject;
+        else displayLabel=evt.label||evt.subject||'';
+
+        const labelClass=evt.colorClass?'tt-slot-label '+evt.colorClass:'tt-slot-label';
+        let html='<span class="tt-slot-time">'+escapeHTML(fmtTimeRange(evt.startMin,evt.endMin))+'</span>';
+        html+='<span class="'+labelClass+'">'+escapeHTML(displayLabel)+'</span>';
+        const sub=evt.topic||evt.sub||'';
+        if(sub&&height>=40)html+='<span class="tt-slot-sub">'+escapeHTML(sub)+'</span>';
+        slot.innerHTML=html;col.appendChild(slot);
+      });
+      bodyRow.appendChild(col);
+    });
+
+    grid.appendChild(bodyRow);
   }
 
   function showTimetable(){document.getElementById('questionnaire-section').style.display='none';document.getElementById('timetable-section').style.display='block';document.querySelector('.container').classList.add('container--wide');window.scrollTo({top:0,behavior:'smooth'})}
@@ -357,9 +396,12 @@ const js = `
     const element=document.getElementById('timetable-section');
     const name=document.getElementById('student-name').value.trim()||'revision-timetable';
     const pdfLogo=document.getElementById('pdf-logo');
+    const weekWrap=document.querySelector('.week-wrap');
+    const prevOverflow=weekWrap?weekWrap.style.overflow:'';
     if(pdfLogo)pdfLogo.style.display='block';
+    if(weekWrap)weekWrap.style.overflow='visible';
     window.scrollTo(0,0);
-    html2pdf().set({margin:[8,5,8,5],filename:name+'-revision-plan.pdf',image:{type:'jpeg',quality:0.96},html2canvas:{scale:1.4,useCORS:true,logging:false,scrollY:0,windowWidth:1400,allowTaint:true},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'},pagebreak:{mode:['avoid-all','css'],avoid:'.day-col'}}).from(element).save().then(()=>{if(pdfLogo)pdfLogo.style.display='none'});
+    html2pdf().set({margin:[8,5,8,5],filename:name+'-revision-plan.pdf',image:{type:'jpeg',quality:0.96},html2canvas:{scale:1.2,useCORS:true,logging:false,scrollY:0,windowWidth:1400,allowTaint:true},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'},pagebreak:{mode:['avoid-all','css'],avoid:'.tt-day-col'}}).from(element).save().then(()=>{if(pdfLogo)pdfLogo.style.display='none';if(weekWrap)weekWrap.style.overflow=prevOverflow});
   });
 })();
 `
