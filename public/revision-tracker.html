@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Top 1% Revision Tracker</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Revision Tracker — A-Level Accelerators</title>
+<link rel="icon" href="/favicon.png">
 <style>
 :root{
   --purple:#2E2557;
@@ -17,350 +18,106 @@
   --slate:#A0A0B8;
   --text:#1a1535;
   --muted:#777;
+  --color-maths:#D4573E;
+  --color-biology:#2E7D32;
+  --color-chemistry:#1565C0;
+  --color-physics:#6A3D6A;
+  --color-english:#8B4513;
+  --color-history:#C4622D;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
-  background:var(--cream);
-  color:var(--text);
-  min-height:100vh;
-  line-height:1.5;
-}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--text);min-height:100vh;line-height:1.5}
 h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
-
-/* Header */
-.site-header{
-  background:var(--purple);
-  color:var(--cream);
-  padding:2.5rem 1.5rem 2rem;
-  text-align:center;
-}
-.badge{
-  display:inline-block;
-  font-size:0.65rem;
-  letter-spacing:0.22em;
-  text-transform:uppercase;
-  border:1px solid var(--gold);
-  color:var(--gold);
-  padding:0.3rem 0.9rem;
-  border-radius:20px;
-  margin-bottom:0.9rem;
-}
-.site-header h1{font-size:2rem;letter-spacing:0.03em;margin-bottom:0.5rem}
-.site-header p{font-size:0.9rem;opacity:0.75;font-style:italic}
-
-/* Container */
+.logo{height:45px;width:auto;margin-bottom:1rem}
+.badge{display:inline-block;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:0.3rem 0.9rem;border-radius:20px;margin-bottom:0.9rem}
 .container{max-width:940px;margin:0 auto;padding:2rem 1.2rem 3rem}
-
-/* Intro */
-.intro{
-  background:var(--purple);
-  color:var(--cream);
-  border-radius:10px;
-  padding:1.1rem 1.3rem;
-  margin-bottom:1.5rem;
-  font-size:0.9rem;
-  line-height:1.65;
-}
+.container--wide{max-width:1400px}
+.intro{background:var(--purple);color:var(--cream);border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.5rem;font-size:0.9rem;line-height:1.65}
 .intro strong{display:block;margin-bottom:0.35rem;font-size:1rem;color:var(--gold)}
-
-/* Cards */
-.card{
-  background:#fff;
-  border-radius:10px;
-  padding:1.5rem;
-  margin-bottom:1.3rem;
-  box-shadow:0 1px 8px rgba(46,37,87,0.08);
-  border-left:4px solid var(--purple);
-  position:relative;
-}
-.card-title{
-  font-size:1.15rem;
-  color:var(--purple);
-  font-weight:bold;
-  margin-bottom:0.35rem;
-  padding-bottom:0.65rem;
-  border-bottom:2px solid var(--cream);
-}
-.card-subtitle{
-  font-size:0.82rem;
-  color:var(--muted);
-  margin-bottom:1.1rem;
-  font-style:italic;
-}
-.card-num{
-  position:absolute;
-  top:-12px;
-  left:-12px;
-  width:28px;
-  height:28px;
-  background:var(--gold);
-  color:var(--purple);
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  font-family:Georgia,serif;
-  font-weight:bold;
-  font-size:0.95rem;
-  box-shadow:0 2px 4px rgba(0,0,0,0.1);
-}
-
-/* Form */
-label{
-  display:block;
-  font-size:0.8rem;
-  font-weight:600;
-  color:var(--purple);
-  margin-bottom:0.3rem;
-  letter-spacing:0.02em;
-}
-input[type="text"],input[type="time"],select{
-  width:100%;
-  padding:0.6rem 0.75rem;
-  border:1.5px solid var(--cream-dark);
-  border-radius:6px;
-  font-family:inherit;
-  font-size:0.92rem;
-  background:var(--cream);
-  color:var(--text);
-  margin-bottom:0.9rem;
-  transition:border-color 0.2s,background 0.2s;
-  -webkit-appearance:none;
-  appearance:none;
-}
-select{
-  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232E2557' d='M0 0l5 6 5-6z'/></svg>");
-  background-repeat:no-repeat;
-  background-position:right 0.75rem center;
-  padding-right:2rem;
-}
+.card{background:#fff;border-radius:10px;padding:1.5rem;margin-bottom:1.3rem;box-shadow:0 1px 8px rgba(46,37,87,0.08);border-left:4px solid var(--purple);position:relative}
+.card-title{font-size:1.15rem;color:var(--purple);font-weight:bold;margin-bottom:0.35rem;padding-bottom:0.65rem;border-bottom:2px solid var(--cream)}
+.card-subtitle{font-size:0.82rem;color:var(--muted);margin-bottom:1.1rem;font-style:italic}
+.card-num{position:absolute;top:-12px;left:-12px;width:28px;height:28px;background:var(--gold);color:var(--purple);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:bold;font-size:0.95rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
+label{display:block;font-size:0.8rem;font-weight:600;color:var(--purple);margin-bottom:0.3rem;letter-spacing:0.02em}
+input[type="text"],input[type="time"],select{width:100%;padding:0.6rem 0.75rem;border:1.5px solid var(--cream-dark);border-radius:6px;font-family:inherit;font-size:0.92rem;background:var(--cream);color:var(--text);margin-bottom:0.9rem;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;appearance:none}
+select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232E2557' d='M0 0l5 6 5-6z'/></svg>");background-repeat:no-repeat;background-position:right 0.75rem center;padding-right:2rem}
 input:focus,select:focus{outline:none;border-color:var(--purple);background:#fff}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .help-text{font-size:0.78rem;color:var(--muted);font-style:italic;margin-top:-0.4rem;margin-bottom:0.8rem}
-.info-line{
-  font-size:0.82rem;
-  color:var(--purple);
-  background:var(--cream);
-  padding:0.6rem 0.9rem;
-  border-radius:6px;
-  border-left:3px solid var(--gold);
-  margin-top:0.3rem;
-}
-
-/* Dynamic rows */
-.item-row{
-  background:var(--cream);
-  border:1px solid var(--cream-dark);
-  border-radius:8px;
-  padding:1rem 2.6rem 1rem 1rem;
-  margin-bottom:0.75rem;
-  position:relative;
-}
-.remove-btn{
-  position:absolute;
-  top:0.75rem;
-  right:0.75rem;
-  width:24px;
-  height:24px;
-  border-radius:50%;
-  border:none;
-  background:rgba(46,37,87,0.1);
-  color:var(--purple);
-  font-size:1rem;
-  cursor:pointer;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  line-height:1;
-  transition:background 0.2s,color 0.2s;
-}
+.sleep-error{display:none;background:#fee2e2;color:#991b1b;font-size:0.78rem;padding:0.5rem 0.75rem;border-radius:5px;margin-top:-0.5rem;margin-bottom:0.8rem;border-left:3px solid #ef4444}
+.info-line{font-size:0.82rem;color:var(--purple);background:var(--cream);padding:0.6rem 0.9rem;border-radius:6px;border-left:3px solid var(--gold);margin-top:0.3rem}
+.item-row{background:var(--cream);border:1px solid var(--cream-dark);border-radius:8px;padding:1rem 2.6rem 1rem 1rem;margin-bottom:0.75rem;position:relative}
+.remove-btn{position:absolute;top:0.75rem;right:0.75rem;width:24px;height:24px;border-radius:50%;border:none;background:rgba(46,37,87,0.1);color:var(--purple);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:background 0.2s,color 0.2s}
 .remove-btn:hover{background:#cc3333;color:#fff}
-
-/* Slider */
 .slider-wrap{margin-bottom:0.5rem}
 .slider-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:0.3rem}
 .slider-head label{margin:0}
-.conf-badge{
-  background:var(--purple);
-  color:var(--cream);
-  font-size:0.7rem;
-  padding:0.15rem 0.55rem;
-  border-radius:10px;
-  min-width:2.5rem;
-  text-align:center;
-  font-weight:bold;
-}
-input[type="range"]{
-  -webkit-appearance:none;
-  appearance:none;
-  width:100%;
-  height:5px;
-  background:var(--cream-dark);
-  border-radius:3px;
-  padding:0;
-  margin-bottom:0.2rem;
-  cursor:pointer;
-}
-input[type="range"]::-webkit-slider-thumb{
-  -webkit-appearance:none;
-  width:18px;
-  height:18px;
-  background:var(--purple);
-  border-radius:50%;
-  cursor:pointer;
-  border:2px solid #fff;
-  box-shadow:0 1px 3px rgba(0,0,0,0.2);
-}
-input[type="range"]::-moz-range-thumb{
-  width:18px;height:18px;
-  background:var(--purple);
-  border-radius:50%;
-  cursor:pointer;
-  border:2px solid #fff;
-}
+.conf-badge{background:var(--purple);color:var(--cream);font-size:0.7rem;padding:0.15rem 0.55rem;border-radius:10px;min-width:2.5rem;text-align:center;font-weight:bold}
+input[type="range"]{-webkit-appearance:none;appearance:none;width:100%;height:5px;background:var(--cream-dark);border-radius:3px;padding:0;margin-bottom:0.2rem;cursor:pointer}
+input[type="range"]::-webkit-slider-thumb{-webkit-appearance:none;width:18px;height:18px;background:var(--purple);border-radius:50%;cursor:pointer;border:2px solid #fff;box-shadow:0 1px 3px rgba(0,0,0,0.2)}
+input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--purple);border-radius:50%;cursor:pointer;border:2px solid #fff}
 .slider-labels{display:flex;justify-content:space-between;font-size:0.65rem;color:#aaa;margin-top:0.2rem}
-
-/* Commitment grid */
 .commit-grid{display:grid;grid-template-columns:1.3fr 0.8fr 0.8fr 1.5fr;gap:0.5rem}
-
-/* Add button */
-.add-btn{
-  width:100%;
-  padding:0.7rem 1rem;
-  border:2px dashed rgba(46,37,87,0.3);
-  background:transparent;
-  color:var(--purple);
-  border-radius:7px;
-  font-family:inherit;
-  font-size:0.88rem;
-  font-weight:600;
-  cursor:pointer;
-  transition:all 0.2s;
-}
+.topics-list{display:flex;flex-wrap:wrap;gap:0.6rem;margin-bottom:0.75rem}
+.topic-tag{display:inline-flex;align-items:center;gap:0.4rem;background:var(--purple);color:var(--cream);padding:0.4rem 0.8rem;border-radius:20px;font-size:0.8rem;font-weight:500}
+.topic-tag button{background:transparent;border:none;color:var(--cream);cursor:pointer;font-size:1rem;padding:0;line-height:1}
+.topic-tag button:hover{color:#ff6b6b}
+.add-topic-inline{display:inline-flex;gap:0.4rem;margin-bottom:0.75rem}
+.add-topic-inline input{flex:1;min-width:150px;padding:0.5rem 0.6rem;border:1.5px solid var(--cream-dark);border-radius:5px;font-size:0.85rem}
+.add-topic-inline button{padding:0.5rem 0.9rem;background:var(--purple);color:var(--cream);border:none;border-radius:5px;cursor:pointer;font-size:0.8rem;font-weight:600;transition:background 0.2s}
+.add-topic-inline button:hover{background:var(--purple-light)}
+.help-text-topics{font-size:0.75rem;color:var(--muted);font-style:italic;margin-top:-0.5rem;margin-bottom:0.8rem}
+.add-btn{width:100%;padding:0.7rem 1rem;border:2px dashed rgba(46,37,87,0.3);background:transparent;color:var(--purple);border-radius:7px;font-family:inherit;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.2s}
 .add-btn:hover{border-color:var(--purple);background:var(--purple);color:var(--cream)}
-
-/* Generate button */
-.generate-btn{
-  width:100%;
-  padding:1.05rem;
-  background:var(--purple);
-  color:var(--cream);
-  border:none;
-  border-radius:8px;
-  font-family:Georgia,serif;
-  font-size:1.08rem;
-  letter-spacing:0.05em;
-  cursor:pointer;
-  transition:background 0.2s,transform 0.1s;
-  margin-top:0.5rem;
-  box-shadow:0 2px 8px rgba(46,37,87,0.2);
-}
-.generate-btn:hover{background:var(--purple-light)}
-.generate-btn:active{transform:translateY(1px)}
-
-/* Timetable section */
+.generate-btn{width:100%;padding:1.05rem;background:var(--purple);color:var(--cream);border:none;border-radius:8px;font-family:Georgia,serif;font-size:1.08rem;letter-spacing:0.05em;cursor:pointer;transition:background 0.2s,transform 0.1s;margin-top:0.5rem;box-shadow:0 2px 8px rgba(46,37,87,0.2)}
+.generate-btn:hover:not(:disabled){background:var(--purple-light)}
+.generate-btn:active:not(:disabled){transform:translateY(1px)}
+.generate-btn:disabled{opacity:0.5;cursor:not-allowed}
 #timetable-section{display:none}
-.tt-header{
-  background:var(--purple);
-  color:var(--cream);
-  border-radius:10px 10px 0 0;
-  padding:1.5rem 1.5rem 1.3rem;
-  text-align:center;
-}
+.tt-header{background:var(--purple);color:var(--cream);border-radius:10px 10px 0 0;padding:1.5rem 1.5rem 1.3rem;text-align:center}
 .tt-header h2{font-size:1.6rem;margin-bottom:0.35rem}
 .tt-header p{font-size:0.8rem;opacity:0.7;font-style:italic}
-
-.week-wrap{
-  background:#fff;
-  border-radius:0 0 10px 10px;
-  padding:1rem;
-  box-shadow:0 1px 8px rgba(46,37,87,0.08);
-  overflow-x:auto;
-}
-.week-grid{
-  display:grid;
-  grid-template-columns:repeat(7,minmax(125px,1fr));
-  gap:0.45rem;
-  min-width:max-content;
-}
-.day-col{display:flex;flex-direction:column;gap:0.3rem;min-width:0}
-.day-head{
-  background:var(--purple);
-  color:var(--cream);
-  text-align:center;
-  padding:0.5rem 0.3rem;
-  border-radius:5px;
-  font-size:0.72rem;
-  font-weight:bold;
-  letter-spacing:0.08em;
-  text-transform:uppercase;
-  font-family:Georgia,serif;
-}
-
-/* Slots */
-.slot{
-  border-radius:5px;
-  padding:0.45rem 0.5rem;
-  font-size:0.68rem;
-  line-height:1.35;
-  word-break:break-word;
-}
-.slot-time{font-size:0.58rem;opacity:0.75;margin-bottom:0.15rem;display:block;font-weight:500}
-.slot-label{font-weight:bold;display:block;font-size:0.72rem}
-.slot-sub{font-size:0.6rem;opacity:0.8;font-style:italic;display:block;margin-top:0.18rem}
-.slot--deep{background:var(--purple);color:var(--cream)}
-.slot--recall{background:var(--purple-mid);color:#fff}
-.slot--review{background:var(--purple-soft);color:#fff}
-.slot--break{background:var(--cream-dark);color:#666}
-.slot--lunch{background:var(--cream-warm);color:#666}
-.slot--fixed{background:var(--slate);color:#fff}
-.slot--free{background:#f5f5f5;color:#bbb;text-align:center;font-size:0.6rem}
-.slot--none{background:#fafafa;color:#aaa;text-align:center;padding:1rem 0.5rem;border:1px dashed #ddd;font-style:italic;font-size:0.65rem}
-
-/* Legend */
-.legend-wrap{
-  margin-top:0.9rem;
-  background:#fff;
-  border-radius:8px;
-  padding:0.9rem 1.1rem;
-  box-shadow:0 1px 4px rgba(46,37,87,0.06);
-}
+#pdf-logo{display:none;height:55px;width:auto;margin-bottom:0.6rem}
+.week-wrap{background:#fff;border-radius:0 0 10px 10px;padding:0.4rem;box-shadow:0 1px 8px rgba(46,37,87,0.08);overflow-x:auto}
+.week-grid{display:block;min-width:720px}
+.tt-header-row{display:flex;border-bottom:2px solid var(--cream-dark);position:sticky;top:0;z-index:5;background:#fff}
+.tt-axis-spacer{width:52px;flex-shrink:0;border-right:1px solid var(--cream-dark);background:#fff}
+.tt-day-head{flex:1;background:var(--purple);color:var(--cream);text-align:center;padding:0.5rem 0.3rem;font-size:0.72rem;font-weight:bold;letter-spacing:0.08em;text-transform:uppercase;font-family:Georgia,serif;min-width:88px;margin:0 1px;border-radius:5px 5px 0 0}
+.tt-body-row{display:flex;align-items:flex-start}
+.tt-axis{width:52px;flex-shrink:0;position:relative;border-right:1px solid var(--cream-dark);background:#fff}
+.tt-hour-label{position:absolute;right:6px;font-size:0.58rem;color:var(--muted);white-space:nowrap;transform:translateY(-50%);font-variant-numeric:tabular-nums;line-height:1}
+.tt-day-col{flex:1;position:relative;min-width:88px;background:#fbfaf6;border-right:1px solid rgba(200,200,200,0.3);margin:0 1px}
+.tt-day-col:last-child{border-right:none}
+.tt-hour-line{position:absolute;left:0;right:0;height:1px;background:rgba(190,190,190,0.45);pointer-events:none;z-index:0}
+.tt-slot{position:absolute;left:2px;right:2px;border-radius:3px;padding:2px 3px;overflow:hidden;box-sizing:border-box;z-index:1;min-height:14px;line-height:1.2;word-break:break-word}
+.tt-slot-time{font-size:0.48rem;opacity:0.75;display:block;font-weight:500;letter-spacing:0em}
+.tt-slot-label{font-weight:bold;display:block;font-size:0.60rem;border-left:2px solid transparent;padding-left:3px;margin-top:0.5px}
+.tt-slot-sub{font-size:0.50rem;opacity:0.8;font-style:italic;display:block;margin-top:0.5px}
+.tt-slot--deep{background:#1E40AF;color:#fff}
+.tt-slot--recall{background:#15803D;color:#fff}
+.tt-slot--review{background:#B45309;color:#fff}
+.tt-slot--break{background:var(--cream-dark);color:#5a5a5a}
+.tt-slot--lunch{background:var(--cream-warm);color:#5a5a5a;border:1px solid #d4c5a0}
+.tt-slot--fixed{background:var(--slate);color:#fff}
+.tt-slot--free{background:#f5f5f5;color:#999;font-style:italic;border:1px dashed #ddd}
+.tt-slot-label.subj-maths{border-left-color:var(--color-maths)}
+.tt-slot-label.subj-biology{border-left-color:var(--color-biology)}
+.tt-slot-label.subj-chemistry{border-left-color:var(--color-chemistry)}
+.tt-slot-label.subj-physics{border-left-color:var(--color-physics)}
+.tt-slot-label.subj-english{border-left-color:var(--color-english)}
+.tt-slot-label.subj-history{border-left-color:var(--color-history)}
+.legend-wrap{margin-top:0.9rem;background:#fff;border-radius:8px;padding:0.9rem 1.1rem;box-shadow:0 1px 4px rgba(46,37,87,0.06)}
 .legend{display:flex;flex-wrap:wrap;gap:0.7rem 1.4rem}
 .legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:#555}
 .legend-dot{width:12px;height:12px;border-radius:3px;flex-shrink:0}
-
-/* Tips */
-.tips{
-  background:var(--purple);
-  color:var(--cream);
-  border-radius:8px;
-  padding:1.1rem 1.3rem;
-  margin-top:1rem;
-  font-size:0.85rem;
-  line-height:1.7;
-}
+.tips{background:var(--purple);color:var(--cream);border-radius:8px;padding:1.1rem 1.3rem;margin-top:1rem;font-size:0.85rem;line-height:1.7}
 .tips strong{display:block;margin-bottom:0.35rem;color:var(--gold);font-size:0.95rem}
-
-/* Actions */
 .action-row{display:flex;gap:0.9rem;margin-top:1.3rem}
-.btn-outline,.btn-solid{
-  flex:1;
-  padding:0.85rem 1rem;
-  border-radius:7px;
-  font-family:inherit;
-  font-size:0.92rem;
-  font-weight:600;
-  cursor:pointer;
-  transition:all 0.2s;
-}
+.btn-outline,.btn-solid{flex:1;padding:0.85rem 1rem;border-radius:7px;font-family:inherit;font-size:0.92rem;font-weight:600;cursor:pointer;transition:all 0.2s}
 .btn-outline{background:transparent;border:2px solid var(--purple);color:var(--purple)}
 .btn-outline:hover{background:var(--purple);color:var(--cream)}
 .btn-solid{background:var(--purple);color:var(--cream);border:none}
 .btn-solid:hover{background:var(--purple-light)}
-
-/* Print */
 @media print{
   body{background:#fff}
   .site-header,#questionnaire-section,.action-row,.tips,.legend-wrap{display:none !important}
@@ -369,21 +126,21 @@ input[type="range"]::-moz-range-thumb{
   .tt-header{border-radius:0;padding:0.8rem}
   .tt-header h2{font-size:1.2rem}
   .tt-header p{font-size:0.7rem}
+  #pdf-logo{display:block !important}
   .week-wrap{box-shadow:none;padding:0.3rem;overflow:visible}
-  .week-grid{grid-template-columns:repeat(7,1fr);gap:0.2rem;min-width:0}
-  .slot{font-size:0.55rem;padding:0.25rem 0.3rem}
-  .slot-time{font-size:0.48rem}
-  .slot-label{font-size:0.58rem}
-  .slot-sub{font-size:0.5rem}
-  .day-head{font-size:0.6rem;padding:0.3rem 0.15rem}
+  .week-grid{min-width:0}
+  .tt-header-row{position:static}
+  .tt-day-head{font-size:0.6rem;padding:0.3rem 0.15rem;min-width:0}
+  .tt-day-col{min-width:0}
+  .tt-slot{padding:2px 3px}
+  .tt-slot-time{font-size:0.46rem}
+  .tt-slot-label{font-size:0.56rem}
+  .tt-slot-sub{font-size:0.48rem}
   @page{size:A4 landscape;margin:0.8cm}
 }
-
-/* Responsive */
 @media (max-width:640px){
   .two-col{grid-template-columns:1fr}
   .commit-grid{grid-template-columns:1fr 1fr;gap:0.6rem}
-  .site-header h1{font-size:1.55rem}
   .container{padding:1.5rem 1rem 2rem}
   .card{padding:1.2rem}
 }
@@ -391,422 +148,530 @@ input[type="range"]::-moz-range-thumb{
 </head>
 <body>
 
-<header class="site-header">
-  <div class="badge">Free Workshop Gift</div>
-  <h1>Your A-Level Revision Tracker</h1>
-  <p>Answer a few questions. Get your personalised weekly plan.</p>
+<header style="background:var(--cream);border-bottom:1px solid var(--cream-dark);padding:0.7rem 1.2rem">
+  <a href="/" style="display:inline-block">
+    <img src="/logo-header.png" alt="A-Level Accelerators" style="height:38px;width:auto;display:block">
+  </a>
 </header>
 
 <div class="container">
 
-<!-- QUESTIONNAIRE -->
-<section id="questionnaire-section">
-
-  <div class="intro">
-    <strong>How this works</strong>
-    Tell us your subjects, the topics you want to prioritise this week, your confidence in each, and anything fixed in your schedule. We'll build a timetable with 90-minute deep-work blocks — your hardest material scheduled at your peak energy times.
-  </div>
-
-  <!-- Card 1 -->
-  <div class="card">
-    <div class="card-num">1</div>
-    <h2 class="card-title">About You</h2>
-    <p class="card-subtitle">Just the basics. Used to shape your day.</p>
-
-    <label for="student-name">First name (optional)</label>
-    <input type="text" id="student-name" placeholder="e.g. Aisha" maxlength="30">
-
-    <label for="wake-time">Wake-up time</label>
-    <input type="time" id="wake-time" value="07:00">
-
-    <div class="info-line">Study cut-off is fixed at <strong>9:00 PM</strong> — non-negotiable. Sleep is part of the system.</div>
-  </div>
-
-  <!-- Card 2 -->
-  <div class="card">
-    <div class="card-num">2</div>
-    <h2 class="card-title">Your Subjects</h2>
-    <p class="card-subtitle">Add each A-Level. Rate your confidence honestly — this decides when each subject gets scheduled.</p>
-
-    <div id="subjects-list"></div>
-    <button type="button" class="add-btn" id="add-subject-btn">+ Add Subject</button>
-  </div>
-
-  <!-- Card 3 -->
-  <div class="card">
-    <div class="card-num">3</div>
-    <h2 class="card-title">Fixed Commitments</h2>
-    <p class="card-subtitle">Anything you can't move — school, job, sport, family, rest. These get blocked out automatically.</p>
-
-    <div id="commitments-list"></div>
-    <button type="button" class="add-btn" id="add-commit-btn">+ Add Commitment</button>
-  </div>
-
-  <button type="button" class="generate-btn" id="generate-btn">Generate My Revision Plan →</button>
-</section>
-
-<!-- TIMETABLE -->
-<section id="timetable-section">
-  <div class="tt-header">
-    <div class="badge">Your Personal Plan</div>
-    <h2 id="tt-heading">Your Week</h2>
-    <p>90-minute deep-work blocks · 15-minute breaks · Study cut-off 9:00 PM</p>
-  </div>
-
-  <div class="week-wrap">
-    <div class="week-grid" id="week-grid"></div>
-  </div>
-
-  <div class="legend-wrap">
-    <div class="legend">
-      <div class="legend-item"><span class="legend-dot" style="background:#2E2557"></span> Deep Work</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#7B6FA0"></span> Active Recall</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#9E8BC0"></span> Light Review</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#E8D9BF"></span> Break</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#f0e8d5"></span> Lunch</div>
-      <div class="legend-item"><span class="legend-dot" style="background:#A0A0B8"></span> Fixed Commitment</div>
+  <section id="questionnaire-section">
+    <div class="intro">
+      <strong>How this works</strong>
+      Tell us your subjects, the topics you want to prioritise this week, your confidence in each, and anything fixed in your schedule. We'll build a timetable with 90-minute deep-work blocks with your hardest material scheduled at your peak energy times.
     </div>
-  </div>
 
-  <div class="tips">
-    <strong>How to use this plan</strong>
-    Deep Work slots are for your hardest, highest-priority topics — phone in another room, no distractions. Active Recall slots are for past papers, blurting, and Anki. Light Review is for consolidating notes. Always take your breaks — they're part of the system, not a reward.
-  </div>
+    <div class="card">
+      <div class="card-num">1</div>
+      <h2 class="card-title">About You</h2>
+      <p class="card-subtitle">Just the basics. Used to shape your day.</p>
+      <label for="student-name">First name (optional)</label>
+      <input type="text" id="student-name" placeholder="e.g. Aisha" maxlength="30">
+      <label for="wake-time">Wake-up time</label>
+      <input type="time" id="wake-time" value="07:00">
+      <label for="breakfast-time">Breakfast time</label>
+      <input type="time" id="breakfast-time" value="07:30">
+      <label for="lunch-time">Lunch time</label>
+      <input type="time" id="lunch-time" value="12:00">
+      <label for="dinner-time">Dinner time</label>
+      <input type="time" id="dinner-time" value="18:00">
+      <label for="sleep-time">Sleep time (target bedtime)</label>
+      <input type="time" id="sleep-time" value="23:00">
+      <div id="sleep-time-error" class="sleep-error"></div>
+      <div class="info-line">Sleep is part of the system. Your wake time and sleep time must be at least <strong>8 hours apart</strong>. This is non-negotiable and ensures you're getting the rest you need to perform at your best.</div>
+    </div>
 
-  <div class="action-row">
-    <button type="button" class="btn-outline" id="edit-btn">← Edit My Answers</button>
-    <button type="button" class="btn-solid" id="print-btn">Print / Save as PDF</button>
-  </div>
-</section>
+    <div class="card">
+      <div class="card-num">1b</div>
+      <h2 class="card-title">School This Week</h2>
+      <p class="card-subtitle">Do you have school this week? If yes, select which days and the hours (including commuting).</p>
+      <label style="margin-bottom:0.5rem">
+        <input type="checkbox" id="has-school" style="margin-right:0.5rem">
+        <span style="font-size:0.9rem">I have school this week</span>
+      </label>
+      <div id="school-section" style="display:none">
+        <p style="font-size:0.85rem;color:var(--muted);margin-bottom:0.8rem">Select which days you have school and enter your hours (include commuting time):</p>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:0.6rem;margin-bottom:1rem">
+          <label style="display:flex;align-items:center;margin-bottom:0;font-size:0.9rem"><input type="checkbox" class="school-day" value="Monday" style="margin-right:0.4rem">Monday</label>
+          <label style="display:flex;align-items:center;margin-bottom:0;font-size:0.9rem"><input type="checkbox" class="school-day" value="Tuesday" style="margin-right:0.4rem">Tuesday</label>
+          <label style="display:flex;align-items:center;margin-bottom:0;font-size:0.9rem"><input type="checkbox" class="school-day" value="Wednesday" style="margin-right:0.4rem">Wednesday</label>
+          <label style="display:flex;align-items:center;margin-bottom:0;font-size:0.9rem"><input type="checkbox" class="school-day" value="Thursday" style="margin-right:0.4rem">Thursday</label>
+          <label style="display:flex;align-items:center;margin-bottom:0;font-size:0.9rem"><input type="checkbox" class="school-day" value="Friday" style="margin-right:0.4rem">Friday</label>
+        </div>
+        <div class="two-col">
+          <div><label for="school-start">School start time</label><input type="time" id="school-start" value="08:30"></div>
+          <div><label for="school-end">School end time (+ commute)</label><input type="time" id="school-end" value="16:00"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-num">2</div>
+      <h2 class="card-title">Your Subjects</h2>
+      <p class="card-subtitle">Add each A-Level. Rate your confidence honestly — this decides when each subject gets scheduled.</p>
+      <div id="subjects-list"></div>
+      <button type="button" class="add-btn" id="add-subject-btn">+ Add Subject</button>
+    </div>
+
+    <div class="card">
+      <div class="card-num">3</div>
+      <h2 class="card-title">Fixed Commitments</h2>
+      <p class="card-subtitle">Anything you can't move — school, job, sport, family, rest. These get blocked out automatically.</p>
+      <div id="commitments-list"></div>
+      <button type="button" class="add-btn" id="add-commit-btn">+ Add Commitment</button>
+    </div>
+
+    <button type="button" class="generate-btn" id="generate-btn">Generate My Revision Plan →</button>
+  </section>
+
+  <section id="timetable-section">
+    <div class="tt-header">
+      <img id="pdf-logo" src="/logo-header.png" alt="A-Level Accelerators" crossorigin="anonymous">
+      <div class="badge">Your Personal Plan</div>
+      <h2 id="tt-heading">Your Week</h2>
+      <p>Deep Work · Active Recall · Light Review · Breaks</p>
+    </div>
+
+    <div class="week-wrap">
+      <div class="week-grid" id="week-grid"></div>
+    </div>
+
+    <div class="legend-wrap">
+      <div class="legend">
+        <div class="legend-item"><span class="legend-dot" style="background:#1E40AF"></span><span><strong>Deep Work</strong> — new material, full focus (90 min)</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#15803D"></span><span><strong>Active Recall</strong> — test yourself: past papers, blurting, Anki (45 min)</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#B45309"></span><span><strong>Light Revision</strong> — quick revisit, consolidate notes (30 min)</span></div>
+        <div class="legend-item"><span class="legend-dot" style="background:#E8D9BF"></span> Break / Meal</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#A0A0B8"></span> Fixed Commitment</div>
+        <div class="legend-item"><span class="legend-dot" style="background:#f5f5f5;border:1px dashed #ddd"></span> Free / Buffer</div>
+      </div>
+    </div>
+
+    <div class="tips">
+      <strong>How to use this plan</strong>
+      Deep Work slots are for your hardest, highest-priority topics. Phone in another room, no distractions. Active Recall slots are for past papers, blurting, and Anki. Light Revision is for consolidating notes. Always take your breaks as they're part of the system, not a reward.
+    </div>
+
+    <div class="action-row">
+      <button type="button" class="btn-outline" id="edit-btn">← Edit My Answers</button>
+      <button type="button" class="btn-solid" id="print-btn">Save as PDF</button>
+    </div>
+    <div class="tips" style="margin-top:1rem;background:var(--cream);color:var(--text);border-left:4px solid var(--gold)">
+      <strong style="color:var(--gold)">Tip:</strong> After saving, you can open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
+    </div>
+  </section>
 
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 (function(){
   'use strict';
+  const DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
+  const DAY_SHORT={Monday:'Mon',Tuesday:'Tue',Wednesday:'Wed',Thursday:'Thu',Friday:'Fri',Saturday:'Sat',Sunday:'Sun'};
+  const PRIORITY_WEIGHT={high:3,medium:2,low:1};
 
-  const DAYS = ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
-  const DAY_SHORT = {Monday:'Mon',Tuesday:'Tue',Wednesday:'Wed',Thursday:'Thu',Friday:'Fri',Saturday:'Sat',Sunday:'Sun'};
-  const PRIORITY_WEIGHT = {high:3,medium:2,low:1};
+  function escapeHTML(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+  function toMinutes(hhmm){if(!hhmm||typeof hhmm!=='string')return NaN;const parts=hhmm.split(':');if(parts.length!==2)return NaN;const h=parseInt(parts[0],10),m=parseInt(parts[1],10);if(isNaN(h)||isNaN(m))return NaN;return h*60+m}
+  function toHHMM(mins){const norm=((mins%1440)+1440)%1440;const h=Math.floor(norm/60),m=norm%60;return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')}
+  function fmtTimeRange(a,b){return toHHMM(a)+' – '+toHHMM(b)}
 
-  // ---------- Utilities ----------
-  function escapeHTML(s){
-    return String(s||'').replace(/[&<>"']/g,c=>({ '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;' }[c]));
+  function validateSleep(){
+    const w=toMinutes(document.getElementById('wake-time').value||'');
+    const s=toMinutes(document.getElementById('sleep-time').value||'');
+    const errEl=document.getElementById('sleep-time-error');
+    const btn=document.getElementById('generate-btn');
+    if(isNaN(w)||isNaN(s)){if(errEl)errEl.style.display='none';return true}
+    const sleepDur=s<=w?(w-s):((1440-s)+w);
+    if(sleepDur<480){
+      if(errEl){errEl.textContent='You need at least 8 hours of sleep. Current sleep duration: '+Math.floor(sleepDur/60)+'h '+String(sleepDur%60).padStart(2,'0')+'m';errEl.style.display='block'}
+      if(btn){btn.disabled=true;btn.style.opacity='0.5';btn.style.cursor='not-allowed'}
+      return false
+    }
+    if(errEl)errEl.style.display='none';
+    if(btn){btn.disabled=false;btn.style.opacity='1';btn.style.cursor='pointer'}
+    return true
   }
-  function toMinutes(hhmm){
-    if(!hhmm || typeof hhmm!=='string') return NaN;
-    const parts=hhmm.split(':');
-    if(parts.length!==2) return NaN;
-    const h=parseInt(parts[0],10), m=parseInt(parts[1],10);
-    if(isNaN(h)||isNaN(m)) return NaN;
-    return h*60+m;
-  }
-  function toHHMM(mins){
-    const h=Math.floor(mins/60), m=mins%60;
-    return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0');
-  }
-  function fmtTimeRange(a,b){ return toHHMM(a)+' – '+toHHMM(b); }
 
-  // ---------- Dynamic subject rows ----------
   let subjectCounter=0;
+  const topicPlaceholders={'Mathematics':'Differentiation, Integration','Biology':'Cardiac cycle, Photosynthesis','Chemistry':'Organic mechanisms, Electrochemistry','Physics':'Forces, Energy, Waves','English':'Themes, Character analysis','History':'Key dates, Causes and effects','Economics':'Supply and demand, GDP','Geography':'Physical processes, Human impact'};
+  function getSubjColorClass(name){const lower=name.toLowerCase();if(lower.includes('math'))return 'subj-maths';if(lower.includes('biol'))return 'subj-biology';if(lower.includes('chem'))return 'subj-chemistry';if(lower.includes('phys'))return 'subj-physics';if(lower.includes('english'))return 'subj-english';if(lower.includes('history'))return 'subj-history';return ''}
+
   function addSubjectRow(name='',topics='',priority='medium',confidence=3){
-    subjectCounter++;
-    const id='subject-'+subjectCounter;
-    const el=document.createElement('div');
-    el.className='item-row subject-row';
-    el.id=id;
-    el.innerHTML=
-      '<button type="button" class="remove-btn" aria-label="Remove" title="Remove">×</button>'+
-      '<label>Subject name</label>'+
-      '<input type="text" class="subject-name" placeholder="e.g. Mathematics" value="'+escapeHTML(name)+'" maxlength="40">'+
-      '<label>Topics to prioritise this week</label>'+
-      '<input type="text" class="subject-topics" placeholder="e.g. Organic mechanisms, Electrochemistry" value="'+escapeHTML(topics)+'" maxlength="120">'+
-      '<p class="help-text">Comma-separated. These appear on the timetable slots.</p>'+
-      '<label>Priority level</label>'+
-      '<select class="subject-priority">'+
-        '<option value="high"'+(priority==='high'?' selected':'')+'>High — I need this grade</option>'+
-        '<option value="medium"'+(priority==='medium'?' selected':'')+'>Medium — Important but manageable</option>'+
-        '<option value="low"'+(priority==='low'?' selected':'')+'>Low — Fairly confident</option>'+
-      '</select>'+
-      '<div class="slider-wrap">'+
-        '<div class="slider-head"><label>Confidence level</label><span class="conf-badge">'+confidence+'/5</span></div>'+
-        '<input type="range" class="subject-confidence" min="1" max="5" value="'+confidence+'">'+
-        '<div class="slider-labels"><span>1 · very low</span><span>3 · okay</span><span>5 · very high</span></div>'+
-      '</div>';
+    subjectCounter++;const id='subject-'+subjectCounter;const el=document.createElement('div');el.className='item-row subject-row';el.id=id;
+    const topicsArray=topics?topics.split('|').filter(t=>t.trim()):[];let topicsHtml='<div class="topics-list">';topicsArray.forEach(topic=>{topicsHtml+='<span class="topic-tag">'+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button></span>'});topicsHtml+='</div>';
+    const placeholder=topicPlaceholders[name]||'e.g. Topic 1, Topic 2';
+    el.innerHTML='<button type="button" class="remove-btn" aria-label="Remove" title="Remove">×</button>'+'<label>Subject name</label>'+'<input type="text" class="subject-name" placeholder="e.g. Mathematics" value="'+escapeHTML(name)+'" maxlength="40">'+'<label>Topics to prioritise this week</label>'+topicsHtml+'<div class="add-topic-inline">'+'<input type="text" class="subject-topic-input" placeholder="'+placeholder+'" maxlength="50">'+'<button type="button">Add</button>'+'</div>'+'<p class="help-text-topics">Limit to 5 topics. Click Add after each one.</p>'+'<label>Priority level</label>'+'<select class="subject-priority">'+'<option value="high"'+(priority==='high'?' selected':'')+'>High — Really struggling with it</option>'+'<option value="medium"'+(priority==='medium'?' selected':'')+'>Medium — Important, manageable</option>'+'<option value="low"'+(priority==='low'?' selected':'')+'>Low — Fairly confident</option>'+'</select>'+'<div class="slider-wrap">'+'<div class="slider-head"><label>Exam focus</label><span class="conf-badge">'+confidence+'/5</span></div>'+'<input type="range" class="subject-confidence" min="1" max="5" value="'+confidence+'">'+'<div class="slider-labels"><span>1 · low priority</span><span>3 · medium</span><span>5 · high priority</span></div>'+'</div>';
     document.getElementById('subjects-list').appendChild(el);
-    const range=el.querySelector('.subject-confidence');
-    const badge=el.querySelector('.conf-badge');
-    range.addEventListener('input',()=>{ badge.textContent=range.value+'/5'; });
+    const topicInput=el.querySelector('.subject-topic-input');const addTopicBtn=el.querySelector('.add-topic-inline button');const topicsList=el.querySelector('.topics-list');
+    function renderTopics(){const topics=[];el.querySelectorAll('.topic-tag').forEach(tag=>{const text=tag.textContent.trim().slice(0,-1);if(text)topics.push(text)});return topics}
+    function updateTopicsList(){const topics=renderTopics();topicsList.innerHTML='';topics.forEach(topic=>{const tag=document.createElement('span');tag.className='topic-tag';tag.innerHTML=''+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button>';tag.querySelector('button').addEventListener('click',()=>{tag.remove();updateTopicInput()});topicsList.appendChild(tag)});updateTopicInput()}
+    function updateTopicInput(){const topics=renderTopics();topicInput.disabled=topics.length>=5;addTopicBtn.disabled=topics.length>=5;if(topics.length>=5)topicInput.placeholder='Max 5 topics reached'}
+    addTopicBtn.addEventListener('click',()=>{const topic=topicInput.value.trim();if(topic&&renderTopics().length<5){const tag=document.createElement('span');tag.className='topic-tag';tag.innerHTML=''+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button>';tag.querySelector('button').addEventListener('click',()=>{tag.remove();updateTopicInput()});topicsList.appendChild(tag);topicInput.value='';updateTopicInput()}});
+    topicInput.addEventListener('keypress',e=>{if(e.key==='Enter'){addTopicBtn.click();e.preventDefault()}});
+    updateTopicInput();
+    const range=el.querySelector('.subject-confidence');const badge=el.querySelector('.conf-badge');range.addEventListener('input',()=>{badge.textContent=range.value+'/5'});
     el.querySelector('.remove-btn').addEventListener('click',()=>el.remove());
   }
 
   let commitCounter=0;
   function addCommitmentRow(day='Monday',start='17:00',end='18:30',label=''){
-    commitCounter++;
-    const id='commit-'+commitCounter;
-    const el=document.createElement('div');
-    el.className='item-row commit-row';
-    el.id=id;
+    commitCounter++;const id='commit-'+commitCounter;const el=document.createElement('div');el.className='item-row commit-row';el.id=id;
     const dayOpts=DAYS.map(d=>'<option value="'+d+'"'+(d===day?' selected':'')+'>'+d+'</option>').join('');
-    el.innerHTML=
-      '<button type="button" class="remove-btn" aria-label="Remove" title="Remove">×</button>'+
-      '<div class="commit-grid">'+
-        '<div><label>Day</label><select class="commit-day">'+dayOpts+'</select></div>'+
-        '<div><label>Start</label><input type="time" class="commit-start" value="'+escapeHTML(start)+'"></div>'+
-        '<div><label>End</label><input type="time" class="commit-end" value="'+escapeHTML(end)+'"></div>'+
-        '<div><label>What is it?</label><input type="text" class="commit-label" placeholder="e.g. Football" value="'+escapeHTML(label)+'" maxlength="40"></div>'+
-      '</div>';
+    el.innerHTML='<button type="button" class="remove-btn" aria-label="Remove" title="Remove">×</button>'+'<div class="commit-grid">'+'<div><label>Day</label><select class="commit-day">'+dayOpts+'</select></div>'+'<div><label>Start</label><input type="time" class="commit-start" value="'+escapeHTML(start)+'"></div>'+'<div><label>End</label><input type="time" class="commit-end" value="'+escapeHTML(end)+'"></div>'+'<div><label>What is it?</label><input type="text" class="commit-label" placeholder="e.g. Football" value="'+escapeHTML(label)+'" maxlength="40"></div>'+'</div>';
     document.getElementById('commitments-list').appendChild(el);
     el.querySelector('.remove-btn').addEventListener('click',()=>el.remove());
   }
 
-  // ---------- Collect form ----------
   function collectState(){
     const name=document.getElementById('student-name').value.trim();
-    const wakeTime=document.getElementById('wake-time').value || '07:00';
-
+    const wakeTime=document.getElementById('wake-time').value||'07:00';
+    const breakfastTime=document.getElementById('breakfast-time').value||'07:30';
+    const lunchTime=document.getElementById('lunch-time').value||'12:00';
+    const dinnerTime=document.getElementById('dinner-time').value||'18:00';
+    const sleepTime=document.getElementById('sleep-time').value||'23:00';
+    const wakeMin=toMinutes(wakeTime);const sleepMin=toMinutes(sleepTime);
+    if(isNaN(wakeMin)||isNaN(sleepMin)){alert('Please set valid wake and sleep times.');return null}
+    const sleepDur=sleepMin<=wakeMin?(wakeMin-sleepMin):((1440-sleepMin)+wakeMin);
+    if(sleepDur<480){alert('You need at least 8 hours of sleep. Current sleep duration: '+Math.floor(sleepDur/60)+'h '+String(sleepDur%60).padStart(2,'0')+'m');return null}
     const subjects=[];
     document.querySelectorAll('.subject-row').forEach(row=>{
-      const sname=row.querySelector('.subject-name').value.trim();
-      if(!sname) return;
-      subjects.push({
-        name:sname,
-        topics:row.querySelector('.subject-topics').value.trim(),
-        priority:row.querySelector('.subject-priority').value,
-        confidence:parseInt(row.querySelector('.subject-confidence').value,10)||3
+      const sname=row.querySelector('.subject-name').value.trim();if(!sname)return;
+      const topicTags=[];row.querySelectorAll('.topic-tag').forEach(tag=>{const text=tag.textContent.trim().slice(0,-1);if(text)topicTags.push(text)});
+      subjects.push({name:sname,topics:topicTags.join('|'),priority:row.querySelector('.subject-priority').value,confidence:parseInt(row.querySelector('.subject-confidence').value,10)||3});
+    });
+    if(subjects.length===0){alert('Please add at least one subject before generating your plan.');return null}
+    const commitments=[];
+    document.querySelectorAll('.commit-row').forEach(row=>{
+      const lbl=row.querySelector('.commit-label').value.trim();const start=row.querySelector('.commit-start').value;const end=row.querySelector('.commit-end').value;
+      if(!lbl||!start||!end)return;const sMin=toMinutes(start),eMin=toMinutes(end);if(isNaN(sMin)||isNaN(eMin)||eMin<=sMin)return;
+      commitments.push({day:row.querySelector('.commit-day').value,startMin:sMin,endMin:eMin,label:lbl});
+    });
+    const hasSchool=document.getElementById('has-school').checked;
+    let schoolDays=[];let schoolStart=toMinutes('08:30'),schoolEnd=toMinutes('16:00');
+    if(hasSchool){document.querySelectorAll('.school-day:checked').forEach(cb=>{schoolDays.push(cb.value)});schoolStart=toMinutes(document.getElementById('school-start').value);schoolEnd=toMinutes(document.getElementById('school-end').value);if(schoolDays.length>0&&schoolStart<schoolEnd){schoolDays.forEach(day=>{commitments.push({day:day,startMin:schoolStart,endMin:schoolEnd,label:'School'})})}}
+    return {name,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
+  }
+
+  // ---- New scheduling algorithm: spaced repetition + interleaving ----------
+  // Each topic follows: Deep Work → Active Recall (d+1) → Light Review (d+3/4)
+  // Daily cap: 8 h pure study time, max 2 deep-work blocks per day.
+  // Subjects are interleaved so no 3+ same-subject sessions land in a row.
+  const DEEP_DUR=90, RECALL_DUR=45, REVIEW_DUR=30, BRK_DUR=15, MEAL_DUR=30;
+  const DAY_CAP_STUDY=480;     // 8 h hard cap (study time only)
+  const MAX_DEEP_PER_DAY=2;
+  const MIN_DAILY_LOAD=90;     // backfill target so no day stays empty
+
+  function buildTopicLedger(subjects){
+    const items=[];
+    subjects.forEach(function(s){
+      const tt=(s.topics?s.topics.split('|'):[]).map(function(t){return t.trim()}).filter(Boolean);
+      const w=PRIORITY_WEIGHT[s.priority]*(6-s.confidence);
+      if(tt.length===0){
+        items.push({subject:s.name,topic:'General revision',weight:w});
+      }else{
+        tt.forEach(function(t){items.push({subject:s.name,topic:t,weight:w})});
+      }
+    });
+    items.sort(function(a,b){return b.weight-a.weight||a.subject.localeCompare(b.subject)});
+    return items;
+  }
+
+  function planWeek(subjects){
+    const ledger=buildTopicLedger(subjects);
+    const days=[[],[],[],[],[],[],[]];
+    const dMin=[0,0,0,0,0,0,0];
+    const dDeep=[0,0,0,0,0,0,0];
+    const dSubjDeep=[{},{},{},{},{},{},{}];
+
+    function fits(d,type,dur,subject){
+      if(d<0||d>6)return false;
+      if(dMin[d]+dur>DAY_CAP_STUDY)return false;
+      if(type==='deep'){
+        if(dDeep[d]>=MAX_DEEP_PER_DAY)return false;
+        if((dSubjDeep[d][subject]||0)>=1)return false;
+      }
+      return true;
+    }
+    function place(d,ev){
+      days[d].push(ev);
+      dMin[d]+=ev.dur;
+      if(ev.type==='deep'){
+        dDeep[d]++;
+        dSubjDeep[d][ev.subject]=(dSubjDeep[d][ev.subject]||0)+1;
+      }
+      return d;
+    }
+
+    // PASS A — Deep Work for every topic, biased to earliest day
+    ledger.forEach(function(t){
+      let placed=-1;
+      for(let d=0;d<7&&placed<0;d++){
+        if(fits(d,'deep',DEEP_DUR,t.subject)){
+          placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
+        }
+      }
+      if(placed<0){
+        for(let d=0;d<7&&placed<0;d++){
+          if(dMin[d]+DEEP_DUR<=DAY_CAP_STUDY&&dDeep[d]<MAX_DEEP_PER_DAY){
+            placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
+          }
+        }
+      }
+      if(placed<0){
+        let m=0;for(let d=1;d<7;d++)if(dMin[d]<dMin[m])m=d;
+        placed=place(m,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
+      }
+      t.dwDay=placed;
+    });
+
+    // PASS B — Active Recall on day d+1 (try +1, +2, +3)
+    ledger.forEach(function(t){
+      if(t.dwDay===undefined)return;
+      [1,2,3].some(function(off){
+        const d=t.dwDay+off;
+        if(d>6)return true;
+        if(dMin[d]+RECALL_DUR<=DAY_CAP_STUDY){
+          place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});
+          t.arDay=d;return true;
+        }
+        return false;
       });
     });
 
-    if(subjects.length===0){
-      alert('Please add at least one subject before generating your plan.');
+    // PASS C — Light Revision on day d+3 (try +3, +4, +5, +6, +2)
+    ledger.forEach(function(t){
+      if(t.dwDay===undefined)return;
+      [3,4,5,6,2].some(function(off){
+        const d=t.dwDay+off;
+        if(d<0||d>6)return false;
+        if(dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY){
+          place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});
+          t.lrDay=d;return true;
+        }
+        return false;
+      });
+    });
+
+    // PASS D — backfill light days with extra Light Reviews (already-introduced topics)
+    for(let d=0;d<7;d++){
+      let safety=20;
+      while(dMin[d]<MIN_DAILY_LOAD&&safety-->0){
+        const subjsHere={};days[d].forEach(function(e){subjsHere[e.subject]=1});
+        let cand=ledger.find(function(t){
+          return t.dwDay!==undefined&&t.dwDay<=d&&
+            !days[d].some(function(e){return e.topic===t.topic&&e.subject===t.subject})&&
+            !subjsHere[t.subject];
+        });
+        if(!cand){
+          cand=ledger.find(function(t){
+            return t.dwDay!==undefined&&t.dwDay<=d&&
+              !days[d].some(function(e){return e.topic===t.topic&&e.subject===t.subject});
+          });
+        }
+        if(!cand)break;
+        if(dMin[d]+REVIEW_DUR>DAY_CAP_STUDY)break;
+        place(d,{type:'review',subject:cand.subject,topic:cand.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(cand.subject)});
+      }
+    }
+
+    return days;
+  }
+
+  // Place each day's planned sessions onto the wake→sleep timeline,
+  // respecting meals + commitments and interleaving subjects.
+  function buildDayEvents(dayIndex,state,plannedSessions){
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const rawCutoff=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const CUTOFF=rawCutoff-30;  // 30-min wind-down buffer before bed
+    const breakfastMin=toMinutes(state.breakfastTime);
+    const lunchMin=toMinutes(state.lunchTime);
+    const dinnerMin=toMinutes(state.dinnerTime);
+    const dayName=DAYS[dayIndex];
+
+    const blockers=[];
+    [{startMin:breakfastMin,endMin:breakfastMin+MEAL_DUR,type:'break',label:'Breakfast',sub:'Fuel up'},
+     {startMin:lunchMin,endMin:lunchMin+MEAL_DUR,type:'lunch',label:'Lunch',sub:'Step away'},
+     {startMin:dinnerMin,endMin:dinnerMin+MEAL_DUR,type:'break',label:'Dinner',sub:'Rest'}
+    ].forEach(function(m){if(m.startMin>=wakeMin&&m.startMin<CUTOFF)blockers.push(m)});
+    state.commitments.filter(function(c){return c.day===dayName}).forEach(function(c){
+      blockers.push({startMin:c.startMin,endMin:c.endMin,type:'fixed',label:c.label,sub:''});
+    });
+    blockers.sort(function(a,b){return a.startMin-b.startMin});
+
+    // Drop meal blocks that overlap commitments (commitments win)
+    const resolved=[];
+    blockers.forEach(function(b){
+      const clash=resolved.find(function(r){return b.startMin<r.endMin&&b.endMin>r.startMin});
+      if(!clash)resolved.push(b);
+    });
+
+    const queues={deep:[],recall:[],review:[]};
+    plannedSessions.forEach(function(s){if(queues[s.type])queues[s.type].push(s)});
+
+    const events=[];
+    let cursor=wakeMin;
+    let lastSubj=null;
+    let streak=0;
+
+    function pickEvent(now,remaining){
+      // Time-of-day preference:
+      //   Morning (before lunch): Deep Work, then Active Recall (no Light Review here)
+      //   Afternoon (lunch–dinner): Active Recall, then Deep Work, then Light Review
+      //   Evening (after dinner): Light Review only — no heavy new content
+      let order;
+      if(now<lunchMin)        order=['deep','recall'];
+      else if(now<dinnerMin)  order=['recall','deep','review'];
+      else                    order=['review'];
+      for(let oi=0;oi<order.length;oi++){
+        const tt=order[oi];const q=queues[tt];
+        if(!q.length)continue;
+        const dur=tt==='deep'?DEEP_DUR:tt==='recall'?RECALL_DUR:REVIEW_DUR;
+        if(dur>remaining)continue;
+        const mustDiffer=streak>=2&&lastSubj!==null;
+        let idx=q.findIndex(function(e){return e.subject!==lastSubj});
+        if(mustDiffer){if(idx<0)continue}
+        else{if(idx<0)idx=0}
+        return q.splice(idx,1)[0];
+      }
       return null;
     }
 
-    const commitments=[];
-    document.querySelectorAll('.commit-row').forEach(row=>{
-      const lbl=row.querySelector('.commit-label').value.trim();
-      const start=row.querySelector('.commit-start').value;
-      const end=row.querySelector('.commit-end').value;
-      if(!lbl || !start || !end) return;
-      const sMin=toMinutes(start), eMin=toMinutes(end);
-      if(isNaN(sMin)||isNaN(eMin)||eMin<=sMin) return;
-      commitments.push({
-        day:row.querySelector('.commit-day').value,
-        startMin:sMin,
-        endMin:eMin,
-        label:lbl
-      });
-    });
-
-    return {name,wakeTime,subjects,commitments};
-  }
-
-  // ---------- Generate timetable ----------
-  function buildDaySlots(dayIndex,state,sortedSubjects){
-    const DEEP=90, BRK=15, LUNCH=60;
-    const CUTOFF=toMinutes('21:00');
-    const EVENING=toMinutes('18:00');
-    const LUNCH_START=toMinutes('12:00');
-
-    const slots=[];
-    const dayName=DAYS[dayIndex];
-
-    const todayCommits=state.commitments
-      .filter(c=>c.day===dayName)
-      .sort((a,b)=>a.startMin-b.startMin);
-
-    let current=toMinutes(state.wakeTime)+60;
-    if(isNaN(current)) current=toMinutes('08:00');
-
-    let lunchTaken=false;
-    let deepCount=0;
-    let recallCount=0;
-    let eveningDone=false;
-    const added=new Set();
-    let guard=0;
-
-    function nextSubj(offset){
-      const n=sortedSubjects.length;
-      return sortedSubjects[(dayIndex+offset)%n];
-    }
-    function subjSub(s){
-      return s.topics ? s.topics : 'Deep focus — no distractions';
-    }
-    function recallSub(s){
-      return s.topics ? s.topics : 'Past papers · blurting · Anki';
-    }
-
-    while(current<CUTOFF && guard<60){
-      guard++;
-
-      // Inside a commitment?
-      const active=todayCommits.find(c=>c.startMin<=current && c.endMin>current && !added.has(c));
-      if(active){
-        slots.push({type:'fixed',time:fmtTimeRange(active.startMin,active.endMin),label:active.label,sub:''});
-        added.add(active);
-        current=active.endMin;
+    let safety=300;
+    while(cursor<CUTOFF&&safety-->0){
+      const inside=resolved.find(function(f){return f.startMin<=cursor&&f.endMin>cursor});
+      if(inside){
+        events.push({startMin:inside.startMin,endMin:Math.min(inside.endMin,CUTOFF),type:inside.type,subject:'',topic:'',label:inside.label,sub:inside.sub,colorClass:''});
+        cursor=inside.endMin;
         continue;
       }
-      // Already added and we're past it? Find next one
-      const pastActive=todayCommits.find(c=>c.startMin<=current && c.endMin>current && added.has(c));
-      if(pastActive){ current=pastActive.endMin; continue; }
+      const next=resolved.find(function(f){return f.startMin>=cursor});
+      const limit=Math.min(next?next.startMin:CUTOFF,CUTOFF);
+      if(limit<=cursor){cursor=limit;continue}
 
-      // Commitment starting before we'd finish a block?
-      const upcoming=todayCommits.find(c=>c.startMin>current && c.startMin<current+DEEP && !added.has(c));
-      if(upcoming){
-        if(upcoming.startMin-current>=20){
-          slots.push({type:'free',time:fmtTimeRange(current,upcoming.startMin),label:'Free / Buffer',sub:''});
+      const ev=pickEvent(cursor,limit-cursor);
+      if(!ev){
+        if(limit-cursor>=15){
+          events.push({startMin:cursor,endMin:limit,type:'free',subject:'',topic:'',label:'Free / Buffer',sub:'Rest, hydrate, move',colorClass:''});
         }
-        current=upcoming.startMin;
+        cursor=limit;
         continue;
       }
 
-      // Lunch
-      if(!lunchTaken && current>=LUNCH_START && current<EVENING){
-        const lunchEnd=current+LUNCH;
-        // don't schedule lunch over a commitment
-        const conflict=todayCommits.find(c=>c.startMin<lunchEnd && c.endMin>current);
-        if(!conflict){
-          slots.push({type:'lunch',time:fmtTimeRange(current,lunchEnd),label:'Lunch Break',sub:'Step away from the desk'});
-          current=lunchEnd;
-          lunchTaken=true;
-          continue;
-        } else {
-          lunchTaken=true; // skip rather than loop
-        }
-      }
+      events.push({startMin:cursor,endMin:cursor+ev.dur,type:ev.type,subject:ev.subject,topic:ev.topic,label:'',sub:'',colorClass:ev.colorClass});
+      if(ev.subject===lastSubj)streak++;else streak=1;
+      lastSubj=ev.subject;
+      cursor+=ev.dur;
 
-      // Fit a work block?
-      if(current+DEEP>CUTOFF) break;
-
-      if(current>=EVENING){
-        if(eveningDone) break;
-        const subj=nextSubj(0);
-        slots.push({
-          type:'review',
-          time:fmtTimeRange(current,current+DEEP),
-          label:'Light Review: '+subj.name,
-          sub:'Consolidate notes · mind maps'
-        });
-        current+=DEEP;
-        eveningDone=true;
-        continue;
-      }
-
-      if(deepCount<2){
-        const subj=nextSubj(deepCount);
-        slots.push({
-          type:'deep',
-          time:fmtTimeRange(current,current+DEEP),
-          label:subj.name,
-          sub:subjSub(subj)
-        });
-        current+=DEEP;
-        deepCount++;
-      } else {
-        const subj=nextSubj(deepCount+recallCount);
-        slots.push({
-          type:'recall',
-          time:fmtTimeRange(current,current+DEEP),
-          label:'Active Recall: '+subj.name,
-          sub:recallSub(subj)
-        });
-        current+=DEEP;
-        recallCount++;
-      }
-
-      // Short break after a work block (if more time and not past commitment)
-      if(current+BRK<CUTOFF && current+DEEP+BRK<=CUTOFF){
-        const brkEnd=current+BRK;
-        const conflict=todayCommits.find(c=>c.startMin<brkEnd && c.endMin>current && !added.has(c));
-        if(!conflict){
-          slots.push({type:'break',time:fmtTimeRange(current,brkEnd),label:'Short Break',sub:'Hydrate · move · reset'});
-          current=brkEnd;
-        }
+      // Short break if there's room before the next fixed block / cutoff
+      const next2=resolved.find(function(f){return f.startMin>=cursor});
+      const limit2=Math.min(next2?next2.startMin:CUTOFF,CUTOFF);
+      if(limit2-cursor>=BRK_DUR+15){
+        events.push({startMin:cursor,endMin:cursor+BRK_DUR,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});
+        cursor+=BRK_DUR;
       }
     }
-
-    // Any commitments not yet added (e.g. late evening after cutoff)?
-    todayCommits.forEach(c=>{
-      if(!added.has(c)){
-        slots.push({type:'fixed',time:fmtTimeRange(c.startMin,c.endMin),label:c.label,sub:'',_sortKey:c.startMin});
-      }
-    });
-    // Keep chronological (the late ones appended at end is fine)
-
-    if(slots.length===0){
-      slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake time or commitments'});
-    }
-    return slots;
+    return events;
   }
 
   function generatePlan(state){
-    const sorted=[...state.subjects].sort((a,b)=>
-      (PRIORITY_WEIGHT[b.priority]*(6-b.confidence)) -
-      (PRIORITY_WEIGHT[a.priority]*(6-a.confidence))
-    );
+    const days=planWeek(state.subjects);
     const week=[];
     for(let i=0;i<7;i++){
-      week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted)});
+      week.push({dayName:DAYS[i],events:buildDayEvents(i,state,days[i])});
     }
     return week;
   }
 
-  // ---------- Render ----------
-  function renderTimetable(week,name){
-    document.getElementById('tt-heading').textContent = name ? (name+"'s Week") : 'Your Week';
-    const grid=document.getElementById('week-grid');
-    grid.innerHTML='';
-    week.forEach(day=>{
-      const col=document.createElement('div');
-      col.className='day-col';
-      const head=document.createElement('div');
-      head.className='day-head';
-      head.innerHTML=DAY_SHORT[day.dayName];
-      col.appendChild(head);
-      day.slots.forEach(slot=>{
-        const s=document.createElement('div');
-        s.className='slot slot--'+slot.type;
-        let html='';
-        if(slot.time) html+='<span class="slot-time">'+escapeHTML(slot.time)+'</span>';
-        html+='<span class="slot-label">'+escapeHTML(slot.label)+'</span>';
-        if(slot.sub) html+='<span class="slot-sub">'+escapeHTML(slot.sub)+'</span>';
-        s.innerHTML=html;
-        col.appendChild(s);
-      });
-      grid.appendChild(col);
+  function renderTimetable(week,state,name){
+    const PX_PER_MIN=1.2;
+    document.getElementById('tt-heading').textContent=name?(name+"'s Week"):'Your Week';
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const CUTOFF=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const totalMins=CUTOFF-wakeMin;
+    const totalH=Math.round(totalMins*PX_PER_MIN);
+    const grid=document.getElementById('week-grid');grid.innerHTML='';
+
+    const hrow=document.createElement('div');hrow.className='tt-header-row';
+    const spacer=document.createElement('div');spacer.className='tt-axis-spacer';hrow.appendChild(spacer);
+    week.forEach(function(day){
+      const h=document.createElement('div');h.className='tt-day-head';h.textContent=DAY_SHORT[day.dayName];hrow.appendChild(h);
     });
+    grid.appendChild(hrow);
+
+    const bodyRow=document.createElement('div');bodyRow.className='tt-body-row';
+
+    const axis=document.createElement('div');axis.className='tt-axis';axis.style.height=totalH+'px';
+    const startHour=Math.ceil(wakeMin/60);
+    const endHour=Math.floor(CUTOFF/60);
+    for(let h=startHour;h<=endHour;h++){
+      const topPx=Math.round((h*60-wakeMin)*PX_PER_MIN);
+      const lbl=document.createElement('div');lbl.className='tt-hour-label';lbl.style.top=topPx+'px';
+      lbl.textContent=String(((h%24)+24)%24).padStart(2,'0')+':00';
+      axis.appendChild(lbl);
+    }
+    bodyRow.appendChild(axis);
+
+    week.forEach(function(day){
+      const col=document.createElement('div');col.className='tt-day-col';col.style.height=totalH+'px';
+      for(let hh=startHour;hh<=endHour;hh++){
+        const ltp=Math.round((hh*60-wakeMin)*PX_PER_MIN);
+        const line=document.createElement('div');line.className='tt-hour-line';line.style.top=ltp+'px';
+        col.appendChild(line);
+      }
+      day.events.forEach(function(evt){
+        const top=Math.round((evt.startMin-wakeMin)*PX_PER_MIN);
+        const height=Math.max(16,Math.round((evt.endMin-evt.startMin)*PX_PER_MIN));
+        const slot=document.createElement('div');
+        slot.className='tt-slot tt-slot--'+evt.type;
+        slot.style.top=top+'px';slot.style.height=height+'px';
+
+        let displayLabel='';
+        if(evt.type==='deep')displayLabel=evt.subject;
+        else if(evt.type==='recall')displayLabel='Recall: '+evt.subject;
+        else if(evt.type==='review')displayLabel='Review: '+evt.subject;
+        else displayLabel=evt.label||evt.subject||'';
+
+        const labelClass=evt.colorClass?'tt-slot-label '+evt.colorClass:'tt-slot-label';
+        let html='';
+        if(height>=30)html+='<span class="tt-slot-time">'+escapeHTML(fmtTimeRange(evt.startMin,evt.endMin))+'</span>';
+        html+='<span class="'+labelClass+'">'+escapeHTML(displayLabel)+'</span>';
+        const sub=evt.topic||evt.sub||'';
+        if(sub&&height>=45)html+='<span class="tt-slot-sub">'+escapeHTML(sub)+'</span>';
+        slot.innerHTML=html;col.appendChild(slot);
+      });
+      bodyRow.appendChild(col);
+    });
+
+    grid.appendChild(bodyRow);
   }
 
-  // ---------- Navigation ----------
-  function showTimetable(){
-    document.getElementById('questionnaire-section').style.display='none';
-    document.getElementById('timetable-section').style.display='block';
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
-  function showQuestionnaire(){
-    document.getElementById('timetable-section').style.display='none';
-    document.getElementById('questionnaire-section').style.display='block';
-    window.scrollTo({top:0,behavior:'smooth'});
-  }
+  function showTimetable(){document.getElementById('questionnaire-section').style.display='none';document.getElementById('timetable-section').style.display='block';document.querySelector('.container').classList.add('container--wide');window.scrollTo({top:0,behavior:'smooth'})}
+  function showQuestionnaire(){document.getElementById('timetable-section').style.display='none';document.getElementById('questionnaire-section').style.display='block';document.querySelector('.container').classList.remove('container--wide');window.scrollTo({top:0,behavior:'smooth'})}
 
-  // ---------- Init ----------
+  document.getElementById('wake-time').addEventListener('change',validateSleep);
+  document.getElementById('sleep-time').addEventListener('change',validateSleep);
   document.getElementById('add-subject-btn').addEventListener('click',()=>addSubjectRow());
   document.getElementById('add-commit-btn').addEventListener('click',()=>addCommitmentRow());
-  document.getElementById('generate-btn').addEventListener('click',()=>{
-    const state=collectState();
-    if(!state) return;
-    const week=generatePlan(state);
-    renderTimetable(week,state.name);
-    showTimetable();
-  });
+  document.getElementById('has-school').addEventListener('change',()=>{document.getElementById('school-section').style.display=document.getElementById('has-school').checked?'block':'none'});
+  document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
-  document.getElementById('print-btn').addEventListener('click',()=>window.print());
 
-  // Defaults
-  addSubjectRow('Mathematics','','high',3);
-  addSubjectRow('Biology','','medium',4);
-  addSubjectRow('Chemistry','','high',2);
+  document.getElementById('print-btn').addEventListener('click',()=>{
+    if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
+    const element=document.getElementById('timetable-section');
+    const name=document.getElementById('student-name').value.trim()||'revision-timetable';
+    const pdfLogo=document.getElementById('pdf-logo');
+    const weekWrap=document.querySelector('.week-wrap');
+    const prevOverflow=weekWrap?weekWrap.style.overflow:'';
+    if(pdfLogo)pdfLogo.style.display='block';
+    if(weekWrap)weekWrap.style.overflow='visible';
+    window.scrollTo(0,0);
+    html2pdf().set({margin:[8,5,8,5],filename:name+'-revision-plan.pdf',image:{type:'jpeg',quality:0.96},html2canvas:{scale:1.2,useCORS:true,logging:false,scrollY:0,windowWidth:1400,allowTaint:true},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'},pagebreak:{mode:['avoid-all','css'],avoid:'.tt-day-col'}}).from(element).save().then(()=>{if(pdfLogo)pdfLogo.style.display='none';if(weekWrap)weekWrap.style.overflow=prevOverflow});
+  });
 })();
 </script>
 

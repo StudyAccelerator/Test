@@ -91,12 +91,13 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 .tt-slot-time{font-size:0.48rem;opacity:0.75;display:block;font-weight:500;letter-spacing:0em}
 .tt-slot-label{font-weight:bold;display:block;font-size:0.60rem;border-left:2px solid transparent;padding-left:3px;margin-top:0.5px}
 .tt-slot-sub{font-size:0.50rem;opacity:0.8;font-style:italic;display:block;margin-top:0.5px}
-.tt-slot--deep{background:var(--purple);color:var(--cream)}
-.tt-slot--recall{background:var(--purple-mid);color:#fff}
-.tt-slot--review{background:var(--purple-soft);color:#fff}
+.tt-slot--deep{background:#1E40AF;color:#fff}
+.tt-slot--recall{background:#15803D;color:#fff}
+.tt-slot--review{background:#B45309;color:#fff}
 .tt-slot--break{background:var(--cream-dark);color:#5a5a5a}
 .tt-slot--lunch{background:var(--cream-warm);color:#5a5a5a;border:1px solid #d4c5a0}
 .tt-slot--fixed{background:var(--slate);color:#fff}
+.tt-slot--free{background:#f5f5f5;color:#999;font-style:italic;border:1px dashed #ddd}
 .tt-slot-label.subj-maths{border-left-color:var(--color-maths)}
 .tt-slot-label.subj-biology{border-left-color:var(--color-biology)}
 .tt-slot-label.subj-chemistry{border-left-color:var(--color-chemistry)}
@@ -232,72 +233,138 @@ const js = `
     return {name,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
   }
 
-  function planWeekSessions(sortedSubjects){
-    const allTopics=[];
-    sortedSubjects.forEach(function(subj){
-      const topics=subj.topics?subj.topics.split('|').filter(function(t){return t.trim()}):[];
-      topics.forEach(function(topic){
-        allTopics.push({subject:subj.name,topic:topic,priority:subj.priority,confidence:subj.confidence});
-      });
-    });
-    allTopics.sort(function(a,b){
-      const aScore=PRIORITY_WEIGHT[b.priority]*(6-b.confidence);
-      const bScore=PRIORITY_WEIGHT[a.priority]*(6-a.confidence);
-      return bScore-aScore;
-    });
+  // ---- New scheduling algorithm: spaced repetition + interleaving ----------
+  // Each topic follows: Deep Work → Active Recall (d+1) → Light Review (d+3/4)
+  // Daily cap: 8 h pure study time, max 2 deep-work blocks per day.
+  // Subjects are interleaved so no 3+ same-subject sessions land in a row.
+  const DEEP_DUR=90, RECALL_DUR=45, REVIEW_DUR=30, BRK_DUR=15, MEAL_DUR=30;
+  const DAY_CAP_STUDY=480;     // 8 h hard cap (study time only)
+  const MAX_DEEP_PER_DAY=2;
+  const MIN_DAILY_LOAD=90;     // backfill target so no day stays empty
 
-    const deepWorkSchedule={};
-    const week=[[],[],[],[],[],[],[]];
-    let topicIdx=0;
-    const MAX_WORK_PER_DAY=720;
-
-    for(let day=0;day<7;day++){
-      let workToday=0;
-      const dayKey=day;
-
-      allTopics.forEach(function(t){
-        const key=t.subject+'|'+t.topic;
-        if(deepWorkSchedule[key]===day-1){
-          week[day].push({type:'recall',subject:t.subject,topic:t.topic,dur:60,colorClass:getSubjColorClass(t.subject)});
-        }
-      });
-
-      allTopics.forEach(function(t){
-        const key=t.subject+'|'+t.topic;
-        if(deepWorkSchedule[key]===day-3){
-          week[day].push({type:'review',subject:t.subject,topic:t.topic,dur:30,colorClass:getSubjColorClass(t.subject)});
-        }
-      });
-
-      for(let r=0;r<week[day].length;r++){
-        workToday+=week[day][r].dur;
+  function buildTopicLedger(subjects){
+    const items=[];
+    subjects.forEach(function(s){
+      const tt=(s.topics?s.topics.split('|'):[]).map(function(t){return t.trim()}).filter(Boolean);
+      const w=PRIORITY_WEIGHT[s.priority]*(6-s.confidence);
+      if(tt.length===0){
+        items.push({subject:s.name,topic:'General revision',weight:w});
+      }else{
+        tt.forEach(function(t){items.push({subject:s.name,topic:t,weight:w})});
       }
-
-      while(topicIdx<allTopics.length&&workToday<MAX_WORK_PER_DAY){
-        const t=allTopics[topicIdx];
-        const key=t.subject+'|'+t.topic;
-        if(!deepWorkSchedule[key]){
-          week[day].push({type:'deep',subject:t.subject,topic:t.topic,dur:90,colorClass:getSubjColorClass(t.subject)});
-          deepWorkSchedule[key]=day;
-          workToday+=90;
-          topicIdx++;
-        }else{
-          break;
-        }
-      }
-
-      const order={deep:0,recall:1,review:2};
-      week[day].sort(function(a,b){return order[a.type]-order[b.type]});
-    }
-
-    return week;
+    });
+    items.sort(function(a,b){return b.weight-a.weight||a.subject.localeCompare(b.subject)});
+    return items;
   }
 
+  function planWeek(subjects){
+    const ledger=buildTopicLedger(subjects);
+    const days=[[],[],[],[],[],[],[]];
+    const dMin=[0,0,0,0,0,0,0];
+    const dDeep=[0,0,0,0,0,0,0];
+    const dSubjDeep=[{},{},{},{},{},{},{}];
+
+    function fits(d,type,dur,subject){
+      if(d<0||d>6)return false;
+      if(dMin[d]+dur>DAY_CAP_STUDY)return false;
+      if(type==='deep'){
+        if(dDeep[d]>=MAX_DEEP_PER_DAY)return false;
+        if((dSubjDeep[d][subject]||0)>=1)return false;
+      }
+      return true;
+    }
+    function place(d,ev){
+      days[d].push(ev);
+      dMin[d]+=ev.dur;
+      if(ev.type==='deep'){
+        dDeep[d]++;
+        dSubjDeep[d][ev.subject]=(dSubjDeep[d][ev.subject]||0)+1;
+      }
+      return d;
+    }
+
+    // PASS A — Deep Work for every topic, biased to earliest day
+    ledger.forEach(function(t){
+      let placed=-1;
+      for(let d=0;d<7&&placed<0;d++){
+        if(fits(d,'deep',DEEP_DUR,t.subject)){
+          placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
+        }
+      }
+      if(placed<0){
+        for(let d=0;d<7&&placed<0;d++){
+          if(dMin[d]+DEEP_DUR<=DAY_CAP_STUDY&&dDeep[d]<MAX_DEEP_PER_DAY){
+            placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
+          }
+        }
+      }
+      if(placed<0){
+        let m=0;for(let d=1;d<7;d++)if(dMin[d]<dMin[m])m=d;
+        placed=place(m,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
+      }
+      t.dwDay=placed;
+    });
+
+    // PASS B — Active Recall on day d+1 (try +1, +2, +3)
+    ledger.forEach(function(t){
+      if(t.dwDay===undefined)return;
+      [1,2,3].some(function(off){
+        const d=t.dwDay+off;
+        if(d>6)return true;
+        if(dMin[d]+RECALL_DUR<=DAY_CAP_STUDY){
+          place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});
+          t.arDay=d;return true;
+        }
+        return false;
+      });
+    });
+
+    // PASS C — Light Revision on day d+3 (try +3, +4, +5, +6, +2)
+    ledger.forEach(function(t){
+      if(t.dwDay===undefined)return;
+      [3,4,5,6,2].some(function(off){
+        const d=t.dwDay+off;
+        if(d<0||d>6)return false;
+        if(dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY){
+          place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});
+          t.lrDay=d;return true;
+        }
+        return false;
+      });
+    });
+
+    // PASS D — backfill light days with extra Light Reviews (already-introduced topics)
+    for(let d=0;d<7;d++){
+      let safety=20;
+      while(dMin[d]<MIN_DAILY_LOAD&&safety-->0){
+        const subjsHere={};days[d].forEach(function(e){subjsHere[e.subject]=1});
+        let cand=ledger.find(function(t){
+          return t.dwDay!==undefined&&t.dwDay<=d&&
+            !days[d].some(function(e){return e.topic===t.topic&&e.subject===t.subject})&&
+            !subjsHere[t.subject];
+        });
+        if(!cand){
+          cand=ledger.find(function(t){
+            return t.dwDay!==undefined&&t.dwDay<=d&&
+              !days[d].some(function(e){return e.topic===t.topic&&e.subject===t.subject});
+          });
+        }
+        if(!cand)break;
+        if(dMin[d]+REVIEW_DUR>DAY_CAP_STUDY)break;
+        place(d,{type:'review',subject:cand.subject,topic:cand.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(cand.subject)});
+      }
+    }
+
+    return days;
+  }
+
+  // Place each day's planned sessions onto the wake→sleep timeline,
+  // respecting meals + commitments and interleaving subjects.
   function buildDayEvents(dayIndex,state,plannedSessions){
-    const MEAL_DUR=30,BRK=15;
     const wakeMin=toMinutes(state.wakeTime);
     const sleepMin=toMinutes(state.sleepTime);
-    const CUTOFF=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const rawCutoff=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const CUTOFF=rawCutoff-30;  // 30-min wind-down buffer before bed
     const breakfastMin=toMinutes(state.breakfastTime);
     const lunchMin=toMinutes(state.lunchTime);
     const dinnerMin=toMinutes(state.dinnerTime);
@@ -308,49 +375,91 @@ const js = `
      {startMin:lunchMin,endMin:lunchMin+MEAL_DUR,type:'lunch',label:'Lunch',sub:'Step away'},
      {startMin:dinnerMin,endMin:dinnerMin+MEAL_DUR,type:'break',label:'Dinner',sub:'Rest'}
     ].forEach(function(m){if(m.startMin>=wakeMin&&m.startMin<CUTOFF)blockers.push(m)});
-    state.commitments.filter(function(c){return c.day===dayName}).forEach(function(c){blockers.push({startMin:c.startMin,endMin:c.endMin,type:'fixed',label:c.label,sub:''})});
+    state.commitments.filter(function(c){return c.day===dayName}).forEach(function(c){
+      blockers.push({startMin:c.startMin,endMin:c.endMin,type:'fixed',label:c.label,sub:''});
+    });
     blockers.sort(function(a,b){return a.startMin-b.startMin});
 
-    const freeWins=[];
-    let cur=wakeMin;
+    // Drop meal blocks that overlap commitments (commitments win)
+    const resolved=[];
     blockers.forEach(function(b){
-      if(b.startMin>cur)freeWins.push({start:cur,end:b.startMin,pos:cur});
-      cur=Math.max(cur,b.endMin);
+      const clash=resolved.find(function(r){return b.startMin<r.endMin&&b.endMin>r.startMin});
+      if(!clash)resolved.push(b);
     });
-    if(cur<CUTOFF)freeWins.push({start:cur,end:CUTOFF,pos:cur});
 
-    const placed=[];
-    plannedSessions.forEach(function(sess){
-      for(let i=0;i<freeWins.length;i++){
-        const win=freeWins[i];
-        const space=win.end-win.pos;
-        if(space>=sess.dur){
-          placed.push({startMin:win.pos,endMin:win.pos+sess.dur,type:sess.type,subject:sess.subject,topic:sess.topic,label:'',sub:'',colorClass:sess.colorClass});
-          win.pos+=sess.dur;
-          if(sess.type==='deep'&&win.pos+BRK<=win.end){
-            placed.push({startMin:win.pos,endMin:win.pos+BRK,type:'break',subject:'',topic:'',label:'Break',sub:'Rest',colorClass:''});
-            win.pos+=BRK;
-          }
-          break;
-        }
+    const queues={deep:[],recall:[],review:[]};
+    plannedSessions.forEach(function(s){if(queues[s.type])queues[s.type].push(s)});
+
+    const events=[];
+    let cursor=wakeMin;
+    let lastSubj=null;
+    let streak=0;
+
+    function pickEvent(now,remaining){
+      // Time-of-day preference:
+      //   Morning (before lunch): Deep Work, then Active Recall (no Light Review here)
+      //   Afternoon (lunch–dinner): Active Recall, then Deep Work, then Light Review
+      //   Evening (after dinner): Light Review only — no heavy new content
+      let order;
+      if(now<lunchMin)        order=['deep','recall'];
+      else if(now<dinnerMin)  order=['recall','deep','review'];
+      else                    order=['review'];
+      for(let oi=0;oi<order.length;oi++){
+        const tt=order[oi];const q=queues[tt];
+        if(!q.length)continue;
+        const dur=tt==='deep'?DEEP_DUR:tt==='recall'?RECALL_DUR:REVIEW_DUR;
+        if(dur>remaining)continue;
+        const mustDiffer=streak>=2&&lastSubj!==null;
+        let idx=q.findIndex(function(e){return e.subject!==lastSubj});
+        if(mustDiffer){if(idx<0)continue}
+        else{if(idx<0)idx=0}
+        return q.splice(idx,1)[0];
       }
-    });
+      return null;
+    }
 
-    const allEvents=[];
-    blockers.filter(function(b){return b.startMin>=wakeMin&&b.startMin<CUTOFF}).forEach(function(b){
-      allEvents.push({startMin:b.startMin,endMin:Math.min(b.endMin,CUTOFF),type:b.type,subject:'',topic:'',label:b.label,sub:b.sub,colorClass:''});
-    });
-    placed.forEach(function(e){allEvents.push(e)});
-    allEvents.sort(function(a,b){return a.startMin-b.startMin});
-    return allEvents;
+    let safety=300;
+    while(cursor<CUTOFF&&safety-->0){
+      const inside=resolved.find(function(f){return f.startMin<=cursor&&f.endMin>cursor});
+      if(inside){
+        events.push({startMin:inside.startMin,endMin:Math.min(inside.endMin,CUTOFF),type:inside.type,subject:'',topic:'',label:inside.label,sub:inside.sub,colorClass:''});
+        cursor=inside.endMin;
+        continue;
+      }
+      const next=resolved.find(function(f){return f.startMin>=cursor});
+      const limit=Math.min(next?next.startMin:CUTOFF,CUTOFF);
+      if(limit<=cursor){cursor=limit;continue}
+
+      const ev=pickEvent(cursor,limit-cursor);
+      if(!ev){
+        if(limit-cursor>=15){
+          events.push({startMin:cursor,endMin:limit,type:'free',subject:'',topic:'',label:'Free / Buffer',sub:'Rest, hydrate, move',colorClass:''});
+        }
+        cursor=limit;
+        continue;
+      }
+
+      events.push({startMin:cursor,endMin:cursor+ev.dur,type:ev.type,subject:ev.subject,topic:ev.topic,label:'',sub:'',colorClass:ev.colorClass});
+      if(ev.subject===lastSubj)streak++;else streak=1;
+      lastSubj=ev.subject;
+      cursor+=ev.dur;
+
+      // Short break if there's room before the next fixed block / cutoff
+      const next2=resolved.find(function(f){return f.startMin>=cursor});
+      const limit2=Math.min(next2?next2.startMin:CUTOFF,CUTOFF);
+      if(limit2-cursor>=BRK_DUR+15){
+        events.push({startMin:cursor,endMin:cursor+BRK_DUR,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});
+        cursor+=BRK_DUR;
+      }
+    }
+    return events;
   }
 
   function generatePlan(state){
-    const sorted=[].concat(state.subjects).sort(function(a,b){return(PRIORITY_WEIGHT[b.priority]*(6-b.confidence))-(PRIORITY_WEIGHT[a.priority]*(6-a.confidence))});
-    const weekPlanned=planWeekSessions(sorted);
+    const days=planWeek(state.subjects);
     const week=[];
     for(let i=0;i<7;i++){
-      week.push({dayName:DAYS[i],events:buildDayEvents(i,state,weekPlanned[i])});
+      week.push({dayName:DAYS[i],events:buildDayEvents(i,state,days[i])});
     }
     return week;
   }
@@ -573,12 +682,12 @@ export default function RevisionTrackerPage() {
 
           <div className="legend-wrap">
             <div className="legend">
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#2E2557' }}></span> Deep Work</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#7B6FA0' }}></span> Active Recall</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#9E8BC0' }}></span> Light Review</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#E8D9BF' }}></span> Break</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#f0e8d5' }}></span> Lunch</div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#1E40AF' }}></span><span><strong>Deep Work</strong> — new material, full focus (90 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#15803D' }}></span><span><strong>Active Recall</strong> — test yourself: past papers, blurting, Anki (45 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#B45309' }}></span><span><strong>Light Revision</strong> — quick revisit, consolidate notes (30 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#E8D9BF' }}></span> Break / Meal</div>
               <div className="legend-item"><span className="legend-dot" style={{ background: '#A0A0B8' }}></span> Fixed Commitment</div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#f5f5f5', border:'1px dashed #ddd' }}></span> Free / Buffer</div>
             </div>
           </div>
 
