@@ -255,7 +255,7 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 
     <div class="action-row">
       <button type="button" class="btn-outline" id="edit-btn">← Edit My Answers</button>
-      <button type="button" class="btn-solid" id="print-btn">Save as PDF</button>
+      <button type="button" class="btn-solid" id="print-btn">Download as Image</button>
     </div>
     <div class="tips" style="margin-top:1rem;background:var(--cream);color:var(--text);border-left:4px solid var(--gold)">
       <strong style="color:var(--gold)">Tip:</strong> After saving, you can open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
@@ -264,7 +264,6 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>
 (function(){
   'use strict';
@@ -696,66 +695,210 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
   document.getElementById('add-subject-btn').addEventListener('click',()=>addSubjectRow());
   document.getElementById('add-commit-btn').addEventListener('click',()=>addCommitmentRow());
   document.getElementById('has-school').addEventListener('change',()=>{document.getElementById('school-section').style.display=document.getElementById('has-school').checked?'block':'none'});
-  document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state,state.name);showTimetable()});
+  let _exportWeek=null,_exportState=null;
+  document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);_exportWeek=week;_exportState=state;renderTimetable(week,state,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
 
   document.getElementById('print-btn').addEventListener('click',function(){
-    if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
-    const name=document.getElementById('student-name').value.trim();
-    const ww=document.querySelector('.week-wrap');
-    const leg=document.querySelector('.legend-wrap');
-    if(!ww||!leg){alert('Please generate a plan first.');return}
+    if(!_exportWeek||!_exportState){alert('Please generate a plan first.');return}
+    const week=_exportWeek, state=_exportState;
+    const name=state.name||'';
 
-    const wrap=document.createElement('div');
-    wrap.style.cssText='width:1380px;background:#fff;padding:10px 14px;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
+    // --- Canvas-based renderer: no html2canvas, no screenshots, guaranteed all 7 days ---
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const rawCutoff=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const CUTOFF=rawCutoff-30;
+    const totalMins=CUTOFF-wakeMin;
 
-    const title=document.createElement('div');
-    title.style.cssText='font-size:14px;font-weight:700;color:#2E2557;margin-bottom:6px;text-align:center;letter-spacing:0.02em';
-    title.textContent=(name?name+"'s ":'')+'Weekly Revision Plan';
-    wrap.appendChild(title);
+    // A4 landscape at 150 dpi
+    const CW=1754, CH=1240;
+    const MG=26;
+    const TITLE_H=34, HDR_H=27, LEG_H=58;
+    const AXIS_W=48;
+    const GRID_TOP=MG+TITLE_H+HDR_H;
+    const GRID_H=CH-GRID_TOP-LEG_H-MG;
+    const GRID_LEFT=MG+AXIS_W;
+    const N=week.length;
+    const COL_W=Math.floor((CW-2*MG-AXIS_W)/N);
+    const PPM=GRID_H/totalMins;
 
-    const wwClone=ww.cloneNode(true);
-    wwClone.style.cssText='overflow:visible;box-shadow:none;padding:0;border-radius:0;width:100%';
-    const hrowClone=wwClone.querySelector('.tt-header-row');
-    if(hrowClone)hrowClone.style.position='static';
-    wrap.appendChild(wwClone);
+    const cv=document.createElement('canvas');
+    cv.width=CW; cv.height=CH;
+    const c=cv.getContext('2d');
 
-    const legClone=leg.cloneNode(true);
-    legClone.style.cssText='margin-top:6px;background:#fff;border-radius:4px;padding:5px 8px;box-shadow:none';
-    wrap.appendChild(legClone);
+    // White background
+    c.fillStyle='#FFFFFF';
+    c.fillRect(0,0,CW,CH);
 
-    document.body.appendChild(wrap);
-    window.scrollTo(0,0);
+    // Title
+    c.fillStyle='#2E2557';
+    c.font='bold 20px Georgia, serif';
+    c.textAlign='center';
+    c.fillText((name?name+"'s ":'')+'Weekly Revision Plan',CW/2,MG+22);
 
-    setTimeout(function(){
-      // Physically scale positioned elements in the grid so the whole plan fits on one A4 landscape page.
-      // At windowWidth=1380px, jsPDF (3mm margins) x-scales content to 291mm.
-      // Max wrap height = 204mm × (1380px / 291mm) = 967px.
-      const MAX_H=967;
-      const gridClone=wwClone.querySelector('#week-grid');
-      const totalH=wrap.scrollHeight;
-      if(totalH>MAX_H&&gridClone){
-        const nonGridH=totalH-gridClone.scrollHeight;
-        const sf=Math.max(0.35,(MAX_H-nonGridH)/gridClone.scrollHeight);
-        gridClone.querySelectorAll('.tt-day-col,.tt-axis').forEach(function(col){
-          if(col.style.height)col.style.height=Math.round(parseFloat(col.style.height)*sf)+'px';
-          col.querySelectorAll('[style]').forEach(function(el){
-            if(el.style.top)el.style.top=Math.round(parseFloat(el.style.top)*sf)+'px';
-            if(el.style.height&&parseFloat(el.style.height)>0)
-              el.style.height=Math.max(10,Math.round(parseFloat(el.style.height)*sf))+'px';
-          });
-        });
-      }
-      html2pdf().set({
-        margin:[3,3,3,3],
-        filename:(name||'revision')+'-revision-plan.pdf',
-        image:{type:'jpeg',quality:0.95},
-        html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,windowWidth:1380,allowTaint:true},
-        jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}
-      }).from(wrap).save().then(function(){
-        if(document.body.contains(wrap))document.body.removeChild(wrap);
+    // Day header bars
+    const DAY_LABELS=['MON','TUE','WED','THU','FRI','SAT','SUN'];
+    week.forEach(function(day,i){
+      const x=GRID_LEFT+i*COL_W;
+      c.fillStyle='#2E2557';
+      c.fillRect(x,MG+TITLE_H,COL_W-1,HDR_H);
+      c.fillStyle='#F5F0E8';
+      c.font='bold 11px Arial, sans-serif';
+      c.textAlign='center';
+      const lbl=DAY_LABELS[['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'].indexOf(day.dayName)]||day.dayName.slice(0,3).toUpperCase();
+      c.fillText(lbl,x+COL_W/2,MG+TITLE_H+HDR_H-8);
+    });
+
+    // Column backgrounds
+    week.forEach(function(day,i){
+      const x=GRID_LEFT+i*COL_W;
+      c.fillStyle='#FBFAF6';
+      c.fillRect(x,GRID_TOP,COL_W-1,GRID_H);
+    });
+
+    // Hour lines + axis labels
+    const startHour=Math.ceil(wakeMin/60);
+    const endHour=Math.floor(CUTOFF/60);
+    for(let h=startHour;h<=endHour;h++){
+      const y=GRID_TOP+Math.round((h*60-wakeMin)*PPM);
+      c.strokeStyle='rgba(180,170,150,0.35)';
+      c.lineWidth=0.6;
+      c.beginPath();c.moveTo(GRID_LEFT,y);c.lineTo(GRID_LEFT+N*COL_W,y);c.stroke();
+      c.fillStyle='#888';
+      c.font='9px Arial, sans-serif';
+      c.textAlign='right';
+      c.fillText(String(((h%24)+24)%24).padStart(2,'0')+':00',GRID_LEFT-4,y+3);
+    }
+
+    // Subject colour map (position-based, same as on-screen)
+    const SC=['#FFFFFF','#F9A8D4','#E879F9','#FDE68A','#A5F3FC','#FDBA74'];
+    const sm={};
+    state.subjects.forEach(function(s,i){sm[s.name]=SC[Math.min(i,5)];});
+
+    const BG={deep:'#1E40AF',recall:'#15803D',review:'#D97706',break:'#E8D9BF',lunch:'#E8D9BF',fixed:'#A0A0B8'};
+
+    // Draw events
+    week.forEach(function(day,i){
+      const x=GRID_LEFT+i*COL_W;
+      day.events.forEach(function(evt){
+        if(evt.type==='free')return;
+        const top=GRID_TOP+Math.round((evt.startMin-wakeMin)*PPM);
+        const ht=Math.max(5,Math.round((evt.endMin-evt.startMin)*PPM));
+        const bg=BG[evt.type]||'#eee';
+
+        c.fillStyle=bg;
+        c.fillRect(x,top,COL_W-1,ht);
+
+        // Coloured left accent for study sessions
+        const isStudy=evt.type==='deep'||evt.type==='recall'||evt.type==='review';
+        if(isStudy){
+          c.fillStyle=sm[evt.subject]||'#fff';
+          c.fillRect(x,top,3,ht);
+        }
+
+        // Text
+        if(ht>=11){
+          let label='';
+          if(evt.type==='deep')label=evt.subject;
+          else if(evt.type==='recall')label='Recall: '+evt.subject;
+          else if(evt.type==='review')label='Review: '+evt.subject;
+          else label=evt.label||'';
+
+          const tc=isStudy?(sm[evt.subject]||'#fff'):(evt.type==='break'||evt.type==='lunch'?'#7a6040':'#fff');
+          c.fillStyle=tc;
+          const fs=ht>=18?10:8;
+          c.font='bold '+fs+'px Arial, sans-serif';
+          c.textAlign='left';
+          const maxW=COL_W-9;
+          let txt=label;
+          while(c.measureText(txt).width>maxW&&txt.length>2)txt=txt.slice(0,-1);
+          if(txt!==label)txt=txt.slice(0,-1)+'…';
+          c.fillText(txt,x+5,top+fs+1);
+
+          // Topic line
+          if(ht>=24&&evt.topic&&isStudy){
+            c.font='8px Arial, sans-serif';
+            c.fillStyle='rgba(255,255,255,0.7)';
+            let tp=evt.topic;
+            while(c.measureText(tp).width>maxW&&tp.length>2)tp=tp.slice(0,-1);
+            if(tp!==evt.topic)tp=tp.slice(0,-1)+'…';
+            c.fillText(tp,x+5,top+fs+11);
+          }
+
+          // Time stamp for taller slots
+          if(ht>=34){
+            c.font='8px Arial, sans-serif';
+            c.fillStyle=isStudy?'rgba(255,255,255,0.55)':'rgba(100,80,40,0.6)';
+            c.fillText(toHHMM(evt.startMin)+' – '+toHHMM(evt.endMin),x+5,top+ht-3);
+          }
+        }
+
+        // Slot border
+        c.strokeStyle='rgba(255,255,255,0.15)';
+        c.lineWidth=0.4;
+        c.strokeRect(x,top,COL_W-1,ht);
       });
-    },300);
+
+      // Column border
+      c.strokeStyle='rgba(200,190,170,0.4)';
+      c.lineWidth=0.5;
+      c.strokeRect(x,GRID_TOP,COL_W-1,GRID_H);
+    });
+
+    // Left axis border
+    c.strokeStyle='rgba(200,190,170,0.6)';
+    c.lineWidth=1;
+    c.beginPath();c.moveTo(GRID_LEFT,GRID_TOP);c.lineTo(GRID_LEFT,GRID_TOP+GRID_H);c.stroke();
+
+    // Legend
+    const legY=CH-MG-LEG_H+10;
+    const legItems=[
+      {color:'#1E40AF',label:'Deep Work (90 min)'},
+      {color:'#15803D',label:'Active Recall (45 min)'},
+      {color:'#D97706',label:'Light Revision (30 min)'},
+      {color:'#E8D9BF',label:'Break / Meal'},
+      {color:'#A0A0B8',label:'Fixed Commitment'}
+    ];
+    c.font='10px Arial, sans-serif';
+    c.textAlign='left';
+    let lx=MG;
+    legItems.forEach(function(item){
+      c.fillStyle=item.color;
+      c.fillRect(lx,legY,13,13);
+      c.strokeStyle='rgba(0,0,0,0.12)';c.lineWidth=0.5;c.strokeRect(lx,legY,13,13);
+      c.fillStyle='#444';
+      c.fillText(item.label,lx+17,legY+10);
+      lx+=c.measureText(item.label).width+34;
+    });
+
+    // Subject colour key
+    if(state.subjects.length>0){
+      const sy=legY+22;
+      c.fillStyle='#666';c.font='9px Arial, sans-serif';
+      c.fillText('Subjects:',MG,sy+9);
+      let sx=MG+c.measureText('Subjects:').width+10;
+      state.subjects.forEach(function(s,i){
+        if(i>=6)return;
+        c.fillStyle='#555';c.fillRect(sx,sy,10,10);
+        c.fillStyle=SC[i];c.fillRect(sx+1,sy+1,8,8);
+        c.fillStyle='#444';c.font='9px Arial, sans-serif';
+        c.fillText(s.name,sx+13,sy+9);
+        sx+=c.measureText(s.name).width+26;
+      });
+    }
+
+    // Download as PNG
+    cv.toBlob(function(blob){
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;
+      a.download=(name?name.replace(/\s+/g,'-').toLowerCase():'revision')+'-revision-plan.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function(){URL.revokeObjectURL(url);},1000);
+    },'image/png');
   });
 })();
 </script>

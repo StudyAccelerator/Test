@@ -137,7 +137,7 @@ html = f'''<!DOCTYPE html>
 
     <div class="action-row">
       <button type="button" class="btn-outline" id="edit-btn">← Edit My Answers</button>
-      <button type="button" class="btn-solid" id="print-btn">Save as PDF</button>
+      <button type="button" class="btn-solid" id="print-btn">Download as Image</button>
     </div>
     <div class="tips" style="margin-top:1rem;background:var(--cream);color:var(--text);border-left:4px solid var(--gold)">
       <strong style="color:var(--gold)">Tip:</strong> After saving, you can open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
@@ -146,7 +146,6 @@ html = f'''<!DOCTYPE html>
 
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
 <script>{js}</script>
 
 </body>
