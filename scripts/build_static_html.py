@@ -140,7 +140,7 @@ html = f'''<!DOCTYPE html>
       <button type="button" class="btn-solid" id="print-btn">Download as Image</button>
     </div>
     <div class="tips" style="margin-top:1rem;background:var(--cream);color:var(--text);border-left:4px solid var(--gold)">
-      <strong style="color:var(--gold)">Tip:</strong> After saving, you can open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
+      <strong style="color:var(--gold)">Tip:</strong> After downloading as an image, you can print it out and stick it on your wall, that's the most effective way to use this plan. Put it somewhere you'll see it every day!
     </div>
   </section>
 
