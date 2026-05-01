@@ -354,51 +354,51 @@ export default function Home() {
             </p>
 
             <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-4">
-              <table className="w-full table-fixed">
+              <table className="w-full min-w-[560px]">
                 <thead>
                   <tr>
-                    <th className="bg-brand-purple text-brand-cream p-4 text-left w-1/5"></th>
-                    <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/5">Study Series</th>
-                    <th className="bg-brand-gold text-brand-purple p-4 text-left font-semibold w-3/10">Study Accelerator</th>
-                    <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-3/10">Top 1% Mentorship</th>
+                    <th className="bg-brand-purple text-brand-cream p-3 md:p-4 text-center"></th>
+                    <th className="bg-brand-purple text-brand-cream p-3 md:p-4 text-center font-semibold">Study Series</th>
+                    <th className="bg-brand-gold text-brand-purple p-3 md:p-4 text-center font-semibold">Study Accelerator</th>
+                    <th className="bg-brand-purple text-brand-cream p-3 md:p-4 text-center font-semibold">Top 1% Mentorship</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Price</td>
-                    <td className="p-4 w-1/5"><span className="text-xl font-bold text-brand-gold">£119</span></td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-xl font-bold text-brand-gold">£499</span></td>
-                    <td className="p-4 w-3/10"><span className="text-xl font-bold text-brand-gold">£2,000/yr</span></td>
+                    <td className="p-3 md:p-4 font-semibold text-brand-purple text-center">Price</td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-xl font-bold text-brand-gold">£119</span></td>
+                    <td className="p-3 md:p-4 text-center bg-brand-gold bg-opacity-10"><span className="text-xl font-bold text-brand-gold">£499</span></td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-xl font-bold text-brand-gold">£2,000/yr</span></td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Focus</td>
-                    <td className="p-4 w-1/5">Learn the System</td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10">Implement the System</td>
-                    <td className="p-4 w-3/10">Optimise &amp; Accelerate</td>
+                    <td className="p-3 md:p-4 font-semibold text-brand-purple text-center">Focus</td>
+                    <td className="p-3 md:p-4 text-center">Learn the System</td>
+                    <td className="p-3 md:p-4 text-center bg-brand-gold bg-opacity-10">Implement the System</td>
+                    <td className="p-3 md:p-4 text-center">Optimise &amp; Accelerate</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Live Sessions</td>
-                    <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> 12 sessions + weekly accountability</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fortnightly calls, year-round</td>
+                    <td className="p-3 md:p-4 font-semibold text-brand-purple text-center">Live Sessions</td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
+                    <td className="p-3 md:p-4 text-center bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> 12 sessions + weekly accountability</td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-green-700 font-bold">✓</span> Fortnightly calls, year-round</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Group Q&amp;A</td>
-                    <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
+                    <td className="p-3 md:p-4 font-semibold text-brand-purple text-center">Group Q&amp;A</td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
+                    <td className="p-3 md:p-4 text-center bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">1:1 Support</td>
-                    <td className="p-4 w-1/5"></td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Personalised guidance</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> 24/7 access to Dr. Waleed</td>
+                    <td className="p-3 md:p-4 font-semibold text-brand-purple text-center">1:1 Support</td>
+                    <td className="p-3 md:p-4 text-center"></td>
+                    <td className="p-3 md:p-4 text-center bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Personalised guidance</td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-green-700 font-bold">✓</span> 24/7 access to Dr. Waleed</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Personal Plan</td>
-                    <td className="p-4 w-1/5"></td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Templates &amp; feedback</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
+                    <td className="p-3 md:p-4 font-semibold text-brand-purple text-center">Personal Plan</td>
+                    <td className="p-3 md:p-4 text-center"></td>
+                    <td className="p-3 md:p-4 text-center bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Templates &amp; feedback</td>
+                    <td className="p-3 md:p-4 text-center"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
                   </tr>
                 </tbody>
               </table>
@@ -491,13 +491,14 @@ export default function Home() {
       <footer id="contact" className="bg-brand-purple text-brand-cream py-8 px-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
-            <a href="/#hero" className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center hover:opacity-80 transition">
+            <a href="/#hero" className="relative overflow-visible md:overflow-hidden md:flex-1 h-auto md:h-36 flex justify-center items-center hover:opacity-80 transition w-full md:w-auto py-2 md:py-0">
               <Image
                 src="/logo-header.png?v=2"
                 alt="A-Level Accelerators"
                 width={400}
                 height={400}
-                className="absolute h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+                className="h-24 w-auto md:absolute md:h-[27rem] md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+                style={{ filter: 'brightness(0) invert(1)', opacity: 0.85 }}
                 unoptimized
               />
             </a>

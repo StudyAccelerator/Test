@@ -22,7 +22,7 @@ export default function Header() {
       }}
       className="text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0 h-32">
+      <div className="max-w-7xl mx-auto px-8 flex flex-col md:flex-row justify-between items-center gap-0 h-auto md:h-32 py-4 md:py-0">
         <a href="/" className="h-80 w-auto flex items-center -my-32">
           <Image
             src="/logo-header-new.png"
@@ -34,7 +34,7 @@ export default function Header() {
             unoptimized
           />
         </a>
-        <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
+        <nav className="mt-3 md:mt-0 grid grid-cols-2 md:flex gap-x-8 gap-y-3 md:gap-6 text-sm md:text-base text-center md:text-left">
           <a href="/#hero" className="text-brand-purple hover:text-brand-gold font-semibold transition">Study System</a>
           <a href="/subject-accelerators" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
           <a href="/#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
