@@ -100,12 +100,12 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 .tt-slot--lunch{background:var(--cream-warm);color:#5a5a5a;border:1px solid #d4c5a0}
 .tt-slot--fixed{background:var(--slate);color:#fff}
 .tt-slot--free{background:#f5f5f5;color:#999;font-style:italic;border:1px dashed #ddd}
-.tt-slot-label.subj-maths{border-left-color:var(--color-maths);color:#FEF08A}
-.tt-slot-label.subj-biology{border-left-color:var(--color-biology);color:#86EFAC}
-.tt-slot-label.subj-chemistry{border-left-color:var(--color-chemistry);color:#C4B5FD}
-.tt-slot-label.subj-physics{border-left-color:var(--color-physics);color:#F0ABFC}
-.tt-slot-label.subj-english{border-left-color:var(--color-english);color:#FCA5A5}
-.tt-slot-label.subj-history{border-left-color:var(--color-history);color:#FCD34D}
+.tt-slot-label.subj-pos-0{border-left-color:#FFFFFF;color:#FFFFFF}
+.tt-slot-label.subj-pos-1{border-left-color:#F9A8D4;color:#F9A8D4}
+.tt-slot-label.subj-pos-2{border-left-color:#E879F9;color:#E879F9}
+.tt-slot-label.subj-pos-3{border-left-color:#FDE68A;color:#FDE68A}
+.tt-slot-label.subj-pos-4{border-left-color:#A5F3FC;color:#A5F3FC}
+.tt-slot-label.subj-pos-5{border-left-color:#FDBA74;color:#FDBA74}
 .legend-wrap{margin-top:0.9rem;background:#fff;border-radius:8px;padding:0.9rem 1.1rem;box-shadow:0 1px 4px rgba(46,37,87,0.06)}
 .legend{display:flex;flex-wrap:wrap;gap:0.7rem 1.4rem}
 .legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:#555}
@@ -296,7 +296,7 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 
   let subjectCounter=0;
   const topicPlaceholders={'Mathematics':'Differentiation, Integration','Biology':'Cardiac cycle, Photosynthesis','Chemistry':'Organic mechanisms, Electrochemistry','Physics':'Forces, Energy, Waves','English':'Themes, Character analysis','History':'Key dates, Causes and effects','Economics':'Supply and demand, GDP','Geography':'Physical processes, Human impact'};
-  function getSubjColorClass(name){const lower=name.toLowerCase();if(lower.includes('math'))return 'subj-maths';if(lower.includes('biol'))return 'subj-biology';if(lower.includes('chem'))return 'subj-chemistry';if(lower.includes('phys'))return 'subj-physics';if(lower.includes('english'))return 'subj-english';if(lower.includes('history'))return 'subj-history';return ''}
+  function makeSubjPosMap(subjects){const m={};subjects.forEach(function(s,i){m[s.name]='subj-pos-'+Math.min(i,5);});return m;}
 
   function addSubjectRow(name='',topics='',priority='medium',confidence=3){
     subjectCounter++;const id='subject-'+subjectCounter;const el=document.createElement('div');el.className='item-row subject-row';el.id=id;
@@ -378,6 +378,8 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
   }
 
   function planWeek(subjects){
+    const subjPos=makeSubjPosMap(subjects);
+    function sc(name){return subjPos[name]||'subj-pos-0';}
     const ledger=buildTopicLedger(subjects);
 
     // Assign dwCount per topic (1–4 based on weight), then scale to fit slot budget
@@ -416,11 +418,11 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
         const minD=t.dwDays.length>0?t.dwDays[t.dwDays.length-1]+2:0;
         let placed=-1;
         // Try from minD with full constraints
-        for(let d=minD;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});t.dwDays.push(placed);}}
+        for(let d=minD;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:sc(t.subject)});t.dwDays.push(placed);}}
         // Relax minD gap constraint
-        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});t.dwDays.push(placed);}}}
+        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:sc(t.subject)});t.dwDays.push(placed);}}}
         // Last resort: ignore per-subject-per-day limit
-        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(dMin[d]+DEEP_DUR<=DAY_CAP_STUDY&&dDeep[d]<MAX_DEEP_PER_DAY){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});t.dwDays.push(placed);}}}
+        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(dMin[d]+DEEP_DUR<=DAY_CAP_STUDY&&dDeep[d]<MAX_DEEP_PER_DAY){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:sc(t.subject)});t.dwDays.push(placed);}}}
         if(placed<0)break;
       }
       t.dwDay=t.dwDays.length>0?t.dwDays[0]:undefined;
@@ -432,7 +434,7 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
       t.dwDays.forEach(function(dwD){
         [1,2,3].some(function(off){
           const d=dwD+off;if(d>6)return true;
-          if(dMin[d]+RECALL_DUR<=DAY_CAP_STUDY){place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});return true;}
+          if(dMin[d]+RECALL_DUR<=DAY_CAP_STUDY){place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:sc(t.subject)});return true;}
           return false;
         });
       });
@@ -444,7 +446,7 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
       t.dwDays.forEach(function(dwD){
         [3,4,5,6,2].some(function(off){
           const d=dwD+off;if(d<0||d>6)return false;
-          if(dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY){place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});return true;}
+          if(dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY){place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:sc(t.subject)});return true;}
           return false;
         });
       });
@@ -468,9 +470,9 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
         const maxAR=2;
         const maxLR=t.weight>=12?4:t.weight>=8?3:2;
         if(tAR<maxAR&&t.dwDay<d&&dMin[d]+RECALL_DUR<=FILL_TO){
-          place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});
+          place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:sc(t.subject)});
         }else if(tLR<maxLR&&dMin[d]+REVIEW_DUR<=FILL_TO){
-          place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});
+          place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:sc(t.subject)});
         }
         if(rr%avail.length===0){
           const anyFits=avail.some(function(t){
@@ -519,10 +521,18 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
     const queues={deep:[],recall:[],review:[]};
     plannedSessions.forEach(function(s){if(queues[s.type])queues[s.type].push(s)});
 
-    // Reserve ~2 review sessions for the evening so it isn't empty after dinner
-    const EVENING_RES=Math.min(3,Math.max(0,queues.review.length-2));
-    const eveningPool=queues.review.splice(queues.review.length-EVENING_RES,EVENING_RES);
+    // Reserve ~30% of AR+LR sessions for after dinner so evenings are not empty
+    const totalQ=queues.recall.length+queues.review.length;
+    const EVENING_RES=Math.min(8,Math.max(3,Math.floor(totalQ*0.3)));
+    const recallRes=Math.floor(EVENING_RES/2);
+    const reviewRes=EVENING_RES-recallRes;
+    const eveningRecall=queues.recall.splice(Math.max(0,queues.recall.length-recallRes),recallRes);
+    const eveningPool=queues.review.splice(Math.max(0,queues.review.length-reviewRes),reviewRes);
     let eveningAdded=false;
+
+    // Cap morning study: after MORNING_CAP minutes of study before lunch, extend break to meal
+    const MORNING_CAP=180;
+    let morningStudy=0;
 
     const events=[];
     let cursor=wakeMin;
@@ -531,12 +541,12 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
     let lastStudyType=null;
 
     function pickEvent(now,remaining){
-      // Release reserved evening reviews once we're past dinner
-      if(now>=dinnerMin&&!eveningAdded){eveningAdded=true;queues.review.push.apply(queues.review,eveningPool);}
+      // Release reserved evening sessions once we're past dinner
+      if(now>=dinnerMin&&!eveningAdded){eveningAdded=true;queues.recall.push.apply(queues.recall,eveningRecall);queues.review.push.apply(queues.review,eveningPool);}
       let order;
       if(now<lunchMin)        order=['deep','recall','review'];
       else if(now<dinnerMin)  order=lastStudyType==='recall'?['review','deep','recall']:['recall','deep','review'];
-      else                    order=['review'];
+      else                    order=['recall','review'];
       for(let oi=0;oi<order.length;oi++){
         const tt=order[oi];const q=queues[tt];
         if(!q.length)continue;
@@ -563,25 +573,40 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
       const limit=Math.min(next?next.startMin:CUTOFF,CUTOFF);
       if(limit<=cursor){cursor=limit;continue}
 
+      // Morning cap: once MORNING_CAP study minutes placed before lunch, extend last break to fill gap
+      if(cursor<lunchMin&&morningStudy>=MORNING_CAP){
+        const lb=events.length>0?events[events.length-1]:null;
+        if(lb&&lb.type==='break'){lb.endMin=limit;}
+        else{events.push({startMin:cursor,endMin:limit,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});}
+        cursor=limit;
+        continue;
+      }
+
       const ev=pickEvent(cursor,limit-cursor);
       if(!ev){
-        if(limit-cursor>=15){
+        // No session available — extend last break to fill gap rather than showing "Free"
+        const lb=events.length>0?events[events.length-1]:null;
+        if(lb&&lb.type==='break'&&lb.endMin===cursor&&cursor<dinnerMin){
+          lb.endMin=limit;
+        }else if(limit-cursor>=15){
           events.push({startMin:cursor,endMin:limit,type:'free',subject:'',topic:'',label:'Free',sub:'',colorClass:''});
         }
         cursor=limit;
         continue;
       }
 
+      if(cursor<lunchMin)morningStudy+=ev.dur;
       events.push({startMin:cursor,endMin:cursor+ev.dur,type:ev.type,subject:ev.subject,topic:ev.topic,label:'',sub:'',colorClass:ev.colorClass});
       lastStudyType=ev.type;
       if(ev.subject===lastSubj)streak++;else streak=1;
       lastSubj=ev.subject;
       cursor+=ev.dur;
 
-      // Break after session — longer after deep work to push later sessions into evening
+      // Break after session — longer in afternoon to push sessions toward evening
       const next2=resolved.find(function(f){return f.startMin>=cursor});
       const limit2=Math.min(next2?next2.startMin:CUTOFF,CUTOFF);
-      const brkDur=ev.type==='deep'?30:ev.type==='recall'?20:15;
+      const isAfternoon=cursor>=lunchMin&&cursor<dinnerMin;
+      const brkDur=ev.type==='deep'?(isAfternoon?45:30):ev.type==='recall'?(isAfternoon?30:20):(isAfternoon?25:15);
       if(limit2-cursor>=brkDur+15){
         events.push({startMin:cursor,endMin:cursor+brkDur,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});
         cursor+=brkDur;
@@ -681,50 +706,56 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
     const leg=document.querySelector('.legend-wrap');
     if(!ww||!leg){alert('Please generate a plan first.');return}
 
-    // Compact export wrapper — no purple header, just title + grid + legend
     const wrap=document.createElement('div');
-    wrap.style.cssText='width:1400px;background:#fff;padding:10px 14px;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
+    wrap.style.cssText='width:1380px;background:#fff;padding:10px 14px;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
 
     const title=document.createElement('div');
-    title.style.cssText='font-size:15px;font-weight:700;color:#2E2557;margin-bottom:8px;text-align:center;letter-spacing:0.02em';
+    title.style.cssText='font-size:14px;font-weight:700;color:#2E2557;margin-bottom:6px;text-align:center;letter-spacing:0.02em';
     title.textContent=(name?name+"'s ":'')+'Weekly Revision Plan';
     wrap.appendChild(title);
 
     const wwClone=ww.cloneNode(true);
     wwClone.style.cssText='overflow:visible;box-shadow:none;padding:0;border-radius:0;width:100%';
-    // Unpin sticky header-row so it doesn't duplicate when html2canvas scrolls
     const hrowClone=wwClone.querySelector('.tt-header-row');
     if(hrowClone)hrowClone.style.position='static';
     wrap.appendChild(wwClone);
 
     const legClone=leg.cloneNode(true);
-    legClone.style.cssText='margin-top:8px;background:#fff;border-radius:4px;padding:6px 10px;box-shadow:none';
+    legClone.style.cssText='margin-top:6px;background:#fff;border-radius:4px;padding:5px 8px;box-shadow:none';
     wrap.appendChild(legClone);
 
     document.body.appendChild(wrap);
     window.scrollTo(0,0);
 
-    // Measure rendered height then compute zoom so everything fits A4 landscape in one page.
-    // A4 landscape: 297x210mm; 3mm margins each side → usable 291x204mm.
-    // html2canvas renders at windowWidth=1400px; jsPDF x-scales to fit 291mm width.
-    // x-scale ≈ 291 / (1400/3.7795) = 0.786. Required: totalH*zoom*0.786/3.7795 ≤ 204.
-    // ⟹ zoom ≤ 204*3.7795/(totalH*0.786) = 771/(totalH*0.786).
     setTimeout(function(){
+      // Physically scale positioned elements in the grid so the whole plan fits on one A4 landscape page.
+      // At windowWidth=1380px, jsPDF (3mm margins) x-scales content to 291mm.
+      // Max wrap height = 204mm × (1380px / 291mm) = 967px.
+      const MAX_H=967;
+      const gridClone=wwClone.querySelector('#week-grid');
       const totalH=wrap.scrollHeight;
-      const zoom=Math.min(1, 771/(totalH*0.786));
-      if(zoom<1)wrap.style.zoom=zoom.toFixed(3);
-      setTimeout(function(){
-        html2pdf().set({
-          margin:[3,3,3,3],
-          filename:(name||'revision')+'-revision-plan.pdf',
-          image:{type:'jpeg',quality:0.97},
-          html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,windowWidth:1400,allowTaint:true},
-          jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}
-        }).from(wrap).save().then(function(){
-          if(document.body.contains(wrap))document.body.removeChild(wrap);
+      if(totalH>MAX_H&&gridClone){
+        const nonGridH=totalH-gridClone.scrollHeight;
+        const sf=Math.max(0.35,(MAX_H-nonGridH)/gridClone.scrollHeight);
+        gridClone.querySelectorAll('.tt-day-col,.tt-axis').forEach(function(col){
+          if(col.style.height)col.style.height=Math.round(parseFloat(col.style.height)*sf)+'px';
+          col.querySelectorAll('[style]').forEach(function(el){
+            if(el.style.top)el.style.top=Math.round(parseFloat(el.style.top)*sf)+'px';
+            if(el.style.height&&parseFloat(el.style.height)>0)
+              el.style.height=Math.max(10,Math.round(parseFloat(el.style.height)*sf))+'px';
+          });
         });
-      },100);
-    },250);
+      }
+      html2pdf().set({
+        margin:[3,3,3,3],
+        filename:(name||'revision')+'-revision-plan.pdf',
+        image:{type:'jpeg',quality:0.95},
+        html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,windowWidth:1380,allowTaint:true},
+        jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}
+      }).from(wrap).save().then(function(){
+        if(document.body.contains(wrap))document.body.removeChild(wrap);
+      });
+    },300);
   });
 })();
 </script>
