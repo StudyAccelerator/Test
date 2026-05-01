@@ -259,9 +259,9 @@ const js = `
   function planWeek(subjects){
     const ledger=buildTopicLedger(subjects);
 
-    // Assign dwCount per topic (1–3 based on weight), then scale to fit slot budget
-    // New weight scale: max=15 (high priority × 5 exam focus). >=12→3DW, >=6→2DW, else 1DW
-    ledger.forEach(function(t){t.dwCount=t.weight>=12?3:t.weight>=6?2:1;});
+    // Assign dwCount per topic (1–4 based on weight), then scale to fit slot budget
+    // Max weight=15 (high×5). >=12→4DW, >=8→3DW, >=5→2DW, else 1DW
+    ledger.forEach(function(t){t.dwCount=t.weight>=12?4:t.weight>=8?3:t.weight>=5?2:1;});
     const MAX_DW_SLOTS=7*MAX_DEEP_PER_DAY;
     let rawDW=ledger.reduce(function(s,t){return s+t.dwCount;},0);
     if(rawDW>MAX_DW_SLOTS){
@@ -343,21 +343,20 @@ const js = `
         const tAR=days[d].filter(function(e){return e.type==='recall'&&e.topic===t.topic;}).length;
         const tLR=days[d].filter(function(e){return e.type==='review'&&e.topic===t.topic;}).length;
         // High-weight topics get more filler passes; lower-weight get fewer
-        const maxAR=t.weight>=12?3:t.weight>=6?2:1;
-        const maxLR=t.weight>=12?4:t.weight>=6?3:2;
-        if(tAR<maxAR&&dMin[d]+RECALL_DUR<=FILL_TO){
+        // AR only after a prior day's DW (not same day — student hasn't covered it yet)
+        const maxAR=2;
+        const maxLR=t.weight>=12?4:t.weight>=8?3:2;
+        if(tAR<maxAR&&t.dwDay<d&&dMin[d]+RECALL_DUR<=FILL_TO){
           place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});
         }else if(tLR<maxLR&&dMin[d]+REVIEW_DUR<=FILL_TO){
           place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});
         }
-        // After a full rotation check if anything can still be placed
         if(rr%avail.length===0){
           const anyFits=avail.some(function(t){
             const ar=days[d].filter(function(e){return e.type==='recall'&&e.topic===t.topic;}).length;
             const lr=days[d].filter(function(e){return e.type==='review'&&e.topic===t.topic;}).length;
-            const mAR=t.weight>=12?3:t.weight>=6?2:1;
-            const mLR=t.weight>=12?4:t.weight>=6?3:2;
-            return(ar<mAR&&dMin[d]+RECALL_DUR<=FILL_TO)||(lr<mLR&&dMin[d]+REVIEW_DUR<=FILL_TO);
+            const mLR=t.weight>=12?4:t.weight>=8?3:2;
+            return(ar<2&&t.dwDay<d&&dMin[d]+RECALL_DUR<=FILL_TO)||(lr<mLR&&dMin[d]+REVIEW_DUR<=FILL_TO);
           });
           if(!anyFits)break;
         }
@@ -399,19 +398,23 @@ const js = `
     const queues={deep:[],recall:[],review:[]};
     plannedSessions.forEach(function(s){if(queues[s.type])queues[s.type].push(s)});
 
+    // Reserve ~2 review sessions for the evening so it isn't empty after dinner
+    const EVENING_RES=Math.min(2,Math.max(0,queues.review.length-2));
+    const eveningPool=queues.review.splice(queues.review.length-EVENING_RES,EVENING_RES);
+    let eveningAdded=false;
+
     const events=[];
     let cursor=wakeMin;
     let lastSubj=null;
     let streak=0;
+    let lastStudyType=null;
 
     function pickEvent(now,remaining){
-      // Time-of-day preference:
-      //   Morning (before lunch): Deep Work, then Active Recall (no Light Review here)
-      //   Afternoon (lunch–dinner): Active Recall, then Deep Work, then Light Review
-      //   Evening (after dinner): Light Review only — no heavy new content
+      // Release reserved evening reviews once we're past dinner
+      if(now>=dinnerMin&&!eveningAdded){eveningAdded=true;queues.review.push.apply(queues.review,eveningPool);}
       let order;
       if(now<lunchMin)        order=['deep','recall','review'];
-      else if(now<dinnerMin)  order=['recall','deep','review'];
+      else if(now<dinnerMin)  order=lastStudyType==='recall'?['review','deep','recall']:['recall','deep','review'];
       else                    order=['review'];
       for(let oi=0;oi<order.length;oi++){
         const tt=order[oi];const q=queues[tt];
@@ -449,6 +452,7 @@ const js = `
       }
 
       events.push({startMin:cursor,endMin:cursor+ev.dur,type:ev.type,subject:ev.subject,topic:ev.topic,label:'',sub:'',colorClass:ev.colorClass});
+      lastStudyType=ev.type;
       if(ev.subject===lastSubj)streak++;else streak=1;
       lastSubj=ev.subject;
       cursor+=ev.dur;
@@ -550,30 +554,43 @@ const js = `
 
   document.getElementById('print-btn').addEventListener('click',function(){
     if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
-    const element=document.getElementById('timetable-section');
     const name=document.getElementById('student-name').value.trim()||'revision-timetable';
-    const pdfLogo=document.getElementById('pdf-logo');
-    const weekWrap=document.querySelector('.week-wrap');
-    const grid=document.getElementById('week-grid');
-    const prevOverflow=weekWrap?weekWrap.style.overflow:'';
-    if(pdfLogo)pdfLogo.style.display='block';
-    if(weekWrap)weekWrap.style.overflow='visible';
+    const hdr=document.querySelector('.tt-header');
+    const ww=document.querySelector('.week-wrap');
+    const leg=document.querySelector('.legend-wrap');
+    if(!hdr||!ww||!leg){alert('Please generate a plan first.');return}
+
+    // Build a clean export element: header + timetable + legend only (no buttons/tips)
+    const wrap=document.createElement('div');
+    wrap.style.cssText='background:#fff;padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
+    const hdrClone=hdr.cloneNode(true);
+    const logoInClone=hdrClone.querySelector('#pdf-logo');
+    if(logoInClone)logoInClone.style.display='block';
+    const wwClone=ww.cloneNode(true);
+    wwClone.style.cssText='overflow:visible;padding:0.3rem;box-shadow:none';
+    wrap.appendChild(hdrClone);
+    wrap.appendChild(wwClone);
+    wrap.appendChild(leg.cloneNode(true));
+    document.body.appendChild(wrap);
+
+    // Scale the cloned grid to fit A4 landscape height
+    const gridClone=wwClone.querySelector('#week-grid');
+    if(gridClone){
+      const gh=gridClone.scrollHeight;
+      const zv=gh>700?(700/gh).toFixed(3):'1';
+      if(parseFloat(zv)<1)gridClone.style.zoom=zv;
+    }
+
     window.scrollTo(0,0);
-    // Zoom grid down so it fits on one A4 landscape page (~760px content height)
-    const gridH=grid?grid.scrollHeight:0;
-    const zoomVal=(gridH>760&&grid)?(760/gridH).toFixed(3):'1';
-    if(grid&&parseFloat(zoomVal)<1)grid.style.zoom=zoomVal;
     setTimeout(function(){
       html2pdf().set({
-        margin:[6,4,6,4],
+        margin:[4,4,4,4],
         filename:name+'-revision-plan.pdf',
-        image:{type:'jpeg',quality:0.95},
+        image:{type:'jpeg',quality:0.97},
         html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,windowWidth:1400,allowTaint:true},
         jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}
-      }).from(element).save().then(function(){
-        if(pdfLogo)pdfLogo.style.display='none';
-        if(weekWrap)weekWrap.style.overflow=prevOverflow;
-        if(grid)grid.style.zoom='';
+      }).from(wrap).save().then(function(){
+        document.body.removeChild(wrap);
       });
     },150);
   });
