@@ -98,12 +98,12 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 .tt-slot--lunch{background:var(--cream-warm);color:#5a5a5a;border:1px solid #d4c5a0}
 .tt-slot--fixed{background:var(--slate);color:#fff}
 .tt-slot--free{background:#f5f5f5;color:#999;font-style:italic;border:1px dashed #ddd}
-.tt-slot-label.subj-maths{border-left-color:var(--color-maths)}
-.tt-slot-label.subj-biology{border-left-color:var(--color-biology)}
-.tt-slot-label.subj-chemistry{border-left-color:var(--color-chemistry)}
-.tt-slot-label.subj-physics{border-left-color:var(--color-physics)}
-.tt-slot-label.subj-english{border-left-color:var(--color-english)}
-.tt-slot-label.subj-history{border-left-color:var(--color-history)}
+.tt-slot-label.subj-maths{border-left-color:var(--color-maths);color:#FEF08A}
+.tt-slot-label.subj-biology{border-left-color:var(--color-biology);color:#86EFAC}
+.tt-slot-label.subj-chemistry{border-left-color:var(--color-chemistry);color:#C4B5FD}
+.tt-slot-label.subj-physics{border-left-color:var(--color-physics);color:#F0ABFC}
+.tt-slot-label.subj-english{border-left-color:var(--color-english);color:#FCA5A5}
+.tt-slot-label.subj-history{border-left-color:var(--color-history);color:#FCD34D}
 .legend-wrap{margin-top:0.9rem;background:#fff;border-radius:8px;padding:0.9rem 1.1rem;box-shadow:0 1px 4px rgba(46,37,87,0.06)}
 .legend{display:flex;flex-wrap:wrap;gap:0.7rem 1.4rem}
 .legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:#555}
@@ -399,7 +399,7 @@ const js = `
     plannedSessions.forEach(function(s){if(queues[s.type])queues[s.type].push(s)});
 
     // Reserve ~2 review sessions for the evening so it isn't empty after dinner
-    const EVENING_RES=Math.min(2,Math.max(0,queues.review.length-2));
+    const EVENING_RES=Math.min(3,Math.max(0,queues.review.length-2));
     const eveningPool=queues.review.splice(queues.review.length-EVENING_RES,EVENING_RES);
     let eveningAdded=false;
 
@@ -457,12 +457,13 @@ const js = `
       lastSubj=ev.subject;
       cursor+=ev.dur;
 
-      // Short break if there's room before the next fixed block / cutoff
+      // Break after session — longer after deep work to push later sessions into evening
       const next2=resolved.find(function(f){return f.startMin>=cursor});
       const limit2=Math.min(next2?next2.startMin:CUTOFF,CUTOFF);
-      if(limit2-cursor>=BRK_DUR+15){
-        events.push({startMin:cursor,endMin:cursor+BRK_DUR,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});
-        cursor+=BRK_DUR;
+      const brkDur=ev.type==='deep'?30:ev.type==='recall'?20:15;
+      if(limit2-cursor>=brkDur+15){
+        events.push({startMin:cursor,endMin:cursor+brkDur,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});
+        cursor+=brkDur;
       }
     }
     return events;
@@ -554,45 +555,55 @@ const js = `
 
   document.getElementById('print-btn').addEventListener('click',function(){
     if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
-    const name=document.getElementById('student-name').value.trim()||'revision-timetable';
-    const hdr=document.querySelector('.tt-header');
+    const name=document.getElementById('student-name').value.trim();
     const ww=document.querySelector('.week-wrap');
     const leg=document.querySelector('.legend-wrap');
-    if(!hdr||!ww||!leg){alert('Please generate a plan first.');return}
+    if(!ww||!leg){alert('Please generate a plan first.');return}
 
-    // Build a clean export element: header + timetable + legend only (no buttons/tips)
+    // Compact export wrapper — no purple header, just title + grid + legend
     const wrap=document.createElement('div');
-    wrap.style.cssText='background:#fff;padding:0;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
-    const hdrClone=hdr.cloneNode(true);
-    const logoInClone=hdrClone.querySelector('#pdf-logo');
-    if(logoInClone)logoInClone.style.display='block';
+    wrap.style.cssText='width:1400px;background:#fff;padding:10px 14px;box-sizing:border-box;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif';
+
+    const title=document.createElement('div');
+    title.style.cssText='font-size:15px;font-weight:700;color:#2E2557;margin-bottom:8px;text-align:center;letter-spacing:0.02em';
+    title.textContent=(name?name+"'s ":'')+'Weekly Revision Plan';
+    wrap.appendChild(title);
+
     const wwClone=ww.cloneNode(true);
-    wwClone.style.cssText='overflow:visible;padding:0.3rem;box-shadow:none';
-    wrap.appendChild(hdrClone);
+    wwClone.style.cssText='overflow:visible;box-shadow:none;padding:0;border-radius:0;width:100%';
+    // Unpin sticky header-row so it doesn't duplicate when html2canvas scrolls
+    const hrowClone=wwClone.querySelector('.tt-header-row');
+    if(hrowClone)hrowClone.style.position='static';
     wrap.appendChild(wwClone);
-    wrap.appendChild(leg.cloneNode(true));
+
+    const legClone=leg.cloneNode(true);
+    legClone.style.cssText='margin-top:8px;background:#fff;border-radius:4px;padding:6px 10px;box-shadow:none';
+    wrap.appendChild(legClone);
+
     document.body.appendChild(wrap);
-
-    // Scale the cloned grid to fit A4 landscape height
-    const gridClone=wwClone.querySelector('#week-grid');
-    if(gridClone){
-      const gh=gridClone.scrollHeight;
-      const zv=gh>700?(700/gh).toFixed(3):'1';
-      if(parseFloat(zv)<1)gridClone.style.zoom=zv;
-    }
-
     window.scrollTo(0,0);
+
+    // Measure rendered height then compute zoom so everything fits A4 landscape in one page.
+    // A4 landscape: 297x210mm; 3mm margins each side → usable 291x204mm.
+    // html2canvas renders at windowWidth=1400px; jsPDF x-scales to fit 291mm width.
+    // x-scale ≈ 291 / (1400/3.7795) = 0.786. Required: totalH*zoom*0.786/3.7795 ≤ 204.
+    // ⟹ zoom ≤ 204*3.7795/(totalH*0.786) = 771/(totalH*0.786).
     setTimeout(function(){
-      html2pdf().set({
-        margin:[4,4,4,4],
-        filename:name+'-revision-plan.pdf',
-        image:{type:'jpeg',quality:0.97},
-        html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,windowWidth:1400,allowTaint:true},
-        jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}
-      }).from(wrap).save().then(function(){
-        document.body.removeChild(wrap);
-      });
-    },150);
+      const totalH=wrap.scrollHeight;
+      const zoom=Math.min(1, 771/(totalH*0.786));
+      if(zoom<1)wrap.style.zoom=zoom.toFixed(3);
+      setTimeout(function(){
+        html2pdf().set({
+          margin:[3,3,3,3],
+          filename:(name||'revision')+'-revision-plan.pdf',
+          image:{type:'jpeg',quality:0.97},
+          html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,windowWidth:1400,allowTaint:true},
+          jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}
+        }).from(wrap).save().then(function(){
+          if(document.body.contains(wrap))document.body.removeChild(wrap);
+        });
+      },100);
+    },250);
   });
 })();
 `
