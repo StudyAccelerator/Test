@@ -245,7 +245,7 @@ const js = `
     const items=[];
     subjects.forEach(function(s){
       const tt=(s.topics?s.topics.split('|'):[]).map(function(t){return t.trim()}).filter(Boolean);
-      const w=PRIORITY_WEIGHT[s.priority]*(6-s.confidence);
+      const w=PRIORITY_WEIGHT[s.priority]*s.confidence;
       if(tt.length===0){
         items.push({subject:s.name,topic:'General revision',weight:w});
       }else{
@@ -260,7 +260,8 @@ const js = `
     const ledger=buildTopicLedger(subjects);
 
     // Assign dwCount per topic (1–3 based on weight), then scale to fit slot budget
-    ledger.forEach(function(t){t.dwCount=t.weight>=9?3:t.weight>=5?2:1;});
+    // New weight scale: max=15 (high priority × 5 exam focus). >=12→3DW, >=6→2DW, else 1DW
+    ledger.forEach(function(t){t.dwCount=t.weight>=12?3:t.weight>=6?2:1;});
     const MAX_DW_SLOTS=7*MAX_DEEP_PER_DAY;
     let rawDW=ledger.reduce(function(s,t){return s+t.dwCount;},0);
     if(rawDW>MAX_DW_SLOTS){
@@ -328,13 +329,38 @@ const js = `
       });
     });
 
-    // PASS D — backfill: push days below 3 h up with extra Light Reviews
+    // PASS D — aggressively fill remaining capacity with AR/LR cycling by topic weight
+    // Target: fill each day to within 30 min of the 8 h cap (≈450 min pure study)
+    const FILL_TO=DAY_CAP_STUDY-30;
     for(let d=0;d<7;d++){
-      let safety=40;
-      while(dMin[d]<180&&safety-->0){
-        const cand=ledger.find(function(t){return t.dwDay!==undefined&&t.dwDay<=d&&dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY;});
-        if(!cand)break;
-        place(d,{type:'review',subject:cand.subject,topic:cand.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(cand.subject)});
+      if(dMin[d]>=FILL_TO)continue;
+      // Topics already introduced (DW on or before today), sorted heaviest first
+      const avail=ledger.filter(function(t){return t.dwDay!==undefined&&t.dwDay<=d;}).sort(function(a,b){return b.weight-a.weight;});
+      if(!avail.length)continue;
+      let rr=0,safety=200;
+      while(dMin[d]<FILL_TO&&safety-->0){
+        const t=avail[rr%avail.length];rr++;
+        const tAR=days[d].filter(function(e){return e.type==='recall'&&e.topic===t.topic;}).length;
+        const tLR=days[d].filter(function(e){return e.type==='review'&&e.topic===t.topic;}).length;
+        // High-weight topics get more filler passes; lower-weight get fewer
+        const maxAR=t.weight>=12?3:t.weight>=6?2:1;
+        const maxLR=t.weight>=12?4:t.weight>=6?3:2;
+        if(tAR<maxAR&&dMin[d]+RECALL_DUR<=FILL_TO){
+          place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});
+        }else if(tLR<maxLR&&dMin[d]+REVIEW_DUR<=FILL_TO){
+          place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});
+        }
+        // After a full rotation check if anything can still be placed
+        if(rr%avail.length===0){
+          const anyFits=avail.some(function(t){
+            const ar=days[d].filter(function(e){return e.type==='recall'&&e.topic===t.topic;}).length;
+            const lr=days[d].filter(function(e){return e.type==='review'&&e.topic===t.topic;}).length;
+            const mAR=t.weight>=12?3:t.weight>=6?2:1;
+            const mLR=t.weight>=12?4:t.weight>=6?3:2;
+            return(ar<mAR&&dMin[d]+RECALL_DUR<=FILL_TO)||(lr<mLR&&dMin[d]+REVIEW_DUR<=FILL_TO);
+          });
+          if(!anyFits)break;
+        }
       }
     }
 
@@ -384,7 +410,7 @@ const js = `
       //   Afternoon (lunch–dinner): Active Recall, then Deep Work, then Light Review
       //   Evening (after dinner): Light Review only — no heavy new content
       let order;
-      if(now<lunchMin)        order=['deep','recall'];
+      if(now<lunchMin)        order=['deep','recall','review'];
       else if(now<dinnerMin)  order=['recall','deep','review'];
       else                    order=['review'];
       for(let oi=0;oi<order.length;oi++){
@@ -522,38 +548,51 @@ const js = `
   document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
 
-  window.addEventListener('beforeprint',function(){
-    const pdfLogo=document.getElementById('pdf-logo');
-    if(pdfLogo)pdfLogo.style.display='block';
-    const axis=document.querySelector('.tt-axis');
-    const grid=document.getElementById('week-grid');
-    if(axis&&grid){
-      const gridH=axis.offsetHeight;
-      const targetH=660;
-      if(gridH>targetH)grid.style.zoom=String((targetH/gridH).toFixed(3));
-    }
-  });
-  window.addEventListener('afterprint',function(){
-    const pdfLogo=document.getElementById('pdf-logo');
-    if(pdfLogo)pdfLogo.style.display='none';
-    const grid=document.getElementById('week-grid');
-    if(grid)grid.style.zoom='';
-  });
   document.getElementById('print-btn').addEventListener('click',function(){
+    if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
+    const element=document.getElementById('timetable-section');
+    const name=document.getElementById('student-name').value.trim()||'revision-timetable';
+    const pdfLogo=document.getElementById('pdf-logo');
+    const weekWrap=document.querySelector('.week-wrap');
+    const grid=document.getElementById('week-grid');
+    const prevOverflow=weekWrap?weekWrap.style.overflow:'';
+    if(pdfLogo)pdfLogo.style.display='block';
+    if(weekWrap)weekWrap.style.overflow='visible';
     window.scrollTo(0,0);
-    window.print();
+    // Zoom grid down so it fits on one A4 landscape page (~760px content height)
+    const gridH=grid?grid.scrollHeight:0;
+    const zoomVal=(gridH>760&&grid)?(760/gridH).toFixed(3):'1';
+    if(grid&&parseFloat(zoomVal)<1)grid.style.zoom=zoomVal;
+    setTimeout(function(){
+      html2pdf().set({
+        margin:[6,4,6,4],
+        filename:name+'-revision-plan.pdf',
+        image:{type:'jpeg',quality:0.95},
+        html2canvas:{scale:2,useCORS:true,logging:false,scrollX:0,scrollY:0,windowWidth:1400,allowTaint:true},
+        jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}
+      }).from(element).save().then(function(){
+        if(pdfLogo)pdfLogo.style.display='none';
+        if(weekWrap)weekWrap.style.overflow=prevOverflow;
+        if(grid)grid.style.zoom='';
+      });
+    },150);
   });
 })();
 `
 
 export default function RevisionTrackerPage() {
   useEffect(() => {
-    const appScript = document.createElement('script')
-    appScript.textContent = js
-    document.body.appendChild(appScript)
+    const html2pdfScript = document.createElement('script')
+    html2pdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'
+    html2pdfScript.onload = () => {
+      const appScript = document.createElement('script')
+      appScript.textContent = js
+      document.body.appendChild(appScript)
+    }
+    document.body.appendChild(html2pdfScript)
     return () => {
-      if (document.body.contains(appScript)) {
-        document.body.removeChild(appScript)
+      if (document.body.contains(html2pdfScript)) {
+        document.body.removeChild(html2pdfScript)
       }
     }
   }, [])
@@ -685,10 +724,10 @@ export default function RevisionTrackerPage() {
 
           <div className="action-row">
             <button type="button" className="btn-outline" id="edit-btn">← Edit My Answers</button>
-            <button type="button" className="btn-solid" id="print-btn">Print / Save as PDF</button>
+            <button type="button" className="btn-solid" id="print-btn">Save as PDF</button>
           </div>
           <div className="tips" style={{marginTop:'1rem', background: 'var(--cream)', color: 'var(--text)', borderLeft: '4px solid var(--gold)'}}>
-            <strong style={{color: 'var(--gold)'}}>Tip:</strong> In the print dialog, select <strong>Save as PDF</strong> to download your plan. Then print it and stick it on your wall — seeing it every day is the most effective way to stay on track!
+            <strong style={{color: 'var(--gold)'}}>Tip:</strong> After saving, open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
           </div>
         </section>
       </div>
