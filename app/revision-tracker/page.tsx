@@ -239,8 +239,7 @@ const js = `
   // Subjects are interleaved so no 3+ same-subject sessions land in a row.
   const DEEP_DUR=90, RECALL_DUR=45, REVIEW_DUR=30, BRK_DUR=15, MEAL_DUR=30;
   const DAY_CAP_STUDY=480;     // 8 h hard cap (study time only)
-  const MAX_DEEP_PER_DAY=2;
-  const MIN_DAILY_LOAD=90;     // backfill target so no day stays empty
+  const MAX_DEEP_PER_DAY=3;
 
   function buildTopicLedger(subjects){
     const items=[];
@@ -259,98 +258,82 @@ const js = `
 
   function planWeek(subjects){
     const ledger=buildTopicLedger(subjects);
+
+    // Assign dwCount per topic (1–3 based on weight), then scale to fit slot budget
+    ledger.forEach(function(t){t.dwCount=t.weight>=9?3:t.weight>=5?2:1;});
+    const MAX_DW_SLOTS=7*MAX_DEEP_PER_DAY;
+    let rawDW=ledger.reduce(function(s,t){return s+t.dwCount;},0);
+    if(rawDW>MAX_DW_SLOTS){
+      const sc=MAX_DW_SLOTS/rawDW;
+      ledger.forEach(function(t){t.dwCount=Math.max(1,Math.round(t.dwCount*sc));});
+      let over=ledger.reduce(function(s,t){return s+t.dwCount;},0)-MAX_DW_SLOTS;
+      for(let i=ledger.length-1;i>=0&&over>0;i--){if(ledger[i].dwCount>1){ledger[i].dwCount--;over--;}}
+    }
+
     const days=[[],[],[],[],[],[],[]];
     const dMin=[0,0,0,0,0,0,0];
     const dDeep=[0,0,0,0,0,0,0];
-    const dSubjDeep=[{},{},{},{},{},{},{}];
+    const dSD=[{},{},{},{},{},{},{}];  // subject DW count per day
 
-    function fits(d,type,dur,subject){
+    function fits(d,type,dur,subj){
       if(d<0||d>6)return false;
       if(dMin[d]+dur>DAY_CAP_STUDY)return false;
-      if(type==='deep'){
-        if(dDeep[d]>=MAX_DEEP_PER_DAY)return false;
-        if((dSubjDeep[d][subject]||0)>=1)return false;
-      }
+      if(type==='deep'){if(dDeep[d]>=MAX_DEEP_PER_DAY||(dSD[d][subj]||0)>=1)return false;}
       return true;
     }
     function place(d,ev){
-      days[d].push(ev);
-      dMin[d]+=ev.dur;
-      if(ev.type==='deep'){
-        dDeep[d]++;
-        dSubjDeep[d][ev.subject]=(dSubjDeep[d][ev.subject]||0)+1;
-      }
+      days[d].push(ev);dMin[d]+=ev.dur;
+      if(ev.type==='deep'){dDeep[d]++;dSD[d][ev.subject]=(dSD[d][ev.subject]||0)+1;}
       return d;
     }
 
-    // PASS A — Deep Work for every topic, biased to earliest day
+    // PASS A — Deep Work: schedule dwCount sessions per topic, ≥2 days apart
     ledger.forEach(function(t){
-      let placed=-1;
-      for(let d=0;d<7&&placed<0;d++){
-        if(fits(d,'deep',DEEP_DUR,t.subject)){
-          placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
-        }
+      t.dwDays=[];
+      for(let pass=0;pass<t.dwCount;pass++){
+        const minD=t.dwDays.length>0?t.dwDays[t.dwDays.length-1]+2:0;
+        let placed=-1;
+        // Try from minD with full constraints
+        for(let d=minD;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});t.dwDays.push(placed);}}
+        // Relax minD gap constraint
+        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});t.dwDays.push(placed);}}}
+        // Last resort: ignore per-subject-per-day limit
+        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(dMin[d]+DEEP_DUR<=DAY_CAP_STUDY&&dDeep[d]<MAX_DEEP_PER_DAY){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});t.dwDays.push(placed);}}}
+        if(placed<0)break;
       }
-      if(placed<0){
-        for(let d=0;d<7&&placed<0;d++){
-          if(dMin[d]+DEEP_DUR<=DAY_CAP_STUDY&&dDeep[d]<MAX_DEEP_PER_DAY){
-            placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
-          }
-        }
-      }
-      if(placed<0){
-        let m=0;for(let d=1;d<7;d++)if(dMin[d]<dMin[m])m=d;
-        placed=place(m,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:getSubjColorClass(t.subject)});
-      }
-      t.dwDay=placed;
+      t.dwDay=t.dwDays.length>0?t.dwDays[0]:undefined;
     });
 
-    // PASS B — Active Recall on day d+1 (try +1, +2, +3)
+    // PASS B — Active Recall: 1 AR per DW session (d+1, +2, or +3)
     ledger.forEach(function(t){
-      if(t.dwDay===undefined)return;
-      [1,2,3].some(function(off){
-        const d=t.dwDay+off;
-        if(d>6)return true;
-        if(dMin[d]+RECALL_DUR<=DAY_CAP_STUDY){
-          place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});
-          t.arDay=d;return true;
-        }
-        return false;
-      });
-    });
-
-    // PASS C — Light Revision on day d+3 (try +3, +4, +5, +6, +2)
-    ledger.forEach(function(t){
-      if(t.dwDay===undefined)return;
-      [3,4,5,6,2].some(function(off){
-        const d=t.dwDay+off;
-        if(d<0||d>6)return false;
-        if(dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY){
-          place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});
-          t.lrDay=d;return true;
-        }
-        return false;
-      });
-    });
-
-    // PASS D — backfill light days with extra Light Reviews (already-introduced topics)
-    for(let d=0;d<7;d++){
-      let safety=20;
-      while(dMin[d]<MIN_DAILY_LOAD&&safety-->0){
-        const subjsHere={};days[d].forEach(function(e){subjsHere[e.subject]=1});
-        let cand=ledger.find(function(t){
-          return t.dwDay!==undefined&&t.dwDay<=d&&
-            !days[d].some(function(e){return e.topic===t.topic&&e.subject===t.subject})&&
-            !subjsHere[t.subject];
+      if(!t.dwDays)return;
+      t.dwDays.forEach(function(dwD){
+        [1,2,3].some(function(off){
+          const d=dwD+off;if(d>6)return true;
+          if(dMin[d]+RECALL_DUR<=DAY_CAP_STUDY){place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:getSubjColorClass(t.subject)});return true;}
+          return false;
         });
-        if(!cand){
-          cand=ledger.find(function(t){
-            return t.dwDay!==undefined&&t.dwDay<=d&&
-              !days[d].some(function(e){return e.topic===t.topic&&e.subject===t.subject});
-          });
-        }
+      });
+    });
+
+    // PASS C — Light Revision: 1 LR per DW session (d+3, +4, +5, +6, or +2)
+    ledger.forEach(function(t){
+      if(!t.dwDays)return;
+      t.dwDays.forEach(function(dwD){
+        [3,4,5,6,2].some(function(off){
+          const d=dwD+off;if(d<0||d>6)return false;
+          if(dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY){place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(t.subject)});return true;}
+          return false;
+        });
+      });
+    });
+
+    // PASS D — backfill: push days below 3 h up with extra Light Reviews
+    for(let d=0;d<7;d++){
+      let safety=40;
+      while(dMin[d]<180&&safety-->0){
+        const cand=ledger.find(function(t){return t.dwDay!==undefined&&t.dwDay<=d&&dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY;});
         if(!cand)break;
-        if(dMin[d]+REVIEW_DUR>DAY_CAP_STUDY)break;
         place(d,{type:'review',subject:cand.subject,topic:cand.topic,dur:REVIEW_DUR,colorClass:getSubjColorClass(cand.subject)});
       }
     }
@@ -433,7 +416,7 @@ const js = `
       const ev=pickEvent(cursor,limit-cursor);
       if(!ev){
         if(limit-cursor>=15){
-          events.push({startMin:cursor,endMin:limit,type:'free',subject:'',topic:'',label:'Free / Buffer',sub:'Rest, hydrate, move',colorClass:''});
+          events.push({startMin:cursor,endMin:limit,type:'free',subject:'',topic:'',label:'Free',sub:'',colorClass:''});
         }
         cursor=limit;
         continue;
@@ -539,34 +522,38 @@ const js = `
   document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state,state.name);showTimetable()});
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
 
-  document.getElementById('print-btn').addEventListener('click',()=>{
-    if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
-    const element=document.getElementById('timetable-section');
-    const name=document.getElementById('student-name').value.trim()||'revision-timetable';
+  window.addEventListener('beforeprint',function(){
     const pdfLogo=document.getElementById('pdf-logo');
-    const weekWrap=document.querySelector('.week-wrap');
-    const prevOverflow=weekWrap?weekWrap.style.overflow:'';
     if(pdfLogo)pdfLogo.style.display='block';
-    if(weekWrap)weekWrap.style.overflow='visible';
+    const axis=document.querySelector('.tt-axis');
+    const grid=document.getElementById('week-grid');
+    if(axis&&grid){
+      const gridH=axis.offsetHeight;
+      const targetH=660;
+      if(gridH>targetH)grid.style.zoom=String((targetH/gridH).toFixed(3));
+    }
+  });
+  window.addEventListener('afterprint',function(){
+    const pdfLogo=document.getElementById('pdf-logo');
+    if(pdfLogo)pdfLogo.style.display='none';
+    const grid=document.getElementById('week-grid');
+    if(grid)grid.style.zoom='';
+  });
+  document.getElementById('print-btn').addEventListener('click',function(){
     window.scrollTo(0,0);
-    html2pdf().set({margin:[8,5,8,5],filename:name+'-revision-plan.pdf',image:{type:'jpeg',quality:0.96},html2canvas:{scale:1.2,useCORS:true,logging:false,scrollY:0,windowWidth:1400,allowTaint:true},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'},pagebreak:{mode:['avoid-all','css'],avoid:'.tt-day-col'}}).from(element).save().then(()=>{if(pdfLogo)pdfLogo.style.display='none';if(weekWrap)weekWrap.style.overflow=prevOverflow});
+    window.print();
   });
 })();
 `
 
 export default function RevisionTrackerPage() {
   useEffect(() => {
-    const html2pdfScript = document.createElement('script')
-    html2pdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'
-    html2pdfScript.onload = () => {
-      const appScript = document.createElement('script')
-      appScript.textContent = js
-      document.body.appendChild(appScript)
-    }
-    document.body.appendChild(html2pdfScript)
+    const appScript = document.createElement('script')
+    appScript.textContent = js
+    document.body.appendChild(appScript)
     return () => {
-      if (document.body.contains(html2pdfScript)) {
-        document.body.removeChild(html2pdfScript)
+      if (document.body.contains(appScript)) {
+        document.body.removeChild(appScript)
       }
     }
   }, [])
@@ -698,10 +685,10 @@ export default function RevisionTrackerPage() {
 
           <div className="action-row">
             <button type="button" className="btn-outline" id="edit-btn">← Edit My Answers</button>
-            <button type="button" className="btn-solid" id="print-btn">Save as PDF</button>
+            <button type="button" className="btn-solid" id="print-btn">Print / Save as PDF</button>
           </div>
           <div className="tips" style={{marginTop:'1rem', background: 'var(--cream)', color: 'var(--text)', borderLeft: '4px solid var(--gold)'}}>
-            <strong style={{color: 'var(--gold)'}}>Tip:</strong> After saving, you can open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
+            <strong style={{color: 'var(--gold)'}}>Tip:</strong> In the print dialog, select <strong>Save as PDF</strong> to download your plan. Then print it and stick it on your wall — seeing it every day is the most effective way to stay on track!
           </div>
         </section>
       </div>
