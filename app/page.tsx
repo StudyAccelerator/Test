@@ -491,13 +491,13 @@ export default function Home() {
       <footer id="contact" className="bg-brand-purple text-brand-cream py-8 px-8">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
-            <a href="/#hero" className="relative overflow-visible md:overflow-hidden md:flex-1 h-auto md:h-36 flex justify-center items-center hover:opacity-80 transition w-full md:w-auto py-2 md:py-0">
+            <a href="/#hero" className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center hover:opacity-80 transition w-full md:w-auto">
               <Image
                 src="/logo-header.png?v=2"
                 alt="A-Level Accelerators"
                 width={400}
                 height={400}
-                className="h-24 w-auto md:absolute md:h-[27rem] md:top-1/2 md:left-1/2 md:-translate-x-1/2 md:-translate-y-1/2"
+                className="absolute h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{ filter: 'brightness(0) invert(1)', opacity: 0.85 }}
                 unoptimized
               />

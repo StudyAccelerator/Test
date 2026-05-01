@@ -590,17 +590,27 @@ const js = `
   let _exportWeek=null,_exportState=null;
   document.getElementById('generate-btn').addEventListener('click',()=>{
     const state=collectState();if(!state)return;
-    // Calculate how many topics the schedule can realistically cover this week.
-    // Each topic needs at least 1 DW (90min) + 30min break; hard cap is 3 DW per day.
+    // Calculate realistic topic capacity accounting for actual commitments each day.
+    // Each topic needs at least 1 DW slot (90 min + 30 min break).
     const wMin=toMinutes(state.wakeTime),sMin=toMinutes(state.sleepTime);
     const rawC=sMin>wMin?sMin:sMin+1440;const CTOFF=rawC-30;
-    const availDay=Math.max(0,CTOFF-wMin-90); // minus 3 meals
-    const maxDWDay=Math.min(MAX_DEEP_PER_DAY,Math.floor(availDay/(DEEP_DUR+30)));
-    const maxTopics=maxDWDay*7;
+    const dayLen=CTOFF-wMin;
+    let totalDWSlots=0,totalStudyMins=0;
+    ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'].forEach(function(day){
+      const commitMins=state.commitments.filter(function(c){return c.day===day;}).reduce(function(sum,c){
+        const cs=Math.max(c.startMin,wMin),ce=Math.min(c.endMin,CTOFF);
+        return sum+Math.max(0,ce-cs);
+      },0);
+      const avail=Math.max(0,dayLen-commitMins-90);
+      totalStudyMins+=avail;
+      totalDWSlots+=Math.min(MAX_DEEP_PER_DAY,Math.floor(avail/(DEEP_DUR+30)));
+    });
+    const maxTopics=totalDWSlots;
+    const totalStudyHrs=Math.round(totalStudyMins/6)/10;
     const totalTopics=state.subjects.reduce(function(s,sub){return s+(sub.topics?sub.topics.split('|').filter(function(t){return t.trim();}).length||1:1);},0);
     if(maxTopics>0&&totalTopics>maxTopics){
       const perSubj=Math.max(1,Math.floor(maxTopics/state.subjects.length));
-      const msg="Your schedule has time for about "+maxTopics+" topic"+(maxTopics!==1?"s":"")+" this week, but you have entered "+totalTopics+".\\n\\nTopics that do not fit will not appear in your plan - including whole subjects.\\n\\nReduce to "+perSubj+" topic"+(perSubj!==1?"s":"")+" per subject so every subject gets covered.\\n\\nPress OK to generate anyway, or Cancel to go back and trim your topics.";
+      const msg="This week you have about "+totalStudyHrs+" hours available for study across all 7 days (after school, commitments, and meals).\\n\\nThat is enough for "+maxTopics+" deep-work session"+(maxTopics!==1?"s":"")+" — one per topic.\\n\\nYou have entered "+totalTopics+" topics. Topics that do not fit will be skipped, possibly leaving whole subjects uncovered.\\n\\nTo cover every subject, aim for "+perSubj+" topic"+(perSubj!==1?"s":"")+" per subject.\\n\\nPress OK to generate anyway, or Cancel to go back and trim your topics.";
       if(!confirm(msg))return;
     }
     const week=generatePlan(state);_exportWeek=week;_exportState=state;renderTimetable(week,state,state.name);showTimetable();
