@@ -600,7 +600,7 @@ const js = `
     const totalTopics=state.subjects.reduce(function(s,sub){return s+(sub.topics?sub.topics.split('|').filter(function(t){return t.trim();}).length||1:1);},0);
     if(maxTopics>0&&totalTopics>maxTopics){
       const perSubj=Math.max(1,Math.floor(maxTopics/state.subjects.length));
-      const msg='Your schedule has time for about '+maxTopics+' topic'+(maxTopics!==1?'s':'')+' this week, but you\'ve entered '+totalTopics+'.\n\nTopics that don\'t fit won\'t appear in your plan at all — including whole subjects.\n\nRecommendation: reduce to '+perSubj+' topic'+(perSubj!==1?'s':'')+' per subject so every subject gets covered.\n\nPress OK to generate anyway, or Cancel to go back and trim your topics.';
+      const msg="Your schedule has time for about "+maxTopics+" topic"+(maxTopics!==1?"s":"")+" this week, but you have entered "+totalTopics+".\n\nTopics that do not fit will not appear in your plan — including whole subjects.\n\nReduce to "+perSubj+" topic"+(perSubj!==1?"s":"")+" per subject so every subject gets covered.\n\nPress OK to generate anyway, or Cancel to go back and trim your topics.";
       if(!confirm(msg))return;
     }
     const week=generatePlan(state);_exportWeek=week;_exportState=state;renderTimetable(week,state,state.name);showTimetable();
