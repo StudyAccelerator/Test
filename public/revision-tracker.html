@@ -552,10 +552,9 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
     function pickEvent(now,remaining){
       // Release reserved evening sessions once we're past dinner
       if(now>=dinnerMin&&!eveningAdded){eveningAdded=true;queues.recall.push.apply(queues.recall,eveningRecall);queues.review.push.apply(queues.review,eveningPool);}
-      let order;
-      if(now<lunchMin)        order=['deep','recall','review'];
-      else if(now<dinnerMin)  order=lastStudyType==='recall'?['review','deep','recall']:['recall','deep','review'];
-      else                    order=['recall','review'];
+      // Deep Work is always highest priority — never exclude it based on time of day.
+      // School students can only do DW in the evening; excluding it there drops all school-day DW.
+      const order=['deep','recall','review'];
       for(let oi=0;oi<order.length;oi++){
         const tt=order[oi];const q=queues[tt];
         if(!q.length)continue;
@@ -614,8 +613,8 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
       // Break after session — longer in afternoon to push sessions toward evening
       const next2=resolved.find(function(f){return f.startMin>=cursor});
       const limit2=Math.min(next2?next2.startMin:CUTOFF,CUTOFF);
-      const isAfternoon=cursor>=lunchMin&&cursor<dinnerMin;
-      const brkDur=ev.type==='deep'?(isAfternoon?45:30):ev.type==='recall'?(isAfternoon?30:20):(isAfternoon?25:15);
+      const isPostLunch=cursor>=lunchMin;
+      const brkDur=ev.type==='deep'?(isPostLunch?30:30):ev.type==='recall'?(isPostLunch?20:20):(isPostLunch?15:15);
       if(limit2-cursor>=brkDur+15){
         events.push({startMin:cursor,endMin:cursor+brkDur,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});
         cursor+=brkDur;
