@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
@@ -55,14 +55,25 @@ const getVisible = (w: number): number => {
   return 1
 }
 
+// Slide duration in ms — must match the transition.duration below (in seconds)
+const SLIDE_MS = 450
+
 const TestimonialSlider: React.FC = () => {
-  // idx into EXTENDED; start at N so we begin at the first card of set2
   const [idx, setIdx] = useState(N)
   const [animate, setAnimate] = useState(true)
   const [winW, setWinW] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024)
   const [userPaused, setUserPaused] = useState(false)
+
+  // Keep a ref that's always the latest idx, updated synchronously before paint.
+  // onAnimationComplete (fires via rAF after paint) will read this safely.
+  const idxRef = useRef(N)
+  useLayoutEffect(() => { idxRef.current = idx }, [idx])
+
+  // Whether a silent wrap-around jump is in progress.
+  // Prevents step() from advancing during the jump and prevents double-jumps.
   const jumping = useRef(false)
-  const userPauseTimer = useRef<NodeJS.Timeout | null>(null)
+
+  const pauseTimer = useRef<NodeJS.Timeout | null>(null)
 
   // Track window width for responsive visible count
   useEffect(() => {
@@ -73,24 +84,7 @@ const TestimonialSlider: React.FC = () => {
     return () => window.removeEventListener('resize', onResize)
   }, [])
 
-  // After landing in set1 (idx < N) or set3 (idx >= 2N), silently jump back to set2
-  useEffect(() => {
-    if (jumping.current) return
-    if (idx < N || idx >= N * 2) {
-      jumping.current = true
-      const t = setTimeout(() => {
-        setAnimate(false)
-        setIdx(prev => {
-          if (prev < N) return prev + N
-          if (prev >= N * 2) return prev - N
-          return prev
-        })
-      }, 650) // wait for spring animation to settle
-      return () => clearTimeout(t)
-    }
-  }, [idx])
-
-  // Re-enable animation after the silent jump
+  // Re-enable animation after a silent jump (duration: 0)
   useEffect(() => {
     if (!animate) {
       const t = setTimeout(() => {
@@ -101,6 +95,29 @@ const TestimonialSlider: React.FC = () => {
     }
   }, [animate])
 
+  // Called by framer-motion once the slide animation finishes.
+  // Using onAnimationComplete instead of a fixed setTimeout means we only
+  // trigger the wrap-around jump after the tween has truly completed —
+  // no more mid-flight interruptions.
+  const handleAnimComplete = useCallback(() => {
+    const cur = idxRef.current
+
+    // If jumping.current is already true we're inside the silent jump itself
+    // (the duration:0 "animation" also fires this callback). Ignore it.
+    if (jumping.current) return
+
+    // If the animation landed outside the middle set, do the silent teleport
+    if (cur < N || cur >= N * 2) {
+      jumping.current = true
+      setAnimate(false)
+      setIdx(prev => {
+        if (prev < N) return prev + N
+        if (prev >= N * 2) return prev - N
+        return prev
+      })
+    }
+  }, [])
+
   const step = useCallback((delta: number) => {
     if (jumping.current) return
     setAnimate(true)
@@ -109,19 +126,12 @@ const TestimonialSlider: React.FC = () => {
 
   const pauseAutoPlay = useCallback(() => {
     setUserPaused(true)
-    if (userPauseTimer.current) clearTimeout(userPauseTimer.current)
-    userPauseTimer.current = setTimeout(() => setUserPaused(false), 8000)
+    if (pauseTimer.current) clearTimeout(pauseTimer.current)
+    pauseTimer.current = setTimeout(() => setUserPaused(false), 8000)
   }, [])
 
-  const goNext = useCallback(() => {
-    step(1)
-    pauseAutoPlay()
-  }, [step, pauseAutoPlay])
-
-  const goPrev = useCallback(() => {
-    step(-1)
-    pauseAutoPlay()
-  }, [step, pauseAutoPlay])
+  const goNext = useCallback(() => { step(1); pauseAutoPlay() }, [step, pauseAutoPlay])
+  const goPrev = useCallback(() => { step(-1); pauseAutoPlay() }, [step, pauseAutoPlay])
 
   // Auto-advance every 3.5 s unless user recently interacted
   useEffect(() => {
@@ -138,8 +148,6 @@ const TestimonialSlider: React.FC = () => {
 
   const visible = getVisible(winW)
   const translateX = `-${idx * (100 / visible)}%`
-
-  // Dot active index: always 0-5, wrapping correctly
   const activeDot = ((idx % N) + N) % N
 
   return (
@@ -194,9 +202,10 @@ const TestimonialSlider: React.FC = () => {
               animate={{ x: translateX }}
               transition={
                 animate
-                  ? { type: 'spring', stiffness: 70, damping: 20 }
+                  ? { type: 'tween', duration: SLIDE_MS / 1000, ease: 'easeInOut' }
                   : { duration: 0 }
               }
+              onAnimationComplete={handleAnimComplete}
             >
               {EXTENDED.map((t, i) => (
                 <motion.div
