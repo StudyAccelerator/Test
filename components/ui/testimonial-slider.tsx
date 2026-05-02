@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useLayoutEffect, useRef, useCallback } from 'react'
+import React, { useState, useEffect, useRef, useCallback } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
@@ -44,9 +44,7 @@ const TESTIMONIALS = [
 ]
 
 const N = TESTIMONIALS.length // 6
-
-// Triple the array: [set1 | set2 (real) | set3]
-// We start in set2 and silently jump back to set2 when we drift into set1 or set3
+// Triple clone: [set1 | set2 (real start) | set3]
 const EXTENDED = [...TESTIMONIALS, ...TESTIMONIALS, ...TESTIMONIALS]
 
 const getVisible = (w: number): number => {
@@ -55,74 +53,93 @@ const getVisible = (w: number): number => {
   return 1
 }
 
-// Slide duration in ms — must match the transition.duration below (in seconds)
-const SLIDE_MS = 450
+const SLIDE_DURATION = 450 // ms
 
 const TestimonialSlider: React.FC = () => {
+  // idx into EXTENDED; start at N so the first visible card is TESTIMONIALS[0]
   const [idx, setIdx] = useState(N)
-  const [animate, setAnimate] = useState(true)
   const [winW, setWinW] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024)
   const [userPaused, setUserPaused] = useState(false)
 
-  // Keep a ref that's always the latest idx, updated synchronously before paint.
-  // onAnimationComplete (fires via rAF after paint) will read this safely.
-  const idxRef = useRef(N)
-  useLayoutEffect(() => { idxRef.current = idx }, [idx])
-
-  // Whether a silent wrap-around jump is in progress.
-  // Prevents step() from advancing during the jump and prevents double-jumps.
-  const jumping = useRef(false)
-
+  const trackRef = useRef<HTMLDivElement>(null)
+  const idxRef = useRef(N)           // always mirrors idx synchronously
+  const jumping = useRef(false)      // true while silent wrap-around is in progress
   const pauseTimer = useRef<NodeJS.Timeout | null>(null)
 
-  // Track window width for responsive visible count
+  // ── helpers ────────────────────────────────────────────────────────────────
+
+  // Apply the CSS transform directly so the browser computes % against live width.
+  // animated=false means instant (transition:none), used for the silent jump.
+  const applyTransform = useCallback((i: number, animated: boolean) => {
+    const track = trackRef.current
+    if (!track) return
+    const vis = getVisible(window.innerWidth)
+    track.style.transition = animated ? `transform ${SLIDE_DURATION}ms ease-in-out` : 'none'
+    track.style.transform = `translateX(-${(i * 100) / vis}%)`
+  }, [])
+
+  // ── window resize ──────────────────────────────────────────────────────────
   useEffect(() => {
     if (typeof window === 'undefined') return
     setWinW(window.innerWidth)
-    const onResize = () => setWinW(window.innerWidth)
+    const onResize = () => {
+      setWinW(window.innerWidth)
+      // Re-apply current position instantly so % recalculates for new width
+      applyTransform(idxRef.current, false)
+    }
     window.addEventListener('resize', onResize)
     return () => window.removeEventListener('resize', onResize)
-  }, [])
+  }, [applyTransform])
 
-  // Re-enable animation after a silent jump (duration: 0)
+  // ── sync idxRef + DOM whenever idx state changes ───────────────────────────
   useEffect(() => {
-    if (!animate) {
-      const t = setTimeout(() => {
-        setAnimate(true)
-        jumping.current = false
-      }, 50)
-      return () => clearTimeout(t)
+    idxRef.current = idx
+    // applyTransform is called by whoever triggered the idx change,
+    // so we don't call it here (avoids double-apply races)
+  }, [idx])
+
+  // ── transitionend: fire the silent wrap-around after CSS transition done ──
+  useEffect(() => {
+    const track = trackRef.current
+    if (!track) return
+
+    const onEnd = () => {
+      if (jumping.current) return
+      const cur = idxRef.current
+      if (cur < N || cur >= N * 2) {
+        jumping.current = true
+        const next = cur < N ? cur + N : cur - N
+        // Silent jump: no transition
+        applyTransform(next, false)
+        // Update state to stay in sync (does NOT re-trigger applyTransform)
+        setIdx(next)
+        idxRef.current = next
+        // Re-enable stepping after a short frame gap
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            jumping.current = false
+          })
+        })
+      }
     }
-  }, [animate])
 
-  // Called by framer-motion once the slide animation finishes.
-  // Using onAnimationComplete instead of a fixed setTimeout means we only
-  // trigger the wrap-around jump after the tween has truly completed —
-  // no more mid-flight interruptions.
-  const handleAnimComplete = useCallback(() => {
-    const cur = idxRef.current
+    track.addEventListener('transitionend', onEnd)
+    return () => track.removeEventListener('transitionend', onEnd)
+  }, [applyTransform])
 
-    // If jumping.current is already true we're inside the silent jump itself
-    // (the duration:0 "animation" also fires this callback). Ignore it.
-    if (jumping.current) return
+  // ── initial position on mount ──────────────────────────────────────────────
+  useEffect(() => {
+    applyTransform(N, false)
+  }, [applyTransform])
 
-    // If the animation landed outside the middle set, do the silent teleport
-    if (cur < N || cur >= N * 2) {
-      jumping.current = true
-      setAnimate(false)
-      setIdx(prev => {
-        if (prev < N) return prev + N
-        if (prev >= N * 2) return prev - N
-        return prev
-      })
-    }
-  }, [])
-
+  // ── step (advance one position) ────────────────────────────────────────────
   const step = useCallback((delta: number) => {
     if (jumping.current) return
-    setAnimate(true)
-    setIdx(prev => prev + delta)
-  }, [])
+    const next = idxRef.current + delta
+    idxRef.current = next
+    setIdx(next)
+    applyTransform(next, true)
+  }, [applyTransform])
 
   const pauseAutoPlay = useCallback(() => {
     setUserPaused(true)
@@ -133,21 +150,39 @@ const TestimonialSlider: React.FC = () => {
   const goNext = useCallback(() => { step(1); pauseAutoPlay() }, [step, pauseAutoPlay])
   const goPrev = useCallback(() => { step(-1); pauseAutoPlay() }, [step, pauseAutoPlay])
 
-  // Auto-advance every 3.5 s unless user recently interacted
+  // ── auto-advance ───────────────────────────────────────────────────────────
   useEffect(() => {
     if (userPaused) return
     const t = setInterval(() => step(1), 3500)
     return () => clearInterval(t)
   }, [userPaused, step])
 
-  // Swipe / drag support
-  const handleDragEnd = useCallback((_: any, info: { offset: { x: number } }) => {
-    if (info.offset.x < -40) goNext()
-    else if (info.offset.x > 40) goPrev()
+  // ── swipe detection (pointer events on the overflow container) ─────────────
+  const pointerStartX = useRef<number | null>(null)
+
+  const handlePointerDown = useCallback((e: React.PointerEvent) => {
+    pointerStartX.current = e.clientX
+  }, [])
+
+  const handlePointerUp = useCallback((e: React.PointerEvent) => {
+    if (pointerStartX.current === null) return
+    const diff = pointerStartX.current - e.clientX
+    pointerStartX.current = null
+    if (diff > 40) goNext()
+    else if (diff < -40) goPrev()
   }, [goNext, goPrev])
 
+  // ── dot nav ────────────────────────────────────────────────────────────────
+  const goToSlide = useCallback((i: number) => {
+    if (jumping.current) return
+    const target = N + i
+    idxRef.current = target
+    setIdx(target)
+    applyTransform(target, true)
+    pauseAutoPlay()
+  }, [applyTransform, pauseAutoPlay])
+
   const visible = getVisible(winW)
-  const translateX = `-${idx * (100 / visible)}%`
   const activeDot = ((idx % N) + N) % N
 
   return (
@@ -195,39 +230,35 @@ const TestimonialSlider: React.FC = () => {
             </motion.button>
           </div>
 
-          {/* Track */}
-          <div className="overflow-hidden px-2 sm:px-0">
-            <motion.div
+          {/* Overflow container — also handles touch/swipe */}
+          <div
+            className="overflow-hidden px-2 sm:px-0 cursor-grab active:cursor-grabbing select-none"
+            onPointerDown={handlePointerDown}
+            onPointerUp={handlePointerUp}
+            onPointerCancel={() => { pointerStartX.current = null }}
+          >
+            {/* Track — CSS transition, NOT framer-motion animate */}
+            <div
+              ref={trackRef}
               className="flex"
-              animate={{ x: translateX }}
-              transition={
-                animate
-                  ? { type: 'tween', duration: SLIDE_MS / 1000, ease: 'easeInOut' }
-                  : { duration: 0 }
-              }
-              onAnimationComplete={handleAnimComplete}
+              style={{ willChange: 'transform' }}
             >
               {EXTENDED.map((t, i) => (
-                <motion.div
+                <div
                   key={i}
-                  className={`flex-shrink-0 p-2 w-full ${
-                    visible === 3 ? 'md:w-1/3' :
-                    visible === 2 ? 'md:w-1/2' :
-                    ''
+                  className={`flex-shrink-0 p-2 ${
+                    visible === 3 ? 'w-1/3' :
+                    visible === 2 ? 'w-1/2' :
+                    'w-full'
                   }`}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.15}
-                  onDragEnd={handleDragEnd}
-                  whileHover={{ y: -5 }}
-                  whileTap={{ scale: 0.98 }}
-                  style={{ cursor: 'grab' }}
                 >
                   <motion.div
                     className="relative overflow-hidden rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-white border border-gray-100 shadow-lg shadow-brand-purple/5"
                     whileHover={{
+                      y: -5,
                       boxShadow: '0 10px 15px -3px rgba(46,37,87,0.12), 0 4px 6px -2px rgba(46,37,87,0.06)',
                     }}
+                    transition={{ duration: 0.2 }}
                   >
                     {/* Background quote mark */}
                     <div className="absolute -top-4 -left-4 opacity-10 pointer-events-none">
@@ -245,22 +276,17 @@ const TestimonialSlider: React.FC = () => {
                       </div>
                     </div>
                   </motion.div>
-                </motion.div>
+                </div>
               ))}
-            </motion.div>
+            </div>
           </div>
 
-          {/* Dot indicators — always N dots, one per real testimonial */}
+          {/* Dot indicators */}
           <div className="flex justify-center gap-2 mt-6 sm:mt-8">
             {TESTIMONIALS.map((_, i) => (
               <motion.button
                 key={i}
-                onClick={() => {
-                  if (jumping.current) return
-                  setAnimate(true)
-                  setIdx(N + i)
-                  pauseAutoPlay()
-                }}
+                onClick={() => goToSlide(i)}
                 className="relative focus:outline-none"
                 whileHover={{ scale: 1.2 }}
                 whileTap={{ scale: 0.9 }}
