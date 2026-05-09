@@ -1,0 +1,183 @@
+{
+  "$schema": "https://tr.designtokens.org/format/",
+  "meta": {
+    "brand": "A-Level Accelerators",
+    "version": "1.0",
+    "description": "Official brand design tokens — colours, typography, spacing and radii"
+  },
+
+  "color": {
+    "$type": "group",
+
+    "purple": {
+      "$value": "#2E2557",
+      "$type": "color",
+      "$description": "Primary brand purple — used for headings, nav, CTAs, and dark backgrounds"
+    },
+    "purple-light": {
+      "$value": "#3D3370",
+      "$type": "color",
+      "$description": "Lighter purple — hover states, gradients"
+    },
+    "gold": {
+      "$value": "#C9A96E",
+      "$type": "color",
+      "$description": "Brand gold — accent colour, highlights, borders, price text"
+    },
+    "gold-light": {
+      "$value": "#E0B577",
+      "$type": "color",
+      "$description": "Lighter gold — hover states on gold elements"
+    },
+    "cream": {
+      "$value": "#FBF8F3",
+      "$type": "color",
+      "$description": "Primary background — page and card backgrounds"
+    },
+    "cream-dark": {
+      "$value": "#F3EBD8",
+      "$type": "color",
+      "$description": "Darker cream — header scroll state, section dividers"
+    },
+    "text": {
+      "$value": "#1A1535",
+      "$type": "color",
+      "$description": "Default body text — near-black with purple tint"
+    },
+    "muted": {
+      "$value": "#777777",
+      "$type": "color",
+      "$description": "Muted / secondary text — captions, labels"
+    },
+    "white": {
+      "$value": "#FFFFFF",
+      "$type": "color",
+      "$description": "Pure white — used on dark (purple) backgrounds"
+    },
+
+    "pricing-bg": {
+      "$value": "#FAF7F0",
+      "$type": "color",
+      "$description": "Pricing card background — slightly warmer than cream"
+    },
+
+    "background-dark": {
+      "$value": "#2D1B69",
+      "$type": "color",
+      "$description": "Deep purple — used in the pricing slide background"
+    }
+  },
+
+  "typography": {
+    "$type": "group",
+
+    "fontFamily": {
+      "serif": {
+        "$value": "Georgia, \"Times New Roman\", serif",
+        "$type": "fontFamily",
+        "$description": "Serif — used for all headings (h1, h2, h3) and large price figures"
+      },
+      "sans": {
+        "$value": "-apple-system, BlinkMacSystemFont, \"Segoe UI\", Roboto, \"Helvetica Neue\", Arial, sans-serif",
+        "$type": "fontFamily",
+        "$description": "Sans-serif system stack — used for body copy, nav links, buttons, labels"
+      }
+    },
+
+    "fontSize": {
+      "xs":   { "$value": "12px",  "$type": "dimension" },
+      "sm":   { "$value": "14px",  "$type": "dimension" },
+      "base": { "$value": "16px",  "$type": "dimension" },
+      "lg":   { "$value": "18px",  "$type": "dimension" },
+      "xl":   { "$value": "20px",  "$type": "dimension" },
+      "2xl":  { "$value": "24px",  "$type": "dimension" },
+      "3xl":  { "$value": "30px",  "$type": "dimension" },
+      "4xl":  { "$value": "36px",  "$type": "dimension" },
+      "5xl":  { "$value": "50px",  "$type": "dimension", "$description": "Pricing figures" },
+      "hero": { "$value": "64px",  "$type": "dimension", "$description": "Hero headline" }
+    },
+
+    "fontWeight": {
+      "regular":   { "$value": "400", "$type": "fontWeight" },
+      "semibold":  { "$value": "600", "$type": "fontWeight" },
+      "bold":      { "$value": "700", "$type": "fontWeight" },
+      "extrabold": { "$value": "800", "$type": "fontWeight" }
+    },
+
+    "lineHeight": {
+      "tight":  { "$value": "1.2",  "$type": "number" },
+      "snug":   { "$value": "1.35", "$type": "number" },
+      "normal": { "$value": "1.6",  "$type": "number" },
+      "relaxed":{ "$value": "1.7",  "$type": "number" }
+    },
+
+    "letterSpacing": {
+      "tight":  { "$value": "-0.01em", "$type": "dimension" },
+      "normal": { "$value": "0",       "$type": "dimension" },
+      "wide":   { "$value": "0.025em", "$type": "dimension" },
+      "wider":  { "$value": "0.06em",  "$type": "dimension" },
+      "widest": { "$value": "0.22em",  "$type": "dimension" }
+    }
+  },
+
+  "spacing": {
+    "$type": "group",
+    "$description": "Base-8 spacing scale",
+    "1": { "$value": "4px",  "$type": "dimension" },
+    "2": { "$value": "8px",  "$type": "dimension" },
+    "3": { "$value": "12px", "$type": "dimension" },
+    "4": { "$value": "16px", "$type": "dimension" },
+    "6": { "$value": "24px", "$type": "dimension" },
+    "8": { "$value": "32px", "$type": "dimension" },
+    "10":{ "$value": "40px", "$type": "dimension" },
+    "12":{ "$value": "48px", "$type": "dimension" },
+    "16":{ "$value": "64px", "$type": "dimension" },
+    "20":{ "$value": "80px", "$type": "dimension" },
+    "24":{ "$value": "96px", "$type": "dimension" }
+  },
+
+  "borderRadius": {
+    "$type": "group",
+    "sm":  { "$value": "6px",  "$type": "dimension" },
+    "md":  { "$value": "8px",  "$type": "dimension" },
+    "lg":  { "$value": "12px", "$type": "dimension" },
+    "xl":  { "$value": "16px", "$type": "dimension" },
+    "2xl": { "$value": "20px", "$type": "dimension" },
+    "full":{ "$value": "9999px","$type": "dimension" }
+  },
+
+  "border": {
+    "$type": "group",
+    "default": {
+      "$value": "1px solid {color.purple}",
+      "$type": "border"
+    },
+    "gold": {
+      "$value": "2px solid {color.gold}",
+      "$type": "border"
+    },
+    "gold-featured": {
+      "$value": "3px solid {color.gold}",
+      "$type": "border"
+    }
+  },
+
+  "shadow": {
+    "$type": "group",
+    "card": {
+      "$value": "0 4px 6px -1px rgba(46,37,87,0.07), 0 2px 4px -1px rgba(46,37,87,0.05)",
+      "$type": "shadow",
+      "$description": "Default card shadow"
+    },
+    "card-hover": {
+      "$value": "0 10px 15px -3px rgba(46,37,87,0.12), 0 4px 6px -2px rgba(46,37,87,0.06)",
+      "$type": "shadow",
+      "$description": "Card shadow on hover"
+    },
+    "pricing-featured": {
+      "$value": "0 0 0 3px rgba(201,169,110,0.25), 0 12px 40px rgba(0,0,0,0.35)",
+      "$type": "shadow",
+      "$description": "Glow ring on the featured pricing card"
+    }
+  }
+}

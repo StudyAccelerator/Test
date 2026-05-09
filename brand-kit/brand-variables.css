@@ -1,0 +1,90 @@
+/*
+ * A-Level Accelerators — Brand CSS Variables
+ * ──────────────────────────────────────────
+ * Paste this into any tool that accepts CSS, or import into your project.
+ * Every variable mirrors the values in brand-tokens.json.
+ */
+
+:root {
+
+  /* ── Colours ───────────────────────────────────────── */
+  --color-purple:          #2E2557;   /* Primary — headings, nav, CTAs */
+  --color-purple-light:    #3D3370;   /* Hover states, gradients        */
+  --color-gold:            #C9A96E;   /* Accent — highlights, borders   */
+  --color-gold-light:      #E0B577;   /* Hover states on gold elements  */
+  --color-cream:           #FBF8F3;   /* Primary page background        */
+  --color-cream-dark:      #F3EBD8;   /* Header scroll state, dividers  */
+  --color-text:            #1A1535;   /* Default body text              */
+  --color-muted:           #777777;   /* Secondary / caption text       */
+  --color-white:           #FFFFFF;
+  --color-pricing-bg:      #FAF7F0;   /* Pricing card background        */
+  --color-background-dark: #2D1B69;   /* Deep purple slide background   */
+
+  /* ── Typography — Font Families ───────────────────── */
+  --font-serif: Georgia, "Times New Roman", serif;
+  --font-sans:  -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+                "Helvetica Neue", Arial, sans-serif;
+
+  /* ── Typography — Sizes ────────────────────────────── */
+  --text-xs:   12px;
+  --text-sm:   14px;
+  --text-base: 16px;
+  --text-lg:   18px;
+  --text-xl:   20px;
+  --text-2xl:  24px;
+  --text-3xl:  30px;
+  --text-4xl:  36px;
+  --text-5xl:  50px;   /* Pricing figures */
+  --text-hero: 64px;   /* Hero headline   */
+
+  /* ── Typography — Weights ──────────────────────────── */
+  --weight-regular:   400;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+  --weight-extrabold: 800;
+
+  /* ── Typography — Line Heights ─────────────────────── */
+  --leading-tight:   1.2;
+  --leading-snug:    1.35;
+  --leading-normal:  1.6;
+  --leading-relaxed: 1.7;
+
+  /* ── Typography — Letter Spacing ───────────────────── */
+  --tracking-tight:   -0.01em;
+  --tracking-normal:  0;
+  --tracking-wide:    0.025em;
+  --tracking-wider:   0.06em;
+  --tracking-widest:  0.22em;
+
+  /* ── Spacing (base-8 scale) ────────────────────────── */
+  --space-1:   4px;
+  --space-2:   8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+
+  /* ── Border Radii ──────────────────────────────────── */
+  --radius-sm:   6px;
+  --radius-md:   8px;
+  --radius-lg:   12px;
+  --radius-xl:   16px;
+  --radius-2xl:  20px;
+  --radius-full: 9999px;
+
+  /* ── Shadows ───────────────────────────────────────── */
+  --shadow-card:
+    0 4px 6px -1px rgba(46,37,87,0.07),
+    0 2px 4px -1px rgba(46,37,87,0.05);
+  --shadow-card-hover:
+    0 10px 15px -3px rgba(46,37,87,0.12),
+    0 4px 6px -2px rgba(46,37,87,0.06);
+  --shadow-pricing-featured:
+    0 0 0 3px rgba(201,169,110,0.25),
+    0 12px 40px rgba(0,0,0,0.35);
+}
