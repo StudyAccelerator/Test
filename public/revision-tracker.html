@@ -267,8 +267,9 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 <script>
 (function(){
   'use strict';
-  // Vercel API endpoint — update this after deploying to Vercel
-  var SUBSCRIBE_ENDPOINT='https://test-git-claude-fix-revision-371ef8-studyaccelerators-projects.vercel.app/api/subscribe';
+  // MailerLite direct integration
+  var ML_API_KEY='eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYjUzMWQ4MTgyNzM5NmM3MTViZDVjN2ZhZDY5ZTYxMjNiYzZjMTViNjM1Y2Q3YjkwODI4YWY1YjlmMzgwYjE4Yjg5MmQ0N2FmM2M3YTM0ZWYiLCJpYXQiOjE3Nzg1MTIzODEuMjUwMjI2LCJuYmYiOjE3Nzg1MTIzODEuMjUwMjI5LCJleHAiOjQ5MzQxODU5ODEuMjQ2MjY1LCJzdWIiOiIyMTMxNzg2Iiwic2NvcGVzIjpbXX0.QQkqYoMhCzwoGI4g3LfZWhiGWZ_dWxGfQOrNfebTqL4R7OKHgpaEduW-J9AAdhWo2_bsRpKvi6NnVJA_rdeTPQUBnCmmXcvzahU4bVx7_Ulff0Ld_8_8a5boETdU3UrKTWMCjdXQkmpJ-1TiM5_Mi4iLOpB0vvPvG_U3Cya_ORnGsTSyDv5qQ7MQHqjytbaZ0R_aRWDA1-emMFymr2dXOv-iOW1Dly1dflxrIo6Yb0BPA-v6Chs4TjlHdEvwFvSRgzZAATN9dDSjGENQbhQIFmuUGQ00HiP1xsmS6qKaCU__iARC8z91GZyrbcf0m9ryHNhkScckYMoGu1sYIC9Hm2Wj_BKpI970L0-CAT5dDpolTbTd8absVHR3UOxuiWZSEHVcumvtPsZ6K5GP0zQ_ccFlMaqLrPs7o80wy9DWt97fDZ8_KuScHY20zKSG-beSojlzuUXXj4rpH33-9PeJ4puXIMirOWzsKJIaEEckRDumvyhawrliPhHMwelKhgpCxMZlA_Bc3-nwZMDiEZf_CtXgXOkzUSkJohkboZBELdeLOrv83EPRhpHXahEyZkOhURucBLtb5Fs0lFIkLKeI-RXAz_7TPByqlHkcxZV8xObgZpqtCGVd1q8oI2pwrD7D85H4i5wP70q-Lsv8BZl_G8RTosjdYckZn0nXlOTjehM';
+  var ML_GROUP_ID='187183128836573106';
   const DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
   const DAY_SHORT={Monday:'Mon',Tuesday:'Tue',Wednesday:'Wed',Thursday:'Thu',Friday:'Fri',Saturday:'Sat',Sunday:'Sun'};
   const PRIORITY_WEIGHT={high:3,medium:2,low:1};
@@ -739,8 +740,11 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
     }
     // Fire-and-forget MailerLite subscription — timetable shows regardless of outcome
     (function(firstName,email){
-      fetch(SUBSCRIBE_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({firstName:firstName,email:email})})
-        .catch(function(err){console.warn('MailerLite subscribe failed:',err)});
+      fetch('https://connect.mailerlite.com/api/subscribers',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+ML_API_KEY},
+        body:JSON.stringify({email:email,fields:{name:firstName},groups:[ML_GROUP_ID]})
+      }).catch(function(err){console.warn('MailerLite subscribe failed:',err)});
     }(state.name,state.email));
     const week=generatePlan(state);_exportWeek=week;_exportState=state;renderTimetable(week,state,state.name);showTimetable();
   });
