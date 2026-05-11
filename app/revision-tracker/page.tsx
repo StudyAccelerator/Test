@@ -148,7 +148,7 @@ const js = `
 (function(){
   'use strict';
   // Vercel API endpoint — update this after deploying to Vercel
-  var SUBSCRIBE_ENDPOINT='https://a-level-accelerators.vercel.app/api/subscribe';
+  var SUBSCRIBE_ENDPOINT='https://test-git-claude-fix-revision-371ef8-studyaccelerators-projects.vercel.app/api/subscribe';
   const DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
   const DAY_SHORT={Monday:'Mon',Tuesday:'Tue',Wednesday:'Wed',Thursday:'Thu',Friday:'Fri',Saturday:'Sat',Sunday:'Sun'};
   const PRIORITY_WEIGHT={high:3,medium:2,low:1};
