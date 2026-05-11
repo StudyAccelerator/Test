@@ -85,7 +85,7 @@ const faqs = [
     question: "When does the next cohort start?",
     answer: (
       <>
-        <p className="mb-4 text-brand-gold font-semibold">👉 Next cohort starts Wednesday May 6th.</p>
+        <p className="mb-4 text-brand-gold font-semibold">👉 Next cohort starts Sunday June 21st.</p>
         <p>The Top 1% Mentorship is by appointment, we schedule 1:1s based on your availability.</p>
       </>
     ),
