@@ -863,7 +863,7 @@ export default function RevisionTrackerPage() {
             <input type="text" id="student-name" placeholder="e.g. Aisha" maxLength={30} />
             <label htmlFor="student-email">Email address <span style={{color:'#C9A96E'}}>*</span></label>
             <input type="email" id="student-email" placeholder="your@email.com" maxLength={100} />
-            <p className="help-text">So we can send you your timetable.</p>
+            <p className="help-text">Get more free study tips and resources from Dr Waleed.</p>
             <label htmlFor="wake-time">Wake-up time</label>
             <input type="time" id="wake-time" defaultValue="07:00" />
             <label htmlFor="breakfast-time">Breakfast time</label>
