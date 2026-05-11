@@ -209,7 +209,7 @@ const js = `
     const name=document.getElementById('student-name').value.trim();
     const email=document.getElementById('student-email').value.trim();
     if(!name){alert('Please enter your first name.');return null}
-    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Please enter a valid email address to generate your timetable.');return null}
+    if(!email||!/^[^ @]+@[^ @]+\.[^ @]+$/.test(email)){alert('Please enter a valid email address to generate your timetable.');return null}
     const wakeTime=document.getElementById('wake-time').value||'07:00';
     const breakfastTime=document.getElementById('breakfast-time').value||'07:30';
     const lunchTime=document.getElementById('lunch-time').value||'12:00';
