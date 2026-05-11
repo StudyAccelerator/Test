@@ -37,7 +37,7 @@ h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
 .card-subtitle{font-size:0.82rem;color:var(--muted);margin-bottom:1.1rem;font-style:italic}
 .card-num{position:absolute;top:-12px;left:-12px;width:28px;height:28px;background:var(--gold);color:var(--purple);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:bold;font-size:0.95rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
 label{display:block;font-size:0.8rem;font-weight:600;color:var(--purple);margin-bottom:0.3rem;letter-spacing:0.02em}
-input[type="text"],input[type="time"],select{width:100%;padding:0.6rem 0.75rem;border:1.5px solid var(--cream-dark);border-radius:6px;font-family:inherit;font-size:0.92rem;background:var(--cream);color:var(--text);margin-bottom:0.9rem;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;appearance:none}
+input[type="text"],input[type="email"],input[type="time"],select{width:100%;padding:0.6rem 0.75rem;border:1.5px solid var(--cream-dark);border-radius:6px;font-family:inherit;font-size:0.92rem;background:var(--cream);color:var(--text);margin-bottom:0.9rem;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;appearance:none}
 select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232E2557' d='M0 0l5 6 5-6z'/></svg>");background-repeat:no-repeat;background-position:right 0.75rem center;padding-right:2rem}
 input:focus,select:focus{outline:none;border-color:var(--purple);background:#fff}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
@@ -147,6 +147,8 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 const js = `
 (function(){
   'use strict';
+  // Vercel API endpoint — update this after deploying to Vercel
+  var SUBSCRIBE_ENDPOINT='https://a-level-accelerators.vercel.app/api/subscribe';
   const DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
   const DAY_SHORT={Monday:'Mon',Tuesday:'Tue',Wednesday:'Wed',Thursday:'Thu',Friday:'Fri',Saturday:'Sat',Sunday:'Sun'};
   const PRIORITY_WEIGHT={high:3,medium:2,low:1};
@@ -205,6 +207,9 @@ const js = `
 
   function collectState(){
     const name=document.getElementById('student-name').value.trim();
+    const email=document.getElementById('student-email').value.trim();
+    if(!name){alert('Please enter your first name.');return null}
+    if(!email||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Please enter a valid email address to generate your timetable.');return null}
     const wakeTime=document.getElementById('wake-time').value||'07:00';
     const breakfastTime=document.getElementById('breakfast-time').value||'07:30';
     const lunchTime=document.getElementById('lunch-time').value||'12:00';
@@ -230,7 +235,7 @@ const js = `
     const hasSchool=document.getElementById('has-school').checked;
     let schoolDays=[];let schoolStart=toMinutes('08:30'),schoolEnd=toMinutes('16:00');
     if(hasSchool){document.querySelectorAll('.school-day:checked').forEach(cb=>{schoolDays.push(cb.value)});schoolStart=toMinutes(document.getElementById('school-start').value);schoolEnd=toMinutes(document.getElementById('school-end').value);if(schoolDays.length>0&&schoolStart<schoolEnd){schoolDays.forEach(day=>{commitments.push({day:day,startMin:schoolStart,endMin:schoolEnd,label:'School'})})}}
-    return {name,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
+    return {name,email,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
   }
 
   // ---- New scheduling algorithm: spaced repetition + interleaving ----------
@@ -612,6 +617,11 @@ const js = `
       const msg="This week you have about "+totalStudyHrs+" hours available for study across all 7 days (after school, commitments, and meals).\\n\\nThat is enough for "+maxTopics+" deep-work session"+(maxTopics!==1?"s":"")+" — one per topic.\\n\\nYou have entered "+totalTopics+" topics. Topics that do not fit will be skipped, possibly leaving whole subjects uncovered.\\n\\nTo cover every subject, aim for "+perSubj+" topic"+(perSubj!==1?"s":"")+" per subject.\\n\\nPress OK to generate anyway, or Cancel to go back and trim your topics.";
       if(!confirm(msg))return;
     }
+    // Fire-and-forget MailerLite subscription — timetable shows regardless of outcome
+    (function(firstName,email){
+      fetch(SUBSCRIBE_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({firstName:firstName,email:email})})
+        .catch(function(err){console.warn('MailerLite subscribe failed:',err)});
+    }(state.name,state.email));
     const week=generatePlan(state);_exportWeek=week;_exportState=state;renderTimetable(week,state,state.name);showTimetable();
   });
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
@@ -849,8 +859,11 @@ export default function RevisionTrackerPage() {
             <div className="card-num">1</div>
             <h2 className="card-title">About You</h2>
             <p className="card-subtitle">Just the basics. Used to shape your day.</p>
-            <label htmlFor="student-name">First name (optional)</label>
+            <label htmlFor="student-name">First name <span style={{color:'#C9A96E'}}>*</span></label>
             <input type="text" id="student-name" placeholder="e.g. Aisha" maxLength={30} />
+            <label htmlFor="student-email">Email address <span style={{color:'#C9A96E'}}>*</span></label>
+            <input type="email" id="student-email" placeholder="your@email.com" maxLength={100} />
+            <p className="help-text">Your timetable will be sent here. We&#39;ll also share study tips and resources — unsubscribe any time.</p>
             <label htmlFor="wake-time">Wake-up time</label>
             <input type="time" id="wake-time" defaultValue="07:00" />
             <label htmlFor="breakfast-time">Breakfast time</label>
