@@ -870,6 +870,9 @@ export default function RevisionTrackerPage() {
             <label htmlFor="student-year-group">Year group <span style={{color:'#C9A96E'}}>*</span></label>
             <select id="student-year-group" defaultValue="">
               <option value="" disabled>Select your year group</option>
+              <option value="Year 9">Year 9</option>
+              <option value="Year 10">Year 10</option>
+              <option value="Year 11">Year 11</option>
               <option value="Year 12">Year 12</option>
               <option value="Year 13">Year 13</option>
               <option value="Gap Year">Gap Year</option>
