@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-PR9N2VWV');</script>
+<!-- End Google Tag Manager -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920">
+<title>Pricing Cards — A-Level Accelerators</title>
+<style>
+  *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1920px;
+    height: 900px;
+    overflow: hidden;
+    background: #2D1B69;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding: 28px 130px 0;
+  }
+
+  /* ── Cards Row ─────────────────────────────────────── */
+  .cards-row {
+    flex: 1;
+    display: flex;
+    gap: 26px;
+    align-items: flex-end;
+    overflow: hidden;
+  }
+
+  /* Outer card slots — shorter, bottom-aligned */
+  .card-slot {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    height: 100%;
+  }
+
+  /* Centre column — full height, badge on top */
+  .centre-col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+  }
+
+  /* ── Card shell ────────────────────────────────────── */
+  .card {
+    background: #FAF7F0;
+    border: 2px solid #C9A84C;
+    border-radius: 12px;
+    padding: 26px 24px 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    width: 100%;
+  }
+
+  .card--outer {
+    height: 724px;   /* outer card fixed height */
+  }
+
+  .card--featured {
+    flex: 1;         /* fills remaining height inside centre-col */
+    border-width: 3px;
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.25), 0 12px 40px rgba(0,0,0,0.35);
+  }
+
+  /* ── Most-Popular badge ────────────────────────────── */
+  .most-popular {
+    background: #C9A84C;
+    color: #1E1145;
+    font-size: 14px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+    padding: 8px 28px;
+    border-radius: 30px;
+    margin-bottom: 11px;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── Type ──────────────────────────────────────────── */
+  .card-title {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 27px;
+    font-weight: bold;
+    color: #1E1145;
+    line-height: 1.2;
+    margin-bottom: 6px;
+  }
+
+  .card--featured .card-title { font-size: 29px; }
+
+  .card-subtitle {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.22em;
+    color: #C9A84C;
+    font-weight: 700;
+    margin-bottom: 14px;
+  }
+
+  /* ── Divider ───────────────────────────────────────── */
+  .divider {
+    border: none;
+    border-top: 1px solid rgba(201,168,76,0.3);
+    margin: 0 0 14px;
+  }
+
+  /* ── Price block ───────────────────────────────────── */
+  .price-block {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 2px;
+    margin-bottom: 14px;
+  }
+
+  .price-original {
+    font-size: 19px;
+    color: #b0a090;
+    text-decoration: line-through;
+    text-decoration-color: #cc3333;
+    text-decoration-thickness: 2px;
+    line-height: 1;
+  }
+
+  .price-now {
+    font-family: Georgia, serif;
+    font-size: 50px;
+    font-weight: bold;
+    color: #C9A84C;
+    line-height: 1;
+    letter-spacing: -0.01em;
+  }
+
+  .price-now .suffix {
+    font-size: 22px;
+    font-family: Arial, sans-serif;
+    font-weight: 400;
+    letter-spacing: 0;
+  }
+
+  .earlybird-pill {
+    display: inline-flex;
+    align-items: center;
+    background: #C9A84C;
+    color: #1E1145;
+    font-size: 11px;
+    font-weight: 800;
+    padding: 4px 13px;
+    border-radius: 20px;
+    margin-top: 5px;
+    white-space: nowrap;
+    letter-spacing: 0.01em;
+  }
+
+  /* ── Best-for ──────────────────────────────────────── */
+  .best-for {
+    font-size: 13.5px;
+    color: #1E1145;
+    line-height: 1.45;
+    margin-bottom: 14px;
+  }
+
+  .best-for strong {
+    color: #C9A84C;
+    font-weight: 700;
+  }
+
+  /* ── Highlight box (featured card only) ────────────── */
+  .highlight-box {
+    background: rgba(201,168,76,0.10);
+    border: 1.5px solid rgba(201,168,76,0.42);
+    border-radius: 8px;
+    padding: 13px 16px;
+    margin-bottom: 14px;
+  }
+
+  .highlight-box-title {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #1E1145;
+    line-height: 1.35;
+    margin-bottom: 5px;
+  }
+
+  .highlight-box-sub {
+    font-size: 12px;
+    color: #5a5060;
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  /* ── Bullet list ───────────────────────────────────── */
+  .bullets {
+    list-style: none;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 7px;
+    margin-bottom: 14px;
+  }
+
+  .bullets li {
+    font-size: 13.5px;
+    color: #1E1145;
+    display: flex;
+    align-items: flex-start;
+    gap: 9px;
+    line-height: 1.4;
+  }
+
+  .tick {
+    color: #C9A84C;
+    font-weight: 900;
+    font-size: 15px;
+    line-height: 1.35;
+    flex-shrink: 0;
+  }
+
+  /* ── Invite-only note ──────────────────────────────── */
+  .invite-only {
+    font-size: 12.5px;
+    color: #C9A84C;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 14px;
+  }
+
+  /* ── CTA button ────────────────────────────────────── */
+  .cta {
+    background: #C9A84C;
+    color: #1E1145;
+    border: none;
+    border-radius: 8px;
+    padding: 13px 20px;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.02em;
+    text-align: center;
+    width: 100%;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+    flex-shrink: 0;
+  }
+
+  /* ── Timer bar ─────────────────────────────────────── */
+  .timer-bar {
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    color: rgba(255,255,255,0.88);
+    letter-spacing: 0.025em;
+    flex-shrink: 0;
+  }
+</style>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-PR9N2VWV" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="cards-row">
+
+  <!-- ── Card 1: Study Series ──────────────────────── -->
+  <div class="card-slot">
+    <div class="card card--outer">
+
+      <div class="card-title">Study Series</div>
+      <div class="card-subtitle">Learn the System</div>
+      <hr class="divider">
+
+      <div class="price-block">
+        <span class="price-original">£119</span>
+        <span class="price-now">£95</span>
+        <span class="earlybird-pill">20% OFF — Use code EARLYBIRD20</span>
+      </div>
+
+      <hr class="divider">
+
+      <div class="best-for">
+        <strong>Best for:</strong> Students who have exams in 4–6 weeks
+      </div>
+
+      <ul class="bullets">
+        <li><span class="tick">✓</span> 4 live sessions (2 hours each)</li>
+        <li><span class="tick">✓</span> Full Top 1% Study System</li>
+        <li><span class="tick">✓</span> Worksheets + templates</li>
+        <li><span class="tick">✓</span> Fortnightly group Q&amp;A</li>
+      </ul>
+
+      <button class="cta">Join Study Series</button>
+    </div>
+  </div>
+
+  <!-- ── Card 2: Study Accelerator (Featured) ──────── -->
+  <div class="centre-col">
+    <div class="most-popular">⭐&nbsp; Most Popular</div>
+
+    <div class="card card--featured">
+
+      <div class="card-title">Study Accelerator</div>
+      <div class="card-subtitle">Implement the System</div>
+      <hr class="divider">
+
+      <div class="price-block">
+        <span class="price-original">£499</span>
+        <span class="price-now">£399</span>
+        <span class="earlybird-pill">20% OFF — Use code EARLYBIRD20</span>
+      </div>
+
+      <hr class="divider">
+
+      <div class="best-for">
+        <strong>Best for:</strong> Students who want long-lasting results
+      </div>
+
+      <div class="highlight-box">
+        <div class="highlight-box-title">Includes full 12-week implementation support</div>
+        <div class="highlight-box-sub">Not just learning the system — actually applying it with guidance and feedback</div>
+      </div>
+
+      <ul class="bullets">
+        <li><span class="tick">✓</span> 12 weekly live sessions — 3 full months of support</li>
+        <li><span class="tick">✓</span> Full Top 1% Study System</li>
+        <li><span class="tick">✓</span> Worksheets + templates</li>
+        <li><span class="tick">✓</span> Fortnightly group Q&amp;A</li>
+        <li><span class="tick">✓</span> Personalised guidance</li>
+        <li><span class="tick">✓</span> Direct feedback on your progress</li>
+        <li><span class="tick">✓</span> Community support</li>
+      </ul>
+
+      <button class="cta">Join Study Accelerator</button>
+    </div>
+  </div>
+
+  <!-- ── Card 3: Top 1% Mentorship ─────────────────── -->
+  <div class="card-slot">
+    <div class="card card--outer">
+
+      <div class="card-title">Top 1% Mentorship</div>
+      <div class="card-subtitle">Optimise and Accelerate</div>
+      <hr class="divider">
+
+      <div class="price-block">
+        <span class="price-now">£2,000<span class="suffix">/year</span></span>
+      </div>
+
+      <hr class="divider">
+
+      <div class="best-for">
+        <strong>Best for:</strong> Serious students aiming for top grades and competitive universities
+      </div>
+
+      <ul class="bullets">
+        <li><span class="tick">✓</span> Personalised performance plan</li>
+        <li><span class="tick">✓</span> Fortnightly calls, year-round</li>
+        <li><span class="tick">✓</span> Monthly performance reviews</li>
+        <li><span class="tick">✓</span> Priority support</li>
+        <li><span class="tick">✓</span> Full access to all systems</li>
+      </ul>
+
+      <div class="invite-only">Invite only · limited to 5 spaces</div>
+
+      <button class="cta">Book Free Consultation</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── Timer bar ───────────────────────────────────── -->
+<div class="timer-bar">
+  ⏰&nbsp; Workshop discount valid for 48 hours only — code <strong>EARLYBIRD20</strong>
+</div>
+
+</body>
+</html>
