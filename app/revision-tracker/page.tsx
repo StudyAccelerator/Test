@@ -208,8 +208,10 @@ const js = `
 
   function collectState(){
     const name=document.getElementById('student-name').value.trim();
+    const yearGroup=document.getElementById('student-year-group').value;
     const email=document.getElementById('student-email').value.trim();
     if(!name){alert('Please enter your first name.');return null}
+    if(!yearGroup){alert('Please select your year group.');return null}
     if(!email||!/^[^ @]+@[^ @]+\.[^ @]+$/.test(email)){alert('Please enter a valid email address to generate your timetable.');return null}
     const wakeTime=document.getElementById('wake-time').value||'07:00';
     const breakfastTime=document.getElementById('breakfast-time').value||'07:30';
@@ -236,7 +238,7 @@ const js = `
     const hasSchool=document.getElementById('has-school').checked;
     let schoolDays=[];let schoolStart=toMinutes('08:30'),schoolEnd=toMinutes('16:00');
     if(hasSchool){document.querySelectorAll('.school-day:checked').forEach(cb=>{schoolDays.push(cb.value)});schoolStart=toMinutes(document.getElementById('school-start').value);schoolEnd=toMinutes(document.getElementById('school-end').value);if(schoolDays.length>0&&schoolStart<schoolEnd){schoolDays.forEach(day=>{commitments.push({day:day,startMin:schoolStart,endMin:schoolEnd,label:'School'})})}}
-    return {name,email,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
+    return {name,yearGroup,email,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
   }
 
   // ---- New scheduling algorithm: spaced repetition + interleaving ----------
@@ -619,13 +621,13 @@ const js = `
       if(!confirm(msg))return;
     }
     // Fire-and-forget MailerLite subscription — timetable shows regardless of outcome
-    (function(firstName,email){
+    (function(firstName,yearGroup,email){
       fetch('https://connect.mailerlite.com/api/subscribers',{
         method:'POST',
         headers:{'Content-Type':'application/json','Authorization':'Bearer '+ML_API_KEY},
-        body:JSON.stringify({email:email,fields:{name:firstName},groups:[ML_GROUP_ID]})
+        body:JSON.stringify({email:email,fields:{name:firstName,year_group:yearGroup},groups:[ML_GROUP_ID]})
       }).catch(function(err){console.warn('MailerLite subscribe failed:',err)});
-    }(state.name,state.email));
+    }(state.name,state.yearGroup,state.email));
     const week=generatePlan(state);_exportWeek=week;_exportState=state;renderTimetable(week,state,state.name);showTimetable();
   });
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
@@ -865,6 +867,14 @@ export default function RevisionTrackerPage() {
             <p className="card-subtitle">Just the basics. Used to shape your day.</p>
             <label htmlFor="student-name">First name <span style={{color:'#C9A96E'}}>*</span></label>
             <input type="text" id="student-name" placeholder="e.g. Aisha" maxLength={30} />
+            <label htmlFor="student-year-group">Year group <span style={{color:'#C9A96E'}}>*</span></label>
+            <select id="student-year-group" defaultValue="">
+              <option value="" disabled>Select your year group</option>
+              <option value="Year 12">Year 12</option>
+              <option value="Year 13">Year 13</option>
+              <option value="Gap Year">Gap Year</option>
+              <option value="Other">Other</option>
+            </select>
             <label htmlFor="student-email">Email address <span style={{color:'#C9A96E'}}>*</span></label>
             <input type="email" id="student-email" placeholder="your@email.com" maxLength={100} />
             <p className="help-text">Get more free study tips and resources from Dr Waleed</p>
