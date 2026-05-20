@@ -1,353 +1,186 @@
-'use client'
-
-import { useState } from 'react'
 import Image from 'next/image'
+import { ScrollFade } from '@/components/ui/scroll-fade'
+import ParentsForm from './parents-form'
 
-declare global {
-  interface Window {
-    fbq?: (...args: unknown[]) => void
-    gtag?: (...args: unknown[]) => void
-  }
+export const metadata = {
+  title: 'Free Parent Guide | A-Level Accelerators',
+  description:
+    'Download the free parent guide that explains why your child may be working hard but still not getting the grades they need.',
 }
 
-// ─── Brand tokens ────────────────────────────────────────────────────────────
-const PURPLE = '#2D1B69'
-const GOLD   = '#C9A84C'
-const CREAM  = '#FFF8E8'
-
-// ─── Shared input style ───────────────────────────────────────────────────────
-const inputBase: React.CSSProperties = {
-  display: 'block',
-  width: '100%',
-  padding: '12px 14px',
-  border: '1.5px solid #DDD5C8',
-  borderRadius: '8px',
-  fontSize: '0.95rem',
-  color: PURPLE,
-  backgroundColor: '#FDFAF5',
-  boxSizing: 'border-box',
-  fontFamily: 'inherit',
-  outline: 'none',
-  transition: 'border-color 0.15s',
-}
-
-const BULLETS = [
-  'Why effort alone is not enough to improve A-Level grades',
-  'The 4-tier system that separates B students from A and A* students',
-  'Three questions to ask your child this week that will tell you more than any exam result',
+const BULLETS: [string, string][] = [
+  ['Why effort alone', 'is not enough to improve A-Level grades'],
+  [
+    'The 4-tier system',
+    'that separates B students from A and A* students',
+  ],
+  [
+    'Three questions to ask your child',
+    'this week that will tell you more than any exam result',
+  ],
 ]
 
-// ─── Page ─────────────────────────────────────────────────────────────────────
-export default function ParentsPage() {
-  const [form, setForm] = useState({ firstName: '', email: '', yearGroup: '' })
-  const [loading, setLoading]   = useState(false)
-  const [success, setSuccess]   = useState(false)
-  const [error,   setError]     = useState('')
-
-  const update = (field: string, value: string) =>
-    setForm(prev => ({ ...prev, [field]: value }))
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
-    setLoading(true)
-    setError('')
-
-    try {
-      const res = await fetch('/api/parent-lead', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(form),
-      })
-
-      const data = await res.json()
-
-      if (!res.ok) {
-        setError(data.error ?? 'Something went wrong. Please try again.')
-        return
-      }
-
-      // Fire conversion events (safe — only runs in browser after success)
-      window.fbq?.('track', 'Lead')
-      window.gtag?.('event', 'generate_lead')
-
-      setSuccess(true)
-      window.scrollTo({ top: 0, behavior: 'smooth' })
-    } catch {
-      setError('Connection error. Please check your internet and try again.')
-    } finally {
-      setLoading(false)
-    }
-  }
-
+export default function ParentsLanding() {
   return (
-    <div style={{ backgroundColor: CREAM, minHeight: '100vh', fontFamily: "'Inter', system-ui, -apple-system, sans-serif" }}>
-      <div style={{ maxWidth: '620px', margin: '0 auto', padding: 'clamp(32px, 6vw, 64px) 20px 80px' }}>
+    <main className="bg-brand-cream">
 
-        {/* ── Logo ─────────────────────────────────────────────────────────── */}
-        <div style={{ textAlign: 'center', marginBottom: '40px' }}>
+      {/* ── Logo bar ────────────────────────────────────────────────────── */}
+      <header className="bg-brand-cream-dark border-b-4 border-brand-gold h-24 overflow-hidden">
+        <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-center">
           <Image
             src="/logo-header-new.png"
             alt="A-Level Accelerators"
-            width={160}
-            height={48}
-            style={{ objectFit: 'contain', maxWidth: '160px', height: 'auto' }}
+            width={450}
+            height={450}
+            className="h-64 w-auto"
             priority
+            unoptimized
           />
         </div>
+      </header>
 
-        {/* ── Success state ────────────────────────────────────────────────── */}
-        {success ? (
-          <div style={{ textAlign: 'center', padding: '16px 0' }}>
-            <div style={{ fontSize: '52px', marginBottom: '20px', lineHeight: 1 }}>✅</div>
-            <h2 style={{
-              color: PURPLE, fontSize: 'clamp(1.5rem, 4vw, 2rem)',
-              fontWeight: 800, lineHeight: 1.2, marginBottom: '20px',
-            }}>
-              Thank you.
-            </h2>
-            <p style={{
-              color: PURPLE, fontSize: '1.05rem', lineHeight: 1.75,
-              marginBottom: '36px', opacity: 0.9,
-            }}>
-              Your guide is on its way. Check your inbox in the next few minutes.
-              <br /><br />
-              In the meantime, you can download it directly here:
-            </p>
-            <a
-              href="/ALevel-Accelerators-Parent-Guide.pdf"
-              download
-              style={{
-                display: 'inline-block',
-                backgroundColor: GOLD,
-                color: PURPLE,
-                fontWeight: 700,
-                fontSize: '1rem',
-                padding: '15px 36px',
-                borderRadius: '8px',
-                textDecoration: 'none',
-                letterSpacing: '0.01em',
-              }}
-            >
-              Download the Parent Guide
-            </a>
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-20 md:py-24 px-6 text-center">
+        <div className="max-w-4xl mx-auto">
+          <div className="inline-block bg-brand-gold text-brand-purple px-4 py-1.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider mb-6">
+            Free Parent Guide
           </div>
+          <h1 className="text-4xl md:text-5xl font-serif font-bold text-brand-gold leading-tight mb-6">
+            Is Your Child Working Hard But Still Not Getting the{' '}
+            <span className="text-white">Grades They Need?</span>
+          </h1>
+          <p className="text-lg md:text-xl mb-6 opacity-90 max-w-3xl mx-auto leading-relaxed">
+            Download the free parent guide that explains exactly why and what to do about it.
+          </p>
+          <p className="text-sm text-brand-gold font-semibold mb-10 opacity-90">
+            By Dr Waleed Ahmad, MBBS Founder of A-Level Accelerators
+          </p>
+          <a
+            href="#get-guide"
+            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-bold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
+          >
+            Get the Free Guide
+          </a>
+        </div>
+      </section>
 
-        ) : (
-          <>
-            {/* ── Headline ───────────────────────────────────────────────── */}
-            <div style={{ textAlign: 'center', marginBottom: '28px' }}>
-              <h1 style={{
-                color: PURPLE,
-                fontSize: 'clamp(1.55rem, 4.5vw, 2.15rem)',
-                fontWeight: 800,
-                lineHeight: 1.25,
-                marginBottom: '16px',
-                letterSpacing: '-0.01em',
-              }}>
-                Is Your Child Working Hard But Still Not Getting the Grades They Need?
-              </h1>
-              <p style={{
-                color: PURPLE,
-                fontSize: 'clamp(1rem, 2.5vw, 1.15rem)',
-                lineHeight: 1.65,
-                marginBottom: '14px',
-                opacity: 0.85,
-              }}>
-                Download the free parent guide that explains exactly why — and what to do about it.
-              </p>
-              <p style={{ color: GOLD, fontSize: '0.875rem', fontWeight: 600, letterSpacing: '0.01em' }}>
-                By Dr Waleed Ahmad M &nbsp;·&nbsp; Founder of A-Level Accelerators
-              </p>
-            </div>
+      {/* ── What's inside ────────────────────────────────────────────────── */}
+      <ScrollFade>
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-3xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4 font-bold">
+              What&apos;s Inside the Guide
+            </h2>
+            <p className="text-center text-brand-text mb-12 text-lg">
+              A straightforward guide written for parents, not teachers.
+            </p>
 
-            {/* ── Divider ────────────────────────────────────────────────── */}
-            <div style={{
-              height: '2px',
-              background: `linear-gradient(to right, transparent, ${GOLD}, transparent)`,
-              opacity: 0.45,
-              marginBottom: '28px',
-            }} />
-
-            {/* ── Bullet points ──────────────────────────────────────────── */}
-            <ul style={{
-              listStyle: 'none', padding: 0, margin: '0 0 36px',
-              display: 'flex', flexDirection: 'column', gap: '14px',
-            }}>
-              {BULLETS.map((text, i) => (
-                <li key={i} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px' }}>
-                  <span style={{
-                    flexShrink: 0,
-                    width: '22px', height: '22px',
-                    borderRadius: '50%',
-                    backgroundColor: GOLD,
-                    display: 'flex', alignItems: 'center', justifyContent: 'center',
-                    marginTop: '1px',
-                  }}>
-                    <svg width="11" height="8" viewBox="0 0 11 8" fill="none">
-                      <path d="M1 4L4 7L10 1" stroke={PURPLE} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                    </svg>
-                  </span>
-                  <span style={{ color: PURPLE, fontSize: '1rem', lineHeight: 1.55, fontWeight: 500 }}>
-                    {text}
-                  </span>
+            <ul className="space-y-4">
+              {BULLETS.map(([bold, rest]) => (
+                <li
+                  key={bold}
+                  className="flex items-start gap-4 bg-brand-cream/60 border-l-4 border-brand-gold rounded-md p-5"
+                >
+                  <span className="text-brand-gold font-bold text-xl leading-none mt-0.5">✓</span>
+                  <p className="text-lg text-brand-text">
+                    <strong className="text-brand-purple">{bold}</strong> {rest}
+                  </p>
                 </li>
               ))}
             </ul>
+          </div>
+        </section>
+      </ScrollFade>
 
-            {/* ── Form card ──────────────────────────────────────────────── */}
-            <div style={{
-              backgroundColor: '#FFFFFF',
-              borderRadius: '16px',
-              padding: 'clamp(24px, 5vw, 36px)',
-              boxShadow: '0 4px 32px rgba(45, 27, 105, 0.10)',
-            }}>
-              <form onSubmit={handleSubmit} noValidate>
-                <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+      {/* ── Who wrote it ─────────────────────────────────────────────────── */}
+      <ScrollFade delay={0.1}>
+        <section className="py-20 px-6 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12 font-bold">
+              Who Wrote It
+            </h2>
 
-                  {/* First name */}
-                  <div>
-                    <label style={labelStyle}>
-                      First Name <span style={{ color: GOLD }}>*</span>
-                    </label>
-                    <input
-                      type="text"
-                      required
-                      value={form.firstName}
-                      onChange={e => update('firstName', e.target.value)}
-                      placeholder="e.g. Sarah"
-                      maxLength={50}
-                      style={inputBase}
-                    />
-                  </div>
-
-                  {/* Email */}
-                  <div>
-                    <label style={labelStyle}>
-                      Email Address <span style={{ color: GOLD }}>*</span>
-                    </label>
-                    <input
-                      type="email"
-                      required
-                      value={form.email}
-                      onChange={e => update('email', e.target.value)}
-                      placeholder="your@email.com"
-                      maxLength={100}
-                      style={inputBase}
-                    />
-                  </div>
-
-                  {/* Year group */}
-                  <div>
-                    <label style={labelStyle}>
-                      Child's Year Group <span style={{ color: GOLD }}>*</span>
-                    </label>
-                    <select
-                      required
-                      value={form.yearGroup}
-                      onChange={e => update('yearGroup', e.target.value)}
-                      style={{
-                        ...inputBase,
-                        WebkitAppearance: 'none',
-                        MozAppearance: 'none',
-                        appearance: 'none',
-                        backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232D1B69' d='M0 0l5 6 5-6z'/></svg>")`,
-                        backgroundRepeat: 'no-repeat',
-                        backgroundPosition: 'right 14px center',
-                        paddingRight: '38px',
-                      } as React.CSSProperties}
-                    >
-                      <option value="" disabled>Select year group</option>
-                      <option value="Year 10">Year 10</option>
-                      <option value="Year 11">Year 11</option>
-                      <option value="Year 12">Year 12</option>
-                      <option value="Year 13">Year 13</option>
-                    </select>
-                  </div>
-
-                  {/* Error message */}
-                  {error && (
-                    <p style={{
-                      color: '#B91C1C', fontSize: '0.9rem', fontWeight: 500,
-                      margin: 0, padding: '10px 14px',
-                      backgroundColor: '#FEF2F2', borderRadius: '6px',
-                      border: '1px solid #FECACA',
-                    }}>
-                      ⚠️ {error}
-                    </p>
-                  )}
-
-                  {/* Submit button */}
-                  <button
-                    type="submit"
-                    disabled={loading}
+            <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
+              <div className="flex-shrink-0 flex flex-col items-center">
+                <div
+                  className="w-64 h-64 overflow-hidden rounded-2xl"
+                  style={{ boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)' }}
+                >
+                  <Image
+                    src="/graduation.jpg"
+                    alt="Dr Waleed Ahmad"
+                    width={256}
+                    height={256}
+                    className="w-full h-full object-cover"
                     style={{
-                      backgroundColor: loading ? '#d9bc72' : GOLD,
-                      color: PURPLE,
-                      fontWeight: 700,
-                      fontSize: '1.05rem',
-                      letterSpacing: '0.01em',
-                      padding: '15px 24px',
-                      borderRadius: '8px',
-                      border: 'none',
-                      cursor: loading ? 'not-allowed' : 'pointer',
-                      width: '100%',
-                      fontFamily: 'inherit',
-                      transition: 'background-color 0.2s, opacity 0.2s',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      gap: '10px',
+                      objectPosition: 'center 45%',
+                      transform: 'scale(1.25)',
+                      transformOrigin: 'center 45%',
                     }}
-                  >
-                    {loading ? (
-                      <>
-                        <span style={spinnerStyle} />
-                        Sending…
-                      </>
-                    ) : (
-                      'Send Me the Free Guide'
-                    )}
-                  </button>
-
-                  {/* Reassurance */}
-                  <p style={{
-                    textAlign: 'center', color: PURPLE,
-                    opacity: 0.5, fontSize: '0.82rem', margin: 0,
-                  }}>
-                    No spam. Just useful advice for parents of A-Level students.
-                  </p>
-
+                    unoptimized
+                  />
                 </div>
-              </form>
+                <p className="mt-3 text-sm italic text-brand-gold font-semibold">
+                  Dr Waleed Ahmad, MBBS
+                </p>
+                <p className="text-xs text-brand-muted">Founder, A-Level Accelerators</p>
+              </div>
+
+              <div className="border-2 border-brand-gold rounded-xl p-6 bg-brand-cream/40 max-w-md">
+                <p className="text-base md:text-lg text-brand-text leading-relaxed mb-4">
+                  As a doctor and former top-performing A-Level student, I have worked with over{' '}
+                  <strong className="text-brand-purple">1,000 students</strong> to help them
+                  improve their grades, manage their workload, and build study systems that
+                  actually work.
+                </p>
+                <p className="text-base md:text-lg text-brand-text leading-relaxed">
+                  I wrote this guide specifically for parents who can see their child is trying
+                  hard but not getting the results they deserve.
+                </p>
+              </div>
             </div>
-          </>
-        )}
-      </div>
+          </div>
+        </section>
+      </ScrollFade>
 
-      {/* Spinner keyframes */}
-      <style>{`
-        @keyframes _spin { to { transform: rotate(360deg); } }
-      `}</style>
-    </div>
+      {/* ── Form ─────────────────────────────────────────────────────────── */}
+      <ScrollFade delay={0.1}>
+        <section
+          id="get-guide"
+          className="py-20 px-6 bg-gradient-to-br from-brand-purple to-brand-purple-light scroll-mt-24"
+        >
+          <div className="max-w-2xl mx-auto">
+            <div className="text-center mb-10 text-brand-cream">
+              <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold mb-4">
+                Get Your Free Guide
+              </h2>
+              <p className="text-lg opacity-90">
+                Enter your details below and we will send it straight to your inbox.
+              </p>
+            </div>
+
+            <ParentsForm />
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* ── Footer ───────────────────────────────────────────────────────── */}
+      <footer className="bg-brand-purple text-brand-cream py-8 px-6 border-t-4 border-brand-gold">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-sm mb-2">
+            Questions?{' '}
+            <a
+              href="mailto:Waleed@alevelaccelerators.com"
+              className="text-brand-gold hover:text-white transition"
+            >
+              Waleed@alevelaccelerators.com
+            </a>
+          </p>
+          <p className="text-xs opacity-60">
+            &copy; 2026 A-Level Accelerators. All rights reserved.
+          </p>
+        </div>
+      </footer>
+    </main>
   )
-}
-
-// ─── Sub-styles ───────────────────────────────────────────────────────────────
-const labelStyle: React.CSSProperties = {
-  display: 'block',
-  color: PURPLE,
-  fontWeight: 600,
-  fontSize: '0.875rem',
-  marginBottom: '6px',
-}
-
-const spinnerStyle: React.CSSProperties = {
-  display: 'inline-block',
-  width: '16px',
-  height: '16px',
-  border: `2px solid ${PURPLE}`,
-  borderTopColor: 'transparent',
-  borderRadius: '50%',
-  animation: '_spin 0.7s linear infinite',
-  flexShrink: 0,
 }
