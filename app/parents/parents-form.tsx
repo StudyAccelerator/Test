@@ -2,6 +2,11 @@
 
 import { useState } from 'react'
 
+// Direct MailerLite API call — same proven approach as the revision tracker
+const ML_API_KEY =
+  'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYjUzMWQ4MTgyNzM5NmM3MTViZDVjN2ZhZDY5ZTYxMjNiYzZjMTViNjM1Y2Q3YjkwODI4YWY1YjlmMzgwYjE4Yjg5MmQ0N2FmM2M3YTM0ZWYiLCJpYXQiOjE3Nzg1MTIzODEuMjUwMjI2LCJuYmYiOjE3Nzg1MTIzODEuMjUwMjI5LCJleHAiOjQ5MzQxODU5ODEuMjQ2MjY1LCJzdWIiOiIyMTMxNzg2Iiwic2NvcGVzIjpbXX0.QQkqYoMhCzwoGI4g3LfZWhiGWZ_dWxGfQOrNfebTqL4R7OKHgpaEduW-J9AAdhWo2_bsRpKvi6NnVJA_rdeTPQUBnCmmXcvzahU4bVx7_Ulff0Ld_8_8a5boETdU3UrKTWMCjdXQkmpJ-1TiM5_Mi4iLOpB0vvPvG_U3Cya_ORnGsTSyDv5qQ7MQHqjytbaZ0R_aRWDA1-emMFymr2dXOv-iOW1Dly1dflxrIo6Yb0BPA-v6Chs4TjlHdEvwFvSRgzZAATN9dDSjGENQbhQIFmuUGQ00HiP1xsmS6qKaCU__iARC8z91GZyrbcf0m9ryHNhkScckYMoGu1sYIC9Hm2Wj_BKpI970L0-CAT5dDpolTbTd8absVHR3UOxuiWZSEHVcumvtPsZ6K5GP0zQ_ccFlMaqLrPs7o80wy9DWt97fDZ8_KuScHY20zKSG-beSojlzuUXXj4rpH33-9PeJ4puXIMirOWzsKJIaEEckRDumvyhawrliPhHMwelKhgpCxMZlA_Bc3-nwZMDiEZf_CtXgXOkzUSkJohkboZBELdeLOrv83EPRhpHXahEyZkOhURucBLtb5Fs0lFIkLKeI-RXAz_7TPByqlHkcxZV8xObgZpqtCGVd1q8oI2pwrD7D85H4i5wP70q-Lsv8BZl_G8RTosjdYckZn0nXlOTjehM'
+const ML_GROUP_ID = '188021995515937985'
+
 declare global {
   interface Window {
     fbq?: (...args: unknown[]) => void
@@ -25,16 +30,23 @@ export default function ParentsForm() {
     const yearGroup = formData.get('yearGroup') as string
 
     try {
-      const res  = await fetch('/api/parent-lead', {
+      const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
         method:  'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body:    JSON.stringify({ firstName, email, yearGroup }),
+        headers: {
+          'Content-Type':  'application/json',
+          'Authorization': `Bearer ${ML_API_KEY}`,
+        },
+        body: JSON.stringify({
+          email,
+          fields: { name: firstName, year_group: yearGroup },
+          groups: [ML_GROUP_ID],
+        }),
       })
 
-      const data = await res.json()
-
       if (!res.ok) {
-        setError(data.error ?? 'Something went wrong. Please try again.')
+        const body = await res.text()
+        console.error('[parents-form] MailerLite error:', res.status, body)
+        setError('Something went wrong. Please try again or email Waleed@alevelaccelerators.com.')
         return
       }
 
@@ -43,10 +55,9 @@ export default function ParentsForm() {
       window.gtag?.('event', 'generate_lead')
 
       setSubmitted(true)
-    } catch {
-      setError(
-        'Something went wrong. Please try again or email Waleed@alevelaccelerators.com.'
-      )
+    } catch (err) {
+      console.error('[parents-form] Fetch error:', err)
+      setError('Something went wrong. Please try again or email Waleed@alevelaccelerators.com.')
     } finally {
       setSubmitting(false)
     }
@@ -121,17 +132,20 @@ export default function ParentsForm() {
           defaultValue=""
           className="w-full px-4 py-3 rounded-md border-2 border-brand-cream-dark bg-brand-cream/40 text-brand-text focus:outline-none focus:border-brand-gold transition appearance-none"
           style={{
-            backgroundImage: `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232E2557' d='M0 0l5 6 5-6z'/></svg>")`,
+            backgroundImage:    `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232E2557' d='M0 0l5 6 5-6z'/></svg>")`,
             backgroundRepeat:   'no-repeat',
             backgroundPosition: 'right 16px center',
             paddingRight:       '40px',
           }}
         >
           <option value="" disabled>Select year group</option>
+          <option value="Year 9">Year 9</option>
           <option value="Year 10">Year 10</option>
           <option value="Year 11">Year 11</option>
           <option value="Year 12">Year 12</option>
           <option value="Year 13">Year 13</option>
+          <option value="Gap Year">Gap Year</option>
+          <option value="Other">Other</option>
         </select>
       </div>
 

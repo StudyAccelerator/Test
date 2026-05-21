@@ -53,7 +53,7 @@ export default function ParentsLanding() {
             Download the free parent guide that explains exactly why and what to do about it.
           </p>
           <p className="text-sm text-brand-gold font-semibold mb-10 opacity-90">
-            By Dr Waleed Ahmad, MBBS Founder of A-Level Accelerators
+            By Dr Waleed Ahmad, MBBS. Founder of A-Level Accelerators
           </p>
           <a
             href="#get-guide"
@@ -72,7 +72,7 @@ export default function ParentsLanding() {
               What&apos;s Inside the Guide
             </h2>
             <p className="text-center text-brand-text mb-12 text-lg">
-              A straightforward guide written for parents, not teachers.
+              A straightforward guide written specifically for parents.
             </p>
 
             <ul className="space-y-4">
