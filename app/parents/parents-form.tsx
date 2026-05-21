@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import Image from 'next/image'
 
 // Direct MailerLite API call — same proven approach as the revision tracker
 const ML_API_KEY =
@@ -15,9 +16,10 @@ declare global {
 }
 
 export default function ParentsForm() {
-  const [submitting, setSubmitting] = useState(false)
-  const [submitted, setSubmitted]   = useState(false)
-  const [error, setError]           = useState<string | null>(null)
+  const [submitting, setSubmitting]     = useState(false)
+  const [submitted, setSubmitted]       = useState(false)
+  const [submittedName, setSubmittedName] = useState('')
+  const [error, setError]               = useState<string | null>(null)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -54,6 +56,7 @@ export default function ParentsForm() {
       window.fbq?.('track', 'Lead')
       window.gtag?.('event', 'generate_lead')
 
+      setSubmittedName(firstName)
       setSubmitted(true)
     } catch (err) {
       console.error('[parents-form] Fetch error:', err)
@@ -67,16 +70,32 @@ export default function ParentsForm() {
   if (submitted) {
     return (
       <div className="bg-white rounded-2xl shadow-lg border-4 border-brand-gold p-10 text-center">
-        <div className="text-5xl mb-4">✅</div>
+        <div className="flex justify-center mb-6">
+          <Image
+            src="/logo-icon.png"
+            alt="A-Level Accelerators"
+            width={80}
+            height={80}
+            className="w-20 h-20 object-contain"
+            unoptimized
+          />
+        </div>
         <h3 className="text-3xl font-serif font-bold text-brand-purple mb-4">
-          Thank you!
+          {submittedName}, your guide is on its way!
         </h3>
         <p className="text-lg text-brand-text mb-4">
-          Your guide is on its way. You should receive it within the next minute.
+          You should receive it within the next minute.
         </p>
         <p className="text-sm text-brand-muted">
           Please check your spam and promotions folder if you do not see it in your inbox.
-          If you have any questions, simply reply to that email and we will get back to you.
+          If you have any questions, simply reply to that email or{' '}
+          <a
+            href="mailto:Waleed@alevelaccelerators.com"
+            className="text-brand-gold underline hover:text-brand-purple transition"
+          >
+            click here to email us
+          </a>{' '}
+          and I will get back to you as soon as I can!
         </p>
       </div>
     )
