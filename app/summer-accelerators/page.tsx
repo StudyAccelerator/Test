@@ -96,25 +96,25 @@ export default function SummerAccelerators() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-32 px-8 text-center">
-        <div className="max-w-5xl xl:max-w-7xl mx-auto">
-          <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-serif font-bold mb-6 leading-tight text-balance">
+      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-24 px-8 text-center">
+        <div className="max-w-4xl mx-auto">
+          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-8 leading-tight">
             <span className="text-brand-gold">Master the Topics</span> <span className="text-brand-cream">That Decide Your Predicted Grades!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Six weeks this summer on the high-yield Year 13 topics that set your predicted grades. Closing a gap or staying on top, you start September ahead.
+            Six weeks this summer on the high-yield Year 13 topics that determine your predicted grades!
           </p>
           <a
             href="#pricing"
             className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
           >
-            Secure My Place
+            Start September Ahead
           </a>
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-cream font-medium">
+          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-gold opacity-90 font-medium">
             <span>Expert A-Level tutors + Dr Waleed</span>
-            <span className="text-brand-gold" aria-hidden="true">·</span>
+            <span aria-hidden="true">·</span>
             <span>1,000+ students supported</span>
-            <span className="text-brand-gold" aria-hidden="true">·</span>
+            <span aria-hidden="true">·</span>
             <span>First session risk-free</span>
           </div>
         </div>
@@ -125,7 +125,7 @@ export default function SummerAccelerators() {
         <section className="py-6 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-base md:text-lg text-brand-purple font-semibold">
-              ⏳ The next cohort starts Saturday 25th July. Places are limited and prices rise after this cohort. Lock in the summer rate now.
+              ⏳ The next cohort starts Saturday 25th July with limited spaces. Secure your place now!
             </p>
           </div>
         </section>
@@ -136,7 +136,7 @@ export default function SummerAccelerators() {
         <section className="py-20 px-4 bg-white">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              Why Learn With Me
+              Why Learn With Us
             </h2>
 
             <div className="flex flex-col md:flex-row gap-10 items-center md:items-start">
@@ -174,11 +174,11 @@ export default function SummerAccelerators() {
       <ScrollFade delay={0.2}>
         <section className="py-24 px-4 bg-brand-cream">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-16">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-8">
               What the Summer Accelerator Is
             </h2>
 
-            <div className="divide-y divide-brand-gold/25">
+            <div className="space-y-6">
               {[
                 {
                   num: '01',
@@ -196,11 +196,11 @@ export default function SummerAccelerators() {
                   body: "You won't be playing catch-up in September. You'll start Year 13 already knowing the topics your classmates are seeing for the first time, with the exam technique to back it up.",
                 },
               ].map((item) => (
-                <div key={item.num} className="py-10 flex flex-col md:flex-row gap-4 md:gap-10 items-start">
-                  <span className="text-6xl md:text-7xl font-serif font-bold text-brand-gold leading-none flex-shrink-0" aria-hidden="true">
+                <div key={item.num} className="bg-white rounded-xl shadow-sm p-6 md:p-8 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
+                  <span className="text-6xl md:text-7xl font-serif font-bold text-brand-gold leading-none flex-shrink-0 w-20 text-center" aria-hidden="true">
                     {item.num}
                   </span>
-                  <div className="md:pt-2">
+                  <div>
                     <h3 className="text-2xl font-semibold text-brand-purple mb-3">{item.title}</h3>
                     <p className="text-lg text-brand-text leading-relaxed">{item.body}</p>
                   </div>
@@ -450,17 +450,19 @@ export default function SummerAccelerators() {
               </div>
             </div>
 
-            {/* Soft, secondary help CTA next to the cards */}
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-center">
-              <p className="text-brand-cream opacity-90">
-                Not sure which option fits? Book a free call and I&apos;ll help you choose.
-              </p>
-              <a
-                href={BOOK_A_CALL_LINK}
-                className="inline-block px-6 py-2.5 border-2 border-brand-gold text-brand-gold font-semibold rounded-lg hover:bg-brand-gold hover:text-brand-purple transition-all"
-              >
-                Book a Free Call
-              </a>
+            {/* Soft, secondary help CTA in its own tab for visibility */}
+            <div className="max-w-3xl mx-auto mt-8 mb-10 bg-brand-purple-light/50 border border-brand-gold/30 rounded-xl px-6 py-5">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+                <p className="text-brand-cream opacity-90">
+                  Not sure which option fits? Book a free call and I&apos;ll help you choose.
+                </p>
+                <a
+                  href={BOOK_A_CALL_LINK}
+                  className="inline-block whitespace-nowrap px-6 py-2.5 border-2 border-brand-gold text-brand-gold font-semibold rounded-lg hover:bg-brand-gold hover:text-brand-purple transition-all"
+                >
+                  Book a Free Call
+                </a>
+              </div>
             </div>
 
             <p className="text-center text-brand-cream opacity-80 text-base max-w-2xl mx-auto">
@@ -517,7 +519,7 @@ export default function SummerAccelerators() {
               Walk Into September Already Ahead
             </h2>
             <p className="text-lg text-brand-text mb-12 leading-relaxed">
-              The summer is the one window to get genuinely ahead before the pressure starts. Lock in the summer rate before the September cohorts open at a higher price.
+              This summer is the only window to get genuinely ahead before the pressure starts. Don&apos;t waste your first term catching up!
             </p>
             <a
               href="#pricing"
@@ -529,7 +531,7 @@ export default function SummerAccelerators() {
               href={BOOK_A_CALL_LINK}
               className="block mt-6 text-sm text-brand-text underline opacity-70 hover:opacity-100 transition"
             >
-              Or book a free call if you&apos;ve got questions
+              Or book a free call if you have any questions
             </a>
           </div>
         </section>
