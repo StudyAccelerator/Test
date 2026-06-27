@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Header from '@/components/header'
 import PricingSection from '@/components/ui/pricing-section'
 import FaqSection from '@/components/ui/faq-section'
-import TestimonialSlider from '@/components/ui/testimonial-slider'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 
 export const metadata = {
@@ -334,11 +333,6 @@ export default function Home() {
           </div>
         </section>
       </ScrollFade>
-
-      <Divider />
-
-      {/* Testimonials Slider */}
-      <TestimonialSlider />
 
       <Divider />
 

@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/header'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
+import TestimonialSlider from '@/components/ui/testimonial-slider'
 
 export const metadata = {
   title: 'A-Level Summer Accelerator | Get Ahead for Year 13 | A-Level Accelerators',
@@ -324,6 +325,11 @@ export default function SummerAccelerators() {
           </div>
         </section>
       </ScrollFade>
+
+      <Divider />
+
+      {/* Testimonials Slider */}
+      <TestimonialSlider />
 
       <Divider />
 
