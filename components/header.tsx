@@ -34,12 +34,19 @@ export default function Header() {
             unoptimized
           />
         </a>
-        <nav className="flex flex-wrap justify-center gap-6 text-sm md:text-base">
-          <a href="/#hero" className="text-brand-purple hover:text-brand-gold font-semibold transition">Study System</a>
+        <nav className="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base">
+          <a href="/" className="text-brand-purple hover:text-brand-gold font-semibold transition">Summer Accelerator</a>
+          <a href="/study-systems" className="text-brand-purple hover:text-brand-gold font-semibold transition">Study System</a>
           <a href="/subject-accelerators" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
-          <a href="/summer-accelerators" className="text-brand-purple hover:text-brand-gold font-semibold transition">Summer Accelerator</a>
           <a href="/#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
-          <a href="/#contact" className="text-brand-purple hover:text-brand-gold font-semibold transition">Contact</a>
+          <a
+            href="https://scheduler.zoom.us/dr-waleed-ahmad/a-level"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-brand-purple font-semibold border-2 border-brand-gold rounded-lg px-4 py-1.5 hover:bg-brand-gold transition"
+          >
+            Book a Free Call
+          </a>
         </nav>
       </div>
     </header>
