@@ -96,10 +96,10 @@ export default function SummerAccelerators() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-24 px-8 text-center">
-        <div className="max-w-4xl mx-auto">
+      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream pt-24 pb-14 px-8 text-center">
+        <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-serif font-bold mb-8 leading-tight">
-            <span className="text-brand-gold">Master the Topics</span> <span className="text-brand-cream">That Decide Your Predicted Grades!</span>
+            <span className="text-brand-gold">Master the Topics That Decide</span> <span className="text-brand-cream">Your Predicted Grades!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
             Six weeks this summer on the high-yield Year 13 topics that determine your predicted grades!
@@ -110,7 +110,7 @@ export default function SummerAccelerators() {
           >
             Start September Ahead
           </a>
-          <div className="mt-6 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-gold opacity-90 font-medium">
+          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-gold opacity-90 font-medium">
             <span>Expert A-Level tutors + Dr Waleed</span>
             <span aria-hidden="true">·</span>
             <span>1,000+ students supported</span>
@@ -196,7 +196,7 @@ export default function SummerAccelerators() {
                   body: "You won't be playing catch-up in September. You'll start Year 13 already knowing the topics your classmates are seeing for the first time, with the exam technique to back it up.",
                 },
               ].map((item) => (
-                <div key={item.num} className="bg-white rounded-xl shadow-sm p-6 md:p-8 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
+                <div key={item.num} className="bg-white rounded-xl shadow-sm border border-brand-purple/10 p-6 md:p-8 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
                   <span className="text-6xl md:text-7xl font-serif font-bold text-brand-gold leading-none flex-shrink-0 w-20 text-center" aria-hidden="true">
                     {item.num}
                   </span>
@@ -284,34 +284,19 @@ export default function SummerAccelerators() {
             </p>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
               {subjects.map((subject) => (
-                <div
+                <a
                   key={subject.name}
-                  className="bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold text-center hover:shadow-xl hover:-translate-y-1 transition-all"
+                  href="#pricing"
+                  className="block bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold text-center hover:shadow-xl hover:-translate-y-1 transition-all"
                 >
                   <div className="text-4xl mb-4" aria-hidden="true">{subject.emoji}</div>
                   <h3 className="text-2xl font-serif font-bold text-brand-purple">{subject.name}</h3>
-                </div>
+                </a>
               ))}
             </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* Pricing */}
-      <ScrollFade delay={0.2}>
-        <section id="pricing" className="py-20 px-4 bg-brand-purple">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-cream font-serif text-center mb-4">
-              Secure Your Summer Place
-            </h2>
-            <p className="text-center text-lg text-brand-cream opacity-80 mb-8 max-w-2xl mx-auto">
-              The next cohort starts Saturday 25th July. The more subjects you take, the more you save. Prices rise after this cohort.
-            </p>
 
             {/* Every package includes strip */}
-            <div className="bg-brand-cream rounded-xl px-6 py-4 mb-10 max-w-5xl mx-auto">
+            <div className="bg-brand-cream rounded-xl px-6 py-4 mt-10 max-w-5xl mx-auto">
               <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm md:text-base text-brand-text font-medium">
                 {[
                   '24 hours of live teaching',
@@ -326,6 +311,22 @@ export default function SummerAccelerators() {
                 ))}
               </div>
             </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      <Divider />
+
+      {/* Pricing */}
+      <ScrollFade delay={0.2}>
+        <section id="pricing" className="py-20 px-4 bg-brand-purple">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-cream font-serif text-center mb-4">
+              Secure Your Summer Place
+            </h2>
+            <p className="text-center text-lg text-brand-cream opacity-80 mb-10 max-w-2xl mx-auto">
+              The next cohort starts Saturday 25th July. The more subjects you take, the more you save. Prices rise after this cohort.
+            </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
               {/* One Subject */}
@@ -353,7 +354,7 @@ export default function SummerAccelerators() {
                   </li>
                 </ul>
                 <a href={STRIPE_LINK_ONE_SUBJECT} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
-                  Secure My Place
+                  Join One Subject
                 </a>
               </div>
 
@@ -382,7 +383,7 @@ export default function SummerAccelerators() {
                   </li>
                 </ul>
                 <a href={STRIPE_LINK_TWO_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
-                  Secure My Place
+                  Join Two Subjects
                 </a>
               </div>
 
@@ -415,7 +416,7 @@ export default function SummerAccelerators() {
                     </li>
                   </ul>
                   <a href={STRIPE_LINK_THREE_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
-                    Secure My Place
+                    Join Three Subjects
                   </a>
                 </div>
               </div>
@@ -445,22 +446,7 @@ export default function SummerAccelerators() {
                   </li>
                 </ul>
                 <a href={STRIPE_LINK_FOUR_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
-                  Secure My Place
-                </a>
-              </div>
-            </div>
-
-            {/* Soft, secondary help CTA in its own tab for visibility */}
-            <div className="max-w-3xl mx-auto mt-8 mb-10 bg-brand-purple-light/50 border border-brand-gold/30 rounded-xl px-6 py-5">
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-                <p className="text-brand-cream opacity-90">
-                  Not sure which option fits? Book a free call and I&apos;ll help you choose.
-                </p>
-                <a
-                  href={BOOK_A_CALL_LINK}
-                  className="inline-block whitespace-nowrap px-6 py-2.5 border-2 border-brand-gold text-brand-gold font-semibold rounded-lg hover:bg-brand-gold hover:text-brand-purple transition-all"
-                >
-                  Book a Free Call
+                  Join All Subjects
                 </a>
               </div>
             </div>
@@ -468,6 +454,27 @@ export default function SummerAccelerators() {
             <p className="text-center text-brand-cream opacity-80 text-base max-w-2xl mx-auto">
               Early-bird places are limited and fill on a first-come basis. Secure your place now to lock in the summer rate before the September cohorts open at a higher price.
             </p>
+          </div>
+        </section>
+      </ScrollFade>
+
+      <Divider />
+
+      {/* Help choosing a package */}
+      <ScrollFade delay={0.2}>
+        <section className="py-12 px-4 bg-white">
+          <div className="max-w-3xl mx-auto bg-brand-cream border border-brand-gold/30 rounded-xl px-6 py-5">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+              <p className="text-brand-text">
+                Not sure which option fits? Book a free call and I&apos;ll help you choose.
+              </p>
+              <a
+                href={BOOK_A_CALL_LINK}
+                className="inline-block whitespace-nowrap px-6 py-2.5 border-2 border-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold hover:text-brand-purple transition-all"
+              >
+                Book a Free Call
+              </a>
+            </div>
           </div>
         </section>
       </ScrollFade>
@@ -513,7 +520,7 @@ export default function SummerAccelerators() {
 
       {/* Closing CTA */}
       <ScrollFade delay={0.2}>
-        <section id="secure" className="py-32 px-4 bg-white text-center">
+        <section id="secure" className="pt-24 pb-16 px-4 bg-white text-center">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
               Walk Into September Already Ahead
@@ -555,14 +562,23 @@ export default function SummerAccelerators() {
             <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
             <div className="md:flex-1 text-center">
               <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
-              <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
+              <div className="flex gap-8 justify-center text-sm">
                 <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
                 <a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
-                <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition text-center whitespace-nowrap">Free Revision Tracker</a>
               </div>
             </div>
           </div>
           <div className="h-px bg-brand-gold opacity-20 my-4"></div>
+          <div className="flex justify-center mb-4">
+            <a
+              href="/revision-tracker"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-brand-cream opacity-50 hover:opacity-80 border border-brand-cream/20 hover:border-brand-cream/40 rounded px-4 py-1.5 transition"
+            >
+              Free Revision Tracker
+            </a>
+          </div>
           <p className="text-center text-xs opacity-60">
             &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
           </p>
