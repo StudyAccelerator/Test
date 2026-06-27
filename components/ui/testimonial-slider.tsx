@@ -1,6 +1,6 @@
 'use client'
 
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState, useEffect, useLayoutEffect, useRef } from 'react'
 import { motion } from 'framer-motion'
 import { ChevronLeft, ChevronRight, Quote } from 'lucide-react'
 
@@ -68,7 +68,12 @@ const getVisibleCount = (width: number): number => {
 
 const TestimonialSlider: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(total)
-  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1024)
+  // Always start from the same fixed value the static export uses at build
+  // time. Reading the real window.innerWidth here would make the client's
+  // first render already match it, so the mount effect's setWindowWidth call
+  // below would be a no-op (same value -> no re-render) and the layout would
+  // stay stuck on whatever the server happened to bake in.
+  const [windowWidth, setWindowWidth] = useState(1024)
   const [isAutoPlaying, setIsAutoPlaying] = useState(true)
   const [isJumping, setIsJumping] = useState(false)
   const containerRef = useRef<HTMLDivElement>(null)
@@ -77,6 +82,11 @@ const TestimonialSlider: React.FC = () => {
     if (typeof window === 'undefined') return
 
     const handleResize = () => setWindowWidth(window.innerWidth)
+
+    // Sync immediately on mount: the static export bakes in a build-time
+    // fallback width, so without this the card layout stays wrong until the
+    // visitor happens to resize their window.
+    handleResize()
 
     window.addEventListener('resize', handleResize)
     return () => window.removeEventListener('resize', handleResize)
@@ -105,13 +115,28 @@ const TestimonialSlider: React.FC = () => {
     }
   }
 
-  useEffect(() => {
+  // Reset synchronously before paint so the instant jump and the resumed
+  // spring transition can never land on the same frame.
+  useLayoutEffect(() => {
     if (!isJumping) return
-    const id = requestAnimationFrame(() => setIsJumping(false))
-    return () => cancelAnimationFrame(id)
+    setIsJumping(false)
   }, [isJumping])
 
   const visibleCount = getVisibleCount(windowWidth)
+
+  const resumeAutoPlayTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+
+  const pauseAutoPlay = () => {
+    setIsAutoPlaying(false)
+    if (resumeAutoPlayTimeoutRef.current) clearTimeout(resumeAutoPlayTimeoutRef.current)
+    resumeAutoPlayTimeoutRef.current = setTimeout(() => setIsAutoPlaying(true), 8000)
+  }
+
+  useEffect(() => {
+    return () => {
+      if (resumeAutoPlayTimeoutRef.current) clearTimeout(resumeAutoPlayTimeoutRef.current)
+    }
+  }, [])
 
   const goNext = () => {
     setCurrentIndex((prev) => prev + 1)
@@ -123,18 +148,21 @@ const TestimonialSlider: React.FC = () => {
     pauseAutoPlay()
   }
 
-  const pauseAutoPlay = () => {
-    setIsAutoPlaying(false)
-    setTimeout(() => setIsAutoPlaying(true), 8000)
+  const swipeStartXRef = useRef<number | null>(null)
+
+  const handleSwipeStart = (event: React.PointerEvent) => {
+    swipeStartXRef.current = event.clientX
   }
 
-  const handleDragEnd = (event: any, info: any) => {
-    const { offset } = info
-    const swipeThreshold = 30
+  const handleSwipeEnd = (event: React.PointerEvent) => {
+    if (swipeStartXRef.current === null) return
+    const deltaX = event.clientX - swipeStartXRef.current
+    swipeStartXRef.current = null
 
-    if (offset.x < -swipeThreshold) {
+    const swipeThreshold = 40
+    if (deltaX < -swipeThreshold) {
       goNext()
-    } else if (offset.x > swipeThreshold) {
+    } else if (deltaX > swipeThreshold) {
       goPrev()
     }
   }
@@ -179,7 +207,13 @@ const TestimonialSlider: React.FC = () => {
             </motion.button>
           </div>
 
-          <div className="overflow-hidden relative px-2 sm:px-0">
+          <div
+            className="overflow-hidden relative px-2 sm:px-0"
+            style={{ touchAction: 'pan-y' }}
+            onPointerDown={handleSwipeStart}
+            onPointerUp={handleSwipeEnd}
+            onPointerCancel={() => { swipeStartXRef.current = null }}
+          >
             <motion.div
               className="flex"
               animate={{ x: `-${currentIndex * (100 / visibleCount)}%` }}
@@ -195,13 +229,7 @@ const TestimonialSlider: React.FC = () => {
                   initial={{ opacity: 0.5, scale: 0.95 }}
                   animate={{ opacity: 1, scale: 1 }}
                   transition={{ duration: 0.4 }}
-                  drag="x"
-                  dragConstraints={{ left: 0, right: 0 }}
-                  dragElastic={0.2}
-                  onDragEnd={handleDragEnd}
                   whileHover={{ y: -5 }}
-                  whileTap={{ scale: 0.98, cursor: 'grabbing' }}
-                  style={{ cursor: 'grab' }}
                 >
                   <motion.div
                     className="relative overflow-hidden rounded-xl sm:rounded-2xl p-4 sm:p-6 h-full bg-white border border-gray-100 shadow-lg shadow-brand-purple/5"
@@ -238,13 +266,7 @@ const TestimonialSlider: React.FC = () => {
           </div>
 
           <div className="flex justify-center mt-6 sm:mt-8">
-            <div className="relative w-32 sm:w-48 h-1.5 bg-gray-200 rounded-full overflow-hidden">
-              <motion.div
-                className="absolute top-0 left-0 h-full w-1/3 rounded-full bg-gradient-to-r from-brand-purple to-brand-gold"
-                animate={{ x: ['-100%', '300%'] }}
-                transition={{ duration: 4, repeat: Infinity, ease: 'linear' }}
-              />
-            </div>
+            <div className="w-32 sm:w-48 h-1.5 rounded-full bg-gradient-to-r from-brand-purple to-brand-gold opacity-70" />
           </div>
         </div>
       </div>
