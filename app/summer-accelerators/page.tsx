@@ -102,7 +102,7 @@ export default function SummerAccelerators() {
             <span className="text-brand-gold">Master the Topics That Decide</span> <span className="text-brand-cream">Your Predicted Grades!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Six weeks this summer on the high-yield Year 13 topics that determine your predicted grades!
+            Get ahead in six weeks this summer on the high-yield Year 13 topics that determine your predicted grades!
           </p>
           <a
             href="#pricing"
@@ -111,7 +111,7 @@ export default function SummerAccelerators() {
             Start September Ahead
           </a>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-gold opacity-90 font-medium">
-            <span>Expert A-Level tutors + Dr Waleed</span>
+            <span>Led by Dr Waleed &amp; Expert A-Level tutors</span>
             <span aria-hidden="true">·</span>
             <span>1,000+ students supported</span>
             <span aria-hidden="true">·</span>
@@ -161,7 +161,7 @@ export default function SummerAccelerators() {
               <div className="space-y-6 text-lg text-brand-text">
                 <p>I&apos;m Dr Waleed Ahmad, a doctor and the founder of A-Level Accelerators. I&apos;ve worked with over 1,000 students, and I built this programme around one idea: the students who get ahead over summer walk into Year 13 in control, while everyone else spends first term catching up.</p>
                 <p>Your subjects are taught live by expert tutors who know exactly which topics carry the most marks. I run the final sessions myself, where I teach the exam technique, active recall, and study systems that turn knowing the content into actually securing top grades.</p>
-                <p>By the end of six weeks, you won&apos;t just have covered the highest-value Year 13 topics. You&apos;ll know them well enough to walk into the mocks that set your predicted grades already ahead.</p>
+                <p>By the end of six weeks, you won&apos;t just have covered the highest-value Year 13 topics. You&apos;ll know them well enough to walk into the mocks that set your predicted grades with confidence and already ahead!</p>
               </div>
             </div>
           </div>
@@ -175,7 +175,7 @@ export default function SummerAccelerators() {
         <section className="py-24 px-4 bg-brand-cream">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-8">
-              What the Summer Accelerator Is
+              What the Summer Accelerator Includes
             </h2>
 
             <div className="space-y-6">
@@ -183,7 +183,7 @@ export default function SummerAccelerators() {
                 {
                   num: '01',
                   title: 'The Topics That Decide Your Grades',
-                  body: 'We cover the high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. You learn the things that actually move your grade, not filler.',
+                  body: 'In six weeks (two-hour sessions, twice a week), we cover the high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. You learn the things that actually move your grade, not filler.',
                 },
                 {
                   num: '02',
@@ -325,7 +325,7 @@ export default function SummerAccelerators() {
               Secure Your Summer Place
             </h2>
             <p className="text-center text-lg text-brand-cream opacity-80 mb-10 max-w-2xl mx-auto">
-              The next cohort starts Saturday 25th July. The more subjects you take, the more you save. Prices rise after this cohort.
+              The next cohort starts Saturday 25th July. The more subjects you take, the more you save.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
@@ -353,7 +353,7 @@ export default function SummerAccelerators() {
                     <span>Session recordings included</span>
                   </li>
                 </ul>
-                <a href={STRIPE_LINK_ONE_SUBJECT} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_ONE_SUBJECT} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join One Subject
                 </a>
               </div>
@@ -382,43 +382,41 @@ export default function SummerAccelerators() {
                     <span>Save £39 vs booking separately</span>
                   </li>
                 </ul>
-                <a href={STRIPE_LINK_TWO_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_TWO_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join Two Subjects
                 </a>
               </div>
 
               {/* Three Subjects (featured) */}
-              <div className="flex flex-col bg-brand-cream rounded-xl text-center shadow-2xl border-4 border-brand-gold transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(46,37,87,0.25)] overflow-hidden">
-                <div className="bg-brand-gold text-brand-purple py-2 px-4 text-sm font-bold text-center">
+              <div className="relative flex flex-col bg-brand-cream rounded-xl p-8 text-center shadow-2xl border-4 border-brand-gold transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(46,37,87,0.25)]">
+                <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-gold text-brand-purple text-sm font-bold px-4 py-1 rounded-full shadow-md">
                   Most Popular
-                </div>
-                <div className="flex flex-col flex-grow p-8">
-                  <h3 className="text-xl font-serif font-bold text-brand-purple mb-1">Three Subjects</h3>
-                  <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Save £128</p>
-                  <p className="text-4xl font-bold text-brand-gold mb-1">£739</p>
-                  <p className="text-xs text-brand-text opacity-60 mb-6">save £128 vs individual</p>
-                  <ul className="text-brand-text text-sm mb-8 space-y-3 text-left">
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                      <span>Everything in One Subject, ×3</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                      <span>Any three of the four subjects</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                      <span>The choice most students make</span>
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                      <span>Save £128 vs booking separately</span>
-                    </li>
-                  </ul>
-                  <a href={STRIPE_LINK_THREE_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
-                    Join Three Subjects
-                  </a>
-                </div>
+                </span>
+                <h3 className="text-xl font-serif font-bold text-brand-purple mb-1">Three Subjects</h3>
+                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Save £128</p>
+                <p className="text-4xl font-bold text-brand-gold mb-1">£739</p>
+                <p className="text-xs text-brand-text opacity-60 mb-6">save £128 vs individual</p>
+                <ul className="text-brand-text text-sm mb-8 space-y-3 text-left">
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
+                    <span>Everything in One Subject, ×3</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
+                    <span>Any three of the four subjects</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
+                    <span>The choice most students make</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
+                    <span>Save £128 vs booking separately</span>
+                  </li>
+                </ul>
+                <a href={STRIPE_LINK_THREE_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
+                  Join Three Subjects
+                </a>
               </div>
 
               {/* Four Subjects */}
@@ -445,7 +443,7 @@ export default function SummerAccelerators() {
                     <span>Biggest saving of any option</span>
                   </li>
                 </ul>
-                <a href={STRIPE_LINK_FOUR_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_FOUR_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join All Subjects
                 </a>
               </div>
@@ -466,7 +464,7 @@ export default function SummerAccelerators() {
           <div className="max-w-3xl mx-auto bg-brand-cream border border-brand-gold/30 rounded-xl px-6 py-5">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
               <p className="text-brand-text">
-                Not sure which option fits? Book a free call and I&apos;ll help you choose.
+                Not sure which option fits? Book a free call with Dr Waleed to help you choose.
               </p>
               <a
                 href={BOOK_A_CALL_LINK}
