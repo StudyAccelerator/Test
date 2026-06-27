@@ -12,12 +12,11 @@ const Divider = () => (
   <div aria-hidden="true" className="h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent" />
 )
 
-// Purchase CTAs use clearly-named placeholders to be swapped for Stripe links later.
-const STRIPE_LINK_ONE_SUBJECT = 'STRIPE_LINK_ONE_SUBJECT'
-const STRIPE_LINK_TWO_SUBJECTS = 'STRIPE_LINK_TWO_SUBJECTS'
-const STRIPE_LINK_THREE_SUBJECTS = 'STRIPE_LINK_THREE_SUBJECTS'
-const STRIPE_LINK_FOUR_SUBJECTS = 'STRIPE_LINK_FOUR_SUBJECTS'
-const BOOK_A_CALL_LINK = 'BOOK_A_CALL_LINK'
+const STRIPE_LINK_ONE_SUBJECT = 'https://buy.stripe.com/9B614oe9I6XQdHYdLmc3m06'
+const STRIPE_LINK_TWO_SUBJECTS = 'https://buy.stripe.com/dRmdRa2r04PI5bs6iUc3m07'
+const STRIPE_LINK_THREE_SUBJECTS = 'https://buy.stripe.com/14A00k6Hgeqi0Vc8r2c3m08'
+const STRIPE_LINK_FOUR_SUBJECTS = 'https://buy.stripe.com/dRm14o3v4aa2avM9v6c3m05'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
 
 export default function SummerAccelerators() {
   const subjects = [
