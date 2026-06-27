@@ -4,15 +4,20 @@ import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
 
 export const metadata = {
-  title: 'Summer Accelerator - Start Year 13 Already Ahead | A-Level Accelerators',
-  description: 'A live 6-week summer accelerator that takes Year 12 students into Year 13 already ahead, with the high-yield topic knowledge and exam technique most students build too late. Biology, Chemistry, Maths and Physics.',
+  title: 'A-Level Summer Accelerator | Get Ahead for Year 13 | A-Level Accelerators',
+  description: 'A 6-week live A-Level summer course for Year 12 students going into Year 13. Master the high-yield topics that decide your predicted grades. Biology, Chemistry, Maths and Physics. Starts 25th July.',
 }
 
 const Divider = () => (
   <div aria-hidden="true" className="h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent" />
 )
 
-const BOOKING_URL = 'https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting'
+// Purchase CTAs use clearly-named placeholders to be swapped for Stripe links later.
+const STRIPE_LINK_ONE_SUBJECT = 'STRIPE_LINK_ONE_SUBJECT'
+const STRIPE_LINK_TWO_SUBJECTS = 'STRIPE_LINK_TWO_SUBJECTS'
+const STRIPE_LINK_THREE_SUBJECTS = 'STRIPE_LINK_THREE_SUBJECTS'
+const STRIPE_LINK_FOUR_SUBJECTS = 'STRIPE_LINK_FOUR_SUBJECTS'
+const BOOK_A_CALL_LINK = 'BOOK_A_CALL_LINK'
 
 export default function SummerAccelerators() {
   const subjects = [
@@ -22,59 +27,72 @@ export default function SummerAccelerators() {
     { name: 'Physics', emoji: '⚛️' },
   ]
 
+  // Single source of truth for FAQ copy: used for both the rendered accordion
+  // and the FAQPage JSON-LD structured data.
   const faqs = [
     {
-      question: 'When does it run?',
-      answer: (
-        <p>Mid-July to the end of August, finishing just before the new school year, so you walk into September already ahead.</p>
-      ),
+      q: "Who's the Summer Accelerator for?",
+      a: "Any Year 12 student moving into Year 13 who wants to start the year ahead. It doesn't matter where your mocks landed. If there's a gap between your current grades and the grades you want, we close it. If you're already performing well, we make sure you stay there and go into Year 13 in control.",
     },
     {
-      question: 'Which exam boards does it cover?',
-      answer: (
-        <>
-          <p className="mb-4">The content focuses on the foundational high-yield topics that set students up for all of Year 13, with core concepts and exam technique that apply across <strong>AQA, OCR, and Edexcel</strong>.</p>
-          <p>When you sign up we ask for your exam board so your tutor can flag any board-specific differences in the sessions.</p>
-        </>
-      ),
+      q: "When does it start and how's it structured?",
+      a: "The next cohort starts Saturday 25th July. It runs for six weeks, with two live sessions a week, two hours each. That's 24 hours of live teaching across the summer. Exact session times are confirmed when you book.",
     },
     {
-      question: 'What if my school teaches topics in a different order?',
-      answer: (
-        <p>The topics we cover are the foundations that the rest of Year 13 builds on, so you will be ahead no matter what order your school teaches in.</p>
-      ),
+      q: "Which subjects can I choose?",
+      a: "Biology, Chemistry, Maths, and Physics. You can take one subject or several, and the more you take, the more you save.",
     },
     {
-      question: 'Who teaches it?',
-      answer: (
-        <p>Expert subject tutors deliver the content, using the A-Level Accelerators system developed by Dr Waleed Ahmad.</p>
-      ),
+      q: "Who teaches the sessions?",
+      a: "Your subjects are taught live by expert tutors who know the spec inside out, have achieved all A*s themselves and helped 100s do the same. Dr Waleed runs the final sessions himself on exam technique, active recall, and study strategy, so you leave knowing how to turn the content into actual marks.",
     },
     {
-      question: 'What if I can only do one subject?',
-      answer: (
-        <p>That is completely fine. Most students take one to three. You can add more at any time before the start date.</p>
-      ),
+      q: "What topics do you actually cover?",
+      a: "The high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. We don't waste your summer on filler. We teach the things that move your grade.",
     },
     {
-      question: 'What if I miss a live session?',
-      answer: (
-        <p>Every session is recorded, so if you miss one you can catch up at your own pace and rewatch any explanation as many times as you need. The live sessions also include time for questions, so attending where you can gets you the most value.</p>
-      ),
+      q: "Do I need to be struggling to benefit?",
+      a: "No. Plenty of students join already doing well and want to stay ahead. The Accelerator works whether you're closing a gap or protecting top grades. Everyone walks into Year 13 ahead of where they'd be otherwise.",
     },
     {
-      question: 'How do I secure my place?',
-      answer: (
-        <>
-          <p className="mb-4">Early-bird places are limited and fill on a first-come basis. Choose how many subjects you want above and secure your place to lock in the summer rate.</p>
-          <p>The September cohorts open at a higher price, so booking now is the cheapest way in.</p>
-        </>
-      ),
+      q: "What if I miss a session?",
+      a: "Every session is recorded, so you'll never fall behind if something comes up. You'll have access to the recordings to catch up or revise whenever you need.",
+    },
+    {
+      q: "What happens after the six weeks?",
+      a: "You'll go into Year 13 already on top of the key topics. If you want support through the Year 13 year itself, Dr Waleed runs a 12-week Study Accelerator that takes you through the content and exam prep right up to your final exams. There's no pressure to continue, it's simply there if you want it.",
+    },
+    {
+      q: "Is there a guarantee if it's not right for me?",
+      a: "Yes. Try your first session completely risk-free. If it's not right for you, request a full refund, no questions asked.",
+    },
+    {
+      q: "Not sure which package is right for you?",
+      a: "If you're unsure how many subjects to take or which option fits best, book a free call with Dr Waleed and he'll help you decide. There's no obligation to buy. The quickest way to lock in your place is to secure it directly above before this cohort fills.",
     },
   ]
 
+  const faqJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqs.map((f) => ({
+      '@type': 'Question',
+      name: f.q,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: f.a,
+      },
+    })),
+  }
+
   return (
     <main>
+      {/* FAQ structured data for rich results and answer engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+
       <Header />
 
       {/* Hero Section */}
@@ -84,10 +102,10 @@ export default function SummerAccelerators() {
             <p className="text-brand-gold font-semibold text-sm uppercase tracking-wide">Live 6-Week Summer Accelerator</p>
           </div>
           <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-6 font-bold leading-tight">
-            Get Ahead in Year 13 <span className="text-brand-cream">This Summer</span>
+            Master the Topics That Decide Your Year 13 Predicted Grades. <span className="text-brand-cream">This Summer.</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Our 6 week summer accelerator takes Year 12 students into Year 13 already ahead, with the topic knowledge and the exam technique that most students don&apos;t build until it&apos;s too late.
+            Six weeks, two sessions a week, taught live. We teach the high-level topics your Year 13 mocks are built on, so whether you&apos;re closing a gap or protecting top grades, you start September already ahead of the room.
           </p>
           <a
             href="#pricing"
@@ -95,67 +113,89 @@ export default function SummerAccelerators() {
           >
             Secure My Place
           </a>
+          <p className="mt-5 text-sm text-brand-gold opacity-90 max-w-2xl mx-auto">
+            Taught by expert A-Level tutors and Dr Waleed Ahmad. 1,000+ students supported. First session risk-free.
+          </p>
         </div>
       </section>
 
-      {/* Key Insight */}
+      {/* Urgency Bar */}
       <ScrollFade>
-        <section className="py-12 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="py-6 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-brand-purple font-semibold">
-              💡 The students who struggle most in Year 13 are almost always the ones who spent the summer doing nothing, then spent the first term trying to catch up.
+            <p className="text-base md:text-lg text-brand-purple font-semibold">
+              ⏳ The next cohort starts Saturday 25th July. Places are limited and prices rise after this cohort. Lock in the summer rate now.
             </p>
           </div>
         </section>
       </ScrollFade>
 
-      {/* The Problem */}
+      {/* Why Learn With Me */}
       <ScrollFade>
-        <section className="py-16 px-4 bg-white">
-          <div className="max-w-3xl mx-auto">
+        <section className="py-20 px-4 bg-white">
+          <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              Year 13 Is the Biggest Step You&apos;ll Take
+              Why Learn With Me
             </h2>
-            <div className="space-y-6 text-lg text-brand-text">
-              <p>Year 13 is the biggest academic step most students ever make. The workload jumps. The content gets harder. And the students who struggle most are almost always the ones who spent the summer doing nothing, then spent the first term trying to catch up.</p>
-              <p className="text-brand-gold font-semibold text-center text-xl py-2">It does not have to be that way.</p>
-              <p>Whether your mocks went well or not, the summer is the one window where you can get genuinely ahead before the pressure starts. The students who use it are the ones who walk into September calm, confident, and already on top of the material everyone else is seeing for the first time.</p>
+
+            <div className="flex flex-col md:flex-row gap-10 items-center md:items-start">
+              <div className="flex-shrink-0 flex flex-col items-center">
+                <div
+                  className="w-72 h-72 overflow-hidden rounded-2xl"
+                  style={{ boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)' }}
+                >
+                  <Image
+                    src="/graduation.jpg"
+                    alt="Dr Waleed Ahmad"
+                    width={320}
+                    height={320}
+                    className="w-full h-full object-cover"
+                    style={{ objectPosition: 'center 45%', transform: 'scale(1.25)', transformOrigin: 'center 45%' }}
+                    unoptimized
+                  />
+                </div>
+                <p className="mt-3 text-sm italic text-brand-gold font-semibold">Dr. Waleed Ahmad, MBBS</p>
+              </div>
+
+              <div className="space-y-6 text-lg text-brand-text">
+                <p>I&apos;m Dr Waleed Ahmad, a doctor and the founder of A-Level Accelerators. I&apos;ve worked with over 1,000 students, and I built this programme around one idea: the students who get ahead over summer walk into Year 13 in control, while everyone else spends first term catching up.</p>
+                <p>Your subjects are taught live by expert tutors who know exactly which topics carry the most marks. I run the final sessions myself, where I teach the exam technique, active recall, and study systems that turn knowing the content into actually securing top grades.</p>
+                <p>By the end of six weeks, you won&apos;t just have covered the highest-value Year 13 topics. You&apos;ll know them well enough to walk into the mocks that set your predicted grades already ahead.</p>
+              </div>
             </div>
           </div>
         </section>
       </ScrollFade>
 
-      {/* What It Is */}
+      <Divider />
+
+      {/* What the Summer Accelerator Is */}
       <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-brand-light-gray">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               What the Summer Accelerator Is
             </h2>
 
-            <p className="text-lg text-brand-text mb-12 text-center max-w-3xl mx-auto">
-              The Summer Accelerator covers the highest-yield foundational topics of Year 13 in your subject, taught live by expert tutors, through the A-Level Accelerators system.
-            </p>
-
             <div className="space-y-8">
               <div className="bg-white p-8 rounded-lg border-l-4 border-brand-gold">
-                <h3 className="text-2xl font-semibold text-brand-purple mb-4">High-Yield Foundations</h3>
+                <h3 className="text-2xl font-semibold text-brand-purple mb-4">The Topics That Decide Your Grades</h3>
                 <p className="text-brand-text">
-                  We focus on the foundational topics the rest of Year 13 builds on, so you start the year on top of the material everyone else is seeing for the first time.
+                  We cover the high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. You learn the things that actually move your grade, not filler.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-lg border-l-4 border-brand-gold">
                 <h3 className="text-2xl font-semibold text-brand-purple mb-4">Taught Live by Expert Tutors</h3>
                 <p className="text-brand-text">
-                  Every topic is taught live through the A-Level Accelerators system, not a tutor reading through content at you.
+                  Every session is taught live by subject specialists who know the spec inside out, have achieved top grades themselves and helped hundreds do the same. You ask questions in real time and get answers on the spot, not a pre-recorded video you watch alone.
                 </p>
               </div>
 
               <div className="bg-white p-8 rounded-lg border-l-4 border-brand-gold">
-                <h3 className="text-2xl font-semibold text-brand-purple mb-4">Knowledge and Marks, From Day One</h3>
+                <h3 className="text-2xl font-semibold text-brand-purple mb-4">Ahead From Day One of Year 13</h3>
                 <p className="text-brand-text">
-                  Every session teaches the topic and then immediately trains you to retrieve it under pressure and apply it to exam questions, because understanding a topic and scoring marks on it are two completely different skills. We build both from day one.
+                  You won&apos;t be playing catch-up in September. You&apos;ll start Year 13 already knowing the topics your classmates are seeing for the first time, with the exam technique to back it up.
                 </p>
               </div>
             </div>
@@ -163,9 +203,11 @@ export default function SummerAccelerators() {
         </section>
       </ScrollFade>
 
-      {/* Comparison */}
+      <Divider />
+
+      {/* The Difference a Summer Makes */}
       <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-white">
+        <section className="py-20 px-4 bg-white">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               The Difference a Summer Makes
@@ -173,23 +215,23 @@ export default function SummerAccelerators() {
 
             <div className="grid md:grid-cols-2 gap-8">
               <div className="bg-brand-light-gray p-8 rounded-lg shadow-sm border-l-4 border-red-300">
-                <h3 className="text-xl font-semibold text-brand-purple mb-6">Students who waste the summer</h3>
+                <h3 className="text-xl font-semibold text-brand-purple mb-6">Students who coast the summer</h3>
                 <ul className="space-y-4 text-brand-text">
                   <li className="flex items-start gap-3">
                     <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Switch off completely and lose momentum</span>
+                    <span>Start Year 13 seeing key topics for the first time</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Meet every Year 13 topic for the first time in class</span>
+                    <span>Spend first term catching up instead of getting ahead</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Spend the first term playing catch-up</span>
+                    <span>Go into predicted-grade mocks underprepared</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Feel behind before the year has even started</span>
+                    <span>Feel behind before the year&apos;s even started</span>
                   </li>
                 </ul>
               </div>
@@ -199,19 +241,19 @@ export default function SummerAccelerators() {
                 <ul className="space-y-4 text-brand-text">
                   <li className="flex items-start gap-3">
                     <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Cover the high-yield Year 13 topics early</span>
+                    <span>Walk into Year 13 already on top of the high-value topics</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Build exam technique from day one</span>
+                    <span>Start the year ahead and stay ahead</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Walk into September calm and confident</span>
+                    <span>Go into predicted-grade mocks confident and prepared</span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Stay ahead while everyone else catches up</span>
+                    <span>Have the exam technique to turn knowledge into marks</span>
                   </li>
                 </ul>
               </div>
@@ -220,9 +262,11 @@ export default function SummerAccelerators() {
         </section>
       </ScrollFade>
 
-      {/* What's Included */}
+      <Divider />
+
+      {/* What You'll Get */}
       <ScrollFade delay={0.2}>
-        <section className="py-16 px-4 bg-brand-light-gray">
+        <section className="py-20 px-4 bg-brand-light-gray">
           <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               What You&apos;ll Get
@@ -234,7 +278,7 @@ export default function SummerAccelerators() {
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
-                    <span>6 weeks of live sessions</span>
+                    <span>Six weeks of live sessions</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
@@ -262,7 +306,7 @@ export default function SummerAccelerators() {
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
-                    <span>Foundations the year builds on</span>
+                    <span>The high-value topics the year builds on</span>
                   </li>
                   <li className="flex items-center justify-center gap-2">
                     <span className="text-brand-gold font-bold">•</span>
@@ -275,24 +319,26 @@ export default function SummerAccelerators() {
             <div className="mt-12 space-y-3 text-brand-text max-w-2xl mx-auto">
               <div className="flex items-center justify-center gap-3">
                 <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
-                <span>Full access to session recordings to catch up and rewatch</span>
+                <span>Access to all session recordings to catch up and revise</span>
               </div>
               <div className="flex items-center justify-center gap-3">
                 <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
-                <span>Exam-board-aware teaching across AQA, OCR and Edexcel</span>
+                <span>High-yield topics across your chosen subjects</span>
               </div>
               <div className="flex items-center justify-center gap-3">
                 <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
-                <span>Taught through the proven A-Level Accelerators system</span>
+                <span>Taught live by expert tutors, with final sessions led by Dr Waleed</span>
               </div>
             </div>
           </div>
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Subjects */}
       <ScrollFade delay={0.2}>
-        <section id="subjects" className="py-16 px-4 bg-white">
+        <section id="subjects" className="py-20 px-4 bg-white">
           <div className="max-w-5xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
               Choose Your Subjects
@@ -306,7 +352,7 @@ export default function SummerAccelerators() {
                   key={subject.name}
                   className="bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold text-center hover:shadow-xl hover:-translate-y-1 transition-all"
                 >
-                  <div className="text-4xl mb-4">{subject.emoji}</div>
+                  <div className="text-4xl mb-4" aria-hidden="true">{subject.emoji}</div>
                   <h3 className="text-2xl font-serif font-bold text-brand-purple">{subject.name}</h3>
                 </div>
               ))}
@@ -315,15 +361,17 @@ export default function SummerAccelerators() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Pricing */}
       <ScrollFade delay={0.2}>
-        <section id="pricing" className="py-16 px-4 bg-brand-purple">
+        <section id="pricing" className="py-20 px-4 bg-brand-purple">
           <div className="max-w-6xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-cream font-serif text-center mb-4">
               Secure Your Summer Place
             </h2>
             <p className="text-center text-lg text-brand-cream opacity-80 mb-12 max-w-2xl mx-auto">
-              The more subjects you take, the more you save. Most students take one to three.
+              The next cohort starts Saturday 25th July. The more subjects you take, the more you save. Prices rise after this cohort.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
@@ -344,14 +392,14 @@ export default function SummerAccelerators() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Live teaching + exam technique built in</span>
+                    <span>Live teaching with exam technique built in</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
                     <span>Session recordings included</span>
                   </li>
                 </ul>
-                <a href={BOOKING_URL} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_ONE_SUBJECT} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Secure My Place
                 </a>
               </div>
@@ -380,15 +428,15 @@ export default function SummerAccelerators() {
                     <span>Save £39 vs booking separately</span>
                   </li>
                 </ul>
-                <a href={BOOKING_URL} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_TWO_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Secure My Place
                 </a>
               </div>
 
-              {/* Three Subjects — featured */}
+              {/* Three Subjects (featured) */}
               <div className="flex flex-col bg-brand-cream rounded-xl text-center shadow-2xl border-4 border-brand-gold transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(46,37,87,0.25)] overflow-hidden">
                 <div className="bg-brand-gold text-brand-purple py-2 px-4 text-sm font-bold text-center">
-                  Most popular
+                  Most Popular
                 </div>
                 <div className="flex flex-col flex-grow p-8">
                   <h3 className="text-xl font-serif font-bold text-brand-purple mb-1">Three Subjects</h3>
@@ -413,7 +461,7 @@ export default function SummerAccelerators() {
                       <span>Save £128 vs booking separately</span>
                     </li>
                   </ul>
-                  <a href={BOOKING_URL} className="mt-auto block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
+                  <a href={STRIPE_LINK_THREE_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
                     Secure My Place
                   </a>
                 </div>
@@ -443,10 +491,23 @@ export default function SummerAccelerators() {
                     <span>Biggest saving of any option</span>
                   </li>
                 </ul>
-                <a href={BOOKING_URL} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_FOUR_SUBJECTS} className="mt-auto block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Secure My Place
                 </a>
               </div>
+            </div>
+
+            {/* Soft, secondary help CTA next to the cards */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-center">
+              <p className="text-brand-cream opacity-90">
+                Not sure which option fits? Book a free call and I&apos;ll help you choose.
+              </p>
+              <a
+                href={BOOK_A_CALL_LINK}
+                className="inline-block px-6 py-2.5 border-2 border-brand-gold text-brand-gold font-semibold rounded-lg hover:bg-brand-gold hover:text-brand-purple transition-all"
+              >
+                Book a Free Call
+              </a>
             </div>
 
             <p className="text-center text-brand-cream opacity-80 text-base max-w-2xl mx-auto">
@@ -456,12 +517,14 @@ export default function SummerAccelerators() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* Guarantee */}
       <ScrollFade delay={0.2}>
         <section className="py-20 px-4 bg-white">
           <div className="max-w-2xl mx-auto">
             <div className="bg-brand-cream p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
-              <div className="text-5xl mb-6">🛡️</div>
+              <div className="text-5xl mb-6" aria-hidden="true">🛡️</div>
               <h2 className="text-3xl md:text-4xl text-brand-purple font-serif font-bold mb-6">
                 Try Your First Session Risk-Free
               </h2>
@@ -473,23 +536,27 @@ export default function SummerAccelerators() {
         </section>
       </ScrollFade>
 
+      <Divider />
+
       {/* FAQ */}
       <ScrollFade delay={0.2}>
-        <section id="faq" className="py-16 px-4 bg-brand-cream">
+        <section id="faq" className="py-20 px-4 bg-brand-cream">
           <div className="max-w-3xl mx-auto">
             <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
               Frequently Asked Questions
             </h2>
             <div className="space-y-4">
               {faqs.map((faq, idx) => (
-                <FAQItem key={idx} question={faq.question} answer={faq.answer} />
+                <FAQItem key={idx} question={faq.q} answer={<p>{faq.a}</p>} />
               ))}
             </div>
           </div>
         </section>
       </ScrollFade>
 
-      {/* CTA Section */}
+      <Divider />
+
+      {/* Closing CTA */}
       <ScrollFade delay={0.2}>
         <section id="secure" className="py-32 px-4 bg-white text-center">
           <div className="max-w-3xl mx-auto">
@@ -504,6 +571,12 @@ export default function SummerAccelerators() {
               className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
             >
               Secure My Place
+            </a>
+            <a
+              href={BOOK_A_CALL_LINK}
+              className="block mt-6 text-sm text-brand-text underline opacity-70 hover:opacity-100 transition"
+            >
+              Or book a free call if you&apos;ve got questions
             </a>
           </div>
         </section>
@@ -529,7 +602,7 @@ export default function SummerAccelerators() {
               <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
               <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
                 <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
-                <a href={BOOKING_URL} className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
+                <a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
                 <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition text-center whitespace-nowrap">Free Revision Tracker</a>
               </div>
             </div>
