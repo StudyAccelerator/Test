@@ -8,6 +8,11 @@ export const metadata = {
   description: 'Specialist-led live 12-week exam programs for A-Level Maths, Biology and Chemistry.',
 }
 
+const STRIPE_LINK_ONE_SUBJECT = 'https://buy.stripe.com/7sYdRafdM2HA8nE36Ic3m09'
+const STRIPE_LINK_TWO_SUBJECTS = 'https://buy.stripe.com/28E14o3v495Y9rIazac3m0a'
+const STRIPE_LINK_THREE_SUBJECTS = 'https://buy.stripe.com/8x2eVe2r0cia47o36Ic3m0b'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+
 export default function SubjectAccelerators() {
   const faqs = [
     {
@@ -58,7 +63,7 @@ export default function SubjectAccelerators() {
             <li><strong>Biology:</strong> Sundays 10:00–12:00</li>
             <li><strong>Chemistry:</strong> Sundays 13:00–15:00</li>
           </ul>
-          <p>If you're taking all three subjects, the bundle pricing (£699) gives you significant savings compared to enrolling individually.</p>
+          <p>If you're taking all three subjects, the bundle pricing (£849) gives you significant savings compared to enrolling individually.</p>
         </>
       )
     },
@@ -180,8 +185,8 @@ export default function SubjectAccelerators() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-32 px-8 text-center">
-        <div className="max-w-4xl mx-auto">
+      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream pt-20 pb-14 px-8 text-center">
+        <div className="max-w-5xl mx-auto">
           <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-6 font-bold">
             Struggling with A-Level <span className="text-green-400">Biology</span>, <span className="text-purple-300">Chemistry</span> or <span className="text-blue-300">Maths</span>?
           </h1>
@@ -405,7 +410,7 @@ export default function SubjectAccelerators() {
                   </li>
                 </ul>
                 <a
-                  href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00"
+                  href={STRIPE_LINK_ONE_SUBJECT}
                   className="block w-full text-center px-6 py-3 bg-blue-500 text-white font-semibold rounded-md hover:bg-blue-600 transition"
                 >
                   Join Maths ➗
@@ -432,7 +437,7 @@ export default function SubjectAccelerators() {
                   </li>
                 </ul>
                 <a
-                  href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00"
+                  href={STRIPE_LINK_ONE_SUBJECT}
                   className="block w-full text-center px-6 py-3 bg-green-600 text-white font-semibold rounded-md hover:bg-green-700 transition"
                 >
                   Join Biology 🧬
@@ -459,7 +464,7 @@ export default function SubjectAccelerators() {
                   </li>
                 </ul>
                 <a
-                  href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00"
+                  href={STRIPE_LINK_ONE_SUBJECT}
                   className="block w-full text-center px-6 py-3 bg-purple-600 text-white font-semibold rounded-md hover:bg-purple-700 transition"
                 >
                   Join Chemistry 🧪
@@ -483,7 +488,7 @@ export default function SubjectAccelerators() {
               <div className="bg-brand-cream rounded-xl p-8 text-center shadow-lg border-2 border-brand-cream-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
                 <h3 className="text-2xl font-serif font-bold text-brand-purple mb-2">Single Subject</h3>
                 <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Choose one</p>
-                <p className="text-4xl font-bold text-brand-gold mb-2">£289</p>
+                <p className="text-4xl font-bold text-brand-gold mb-2">£339</p>
                 <p className="text-xs text-brand-text opacity-60 mb-6">per subject</p>
                 <ul className="text-brand-text mb-8 space-y-3">
                   <li className="flex items-center gap-2 justify-center">
@@ -495,7 +500,7 @@ export default function SubjectAccelerators() {
                     <span>Maths, Biology or Chemistry</span>
                   </li>
                 </ul>
-                <a href="https://buy.stripe.com/6oU4gAd5EfumgUadLmc3m00" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_ONE_SUBJECT} className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join 1 Subject
                 </a>
               </div>
@@ -508,7 +513,7 @@ export default function SubjectAccelerators() {
                 <div className="p-8">
                   <h3 className="text-2xl font-serif font-bold text-brand-purple mb-2">Two Subjects</h3>
                   <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Most popular</p>
-                  <p className="text-4xl font-bold text-brand-gold mb-2">£529</p>
+                  <p className="text-4xl font-bold text-brand-gold mb-2">£629</p>
                   <p className="text-xs text-brand-text opacity-60 mb-6">save £49</p>
                   <ul className="text-brand-text mb-8 space-y-3">
                     <li className="flex items-center gap-2 justify-center">
@@ -520,7 +525,7 @@ export default function SubjectAccelerators() {
                       <span>Save £49 vs individual enrolment</span>
                     </li>
                   </ul>
-                  <a href="https://buy.stripe.com/14A3cwe9Igyq6fwcHic3m01" className="block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
+                  <a href={STRIPE_LINK_TWO_SUBJECTS} className="block w-full py-3 px-6 bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
                     Join 2 Subjects
                   </a>
                 </div>
@@ -530,7 +535,7 @@ export default function SubjectAccelerators() {
               <div className="bg-brand-cream rounded-xl p-8 text-center shadow-lg border-2 border-brand-cream-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
                 <h3 className="text-2xl font-serif font-bold text-brand-purple mb-2">All Three Subjects</h3>
                 <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Complete coverage</p>
-                <p className="text-4xl font-bold text-brand-gold mb-2">£699</p>
+                <p className="text-4xl font-bold text-brand-gold mb-2">£849</p>
                 <p className="text-xs text-brand-text opacity-60 mb-6">save £168</p>
                 <ul className="text-brand-text mb-8 space-y-3">
                   <li className="flex items-center gap-2 justify-center">
@@ -542,7 +547,7 @@ export default function SubjectAccelerators() {
                     <span>Save £168 vs individual enrolment</span>
                   </li>
                 </ul>
-                <a href="https://buy.stripe.com/5kQeVeghQciacDUfTuc3m02" className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
+                <a href={STRIPE_LINK_THREE_SUBJECTS} className="block w-full py-3 px-6 bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
                   Join All Subjects
                 </a>
               </div>
@@ -627,14 +632,23 @@ export default function SubjectAccelerators() {
             <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
             <div className="md:flex-1 text-center">
               <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
-              <div className="grid grid-cols-3 gap-x-6 text-sm max-w-xs mx-auto">
+              <div className="flex gap-8 justify-center text-sm">
                 <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
-                <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
-                <a href="/revision-tracker" target="_blank" rel="noopener noreferrer" className="text-brand-gold hover:text-white transition text-center whitespace-nowrap">Free Revision Tracker</a>
+                <a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
               </div>
             </div>
           </div>
           <div className="h-px bg-brand-gold opacity-20 my-4"></div>
+          <div className="flex justify-center mb-4">
+            <a
+              href="/revision-tracker"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-xs text-brand-cream opacity-50 hover:opacity-80 border border-brand-cream/20 hover:border-brand-cream/40 rounded px-4 py-1.5 transition"
+            >
+              Free Revision Tracker
+            </a>
+          </div>
           <p className="text-center text-xs opacity-60">
             &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
           </p>
