@@ -31,7 +31,7 @@ export default function SummerAccelerators() {
   // and the FAQPage JSON-LD structured data.
   const faqs = [
     {
-      q: "Who's the Summer Accelerator for?",
+      q: 'Who is the Summer Accelerator for?',
       a: "Any Year 12 student moving into Year 13 who wants to start the year ahead. It doesn't matter where your mocks landed. If there's a gap between your current grades and the grades you want, we close it. If you're already performing well, we make sure you stay there and go into Year 13 in control.",
     },
     {
@@ -43,12 +43,20 @@ export default function SummerAccelerators() {
       a: "Biology, Chemistry, Maths, and Physics. You can take one subject or several, and the more you take, the more you save.",
     },
     {
+      q: "Will the sessions for different subjects overlap?",
+      a: "No. Session times are scheduled so subjects never clash, so you can take all four and still make every session live.",
+    },
+    {
       q: "Who teaches the sessions?",
       a: "Your subjects are taught live by expert tutors who know the spec inside out, have achieved all A*s themselves and helped 100s do the same. Dr Waleed runs the final sessions himself on exam technique, active recall, and study strategy, so you leave knowing how to turn the content into actual marks.",
     },
     {
       q: "What topics do you actually cover?",
       a: "The high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. We don't waste your summer on filler. We teach the things that move your grade.",
+    },
+    {
+      q: "Which exam boards do you cover?",
+      a: "We teach to the three exam boards used most across A-Levels: AQA, OCR and Edexcel.",
     },
     {
       q: "Do I need to be struggling to benefit?",
@@ -303,6 +311,7 @@ export default function SummerAccelerators() {
                   'Every session recorded',
                   'High-yield topics across your chosen subjects',
                   'Taught by expert tutors, final sessions led by Dr Waleed',
+                  'Average 1:1 tutoring costs £50/hr. Our packages work out at £9 to £12/hr',
                 ].map((item) => (
                   <span key={item} className="flex items-center gap-2">
                     <span className="text-brand-gold font-bold" aria-hidden="true">✓</span>
@@ -325,7 +334,7 @@ export default function SummerAccelerators() {
               Secure Your Summer Place
             </h2>
             <p className="text-center text-lg text-brand-cream opacity-80 mb-10 max-w-2xl mx-auto">
-              The next cohort starts Saturday 25th July. The more subjects you take, the more you save.
+              The next cohort starts Saturday 25th July. The more subjects you take, the more you save. Session times never overlap, so you can take all four subjects and still attend every session live.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
@@ -379,7 +388,7 @@ export default function SummerAccelerators() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Save £39 vs booking separately</span>
+                    <span>48 hours of teaching for less than 11 hours of 1:1 tutoring</span>
                   </li>
                 </ul>
                 <a href={STRIPE_LINK_TWO_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
@@ -411,7 +420,7 @@ export default function SummerAccelerators() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Save £128 vs booking separately</span>
+                    <span>72 hours of teaching for less than 15 hours of 1:1 tutoring</span>
                   </li>
                 </ul>
                 <a href={STRIPE_LINK_THREE_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
@@ -440,7 +449,7 @@ export default function SummerAccelerators() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Biggest saving of any option</span>
+                    <span>96 hours of teaching for less than 17 hours of 1:1 tutoring</span>
                   </li>
                 </ul>
                 <a href={STRIPE_LINK_FOUR_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
@@ -461,9 +470,9 @@ export default function SummerAccelerators() {
       {/* Help choosing a package */}
       <ScrollFade delay={0.2}>
         <section className="py-12 px-4 bg-white">
-          <div className="max-w-3xl mx-auto bg-brand-cream border border-brand-gold/30 rounded-xl px-6 py-5">
+          <div className="max-w-4xl mx-auto bg-brand-cream border border-brand-gold/30 rounded-xl px-6 py-5">
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-              <p className="text-brand-text">
+              <p className="text-sm sm:whitespace-nowrap text-brand-text">
                 Not sure which option fits? Book a free call with Dr Waleed to help you choose.
               </p>
               <a
