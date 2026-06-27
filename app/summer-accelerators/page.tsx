@@ -311,7 +311,6 @@ export default function SummerAccelerators() {
                   'Every session recorded',
                   'High-yield topics across your chosen subjects',
                   'Taught by expert tutors, final sessions led by Dr Waleed',
-                  'Average 1:1 tutoring costs £50/hr. Our packages work out at £9 to £12/hr',
                 ].map((item) => (
                   <span key={item} className="flex items-center gap-2">
                     <span className="text-brand-gold font-bold" aria-hidden="true">✓</span>
@@ -320,6 +319,9 @@ export default function SummerAccelerators() {
                 ))}
               </div>
             </div>
+            <p className="text-center text-brand-gold font-semibold text-base md:text-lg mt-4">
+              Average 1:1 tutoring costs £50/hr. Our packages work out at £9 to £12/hr.
+            </p>
           </div>
         </section>
       </ScrollFade>
@@ -334,7 +336,7 @@ export default function SummerAccelerators() {
               Secure Your Summer Place
             </h2>
             <p className="text-center text-lg text-brand-cream opacity-80 mb-10 max-w-2xl mx-auto">
-              The next cohort starts Saturday 25th July. The more subjects you take, the more you save. Session times never overlap, so you can take all four subjects and still attend every session live.
+              The next cohort starts Saturday 25th July. Session times never overlap, so you can take all four subjects and still attend every session live.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
