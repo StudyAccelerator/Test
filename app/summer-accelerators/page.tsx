@@ -97,15 +97,12 @@ export default function SummerAccelerators() {
 
       {/* Hero Section */}
       <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-32 px-8 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-block bg-brand-gold/20 border border-brand-gold/40 rounded-full px-5 py-2 mb-6">
-            <p className="text-brand-gold font-semibold text-sm uppercase tracking-wide">Live 6-Week Summer Accelerator</p>
-          </div>
-          <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-6 font-bold leading-tight">
-            Master the Topics That Decide Your Year 13 Predicted Grades. <span className="text-brand-cream">This Summer.</span>
+        <div className="max-w-5xl xl:max-w-7xl mx-auto">
+          <h1 className="text-3xl sm:text-4xl lg:text-4xl xl:text-5xl font-serif font-bold mb-6 leading-tight text-balance">
+            <span className="text-brand-gold">Master the Topics</span> <span className="text-brand-cream">That Decide Your Predicted Grades!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Six weeks, two sessions a week, taught live. We teach the high-level topics your Year 13 mocks are built on, so whether you&apos;re closing a gap or protecting top grades, you start September already ahead of the room.
+            Six weeks this summer on the high-yield Year 13 topics that set your predicted grades. Closing a gap or staying on top, you start September ahead.
           </p>
           <a
             href="#pricing"
@@ -113,9 +110,13 @@ export default function SummerAccelerators() {
           >
             Secure My Place
           </a>
-          <p className="mt-5 text-sm text-brand-gold opacity-90 max-w-2xl mx-auto">
-            Taught by expert A-Level tutors and Dr Waleed Ahmad. 1,000+ students supported. First session risk-free.
-          </p>
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-cream font-medium">
+            <span>Expert A-Level tutors + Dr Waleed</span>
+            <span className="text-brand-gold" aria-hidden="true">·</span>
+            <span>1,000+ students supported</span>
+            <span className="text-brand-gold" aria-hidden="true">·</span>
+            <span>First session risk-free</span>
+          </div>
         </div>
       </section>
 
@@ -171,33 +172,40 @@ export default function SummerAccelerators() {
 
       {/* What the Summer Accelerator Is */}
       <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-brand-light-gray">
+        <section className="py-24 px-4 bg-brand-cream">
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-16">
               What the Summer Accelerator Is
             </h2>
 
-            <div className="space-y-8">
-              <div className="bg-white p-8 rounded-lg border-l-4 border-brand-gold">
-                <h3 className="text-2xl font-semibold text-brand-purple mb-4">The Topics That Decide Your Grades</h3>
-                <p className="text-brand-text">
-                  We cover the high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. You learn the things that actually move your grade, not filler.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg border-l-4 border-brand-gold">
-                <h3 className="text-2xl font-semibold text-brand-purple mb-4">Taught Live by Expert Tutors</h3>
-                <p className="text-brand-text">
-                  Every session is taught live by subject specialists who know the spec inside out, have achieved top grades themselves and helped hundreds do the same. You ask questions in real time and get answers on the spot, not a pre-recorded video you watch alone.
-                </p>
-              </div>
-
-              <div className="bg-white p-8 rounded-lg border-l-4 border-brand-gold">
-                <h3 className="text-2xl font-semibold text-brand-purple mb-4">Ahead From Day One of Year 13</h3>
-                <p className="text-brand-text">
-                  You won&apos;t be playing catch-up in September. You&apos;ll start Year 13 already knowing the topics your classmates are seeing for the first time, with the exam technique to back it up.
-                </p>
-              </div>
+            <div className="divide-y divide-brand-gold/25">
+              {[
+                {
+                  num: '01',
+                  title: 'The Topics That Decide Your Grades',
+                  body: 'We cover the high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. You learn the things that actually move your grade, not filler.',
+                },
+                {
+                  num: '02',
+                  title: 'Taught Live by Expert Tutors',
+                  body: 'Every session is taught live by subject specialists who know the spec inside out, have achieved top grades themselves and helped hundreds do the same. You ask questions in real time and get answers on the spot, not a pre-recorded video you watch alone.',
+                },
+                {
+                  num: '03',
+                  title: 'Ahead From Day One of Year 13',
+                  body: "You won't be playing catch-up in September. You'll start Year 13 already knowing the topics your classmates are seeing for the first time, with the exam technique to back it up.",
+                },
+              ].map((item) => (
+                <div key={item.num} className="py-10 flex flex-col md:flex-row gap-4 md:gap-10 items-start">
+                  <span className="text-6xl md:text-7xl font-serif font-bold text-brand-gold leading-none flex-shrink-0" aria-hidden="true">
+                    {item.num}
+                  </span>
+                  <div className="md:pt-2">
+                    <h3 className="text-2xl font-semibold text-brand-purple mb-3">{item.title}</h3>
+                    <p className="text-lg text-brand-text leading-relaxed">{item.body}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
@@ -264,78 +272,6 @@ export default function SummerAccelerators() {
 
       <Divider />
 
-      {/* What You'll Get */}
-      <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-brand-light-gray">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              What You&apos;ll Get
-            </h2>
-
-            <div className="grid md:grid-cols-3 gap-8">
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-brand-purple mb-6 text-center border-b-2 border-brand-gold pb-4">Live Expert Teaching</h3>
-                <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-center justify-center gap-2">
-                    <span className="text-brand-gold font-bold">•</span>
-                    <span>Six weeks of live sessions</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-2">
-                    <span className="text-brand-gold font-bold">•</span>
-                    <span>Highest-yield Year 13 topics</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-brand-purple mb-6 text-center border-b-2 border-brand-gold pb-4">Exam Technique Built In</h3>
-                <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-center justify-center gap-2">
-                    <span className="text-brand-gold font-bold">•</span>
-                    <span>Retrieval under pressure</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-2">
-                    <span className="text-brand-gold font-bold">•</span>
-                    <span>Exam-question application</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="text-center">
-                <h3 className="text-xl font-bold text-brand-purple mb-6 text-center border-b-2 border-brand-gold pb-4">Ahead Before September</h3>
-                <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-center justify-center gap-2">
-                    <span className="text-brand-gold font-bold">•</span>
-                    <span>The high-value topics the year builds on</span>
-                  </li>
-                  <li className="flex items-center justify-center gap-2">
-                    <span className="text-brand-gold font-bold">•</span>
-                    <span>Walk in calm and confident</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <div className="mt-12 space-y-3 text-brand-text max-w-2xl mx-auto">
-              <div className="flex items-center justify-center gap-3">
-                <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
-                <span>Access to all session recordings to catch up and revise</span>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
-                <span>High-yield topics across your chosen subjects</span>
-              </div>
-              <div className="flex items-center justify-center gap-3">
-                <span className="text-brand-gold font-bold text-lg flex-shrink-0">✓</span>
-                <span>Taught live by expert tutors, with final sessions led by Dr Waleed</span>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
       {/* Subjects */}
       <ScrollFade delay={0.2}>
         <section id="subjects" className="py-20 px-4 bg-white">
@@ -370,9 +306,26 @@ export default function SummerAccelerators() {
             <h2 className="text-3xl md:text-4xl text-brand-cream font-serif text-center mb-4">
               Secure Your Summer Place
             </h2>
-            <p className="text-center text-lg text-brand-cream opacity-80 mb-12 max-w-2xl mx-auto">
+            <p className="text-center text-lg text-brand-cream opacity-80 mb-8 max-w-2xl mx-auto">
               The next cohort starts Saturday 25th July. The more subjects you take, the more you save. Prices rise after this cohort.
             </p>
+
+            {/* Every package includes strip */}
+            <div className="bg-brand-cream rounded-xl px-6 py-4 mb-10 max-w-5xl mx-auto">
+              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm md:text-base text-brand-text font-medium">
+                {[
+                  '24 hours of live teaching',
+                  'Every session recorded',
+                  'High-yield topics across your chosen subjects',
+                  'Taught by expert tutors, final sessions led by Dr Waleed',
+                ].map((item) => (
+                  <span key={item} className="flex items-center gap-2">
+                    <span className="text-brand-gold font-bold" aria-hidden="true">✓</span>
+                    <span>{item}</span>
+                  </span>
+                ))}
+              </div>
+            </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
               {/* One Subject */}
