@@ -8,45 +8,45 @@ interface Testimonial {
   id: number
   quote: string
   name: string
-  username: string
-  avatar: string
+  year: string
 }
 
 const testimonials: Testimonial[] = [
   {
     id: 1,
     quote: 'I love each session because it is highly interactive and allows us to give answers which Dr Waleed gives feedback on which is very helpful',
-    name: 'Year 12 Student',
-    username: '',
-    avatar: '',
+    name: 'Arooj',
+    year: 'Year 13 Student',
   },
   {
     id: 2,
-    quote: 'We had real examples and feedback which really put it into perspective and allows us to develop good points for ourselves and ensure we don\'t make the same mistakes as well',
-    name: 'Year 13 Student',
-    username: '',
-    avatar: '',
+    quote: 'The lessons were interactive with well explained concepts, easy to follow and very informative. We got good points to research and the feedback on ourselves was great, even the best students had something to improve on',
+    name: 'Jay',
+    year: 'Year 12 Student',
   },
   {
     id: 3,
-    quote: 'Interactive, well explained concepts, easy to follow. Very informative, gave good points to research. The feedback on ourselves was great, even the best answers had something to improve on.',
-    name: 'Year 12 Student',
-    username: '',
-    avatar: '',
+    quote: 'I really liked the wide range of examples used and discussed throughout the session. This made the session very interactive because there was more active learning',
+    name: 'Catherine',
+    year: 'Year 13 Student',
   },
   {
     id: 4,
-    quote: 'I really liked the wide range of examples used and discussed throughout the session. This made the session very interactive because there was more active learning.',
-    name: 'Year 13 Student',
-    username: '',
-    avatar: '',
+    quote: 'All the information provided was clear and understandable. It was really helpful and improved my confidence!',
+    name: 'Biju',
+    year: 'Gap Year Student',
   },
   {
     id: 5,
-    quote: 'I like how interactive it was and that many different examples were explained and discussed',
-    name: 'Year 12 Student',
-    username: '',
-    avatar: '',
+    quote: 'I appreciated the chance to give my own answer and received really valuable feedback! The topics were really hard to approach while researching alone so seeing it broken down into manageable points was useful to apply it even better',
+    name: 'Delicia',
+    year: 'Year 13 Student',
+  },
+  {
+    id: 6,
+    quote: 'There was a constant link/explanation as to how we can use this information ourselves, great examples and feedback given',
+    name: 'Reanna',
+    year: 'Year 12 Student',
   },
 ]
 
@@ -257,6 +257,9 @@ const TestimonialSlider: React.FC = () => {
                         <h4 className="font-bold text-sm sm:text-base text-gray-900">
                           {testimonial.name}
                         </h4>
+                        <p className="text-xs sm:text-sm font-semibold text-brand-gold mt-0.5">
+                          {testimonial.year}
+                        </p>
                       </div>
                     </div>
                   </motion.div>
