@@ -205,6 +205,17 @@ export default function SubjectAccelerators() {
         </div>
       </section>
 
+      {/* Urgency Bar */}
+      <ScrollFade>
+        <section className="py-6 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-base md:text-lg text-brand-purple font-semibold">
+              ⏳ The next cohort starts Sunday, September 6th with limited spaces. Secure your place now!
+            </p>
+          </div>
+        </section>
+      </ScrollFade>
+
       {/* Key Insight */}
       <ScrollFade>
         <section className="py-12 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">

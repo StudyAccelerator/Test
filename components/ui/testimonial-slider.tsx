@@ -217,7 +217,7 @@ const TestimonialSlider: React.FC = () => {
             <motion.div
               className="flex"
               animate={{ x: `-${currentIndex * (100 / visibleCount)}%` }}
-              transition={isJumping ? { duration: 0 } : { type: 'spring', stiffness: 70, damping: 20 }}
+              transition={isJumping ? { duration: 0 } : { duration: 0.7, ease: 'easeInOut' }}
               onAnimationComplete={handleSlideAnimationComplete}
             >
               {extendedTestimonials.map((testimonial) => (

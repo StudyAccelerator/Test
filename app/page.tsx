@@ -280,6 +280,11 @@ export default function SummerAccelerators() {
 
       <Divider />
 
+      {/* Testimonials Slider */}
+      <TestimonialSlider />
+
+      <Divider />
+
       {/* Subjects */}
       <ScrollFade delay={0.2}>
         <section id="subjects" className="py-20 px-4 bg-white">
@@ -325,11 +330,6 @@ export default function SummerAccelerators() {
           </div>
         </section>
       </ScrollFade>
-
-      <Divider />
-
-      {/* Testimonials Slider */}
-      <TestimonialSlider />
 
       <Divider />
 
