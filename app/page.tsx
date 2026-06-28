@@ -167,7 +167,7 @@ export default function SummerAccelerators() {
               </div>
 
               <div className="space-y-6 text-lg text-brand-text">
-                <p>I&apos;m Dr Waleed Ahmad, a doctor and the founder of A-Level Accelerators. I&apos;ve worked with over 1,000 students, and I built this programme around one idea: the students who get ahead over summer walk into Year 13 in control, while everyone else spends first term catching up.</p>
+                <p>Hi, I&apos;m Dr Waleed Ahmad, the founder of A-Level Accelerators. I&apos;ve worked with over 1,000 students, and I built this programme around one idea: the students who get ahead over summer walk into Year 13 in control, while everyone else spends first term catching up.</p>
                 <p>Your subjects are taught live by expert tutors who know exactly which topics carry the most marks. I run the final sessions myself, where I teach the exam technique, active recall, and study systems that turn knowing the content into actually securing top grades.</p>
                 <p>By the end of six weeks, you won&apos;t just have covered the highest-value Year 13 topics. You&apos;ll know them well enough to walk into the mocks that set your predicted grades with confidence and already ahead!</p>
               </div>
