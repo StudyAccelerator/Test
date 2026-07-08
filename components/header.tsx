@@ -37,6 +37,7 @@ export default function Header() {
         <nav className="mt-3 md:mt-0 grid grid-cols-2 md:flex gap-x-8 gap-y-3 md:gap-6 text-sm md:text-base text-center md:text-left">
           <a href="/" className="text-brand-purple hover:text-brand-gold font-semibold transition">Study System</a>
           <a href="/subject-accelerators" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
+          <a href="/blog/" className="text-brand-purple hover:text-brand-gold font-semibold transition">Blog</a>
           <a href="/#faq" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
           <a href="/#contact" className="text-brand-purple hover:text-brand-gold font-semibold transition">Contact</a>
         </nav>
