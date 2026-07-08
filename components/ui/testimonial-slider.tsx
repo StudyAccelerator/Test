@@ -90,12 +90,6 @@ const testimonials: Testimonial[] = [
     name: 'Furkan',
     year: 'Year 13 Student',
   },
-  {
-    id: 14,
-    quote: 'It showed how questions repeat and how the same mark scheme answers keep coming up. The explanations were really clear',
-    name: 'Aya',
-    year: 'A-Level Biology Student',
-  },
 ]
 
 // Slides are looped seamlessly by rendering several copies of the testimonials
@@ -231,8 +225,7 @@ const TestimonialSlider: React.FC = () => {
             Hear From Our Students
           </h3>
           <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-4">
-            Across our recent 12-week Biology and Chemistry Accelerators, students rated their confidence in every
-            topic before and after each session. The average rose from 6.2 to 8.3 out of 10.
+            Real feedback from students on our recent 12-week Biology and Chemistry Accelerators.
           </p>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-brand-purple to-brand-gold mx-auto mt-4 sm:mt-6"></div>
         </motion.div>

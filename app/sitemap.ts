@@ -12,6 +12,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/summer-accelerators/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/workshop/`, changeFrequency: 'monthly', priority: 0.6 },
     { url: `${SITE_URL}/blog/`, changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${SITE_URL}/faqs/`, changeFrequency: 'monthly', priority: 0.6 },
   ]
 
   const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({

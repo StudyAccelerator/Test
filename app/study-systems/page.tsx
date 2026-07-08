@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import Header from '@/components/header'
+import Footer from '@/components/footer'
 import PricingSection from '@/components/ui/pricing-section'
 import FaqSection from '@/components/ui/faq-section'
 import { ScrollFade } from '@/components/ui/scroll-fade'
@@ -483,45 +484,7 @@ export default function Home() {
       </ScrollFade>
 
       {/* Footer */}
-      <footer id="contact" className="bg-brand-purple text-brand-cream py-8 px-8">
-        <div className="max-w-5xl mx-auto">
-          <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
-            <a href="/#hero" className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center hover:opacity-80 transition">
-              <Image
-                src="/logo-header.png?v=2"
-                alt="A-Level Accelerators"
-                width={400}
-                height={400}
-                className="absolute h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                unoptimized
-              />
-            </a>
-            <div className="hidden md:block w-px h-36 bg-brand-gold opacity-40 flex-shrink-0"></div>
-            <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
-            <div className="md:flex-1 text-center">
-              <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
-              <div className="flex gap-8 justify-center text-sm">
-                <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
-                <a href="https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting" className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
-              </div>
-            </div>
-          </div>
-          <div className="h-px bg-brand-gold opacity-20 my-4"></div>
-          <div className="flex justify-center mb-4">
-            <a
-              href="/revision-tracker"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-brand-cream opacity-50 hover:opacity-80 border border-brand-cream/20 hover:border-brand-cream/40 rounded px-4 py-1.5 transition"
-            >
-              Free Revision Tracker
-            </a>
-          </div>
-          <p className="text-center text-xs opacity-60">
-            &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
-          </p>
-        </div>
-      </footer>
+      <Footer />
     </main>
   )
 }
