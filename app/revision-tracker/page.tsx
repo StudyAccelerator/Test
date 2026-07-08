@@ -23,13 +23,13 @@ const css = `
   --color-english:#8B4513;
   --color-history:#C4622D;
 }
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
+*{margin:0;padding:0;box-sizing:border-box}html{scroll-behavior:smooth}
 body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--cream);color:var(--text);min-height:100vh;line-height:1.5}
 h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
 .logo{height:45px;width:auto;margin-bottom:1rem}
 .badge{display:inline-block;font-size:0.65rem;letter-spacing:0.22em;text-transform:uppercase;border:1px solid var(--gold);color:var(--gold);padding:0.3rem 0.9rem;border-radius:20px;margin-bottom:0.9rem}
 .container{max-width:940px;margin:0 auto;padding:2rem 1.2rem 3rem}
+.container--wide{max-width:1400px}
 .intro{background:var(--purple);color:var(--cream);border-radius:10px;padding:1.1rem 1.3rem;margin-bottom:1.5rem;font-size:0.9rem;line-height:1.65}
 .intro strong{display:block;margin-bottom:0.35rem;font-size:1rem;color:var(--gold)}
 .card{background:#fff;border-radius:10px;padding:1.5rem;margin-bottom:1.3rem;box-shadow:0 1px 8px rgba(46,37,87,0.08);border-left:4px solid var(--purple);position:relative}
@@ -37,11 +37,12 @@ h1,h2,h3,.serif{font-family:Georgia,"Times New Roman",serif;font-weight:normal}
 .card-subtitle{font-size:0.82rem;color:var(--muted);margin-bottom:1.1rem;font-style:italic}
 .card-num{position:absolute;top:-12px;left:-12px;width:28px;height:28px;background:var(--gold);color:var(--purple);border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:Georgia,serif;font-weight:bold;font-size:0.95rem;box-shadow:0 2px 4px rgba(0,0,0,0.1)}
 label{display:block;font-size:0.8rem;font-weight:600;color:var(--purple);margin-bottom:0.3rem;letter-spacing:0.02em}
-input[type="text"],input[type="time"],select{width:100%;padding:0.6rem 0.75rem;border:1.5px solid var(--cream-dark);border-radius:6px;font-family:inherit;font-size:0.92rem;background:var(--cream);color:var(--text);margin-bottom:0.9rem;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;appearance:none}
+input[type="text"],input[type="email"],input[type="time"],select{width:100%;padding:0.6rem 0.75rem;border:1.5px solid var(--cream-dark);border-radius:6px;font-family:inherit;font-size:0.92rem;background:var(--cream);color:var(--text);margin-bottom:0.9rem;transition:border-color 0.2s,background 0.2s;-webkit-appearance:none;appearance:none}
 select{background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232E2557' d='M0 0l5 6 5-6z'/></svg>");background-repeat:no-repeat;background-position:right 0.75rem center;padding-right:2rem}
 input:focus,select:focus{outline:none;border-color:var(--purple);background:#fff}
 .two-col{display:grid;grid-template-columns:1fr 1fr;gap:1rem}
 .help-text{font-size:0.78rem;color:var(--muted);font-style:italic;margin-top:-0.4rem;margin-bottom:0.8rem}
+.sleep-error{display:none;background:#fee2e2;color:#991b1b;font-size:0.78rem;padding:0.5rem 0.75rem;border-radius:5px;margin-top:-0.5rem;margin-bottom:0.8rem;border-left:3px solid #ef4444}
 .info-line{font-size:0.82rem;color:var(--purple);background:var(--cream);padding:0.6rem 0.9rem;border-radius:6px;border-left:3px solid var(--gold);margin-top:0.3rem}
 .item-row{background:var(--cream);border:1px solid var(--cream-dark);border-radius:8px;padding:1rem 2.6rem 1rem 1rem;margin-bottom:0.75rem;position:relative}
 .remove-btn{position:absolute;top:0.75rem;right:0.75rem;width:24px;height:24px;border-radius:50%;border:none;background:rgba(46,37,87,0.1);color:var(--purple);font-size:1rem;cursor:pointer;display:flex;align-items:center;justify-content:center;line-height:1;transition:background 0.2s,color 0.2s}
@@ -67,35 +68,42 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 .add-btn{width:100%;padding:0.7rem 1rem;border:2px dashed rgba(46,37,87,0.3);background:transparent;color:var(--purple);border-radius:7px;font-family:inherit;font-size:0.88rem;font-weight:600;cursor:pointer;transition:all 0.2s}
 .add-btn:hover{border-color:var(--purple);background:var(--purple);color:var(--cream)}
 .generate-btn{width:100%;padding:1.05rem;background:var(--purple);color:var(--cream);border:none;border-radius:8px;font-family:Georgia,serif;font-size:1.08rem;letter-spacing:0.05em;cursor:pointer;transition:background 0.2s,transform 0.1s;margin-top:0.5rem;box-shadow:0 2px 8px rgba(46,37,87,0.2)}
-.generate-btn:hover{background:var(--purple-light)}
-.generate-btn:active{transform:translateY(1px)}
+.generate-btn:hover:not(:disabled){background:var(--purple-light)}
+.generate-btn:active:not(:disabled){transform:translateY(1px)}
+.generate-btn:disabled{opacity:0.5;cursor:not-allowed}
 #timetable-section{display:none}
 .tt-header{background:var(--purple);color:var(--cream);border-radius:10px 10px 0 0;padding:1.5rem 1.5rem 1.3rem;text-align:center}
 .tt-header h2{font-size:1.6rem;margin-bottom:0.35rem}
 .tt-header p{font-size:0.8rem;opacity:0.7;font-style:italic}
-.week-wrap{background:#fff;border-radius:0 0 10px 10px;padding:1rem;box-shadow:0 1px 8px rgba(46,37,87,0.08);overflow-x:auto}
-.week-grid{display:grid;grid-template-columns:repeat(7,minmax(125px,1fr));gap:0.45rem;min-width:max-content}
-.day-col{display:flex;flex-direction:column;gap:0.3rem;min-width:0}
-.day-head{background:var(--purple);color:var(--cream);text-align:center;padding:0.5rem 0.3rem;border-radius:5px;font-size:0.72rem;font-weight:bold;letter-spacing:0.08em;text-transform:uppercase;font-family:Georgia,serif}
-.slot{border-radius:5px;padding:0.45rem 0.5rem;font-size:0.68rem;line-height:1.35;word-break:break-word}
-.slot-time{font-size:0.58rem;opacity:0.75;margin-bottom:0.15rem;display:block;font-weight:500}
-.slot-label{font-weight:bold;display:block;font-size:0.72rem}
-.slot-sub{font-size:0.6rem;opacity:0.8;font-style:italic;display:block;margin-top:0.18rem}
-.slot--deep{background:var(--purple);color:var(--cream)}
-.slot--recall{background:var(--purple-mid);color:#fff}
-.slot--review{background:var(--purple-soft);color:#fff}
-.slot--break{background:var(--cream-dark);color:#666}
-.slot--lunch{background:var(--cream-warm);color:#666}
-.slot--fixed{background:var(--slate);color:#fff}
-.slot--free{background:#f5f5f5;color:#bbb;text-align:center;font-size:0.6rem}
-.slot--none{background:#fafafa;color:#aaa;text-align:center;padding:1rem 0.5rem;border:1px dashed #ddd;font-style:italic;font-size:0.65rem}
-.slot-label{border-left:3px solid transparent;padding-left:0.3rem}
-.slot-label.subj-maths{border-left-color:var(--color-maths);color:var(--color-maths)}
-.slot-label.subj-biology{border-left-color:var(--color-biology);color:var(--color-biology)}
-.slot-label.subj-chemistry{border-left-color:var(--color-chemistry);color:var(--color-chemistry)}
-.slot-label.subj-physics{border-left-color:var(--color-physics);color:var(--color-physics)}
-.slot-label.subj-english{border-left-color:var(--color-english);color:var(--color-english)}
-.slot-label.subj-history{border-left-color:var(--color-history);color:var(--color-history)}
+#pdf-logo{display:none;height:55px;width:auto;margin-bottom:0.6rem}
+.week-wrap{background:#fff;border-radius:0 0 10px 10px;padding:0.4rem;box-shadow:0 1px 8px rgba(46,37,87,0.08);overflow-x:auto}
+.week-grid{display:block;min-width:720px}
+.tt-header-row{display:flex;border-bottom:2px solid var(--cream-dark);position:sticky;top:0;z-index:5;background:#fff}
+.tt-axis-spacer{width:52px;flex-shrink:0;border-right:1px solid var(--cream-dark);background:#fff}
+.tt-day-head{flex:1;background:var(--purple);color:var(--cream);text-align:center;padding:0.5rem 0.3rem;font-size:0.72rem;font-weight:bold;letter-spacing:0.08em;text-transform:uppercase;font-family:Georgia,serif;min-width:88px;margin:0 1px;border-radius:5px 5px 0 0}
+.tt-body-row{display:flex;align-items:flex-start}
+.tt-axis{width:52px;flex-shrink:0;position:relative;border-right:1px solid var(--cream-dark);background:#fff}
+.tt-hour-label{position:absolute;right:6px;font-size:0.58rem;color:var(--muted);white-space:nowrap;transform:translateY(-50%);font-variant-numeric:tabular-nums;line-height:1}
+.tt-day-col{flex:1;position:relative;min-width:88px;background:#fbfaf6;border-right:1px solid rgba(200,200,200,0.3);margin:0 1px}
+.tt-day-col:last-child{border-right:none}
+.tt-hour-line{position:absolute;left:0;right:0;height:1px;background:rgba(190,190,190,0.45);pointer-events:none;z-index:0}
+.tt-slot{position:absolute;left:2px;right:2px;border-radius:3px;padding:2px 3px;overflow:hidden;box-sizing:border-box;z-index:1;min-height:14px;line-height:1.2;word-break:break-word}
+.tt-slot-time{font-size:0.48rem;opacity:0.75;display:block;font-weight:500;letter-spacing:0em}
+.tt-slot-label{font-weight:bold;display:block;font-size:0.60rem;border-left:2px solid transparent;padding-left:3px;margin-top:0.5px}
+.tt-slot-sub{font-size:0.50rem;opacity:0.8;font-style:italic;display:block;margin-top:0.5px}
+.tt-slot--deep{background:#1E40AF;color:#fff}
+.tt-slot--recall{background:#15803D;color:#fff}
+.tt-slot--review{background:#B45309;color:#fff}
+.tt-slot--break{background:var(--cream-dark);color:#5a5a5a}
+.tt-slot--lunch{background:var(--cream-warm);color:#5a5a5a;border:1px solid #d4c5a0}
+.tt-slot--fixed{background:var(--slate);color:#fff}
+.tt-slot--free{background:#f5f5f5;color:#999;font-style:italic;border:1px dashed #ddd}
+.tt-slot-label.subj-pos-0{border-left-color:#FFFFFF;color:#FFFFFF}
+.tt-slot-label.subj-pos-1{border-left-color:#F9A8D4;color:#F9A8D4}
+.tt-slot-label.subj-pos-2{border-left-color:#E879F9;color:#E879F9}
+.tt-slot-label.subj-pos-3{border-left-color:#FDE68A;color:#FDE68A}
+.tt-slot-label.subj-pos-4{border-left-color:#A5F3FC;color:#A5F3FC}
+.tt-slot-label.subj-pos-5{border-left-color:#FDBA74;color:#FDBA74}
 .legend-wrap{margin-top:0.9rem;background:#fff;border-radius:8px;padding:0.9rem 1.1rem;box-shadow:0 1px 4px rgba(46,37,87,0.06)}
 .legend{display:flex;flex-wrap:wrap;gap:0.7rem 1.4rem}
 .legend-item{display:flex;align-items:center;gap:0.4rem;font-size:0.78rem;color:#555}
@@ -116,19 +124,21 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
   .tt-header{border-radius:0;padding:0.8rem}
   .tt-header h2{font-size:1.2rem}
   .tt-header p{font-size:0.7rem}
+  #pdf-logo{display:block !important}
   .week-wrap{box-shadow:none;padding:0.3rem;overflow:visible}
-  .week-grid{grid-template-columns:repeat(7,1fr);gap:0.2rem;min-width:0}
-  .slot{font-size:0.55rem;padding:0.25rem 0.3rem}
-  .slot-time{font-size:0.48rem}
-  .slot-label{font-size:0.58rem}
-  .slot-sub{font-size:0.5rem}
-  .day-head{font-size:0.6rem;padding:0.3rem 0.15rem}
+  .week-grid{min-width:0}
+  .tt-header-row{position:static}
+  .tt-day-head{font-size:0.6rem;padding:0.3rem 0.15rem;min-width:0}
+  .tt-day-col{min-width:0}
+  .tt-slot{padding:2px 3px}
+  .tt-slot-time{font-size:0.46rem}
+  .tt-slot-label{font-size:0.56rem}
+  .tt-slot-sub{font-size:0.48rem}
   @page{size:A4 landscape;margin:0.8cm}
 }
 @media (max-width:640px){
   .two-col{grid-template-columns:1fr}
   .commit-grid{grid-template-columns:1fr 1fr;gap:0.6rem}
-  .site-header h1{font-size:1.55rem}
   .container{padding:1.5rem 1rem 2rem}
   .card{padding:1.2rem}
 }
@@ -137,16 +147,39 @@ input[type="range"]::-moz-range-thumb{width:18px;height:18px;background:var(--pu
 const js = `
 (function(){
   'use strict';
+  // MailerLite direct integration
+  var ML_API_KEY='eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYjUzMWQ4MTgyNzM5NmM3MTViZDVjN2ZhZDY5ZTYxMjNiYzZjMTViNjM1Y2Q3YjkwODI4YWY1YjlmMzgwYjE4Yjg5MmQ0N2FmM2M3YTM0ZWYiLCJpYXQiOjE3Nzg1MTIzODEuMjUwMjI2LCJuYmYiOjE3Nzg1MTIzODEuMjUwMjI5LCJleHAiOjQ5MzQxODU5ODEuMjQ2MjY1LCJzdWIiOiIyMTMxNzg2Iiwic2NvcGVzIjpbXX0.QQkqYoMhCzwoGI4g3LfZWhiGWZ_dWxGfQOrNfebTqL4R7OKHgpaEduW-J9AAdhWo2_bsRpKvi6NnVJA_rdeTPQUBnCmmXcvzahU4bVx7_Ulff0Ld_8_8a5boETdU3UrKTWMCjdXQkmpJ-1TiM5_Mi4iLOpB0vvPvG_U3Cya_ORnGsTSyDv5qQ7MQHqjytbaZ0R_aRWDA1-emMFymr2dXOv-iOW1Dly1dflxrIo6Yb0BPA-v6Chs4TjlHdEvwFvSRgzZAATN9dDSjGENQbhQIFmuUGQ00HiP1xsmS6qKaCU__iARC8z91GZyrbcf0m9ryHNhkScckYMoGu1sYIC9Hm2Wj_BKpI970L0-CAT5dDpolTbTd8absVHR3UOxuiWZSEHVcumvtPsZ6K5GP0zQ_ccFlMaqLrPs7o80wy9DWt97fDZ8_KuScHY20zKSG-beSojlzuUXXj4rpH33-9PeJ4puXIMirOWzsKJIaEEckRDumvyhawrliPhHMwelKhgpCxMZlA_Bc3-nwZMDiEZf_CtXgXOkzUSkJohkboZBELdeLOrv83EPRhpHXahEyZkOhURucBLtb5Fs0lFIkLKeI-RXAz_7TPByqlHkcxZV8xObgZpqtCGVd1q8oI2pwrD7D85H4i5wP70q-Lsv8BZl_G8RTosjdYckZn0nXlOTjehM';
+  var ML_GROUP_ID='187183128836573106';
   const DAYS=['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'];
   const DAY_SHORT={Monday:'Mon',Tuesday:'Tue',Wednesday:'Wed',Thursday:'Thu',Friday:'Fri',Saturday:'Sat',Sunday:'Sun'};
   const PRIORITY_WEIGHT={high:3,medium:2,low:1};
+
   function escapeHTML(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function toMinutes(hhmm){if(!hhmm||typeof hhmm!=='string')return NaN;const parts=hhmm.split(':');if(parts.length!==2)return NaN;const h=parseInt(parts[0],10),m=parseInt(parts[1],10);if(isNaN(h)||isNaN(m))return NaN;return h*60+m}
-  function toHHMM(mins){const h=Math.floor(mins/60),m=mins%60;return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')}
+  function toHHMM(mins){const norm=((mins%1440)+1440)%1440;const h=Math.floor(norm/60),m=norm%60;return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')}
   function fmtTimeRange(a,b){return toHHMM(a)+' – '+toHHMM(b)}
+
+  function validateSleep(){
+    const w=toMinutes(document.getElementById('wake-time').value||'');
+    const s=toMinutes(document.getElementById('sleep-time').value||'');
+    const errEl=document.getElementById('sleep-time-error');
+    const btn=document.getElementById('generate-btn');
+    if(isNaN(w)||isNaN(s)){if(errEl)errEl.style.display='none';return true}
+    const sleepDur=s<=w?(w-s):((1440-s)+w);
+    if(sleepDur<480){
+      if(errEl){errEl.textContent='You need at least 8 hours of sleep. Current sleep duration: '+Math.floor(sleepDur/60)+'h '+String(sleepDur%60).padStart(2,'0')+'m';errEl.style.display='block'}
+      if(btn){btn.disabled=true;btn.style.opacity='0.5';btn.style.cursor='not-allowed'}
+      return false
+    }
+    if(errEl)errEl.style.display='none';
+    if(btn){btn.disabled=false;btn.style.opacity='1';btn.style.cursor='pointer'}
+    return true
+  }
+
   let subjectCounter=0;
   const topicPlaceholders={'Mathematics':'Differentiation, Integration','Biology':'Cardiac cycle, Photosynthesis','Chemistry':'Organic mechanisms, Electrochemistry','Physics':'Forces, Energy, Waves','English':'Themes, Character analysis','History':'Key dates, Causes and effects','Economics':'Supply and demand, GDP','Geography':'Physical processes, Human impact'};
-  function getSubjColorClass(name){const lower=name.toLowerCase();if(lower.includes('math'))return 'subj-maths';if(lower.includes('biol'))return 'subj-biology';if(lower.includes('chem'))return 'subj-chemistry';if(lower.includes('phys'))return 'subj-physics';if(lower.includes('english'))return 'subj-english';if(lower.includes('history'))return 'subj-history';return ''}
+  function makeSubjPosMap(subjects){const m={};subjects.forEach(function(s,i){m[s.name]='subj-pos-'+Math.min(i,5);});return m;}
+
   function addSubjectRow(name='',topics='',priority='medium',confidence=3){
     subjectCounter++;const id='subject-'+subjectCounter;const el=document.createElement('div');el.className='item-row subject-row';el.id=id;
     const topicsArray=topics?topics.split('|').filter(t=>t.trim()):[];let topicsHtml='<div class="topics-list">';topicsArray.forEach(topic=>{topicsHtml+='<span class="topic-tag">'+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button></span>'});topicsHtml+='</div>';
@@ -163,6 +196,7 @@ const js = `
     const range=el.querySelector('.subject-confidence');const badge=el.querySelector('.conf-badge');range.addEventListener('input',()=>{badge.textContent=range.value+'/5'});
     el.querySelector('.remove-btn').addEventListener('click',()=>el.remove());
   }
+
   let commitCounter=0;
   function addCommitmentRow(day='Monday',start='17:00',end='18:30',label=''){
     commitCounter++;const id='commit-'+commitCounter;const el=document.createElement('div');el.className='item-row commit-row';el.id=id;
@@ -171,8 +205,14 @@ const js = `
     document.getElementById('commitments-list').appendChild(el);
     el.querySelector('.remove-btn').addEventListener('click',()=>el.remove());
   }
+
   function collectState(){
     const name=document.getElementById('student-name').value.trim();
+    const yearGroup=document.getElementById('student-year-group').value;
+    const email=document.getElementById('student-email').value.trim();
+    if(!name){alert('Please enter your first name.');return null}
+    if(!yearGroup){alert('Please select your year group.');return null}
+    if(!email||!/^[^ @]+@[^ @]+\.[^ @]+$/.test(email)){alert('Please enter a valid email address to generate your timetable.');return null}
     const wakeTime=document.getElementById('wake-time').value||'07:00';
     const breakfastTime=document.getElementById('breakfast-time').value||'07:30';
     const lunchTime=document.getElementById('lunch-time').value||'12:00';
@@ -180,8 +220,8 @@ const js = `
     const sleepTime=document.getElementById('sleep-time').value||'23:00';
     const wakeMin=toMinutes(wakeTime);const sleepMin=toMinutes(sleepTime);
     if(isNaN(wakeMin)||isNaN(sleepMin)){alert('Please set valid wake and sleep times.');return null}
-    let gap;if(sleepMin>wakeMin){gap=sleepMin-wakeMin}else{gap=(1440-wakeMin)+sleepMin}
-    if(gap<480){alert('You need at least 8 hours between wake time and sleep time to ensure sufficient rest. Current gap: '+Math.floor(gap/60)+'h '+String(gap%60).padStart(2,'0')+'m');return null}
+    const sleepDur=sleepMin<=wakeMin?(wakeMin-sleepMin):((1440-sleepMin)+wakeMin);
+    if(sleepDur<480){alert('You need at least 8 hours of sleep. Current sleep duration: '+Math.floor(sleepDur/60)+'h '+String(sleepDur%60).padStart(2,'0')+'m');return null}
     const subjects=[];
     document.querySelectorAll('.subject-row').forEach(row=>{
       const sname=row.querySelector('.subject-name').value.trim();if(!sname)return;
@@ -198,87 +238,612 @@ const js = `
     const hasSchool=document.getElementById('has-school').checked;
     let schoolDays=[];let schoolStart=toMinutes('08:30'),schoolEnd=toMinutes('16:00');
     if(hasSchool){document.querySelectorAll('.school-day:checked').forEach(cb=>{schoolDays.push(cb.value)});schoolStart=toMinutes(document.getElementById('school-start').value);schoolEnd=toMinutes(document.getElementById('school-end').value);if(schoolDays.length>0&&schoolStart<schoolEnd){schoolDays.forEach(day=>{commitments.push({day:day,startMin:schoolStart,endMin:schoolEnd,label:'School'})})}}
-    return {name,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
+    return {name,yearGroup,email,wakeTime,breakfastTime,lunchTime,dinnerTime,sleepTime,subjects,commitments};
   }
-  function buildDaySlots(dayIndex,state,sortedSubjects,topicDeepWorkCount,topicLastDeepWork,topicLastRecall){
-    const DEEP=90,RECALL=60,REVIEW=30,BRK=15;
-    const sleepMin=toMinutes(state.sleepTime);const wakeMin=toMinutes(state.wakeTime);
-    let CUTOFF;if(sleepMin>wakeMin){CUTOFF=sleepMin}else{CUTOFF=(1440-wakeMin)+sleepMin}
-    const breakfastMin=toMinutes(state.breakfastTime);const lunchMin=toMinutes(state.lunchTime);const dinnerMin=toMinutes(state.dinnerTime);
-    const slots=[];const dayName=DAYS[dayIndex];
-    const todayCommits=state.commitments.filter(c=>c.day===dayName).sort((a,b)=>a.startMin-b.startMin);
-    const mealDurations=30;
-    let current=wakeMin;let subjIndex=0;const subjCount=sortedSubjects.length;
-    function getSubjColor(name){return getSubjColorClass(name)}
-    function getBestTopic(subj){const topics=subj.topics?subj.topics.split('|'):[];return topics[0]||''}
-    while(current<CUTOFF){
-      const overlap=todayCommits.find(c=>c.startMin<=current&&c.endMin>current);
-      if(overlap){slots.push({type:'fixed',time:fmtTimeRange(overlap.startMin,overlap.endMin),label:overlap.label,sub:'',colorClass:''});current=overlap.endMin;continue}
-      if(current>=breakfastMin&&current<breakfastMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(breakfastMin,breakfastMin+mealDurations),label:'Breakfast',sub:'Fuel up',colorClass:''});current=breakfastMin+mealDurations;continue}
-      if(current>=lunchMin&&current<lunchMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(lunchMin,lunchMin+mealDurations),label:'Lunch',sub:'Step away',colorClass:''});current=lunchMin+mealDurations;continue}
-      if(current>=dinnerMin&&current<dinnerMin+mealDurations){slots.push({type:'break',time:fmtTimeRange(dinnerMin,dinnerMin+mealDurations),label:'Dinner',sub:'Rest',colorClass:''});current=dinnerMin+mealDurations;continue}
-      if(current+DEEP<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+DEEP&&c.endMin>current)){
-        let selectedSubj=null;for(let i=0;i<subjCount;i++){const s=sortedSubjects[(subjIndex+i)%subjCount];const topic=getBestTopic(s);if(topic&&!topicDeepWorkCount.has(s.name+'.'+topic)){topicDeepWorkCount.set(s.name+'.'+topic,0)}const count=topicDeepWorkCount.get(s.name+'.'+topic)||0;if(count<3){selectedSubj=s;break}}
-        if(selectedSubj){const topic=getBestTopic(selectedSubj);slots.push({type:'deep',time:fmtTimeRange(current,current+DEEP),label:selectedSubj.name,sub:topic,colorClass:getSubjColor(selectedSubj.name)});topicDeepWorkCount.set(selectedSubj.name+'.'+topic,(topicDeepWorkCount.get(selectedSubj.name+'.'+topic)||0)+1);topicLastDeepWork.set(selectedSubj.name+'.'+topic,dayIndex);current+=DEEP;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK;subjIndex++}}else if(current+RECALL<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+RECALL&&c.endMin>current)){
-        let selectedSubj=null;for(const subj of sortedSubjects){const topic=getBestTopic(subj);const key=subj.name+'.'+topic;const lastDeep=topicLastDeepWork.get(key);if(lastDeep!==undefined&&(dayIndex-lastDeep>=1)&&(dayIndex-lastDeep<=7)){const lastRecall=topicLastRecall.get(key);if(!lastRecall||dayIndex-lastRecall>=3){selectedSubj=subj;topicLastRecall.set(key,dayIndex);break}}}
-        if(selectedSubj){const topic=getBestTopic(selectedSubj);slots.push({type:'recall',time:fmtTimeRange(current,current+RECALL),label:'Active Recall: '+selectedSubj.name,sub:topic,colorClass:getSubjColor(selectedSubj.name)});current+=RECALL;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{current+=BRK}}else if(current+REVIEW<=CUTOFF&&!todayCommits.find(c=>c.startMin<current+REVIEW&&c.endMin>current)){
-        const subjForReview=sortedSubjects[0];if(subjForReview){const topic=getBestTopic(subjForReview);slots.push({type:'review',time:fmtTimeRange(current,current+REVIEW),label:'Light Review: '+subjForReview.name,sub:topic,colorClass:getSubjColor(subjForReview.name)});current+=REVIEW;if(current<CUTOFF){slots.push({type:'break',time:fmtTimeRange(current,current+BRK),label:'Break',sub:'Rest',colorClass:''});current+=BRK}}else{break}}else{break}
+
+  // ---- New scheduling algorithm: spaced repetition + interleaving ----------
+  // Each topic follows: Deep Work → Active Recall (d+1) → Light Review (d+3/4)
+  // Daily cap: 8 h pure study time, max 2 deep-work blocks per day.
+  // Subjects are interleaved so no 3+ same-subject sessions land in a row.
+  const DEEP_DUR=90, RECALL_DUR=45, REVIEW_DUR=30, BRK_DUR=15, MEAL_DUR=30;
+  const DAY_CAP_STUDY=480;     // 8 h hard cap (study time only)
+  const MAX_DEEP_PER_DAY=3;
+
+  function buildTopicLedger(subjects){
+    const items=[];
+    subjects.forEach(function(s){
+      const tt=(s.topics?s.topics.split('|'):[]).map(function(t){return t.trim()}).filter(Boolean);
+      const w=PRIORITY_WEIGHT[s.priority]*s.confidence;
+      if(tt.length===0){
+        items.push({subject:s.name,topic:'General revision',weight:w});
+      }else{
+        tt.forEach(function(t){items.push({subject:s.name,topic:t,weight:w})});
+      }
+    });
+    items.sort(function(a,b){return b.weight-a.weight||a.subject.localeCompare(b.subject)});
+    return items;
+  }
+
+  function planWeek(subjects){
+    const subjPos=makeSubjPosMap(subjects);
+    function subjClass(name){return subjPos[name]||'subj-pos-0';}
+    const ledger=buildTopicLedger(subjects);
+
+    // Interleave topics so every subject gets one DW before any subject gets a second.
+    // Without this, alphabetically-last subjects (e.g. Physics) get no DW when slots run out.
+    (function(){
+      const bySubj={};
+      ledger.forEach(function(t){if(!bySubj[t.subject])bySubj[t.subject]=[];bySubj[t.subject].push(t);});
+      const out=[];let any=true;
+      while(any){any=false;Object.keys(bySubj).forEach(function(k){if(bySubj[k].length){out.push(bySubj[k].shift());any=true;}});}
+      ledger.length=0;out.forEach(function(t){ledger.push(t);});
+    })();
+
+    // Assign dwCount per topic (1–4 based on weight), then scale to fit slot budget
+    // Max weight=15 (high×5). >=12→4DW, >=8→3DW, >=5→2DW, else 1DW
+    ledger.forEach(function(t){t.dwCount=t.weight>=12?4:t.weight>=8?3:t.weight>=5?2:1;});
+    const MAX_DW_SLOTS=7*MAX_DEEP_PER_DAY;
+    let rawDW=ledger.reduce(function(s,t){return s+t.dwCount;},0);
+    if(rawDW>MAX_DW_SLOTS){
+      const sc=MAX_DW_SLOTS/rawDW;
+      ledger.forEach(function(t){t.dwCount=Math.max(1,Math.round(t.dwCount*sc));});
+      let over=ledger.reduce(function(s,t){return s+t.dwCount;},0)-MAX_DW_SLOTS;
+      for(let i=ledger.length-1;i>=0&&over>0;i--){if(ledger[i].dwCount>1){ledger[i].dwCount--;over--;}}
     }
-    if(slots.length===0){slots.push({type:'none',time:'',label:'No study slots',sub:'Check your wake and sleep times',colorClass:''})}
-    return slots;
+
+    const days=[[],[],[],[],[],[],[]];
+    const dMin=[0,0,0,0,0,0,0];
+    const dDeep=[0,0,0,0,0,0,0];
+    const dSD=[{},{},{},{},{},{},{}];  // subject DW count per day
+
+    function fits(d,type,dur,subj){
+      if(d<0||d>6)return false;
+      if(dMin[d]+dur>DAY_CAP_STUDY)return false;
+      if(type==='deep'){if(dDeep[d]>=MAX_DEEP_PER_DAY||(dSD[d][subj]||0)>=1)return false;}
+      return true;
+    }
+    function place(d,ev){
+      days[d].push(ev);dMin[d]+=ev.dur;
+      if(ev.type==='deep'){dDeep[d]++;dSD[d][ev.subject]=(dSD[d][ev.subject]||0)+1;}
+      return d;
+    }
+
+    // PASS A — Deep Work: schedule dwCount sessions per topic, ≥2 days apart
+    ledger.forEach(function(t){
+      t.dwDays=[];
+      for(let pass=0;pass<t.dwCount;pass++){
+        const minD=t.dwDays.length>0?t.dwDays[t.dwDays.length-1]+2:0;
+        let placed=-1;
+        // Try from minD with full constraints
+        for(let d=minD;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:subjClass(t.subject)});t.dwDays.push(placed);}}
+        // Relax minD gap constraint
+        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(fits(d,'deep',DEEP_DUR,t.subject)){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:subjClass(t.subject)});t.dwDays.push(placed);}}}
+        // Last resort: ignore per-subject-per-day limit
+        if(placed<0){for(let d=0;d<=6&&placed<0;d++){if(dMin[d]+DEEP_DUR<=DAY_CAP_STUDY&&dDeep[d]<MAX_DEEP_PER_DAY){placed=place(d,{type:'deep',subject:t.subject,topic:t.topic,dur:DEEP_DUR,colorClass:subjClass(t.subject)});t.dwDays.push(placed);}}}
+        if(placed<0)break;
+      }
+      t.dwDay=t.dwDays.length>0?t.dwDays[0]:undefined;
+    });
+
+    // PASS B — Active Recall: 1 AR per DW session (d+1, +2, or +3)
+    ledger.forEach(function(t){
+      if(!t.dwDays)return;
+      t.dwDays.forEach(function(dwD){
+        [1,2,3].some(function(off){
+          const d=dwD+off;if(d>6)return true;
+          if(dMin[d]+RECALL_DUR<=DAY_CAP_STUDY){place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:subjClass(t.subject)});return true;}
+          return false;
+        });
+      });
+    });
+
+    // PASS C — Light Revision: 1 LR per DW session (d+3, +4, +5, +6, or +2)
+    ledger.forEach(function(t){
+      if(!t.dwDays)return;
+      t.dwDays.forEach(function(dwD){
+        [3,4,5,6,2].some(function(off){
+          const d=dwD+off;if(d<0||d>6)return false;
+          if(dMin[d]+REVIEW_DUR<=DAY_CAP_STUDY){place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:subjClass(t.subject)});return true;}
+          return false;
+        });
+      });
+    });
+
+    // PASS D — aggressively fill remaining capacity with AR/LR cycling by topic weight
+    // Target: fill each day to within 30 min of the 8 h cap (≈450 min pure study)
+    const FILL_TO=DAY_CAP_STUDY-30;
+    for(let d=0;d<7;d++){
+      if(dMin[d]>=FILL_TO)continue;
+      // Topics already introduced (DW on or before today), sorted heaviest first
+      const avail=ledger.filter(function(t){return t.dwDay!==undefined&&t.dwDay<=d;}).sort(function(a,b){return b.weight-a.weight;});
+      if(!avail.length)continue;
+      let rr=0,safety=200;
+      while(dMin[d]<FILL_TO&&safety-->0){
+        const t=avail[rr%avail.length];rr++;
+        const tAR=days[d].filter(function(e){return e.type==='recall'&&e.topic===t.topic;}).length;
+        const tLR=days[d].filter(function(e){return e.type==='review'&&e.topic===t.topic;}).length;
+        // High-weight topics get more filler passes; lower-weight get fewer
+        // AR only after a prior day's DW (not same day — student hasn't covered it yet)
+        const maxAR=2;
+        const maxLR=t.weight>=12?4:t.weight>=8?3:2;
+        if(tAR<maxAR&&t.dwDay<d&&dMin[d]+RECALL_DUR<=FILL_TO){
+          place(d,{type:'recall',subject:t.subject,topic:t.topic,dur:RECALL_DUR,colorClass:subjClass(t.subject)});
+        }else if(tLR<maxLR&&dMin[d]+REVIEW_DUR<=FILL_TO){
+          place(d,{type:'review',subject:t.subject,topic:t.topic,dur:REVIEW_DUR,colorClass:subjClass(t.subject)});
+        }
+        if(rr%avail.length===0){
+          const anyFits=avail.some(function(t){
+            const ar=days[d].filter(function(e){return e.type==='recall'&&e.topic===t.topic;}).length;
+            const lr=days[d].filter(function(e){return e.type==='review'&&e.topic===t.topic;}).length;
+            const mLR=t.weight>=12?4:t.weight>=8?3:2;
+            return(ar<2&&t.dwDay<d&&dMin[d]+RECALL_DUR<=FILL_TO)||(lr<mLR&&dMin[d]+REVIEW_DUR<=FILL_TO);
+          });
+          if(!anyFits)break;
+        }
+      }
+    }
+
+    return days;
   }
+
+  // Place each day's planned sessions onto the wake→sleep timeline,
+  // respecting meals + commitments and interleaving subjects.
+  function buildDayEvents(dayIndex,state,plannedSessions){
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const rawCutoff=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const CUTOFF=rawCutoff-30;  // 30-min wind-down buffer before bed
+    const breakfastMin=toMinutes(state.breakfastTime);
+    const lunchMin=toMinutes(state.lunchTime);
+    const dinnerMin=toMinutes(state.dinnerTime);
+    const dayName=DAYS[dayIndex];
+
+    const blockers=[];
+    [{startMin:breakfastMin,endMin:breakfastMin+MEAL_DUR,type:'break',label:'Breakfast',sub:'Fuel up'},
+     {startMin:lunchMin,endMin:lunchMin+MEAL_DUR,type:'lunch',label:'Lunch',sub:'Step away'},
+     {startMin:dinnerMin,endMin:dinnerMin+MEAL_DUR,type:'break',label:'Dinner',sub:'Rest'}
+    ].forEach(function(m){if(m.startMin>=wakeMin&&m.startMin<CUTOFF)blockers.push(m)});
+    state.commitments.filter(function(c){return c.day===dayName}).forEach(function(c){
+      blockers.push({startMin:c.startMin,endMin:c.endMin,type:'fixed',label:c.label,sub:''});
+    });
+    blockers.sort(function(a,b){return a.startMin-b.startMin});
+
+    // Drop meal blocks that overlap commitments (commitments win)
+    const resolved=[];
+    blockers.forEach(function(b){
+      const clash=resolved.find(function(r){return b.startMin<r.endMin&&b.endMin>r.startMin});
+      if(!clash)resolved.push(b);
+    });
+
+    const queues={deep:[],recall:[],review:[]};
+    plannedSessions.forEach(function(s){if(queues[s.type])queues[s.type].push(s)});
+
+    // Reserve ~30% of AR+LR sessions for after dinner so evenings are not empty
+    const totalQ=queues.recall.length+queues.review.length;
+    const EVENING_RES=Math.min(8,Math.max(3,Math.floor(totalQ*0.3)));
+    const recallRes=Math.floor(EVENING_RES/2);
+    const reviewRes=EVENING_RES-recallRes;
+    const eveningRecall=queues.recall.splice(Math.max(0,queues.recall.length-recallRes),recallRes);
+    const eveningPool=queues.review.splice(Math.max(0,queues.review.length-reviewRes),reviewRes);
+    let eveningAdded=false;
+
+    // Cap morning study: after MORNING_CAP minutes of study before lunch, extend break to meal
+    const MORNING_CAP=180;
+    let morningStudy=0;
+
+    const events=[];
+    let cursor=wakeMin;
+    let lastSubj=null;
+    let streak=0;
+    let lastStudyType=null;
+
+    function pickEvent(now,remaining){
+      // Release reserved evening sessions once we're past dinner
+      if(now>=dinnerMin&&!eveningAdded){eveningAdded=true;queues.recall.push.apply(queues.recall,eveningRecall);queues.review.push.apply(queues.review,eveningPool);}
+      // Deep Work is always highest priority — never exclude it based on time of day.
+      // School students can only do DW in the evening; excluding it there drops all school-day DW.
+      const order=['deep','recall','review'];
+      for(let oi=0;oi<order.length;oi++){
+        const tt=order[oi];const q=queues[tt];
+        if(!q.length)continue;
+        const dur=tt==='deep'?DEEP_DUR:tt==='recall'?RECALL_DUR:REVIEW_DUR;
+        if(dur>remaining)continue;
+        const mustDiffer=streak>=2&&lastSubj!==null;
+        let idx=q.findIndex(function(e){return e.subject!==lastSubj});
+        if(mustDiffer){if(idx<0)continue}
+        else{if(idx<0)idx=0}
+        return q.splice(idx,1)[0];
+      }
+      return null;
+    }
+
+    let safety=300;
+    while(cursor<CUTOFF&&safety-->0){
+      const inside=resolved.find(function(f){return f.startMin<=cursor&&f.endMin>cursor});
+      if(inside){
+        events.push({startMin:inside.startMin,endMin:Math.min(inside.endMin,CUTOFF),type:inside.type,subject:'',topic:'',label:inside.label,sub:inside.sub,colorClass:''});
+        cursor=inside.endMin;
+        continue;
+      }
+      const next=resolved.find(function(f){return f.startMin>=cursor});
+      const limit=Math.min(next?next.startMin:CUTOFF,CUTOFF);
+      if(limit<=cursor){cursor=limit;continue}
+
+      // Morning cap: once MORNING_CAP study minutes placed before lunch, extend last break to fill gap
+      if(cursor<lunchMin&&morningStudy>=MORNING_CAP){
+        const lb=events.length>0?events[events.length-1]:null;
+        if(lb&&lb.type==='break'){lb.endMin=limit;}
+        else{events.push({startMin:cursor,endMin:limit,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});}
+        cursor=limit;
+        continue;
+      }
+
+      const ev=pickEvent(cursor,limit-cursor);
+      if(!ev){
+        // No session available — extend last break to fill gap rather than showing "Free"
+        const lb=events.length>0?events[events.length-1]:null;
+        if(lb&&lb.type==='break'&&lb.endMin===cursor&&cursor<dinnerMin){
+          lb.endMin=limit;
+        }else if(limit-cursor>=15){
+          events.push({startMin:cursor,endMin:limit,type:'free',subject:'',topic:'',label:'Free',sub:'',colorClass:''});
+        }
+        cursor=limit;
+        continue;
+      }
+
+      if(cursor<lunchMin)morningStudy+=ev.dur;
+      events.push({startMin:cursor,endMin:cursor+ev.dur,type:ev.type,subject:ev.subject,topic:ev.topic,label:'',sub:'',colorClass:ev.colorClass});
+      lastStudyType=ev.type;
+      if(ev.subject===lastSubj)streak++;else streak=1;
+      lastSubj=ev.subject;
+      cursor+=ev.dur;
+
+      // Break after session — longer in afternoon to push sessions toward evening
+      const next2=resolved.find(function(f){return f.startMin>=cursor});
+      const limit2=Math.min(next2?next2.startMin:CUTOFF,CUTOFF);
+      const isPostLunch=cursor>=lunchMin;
+      const brkDur=ev.type==='deep'?(isPostLunch?30:30):ev.type==='recall'?(isPostLunch?20:20):(isPostLunch?15:15);
+      if(limit2-cursor>=brkDur+15){
+        events.push({startMin:cursor,endMin:cursor+brkDur,type:'break',subject:'',topic:'',label:'Break',sub:'Hydrate · move',colorClass:''});
+        cursor+=brkDur;
+      }
+    }
+    return events;
+  }
+
   function generatePlan(state){
-    const sorted=[...state.subjects].sort((a,b)=>(PRIORITY_WEIGHT[b.priority]*(6-b.confidence))-(PRIORITY_WEIGHT[a.priority]*(6-a.confidence)));
-    const topicDeepWorkCount=new Map();const topicLastDeepWork=new Map();const topicLastRecall=new Map();
-    const week=[];for(let i=0;i<7;i++){week.push({dayName:DAYS[i],slots:buildDaySlots(i,state,sorted,topicDeepWorkCount,topicLastDeepWork,topicLastRecall)})}
+    const days=planWeek(state.subjects);
+    const week=[];
+    for(let i=0;i<7;i++){
+      week.push({dayName:DAYS[i],events:buildDayEvents(i,state,days[i])});
+    }
     return week;
   }
-  function renderTimetable(week,name){
+
+  function renderTimetable(week,state,name){
+    const PX_PER_MIN=1.2;
     document.getElementById('tt-heading').textContent=name?(name+"'s Week"):'Your Week';
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const CUTOFF=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const totalMins=CUTOFF-wakeMin;
+    const totalH=Math.round(totalMins*PX_PER_MIN);
     const grid=document.getElementById('week-grid');grid.innerHTML='';
-    week.forEach(day=>{
-      const col=document.createElement('div');col.className='day-col';
-      const head=document.createElement('div');head.className='day-head';head.innerHTML=DAY_SHORT[day.dayName];col.appendChild(head);
-      day.slots.forEach(slot=>{
-        const s=document.createElement('div');s.className='slot slot--'+slot.type;
-        let html='';if(slot.time)html+='<span class="slot-time">'+escapeHTML(slot.time)+'</span>';
-        const labelClass=slot.colorClass?'slot-label '+slot.colorClass:'slot-label';
-        html+='<span class="'+labelClass+'">'+escapeHTML(slot.label)+'</span>';
-        if(slot.sub)html+='<span class="slot-sub">'+escapeHTML(slot.sub)+'</span>';
-        s.innerHTML=html;col.appendChild(s);
-      });
-      grid.appendChild(col);
+
+    const hrow=document.createElement('div');hrow.className='tt-header-row';
+    const spacer=document.createElement('div');spacer.className='tt-axis-spacer';hrow.appendChild(spacer);
+    week.forEach(function(day){
+      const h=document.createElement('div');h.className='tt-day-head';h.textContent=DAY_SHORT[day.dayName];hrow.appendChild(h);
     });
+    grid.appendChild(hrow);
+
+    const bodyRow=document.createElement('div');bodyRow.className='tt-body-row';
+
+    const axis=document.createElement('div');axis.className='tt-axis';axis.style.height=totalH+'px';
+    const startHour=Math.ceil(wakeMin/60);
+    const endHour=Math.floor(CUTOFF/60);
+    for(let h=startHour;h<=endHour;h++){
+      const topPx=Math.round((h*60-wakeMin)*PX_PER_MIN);
+      const lbl=document.createElement('div');lbl.className='tt-hour-label';lbl.style.top=topPx+'px';
+      // At topPx===0 the default translateY(-50%) pulls the label above the container — pin it instead
+      if(topPx===0)lbl.style.transform='translateY(2px)';
+      lbl.textContent=String(((h%24)+24)%24).padStart(2,'0')+':00';
+      axis.appendChild(lbl);
+    }
+    bodyRow.appendChild(axis);
+
+    week.forEach(function(day){
+      const col=document.createElement('div');col.className='tt-day-col';col.style.height=totalH+'px';
+      for(let hh=startHour;hh<=endHour;hh++){
+        const ltp=Math.round((hh*60-wakeMin)*PX_PER_MIN);
+        const line=document.createElement('div');line.className='tt-hour-line';line.style.top=ltp+'px';
+        col.appendChild(line);
+      }
+      day.events.forEach(function(evt){
+        const top=Math.round((evt.startMin-wakeMin)*PX_PER_MIN);
+        const height=Math.max(16,Math.round((evt.endMin-evt.startMin)*PX_PER_MIN));
+        const slot=document.createElement('div');
+        slot.className='tt-slot tt-slot--'+evt.type;
+        slot.style.top=top+'px';slot.style.height=height+'px';
+
+        let displayLabel='';
+        if(evt.type==='deep')displayLabel=evt.subject;
+        else if(evt.type==='recall')displayLabel='Recall: '+evt.subject;
+        else if(evt.type==='review')displayLabel='Review: '+evt.subject;
+        else displayLabel=evt.label||evt.subject||'';
+
+        const labelClass=evt.colorClass?'tt-slot-label '+evt.colorClass:'tt-slot-label';
+        let html='';
+        if(height>=30)html+='<span class="tt-slot-time">'+escapeHTML(fmtTimeRange(evt.startMin,evt.endMin))+'</span>';
+        html+='<span class="'+labelClass+'">'+escapeHTML(displayLabel)+'</span>';
+        const sub=evt.topic||evt.sub||'';
+        if(sub&&height>=45)html+='<span class="tt-slot-sub">'+escapeHTML(sub)+'</span>';
+        slot.innerHTML=html;col.appendChild(slot);
+      });
+      bodyRow.appendChild(col);
+    });
+
+    grid.appendChild(bodyRow);
   }
-  function showTimetable(){document.getElementById('questionnaire-section').style.display='none';document.getElementById('timetable-section').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
-  function showQuestionnaire(){document.getElementById('timetable-section').style.display='none';document.getElementById('questionnaire-section').style.display='block';window.scrollTo({top:0,behavior:'smooth'})}
+
+  function showTimetable(){document.getElementById('questionnaire-section').style.display='none';document.getElementById('timetable-section').style.display='block';document.querySelector('.container').classList.add('container--wide');window.scrollTo({top:0,behavior:'smooth'})}
+  function showQuestionnaire(){document.getElementById('timetable-section').style.display='none';document.getElementById('questionnaire-section').style.display='block';document.querySelector('.container').classList.remove('container--wide');window.scrollTo({top:0,behavior:'smooth'})}
+
+  document.getElementById('wake-time').addEventListener('change',validateSleep);
+  document.getElementById('sleep-time').addEventListener('change',validateSleep);
   document.getElementById('add-subject-btn').addEventListener('click',()=>addSubjectRow());
   document.getElementById('add-commit-btn').addEventListener('click',()=>addCommitmentRow());
   document.getElementById('has-school').addEventListener('change',()=>{document.getElementById('school-section').style.display=document.getElementById('has-school').checked?'block':'none'});
-  document.getElementById('generate-btn').addEventListener('click',()=>{const state=collectState();if(!state)return;const week=generatePlan(state);renderTimetable(week,state.name);showTimetable()});
+  let _exportWeek=null,_exportState=null;
+  document.getElementById('generate-btn').addEventListener('click',()=>{
+    const state=collectState();if(!state)return;
+    // Calculate realistic topic capacity accounting for actual commitments each day.
+    // Each topic needs at least 1 DW slot (90 min + 30 min break).
+    const wMin=toMinutes(state.wakeTime),sMin=toMinutes(state.sleepTime);
+    const rawC=sMin>wMin?sMin:sMin+1440;const CTOFF=rawC-30;
+    const dayLen=CTOFF-wMin;
+    let totalDWSlots=0,totalStudyMins=0;
+    ['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'].forEach(function(day){
+      const commitMins=state.commitments.filter(function(c){return c.day===day;}).reduce(function(sum,c){
+        const cs=Math.max(c.startMin,wMin),ce=Math.min(c.endMin,CTOFF);
+        return sum+Math.max(0,ce-cs);
+      },0);
+      const avail=Math.max(0,dayLen-commitMins-90);
+      totalStudyMins+=avail;
+      totalDWSlots+=Math.min(MAX_DEEP_PER_DAY,Math.floor(avail/(DEEP_DUR+30)));
+    });
+    const maxTopics=totalDWSlots;
+    const totalStudyHrs=Math.round(totalStudyMins/6)/10;
+    const totalTopics=state.subjects.reduce(function(s,sub){return s+(sub.topics?sub.topics.split('|').filter(function(t){return t.trim();}).length||1:1);},0);
+    if(maxTopics>0&&totalTopics>maxTopics){
+      const perSubj=Math.max(1,Math.floor(maxTopics/state.subjects.length));
+      const msg="This week you have about "+totalStudyHrs+" hours available for study across all 7 days (after school, commitments, and meals).\\n\\nThat is enough for "+maxTopics+" deep-work session"+(maxTopics!==1?"s":"")+" — one per topic.\\n\\nYou have entered "+totalTopics+" topics. Topics that do not fit will be skipped, possibly leaving whole subjects uncovered.\\n\\nTo cover every subject, aim for "+perSubj+" topic"+(perSubj!==1?"s":"")+" per subject.\\n\\nPress OK to generate anyway, or Cancel to go back and trim your topics.";
+      if(!confirm(msg))return;
+    }
+    // Fire-and-forget MailerLite subscription — timetable shows regardless of outcome
+    (function(firstName,yearGroup,email){
+      fetch('https://connect.mailerlite.com/api/subscribers',{
+        method:'POST',
+        headers:{'Content-Type':'application/json','Authorization':'Bearer '+ML_API_KEY},
+        body:JSON.stringify({email:email,fields:{name:firstName,year_group:yearGroup},groups:[ML_GROUP_ID]})
+      }).catch(function(err){console.warn('MailerLite subscribe failed:',err)});
+    }(state.name,state.yearGroup,state.email));
+    const week=generatePlan(state);_exportWeek=week;_exportState=state;renderTimetable(week,state,state.name);showTimetable();
+  });
   document.getElementById('edit-btn').addEventListener('click',showQuestionnaire);
-  document.getElementById('print-btn').addEventListener('click',()=>{
-    const element=document.getElementById('timetable-section');
-    const name=document.getElementById('student-name').value.trim()||'revision-timetable';
-    if(typeof html2pdf==='undefined'){alert('PDF library not loaded. Please try again.');return}
-    html2pdf().set({margin:10,filename:name+'.pdf',image:{type:'jpeg',quality:0.98},html2canvas:{scale:2,useCORS:true,logging:false},jsPDF:{orientation:'landscape',unit:'mm',format:'a4'}}).from(element).save();
+
+  document.getElementById('print-btn').addEventListener('click',function(){
+    if(!_exportWeek||!_exportState){alert('Please generate a plan first.');return}
+    const week=_exportWeek, state=_exportState;
+    const name=state.name||'';
+
+    // --- Canvas-based renderer: no html2canvas, no screenshots, guaranteed all 7 days ---
+    const wakeMin=toMinutes(state.wakeTime);
+    const sleepMin=toMinutes(state.sleepTime);
+    const rawCutoff=sleepMin>wakeMin?sleepMin:sleepMin+1440;
+    const CUTOFF=rawCutoff-30;
+    const totalMins=CUTOFF-wakeMin;
+
+    // A4 landscape at 150 dpi
+    const CW=1754, CH=1240;
+    const MG=26;
+    const TITLE_H=34, HDR_H=27, LEG_H=58;
+    const AXIS_W=48;
+    const GRID_TOP=MG+TITLE_H+HDR_H;
+    const GRID_H=CH-GRID_TOP-LEG_H-MG;
+    const GRID_LEFT=MG+AXIS_W;
+    const N=week.length;
+    const COL_W=Math.floor((CW-2*MG-AXIS_W)/N);
+    const PPM=GRID_H/totalMins;
+
+    const cv=document.createElement('canvas');
+    cv.width=CW; cv.height=CH;
+    const c=cv.getContext('2d');
+
+    // White background
+    c.fillStyle='#FFFFFF';
+    c.fillRect(0,0,CW,CH);
+
+    // Title
+    c.fillStyle='#2E2557';
+    c.font='bold 20px Georgia, serif';
+    c.textAlign='center';
+    c.fillText((name?name+"'s ":'')+'Weekly Revision Plan',CW/2,MG+22);
+
+    // Day header bars
+    const DAY_LABELS=['MON','TUE','WED','THU','FRI','SAT','SUN'];
+    week.forEach(function(day,i){
+      const x=GRID_LEFT+i*COL_W;
+      c.fillStyle='#2E2557';
+      c.fillRect(x,MG+TITLE_H,COL_W-1,HDR_H);
+      c.fillStyle='#F5F0E8';
+      c.font='bold 11px Arial, sans-serif';
+      c.textAlign='center';
+      const lbl=DAY_LABELS[['Monday','Tuesday','Wednesday','Thursday','Friday','Saturday','Sunday'].indexOf(day.dayName)]||day.dayName.slice(0,3).toUpperCase();
+      c.fillText(lbl,x+COL_W/2,MG+TITLE_H+HDR_H-8);
+    });
+
+    // Column backgrounds
+    week.forEach(function(day,i){
+      const x=GRID_LEFT+i*COL_W;
+      c.fillStyle='#FBFAF6';
+      c.fillRect(x,GRID_TOP,COL_W-1,GRID_H);
+    });
+
+    // Hour lines + axis labels
+    const startHour=Math.ceil(wakeMin/60);
+    const endHour=Math.floor(CUTOFF/60);
+    for(let h=startHour;h<=endHour;h++){
+      const y=GRID_TOP+Math.round((h*60-wakeMin)*PPM);
+      c.strokeStyle='rgba(180,170,150,0.35)';
+      c.lineWidth=0.6;
+      c.beginPath();c.moveTo(GRID_LEFT,y);c.lineTo(GRID_LEFT+N*COL_W,y);c.stroke();
+      c.fillStyle='#888';
+      c.font='9px Arial, sans-serif';
+      c.textAlign='right';
+      c.fillText(String(((h%24)+24)%24).padStart(2,'0')+':00',GRID_LEFT-4,y+3);
+    }
+
+    // Subject colour map (position-based, same as on-screen)
+    const SC=['#FFFFFF','#F9A8D4','#E879F9','#FDE68A','#A5F3FC','#FDBA74'];
+    const sm={};
+    state.subjects.forEach(function(s,i){sm[s.name]=SC[Math.min(i,5)];});
+
+    const BG={deep:'#1E40AF',recall:'#15803D',review:'#D97706',break:'#E8D9BF',lunch:'#E8D9BF',fixed:'#A0A0B8'};
+
+    // Draw events
+    week.forEach(function(day,i){
+      const x=GRID_LEFT+i*COL_W;
+      day.events.forEach(function(evt){
+        if(evt.type==='free')return;
+        const top=GRID_TOP+Math.round((evt.startMin-wakeMin)*PPM);
+        const ht=Math.max(5,Math.round((evt.endMin-evt.startMin)*PPM));
+        const bg=BG[evt.type]||'#eee';
+
+        c.fillStyle=bg;
+        c.fillRect(x,top,COL_W-1,ht);
+
+        // Coloured left accent for study sessions
+        const isStudy=evt.type==='deep'||evt.type==='recall'||evt.type==='review';
+        if(isStudy){
+          c.fillStyle=sm[evt.subject]||'#fff';
+          c.fillRect(x,top,3,ht);
+        }
+
+        // Text
+        if(ht>=11){
+          let label='';
+          if(evt.type==='deep')label=evt.subject;
+          else if(evt.type==='recall')label='Recall: '+evt.subject;
+          else if(evt.type==='review')label='Review: '+evt.subject;
+          else label=evt.label||'';
+
+          const tc=isStudy?(sm[evt.subject]||'#fff'):(evt.type==='break'||evt.type==='lunch'?'#7a6040':'#fff');
+          c.fillStyle=tc;
+          const fs=ht>=18?10:8;
+          c.font='bold '+fs+'px Arial, sans-serif';
+          c.textAlign='left';
+          const maxW=COL_W-9;
+          let txt=label;
+          while(c.measureText(txt).width>maxW&&txt.length>2)txt=txt.slice(0,-1);
+          if(txt!==label)txt=txt.slice(0,-1)+'…';
+          c.fillText(txt,x+5,top+fs+1);
+
+          // Topic line
+          if(ht>=24&&evt.topic&&isStudy){
+            c.font='8px Arial, sans-serif';
+            c.fillStyle='rgba(255,255,255,0.7)';
+            let tp=evt.topic;
+            while(c.measureText(tp).width>maxW&&tp.length>2)tp=tp.slice(0,-1);
+            if(tp!==evt.topic)tp=tp.slice(0,-1)+'…';
+            c.fillText(tp,x+5,top+fs+11);
+          }
+
+          // Time stamp for taller slots
+          if(ht>=34){
+            c.font='8px Arial, sans-serif';
+            c.fillStyle=isStudy?'rgba(255,255,255,0.55)':'rgba(100,80,40,0.6)';
+            c.fillText(toHHMM(evt.startMin)+' – '+toHHMM(evt.endMin),x+5,top+ht-3);
+          }
+        }
+
+        // Slot border
+        c.strokeStyle='rgba(255,255,255,0.15)';
+        c.lineWidth=0.4;
+        c.strokeRect(x,top,COL_W-1,ht);
+      });
+
+      // Column border
+      c.strokeStyle='rgba(200,190,170,0.4)';
+      c.lineWidth=0.5;
+      c.strokeRect(x,GRID_TOP,COL_W-1,GRID_H);
+    });
+
+    // Left axis border
+    c.strokeStyle='rgba(200,190,170,0.6)';
+    c.lineWidth=1;
+    c.beginPath();c.moveTo(GRID_LEFT,GRID_TOP);c.lineTo(GRID_LEFT,GRID_TOP+GRID_H);c.stroke();
+
+    // Legend
+    const legY=CH-MG-LEG_H+10;
+    const legItems=[
+      {color:'#1E40AF',label:'Deep Work (90 min)'},
+      {color:'#15803D',label:'Active Recall (45 min)'},
+      {color:'#D97706',label:'Light Revision (30 min)'},
+      {color:'#E8D9BF',label:'Break / Meal'},
+      {color:'#A0A0B8',label:'Fixed Commitment'}
+    ];
+    c.font='10px Arial, sans-serif';
+    c.textAlign='left';
+    let lx=MG;
+    legItems.forEach(function(item){
+      c.fillStyle=item.color;
+      c.fillRect(lx,legY,13,13);
+      c.strokeStyle='rgba(0,0,0,0.12)';c.lineWidth=0.5;c.strokeRect(lx,legY,13,13);
+      c.fillStyle='#444';
+      c.fillText(item.label,lx+17,legY+10);
+      lx+=c.measureText(item.label).width+34;
+    });
+
+    // Subject colour key
+    if(state.subjects.length>0){
+      const sy=legY+22;
+      c.fillStyle='#666';c.font='9px Arial, sans-serif';
+      c.fillText('Subjects:',MG,sy+9);
+      let sx=MG+c.measureText('Subjects:').width+10;
+      state.subjects.forEach(function(s,i){
+        if(i>=6)return;
+        c.fillStyle='#555';c.fillRect(sx,sy,10,10);
+        c.fillStyle=SC[i];c.fillRect(sx+1,sy+1,8,8);
+        c.fillStyle='#444';c.font='9px Arial, sans-serif';
+        c.fillText(s.name,sx+13,sy+9);
+        sx+=c.measureText(s.name).width+26;
+      });
+    }
+
+    // Download as PNG
+    cv.toBlob(function(blob){
+      const url=URL.createObjectURL(blob);
+      const a=document.createElement('a');
+      a.href=url;
+      a.download=(name?name.replace(/\s+/g,'-').toLowerCase():'revision')+'-revision-plan.png';
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      setTimeout(function(){URL.revokeObjectURL(url);},1000);
+    },'image/png');
   });
 })();
 `
 
 export default function RevisionTrackerPage() {
   useEffect(() => {
-    const html2pdfScript = document.createElement('script')
-    html2pdfScript.src = 'https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js'
-    html2pdfScript.onload = () => {
-      const appScript = document.createElement('script')
-      appScript.textContent = js
-      document.body.appendChild(appScript)
-    }
-    document.body.appendChild(html2pdfScript)
+    const appScript = document.createElement('script')
+    appScript.textContent = js
+    document.body.appendChild(appScript)
     return () => {
-      if (document.body.contains(html2pdfScript)) {
-        document.body.removeChild(html2pdfScript)
+      if (document.body.contains(appScript)) {
+        document.body.removeChild(appScript)
       }
     }
   }, [])
@@ -300,8 +865,22 @@ export default function RevisionTrackerPage() {
             <div className="card-num">1</div>
             <h2 className="card-title">About You</h2>
             <p className="card-subtitle">Just the basics. Used to shape your day.</p>
-            <label htmlFor="student-name">First name (optional)</label>
+            <label htmlFor="student-name">First name <span style={{color:'#C9A96E'}}>*</span></label>
             <input type="text" id="student-name" placeholder="e.g. Aisha" maxLength={30} />
+            <label htmlFor="student-year-group">Year group <span style={{color:'#C9A96E'}}>*</span></label>
+            <select id="student-year-group" defaultValue="">
+              <option value="" disabled>Select your year group</option>
+              <option value="Year 9">Year 9</option>
+              <option value="Year 10">Year 10</option>
+              <option value="Year 11">Year 11</option>
+              <option value="Year 12">Year 12</option>
+              <option value="Year 13">Year 13</option>
+              <option value="Gap Year">Gap Year</option>
+              <option value="Other">Other</option>
+            </select>
+            <label htmlFor="student-email">Email address <span style={{color:'#C9A96E'}}>*</span></label>
+            <input type="email" id="student-email" placeholder="your@email.com" maxLength={100} />
+            <p className="help-text">Get more free study tips and resources from Dr Waleed</p>
             <label htmlFor="wake-time">Wake-up time</label>
             <input type="time" id="wake-time" defaultValue="07:00" />
             <label htmlFor="breakfast-time">Breakfast time</label>
@@ -312,6 +891,7 @@ export default function RevisionTrackerPage() {
             <input type="time" id="dinner-time" defaultValue="18:00" />
             <label htmlFor="sleep-time">Sleep time (target bedtime)</label>
             <input type="time" id="sleep-time" defaultValue="23:00" />
+            <div id="sleep-time-error" className="sleep-error"></div>
             <div className="info-line">Sleep is part of the system. Your wake time and sleep time must be at least <strong>8 hours apart</strong>. This is non-negotiable and ensures you're getting the rest you need to perform at your best.</div>
           </div>
 
@@ -381,6 +961,7 @@ export default function RevisionTrackerPage() {
 
         <section id="timetable-section">
           <div className="tt-header">
+            <img id="pdf-logo" src="/logo-header.png" alt="A-Level Accelerators" crossOrigin="anonymous" />
             <div className="badge">Your Personal Plan</div>
             <h2 id="tt-heading">Your Week</h2>
             <p>Deep Work · Active Recall · Light Review · Breaks</p>
@@ -392,12 +973,12 @@ export default function RevisionTrackerPage() {
 
           <div className="legend-wrap">
             <div className="legend">
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#2E2557' }}></span> Deep Work</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#7B6FA0' }}></span> Active Recall</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#9E8BC0' }}></span> Light Review</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#E8D9BF' }}></span> Break</div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#f0e8d5' }}></span> Lunch</div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#1E40AF' }}></span><span><strong>Deep Work</strong> — new material, full focus (90 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#15803D' }}></span><span><strong>Active Recall</strong> — test yourself: past papers, blurting, Anki (45 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#B45309' }}></span><span><strong>Light Revision</strong> — quick revisit, consolidate notes (30 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#E8D9BF' }}></span> Break / Meal</div>
               <div className="legend-item"><span className="legend-dot" style={{ background: '#A0A0B8' }}></span> Fixed Commitment</div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#f5f5f5', border:'1px dashed #ddd' }}></span> Free / Buffer</div>
             </div>
           </div>
 
@@ -408,10 +989,10 @@ export default function RevisionTrackerPage() {
 
           <div className="action-row">
             <button type="button" className="btn-outline" id="edit-btn">← Edit My Answers</button>
-            <button type="button" className="btn-solid" id="print-btn">Save as PDF</button>
+            <button type="button" className="btn-solid" id="print-btn">Download as Image</button>
           </div>
           <div className="tips" style={{marginTop:'1rem', background: 'var(--cream)', color: 'var(--text)', borderLeft: '4px solid var(--gold)'}}>
-            <strong style={{color: 'var(--gold)'}}>Tip:</strong> After saving, you can open the PDF and print it to stick on your wall — that's the most effective way to use this plan. Print it out and put it somewhere you'll see it every day!
+            <strong style={{color: 'var(--gold)'}}>Tip:</strong> After downloading as an image, you can print it out and stick it on your wall, that&apos;s the most effective way to use this plan. Put it somewhere you&apos;ll see it every day!
           </div>
         </section>
       </div>
