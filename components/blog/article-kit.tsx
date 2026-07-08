@@ -46,7 +46,7 @@ export const A = ({ href, children }: { href: string; children: React.ReactNode 
 
 /* ---------- Answer-engine blocks ---------- */
 
-// Direct answer box at the top of the article — the snippet AI assistants and
+// Direct answer box at the top of the article: the snippet AI assistants and
 // featured snippets lift. Keep it to 2-3 sentences that answer the title question.
 export const QuickAnswer = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-white border-l-4 border-brand-gold rounded-r-lg shadow-md p-6 mb-10">
@@ -83,7 +83,7 @@ export const TrackerCTA = () => (
     <p className="text-2xl font-serif text-brand-gold mb-3">Free: get a revision timetable built for you</p>
     <p className="text-brand-cream mb-6 max-w-xl mx-auto">
       Answer a few questions about your subjects and weak topics, and our free revision tracker builds you a
-      personalised weekly plan using spaced repetition — the same method covered in this article.
+      personalised weekly plan using spaced repetition, the same method covered in this article.
     </p>
     <a
       href="/revision-tracker"
@@ -96,7 +96,7 @@ export const TrackerCTA = () => (
 
 export const CourseCTA = ({
   heading = 'Want expert help, not just advice?',
-  body = 'A-Level Accelerators runs live online classes in Biology, Chemistry, Maths and Physics, taught by subject specialists and led by Dr Waleed Ahmad — a doctor and former top-performing A-level student. Small groups, real exam technique, first session risk-free.',
+  body = 'A-Level Accelerators runs live online classes in Biology, Chemistry, Maths and Physics, taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. Small groups, real exam technique, first session risk-free.',
   label = 'See Our A-Level Courses',
   href = '/',
 }: {

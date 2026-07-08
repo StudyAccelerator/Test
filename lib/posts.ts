@@ -17,7 +17,7 @@ export const posts: Post[] = [
     slug: 'how-to-improve-predicted-grades',
     title: 'How to Improve Your A-Level Predicted Grades Before UCAS',
     description:
-      'Predicted grades are set early in Year 13 — and yes, you can change them. A doctor and former top A-level student explains exactly what evidence teachers need, and the timeline to build it.',
+      'Predicted grades get set early in Year 13, and yes, you can change them. A doctor and former top A-level student explains exactly what evidence teachers need, and how long it takes to build.',
     datePublished: '2026-07-08',
     dateModified: '2026-07-08',
     readingMinutes: 9,
@@ -34,7 +34,7 @@ export const posts: Post[] = [
     slug: 'year-12-summer-revision',
     title: 'Should You Revise Over the Year 12 Summer? What Top Students Actually Do',
     description:
-      'The summer between Year 12 and Year 13 decides more than most students realise — predicted grades are set within weeks of returning. Here is what to do (and what to skip).',
+      'The summer between Year 12 and Year 13 decides more than most students realise. Predicted grades get set within weeks of returning. Here is what to do, and what to skip.',
     datePublished: '2026-07-08',
     dateModified: '2026-07-08',
     readingMinutes: 8,
@@ -51,7 +51,7 @@ export const posts: Post[] = [
     slug: 'blurting-method-a-level-revision',
     title: 'The Blurting Method: How to Use It for A-Level Revision (Step-by-Step)',
     description:
-      'Blurting is the revision technique top students swear by — and most people do it wrong. A step-by-step guide from a doctor and former top A-level student, plus a free printable template.',
+      'Blurting is the revision technique top students swear by, and most people do it wrong. A step-by-step guide from a doctor and former top A-level student, plus a free printable template.',
     datePublished: '2026-07-08',
     dateModified: '2026-07-08',
     readingMinutes: 8,
@@ -68,7 +68,7 @@ export const posts: Post[] = [
     slug: 'how-many-hours-revision-a-level',
     title: 'How Many Hours a Day Should You Revise for A-Levels?',
     description:
-      'The honest answer from a doctor who got top A-level grades: 3–5 focused hours beats 8 distracted ones. Exact hour targets by year group and time of year, and why more isn’t better.',
+      'The honest answer from a doctor who got top A-level grades: 3 to 5 focused hours beats 8 distracted ones. Exact hour targets by year group and time of year, and why more is often worse.',
     datePublished: '2026-07-08',
     dateModified: '2026-07-08',
     readingMinutes: 7,
@@ -84,7 +84,7 @@ export const posts: Post[] = [
     slug: 'how-to-make-a-revision-timetable',
     title: 'How to Make an A-Level Revision Timetable That Actually Works',
     description:
-      'Most revision timetables fail within a week because they ignore how memory works. Build one around spaced repetition and active recall instead — full method, plus a free tool that does it for you.',
+      'Most revision timetables fail within a week because they ignore how memory works. Build one around spaced repetition and active recall instead. Full method, plus a free tool that does it for you.',
     datePublished: '2026-07-08',
     dateModified: '2026-07-08',
     readingMinutes: 9,

@@ -3,14 +3,14 @@ import Header from '@/components/header'
 import { posts, SITE_URL } from '@/lib/posts'
 
 export const metadata: Metadata = {
-  title: 'A-Level Revision Blog — Advice From a Doctor & Former Top Student',
+  title: 'A-Level Revision Blog: Advice From a Doctor & Former Top Student',
   description:
-    'Evidence-based A-level revision advice: study techniques, revision timetables, predicted grades and UCAS strategy. Written by Dr Waleed Ahmad, MBBS — doctor, former top-performing A-level student, and founder of A-Level Accelerators.',
+    'A-level revision advice that actually works: study techniques, revision timetables, predicted grades and UCAS strategy. Written by Dr Waleed Ahmad, MBBS, a doctor, former top A-level student and founder of A-Level Accelerators.',
   alternates: { canonical: `${SITE_URL}/blog/` },
   openGraph: {
     title: 'A-Level Revision Blog | A-Level Accelerators',
     description:
-      'Evidence-based A-level revision advice: study techniques, revision timetables, predicted grades and UCAS strategy.',
+      'A-level revision advice that actually works: study techniques, revision timetables, predicted grades and UCAS strategy.',
     type: 'website',
     url: `${SITE_URL}/blog/`,
   },
@@ -22,7 +22,7 @@ const collectionSchema = {
   name: 'A-Level Revision Blog',
   url: `${SITE_URL}/blog/`,
   description:
-    'Evidence-based A-level revision advice from Dr Waleed Ahmad, MBBS — doctor and former top-performing A-level student.',
+    'A-level revision advice from Dr Waleed Ahmad, MBBS, a doctor and former top-performing A-level student.',
   publisher: {
     '@type': 'Organization',
     name: 'A-Level Accelerators',
@@ -45,10 +45,10 @@ export default function BlogIndex() {
       <section className="max-w-5xl mx-auto px-6 pt-14 pb-6 text-center">
         <p className="text-sm font-bold uppercase tracking-wide text-brand-gold mb-3">The A-Level Accelerators Blog</p>
         <h1 className="text-4xl md:text-5xl text-brand-purple font-serif font-bold leading-tight mb-5">
-          Revision advice that&apos;s actually evidence-based
+          Revision advice that actually works
         </h1>
         <p className="text-lg text-brand-text max-w-2xl mx-auto">
-          Study techniques, revision timetables, predicted grades and UCAS strategy — written by
+          Study techniques, revision timetables, predicted grades and UCAS strategy, written by
           Dr Waleed Ahmad, MBBS: doctor, former top-performing A-level student, and founder of A-Level
           Accelerators. No recycled study tips; only what works.
         </p>
@@ -96,7 +96,7 @@ export default function BlogIndex() {
           <p className="text-2xl font-serif text-brand-gold mb-3">Get a free revision timetable built for you</p>
           <p className="text-brand-cream mb-6 max-w-xl mx-auto">
             Our free Revision Tracker turns your subjects, weak topics and commitments into a personalised weekly
-            plan built on spaced repetition — the same methods this blog teaches.
+            plan built on spaced repetition, the same methods this blog teaches.
           </p>
           <a
             href="/revision-tracker"
