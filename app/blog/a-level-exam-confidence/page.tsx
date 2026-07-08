@@ -53,7 +53,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Can a tutor help improve exam confidence?',
-    a: 'Yes, if the teaching is exam-focused. Confidence grows from successful reps: working through real exam questions, understanding mark schemes, and watching your scores improve. In our own programmes, students rate their confidence in each topic before and after every session, and the average rose from 6.6 to 8.3 out of 10 across our most recent 12-week programme.',
+    a: 'Yes, if the teaching is exam-focused. Confidence grows from successful reps: working through real exam questions, understanding mark schemes, and watching your scores improve. In our own programmes, students rate their confidence in each topic before and after every session, and the average rose from 6.2 to 8.3 out of 10 across our recent 12-week Biology and Chemistry programmes.',
   },
 ]
 
@@ -179,7 +179,7 @@ export default function Page() {
 
       <CourseCTA
         heading="Confidence, taught deliberately"
-        body="Our live A-Level programmes in Biology, Chemistry, Maths and Physics build confidence the honest way: exam questions and mark schemes every session, and measurable progress week by week. In our most recent 12-week programme, students' self-rated topic confidence rose from 6.6 to 8.3 out of 10 on average. Led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
+        body="Our live A-Level programmes in Biology, Chemistry, Maths and Physics build confidence the honest way: exam questions and mark schemes every session, and measurable progress week by week. Across our recent 12-week Biology and Chemistry programmes, students' self-rated topic confidence rose from 6.2 to 8.3 out of 10 on average. Led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
         label="See Our A-Level Courses"
       />
     </ArticleLayout>

@@ -50,15 +50,15 @@ const testimonials: Testimonial[] = [
   },
   {
     id: 7,
-    quote: 'I liked how we worked together to get the answers instead of the tutor doing it for us. We go straight into exam practice instead of spending ages on content, and it works. Could we please get more homework, especially harder exam questions!',
+    quote: "I liked how we worked together to get the answers instead of the tutor doing it for us. We go straight into exam practice instead of spending ages on content, and it works. Could we please get more homework, especially harder exam questions!",
     name: 'Maahil',
     year: 'A-Level Chemistry Student',
   },
   {
     id: 8,
-    quote: 'The content was explained really well and there was a brilliant range of questions. I like the way everything is taught',
+    quote: 'The content was explained really well and there was a brilliant range of questions. I love the way everything is taught',
     name: 'Menahil',
-    year: 'A-Level Chemistry Student',
+    year: 'Year 13 Student',
   },
   {
     id: 9,
@@ -70,13 +70,31 @@ const testimonials: Testimonial[] = [
     id: 10,
     quote: 'It was really useful having the breakdown of exam questions gone through step by step, then explaining the answers after we had attempted them',
     name: 'Vernon',
-    year: 'A-Level Chemistry Student',
+    year: 'Year 12 Student',
   },
   {
     id: 11,
-    quote: 'I appreciated how we went through different types of questions from different exam boards, and the mark schemes in detail',
-    name: 'Maahil',
-    year: 'A-Level Chemistry Student',
+    quote: 'The whole session was interactive and the tutor was really helpful and informative. Honestly there was nothing I would change',
+    name: 'Rayanna',
+    year: 'A-Level Biology Student',
+  },
+  {
+    id: 12,
+    quote: 'The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content',
+    name: 'Naysa',
+    year: 'A-Level Biology Student',
+  },
+  {
+    id: 13,
+    quote: 'I liked how the session was so exam-technique focused, with a great balance of exam questions and the content behind them',
+    name: 'Furkan',
+    year: 'Year 13 Student',
+  },
+  {
+    id: 14,
+    quote: 'It showed how questions repeat and how the same mark scheme answers keep coming up. The explanations were really clear',
+    name: 'Aya',
+    year: 'A-Level Biology Student',
   },
 ]
 
@@ -213,8 +231,8 @@ const TestimonialSlider: React.FC = () => {
             Hear From Our Students
           </h3>
           <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-4">
-            On our latest 12-week Chemistry Accelerator, students rated their confidence in every topic before
-            and after each session. The average rose from 6.6 to 8.3 out of 10.
+            Across our recent 12-week Biology and Chemistry Accelerators, students rated their confidence in every
+            topic before and after each session. The average rose from 6.2 to 8.3 out of 10.
           </p>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-brand-purple to-brand-gold mx-auto mt-4 sm:mt-6"></div>
         </motion.div>

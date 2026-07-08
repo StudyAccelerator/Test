@@ -160,8 +160,8 @@ export default function Page() {
       <Callout title="What this looks like at A-Level Accelerators">
         Our programmes are live small-group courses in Biology, Chemistry, Maths and Physics, taught by subject
         specialists and led by me, Dr Waleed Ahmad. Every session covers the content briefly and then goes
-        straight into exam questions and mark schemes. In our most recent 12-week Chemistry programme, students
-        rated their topic confidence 6.6 out of 10 on average before sessions and 8.3 after. The first session
+        straight into exam questions and mark schemes. Across our recent 12-week Biology and Chemistry programmes, students
+        rated their topic confidence 6.2 out of 10 on average before sessions and 8.3 after. The first session
         is risk-free, so you can judge the teaching before you commit.
       </Callout>
 

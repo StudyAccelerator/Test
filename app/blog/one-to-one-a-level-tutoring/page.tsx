@@ -143,8 +143,8 @@ export default function Page() {
         <LI>The economics change completely: specialist teaching at £9 to £15 per hour instead of £40 to £60.</LI>
       </UL>
       <P>
-        In our own 12-week Chemistry Accelerator, students rated their confidence in each topic before and
-        after every session. The average went from 6.6 out of 10 to 8.3. One student&apos;s feedback request was
+        Across our 12-week Biology and Chemistry Accelerators, students rated their confidence in each topic before and
+        after every session. The average went from 6.2 out of 10 to 8.3. One student&apos;s feedback request was
         for more homework and harder exam questions, which tells you something about what a structured group
         does to motivation.
       </P>

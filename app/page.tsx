@@ -111,16 +111,24 @@ export default function SummerAccelerators() {
             <span className="text-brand-gold">Master the Topics That Decide</span> <span className="text-brand-cream">Your Predicted Grades!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Get ahead in six weeks this summer on the high-yield Year 13 topics that determine your predicted grades!
+            A six-week live summer course covering the high-yield Year 13 topics in Biology, Chemistry, Maths and Physics. Taught by subject specialists, led by a doctor.
           </p>
-          <a
-            href="#pricing"
-            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-          >
-            Start September Ahead
-          </a>
+          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+            <a
+              href="#pricing"
+              className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
+            >
+              Start September Ahead
+            </a>
+            <a
+              href={BOOK_A_CALL_LINK}
+              className="inline-block px-8 py-4 border-2 border-brand-gold text-brand-gold font-semibold rounded-md text-lg hover:bg-brand-gold hover:text-brand-purple transition-all"
+            >
+              Book a Free Call
+            </a>
+          </div>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-gold opacity-90 font-medium">
-            <span>Led by Dr Waleed &amp; Expert A-Level tutors</span>
+            <span>Led by Dr Waleed &amp; expert A-Level tutors</span>
             <span aria-hidden="true">·</span>
             <span>1,000+ students supported</span>
             <span aria-hidden="true">·</span>
@@ -139,6 +147,30 @@ export default function SummerAccelerators() {
           </div>
         </section>
       </ScrollFade>
+
+      {/* Proof strip: concrete numbers before any pitch */}
+      <ScrollFade>
+        <section className="py-10 px-4 bg-white border-b border-brand-cream-dark">
+          <div className="max-w-5xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+            {[
+              { stat: '1,000+', label: 'students worked with' },
+              { stat: '6.2 → 8.3', label: 'average topic confidence (out of 10) across our last two 12-week programmes' },
+              { stat: '24 hrs', label: 'of live teaching per subject' },
+              { stat: '£9 to £12', label: 'per hour, vs £50/hr average for 1:1 tutoring' },
+            ].map((item) => (
+              <div key={item.label}>
+                <p className="text-3xl md:text-4xl font-serif font-bold text-brand-purple">{item.stat}</p>
+                <p className="text-sm text-brand-text opacity-75 mt-2 leading-snug">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Testimonials: proof before pitch */}
+      <TestimonialSlider />
+
+      <Divider />
 
       {/* Why Learn With Me */}
       <ScrollFade>
@@ -278,11 +310,6 @@ export default function SummerAccelerators() {
           </div>
         </section>
       </ScrollFade>
-
-      <Divider />
-
-      {/* Testimonials Slider */}
-      <TestimonialSlider />
 
       <Divider />
 
@@ -575,25 +602,33 @@ export default function SummerAccelerators() {
             </a>
             <div className="hidden md:block w-px h-36 bg-brand-gold opacity-40 flex-shrink-0"></div>
             <div className="md:hidden h-px w-40 bg-brand-gold opacity-30"></div>
-            <div className="md:flex-1 text-center">
-              <h3 className="text-lg text-white font-bold mb-4 text-center">Get in Touch</h3>
-              <div className="flex gap-8 justify-center text-sm">
-                <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition text-center">Email</a>
-                <a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition text-center">Book a Call</a>
+            <div className="md:flex-1 grid grid-cols-1 sm:grid-cols-3 gap-6 text-center sm:text-left">
+              <div>
+                <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Programmes</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/#pricing" className="text-brand-gold hover:text-white transition">Summer Accelerator</a></li>
+                  <li><a href="/subject-accelerators" className="text-brand-gold hover:text-white transition">Subject Accelerators</a></li>
+                  <li><a href="/study-systems" className="text-brand-gold hover:text-white transition">Study System</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Free Resources</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="/blog/" className="text-brand-gold hover:text-white transition">Revision Blog</a></li>
+                  <li><a href="/revision-tracker" className="text-brand-gold hover:text-white transition">Revision Tracker</a></li>
+                  <li><a href="/A-Level-Accelerators-Blurting-Template.pdf" className="text-brand-gold hover:text-white transition">Blurting Template</a></li>
+                </ul>
+              </div>
+              <div>
+                <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Get in Touch</h3>
+                <ul className="space-y-2 text-sm">
+                  <li><a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a></li>
+                  <li><a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition">Book a Free Call</a></li>
+                </ul>
               </div>
             </div>
           </div>
           <div className="h-px bg-brand-gold opacity-20 my-4"></div>
-          <div className="flex justify-center mb-4">
-            <a
-              href="/revision-tracker"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-xs text-brand-cream opacity-50 hover:opacity-80 border border-brand-cream/20 hover:border-brand-cream/40 rounded px-4 py-1.5 transition"
-            >
-              Free Revision Tracker
-            </a>
-          </div>
           <p className="text-center text-xs opacity-60">
             &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
           </p>
