@@ -41,7 +41,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'How long should one blurting session take?',
-    a: 'Around 20 to 30 minutes per topic. Spend 5 to 10 minutes reviewing the material, 5 to 10 minutes blurting from memory, and 10 minutes checking, correcting and re-blurting the gaps. If a topic takes much longer than that, it is too big. Split it into sub-topics.',
+    a: "Around 20 to 30 minutes per topic. Spend 5 to 10 minutes reviewing the material, 5 to 10 minutes blurting from memory, and 10 minutes checking, correcting and re-blurting the gaps. If a topic takes much longer than that, it's too big. Split it into sub-topics.",
   },
   {
     q: 'Is blurting better than flashcards?',

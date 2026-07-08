@@ -5,7 +5,8 @@ import FAQItem from '@/components/ui/faq-item'
 
 export const metadata = {
   title: 'A-Level Accelerators - Live 12-Week Exam Programs',
-  description: 'Specialist-led live 12-week exam programs for A-Level Maths, Biology and Chemistry.',
+  description: 'Boost your A-Level Biology, Chemistry, and Maths performance with Subject Accelerators. Gain expert guidance, targeted revision, and exam-focused learning.',
+  alternates: { canonical: 'https://alevelaccelerators.com/subject-accelerators/' },
 }
 
 const STRIPE_LINK_ONE_SUBJECT = 'https://buy.stripe.com/7sYdRafdM2HA8nE36Ic3m09'

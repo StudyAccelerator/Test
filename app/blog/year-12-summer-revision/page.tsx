@@ -45,11 +45,11 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Is it too late to improve my grades if Year 12 went badly?',
-    a: 'No. Year 12 results do not appear on your certificate. Your final exams cover everything and you sit them at the end of Year 13. But predicted grades are usually set within weeks of returning in September, so if Year 12 went badly, the summer is exactly when the turnaround has to happen.',
+    a: "No. Year 12 results don't appear on your certificate. Your final exams cover everything and you sit them at the end of Year 13. But predicted grades are usually set within weeks of returning in September, so if Year 12 went badly, the summer is exactly when the turnaround has to happen.",
   },
   {
     q: 'Should I take a complete break after Year 12 exams?',
-    a: 'Yes. Take two full weeks off with zero guilt. Rest is part of the plan, not a betrayal of it. The mistake is not the break. The mistake is letting two weeks quietly become seven and arriving in September having forgotten a term of content.',
+    a: "Yes. Take two full weeks off with zero guilt. Rest is part of the plan, not a betrayal of it. The mistake isn't the break. The mistake is letting two weeks quietly become seven and arriving in September having forgotten a term of content.",
   },
   {
     q: 'What about my personal statement and UCAS preparation?',
@@ -76,8 +76,8 @@ export default function Page() {
 
       <KeyTakeaways
         points={[
-          'Predicted grades, the numbers that decide which universities you can apply to, are typically set in September or October. They are based mostly on how you finished Year 12.',
-          'So the Year 12 summer is the last input into those numbers. It is not a neutral gap between school years.',
+          "Predicted grades, the numbers that decide which universities you can apply to, are typically set in September or October. They're based mostly on how you finished Year 12.",
+          "So the Year 12 summer is the last input into those numbers. It's not a neutral gap between school years.",
           'You need roughly 60 to 80 focused hours across the holiday. About 1.5 to 2 hours a day, five days a week, after two full weeks off.',
           'Split the time: around 40% repairing weak Year 12 topics, 60% previewing first-term Year 13 content.',
           'Forgetting is the enemy. Six weeks of zero contact with your subjects and a big chunk of Year 12 quietly disappears. Year 13 builds directly on it.',

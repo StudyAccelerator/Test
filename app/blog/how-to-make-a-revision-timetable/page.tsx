@@ -45,7 +45,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Should every subject get equal time in my timetable?',
-    a: 'No. Weight your time toward your weakest subjects, and within each subject, your weakest topics. Marks come from fixing what you cannot do, not from polishing what you can. A good rule of thumb is roughly 60% of your time on weak topics, 25% on medium ones, and 15% keeping your strengths warm.',
+    a: "No. Weight your time toward your weakest subjects, and within each subject, your weakest topics. Marks come from fixing what you can't do, not from polishing what you can. A good rule of thumb is roughly 60% of your time on weak topics, 25% on medium ones, and 15% keeping your strengths warm.",
   },
   {
     q: 'How do I stick to a revision timetable?',

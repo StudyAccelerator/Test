@@ -17,14 +17,14 @@ export const metadata: Metadata = {
 }
 
 const collectionSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'CollectionPage',
+  "@context': 'https://schema.org",
+  "@type': 'CollectionPage",
   name: 'A-Level Revision Blog',
   url: `${SITE_URL}/blog/`,
   description:
     'A-level revision advice from Dr Waleed Ahmad, MBBS, a doctor and former top-performing A-level student.',
   publisher: {
-    '@type': 'Organization',
+    "@type': 'Organization",
     name: 'A-Level Accelerators',
     url: SITE_URL,
   },

@@ -36,12 +36,12 @@ export const metadata: Metadata = {
 
 const faqs: FAQ[] = [
   {
-    q: 'Can predicted grades be changed after they are set?',
-    a: 'Yes. Right up until your school submits your UCAS application, your teachers can revise your predicted grades. Once the application goes off to UCAS, they are locked for that cycle. So the window between September and your submission date really matters. It is your last chance to show new evidence.',
+    q: "Can predicted grades be changed after they're set?",
+    a: "Yes. Right up until your school submits your UCAS application, your teachers can revise your predicted grades. Once the application goes off to UCAS, they're locked for that cycle. So the window between September and your submission date really matters. It's your last chance to show new evidence.",
   },
   {
     q: 'Do universities ever accept students who miss their predicted grades?',
-    a: 'Often, yes. Universities make offers based on predictions but confirm places based on your actual results, and plenty of them show flexibility if you narrowly miss, especially if you did well in the subjects that matter for the course. But relying on that is a gamble. You are in a much stronger position with a prediction that reflects what you can actually do.',
+    a: "Often, yes. Universities make offers based on predictions but confirm places based on your actual results, and plenty of them show flexibility if you narrowly miss, especially if you did well in the subjects that matter for the course. But relying on that's a gamble. You're in a much stronger position with a prediction that reflects what you can actually do.",
   },
   {
     q: 'When are A-level predicted grades decided?',
@@ -49,7 +49,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Can I ask my teacher directly to raise my predicted grade?',
-    a: 'You can, and you should. But bring evidence, not enthusiasm. Something like "I want to be predicted an A. What would you need to see from me by October?" turns your teacher into an ally and gives you a concrete target. Teachers respond to marked work, mock results and consistent classwork. They do not respond to promises.',
+    a: "You can, and you should. But bring evidence, not enthusiasm. Something like \"I want to be predicted an A. What would you need to see from me by October?\" turns your teacher into an ally and gives you a concrete target. Teachers respond to marked work, mock results and consistent classwork. They don't respond to promises.",
   },
   {
     q: 'Do predicted grades matter for medicine and Oxbridge?',
@@ -70,7 +70,7 @@ export default function Page() {
       <Lead>
         Every autumn I speak to students who have just found out their predicted grades, and they&apos;re gutted.
         A BBB prediction when they need AAB. A teacher who played it safe. A UCAS application that suddenly
-        can&apos;t carry the universities they actually want. Here&apos;s the good news: a predicted grade is not a
+        can&apos;t carry the universities they actually want. Here&apos;s the good news: a predicted grade isn't a
         verdict. It&apos;s a judgement based on evidence, and evidence can change. The bad news? Almost every
         student who tries to change it starts too late.
       </Lead>
@@ -78,9 +78,9 @@ export default function Page() {
       <KeyTakeaways
         points={[
           'Your teachers set your predicted grades, usually in September or October of Year 13, based mostly on your end of Year 12 exams.',
-          'They can be changed any time before your school submits your UCAS application. After that, they are locked.',
+          "They can be changed any time before your school submits your UCAS application. After that, they're locked.",
           'Teachers need evidence to raise a prediction. Better mock results, resat assessments, consistent classwork. Not promises.',
-          'Realistically you have the summer holiday plus the first half term of Year 13 to build that evidence.',
+          "Realistically you've the summer holiday plus the first half term of Year 13 to build that evidence.",
           'Applying for medicine, dentistry or Oxbridge? The deadline is mid-October, so your evidence needs to exist by early October.',
         ]}
       />

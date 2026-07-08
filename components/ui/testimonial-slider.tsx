@@ -48,6 +48,36 @@ const testimonials: Testimonial[] = [
     name: 'Reanna',
     year: 'Year 12 Student',
   },
+  {
+    id: 7,
+    quote: 'I liked how we worked together to get the answers instead of the tutor doing it for us. We go straight into exam practice instead of spending ages on content, and it works. Could we please get more homework, especially harder exam questions!',
+    name: 'Maahil',
+    year: 'A-Level Chemistry Student',
+  },
+  {
+    id: 8,
+    quote: 'The content was explained really well and there was a brilliant range of questions. I like the way everything is taught',
+    name: 'Menahil',
+    year: 'A-Level Chemistry Student',
+  },
+  {
+    id: 9,
+    quote: 'Well structured and informative walkthroughs, with lots of hard questions and worked solutions',
+    name: 'Ahreen',
+    year: 'A-Level Chemistry Student',
+  },
+  {
+    id: 10,
+    quote: 'It was really useful having the breakdown of exam questions gone through step by step, then explaining the answers after we had attempted them',
+    name: 'Vernon',
+    year: 'A-Level Chemistry Student',
+  },
+  {
+    id: 11,
+    quote: 'I appreciated how we went through different types of questions from different exam boards, and the mark schemes in detail',
+    name: 'Maahil',
+    year: 'A-Level Chemistry Student',
+  },
 ]
 
 // Slides are looped seamlessly by rendering several copies of the testimonials
@@ -182,6 +212,10 @@ const TestimonialSlider: React.FC = () => {
           <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-brand-purple to-brand-purple/70 bg-clip-text text-transparent mt-3 sm:mt-4 px-4">
             Hear From Our Students
           </h3>
+          <p className="text-sm sm:text-base text-gray-600 mt-4 max-w-2xl mx-auto px-4">
+            On our latest 12-week Chemistry Accelerator, students rated their confidence in every topic before
+            and after each session. The average rose from 6.6 to 8.3 out of 10.
+          </p>
           <div className="w-16 sm:w-24 h-1 bg-gradient-to-r from-brand-purple to-brand-gold mx-auto mt-4 sm:mt-6"></div>
         </motion.div>
 

@@ -6,7 +6,8 @@ import { ScrollFade } from '@/components/ui/scroll-fade'
 
 export const metadata = {
   title: 'Top 1% Study System - Stay Ahead Without Burning Out',
-  description: 'Build a system to stay on top of your A-Level workload and improve your grades without wasting time.',
+  description: 'Discover A-Level study systems from A-Level Accelerators, UK, designed to improve revision, time management, and exam performance for better results.',
+  alternates: { canonical: 'https://alevelaccelerators.com/study-systems/' },
 }
 
 const Divider = () => (

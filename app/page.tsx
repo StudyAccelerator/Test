@@ -7,6 +7,7 @@ import TestimonialSlider from '@/components/ui/testimonial-slider'
 export const metadata = {
   title: 'A-Level Summer Accelerator | Get Ahead for Year 13 | A-Level Accelerators',
   description: 'A 6-week live A-Level summer course for Year 12 students going into Year 13. Master the high-yield topics that decide your predicted grades. Biology, Chemistry, Maths and Physics. Starts 25th July.',
+  alternates: { canonical: 'https://alevelaccelerators.com/' },
 }
 
 const Divider = () => (
