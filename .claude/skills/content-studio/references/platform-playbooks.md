@@ -2,26 +2,34 @@
 
 Format rules per platform. These reflect how each algorithm actually distributes content in 2026, plus what the competitor research showed works in UK education.
 
-## LinkedIn (audience: parents-as-professionals + authority building)
+## LinkedIn (audience: STUDENTS first, authority second)
 
-**Why we're here:** parents of 16 to 18 year olds are professionals aged 40 to 55, and LinkedIn is where they scroll at lunch. We are NOT here to reach students. Every LinkedIn post is either parent-facing advice or founder-story authority.
+**Why students here:** Waleed's actual LinkedIn followers are Year 12/13 students (ambitious ones building early profiles, aspiring medics). Write for them. Parents and teachers who see it anyway read it as authority. Do not write "your child" posts on LinkedIn; write "you" posts.
 
-**What the algorithm rewards now:** dwell time and meaningful comments in the first 60 to 90 minutes; consistent posting (3 to 5 times a week) on a narrow topic so the system learns our "topic DNA"; document/PDF carousel posts (the highest-engagement format, roughly 2 to 3x the dwell of text posts). It punishes: external links in the post body, hashtag stuffing, engagement bait ("comment X and I'll DM you"), and reciprocal-engagement pods.
+**Competitor reality check (verified July 2026):** the A-level content niche on LinkedIn is tiny. Top search results for "a level revision" get 3 to 7 reactions. Nobody owns this niche, so consistent posting with strong hooks can own it cheaply. But calibrate expectations: LinkedIn is the compounding authority channel, TikTok/Reels is the growth engine.
 
-**Rules:**
-- 3 to 5 posts per week minimum. Same-day-of-week themes help consistency.
-- Hook in line one, before the "see more" fold. It must earn the click.
-- 120 to 200 words for text posts. White space between ideas. One idea per post.
-- Carousels (PDF documents, 6 to 10 slides) at least once a week: checklists, frameworks, "the 4 tiers", "5 questions to ask your child's tutor". Carousels are our top format.
-- Links go in the first comment, never the body. Say "link in the comments" naturally.
-- 0 to 3 hashtags maximum. They barely matter now; topic consistency matters instead.
-- No "comment TIMETABLE and I'll DM you" mechanics. The algorithm now detects and buries engagement bait. Ask a genuine question instead.
-- **The 30-minute rule:** posting is half the job. Spend 30 minutes after posting replying to every comment, and 15 minutes a day commenting genuinely on posts by UK teachers, heads of sixth form, parenting voices and education journalists. Comments from Waleed's account on bigger accounts are our fastest source of profile visits while the following is small.
-- Personal profile beats company page for reach. Post from Dr Waleed's profile; the company page can repost.
+**What the algorithm rewards now:** dwell time and meaningful comments in the first 60 to 90 minutes; consistency (3 to 5 posts a week) on one narrow topic so the system learns our topic DNA; document/PDF carousels (the highest-engagement format, roughly 2 to 3x text dwell). It punishes external links in the body, hashtag stuffing, and engagement bait ("comment X and I'll DM you"), which now gets buried.
+
+**The anatomy of a high-performing LinkedIn post:**
+1. **Hook: max 8 to 12 words on line one.** Only ~200 characters show before "see more" (less on mobile). The hook's only job is the click. Best hooks: a confession, a contrarian claim, a specific number, a felt moment. Never a warm-up sentence.
+2. **Line two is white space.** Then a one-line re-hook that raises the stakes.
+3. **Body: short lines, 1 to 2 sentences per paragraph, 100 to 180 words total.** Skimmable on a phone. Numbered steps beat prose.
+4. **A "dwell magnet":** a list, framework, or mini-story that takes 30+ seconds to read properly, because dwell time is a ranking signal.
+5. **Close with a genuine question** (not bait): one that a 17-year-old can answer in five words.
+6. **0 to 3 hashtags.** Links in first comment only.
+
+**Rules:** 3 to 5 posts/week. One carousel/week minimum. Reply to every comment within the first hour. Spend 15 min/day commenting on bigger accounts in the study/education space (fastest route to profile visits). Personal profile, not company page.
 
 ## Facebook (audience: parents, full stop)
 
-**Why we're here:** UK parents research tutors through recommendations, and Facebook groups + Mumsnet threads are where those recommendations happen.
+**Why we're here:** Facebook is THE parent channel and the priority platform for reaching buyers. UK parents research tutors through recommendations, and Facebook groups + Mumsnet threads are where those recommendations happen. Waleed finds parents easier to reach here than anywhere else.
+
+**The anatomy of a high-performing Facebook post (parents):**
+1. **First sentence = the reader's situation, named.** "If your child does loads of past papers and the grade isn't moving..." Parents stop scrolling when they see their own house described.
+2. **Short, warm, plain.** 50 to 120 words. One-thumb skimmable. No jargon.
+3. **A photo beats a graphic, a graphic beats plain text.** Real teaching screenshots and faces outperform everything.
+4. **End with either a gentle question or a tiny action** ("maybe worth mentioning to them this week"). Parents share useful posts to school WhatsApp groups; write things worth forwarding.
+5. Links in first comment. Boost the week's best post £2 to £5/day at UK parents 38 to 55.
 
 **Structure decision (important):** a personal-style profile with 0 followers won't grow. The play is:
 1. Run **Dr Waleed Ahmad** as a proper **Facebook Page** (it already exists; needs cover photo, pinned post, reviews enabled, and consistent posting so the page looks alive when a parent checks us out).

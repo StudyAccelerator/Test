@@ -18,10 +18,10 @@ Before writing anything, load the reference file(s) relevant to the task:
 
 Every piece of content serves **one of two audiences**, never both at once:
 
-1. **Students (16-18)** | reach them on TikTok, Instagram Reels, YouTube Shorts. Tone: peer-level, fast, honest, a bit funny. They are the *users*.
-2. **Parents (40-55)** | reach them on Facebook, Facebook groups, and via reassurance-led LinkedIn. Tone: calm, credible, "I'm a doctor, here's what actually helps your child." They are the *buyers*.
+1. **Students (16 to 18)**: reach them on TikTok, Instagram Reels, YouTube Shorts, **and LinkedIn**. Waleed's existing LinkedIn followers are Year 12/13 students, so LinkedIn is student-first for now. Tone: peer-level, fast, honest, a bit funny. They are the *users*.
+2. **Parents (40 to 55)**: reach them on **Facebook (pages + groups)** and Mumsnet. Tone: calm, credible, "I'm a doctor, here's what actually helps your child." They are the *buyers*. Facebook is the parent channel, full stop.
 
-Decide the audience before the first word. A post that tries to speak to both speaks to neither. (This is the single biggest reason Waleed's current content underperforms | it's student-voiced content posted on parent platforms.)
+Decide the audience before the first word. A post that tries to speak to both speaks to neither. (Current split: LinkedIn = students, Facebook = parents. Waleed confirmed his LinkedIn audience is actually Year 12/13 students, so write LinkedIn for them.)
 
 ## Workflow for any content request
 
