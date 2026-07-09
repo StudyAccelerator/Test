@@ -6,7 +6,13 @@ Format rules per platform. These reflect how each algorithm actually distributes
 
 **Why students here:** Waleed's actual LinkedIn followers are Year 12/13 students (ambitious ones building early profiles, aspiring medics). Write for them. Parents and teachers who see it anyway read it as authority. Do not write "your child" posts on LinkedIn; write "you" posts.
 
-**Competitor reality check (verified July 2026):** the A-level content niche on LinkedIn is tiny. Top search results for "a level revision" get 3 to 7 reactions. Nobody owns this niche, so consistent posting with strong hooks can own it cheaply. But calibrate expectations: LinkedIn is the compounding authority channel, TikTok/Reels is the growth engine.
+**Competitor reality check (researched July 2026, multiple queries):** direct tutoring-offer posts in this niche get single-digit engagement even from established founders (verified examples: a GCSE tutor with a "jump 2 grades or money back" headline, 5 reactions on a masterclass post; a UK tutoring founder's parent-facing roadmap post, 2 reactions; a revision-app launch, 3 reactions). Meanwhile education-adjacent EMOTIONAL content reaches thousands (verified: a generic "what children need from parents" post, 6,362 reactions and 118 comments). The educators who "perform incredibly well" run a three-genre engine on large followings built over time:
+
+1. **Emotion/story posts** (parenting feelings, personal journey, student transformation moments): these build the audience. Highest reach genre by far.
+2. **Technique/framework posts** (the how-to material): these build authority and saves. Modest reach, high trust.
+3. **Lead-magnet posts** (free workshop, free guide, "comment X for the link"): these harvest. They only pull hundreds of signups when genres 1 and 2 have built the audience first. On a small account they still convert, just in smaller numbers, and they're worth one slot a week.
+
+Target weekly ratio: 2 story/emotion, 2 technique, 1 lead-magnet. The mistake to avoid is publishing only genre 2 (which is what Waleed's early posts did) or only genre 3 (which reads as an advert channel).
 
 **What the algorithm rewards now:** dwell time and meaningful comments in the first 60 to 90 minutes; consistency (3 to 5 posts a week) on one narrow topic so the system learns our topic DNA; document/PDF carousels (the highest-engagement format, roughly 2 to 3x text dwell). It punishes external links in the body, hashtag stuffing, and engagement bait ("comment X and I'll DM you"), which now gets buried.
 

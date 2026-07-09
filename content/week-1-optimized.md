@@ -245,3 +245,56 @@ We run a live summer programme built for exactly this (first session risk-free).
 - Reply to every comment within the hour (this is half the algorithm).
 - 15 minutes commenting on other study/education accounts as Waleed.
 - Note impressions + comments per post in a simple sheet; after the week, double down on the two best performers' style.
+
+
+---
+
+## ADDENDUM (from the deeper competitor research): two posts to add into the week
+
+The high-performing educators run three genres: emotion/story (builds audience), technique (builds trust), lead magnet (harvests). The seven posts above are technique-heavy. Swap or add these two, ideally the story post midweek and the workshop post at the weekend.
+
+### Bonus A | Emotional story post (LinkedIn, students; also works on Facebook for parents nearly unchanged)
+**LinkedIn** | graphic: `founder-card.png` or a candid photo
+
+A student cried on a call with me last month. Not because of her grades.
+
+Because of what she said next: "I'm doing everything everyone tells me to do, and it's still not working."
+
+She wasn't lazy. Her notes were immaculate. Her hours were long. By every visible measure she was doing it right.
+
+And that's exactly why it hurt. When you're doing nothing and failing, you know why. When you're doing everything and failing, you start to believe something is wrong with you.
+
+Nothing was wrong with her. Every hour she had was going into low-yield work: re-reading, rewriting, highlighting. Familiar, comfortable, useless.
+
+We moved the same hours into recall practice and past paper review. No extra time. Different work.
+
+If you're in that place right now, hear this: it has never once been because the student wasn't capable. Something in the method is broken, and methods can be fixed.
+
+*Hashtags: #ALevels*
+*(Facebook parent version: identical story, told about "a student", closing line: "If your child is in that place, it isn't ability. It's method, and methods can be fixed.")*
+
+### Bonus B | Free workshop lead-magnet post (the genre you've seen competitors win with)
+**LinkedIn (students)** | graphic: reuse `four-tiers-card.png` or a workshop-branded card
+
+I'm running my Top 1% Study Systems workshop again. Free, live, one hour.
+
+It covers the four things I wish someone had shown me at 17:
+
+1. Why hard work stalls at a B (and what actually moves the last two grades)
+2. The high-yield vs low-yield revision sort
+3. How to train recall, not recognition
+4. Exam technique: mark schemes, timing, mind blanks
+
+No recording-only tricks. Live, with time for your questions at the end. I read the chat and answer everything.
+
+Seats are capped so the Q&A stays useful. Comment "workshop" or DM me and I'll send you the signup link.
+
+*(Note: yes, this uses a comment-mechanic. For lead-magnet posts specifically, capped-reach-but-real-signups is a trade worth making once a week. Never use the mechanic on value posts.)*
+
+**Facebook (parents) version:**
+
+I'm running my free Top 1% Study Systems workshop again. One hour, live, for A-level students (parents welcome to sit in).
+
+It covers why hard-working students stall at a B, the revision methods that actually move grades, and how to perform in the exam itself.
+
+It's the session I wish someone had run for me at 17. Comment or message me and I'll send the signup link.
