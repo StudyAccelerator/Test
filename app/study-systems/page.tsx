@@ -42,11 +42,7 @@ export default function Home() {
       <section id="hero" className="relative overflow-hidden bg-brand-cream pt-16 pb-16 md:pt-24 md:pb-20 px-6 text-center">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(50% 40% at 50% 0%, rgba(201,169,110,0.14) 0%, rgba(201,169,110,0) 100%)',
-          }}
+          className="pointer-events-none absolute -top-40 left-1/2 h-[24rem] w-[40rem] max-w-full -translate-x-1/2 rounded-full bg-brand-gold/10 blur-3xl"
         />
         <div className="relative max-w-4xl mx-auto">
           <HeroFade delay={0}>

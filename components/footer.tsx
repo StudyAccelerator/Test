@@ -7,13 +7,13 @@ export default function Footer() {
     <footer id="contact" className="bg-[#241d47] text-brand-cream py-8 px-8 border-t-2 border-brand-gold/50">
       <div className="max-w-5xl mx-auto">
         <div className="flex flex-col md:flex-row items-center gap-8 md:gap-12 py-2">
-          <a href="/#hero" className="relative overflow-hidden md:flex-1 h-36 flex justify-center items-center hover:opacity-80 transition">
+          <a href="/#hero" className="relative overflow-hidden w-full md:w-auto md:flex-1 h-32 md:h-36 flex justify-center items-center hover:opacity-80 transition">
             <Image
               src="/logo-header.png?v=2"
               alt="A-Level Accelerators"
               width={400}
               height={400}
-              className="absolute h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
+              className="absolute h-[24rem] md:h-[27rem] w-auto top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
               unoptimized
             />
           </a>

@@ -152,11 +152,7 @@ export default function Home() {
       <section className="relative overflow-hidden">
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0"
-          style={{
-            background:
-              'radial-gradient(50% 40% at 80% 15%, rgba(201,169,110,0.13) 0%, rgba(201,169,110,0) 100%)',
-          }}
+          className="pointer-events-none absolute -top-24 right-[-10%] h-[28rem] w-[36rem] rounded-full bg-brand-gold/10 blur-3xl"
         />
         <div className="relative max-w-6xl mx-auto px-6 pt-14 pb-24 md:pt-24 md:pb-32 grid lg:grid-cols-[1fr_1.05fr] gap-12 items-center">
           <div>
@@ -187,10 +183,10 @@ export default function Home() {
             </HeroFade>
           </div>
 
-          <div className="relative max-w-lg mx-auto lg:max-w-none w-full">
-            <div className="grid grid-cols-[1.55fr_1fr] gap-4 sm:gap-5 items-start">
+          <div className="relative max-w-lg mx-auto lg:max-w-none w-full min-w-0">
+            <div className="grid grid-cols-1 sm:grid-cols-[1.55fr_1fr] gap-4 sm:gap-5 items-start">
               {/* Left: the route to results day + the offer it unlocks */}
-              <div>
+              <div className="min-w-0">
                 <HeroFade delay={0.3}>
                   <div className={`${CARD} p-5 sm:p-6 transition-transform duration-300 hover:-translate-y-2 hover:-rotate-1`}>
                     <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55">
@@ -243,7 +239,7 @@ export default function Home() {
                 </HeroFade>
               </div>
               {/* Right: the founder photo + name card */}
-              <div>
+              <div className="min-w-0 w-full max-w-[260px] mx-auto sm:max-w-none sm:mx-0">
                 <HeroFade delay={0.4}>
                   <div className="relative rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(46,37,87,.08),0_16px_32px_rgba(46,37,87,.18)] transition-transform duration-300 hover:rotate-3 hover:-translate-y-2 hover:scale-[1.02]">
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap rounded-full bg-brand-purple text-brand-cream text-[11px] font-bold px-3.5 py-1 shadow-lg">
@@ -530,7 +526,7 @@ export default function Home() {
                   <p className="text-center text-[9px] font-medium text-brand-text/60 pt-1 pb-0.5">before the system</p>
                 </div>
               </div>
-              <ul className="mt-6 space-y-2 font-mono text-sm text-brand-purple/70">
+              <ul className="mt-6 space-y-2 font-mono text-sm text-brand-purple/70 text-center md:text-left">
                 <li>MBBS · NHS Foundation Doctor</li>
                 <li>Former top-performing A-level student</li>
                 <li>1,000+ students worked with over 6 years</li>
