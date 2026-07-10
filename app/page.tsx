@@ -178,7 +178,7 @@ export default function Home() {
                   href="#programmes"
                   className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
                 >
-                  Explore the Programmes
+                  Explore Our Programmes
                 </a>
               </div>
               <p className="mt-4 text-sm text-brand-text/55 text-center max-w-xl">

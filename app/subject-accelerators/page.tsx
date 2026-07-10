@@ -218,7 +218,7 @@ export default function SubjectAccelerators() {
           <HeroFade delay={0}>
             <span className="inline-flex items-center gap-2 rounded-full border border-brand-purple/10 bg-brand-purple/[0.04] px-4 py-1.5 text-sm font-semibold text-brand-purple">
               <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
-              Subject Accelerators · 12-week live programmes
+              Subject Accelerators · 12-Week Live Programmes
             </span>
           </HeroFade>
           <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.08] text-4xl sm:text-5xl md:text-6xl text-brand-purple">
