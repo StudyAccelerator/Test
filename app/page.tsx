@@ -187,31 +187,93 @@ export default function Home() {
             </HeroFade>
           </div>
 
-          <HeroFade delay={0.3} className="relative max-w-lg mx-auto lg:max-w-none w-full">
-            <div className={`relative overflow-hidden ${CARD} !rounded-3xl`}>
-              <Image
-                src="/photos/waleed-grad-hero.jpg"
-                alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
-                width={1200}
-                height={1231}
-                priority
-                unoptimized
-                className="w-full h-auto"
-              />
-              <span className="absolute top-3 left-3 rounded-full bg-brand-purple/90 backdrop-blur text-brand-cream text-[11px] font-semibold px-3 py-1.5">
-                NHS doctor, former top A-Level student
-              </span>
-            </div>
-            <div className={`mt-4 ${CARD} px-5 py-3.5 flex items-center gap-4`}>
-              <div className="h-11 w-11 shrink-0 rounded-full bg-brand-purple text-brand-gold flex items-center justify-center font-serif font-bold text-lg">
-                W
+          <div className="relative max-w-lg mx-auto lg:max-w-none w-full">
+            <div className="grid grid-cols-[1.55fr_1fr] gap-3 sm:gap-4 items-start">
+              {/* Left: the route to results day + the offer it unlocks */}
+              <div>
+                <HeroFade delay={0.3}>
+                  <div className={`${CARD} p-4 sm:p-5`}>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple/55">
+                      Your route to results day
+                    </p>
+                    <div className="mt-9 flex items-end gap-2 sm:gap-2.5" aria-hidden="true">
+                      {[
+                        ['C/D', 'h-11 sm:h-12 bg-brand-purple/5 text-brand-text/40 text-sm sm:text-base', 'where you start'],
+                        ['B', 'h-16 sm:h-[4.5rem] bg-white ring-1 ring-brand-purple/10 text-brand-purple/60 text-base sm:text-lg', 'content rebuilt'],
+                        ['A', 'h-[5.5rem] sm:h-24 bg-brand-gold/25 ring-1 ring-brand-gold/45 text-brand-purple text-lg sm:text-xl', 'technique trained'],
+                      ].map(([g, cls, lbl]) => (
+                        <div key={g} className="flex-1 flex flex-col items-center gap-1.5">
+                          <span className={`w-full flex items-center justify-center rounded-xl font-serif font-bold ${cls}`}>{g}</span>
+                          <span className="text-[9px] sm:text-[10px] font-semibold text-brand-text/55 text-center leading-tight">{lbl}</span>
+                        </div>
+                      ))}
+                      <div className="relative flex-1 flex flex-col items-center gap-1.5">
+                        <span className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full bg-brand-gold px-2.5 py-1 text-[10px] font-bold text-brand-purple whitespace-nowrap shadow">
+                          Results day
+                        </span>
+                        <span className="w-full h-28 sm:h-32 flex items-center justify-center rounded-xl bg-brand-purple text-brand-gold font-serif font-bold text-xl sm:text-2xl shadow-lg shadow-brand-purple/30">
+                          A*
+                        </span>
+                        <span className="text-[9px] sm:text-[10px] font-semibold text-brand-text/55 text-center leading-tight">
+                          <span className="text-brand-gold font-bold">your new</span>
+                          <br />
+                          grades
+                        </span>
+                      </div>
+                    </div>
+                    <div className="mt-4 flex gap-1.5">
+                      {[['01', 'Diagnose'], ['02', 'Rebuild'], ['03', 'Coach']].map(([n, t]) => (
+                        <span key={t} className="flex-1 text-center rounded-full border border-brand-gold/35 bg-brand-gold/10 px-1 py-1.5 text-[10px] font-bold text-brand-purple">
+                          <span className="font-mono text-brand-gold mr-1">{n}</span>
+                          {t}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </HeroFade>
+                <HeroFade delay={0.5}>
+                  <div className={`${CARD} rotate-1 border-t-4 border-brand-gold p-4 sm:p-5 mt-3 ml-3 sm:ml-6 -mr-1`}>
+                    <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple/55">University offers</p>
+                    <p className="mt-1.5 font-serif italic text-xl sm:text-2xl text-brand-purple">Congratulations!</p>
+                    <p className="mt-1 text-xs sm:text-sm text-brand-text/65 leading-snug">Your firm choice has confirmed your place.</p>
+                    <span className="mt-3 inline-block rounded-full bg-brand-gold/20 px-3 py-1 text-[11px] font-extrabold text-brand-purple">
+                      Offer confirmed ✓
+                    </span>
+                  </div>
+                </HeroFade>
               </div>
-              <div className="leading-tight">
-                <p className="font-bold text-brand-purple">Dr Waleed Ahmad, MBBS</p>
-                <p className="text-sm text-brand-text/70">Founder of A-Level Accelerators</p>
+              {/* Right: the founder photo + name card */}
+              <div>
+                <HeroFade delay={0.4}>
+                  <div className="relative rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(46,37,87,.08),0_16px_32px_rgba(46,37,87,.18)]">
+                    <span className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap rounded-full bg-brand-purple text-brand-cream text-[10px] font-bold px-3 py-1 shadow-lg">
+                      where it leads
+                    </span>
+                    <Image
+                      src="/photos/waleed-grad-portrait.jpg"
+                      alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
+                      width={640}
+                      height={878}
+                      priority
+                      unoptimized
+                      className="w-full h-auto rounded-xl"
+                    />
+                  </div>
+                </HeroFade>
+                <HeroFade delay={0.55}>
+                  <div className={`mt-2.5 ${CARD} px-3 py-2.5 flex items-center gap-2.5`}>
+                    <div className="h-8 w-8 shrink-0 rounded-full bg-brand-purple text-brand-gold flex items-center justify-center font-serif font-bold text-sm">
+                      W
+                    </div>
+                    <div className="leading-tight">
+                      <p className="text-xs font-bold text-brand-purple">Dr Waleed Ahmad, MBBS</p>
+                      <p className="text-[10px] text-brand-text/65 mt-0.5">Founder of A-Level Accelerators</p>
+                    </div>
+                  </div>
+                </HeroFade>
               </div>
             </div>
-          </HeroFade>
+          </div>
         </div>
       </section>
 
