@@ -82,12 +82,12 @@ export default function Home() {
 
       {/* Problem Statement */}
       <ScrollFade>
-        <section className="py-20 px-4 bg-white">
+        <section className="py-20 px-4 bg-brand-purple border-y-2 border-brand-gold/40">
           <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
+            <h2 className="text-3xl md:text-4xl text-brand-gold font-serif text-center mb-12">
               The Real Challenge Isn&apos;t the Content, It&apos;s Managing Everything
             </h2>
-            <div className="space-y-6 text-lg text-brand-text text-center">
+            <div className="space-y-6 text-lg text-brand-cream/90 text-center">
               <p>You are juggling lessons, homework, revision, exams and university applications all at once.</p>
               <p>Most students respond by working harder. But that is exactly why they stay stuck.</p>
               <p className="text-brand-gold font-semibold pt-4">You&apos;re not struggling because you&apos;re lazy. You&apos;re struggling because you&apos;re using the wrong system.</p>

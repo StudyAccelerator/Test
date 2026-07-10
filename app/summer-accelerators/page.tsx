@@ -155,10 +155,10 @@ export default function SummerAccelerators() {
 
       {/* Urgency Bar */}
       <ScrollFade>
-        <section className="py-6 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="py-6 px-4 bg-brand-purple border-y-2 border-brand-gold/50">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-base md:text-lg text-brand-purple font-semibold">
-              ⏳ The next cohort starts Saturday 25th July with limited spaces. Secure your place now!
+            <p className="text-base md:text-lg text-brand-cream font-semibold">
+              ⏳ The next cohort starts <span className="text-brand-gold">Saturday 25th July</span> with limited spaces. Secure your place now!
             </p>
           </div>
         </section>

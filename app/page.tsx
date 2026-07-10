@@ -37,52 +37,39 @@ const PROGRAMMES = [
     audience: 'For Year 12 going into Year 13',
     name: 'Summer Accelerator',
     badge: 'Enrolling now · starts 25th July',
+    photo: '/photos/waleed-pointing.jpg',
+    photoAlt: 'Dr Waleed Ahmad explaining a point at his desk',
     outcome:
       'Six weeks, live. Master the high-yield Year 13 topics that decide your predicted grades, and walk into September already ahead.',
     points: ['Biology, Chemistry, Maths and Physics', 'Two live sessions a week per subject', 'Every session recorded'],
     href: '/summer-accelerators',
     cta: 'Explore the Summer Accelerator',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="h-6 w-6">
-        <circle cx="12" cy="12" r="4" />
-        <path d="M12 2v2.5M12 19.5V22M4.5 4.5l1.8 1.8M17.7 17.7l1.8 1.8M2 12h2.5M19.5 12H22M4.5 19.5l1.8-1.8M17.7 6.3l1.8-1.8" />
-      </svg>
-    ),
   },
   {
     featured: false,
     audience: 'For students who know their weak subject',
     name: 'Subject Accelerators',
     badge: 'Runs through the school year',
+    photo: '/photos/waleed-writing.jpg',
+    photoAlt: 'Working through an exam question plan in a notebook',
     outcome:
       'Twelve-week live exam programmes in Biology, Chemistry and Maths. Small groups, specialist tutors, taught to the mark scheme.',
     points: ['Pick one subject or bundle three', 'Weekend sessions, no clashes', 'Exam technique in every session'],
     href: '/subject-accelerators',
     cta: 'Explore Subject Accelerators',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-        <path d="M4 19.5V6a2 2 0 0 1 2-2h13v13.5" />
-        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H19v4H6.5A2.5 2.5 0 0 1 4 19.5Z" />
-        <path d="M9 8h6M9 11.5h4" />
-      </svg>
-    ),
   },
   {
     featured: false,
     audience: 'For students whose problem is how they study',
     name: 'Top 1% Study System',
     badge: 'The method itself',
+    photo: '/photos/waleed-desk-calm.jpg',
+    photoAlt: 'Dr Waleed Ahmad at his study desk',
     outcome:
       'High-yield revision, time management and exam performance. The system behind everything we teach, so you stay ahead without burning out.',
     points: ['Active recall and spaced repetition', 'Workload and burnout control', 'Free live workshop to start'],
     href: '/study-systems',
     cta: 'Explore the Study System',
-    icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
-        <path d="M12 20V10M18 20V4M6 20v-4" />
-        <path d="M2 20h20" />
-      </svg>
-    ),
   },
 ]
 
@@ -110,8 +97,8 @@ const WALL_QUOTES = [
     role: 'Year 13 Student',
   },
   {
-    quote: 'I liked how the session was so exam-technique focused, with a great balance of exam questions and the content behind them',
-    name: 'Furkan',
+    quote: 'The content was explained really well and there was a brilliant range of questions. I love the way everything is taught',
+    name: 'Menahil',
     role: 'Year 13 Student',
   },
   {
@@ -192,13 +179,13 @@ export default function Home() {
             </HeroFade>
           </div>
 
-          <HeroFade delay={0.3} className="relative">
-            <div className={`relative overflow-hidden rotate-1 ${CARD} !rounded-3xl`}>
+          <HeroFade delay={0.3} className="relative max-w-lg mx-auto lg:max-w-none w-full">
+            <div className={`relative overflow-hidden ${CARD} !rounded-3xl`}>
               <Image
                 src="/photos/waleed-hero.jpg"
                 alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his desk in scrubs"
-                width={1600}
-                height={900}
+                width={1400}
+                height={1050}
                 priority
                 unoptimized
                 className="w-full h-auto"
@@ -207,7 +194,7 @@ export default function Home() {
                 NHS doctor · former top A-level student
               </span>
             </div>
-            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-left-4 sm:w-auto rounded-2xl bg-white/90 backdrop-blur border border-brand-gold/30 shadow-xl px-5 py-3.5 flex items-center gap-4">
+            <div className={`mt-4 ${CARD} px-5 py-3.5 flex items-center gap-4`}>
               <div className="h-11 w-11 shrink-0 rounded-full bg-brand-purple text-brand-gold flex items-center justify-center font-serif font-bold text-lg">
                 W
               </div>
@@ -215,6 +202,9 @@ export default function Home() {
                 <p className="font-bold text-brand-purple">Dr Waleed Ahmad, MBBS</p>
                 <p className="text-sm text-brand-text/70">Founder · built the method</p>
               </div>
+              <span aria-hidden="true" className="ml-auto hidden sm:flex items-center gap-1 text-brand-gold text-sm">
+                ★★★★★
+              </span>
             </div>
           </HeroFade>
         </div>
@@ -222,17 +212,32 @@ export default function Home() {
 
       {/* ── 2 · Trust strip ──────────────────────────────────────────────── */}
       <ScrollFade>
-        <section className="border-y border-brand-purple/10 bg-white/50">
-          <div className="max-w-6xl mx-auto px-6 py-8 flex flex-wrap justify-center gap-x-12 gap-y-4 text-center">
+        <section className="border-y border-brand-purple/10 bg-white/60">
+          <div className="max-w-6xl mx-auto px-6 py-7 flex flex-wrap justify-center gap-3">
             {[
-              'MBBS · NHS doctor',
-              '1,000+ students taught',
-              'Biology · Chemistry · Maths · Physics',
-              'AQA, OCR and Edexcel covered',
-              'First session risk-free',
-            ].map((badge) => (
-              <span key={badge} className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/70">
-                {badge}
+              ['MBBS · NHS doctor', 'M8 3v3a3 3 0 0 0 6 0V3M11 9v4a4 4 0 0 0 8 0v-1M19 11a1.5 1.5 0 1 0 0 .01'],
+              ['1,000+ students taught', 'M16 19a4 4 0 0 0-8 0M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM20 19a3.5 3.5 0 0 0-3-3.4M4 19a3.5 3.5 0 0 1 3-3.4'],
+              ['Biology · Chemistry · Maths · Physics', 'M9 3h6M10 3v5.5L4.5 18A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.8-3L14 8.5V3'],
+              ['AQA, OCR and Edexcel covered', 'M9 12l2 2 4-5M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Z'],
+              ['First session risk-free', 'M12 8v4l2.5 2.5M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z'],
+            ].map(([label, path]) => (
+              <span
+                key={label}
+                className="inline-flex items-center gap-2.5 rounded-full bg-white ring-1 ring-brand-purple/10 shadow-sm px-4 py-2 text-sm font-semibold text-brand-purple"
+              >
+                <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.8"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="h-4 w-4 text-brand-gold"
+                  aria-hidden="true"
+                >
+                  <path d={path} />
+                </svg>
+                {label}
               </span>
             ))}
           </div>
@@ -256,45 +261,53 @@ export default function Home() {
               <ScrollFade key={p.name} delay={i * 0.12}>
                 <a
                   href={p.href}
-                  className={`group/card relative flex flex-col h-full overflow-hidden rounded-3xl bg-white p-8 transition-all duration-300 hover:-translate-y-2 ${
+                  className={`group/card relative flex flex-col h-full overflow-hidden rounded-3xl bg-white transition-all duration-300 hover:-translate-y-2 ${
                     p.featured
                       ? '[box-shadow:0_0_0_2px_rgba(201,169,110,.55),0_2px_4px_rgba(46,37,87,.06),0_16px_32px_rgba(46,37,87,.12)] hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.8),0_8px_16px_rgba(46,37,87,.1),0_24px_48px_rgba(46,37,87,.16)]'
                       : '[box-shadow:0_0_0_1px_rgba(46,37,87,.06),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)] hover:[box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.12)]'
                   }`}
                 >
-                  <span
-                    aria-hidden="true"
-                    className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-gold/0 via-brand-gold to-brand-gold/0 opacity-70 group-hover/card:opacity-100 transition-opacity"
-                  />
-                  <div className="flex items-start justify-between gap-3">
-                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-purple/[0.06] text-brand-purple group-hover/card:bg-brand-gold/20 group-hover/card:text-brand-purple transition-colors">
-                      {p.icon}
-                    </span>
+                  <div className="relative h-44 overflow-hidden">
+                    <Image
+                      src={p.photo}
+                      alt={p.photoAlt}
+                      width={1200}
+                      height={675}
+                      unoptimized
+                      className="h-full w-full object-cover object-top transition-transform duration-500 group-hover/card:scale-[1.04]"
+                    />
+                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-purple/60 via-brand-purple/10 to-transparent" />
                     <span
-                      className={`rounded-full text-xs font-bold px-3 py-1.5 ${
-                        p.featured ? 'bg-brand-gold text-brand-purple' : 'bg-brand-cream-dark text-brand-purple'
+                      className={`absolute top-4 left-4 rounded-full text-xs font-bold px-3 py-1.5 backdrop-blur ${
+                        p.featured ? 'bg-brand-gold text-brand-purple' : 'bg-white/85 text-brand-purple'
                       }`}
                     >
                       {p.badge}
                     </span>
+                    <p className="absolute bottom-3 left-4 right-4 font-mono text-[11px] uppercase tracking-[0.15em] text-white/90">
+                      {p.audience}
+                    </p>
                   </div>
-                  <h3 className="mt-5 font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple">
-                    {p.name}
-                  </h3>
-                  <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/55">{p.audience}</p>
-                  <p className="mt-4 leading-relaxed text-brand-text/75">{p.outcome}</p>
-                  <ul className="mt-5 space-y-2 text-sm text-brand-text/70">
-                    {p.points.map((pt) => (
-                      <li key={pt} className="flex items-start gap-2.5">
-                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold" aria-hidden="true" />
-                        {pt}
-                      </li>
-                    ))}
-                  </ul>
-                  <span className="mt-auto pt-7 inline-flex items-center gap-1.5 font-semibold text-brand-purple group-hover/card:text-brand-gold transition-colors">
-                    {p.cta}
-                    <span aria-hidden="true" className="transition-transform group-hover/card:translate-x-1.5">→</span>
-                  </span>
+                  <div className="flex flex-col flex-1 p-7">
+                    <h3 className="font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple">
+                      {p.name}
+                    </h3>
+                    <p className="mt-3 leading-relaxed text-brand-text/75">{p.outcome}</p>
+                    <ul className="mt-5 space-y-2 text-sm text-brand-text/70">
+                      {p.points.map((pt) => (
+                        <li key={pt} className="flex items-start gap-2.5">
+                          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true">
+                            <path d="M5 13l4 4L19 7" />
+                          </svg>
+                          {pt}
+                        </li>
+                      ))}
+                    </ul>
+                    <span className="mt-auto pt-7 inline-flex items-center gap-1.5 font-semibold text-brand-purple group-hover/card:text-brand-gold transition-colors">
+                      {p.cta}
+                      <span aria-hidden="true" className="transition-transform group-hover/card:translate-x-1.5">→</span>
+                    </span>
+                  </div>
                 </a>
               </ScrollFade>
             ))}
@@ -317,9 +330,6 @@ export default function Home() {
             <p className={`${EYEBROW} mb-8`}>How every programme works</p>
             <p className="font-serif tracking-tight text-3xl sm:text-4xl md:text-5xl text-brand-purple leading-[1.25]">
               We <span className="italic text-brand-gold">diagnose</span> how you actually study, <span className="italic text-brand-gold">rebuild</span> your revision around what moves marks, and <span className="italic text-brand-gold">coach</span> you all the way to exam day.
-            </p>
-            <p className="mt-8 text-brand-text/60 max-w-xl mx-auto">
-              I am a doctor. I do not treat anything before diagnosing it, and my team does not teach anyone before finding where the marks are leaking.
             </p>
           </div>
         </section>
@@ -413,12 +423,13 @@ export default function Home() {
               </div>
               <div>
                 <div className={`${CARD} p-6 md:p-8`}>
-                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Inside a live session</p>
+                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Inside a live session · 2 hours</p>
                   <ul className="space-y-3">
                     {[
                       ['Recap and recall check', '10 min', 'bg-brand-cream-dark text-brand-purple'],
-                      ['Real exam questions, attempted live', '60 min', 'bg-brand-purple text-brand-cream'],
-                      ['Feedback on your answers + Q&A', '20 min', 'bg-brand-gold/25 text-brand-purple'],
+                      ['High-yield content review', '30 min', 'bg-brand-gold/25 text-brand-purple'],
+                      ['Real exam questions with mark scheme mastery', '60 min', 'bg-brand-purple text-brand-cream'],
+                      ['Personalised feedback + Q&A', '20 min', 'bg-brand-cream-dark text-brand-purple'],
                     ].map(([what, len, cls]) => (
                       <li key={what as string} className="flex items-center gap-3">
                         <span className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold ${cls}`}>{what}</span>
@@ -428,12 +439,19 @@ export default function Home() {
                   </ul>
                 </div>
                 <figure className={`${CARD} p-6 mt-5`}>
-                  <blockquote className="text-brand-text/85 leading-relaxed">
-                    &ldquo;It was really useful having the breakdown of exam questions gone through step by step, then explaining the answers after we had attempted them.&rdquo;
+                  <div className="flex items-center gap-3">
+                    <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-brand-purple text-brand-gold font-serif font-bold">
+                      F
+                    </span>
+                    <div className="leading-tight">
+                      <p className="text-sm font-bold text-brand-purple">Furkan</p>
+                      <p className="text-xs text-brand-text/60">Year 13 Student</p>
+                    </div>
+                    <span aria-hidden="true" className="ml-auto text-brand-gold text-sm tracking-tight">★★★★★</span>
+                  </div>
+                  <blockquote className="mt-4 text-brand-text/85 leading-relaxed">
+                    &ldquo;I liked how the session was so exam-technique focused, with a great balance of exam questions and the content behind them.&rdquo;
                   </blockquote>
-                  <figcaption className="mt-3 text-sm font-semibold text-brand-purple">
-                    Vernon · Year 12 Student
-                  </figcaption>
                 </figure>
               </div>
             </div>
@@ -441,35 +459,29 @@ export default function Home() {
         </div>
       </section>
 
+      {/* ── 5b · The diagnosis principle (pull quote) ────────────────────── */}
+      <ScrollFade>
+        <section className="px-6 pb-24 md:pb-32">
+          <div className="max-w-3xl mx-auto text-center">
+            <div aria-hidden="true" className="mx-auto mb-8 h-px w-24 bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
+            <span aria-hidden="true" className="font-serif text-7xl leading-none text-brand-gold/60 block">&ldquo;</span>
+            <p className="mt-2 font-serif italic tracking-tight text-2xl sm:text-3xl md:text-4xl text-brand-purple leading-snug">
+              As doctors, we do not treat anything before diagnosing it. And my team does not teach anyone before finding where the marks are leaking.
+            </p>
+            <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60">
+              Dr Waleed Ahmad · Founder
+            </p>
+            <div aria-hidden="true" className="mx-auto mt-8 h-px w-24 bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
+          </div>
+        </section>
+      </ScrollFade>
+
       {/* ── 6 · Meet Dr Waleed ───────────────────────────────────────────── */}
       <ScrollFade>
         <section className="px-6 pb-24 md:pb-32">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-center">
-            <div className="relative max-w-md mx-auto md:mx-0">
-              <div className={`overflow-hidden -rotate-1 ${CARD} !rounded-3xl`}>
-                <Image
-                  src="/photos/waleed-graduation.jpg"
-                  alt="Dr Waleed Ahmad at his medical school graduation"
-                  width={900}
-                  height={1200}
-                  unoptimized
-                  className="w-full h-auto"
-                />
-              </div>
-              <div className="absolute -top-6 -right-2 sm:-right-5 w-24 sm:w-28 rotate-3 rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
-                <Image
-                  src="/photos/waleed-young.jpg"
-                  alt="Waleed as a school student"
-                  width={700}
-                  height={933}
-                  unoptimized
-                  className="w-full h-auto rounded-lg"
-                />
-                <p className="text-center text-[10px] font-medium text-brand-text/60 pt-1 pb-0.5">me, before the system</p>
-              </div>
-            </div>
+          <div className="max-w-6xl mx-auto grid md:grid-cols-[1.15fr_0.85fr] gap-12 md:gap-16 items-center">
             <div>
-              <p className={EYEBROW}>Who is teaching you</p>
+              <p className={EYEBROW}>Who built this</p>
               <h2 className="mt-4 font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
                 I did everything school said. It nearly <span className="italic text-brand-gold">wasn&apos;t enough.</span>
               </h2>
@@ -478,14 +490,39 @@ export default function Home() {
                   At A-level I worked as hard as anyone I knew. Re-reading, highlighting, beautiful notes. It got me into medicine, but only because I threw hundreds of extra hours at a method that wasted most of them.
                 </p>
                 <p>
-                  Medical school forced me to learn properly: active recall, spaced repetition, working to the mark scheme. Same hours, pointed at the right work. That system is what I teach now, and I hold every session to the standard I needed at 17.
+                  Medical school forced me to learn properly: active recall, spaced repetition, working to the mark scheme. Same hours, pointed at the right work. That system is what A-Level Accelerators runs on today, and I hold every session to the standard I needed at 17.
                 </p>
               </div>
-              <ul className="mt-7 space-y-2 font-mono text-sm text-brand-purple/70">
+            </div>
+            <div className="max-w-xs mx-auto md:mx-0 md:justify-self-end w-full">
+              <ul className="space-y-2 font-mono text-sm text-brand-purple/70">
                 <li>MBBS · NHS Foundation Doctor</li>
                 <li>Former top-performing A-level student</li>
                 <li>1,000+ students worked with over 6 years</li>
               </ul>
+              <div className="relative mt-6">
+                <div className={`overflow-hidden ${CARD} !rounded-3xl`}>
+                  <Image
+                    src="/photos/waleed-grad-square.jpg"
+                    alt="Dr Waleed Ahmad at his medical school graduation"
+                    width={900}
+                    height={900}
+                    unoptimized
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="absolute -bottom-5 -left-3 w-20 rotate-[-3deg] rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
+                  <Image
+                    src="/photos/waleed-young.jpg"
+                    alt="Waleed as a school student"
+                    width={700}
+                    height={933}
+                    unoptimized
+                    className="w-full h-auto rounded-lg"
+                  />
+                  <p className="text-center text-[9px] font-medium text-brand-text/60 pt-1 pb-0.5">before the system</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -509,13 +546,13 @@ export default function Home() {
               </span>
               <span className="absolute -top-3 right-8 hidden sm:inline-flex rounded-full bg-white px-3 py-1 text-xs font-bold text-brand-purple shadow border border-brand-purple/10">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-gold mr-1.5 mt-1" aria-hidden="true" />
-                Light review, day 3
+                Spaced review, before you forget
               </span>
               <div className="grid grid-cols-3 gap-3 md:gap-4">
                 {[
                   ['Monday', [['Deep Work', 'Biology · Respiration', 'bg-brand-purple text-brand-cream'], ['Deep Work', 'Maths · Integration', 'bg-brand-purple/85 text-brand-cream']]],
                   ['Tuesday', [['Active Recall', 'Blurt respiration, closed notes', 'bg-brand-gold/25 text-brand-purple'], ['Past paper', 'Integration, timed', 'bg-brand-gold/25 text-brand-purple']]],
-                  ['Thursday', [['Light Review', 'Respiration flashcards', 'bg-brand-cream-dark text-brand-purple'], ['Light Review', 'Error log check', 'bg-brand-cream-dark text-brand-purple']]],
+                  ['Wednesday', [['Deep Work', 'Chemistry · Kinetics', 'bg-brand-purple text-brand-cream'], ['Light Review', 'Error log check', 'bg-brand-cream-dark text-brand-purple']]],
                 ].map(([day, blocks]) => (
                   <div key={day as string}>
                     <p className="font-mono text-[11px] uppercase tracking-wider text-brand-purple/50 mb-2">{day as string}</p>

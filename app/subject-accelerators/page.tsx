@@ -223,9 +223,9 @@ export default function SubjectAccelerators() {
           <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.08] text-4xl sm:text-5xl md:text-6xl text-brand-purple">
             <HeroHeadline>
               <HeroWord>Struggling</HeroWord> <HeroWord>with</HeroWord> <HeroWord>A-Level</HeroWord>{' '}
-              <HeroWord className="italic text-brand-gold">Biology,</HeroWord>{' '}
-              <HeroWord className="italic text-brand-gold">Chemistry</HeroWord>{' '}
-              <HeroWord>or</HeroWord> <HeroWord className="italic text-brand-gold">Maths?</HeroWord>
+              <HeroWord className="italic text-green-600">Biology,</HeroWord>{' '}
+              <HeroWord className="italic text-violet-600">Chemistry</HeroWord>{' '}
+              <HeroWord>or</HeroWord> <HeroWord className="italic text-blue-600">Maths?</HeroWord>
             </HeroHeadline>
           </h1>
           <HeroFade delay={0.45}>
