@@ -26,4 +26,5 @@ Rules for the backlink version:
 1. Write the website version and ship it to the repo as usual.
 2. Write the backlink version into `content/backlink-articles/` (append to the existing part files or create a new dated file).
 3. Regenerate the PDF pack when asked: assemble the HTML with the existing cover/styles in `content/backlink-articles/pack.html`, then render with headless Chrome (`--print-to-pdf`), and copy to `~/Downloads` for Waleed to send to his SEO optimizer.
+   **Pack format rule (important):** keywords and link targets live ONLY on the summary/index page at the front. Article bodies must be pure copy-paste-ready prose (headline, body, author bio) with no keyword annotations, so nobody can accidentally paste metadata into a live placement. Keep the per-article keyword lines in the part source files (the assembly script strips them for the PDF).
 4. Run the compliance scan (dashes, curly quotes, banned vocabulary) over both versions before delivering.
