@@ -43,6 +43,10 @@ Deliver posts ready to paste. For each post give: the platform, the audience, th
 - One concrete, usable takeaway per post | the reader should be able to *do* something.
 - Honesty over hype. Waleed's brand is "the person who tells you the truth about revision." Protect that.
 
+## Blog articles: always write two versions
+
+Every blog article is produced twice: the website version (published to the repo) and a fully rewritten backlink version for guest-post placements (delivered as a file, never published on the site). The complete rules and delivery workflow are in `references/blog-dual-versions.md`. Read it whenever a blog article is requested.
+
 ## Do not
 
 - Do not invent statistics, student results, or grade outcomes. Approved proof points are in `references/audience-and-offers.md`. If asked for a claim we can't back, say so.
