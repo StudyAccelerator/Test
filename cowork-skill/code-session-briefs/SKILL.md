@@ -45,9 +45,9 @@ Know these so you never contradict them, but never repeat them in a brief:
 
 This section is maintained automatically: every Claude Code session that changes a business fact regenerates this skill and leaves a fresh zip in Waleed's Downloads for re-upload. So trust the snapshot date above. If it is more than a few weeks old, or Waleed tells you something that contradicts it, trust Waleed and remind him a newer version of this skill is probably sitting in his Downloads folder waiting to be re-uploaded.
 
-- Live site: alevelaccelerators.com. 11 SEO blog articles, free revision tracker (main lead magnet), /parents lead-capture page, /faqs, conversion-optimised homepage with real testimonials, blurting template PDF.
+- Live site: alevelaccelerators.com. The homepage is a programme hub (H1 "Top grades are a system, not a talent.", grade-climb hero graphic, three programme cards, founder story, testimonial wall); the Summer Accelerator has its own sales page holding the live Stripe payment links. Also: 11 SEO blog articles, free revision tracker (main lead magnet), /parents lead-capture page, /faqs, blurting template PDF.
 - Marketing assets: backlink article pack (11 rewrites, PDF, with the SEO optimizer), 30-day content calendar, optimised week 1 of posts with finished graphics.
-- Key dates: Summer Accelerator launches early August 2026. A-level results day is 14 August 2026, the biggest brand moment of the year; those posts get written live on the day, never pre-scheduled.
+- Key dates: the Summer Accelerator cohort starts 25 July 2026. A-level results day is 14 August 2026, the biggest brand moment of the year; those posts get written live on the day, never pre-scheduled.
 
 ## Worked example
 

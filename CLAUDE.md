@@ -10,14 +10,16 @@ The marketing site and lead-magnet tools for A-Level Accelerators, Waleed Ahmad'
 
 - Next.js 16 App Router, static export (`output: 'export'`, `trailingSlash: true`). No `app/api` routes: they break static export. Forms (revision tracker, /parents) call MailerLite directly from the client.
 - Live on **Vercel only** (repo github.com/StudyAccelerator/Test). Production tracks `main`. Hostinger and GitHub Pages are retired.
-- There is no local Node install: builds can only be verified on Vercel. Verify changes statically (grep, python) before pushing.
+- Node v24 and npm are installed on Waleed's Mac (since July 2026) and `node_modules` is installed. Run the dev server via `.claude/launch.json` (`next-dev`, port 3000) and verify changes visually in the browser before pushing; a static scan (grep, python) is still a good second check.
 - Always `git fetch` and check you are on the current `main` lineage before building on top of anything. Waleed works across multiple Claude Code accounts, so new work may have landed from another session.
 
 ## Key pages
 
-- `/` homepage (live Stripe payment links and BOOK_A_CALL_LINK constants: do not break them). Do not change the homepage meta title, meta description, or H1 without being asked.
+- `/` homepage, redesigned July 2026 as a programme hub: H1 "Top grades are a system, not a talent.", hero graphic cluster (grade climb + offer card + graduation photo), three programme cards, method sections, founder story, testimonial wall, dark final CTA. No prices on the homepage. BOOK_A_CALL_LINK constant: do not break it. Do not change the homepage meta title, meta description, or H1 without being asked.
+- `/summer-accelerators` the full Summer Accelerator sales page (former homepage): live Stripe payment links live HERE now, pricing, 13 FAQs + FAQ JSON-LD, sticky mobile buy bar. Do not break the Stripe links.
+- Testimonials are one shared system: quotes in `lib/testimonials.ts`, section component `components/home/testimonial-wall.tsx` (used on homepage and /study-systems). Edit quotes once there.
 - `/revision-tracker` free timetable tool (the main lead magnet; algorithm is pedagogically deliberate: Deep Work, Active Recall day+1, Light Review day+3/4)
-- `/parents` lead capture, `/faqs`, `/blog` (11 articles), `/subject-accelerators`, `/study-systems`, `/summer-accelerators`, `/workshop`
+- `/parents` lead capture, `/faqs`, `/blog` (11 articles), `/subject-accelerators`, `/study-systems`, `/workshop`
 - Canonical domain everywhere: https://alevelaccelerators.com (non-www)
 
 ## Content rules (MANDATORY, no exceptions)
