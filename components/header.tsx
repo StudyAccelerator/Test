@@ -35,7 +35,7 @@ export default function Header() {
           />
         </a>
         <nav className="flex flex-wrap justify-center items-center gap-6 text-sm md:text-base">
-          <a href="/" className="text-brand-purple hover:text-brand-gold font-semibold transition">Summer Accelerator</a>
+          <a href="/summer-accelerators" className="text-brand-purple hover:text-brand-gold font-semibold transition">Summer Accelerator</a>
           <a href="/study-systems" className="text-brand-purple hover:text-brand-gold font-semibold transition">Study System</a>
           <a href="/subject-accelerators" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
           <a href="/revision-tracker" className="text-brand-purple hover:text-brand-gold font-semibold transition">Free Tracker</a>

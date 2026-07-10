@@ -23,7 +23,7 @@ export default function Footer() {
             <div>
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Programmes</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="/#pricing" className="text-brand-gold hover:text-white transition">Summer Accelerator</a></li>
+                <li><a href="/summer-accelerators" className="text-brand-gold hover:text-white transition">Summer Accelerator</a></li>
                 <li><a href="/subject-accelerators" className="text-brand-gold hover:text-white transition">Subject Accelerators</a></li>
                 <li><a href="/study-systems" className="text-brand-gold hover:text-white transition">Study System</a></li>
               </ul>

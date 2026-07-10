@@ -2,614 +2,551 @@ import Image from 'next/image'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
-import FAQItem from '@/components/ui/faq-item'
-import TestimonialSlider from '@/components/ui/testimonial-slider'
+import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
 
 export const metadata = {
-  title: 'A-Level Summer Accelerator | Get Ahead for Year 13 | A-Level Accelerators',
-  description: 'A 6-week live A-Level summer course for Year 12 students going into Year 13. Master the high-yield topics that decide your predicted grades. Biology, Chemistry, Maths and Physics. Starts 25th July.',
+  title: 'A-Level Accelerators | Live A-Level Courses, Study Systems & Free Revision Tools',
+  description:
+    'Doctor-led A-level education: live online courses in Biology, Chemistry, Maths and Physics, the Top 1% Study System, and free revision tools. Founded by Dr Waleed Ahmad MBBS, trusted by 1,000+ students.',
   alternates: { canonical: 'https://alevelaccelerators.com/' },
 }
 
-const Divider = () => (
-  <div aria-hidden="true" className="h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent" />
-)
-
-const STRIPE_LINK_ONE_SUBJECT = 'https://buy.stripe.com/9B614oe9I6XQdHYdLmc3m06'
-const STRIPE_LINK_TWO_SUBJECTS = 'https://buy.stripe.com/dRmdRa2r04PI5bs6iUc3m07'
-const STRIPE_LINK_THREE_SUBJECTS = 'https://buy.stripe.com/14A00k6Hgeqi0Vc8r2c3m08'
-const STRIPE_LINK_FOUR_SUBJECTS = 'https://buy.stripe.com/dRm14o3v4aa2avM9v6c3m05'
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
 
-export default function SummerAccelerators() {
-  const subjects = [
-    { name: 'Biology', emoji: '🧬' },
-    { name: 'Chemistry', emoji: '🧪' },
-    { name: 'Maths', emoji: '➗' },
-    { name: 'Physics', emoji: '⚛️' },
-  ]
+/* Layered shadow stack: the one card surface used across the page */
+const CARD =
+  'rounded-2xl bg-white [box-shadow:0_0_0_1px_rgba(46,37,87,.05),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)]'
 
-  // Single source of truth for FAQ copy: used for both the rendered accordion
-  // and the FAQPage JSON-LD structured data.
-  const faqs = [
-    {
-      q: 'Who is the Summer Accelerator for?',
-      a: "Any Year 12 student moving into Year 13 who wants to start the year ahead. It doesn't matter where your mocks landed. If there's a gap between your current grades and the grades you want, we close it. If you're already performing well, we make sure you stay there and go into Year 13 in control.",
-    },
-    {
-      q: "When does it start and how's it structured?",
-      a: "The next cohort starts Saturday 25th July. It runs for six weeks, with two live sessions a week, two hours each. That's 24 hours of live teaching across the summer. Exact session times are confirmed when you book.",
-    },
-    {
-      q: "Which subjects can I choose?",
-      a: "Biology, Chemistry, Maths, and Physics. You can take one subject or several, and the more you take, the more you save.",
-    },
-    {
-      q: "Will the sessions for different subjects overlap?",
-      a: "No. Session times are scheduled so subjects never clash, so you can take all four and still make every session live.",
-    },
-    {
-      q: "Who teaches the sessions?",
-      a: "Your subjects are taught live by expert tutors who know the spec inside out, have achieved all A*s themselves and helped 100s do the same. Dr Waleed runs the final sessions himself on exam technique, active recall, and study strategy, so you leave knowing how to turn the content into actual marks.",
-    },
-    {
-      q: "What topics do you actually cover?",
-      a: "The high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. We don't waste your summer on filler. We teach the things that move your grade.",
-    },
-    {
-      q: "Which exam boards do you cover?",
-      a: "We teach to the three exam boards used most across A-Levels: AQA, OCR and Edexcel.",
-    },
-    {
-      q: "Do I need to be struggling to benefit?",
-      a: "No. Plenty of students join already doing well and want to stay ahead. The Accelerator works whether you're closing a gap or protecting top grades. Everyone walks into Year 13 ahead of where they'd be otherwise.",
-    },
-    {
-      q: "What if I miss a session?",
-      a: "Every session is recorded, so you'll never fall behind if something comes up. You'll have access to the recordings to catch up or revise whenever you need.",
-    },
-    {
-      q: "What happens after the six weeks?",
-      a: "You'll go into Year 13 already on top of the key topics. If you want support through the Year 13 year itself, Dr Waleed runs a 12-week Study Accelerator that takes you through the content and exam prep right up to your final exams. There's no pressure to continue, it's simply there if you want it.",
-    },
-    {
-      q: "Is there a guarantee if it's not right for me?",
-      a: "Yes. Try your first session completely risk-free. If it's not right for you, request a full refund, no questions asked.",
-    },
-    {
-      q: "Not sure which package is right for you?",
-      a: "If you're unsure how many subjects to take or which option fits best, book a free call with Dr Waleed and he'll help you decide. There's no obligation to buy. The quickest way to lock in your place is to secure it directly above before this cohort fills.",
-    },
-  ]
+const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60'
 
-  const faqJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'FAQPage',
-    mainEntity: faqs.map((f) => ({
-      '@type': 'Question',
-      name: f.q,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: f.a,
-      },
-    })),
-  }
+const programmesSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ItemList',
+  name: 'A-Level Accelerators Programmes',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Summer Accelerator', url: 'https://alevelaccelerators.com/summer-accelerators/' },
+    { '@type': 'ListItem', position: 2, name: 'Subject Accelerators', url: 'https://alevelaccelerators.com/subject-accelerators/' },
+    { '@type': 'ListItem', position: 3, name: 'Top 1% Study System', url: 'https://alevelaccelerators.com/study-systems/' },
+  ],
+}
 
+const PROGRAMMES = [
+  {
+    audience: 'For Year 12 going into Year 13',
+    name: 'Summer Accelerator',
+    badge: 'Enrolling now · starts 25th July',
+    outcome:
+      'Six weeks, live. Master the high-yield Year 13 topics that decide your predicted grades, and walk into September already ahead.',
+    href: '/summer-accelerators',
+    cta: 'Explore the Summer Accelerator',
+  },
+  {
+    audience: 'For students who know their weak subject',
+    name: 'Subject Accelerators',
+    badge: 'Runs through the school year',
+    outcome:
+      'Twelve-week live exam programmes in Biology, Chemistry and Maths. Small groups, specialist tutors, taught to the mark scheme.',
+    href: '/subject-accelerators',
+    cta: 'Explore Subject Accelerators',
+  },
+  {
+    audience: 'For students whose problem is how they study',
+    name: 'Top 1% Study System',
+    badge: 'The method itself',
+    outcome:
+      'High-yield revision, time management and exam performance. The system behind everything we teach, so you stay ahead without burning out.',
+    href: '/study-systems',
+    cta: 'Explore the Study System',
+  },
+]
+
+const WALL_QUOTES = [
+  {
+    quote:
+      'I liked how we worked together to get the answers instead of the tutor doing it for us. We go straight into exam practice instead of spending ages on content, and it works.',
+    name: 'Maahil',
+    role: 'A-Level Chemistry Student',
+  },
+  {
+    quote: 'The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content',
+    name: 'Naysa',
+    role: 'A-Level Biology Student',
+  },
+  {
+    quote: 'All the information provided was clear and understandable. It was really helpful and improved my confidence!',
+    name: 'Biju',
+    role: 'Gap Year Student',
+  },
+  {
+    quote:
+      'The topics were really hard to approach while researching alone so seeing it broken down into manageable points was useful to apply it even better',
+    name: 'Delicia',
+    role: 'Year 13 Student',
+  },
+  {
+    quote: 'I liked how the session was so exam-technique focused, with a great balance of exam questions and the content behind them',
+    name: 'Furkan',
+    role: 'Year 13 Student',
+  },
+  {
+    quote:
+      'The lessons were interactive with well explained concepts, easy to follow and very informative. Even the best students had something to improve on',
+    name: 'Jay',
+    role: 'Year 12 Student',
+  },
+]
+
+export default function Home() {
   return (
-    <main>
-      {/* FAQ structured data for rich results and answer engines */}
+    <main className="bg-brand-cream">
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(programmesSchema) }}
       />
 
       <Header />
 
-      {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream pt-24 pb-14 px-8 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-8 leading-tight">
-            <span className="text-brand-gold">Master the Topics That Decide</span> <span className="text-brand-cream">Your Predicted Grades!</span>
-          </h1>
-          <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            A six-week live summer course covering the high-yield Year 13 topics in Biology, Chemistry, Maths and Physics. Taught by subject specialists, led by a doctor.
-          </p>
-          <a
-            href="#pricing"
-            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-          >
-            Start September Ahead
-          </a>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-gold opacity-90 font-medium">
-            <span>Led by Dr Waleed &amp; expert A-Level tutors</span>
-            <span aria-hidden="true">·</span>
-            <span>1,000+ students supported</span>
-            <span aria-hidden="true">·</span>
-            <span>First session risk-free</span>
+      {/* ── 1 · Hero ─────────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(50% 40% at 80% 15%, rgba(201,169,110,0.13) 0%, rgba(201,169,110,0) 100%)',
+          }}
+        />
+        <div className="relative max-w-6xl mx-auto px-6 pt-14 pb-24 md:pt-24 md:pb-32 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
+          <div>
+            <HeroFade delay={0}>
+              <span className="inline-flex items-center gap-2 rounded-full border border-brand-purple/10 bg-brand-purple/[0.04] px-4 py-1.5 text-sm font-semibold text-brand-purple">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
+                Doctor-led A-Level education
+              </span>
+            </HeroFade>
+            <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.04] text-4xl sm:text-5xl lg:text-[4rem] text-brand-purple">
+              <HeroHeadline>
+                <HeroWord>Top</HeroWord> <HeroWord>grades</HeroWord> <HeroWord>are</HeroWord>{' '}
+                <HeroWord className="italic text-brand-gold">a</HeroWord>{' '}
+                <HeroWord className="italic text-brand-gold">system,</HeroWord>{' '}
+                <HeroWord>not</HeroWord> <HeroWord>a</HeroWord> <HeroWord>talent.</HeroWord>
+              </HeroHeadline>
+            </h1>
+            <HeroFade delay={0.45}>
+              <p className="mt-6 text-lg md:text-xl text-brand-text/75 leading-relaxed max-w-xl">
+                Live A-level courses and study systems for Biology, Chemistry, Maths and Physics. Built and taught by Dr Waleed Ahmad MBBS, an NHS doctor who has worked with over 1,000 students.
+              </p>
+            </HeroFade>
+            <HeroFade delay={0.55}>
+              <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
+                <a
+                  href="#programmes"
+                  className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+                >
+                  Explore the Programmes
+                </a>
+                <a
+                  href="/revision-tracker"
+                  className="inline-flex justify-center items-center rounded-full border border-brand-purple/20 text-brand-purple px-8 py-4 text-lg font-semibold hover:border-brand-gold hover:bg-brand-gold/5 transition-all"
+                >
+                  Try the Free Tracker
+                </a>
+              </div>
+              <p className="mt-4 text-sm text-brand-text/55">
+                Three programmes, one method. The tracker is free and takes about three minutes.
+              </p>
+            </HeroFade>
           </div>
+
+          <HeroFade delay={0.3} className="relative">
+            <div className={`relative overflow-hidden rotate-1 ${CARD} !rounded-3xl`}>
+              <Image
+                src="/photos/waleed-hero.jpg"
+                alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his desk in scrubs"
+                width={1600}
+                height={900}
+                priority
+                unoptimized
+                className="w-full h-auto"
+              />
+              <span className="absolute top-4 left-4 rounded-full bg-brand-purple/90 backdrop-blur text-brand-cream text-xs font-semibold px-3.5 py-1.5">
+                NHS doctor · former top A-level student
+              </span>
+            </div>
+            <div className="absolute -bottom-5 left-8 right-8 sm:left-auto sm:right-10 sm:w-auto rounded-2xl bg-white/90 backdrop-blur border border-brand-gold/30 shadow-xl px-5 py-3.5 flex items-center gap-4">
+              <div className="h-11 w-11 shrink-0 rounded-full bg-brand-purple text-brand-gold flex items-center justify-center font-serif font-bold text-lg">
+                W
+              </div>
+              <div className="leading-tight">
+                <p className="font-bold text-brand-purple">Dr Waleed Ahmad, MBBS</p>
+                <p className="text-sm text-brand-text/70">Founder · teaches every cohort</p>
+              </div>
+            </div>
+          </HeroFade>
         </div>
       </section>
 
-      {/* Urgency Bar */}
+      {/* ── 2 · Trust strip ──────────────────────────────────────────────── */}
       <ScrollFade>
-        <section className="py-6 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
-          <div className="max-w-4xl mx-auto text-center">
-            <p className="text-base md:text-lg text-brand-purple font-semibold">
-              ⏳ The next cohort starts Saturday 25th July with limited spaces. Secure your place now!
-            </p>
-          </div>
-        </section>
-      </ScrollFade>
-
-      {/* Proof strip: concrete numbers before any pitch */}
-      <ScrollFade>
-        <section className="py-10 px-4 bg-white border-b border-brand-cream-dark">
-          <div className="max-w-5xl mx-auto grid grid-cols-3 gap-6 text-center">
+        <section className="border-y border-brand-purple/10 bg-white/50">
+          <div className="max-w-6xl mx-auto px-6 py-8 flex flex-wrap justify-center gap-x-12 gap-y-4 text-center">
             {[
-              { stat: '1,000+', label: 'students worked with' },
-              { stat: '24 hrs', label: 'of live teaching per subject' },
-              { stat: '£9 to £12', label: 'per hour, vs £50/hr average for 1:1 tutoring' },
-            ].map((item) => (
-              <div key={item.label}>
-                <p className="text-3xl md:text-4xl font-serif font-bold text-brand-purple">{item.stat}</p>
-                <p className="text-sm text-brand-text opacity-75 mt-2 leading-snug">{item.label}</p>
-              </div>
+              'MBBS · NHS doctor',
+              '1,000+ students taught',
+              'Biology · Chemistry · Maths · Physics',
+              'AQA, OCR and Edexcel covered',
+              'First session risk-free',
+            ].map((badge) => (
+              <span key={badge} className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/70">
+                {badge}
+              </span>
             ))}
           </div>
         </section>
       </ScrollFade>
 
-      {/* Testimonials: proof before pitch */}
-      <TestimonialSlider />
-
-      <Divider />
-
-      {/* Why Learn With Me */}
-      <ScrollFade>
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              Why Learn With Us
+      {/* ── 3 · Programme router ─────────────────────────────────────────── */}
+      <section id="programmes" className="py-24 md:py-32 px-6">
+        <div className="max-w-6xl mx-auto">
+          <ScrollFade>
+            <p className={`${EYEBROW} mb-4`}>Choose your route</p>
+            <h2 className="font-serif tracking-tight text-3xl md:text-5xl text-brand-purple max-w-2xl leading-tight">
+              Three programmes. <span className="italic text-brand-gold">One</span> method.
             </h2>
-
-            <div className="flex flex-col md:flex-row gap-10 items-center md:items-start">
-              <div className="flex-shrink-0 flex flex-col items-center">
-                <div
-                  className="w-72 h-72 overflow-hidden rounded-2xl"
-                  style={{ boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)' }}
-                >
-                  <Image
-                    src="/graduation.jpg"
-                    alt="Dr Waleed Ahmad"
-                    width={320}
-                    height={320}
-                    className="w-full h-full object-cover"
-                    style={{ objectPosition: 'center 45%', transform: 'scale(1.25)', transformOrigin: 'center 45%' }}
-                    unoptimized
-                  />
-                </div>
-                <p className="mt-3 text-sm italic text-brand-gold font-semibold">Dr. Waleed Ahmad, MBBS</p>
-              </div>
-
-              <div className="space-y-6 text-lg text-brand-text">
-                <p>Hi, I&apos;m Dr Waleed Ahmad, the founder of A-Level Accelerators. I&apos;ve worked with over 1,000 students, and I built this programme around one idea: the students who get ahead over summer walk into Year 13 in control, while everyone else spends first term catching up.</p>
-                <p>Your subjects are taught live by expert tutors who know exactly which topics carry the most marks. I run the final sessions myself, where I teach the exam technique, active recall, and study systems that turn knowing the content into actually securing top grades.</p>
-                <p>By the end of six weeks, you won&apos;t just have covered the highest-value Year 13 topics. You&apos;ll know them well enough to walk into the mocks that set your predicted grades with confidence and already ahead!</p>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* What the Summer Accelerator Is */}
-      <ScrollFade delay={0.2}>
-        <section className="py-24 px-4 bg-brand-cream">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-8">
-              What the Summer Accelerator Includes
-            </h2>
-
-            <div className="space-y-6">
-              {[
-                {
-                  num: '01',
-                  title: 'The Topics That Decide Your Grades',
-                  body: 'In six weeks (two-hour sessions, twice a week), we cover the high-yield Year 13 topics that carry the most marks and show up in the mocks that set your predicted grades. You learn the things that actually move your grade, not filler.',
-                },
-                {
-                  num: '02',
-                  title: 'Taught Live by Expert Tutors',
-                  body: 'Every session is taught live by subject specialists who know the spec inside out, have achieved top grades themselves and helped hundreds do the same. You ask questions in real time and get answers on the spot, not a pre-recorded video you watch alone.',
-                },
-                {
-                  num: '03',
-                  title: 'Ahead From Day One of Year 13',
-                  body: "You won't be playing catch-up in September. You'll start Year 13 already knowing the topics your classmates are seeing for the first time, with the exam technique to back it up.",
-                },
-              ].map((item) => (
-                <div key={item.num} className="bg-white rounded-xl shadow-sm border border-brand-purple/10 p-6 md:p-8 flex flex-col sm:flex-row gap-4 sm:gap-8 items-start sm:items-center">
-                  <span className="text-6xl md:text-7xl font-serif font-bold text-brand-gold leading-none flex-shrink-0 w-20 text-center" aria-hidden="true">
-                    {item.num}
-                  </span>
-                  <div>
-                    <h3 className="text-2xl font-semibold text-brand-purple mb-3">{item.title}</h3>
-                    <p className="text-lg text-brand-text leading-relaxed">{item.body}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* The Difference a Summer Makes */}
-      <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              The Difference a Summer Makes
-            </h2>
-
-            <div className="grid md:grid-cols-2 gap-8">
-              <div className="bg-brand-light-gray p-8 rounded-lg shadow-sm border-l-4 border-red-300">
-                <h3 className="text-xl font-semibold text-brand-purple mb-6">Students who coast the summer</h3>
-                <ul className="space-y-4 text-brand-text">
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Start Year 13 seeing key topics for the first time</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Spend first term catching up instead of getting ahead</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Go into predicted-grade mocks underprepared</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-red-500 font-bold text-lg flex-shrink-0">✗</span>
-                    <span>Feel behind before the year&apos;s even started</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-brand-cream p-8 rounded-lg shadow-sm border-l-4 border-brand-gold">
-                <h3 className="text-xl font-semibold text-brand-purple mb-6">Students who use the Accelerator</h3>
-                <ul className="space-y-4 text-brand-text">
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Walk into Year 13 already on top of the high-value topics</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Start the year ahead and stay ahead</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Go into predicted-grade mocks confident and prepared</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="text-green-600 font-bold text-lg flex-shrink-0">✓</span>
-                    <span>Have the exam technique to turn knowledge into marks</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* Subjects */}
-      <ScrollFade delay={0.2}>
-        <section id="subjects" className="py-20 px-4 bg-white">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
-              Choose Your Subjects
-            </h2>
-            <p className="text-center text-lg text-brand-text mb-12 max-w-2xl mx-auto">
-              Get ahead in the subjects that matter most for your Year 13.
+            <p className="mt-4 max-w-xl text-brand-text/70">
+              Everything we run trains the same thing: turning what you know into marks. Start from where you actually are.
             </p>
-            <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-              {subjects.map((subject) => (
+          </ScrollFade>
+          <div className="mt-14 grid md:grid-cols-3 border-y border-brand-purple/10">
+            {PROGRAMMES.map((p, i) => (
+              <ScrollFade key={p.name} delay={i * 0.12}>
                 <a
-                  key={subject.name}
-                  href="#pricing"
-                  className="block bg-brand-light-gray p-8 rounded-lg shadow-md border-l-4 border-brand-gold text-center hover:shadow-xl hover:-translate-y-1 transition-all"
+                  href={p.href}
+                  className="group/card relative flex flex-col h-full py-10 px-8 md:border-r border-brand-purple/10 md:first:border-l max-md:border-b max-md:last:border-b-0 hover:bg-gradient-to-t hover:from-brand-purple/[0.03] hover:to-transparent transition-colors"
                 >
-                  <div className="text-4xl mb-4" aria-hidden="true">{subject.emoji}</div>
-                  <h3 className="text-2xl font-serif font-bold text-brand-purple">{subject.name}</h3>
-                </a>
-              ))}
-            </div>
-
-            {/* Every package includes strip */}
-            <div className="bg-brand-cream rounded-xl px-6 py-4 mt-10 max-w-5xl mx-auto">
-              <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm md:text-base text-brand-text font-medium">
-                {[
-                  '24 hours of live teaching',
-                  'Every session recorded',
-                  'High-yield topics across your chosen subjects',
-                  'Taught by expert tutors, final sessions led by Dr Waleed',
-                ].map((item) => (
-                  <span key={item} className="flex items-center gap-2">
-                    <span className="text-brand-gold font-bold" aria-hidden="true">✓</span>
-                    <span>{item}</span>
+                  <span
+                    aria-hidden="true"
+                    className="absolute left-0 top-10 w-1 h-6 group-hover/card:h-12 bg-brand-gold rounded-r-full transition-all duration-300"
+                  />
+                  <p className={EYEBROW}>{p.audience}</p>
+                  <h3 className="mt-4 font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple group-hover/card:translate-x-2 transition-transform duration-300">
+                    {p.name}
+                  </h3>
+                  <span className="mt-3 self-start rounded-full bg-brand-gold/15 text-brand-purple text-xs font-bold px-3 py-1">
+                    {p.badge}
                   </span>
-                ))}
-              </div>
-            </div>
-            <p className="text-center text-brand-gold font-semibold text-base md:text-lg mt-4">
-              Average 1:1 tutoring costs £50/hr. Our packages work out at £9 to £12/hr.
-            </p>
+                  <p className="mt-4 leading-relaxed text-brand-text/75">{p.outcome}</p>
+                  <span className="mt-auto pt-8 font-semibold text-brand-gold group-hover/card:underline underline-offset-4">
+                    {p.cta} →
+                  </span>
+                </a>
+              </ScrollFade>
+            ))}
           </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* Pricing */}
-      <ScrollFade delay={0.2}>
-        <section id="pricing" className="py-20 px-4 bg-brand-purple">
-          <div className="max-w-6xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-cream font-serif text-center mb-4">
-              Secure Your Summer Place
-            </h2>
-            <p className="text-center text-lg text-brand-cream opacity-80 mb-10 max-w-2xl mx-auto">
-              The next cohort starts Saturday 25th July. Session times never overlap, so you can take all four subjects and still attend every session live.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
-              {/* One Subject */}
-              <div className="flex flex-col bg-brand-cream rounded-xl p-8 text-center shadow-lg border-2 border-brand-cream-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                <h3 className="text-xl font-serif font-bold text-brand-purple mb-1">One Subject</h3>
-                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Get ahead in one</p>
-                <p className="text-4xl font-bold text-brand-gold mb-1">£289</p>
-                <p className="text-xs text-brand-text opacity-60 mb-6">per subject</p>
-                <ul className="text-brand-text text-sm mb-8 space-y-3 text-left">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Full 6-week Summer Accelerator</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Choose Biology, Chemistry, Maths or Physics</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Live teaching with exam technique built in</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Session recordings included</span>
-                  </li>
-                </ul>
-                <a href={STRIPE_LINK_ONE_SUBJECT} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
-                  Join One Subject
-                </a>
-              </div>
-
-              {/* Two Subjects */}
-              <div className="flex flex-col bg-brand-cream rounded-xl p-8 text-center shadow-lg border-2 border-brand-cream-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                <h3 className="text-xl font-serif font-bold text-brand-purple mb-1">Two Subjects</h3>
-                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Save £39</p>
-                <p className="text-4xl font-bold text-brand-gold mb-1">£539</p>
-                <p className="text-xs text-brand-text opacity-60 mb-6">save £39 vs individual</p>
-                <ul className="text-brand-text text-sm mb-8 space-y-3 text-left">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Everything in One Subject, ×2</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Any two of the four subjects</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Get ahead across two Year 13 courses</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>48 hours of teaching for less than 11 hours of 1:1 tutoring</span>
-                  </li>
-                </ul>
-                <a href={STRIPE_LINK_TWO_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
-                  Join Two Subjects
-                </a>
-              </div>
-
-              {/* Three Subjects (featured) */}
-              <div className="relative flex flex-col bg-brand-cream rounded-xl p-8 text-center shadow-2xl border-4 border-brand-gold transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(46,37,87,0.25)]">
-                <span className="absolute -top-4 left-1/2 -translate-x-1/2 whitespace-nowrap bg-brand-gold text-brand-purple text-sm font-bold px-4 py-1 rounded-full shadow-md">
-                  Most Popular
-                </span>
-                <h3 className="text-xl font-serif font-bold text-brand-purple mb-1">Three Subjects</h3>
-                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Save £128</p>
-                <p className="text-4xl font-bold text-brand-gold mb-1">£739</p>
-                <p className="text-xs text-brand-text opacity-60 mb-6">save £128 vs individual</p>
-                <ul className="text-brand-text text-sm mb-8 space-y-3 text-left">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Everything in One Subject, ×3</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Any three of the four subjects</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>The choice most students make</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>72 hours of teaching for less than 15 hours of 1:1 tutoring</span>
-                  </li>
-                </ul>
-                <a href={STRIPE_LINK_THREE_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold-light transition-all shadow-lg hover:shadow-xl">
-                  Join Three Subjects
-                </a>
-              </div>
-
-              {/* Four Subjects */}
-              <div className="flex flex-col bg-brand-cream rounded-xl p-8 text-center shadow-lg border-2 border-brand-cream-dark transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl">
-                <h3 className="text-xl font-serif font-bold text-brand-purple mb-1">Four Subjects</h3>
-                <p className="text-sm text-brand-gold font-semibold uppercase tracking-wide mb-4">Best value · Save £307</p>
-                <p className="text-4xl font-bold text-brand-gold mb-1">£849</p>
-                <p className="text-xs text-brand-text opacity-60 mb-6">save £307 vs individual</p>
-                <ul className="text-brand-text text-sm mb-8 space-y-3 text-left">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>All four subjects included</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Biology, Chemistry, Maths &amp; Physics</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>Complete head start across the sciences</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold flex-shrink-0">✓</span>
-                    <span>96 hours of teaching for less than 17 hours of 1:1 tutoring</span>
-                  </li>
-                </ul>
-                <a href={STRIPE_LINK_FOUR_SUBJECTS} className="mt-auto block w-full py-3 px-6 text-sm bg-brand-gold bg-opacity-80 text-brand-purple font-semibold rounded-lg hover:bg-brand-gold transition-all hover:shadow-md">
-                  Join All Subjects
-                </a>
-              </div>
-            </div>
-
-            <p className="text-center text-brand-cream opacity-80 text-base max-w-2xl mx-auto">
-              Early-bird places are limited and fill on a first-come basis. Secure your place now to lock in the summer rate before the September cohorts open at a higher price.
-            </p>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* Help choosing a package */}
-      <ScrollFade delay={0.2}>
-        <section className="py-12 px-4 bg-white">
-          <div className="max-w-4xl mx-auto bg-brand-cream border border-brand-gold/30 rounded-xl px-6 py-5">
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
-              <p className="text-sm sm:whitespace-nowrap text-brand-text">
-                Not sure which option fits? Book a free call with Dr Waleed to help you choose.
-              </p>
-              <a
-                href={BOOK_A_CALL_LINK}
-                className="inline-block whitespace-nowrap px-6 py-2.5 border-2 border-brand-gold text-brand-purple font-semibold rounded-lg hover:bg-brand-gold hover:text-brand-purple transition-all"
-              >
-                Book a Free Call
+          <ScrollFade delay={0.2}>
+            <p className="mt-8 text-center text-brand-text/60">
+              Not ready for a programme?{' '}
+              <a href="#tracker" className="font-semibold text-brand-purple underline underline-offset-4 hover:text-brand-gold transition">
+                Start with the free revision timetable
               </a>
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* Guarantee */}
-      <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-white">
-          <div className="max-w-2xl mx-auto">
-            <div className="bg-brand-cream p-12 rounded-lg shadow-lg border-4 border-brand-gold text-center">
-              <div className="text-5xl mb-6" aria-hidden="true">🛡️</div>
-              <h2 className="text-3xl md:text-4xl text-brand-purple font-serif font-bold mb-6">
-                Try Your First Session Risk-Free
-              </h2>
-              <p className="text-lg text-brand-text">
-                If the first session is not valuable, you can request a full refund <span className="italic text-brand-text opacity-75">(no questions asked)</span>.
-              </p>
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* FAQ */}
-      <ScrollFade delay={0.2}>
-        <section id="faq" className="py-20 px-4 bg-brand-cream">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12">
-              Frequently Asked Questions
-            </h2>
-            <div className="space-y-4">
-              {faqs.map((faq, idx) => (
-                <FAQItem key={idx} question={faq.q} answer={<p>{faq.a}</p>} />
-              ))}
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
-      {/* Closing CTA */}
-      <ScrollFade delay={0.2}>
-        <section id="secure" className="pt-24 pb-16 px-4 bg-white text-center">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif mb-6">
-              Walk Into September Already Ahead
-            </h2>
-            <p className="text-lg text-brand-text mb-12 leading-relaxed">
-              This summer is the only window to get genuinely ahead before the pressure starts. Don&apos;t waste your first term catching up!
             </p>
-            <a
-              href="#pricing"
-              className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-            >
-              Secure My Place
-            </a>
-            <a
-              href={BOOK_A_CALL_LINK}
-              className="block mt-6 text-sm text-brand-text underline opacity-70 hover:opacity-100 transition"
-            >
-              Or book a free call if you have any questions
-            </a>
-          </div>
-        </section>
-      </ScrollFade>
-
-      {/* Soft path for visitors who are not ready to buy */}
-      <section className="py-14 px-4 bg-brand-cream text-center">
-        <div className="max-w-2xl mx-auto">
-          <h2 className="text-2xl md:text-3xl text-brand-purple font-serif mb-4">
-            Not Ready to Decide Yet?
-          </h2>
-          <p className="text-brand-text mb-8 leading-relaxed">
-            Start with the free Revision Tracker instead. It builds you a personalised weekly revision timetable in about three minutes, using the same method we teach on the course.
-          </p>
-          <a
-            href="/revision-tracker"
-            className="inline-block px-8 py-3 border-2 border-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold transition-all"
-          >
-            Build My Free Timetable
-          </a>
+          </ScrollFade>
         </div>
       </section>
 
-      {/* Sticky mobile CTA: on a page this long, the next buy button is
-          thousands of pixels from the hero on a phone */}
-      <div className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-brand-purple border-t-2 border-brand-gold px-4 py-2.5 flex items-center justify-between gap-3">
-        <span className="text-brand-cream text-sm font-medium leading-snug">Cohort starts 25th July</span>
-        <a
-          href="#pricing"
-          className="shrink-0 px-5 py-2 bg-brand-gold text-brand-purple text-sm font-bold rounded-md"
-        >
-          Secure my place
-        </a>
-      </div>
-      <div className="h-14 md:hidden" aria-hidden="true" />
+      {/* ── 4 · Method statement ─────────────────────────────────────────── */}
+      <ScrollFade>
+        <section className="px-6 pb-24 md:pb-32">
+          <div className="max-w-5xl mx-auto text-center">
+            <p className={`${EYEBROW} mb-8`}>How every programme works</p>
+            <p className="font-serif tracking-tight text-3xl sm:text-4xl md:text-[3.4rem] text-brand-purple leading-[1.15]">
+              I <span className="italic text-brand-gold">diagnose</span>
+              <sup className="font-mono text-sm text-brand-purple/50 ml-1">01</sup> how you actually study, {' '}
+              <span className="italic text-brand-gold">rebuild</span>
+              <sup className="font-mono text-sm text-brand-purple/50 ml-1">02</sup> your revision around what moves marks, and {' '}
+              <span className="italic text-brand-gold">coach</span>
+              <sup className="font-mono text-sm text-brand-purple/50 ml-1">03</sup> you all the way to exam day.
+            </p>
+            <p className="mt-8 text-brand-text/60 max-w-xl mx-auto">
+              I am a doctor. I do not treat anything before diagnosing it, and we do not teach anyone before finding where the marks are leaking.
+            </p>
+          </div>
+        </section>
+      </ScrollFade>
 
-      {/* Footer */}
+      {/* ── 5 · How it works: 01 / 02 / 03 ──────────────────────────────── */}
+      <section className="px-6 pb-24 md:pb-32">
+        <div className="max-w-6xl mx-auto space-y-20 md:space-y-28">
+          {/* 01 Diagnose */}
+          <ScrollFade>
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+              <div>
+                <p className={EYEBROW}>01 · Diagnose</p>
+                <h3 className="mt-4 font-serif tracking-tight text-2xl md:text-4xl text-brand-purple leading-tight">
+                  First we find where the marks are leaking
+                </h3>
+                <p className="mt-4 text-brand-text/75 leading-relaxed max-w-lg">
+                  Every student starts with an honest audit: every topic, rated for real confidence, not familiarity. The topics you avoid are usually where your grade is hiding.
+                </p>
+              </div>
+              <div className={`${CARD} p-6 md:p-8`}>
+                <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Topic audit · Chemistry</p>
+                <ul className="space-y-3">
+                  {[
+                    ['Electrochemistry', 'avoiding it', 'bg-red-100 text-red-700'],
+                    ['Kinetics', 'shaky', 'bg-amber-100 text-amber-700'],
+                    ['Aromatic chemistry', 'shaky', 'bg-amber-100 text-amber-700'],
+                    ['Bonding', 'solid', 'bg-emerald-100 text-emerald-700'],
+                  ].map(([topic, status, cls]) => (
+                    <li key={topic as string} className="flex items-center justify-between gap-4 rounded-xl border border-brand-purple/8 px-4 py-3">
+                      <span className="font-medium text-brand-text">{topic}</span>
+                      <span className={`rounded-full px-3 py-1 text-xs font-bold ${cls}`}>{status}</span>
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-4 text-sm text-brand-gold font-semibold">↑ Most of this grade is hiding in the first row</p>
+              </div>
+            </div>
+          </ScrollFade>
+
+          {/* 02 Rebuild */}
+          <ScrollFade>
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+              <div className="md:order-2">
+                <p className={EYEBROW}>02 · Rebuild</p>
+                <h3 className="mt-4 font-serif tracking-tight text-2xl md:text-4xl text-brand-purple leading-tight">
+                  Then the same hours go into the right work
+                </h3>
+                <p className="mt-4 text-brand-text/75 leading-relaxed max-w-lg">
+                  Re-reading and highlighting feel productive and move nothing. We rebuild your week around deep work, active recall the day after, and spaced review, so every hour earns marks.
+                </p>
+              </div>
+              <div className={`${CARD} p-6 md:p-8 md:order-1`}>
+                <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Your week · rebuilt</p>
+                <div className="space-y-3">
+                  {[
+                    ['Mon', 'Deep Work · Electrochemistry', '90 min', 'bg-brand-purple text-brand-cream'],
+                    ['Tue', 'Active Recall · blurt yesterday from memory', '45 min', 'bg-brand-gold/20 text-brand-purple'],
+                    ['Thu', 'Light Review · consolidate and re-test', '30 min', 'bg-brand-cream-dark text-brand-purple'],
+                  ].map(([day, task, len, cls]) => (
+                    <div key={day as string} className="flex items-center gap-3">
+                      <span className="font-mono text-xs text-brand-purple/50 w-9">{day}</span>
+                      <span className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold ${cls}`}>{task}</span>
+                      <span className="font-mono text-xs text-brand-purple/50">{len}</span>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-4 text-sm text-brand-gold font-semibold">Spaced exactly when your brain is about to forget</p>
+              </div>
+            </div>
+          </ScrollFade>
+
+          {/* 03 Coach */}
+          <ScrollFade>
+            <div className="grid md:grid-cols-2 gap-10 md:gap-16 items-center">
+              <div>
+                <p className={EYEBROW}>03 · Coach</p>
+                <h3 className="mt-4 font-serif tracking-tight text-2xl md:text-4xl text-brand-purple leading-tight">
+                  Live teaching, straight to exam technique
+                </h3>
+                <p className="mt-4 text-brand-text/75 leading-relaxed max-w-lg">
+                  Sessions are live and interactive, never pre-recorded. You attempt real exam questions, get feedback on your actual answers, and learn to write in the language the mark scheme rewards.
+                </p>
+                <a
+                  href={BOOK_A_CALL_LINK}
+                  className="mt-7 inline-flex items-center rounded-full bg-brand-purple text-brand-cream px-7 py-3.5 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+                >
+                  Book a Free Call
+                </a>
+                <p className="mt-3 text-sm text-brand-text/55">Fifteen minutes, no obligation. An honest look at where you are.</p>
+              </div>
+              <div>
+                <div className={`${CARD} p-6 md:p-8`}>
+                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Session note · week 4</p>
+                  <p className="text-brand-text leading-relaxed">
+                    &ldquo;You lost 3 marks on the 6-marker to phrasing, not knowledge. We drilled the mark scheme wording today. Before Thursday: two timed questions, same topic, closed notes.&rdquo;
+                  </p>
+                  <p className="mt-4 text-sm font-semibold text-brand-purple">Dr Waleed</p>
+                </div>
+                <figure className={`${CARD} p-6 mt-5`}>
+                  <blockquote className="text-brand-text/85 leading-relaxed">
+                    &ldquo;We go straight into exam practice instead of spending ages on content, and it works.&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-3 text-sm font-semibold text-brand-purple">
+                    Maahil · A-Level Chemistry Student
+                  </figcaption>
+                </figure>
+              </div>
+            </div>
+          </ScrollFade>
+        </div>
+      </section>
+
+      {/* ── 6 · Meet Dr Waleed ───────────────────────────────────────────── */}
+      <ScrollFade>
+        <section className="px-6 pb-24 md:pb-32">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-center">
+            <div className="relative">
+              <div className={`overflow-hidden -rotate-1 ${CARD} !rounded-3xl`}>
+                <Image
+                  src="/photos/waleed-notebook.jpg"
+                  alt="Dr Waleed Ahmad planning a student session at his desk"
+                  width={1200}
+                  height={675}
+                  unoptimized
+                  className="w-full h-auto"
+                />
+              </div>
+              <div className="absolute -top-6 -right-2 sm:-right-5 w-24 sm:w-28 rotate-3 rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
+                <Image
+                  src="/photos/waleed-young.jpg"
+                  alt="Waleed as a school student"
+                  width={700}
+                  height={933}
+                  unoptimized
+                  className="w-full h-auto rounded-lg"
+                />
+                <p className="text-center text-[10px] font-medium text-brand-text/60 pt-1 pb-0.5">me, before the system</p>
+              </div>
+            </div>
+            <div>
+              <p className={EYEBROW}>Who is teaching you</p>
+              <h2 className="mt-4 font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
+                I did everything school said. It nearly <span className="italic text-brand-gold">wasn&apos;t enough.</span>
+              </h2>
+              <div className="mt-6 space-y-4 text-brand-text/80 leading-relaxed">
+                <p>
+                  At A-level I worked as hard as anyone I knew. Re-reading, highlighting, beautiful notes. It got me into medicine, but only because I threw hundreds of extra hours at a method that wasted most of them.
+                </p>
+                <p>
+                  Medical school forced me to learn properly: active recall, spaced repetition, working to the mark scheme. Same hours, pointed at the right work. That system is what I teach now, and I hold every session to the standard I needed at 17.
+                </p>
+              </div>
+              <ul className="mt-7 space-y-2 font-mono text-sm text-brand-purple/70">
+                <li>MBBS · NHS Foundation Doctor</li>
+                <li>Former top-performing A-level student</li>
+                <li>1,000+ students worked with over 6 years</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* ── 7 · Free tracker capture ─────────────────────────────────────── */}
+      <ScrollFade>
+        <section id="tracker" className="px-6 pb-24 md:pb-32">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className={`${EYEBROW} mb-4`}>Free tool</p>
+            <h2 className="font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
+              Your first week, planned <span className="italic text-brand-gold">tonight</span>
+            </h2>
+            <p className="mt-4 text-brand-text/70 max-w-xl mx-auto">
+              The Revision Tracker builds you a personalised weekly timetable on the same method we teach: deep work, recall the next day, review before you forget.
+            </p>
+            <div className={`${CARD} relative mt-12 p-6 md:p-8 text-left`}>
+              <span className="absolute -top-3 left-8 rounded-full bg-white px-3 py-1 text-xs font-bold text-brand-purple shadow border border-brand-purple/10">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-gold mr-1.5" aria-hidden="true" />
+                Active recall, day 1
+              </span>
+              <span className="absolute -top-3 right-8 hidden sm:inline-flex rounded-full bg-white px-3 py-1 text-xs font-bold text-brand-purple shadow border border-brand-purple/10">
+                <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-gold mr-1.5 mt-1" aria-hidden="true" />
+                Light review, day 3
+              </span>
+              <div className="grid grid-cols-3 gap-3 md:gap-4">
+                {[
+                  ['Monday', [['Deep Work', 'Biology · Respiration', 'bg-brand-purple text-brand-cream'], ['Deep Work', 'Maths · Integration', 'bg-brand-purple/85 text-brand-cream']]],
+                  ['Tuesday', [['Active Recall', 'Blurt respiration, closed notes', 'bg-brand-gold/25 text-brand-purple'], ['Past paper', 'Integration, timed', 'bg-brand-gold/25 text-brand-purple']]],
+                  ['Thursday', [['Light Review', 'Respiration flashcards', 'bg-brand-cream-dark text-brand-purple'], ['Light Review', 'Error log check', 'bg-brand-cream-dark text-brand-purple']]],
+                ].map(([day, blocks]) => (
+                  <div key={day as string}>
+                    <p className="font-mono text-[11px] uppercase tracking-wider text-brand-purple/50 mb-2">{day as string}</p>
+                    <div className="space-y-2">
+                      {(blocks as string[][]).map(([kind, what, cls]) => (
+                        <div key={what} className={`rounded-lg px-3 py-2.5 ${cls}`}>
+                          <p className="text-[11px] font-bold uppercase tracking-wide opacity-80">{kind}</p>
+                          <p className="text-xs sm:text-sm font-semibold leading-snug">{what}</p>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <a
+              href="/revision-tracker"
+              className="mt-10 inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+            >
+              Build My Free Timetable
+            </a>
+            <p className="mt-3 text-sm text-brand-text/55">Free. Takes about three minutes.</p>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* ── 8 · Testimonial wall ─────────────────────────────────────────── */}
+      <ScrollFade>
+        <section className="px-6 pb-24 md:pb-32">
+          <div className="max-w-6xl mx-auto">
+            <p className={`${EYEBROW} mb-4 text-center`}>From real feedback forms</p>
+            <h2 className="text-center font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
+              What students <span className="italic text-brand-gold">actually</span> say
+            </h2>
+            <div className="mt-14 columns-1 md:columns-3 gap-6 [&>figure]:break-inside-avoid">
+              {WALL_QUOTES.map((t) => (
+                <figure key={t.name} className={`${CARD} p-7 mb-6`}>
+                  <span aria-hidden="true" className="font-serif text-5xl leading-none text-brand-gold/70 block">
+                    &ldquo;
+                  </span>
+                  <blockquote className="mt-2 text-brand-text/85 leading-relaxed">{t.quote}</blockquote>
+                  <figcaption className="mt-5 text-sm">
+                    <span className="font-bold text-brand-purple">{t.name}</span>
+                    <span className="text-brand-text/60"> · {t.role}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* ── 9 · Final CTA: the one dark chapter ─────────────────────────── */}
+      <section className="bg-brand-purple text-brand-cream py-24 md:py-32 px-6 text-center">
+        <div className="max-w-3xl mx-auto">
+          <ScrollFade>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-8">Start here</p>
+            <h2 className="font-serif tracking-tight text-4xl md:text-6xl leading-[1.08]">
+              Stop revising <span className="italic text-brand-gold">harder.</span>
+              <br />
+              Start revising right.
+            </h2>
+            <p className="mt-8 text-lg text-brand-cream/80 leading-relaxed max-w-xl mx-auto">
+              Fifteen minutes with Dr Waleed. An honest diagnosis of where the marks are leaking, and a clear recommendation, even if it is not us.
+            </p>
+            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href={BOOK_A_CALL_LINK}
+                className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-9 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
+              >
+                Book a Free Call
+              </a>
+              <a
+                href="#programmes"
+                className="inline-flex justify-center items-center rounded-full border border-brand-cream/30 text-brand-cream px-9 py-4 text-lg font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
+              >
+                See the Programmes
+              </a>
+            </div>
+            <p className="mt-5 text-sm text-brand-cream/60">
+              Free call, no obligation. Not ready to talk?{' '}
+              <a href="/revision-tracker" className="underline underline-offset-4 hover:text-brand-gold transition">
+                Start with the free tracker
+              </a>
+              .
+            </p>
+          </ScrollFade>
+        </div>
+      </section>
+
       <Footer />
     </main>
   )
