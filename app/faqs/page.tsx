@@ -116,7 +116,7 @@ const groups: Group[] = [
       },
       {
         q: 'Do you offer free resources?',
-        a: "Yes. Our revision blog, the free Revision Tracker timetable tool, and a printable blurting template are all free and linked in the footer of every page. No email required for the template.",
+        a: "Yes. Our revision blog, the free Revision Tracker timetable tool, and a printable blurting template are all free and linked in the footer of every page.",
       },
     ],
   },
