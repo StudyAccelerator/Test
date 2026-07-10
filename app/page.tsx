@@ -108,7 +108,7 @@ export default function SummerAccelerators() {
       {/* Hero Section */}
       <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream pt-24 pb-14 px-8 text-center">
         <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif font-bold mb-8 leading-tight">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-8 leading-tight">
             <span className="text-brand-gold">Master the Topics That Decide</span> <span className="text-brand-cream">Your Predicted Grades!</span>
           </h1>
           <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
@@ -577,6 +577,37 @@ export default function SummerAccelerators() {
           </div>
         </section>
       </ScrollFade>
+
+      {/* Soft path for visitors who are not ready to buy */}
+      <section className="py-14 px-4 bg-brand-cream text-center">
+        <div className="max-w-2xl mx-auto">
+          <h2 className="text-2xl md:text-3xl text-brand-purple font-serif mb-4">
+            Not Ready to Decide Yet?
+          </h2>
+          <p className="text-brand-text mb-8 leading-relaxed">
+            Start with the free Revision Tracker instead. It builds you a personalised weekly revision timetable in about three minutes, using the same method we teach on the course. No email needed.
+          </p>
+          <a
+            href="/revision-tracker"
+            className="inline-block px-8 py-3 border-2 border-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold transition-all"
+          >
+            Build My Free Timetable
+          </a>
+        </div>
+      </section>
+
+      {/* Sticky mobile CTA: on a page this long, the next buy button is
+          thousands of pixels from the hero on a phone */}
+      <div className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-brand-purple border-t-2 border-brand-gold px-4 py-2.5 flex items-center justify-between gap-3">
+        <span className="text-brand-cream text-sm font-medium leading-snug">Cohort starts 25th July</span>
+        <a
+          href="#pricing"
+          className="shrink-0 px-5 py-2 bg-brand-gold text-brand-purple text-sm font-bold rounded-md"
+        >
+          Secure my place
+        </a>
+      </div>
+      <div className="h-14 md:hidden" aria-hidden="true" />
 
       {/* Footer */}
       <Footer />

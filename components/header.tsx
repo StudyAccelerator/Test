@@ -38,6 +38,7 @@ export default function Header() {
           <a href="/" className="text-brand-purple hover:text-brand-gold font-semibold transition">Summer Accelerator</a>
           <a href="/study-systems" className="text-brand-purple hover:text-brand-gold font-semibold transition">Study System</a>
           <a href="/subject-accelerators" className="text-brand-purple hover:text-brand-gold font-semibold transition">Subject Accelerators</a>
+          <a href="/revision-tracker" className="text-brand-purple hover:text-brand-gold font-semibold transition">Free Tracker</a>
           <a href="/blog/" className="text-brand-purple hover:text-brand-gold font-semibold transition">Blog</a>
           <a href="/faqs" className="text-brand-purple hover:text-brand-gold font-semibold transition">FAQs</a>
           <a

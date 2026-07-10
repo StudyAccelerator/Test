@@ -872,7 +872,7 @@ export default function RevisionTrackerPage() {
             <h2 className="card-title">About You</h2>
             <p className="card-subtitle">Just the basics. Used to shape your day.</p>
             <label htmlFor="student-name">First name <span style={{color:'#C9A96E'}}>*</span></label>
-            <input type="text" id="student-name" placeholder="e.g. Aisha" maxLength={30} />
+            <input type="text" id="student-name" placeholder="e.g. Waleed" maxLength={30} />
             <label htmlFor="student-year-group">Year group <span style={{color:'#C9A96E'}}>*</span></label>
             <select id="student-year-group" defaultValue="">
               <option value="" disabled>Select your year group</option>
