@@ -228,7 +228,7 @@ export default function Home() {
                   </div>
                 </HeroFade>
                 <HeroFade delay={0.5}>
-                  <div className={`${CARD} rotate-1 border-t-4 border-brand-gold p-5 sm:p-6 mt-4 ml-3 sm:ml-6 -mr-1 transition-transform duration-300 hover:rotate-2 hover:-translate-y-1.5`}>
+                  <div className={`${CARD} sm:rotate-1 border-t-4 border-brand-gold p-5 sm:p-6 mt-4 sm:ml-6 sm:-mr-1 transition-transform duration-300 hover:sm:rotate-2 hover:-translate-y-1.5`}>
                     <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55">University offers</p>
                     <p className="mt-1.5 font-serif italic text-2xl sm:text-3xl text-brand-purple">Congratulations!</p>
                     <p className="mt-1.5 text-sm text-brand-text/65 leading-snug">Your firm choice has confirmed your place.</p>
@@ -241,7 +241,7 @@ export default function Home() {
               {/* Right: the founder photo + name card */}
               <div className="min-w-0 w-full max-w-[260px] mx-auto sm:max-w-none sm:mx-0">
                 <HeroFade delay={0.4}>
-                  <div className="relative rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(46,37,87,.08),0_16px_32px_rgba(46,37,87,.18)] transition-transform duration-300 hover:rotate-3 hover:-translate-y-2 hover:scale-[1.02]">
+                  <div className="relative sm:rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(46,37,87,.08),0_16px_32px_rgba(46,37,87,.18)] transition-transform duration-300 hover:sm:rotate-3 hover:-translate-y-2 hover:scale-[1.02]">
                     <span className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap rounded-full bg-brand-purple text-brand-cream text-[11px] font-bold px-3.5 py-1 shadow-lg">
                       where it leads
                     </span>
@@ -257,7 +257,7 @@ export default function Home() {
                   </div>
                 </HeroFade>
                 <HeroFade delay={0.55}>
-                  <div className={`mt-3 ${CARD} px-4 py-3 flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1.5 hover:rotate-1`}>
+                  <div className={`mt-3 ${CARD} px-4 py-3 flex items-center gap-3 transition-transform duration-300 hover:-translate-y-1.5 hover:sm:rotate-1`}>
                     <div className="h-9 w-9 shrink-0 rounded-full bg-brand-purple text-brand-gold flex items-center justify-center font-serif font-bold text-base">
                       W
                     </div>
