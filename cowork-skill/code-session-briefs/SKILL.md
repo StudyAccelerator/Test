@@ -1,5 +1,5 @@
 ---
-name: claude-code-briefs
+name: code-session-briefs
 description: MANDATORY whenever writing a prompt, task, or instructions for Waleed to send to a Claude Code session working on A-Level Accelerators. Produces goal-based briefs instead of step-by-step instructions. Use for any request like "write a prompt for Claude Code", "what should I ask it to do", or when handing off any website, content, SEO, or marketing task.
 ---
 
