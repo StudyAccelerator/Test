@@ -3,7 +3,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
-import TestimonialMarquee from '@/components/home/testimonial-marquee'
+import TestimonialWall from '@/components/home/testimonial-wall'
 
 export const metadata = {
   title: 'A-Level Accelerators | Live A-Level Courses, Study Systems & Free Revision Tools',
@@ -33,24 +33,25 @@ const programmesSchema = {
 
 /* Card artwork: brand-styled DOM graphics, no photography */
 const GradeClimbArt = () => (
-  <div className="flex items-end justify-center gap-3 h-full pb-2" aria-hidden="true">
+  <div className="flex items-end justify-center gap-3.5 h-full pb-3" aria-hidden="true">
     {[
-      ['B', 'h-12 w-12 bg-white text-brand-purple/60 ring-1 ring-brand-purple/10 text-lg'],
-      ['A', 'h-16 w-16 bg-brand-gold/25 text-brand-purple ring-1 ring-brand-gold/40 text-xl'],
-      ['A*', 'h-20 w-20 bg-brand-purple text-brand-gold text-2xl shadow-lg shadow-brand-purple/30'],
+      ['B', 'h-14 w-14 bg-white text-brand-purple/60 ring-1 ring-brand-purple/10 text-xl'],
+      ['A', 'h-20 w-20 bg-brand-gold/25 text-brand-purple ring-1 ring-brand-gold/40 text-2xl'],
+      ['A*', 'h-24 w-24 bg-brand-purple text-brand-gold text-3xl shadow-lg shadow-brand-purple/30'],
     ].map(([g, cls]) => (
       <span key={g as string} className={`flex items-center justify-center rounded-2xl font-serif font-bold ${cls}`}>
         {g}
       </span>
     ))}
-    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-9 w-9 text-brand-gold -ml-1 mb-10">
-      <path d="M6 32L32 8M32 8h-12M32 8v12" />
-    </svg>
   </div>
 )
 
 const MarkSchemeArt = () => (
-  <div className="flex items-center justify-center h-full" aria-hidden="true">
+  <div className="relative flex items-center justify-center h-full" aria-hidden="true">
+    <span className="absolute left-4 top-14 -rotate-6 rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-bold text-emerald-700 shadow-sm">Biology</span>
+    <span className="absolute right-4 top-16 rotate-6 rounded-full bg-violet-100 px-2.5 py-1 text-[10px] font-bold text-violet-700 shadow-sm">Chemistry</span>
+    <span className="absolute left-6 bottom-5 rotate-3 rounded-full bg-blue-100 px-2.5 py-1 text-[10px] font-bold text-blue-700 shadow-sm">Maths</span>
+    <span className="absolute right-6 bottom-6 -rotate-3 rounded-full bg-amber-100 px-2.5 py-1 text-[10px] font-bold text-amber-700 shadow-sm">Physics</span>
     <div className="w-44 rotate-[-2deg] rounded-xl bg-white p-4 shadow-lg shadow-brand-purple/10 ring-1 ring-brand-purple/10">
       <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-brand-purple/50 mb-2.5">Mark scheme</p>
       {[true, true, false].map((ticked, i) => (
@@ -67,7 +68,7 @@ const MarkSchemeArt = () => (
 )
 
 const TopOnePercentArt = () => (
-  <div className="flex items-end justify-center gap-2.5 h-full pb-2" aria-hidden="true">
+  <div className="relative flex items-end justify-center gap-2.5 h-full pb-2" aria-hidden="true">
     {[10, 16, 22].map((h) => (
       <span key={h} className="w-9 rounded-t-lg bg-brand-purple/15" style={{ height: `${h * 4}px` }} />
     ))}
@@ -77,6 +78,18 @@ const TopOnePercentArt = () => (
         top 1%
       </span>
     </div>
+    <svg
+      viewBox="0 0 200 150"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="3"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="pointer-events-none absolute bottom-2 left-1/2 h-[140px] w-[200px] -translate-x-1/2 text-brand-gold"
+    >
+      <path d="M16 128 C 60 122, 105 96, 162 44" />
+      <path d="M164 42 l-17 3 M164 42 l-6 17" />
+    </svg>
   </div>
 )
 
@@ -125,57 +138,6 @@ const PROGRAMMES = [
   },
 ]
 
-const WALL_QUOTES = [
-  {
-    quote:
-      'I liked how we worked together to get the answers instead of the tutor doing it for us. We go straight into exam practice instead of spending ages on content, and it works.',
-    name: 'Maahil',
-    role: 'A-Level Chemistry Student',
-  },
-  {
-    quote: 'The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content',
-    name: 'Naysa',
-    role: 'A-Level Biology Student',
-  },
-  {
-    quote: 'All the information provided was clear and understandable. It was really helpful and improved my confidence!',
-    name: 'Biju',
-    role: 'Gap Year Student',
-  },
-  {
-    quote:
-      'The topics were really hard to approach while researching alone so seeing it broken down into manageable points was useful to apply it even better',
-    name: 'Delicia',
-    role: 'Year 13 Student',
-  },
-  {
-    quote: 'The content was explained really well and there was a brilliant range of questions. I love the way everything is taught',
-    name: 'Menahil',
-    role: 'Year 13 Student',
-  },
-  {
-    quote:
-      'The lessons were interactive with well explained concepts, easy to follow and very informative. Even the best students had something to improve on',
-    name: 'Jay',
-    role: 'Year 12 Student',
-  },
-  {
-    quote: 'I really liked the wide range of examples used and discussed throughout the session. There was more active learning',
-    name: 'Catherine',
-    role: 'Year 13 Student',
-  },
-  {
-    quote: 'The whole session was interactive and the tutor was really helpful and informative. Honestly there was nothing I would change',
-    name: 'Rayanna',
-    role: 'A-Level Biology Student',
-  },
-  {
-    quote: 'Well structured and informative walkthroughs, with lots of hard questions and worked solutions',
-    name: 'Ahreen',
-    role: 'A-Level Chemistry Student',
-  },
-]
-
 export default function Home() {
   return (
     <main className="bg-brand-cream">
@@ -207,7 +169,7 @@ export default function Home() {
             </h1>
             <HeroFade delay={0.45}>
               <p className="mt-6 text-lg md:text-xl text-brand-text/75 leading-relaxed max-w-xl">
-                Live A-level courses and study systems for Biology, Chemistry, Maths and Physics. Built by Dr Waleed Ahmad MBBS, an NHS doctor, and taught live by expert tutors who earned A*s themselves.
+                Live A-level courses and study systems for Biology, Chemistry, Maths and Physics. Built by Dr Waleed Ahmad MBBS and designed to help you achieve your desired grades with confidence.
               </p>
             </HeroFade>
             <HeroFade delay={0.55}>
@@ -220,7 +182,7 @@ export default function Home() {
                 </a>
               </div>
               <p className="mt-4 text-sm text-brand-text/55 text-center max-w-xl">
-                Three programmes, one method. First session risk-free on every course.
+                Try your first session risk-free.
               </p>
             </HeroFade>
           </div>
@@ -228,10 +190,10 @@ export default function Home() {
           <HeroFade delay={0.3} className="relative max-w-lg mx-auto lg:max-w-none w-full">
             <div className={`relative overflow-hidden ${CARD} !rounded-3xl`}>
               <Image
-                src="/photos/waleed-hero.jpg"
-                alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his desk in scrubs"
-                width={1600}
-                height={900}
+                src="/photos/waleed-grad-hero.jpg"
+                alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
+                width={1536}
+                height={864}
                 priority
                 unoptimized
                 className="w-full h-auto"
@@ -246,11 +208,8 @@ export default function Home() {
               </div>
               <div className="leading-tight">
                 <p className="font-bold text-brand-purple">Dr Waleed Ahmad, MBBS</p>
-                <p className="text-sm text-brand-text/70">Founder · built the method</p>
+                <p className="text-sm text-brand-text/70">Founder of A-Level Accelerators</p>
               </div>
-              <span aria-hidden="true" className="ml-auto hidden sm:flex items-center gap-1 text-brand-gold text-sm">
-                ★★★★★
-              </span>
             </div>
           </HeroFade>
         </div>
@@ -290,7 +249,7 @@ export default function Home() {
                     </span>
                   </div>
                   <div className="flex flex-col flex-1 p-7">
-                    <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/55">{p.audience}</p>
+                    <p className="font-mono text-[11px] uppercase tracking-[0.15em] leading-snug text-brand-purple/55 md:min-h-[31px]">{p.audience}</p>
                     <h3 className="mt-2 font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple">
                       {p.name}
                     </h3>
@@ -318,8 +277,8 @@ export default function Home() {
           <ScrollFade delay={0.2}>
             <p className="mt-8 text-center text-brand-text/60">
               Not ready for a programme?{' '}
-              <a href="#tracker" className="font-semibold text-brand-purple underline underline-offset-4 hover:text-brand-gold transition">
-                Start with the free revision timetable
+              <a href={BOOK_A_CALL_LINK} className="font-semibold text-brand-purple underline underline-offset-4 hover:text-brand-gold transition">
+                Book a free call
               </a>
             </p>
           </ScrollFade>
@@ -471,7 +430,7 @@ export default function Home() {
             <div aria-hidden="true" className="mx-auto mb-8 h-px w-24 bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
             <span aria-hidden="true" className="font-serif text-7xl leading-none text-brand-gold/60 block">&ldquo;</span>
             <p className="mt-2 font-serif italic tracking-tight text-2xl sm:text-3xl md:text-4xl text-brand-purple leading-snug">
-              A doctor diagnoses to treat accurately, and my team find where the marks are leaking before fixing.
+              A doctor diagnoses to treat accurately, and we apply that same practice. My team diagnoses where you&apos;re leaking marks, and we help you fix it!
             </p>
             <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60">
               Dr Waleed Ahmad · Founder
@@ -489,20 +448,20 @@ export default function Home() {
               <div className="relative">
                 <div className={`overflow-hidden ${CARD} !rounded-3xl`}>
                   <Image
-                    src="/photos/waleed-grad-square.jpg"
-                    alt="Dr Waleed Ahmad at his medical school graduation"
+                    src="/photos/waleed-portrait-square.jpg"
+                    alt="Dr Waleed Ahmad, NHS doctor and founder of A-Level Accelerators, at his desk in scrubs"
                     width={900}
                     height={900}
                     unoptimized
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="absolute -top-5 -right-3 w-20 rotate-3 rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
+                <div className="absolute -top-5 -right-3 w-28 rotate-3 rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
                   <Image
-                    src="/photos/waleed-young.jpg"
-                    alt="Waleed as a school student"
-                    width={611}
-                    height={615}
+                    src="/photos/stressed-student.jpg"
+                    alt="Waleed as a stressed student during his A-levels"
+                    width={640}
+                    height={437}
                     unoptimized
                     className="w-full h-auto rounded-lg"
                   />
@@ -522,7 +481,7 @@ export default function Home() {
               </h2>
               <div className="mt-6 space-y-4 text-brand-text/80 leading-relaxed">
                 <p>
-                  At A-level I worked as hard as anyone I knew. Re-reading, highlighting, beautiful notes. It got me into medicine, but only because I threw hundreds of extra hours at a method that wasted most of them.
+                  During my A-levels I worked as hard as anyone I knew. Re-reading, highlighting, beautiful notes. It got me into medicine, but only because I threw hundreds of extra hours at a method that wasted most of them.
                 </p>
                 <p>
                   Medical school forced me to learn properly: active recall, spaced repetition, working to the mark scheme. Same hours, pointed at the right work. That system is what A-Level Accelerators runs on today, and I hold every session to the standard I needed at 17.
@@ -583,20 +542,8 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* ── 8 · Testimonial wall ─────────────────────────────────────────── */}
-      <ScrollFade>
-        <section className="px-6 pb-24 md:pb-32">
-          <div className="max-w-6xl mx-auto">
-            <p className={`${EYEBROW} mb-4 text-center`}>From real feedback forms</p>
-            <h2 className="text-center font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
-              What students <span className="italic text-brand-gold">actually</span> say
-            </h2>
-            <div className="mt-14">
-              <TestimonialMarquee quotes={WALL_QUOTES} />
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
+      {/* ── 8 · Testimonial wall (shared site-wide) ──────────────────────── */}
+      <TestimonialWall className="pb-24 md:pb-32" />
 
       {/* ── 9 · Final CTA: the one dark chapter ─────────────────────────── */}
       <section className="bg-brand-purple text-brand-cream py-16 md:py-20 px-6 text-center">

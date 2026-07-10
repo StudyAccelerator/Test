@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
+import TestimonialWall from '@/components/home/testimonial-wall'
 import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
 
 export const metadata = {
@@ -524,6 +525,9 @@ export default function SubjectAccelerators() {
           </div>
         </section>
       </ScrollFade>
+
+      {/* Testimonials: proof before pitch */}
+      <TestimonialWall />
 
       {/* Pricing */}
       <ScrollFade delay={0.2}>

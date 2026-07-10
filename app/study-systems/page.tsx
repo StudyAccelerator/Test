@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import PricingSection from '@/components/ui/pricing-section'
 import FaqSection from '@/components/ui/faq-section'
+import TestimonialWall from '@/components/home/testimonial-wall'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
 
@@ -469,6 +470,9 @@ export default function Home() {
           </div>
         </section>
       </ScrollFade>
+
+      {/* Testimonials: proof before pitch */}
+      <TestimonialWall />
 
       {/* Pricing Section (detailed cards) */}
       <ScrollFade delay={0.2}>
