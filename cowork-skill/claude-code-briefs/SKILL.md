@@ -41,12 +41,13 @@ Know these so you never contradict them, but never repeat them in a brief:
 - Every blog article is automatically written twice: a website version and a rewritten backlink version for the SEO optimizer. Backlink articles never go on the site.
 - The site deploys from the main branch to Vercel. Live Stripe payment links and the homepage title/H1 are protected.
 
-## Business facts for your planning (as of 10 July 2026)
+## Business facts for your planning (snapshot date: 10 July 2026)
+
+This section is maintained automatically: every Claude Code session that changes a business fact regenerates this skill and leaves a fresh zip in Waleed's Downloads for re-upload. So trust the snapshot date above. If it is more than a few weeks old, or Waleed tells you something that contradicts it, trust Waleed and remind him a newer version of this skill is probably sitting in his Downloads folder waiting to be re-uploaded.
 
 - Live site: alevelaccelerators.com. 11 SEO blog articles, free revision tracker (main lead magnet), /parents lead-capture page, /faqs, conversion-optimised homepage with real testimonials, blurting template PDF.
 - Marketing assets: backlink article pack (11 rewrites, PDF, with the SEO optimizer), 30-day content calendar, optimised week 1 of posts with finished graphics.
 - Key dates: Summer Accelerator launches early August 2026. A-level results day is 14 August 2026, the biggest brand moment of the year; those posts get written live on the day, never pre-scheduled.
-- If Waleed tells you something that changes these facts, trust him over this file, and suggest he ask a Claude Code session to update this skill.
 
 ## Worked example
 

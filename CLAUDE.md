@@ -39,6 +39,14 @@ All written content (blog, social, PDFs, page copy) follows `.claude/skills/cont
 4. Run the compliance scan (dashes, curly quotes, banned words) before committing.
 5. Write the backlink twin.
 
+## Automatic upkeep (standing rule, applies to every session)
+
+Waleed prefers automatic updates to memory, skills, and features over being asked to maintain them. Concretely:
+
+1. **Cowork skill auto-refresh.** The file `cowork-skill/claude-code-briefs/SKILL.md` contains a dated business snapshot used by Waleed's Claude Cowork HQ. If your session changes any business fact (new pages or offers, changed dates or prices, new marketing assets, results data arriving, changed standing rules), you MUST before ending the task: update the snapshot section and its date, re-zip it (`cd cowork-skill && zip -qr ~/Downloads/claude-code-briefs-skill.zip claude-code-briefs`), commit, and tell Waleed in your final summary that a refreshed skill zip is in his Downloads ready to re-upload to Cowork. Do this without being asked.
+2. **Memory upkeep.** Update the persistent memory files in the same pass as the work, not when asked. Stale descriptions and index lines get corrected on sight.
+3. **This file.** Treat CLAUDE.md the same way: if a session changes how the project works, update this brief as part of the change.
+
 ## Audiences and channels
 
 LinkedIn is student-facing (his followers are Year 12/13 students). Facebook is parent-facing and the priority buyer channel. Never mix the two audiences in one post. A-level results day (mid-August) is the biggest brand moment of the year.
