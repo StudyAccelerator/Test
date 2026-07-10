@@ -192,14 +192,14 @@ export default function Home() {
               <Image
                 src="/photos/waleed-grad-hero.jpg"
                 alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
-                width={1536}
-                height={864}
+                width={1200}
+                height={1231}
                 priority
                 unoptimized
                 className="w-full h-auto"
               />
-              <span className="absolute top-4 left-4 rounded-full bg-brand-purple/90 backdrop-blur text-brand-cream text-xs font-semibold px-3.5 py-1.5">
-                NHS doctor · former top A-level student
+              <span className="absolute top-3 left-3 rounded-full bg-brand-purple/90 backdrop-blur text-brand-cream text-[11px] font-semibold px-3 py-1.5">
+                NHS doctor, former top A-Level student
               </span>
             </div>
             <div className={`mt-4 ${CARD} px-5 py-3.5 flex items-center gap-4`}>
@@ -430,7 +430,7 @@ export default function Home() {
             <div aria-hidden="true" className="mx-auto mb-8 h-px w-24 bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
             <span aria-hidden="true" className="font-serif text-7xl leading-none text-brand-gold/60 block">&ldquo;</span>
             <p className="mt-2 font-serif italic tracking-tight text-2xl sm:text-3xl md:text-4xl text-brand-purple leading-snug">
-              A doctor diagnoses to treat accurately, and we apply that same practice. My team diagnoses where you&apos;re leaking marks, and we help you fix it!
+              A doctor diagnoses to treat accurately, and we apply that same practice. My team diagnoses where you&apos;re leaking marks, then we help you fix it!
             </p>
             <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60">
               Dr Waleed Ahmad · Founder
@@ -443,20 +443,20 @@ export default function Home() {
       {/* ── 6 · Meet Dr Waleed ───────────────────────────────────────────── */}
       <ScrollFade>
         <section className="px-6 pb-24 md:pb-32">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-[0.85fr_1.15fr] gap-12 md:gap-16 items-center">
-            <div className="max-w-xs mx-auto md:mx-0 w-full">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.1fr] gap-10 md:gap-12 items-center">
+            <div className="max-w-md mx-auto md:mx-0 w-full">
               <div className="relative">
                 <div className={`overflow-hidden ${CARD} !rounded-3xl`}>
                   <Image
-                    src="/photos/waleed-portrait-square.jpg"
+                    src="/photos/waleed-portrait-wide.jpg"
                     alt="Dr Waleed Ahmad, NHS doctor and founder of A-Level Accelerators, at his desk in scrubs"
-                    width={900}
-                    height={900}
+                    width={1200}
+                    height={913}
                     unoptimized
                     className="w-full h-auto"
                   />
                 </div>
-                <div className="absolute -top-5 -right-3 w-28 rotate-3 rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
+                <div className="absolute -top-5 -right-3 w-36 rotate-3 rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
                   <Image
                     src="/photos/stressed-student.jpg"
                     alt="Waleed as a stressed student during his A-levels"

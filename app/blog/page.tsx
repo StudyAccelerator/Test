@@ -53,7 +53,7 @@ export default function BlogIndex() {
         </h1>
         <p className="text-lg text-brand-text max-w-2xl mx-auto">
           Study techniques, revision timetables, predicted grades and UCAS strategy, written by
-          Dr Waleed Ahmad, MBBS: doctor, former top-performing A-level student, and founder of A-Level
+          Dr Waleed Ahmad, MBBS, former top-performing A-level student, and founder of A-Level
           Accelerators. No recycled study tips; only what works.
         </p>
       </section>
