@@ -127,8 +127,7 @@ export default function Home() {
             <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.04] text-4xl sm:text-5xl lg:text-[4rem] text-brand-purple">
               <HeroHeadline>
                 <HeroWord>Top</HeroWord> <HeroWord>grades</HeroWord> <HeroWord>are</HeroWord>{' '}
-                <HeroWord className="italic text-brand-gold">a</HeroWord>{' '}
-                <HeroWord className="italic text-brand-gold">system,</HeroWord>{' '}
+                <HeroWord className="italic text-brand-gold">a system,</HeroWord>{' '}
                 <HeroWord>not</HeroWord> <HeroWord>a</HeroWord> <HeroWord>talent.</HeroWord>
               </HeroHeadline>
             </h1>
@@ -173,7 +172,7 @@ export default function Home() {
                 NHS doctor · former top A-level student
               </span>
             </div>
-            <div className="absolute -bottom-5 left-8 right-8 sm:left-auto sm:right-10 sm:w-auto rounded-2xl bg-white/90 backdrop-blur border border-brand-gold/30 shadow-xl px-5 py-3.5 flex items-center gap-4">
+            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-5 sm:left-auto sm:right-10 sm:w-auto rounded-2xl bg-white/90 backdrop-blur border border-brand-gold/30 shadow-xl px-5 py-3.5 flex items-center gap-4">
               <div className="h-11 w-11 shrink-0 rounded-full bg-brand-purple text-brand-gold flex items-center justify-center font-serif font-bold text-lg">
                 W
               </div>
@@ -298,7 +297,7 @@ export default function Home() {
                     ['Aromatic chemistry', 'shaky', 'bg-amber-100 text-amber-700'],
                     ['Bonding', 'solid', 'bg-emerald-100 text-emerald-700'],
                   ].map(([topic, status, cls]) => (
-                    <li key={topic as string} className="flex items-center justify-between gap-4 rounded-xl border border-brand-purple/8 px-4 py-3">
+                    <li key={topic as string} className="flex items-center justify-between gap-4 rounded-xl border border-brand-purple/10 px-4 py-3">
                       <span className="font-medium text-brand-text">{topic}</span>
                       <span className={`rounded-full px-3 py-1 text-xs font-bold ${cls}`}>{status}</span>
                     </li>
