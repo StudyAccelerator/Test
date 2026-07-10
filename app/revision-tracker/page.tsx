@@ -859,7 +859,7 @@ export default function RevisionTrackerPage() {
           Free A-Level Revision Timetable Maker
         </h1>
         <p className="text-center text-gray-600 mb-6">
-          Build a personalised weekly revision timetable in about three minutes. No email needed.
+          Build a personalised weekly revision timetable in about three minutes.
         </p>
         <section id="questionnaire-section">
           <div className="intro">

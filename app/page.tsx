@@ -585,7 +585,7 @@ export default function SummerAccelerators() {
             Not Ready to Decide Yet?
           </h2>
           <p className="text-brand-text mb-8 leading-relaxed">
-            Start with the free Revision Tracker instead. It builds you a personalised weekly revision timetable in about three minutes, using the same method we teach on the course. No email needed.
+            Start with the free Revision Tracker instead. It builds you a personalised weekly revision timetable in about three minutes, using the same method we teach on the course.
           </p>
           <a
             href="/revision-tracker"
