@@ -15,9 +15,25 @@ const Divider = () => (
   <div aria-hidden="true" className="h-px bg-gradient-to-r from-transparent via-brand-gold/30 to-transparent" />
 )
 
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Top 1% Study System',
+  serviceType: 'A-level study skills programme',
+  description:
+    'A structured A-level study system covering revision methods, time management and exam performance, built around active recall and spaced repetition.',
+  url: 'https://alevelaccelerators.com/study-systems/',
+  areaServed: 'GB',
+  provider: { '@type': 'Organization', '@id': 'https://alevelaccelerators.com/#organization' },
+}
+
 export default function Home() {
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Header />
 
       {/* Hero Section */}
@@ -221,7 +237,7 @@ export default function Home() {
                 <div className="inline-block bg-brand-gold text-brand-purple px-4 py-2 rounded-full text-sm font-bold mb-4">
                   Phase 1
                 </div>
-                <p className="text-xs text-brand-text italic mb-3">Weeks 1–4</p>
+                <p className="text-xs text-brand-text italic mb-3">Weeks 1 to 4</p>
                 <h3 className="text-2xl font-bold text-brand-purple mb-4">Build your system</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
@@ -243,7 +259,7 @@ export default function Home() {
                 <div className="inline-block bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
                   Phase 2
                 </div>
-                <p className="text-xs text-brand-text italic mb-3">Weeks 5–8</p>
+                <p className="text-xs text-brand-text italic mb-3">Weeks 5 to 8</p>
                 <h3 className="text-2xl font-bold text-brand-purple mb-4">Fix what&apos;s not working</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">
@@ -265,7 +281,7 @@ export default function Home() {
                 <div className="inline-block bg-purple-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
                   Phase 3
                 </div>
-                <p className="text-xs text-brand-text italic mb-3">Weeks 9–12</p>
+                <p className="text-xs text-brand-text italic mb-3">Weeks 9 to 12</p>
                 <h3 className="text-2xl font-bold text-brand-purple mb-4">Optimise your performance</h3>
                 <ul className="space-y-3 text-brand-text">
                   <li className="flex items-start gap-2">

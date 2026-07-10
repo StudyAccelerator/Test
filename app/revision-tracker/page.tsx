@@ -157,7 +157,7 @@ const js = `
   function escapeHTML(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
   function toMinutes(hhmm){if(!hhmm||typeof hhmm!=='string')return NaN;const parts=hhmm.split(':');if(parts.length!==2)return NaN;const h=parseInt(parts[0],10),m=parseInt(parts[1],10);if(isNaN(h)||isNaN(m))return NaN;return h*60+m}
   function toHHMM(mins){const norm=((mins%1440)+1440)%1440;const h=Math.floor(norm/60),m=norm%60;return String(h).padStart(2,'0')+':'+String(m).padStart(2,'0')}
-  function fmtTimeRange(a,b){return toHHMM(a)+' – '+toHHMM(b)}
+  function fmtTimeRange(a,b){return toHHMM(a)+' to '+toHHMM(b)}
 
   function validateSleep(){
     const w=toMinutes(document.getElementById('wake-time').value||'');
@@ -184,7 +184,7 @@ const js = `
     subjectCounter++;const id='subject-'+subjectCounter;const el=document.createElement('div');el.className='item-row subject-row';el.id=id;
     const topicsArray=topics?topics.split('|').filter(t=>t.trim()):[];let topicsHtml='<div class="topics-list">';topicsArray.forEach(topic=>{topicsHtml+='<span class="topic-tag">'+escapeHTML(topic)+'<button type="button" aria-label="Remove topic">×</button></span>'});topicsHtml+='</div>';
     const placeholder=topicPlaceholders[name]||'e.g. Topic 1, Topic 2';
-    el.innerHTML='<button type="button" class="remove-btn" aria-label="Remove" title="Remove">×</button>'+'<label>Subject name</label>'+'<input type="text" class="subject-name" placeholder="e.g. Mathematics" value="'+escapeHTML(name)+'" maxlength="40">'+'<label>Topics to prioritise this week</label>'+topicsHtml+'<div class="add-topic-inline">'+'<input type="text" class="subject-topic-input" placeholder="'+placeholder+'" maxlength="50">'+'<button type="button">Add</button>'+'</div>'+'<p class="help-text-topics">Limit to 5 topics. Click Add after each one.</p>'+'<label>Priority level</label>'+'<select class="subject-priority">'+'<option value="high"'+(priority==='high'?' selected':'')+'>High — Really struggling with it</option>'+'<option value="medium"'+(priority==='medium'?' selected':'')+'>Medium — Important, manageable</option>'+'<option value="low"'+(priority==='low'?' selected':'')+'>Low — Fairly confident</option>'+'</select>'+'<div class="slider-wrap">'+'<div class="slider-head"><label>Exam focus</label><span class="conf-badge">'+confidence+'/5</span></div>'+'<input type="range" class="subject-confidence" min="1" max="5" value="'+confidence+'">'+'<div class="slider-labels"><span>1 · low priority</span><span>3 · medium</span><span>5 · high priority</span></div>'+'</div>';
+    el.innerHTML='<button type="button" class="remove-btn" aria-label="Remove" title="Remove">×</button>'+'<label>Subject name</label>'+'<input type="text" class="subject-name" placeholder="e.g. Mathematics" value="'+escapeHTML(name)+'" maxlength="40">'+'<label>Topics to prioritise this week</label>'+topicsHtml+'<div class="add-topic-inline">'+'<input type="text" class="subject-topic-input" placeholder="'+placeholder+'" maxlength="50">'+'<button type="button">Add</button>'+'</div>'+'<p class="help-text-topics">Limit to 5 topics. Click Add after each one.</p>'+'<label>Priority level</label>'+'<select class="subject-priority">'+'<option value="high"'+(priority==='high'?' selected':'')+'>High: Really struggling with it</option>'+'<option value="medium"'+(priority==='medium'?' selected':'')+'>Medium: Important, manageable</option>'+'<option value="low"'+(priority==='low'?' selected':'')+'>Low: Fairly confident</option>'+'</select>'+'<div class="slider-wrap">'+'<div class="slider-head"><label>Exam focus</label><span class="conf-badge">'+confidence+'/5</span></div>'+'<input type="range" class="subject-confidence" min="1" max="5" value="'+confidence+'">'+'<div class="slider-labels"><span>1 · low priority</span><span>3 · medium</span><span>5 · high priority</span></div>'+'</div>';
     document.getElementById('subjects-list').appendChild(el);
     const topicInput=el.querySelector('.subject-topic-input');const addTopicBtn=el.querySelector('.add-topic-inline button');const topicsList=el.querySelector('.topics-list');
     function renderTopics(){const topics=[];el.querySelectorAll('.topic-tag').forEach(tag=>{const text=tag.textContent.trim().slice(0,-1);if(text)topics.push(text)});return topics}
@@ -617,7 +617,7 @@ const js = `
     const totalTopics=state.subjects.reduce(function(s,sub){return s+(sub.topics?sub.topics.split('|').filter(function(t){return t.trim();}).length||1:1);},0);
     if(maxTopics>0&&totalTopics>maxTopics){
       const perSubj=Math.max(1,Math.floor(maxTopics/state.subjects.length));
-      const msg="This week you have about "+totalStudyHrs+" hours available for study across all 7 days (after school, commitments, and meals).\\n\\nThat is enough for "+maxTopics+" deep-work session"+(maxTopics!==1?"s":"")+" — one per topic.\\n\\nYou have entered "+totalTopics+" topics. Topics that do not fit will be skipped, possibly leaving whole subjects uncovered.\\n\\nTo cover every subject, aim for "+perSubj+" topic"+(perSubj!==1?"s":"")+" per subject.\\n\\nPress OK to generate anyway, or Cancel to go back and trim your topics.";
+      const msg="This week you have about "+totalStudyHrs+" hours available for study across all 7 days (after school, commitments, and meals).\\n\\nThat is enough for "+maxTopics+" deep-work session"+(maxTopics!==1?"s":"")+", one per topic.\\n\\nYou have entered "+totalTopics+" topics. Topics that do not fit will be skipped, possibly leaving whole subjects uncovered.\\n\\nTo cover every subject, aim for "+perSubj+" topic"+(perSubj!==1?"s":"")+" per subject.\\n\\nPress OK to generate anyway, or Cancel to go back and trim your topics.";
       if(!confirm(msg))return;
     }
     // Fire-and-forget MailerLite subscription — timetable shows regardless of outcome
@@ -763,7 +763,7 @@ const js = `
           if(ht>=34){
             c.font='8px Arial, sans-serif';
             c.fillStyle=isStudy?'rgba(255,255,255,0.55)':'rgba(100,80,40,0.6)';
-            c.fillText(toHHMM(evt.startMin)+' – '+toHHMM(evt.endMin),x+5,top+ht-3);
+            c.fillText(toHHMM(evt.startMin)+' to '+toHHMM(evt.endMin),x+5,top+ht-3);
           }
         }
 
@@ -855,6 +855,12 @@ export default function RevisionTrackerPage() {
       <Header />
 
       <div className="container">
+        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-brand-purple text-center mt-8 mb-2">
+          Free A-Level Revision Timetable Maker
+        </h1>
+        <p className="text-center text-gray-600 mb-6">
+          Build a personalised weekly revision timetable in about three minutes. No email needed.
+        </p>
         <section id="questionnaire-section">
           <div className="intro">
             <strong>How this works</strong>
@@ -943,7 +949,7 @@ export default function RevisionTrackerPage() {
           <div className="card">
             <div className="card-num">2</div>
             <h2 className="card-title">Your Subjects</h2>
-            <p className="card-subtitle">Add each A-Level. Rate your confidence honestly — this decides when each subject gets scheduled.</p>
+            <p className="card-subtitle">Add each A-Level. Rate your confidence honestly. This decides when each subject gets scheduled.</p>
             <div id="subjects-list"></div>
             <button type="button" className="add-btn" id="add-subject-btn">+ Add Subject</button>
           </div>
@@ -951,7 +957,7 @@ export default function RevisionTrackerPage() {
           <div className="card">
             <div className="card-num">3</div>
             <h2 className="card-title">Fixed Commitments</h2>
-            <p className="card-subtitle">Anything you can't move — school, job, sport, family, rest. These get blocked out automatically.</p>
+            <p className="card-subtitle">Anything you can't move: school, job, sport, family, rest. These get blocked out automatically.</p>
             <div id="commitments-list"></div>
             <button type="button" className="add-btn" id="add-commit-btn">+ Add Commitment</button>
           </div>
@@ -973,9 +979,9 @@ export default function RevisionTrackerPage() {
 
           <div className="legend-wrap">
             <div className="legend">
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#1E40AF' }}></span><span><strong>Deep Work</strong> — new material, full focus (90 min)</span></div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#15803D' }}></span><span><strong>Active Recall</strong> — test yourself: past papers, blurting, Anki (45 min)</span></div>
-              <div className="legend-item"><span className="legend-dot" style={{ background: '#B45309' }}></span><span><strong>Light Revision</strong> — quick revisit, consolidate notes (30 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#1E40AF' }}></span><span><strong>Deep Work</strong>: new material, full focus (90 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#15803D' }}></span><span><strong>Active Recall</strong>: test yourself: past papers, blurting, Anki (45 min)</span></div>
+              <div className="legend-item"><span className="legend-dot" style={{ background: '#B45309' }}></span><span><strong>Light Revision</strong>: quick revisit, consolidate notes (30 min)</span></div>
               <div className="legend-item"><span className="legend-dot" style={{ background: '#E8D9BF' }}></span> Break / Meal</div>
               <div className="legend-item"><span className="legend-dot" style={{ background: '#A0A0B8' }}></span> Fixed Commitment</div>
               <div className="legend-item"><span className="legend-dot" style={{ background: '#f5f5f5', border:'1px dashed #ddd' }}></span> Free / Buffer</div>

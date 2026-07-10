@@ -1,0 +1,35 @@
+# A-Level Accelerators
+
+> Live online A-level courses and revision tools for UK sixth-form students, founded and taught by Dr Waleed Ahmad, MBBS, an NHS doctor and former top-performing A-level student. Small-group courses in Biology, Chemistry, Maths and Physics, plus free study tools and revision guides. Over 1,000 students supported.
+
+Key facts: UK based, courses run live online in small groups, methods focus on active recall, spaced repetition and exam technique rather than content re-teaching. Dr Waleed Ahmad teaches the method himself; this is not a tutor marketplace.
+
+## Main pages
+
+- [Homepage](https://alevelaccelerators.com/): course overview, pricing and enrolment for the live A-level programmes
+- [Revision Tracker](https://alevelaccelerators.com/revision-tracker/): free tool that builds a personalised weekly A-level revision timetable in about three minutes, using spaced repetition and active recall scheduling
+- [Subject Accelerators](https://alevelaccelerators.com/subject-accelerators/): subject-specific A-level courses in Biology, Chemistry and Maths
+- [Study Systems](https://alevelaccelerators.com/study-systems/): the study method framework behind the courses
+- [Summer Accelerators](https://alevelaccelerators.com/summer-accelerators/): six-week live summer course covering high-yield Year 13 topics
+- [Free Workshop](https://alevelaccelerators.com/workshop/): the free Top 1% Study Systems workshop
+- [For Parents](https://alevelaccelerators.com/parents/): information for parents of A-level students
+- [FAQs](https://alevelaccelerators.com/faqs/): common questions about the courses, pricing and how sessions work
+
+## Revision guides (blog)
+
+- [How to Improve Your A-Level Predicted Grades Before UCAS](https://alevelaccelerators.com/blog/how-to-improve-predicted-grades/): when predicted grades are set and how to change them
+- [How to Make an A-Level Revision Timetable That Actually Works](https://alevelaccelerators.com/blog/how-to-make-a-revision-timetable/): building a timetable around how memory works
+- [How Many Hours a Day Should You Revise for A-Levels?](https://alevelaccelerators.com/blog/how-many-hours-revision-a-level/): why 3 to 5 focused hours beats 8 distracted ones
+- [The Blurting Method: How to Use It for A-Level Revision](https://alevelaccelerators.com/blog/blurting-method-a-level-revision/): step-by-step guide to the blurting technique
+- [Should You Revise Over the Year 12 Summer?](https://alevelaccelerators.com/blog/year-12-summer-revision/): what top students do with the summer before Year 13
+- [What Is the Best Way to Revise for A-Levels?](https://alevelaccelerators.com/blog/best-way-to-revise-for-a-levels/): revision methods ranked by effectiveness
+- [How to Prepare for A-Level Exams: The Complete Guide](https://alevelaccelerators.com/blog/how-to-prepare-for-a-level-exams/): a full exam preparation plan
+- [How to Feel Confident Before A-Level Exams](https://alevelaccelerators.com/blog/a-level-exam-confidence/): building exam confidence without cramming
+- [Resitting A-Levels: How It Works, What It Costs and Key Deadlines](https://alevelaccelerators.com/blog/resitting-a-levels/): the complete resit guide
+- [One-to-One A-Level Tutoring: Does It Actually Improve Grades?](https://alevelaccelerators.com/blog/one-to-one-a-level-tutoring/): an honest look at when tutoring works
+- [How to Choose an Online A-Level Tutor in the UK](https://alevelaccelerators.com/blog/how-to-choose-an-a-level-tutor/): what matters more than price and a friendly first call
+
+## Free downloads
+
+- [Blurting Template PDF](https://alevelaccelerators.com/A-Level-Accelerators-Blurting-Template.pdf): printable template for blurting revision sessions
+- [Parent Guide PDF](https://alevelaccelerators.com/ALevel-Accelerators-Parent-Guide.pdf): guide for parents supporting an A-level student

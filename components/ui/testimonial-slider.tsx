@@ -98,8 +98,12 @@ const testimonials: Testimonial[] = [
 // either direction without ever hitting a visible end.
 const LOOP_COPIES = 3
 const total = testimonials.length
+// Only the middle copy is exposed to assistive tech and crawlers; the outer
+// copies exist purely for the seamless-loop illusion, so they're aria-hidden
+// (otherwise every student name would appear three times in the document).
+const MIDDLE_COPY = Math.floor(LOOP_COPIES / 2)
 const extendedTestimonials = Array.from({ length: LOOP_COPIES }, (_, copy) =>
-  testimonials.map((t) => ({ ...t, key: `${t.id}-${copy}` }))
+  testimonials.map((t) => ({ ...t, key: `${t.id}-${copy}`, isDecoy: copy !== MIDDLE_COPY }))
 ).flat()
 
 const getVisibleCount = (width: number): number => {
@@ -268,6 +272,7 @@ const TestimonialSlider: React.FC = () => {
               {extendedTestimonials.map((testimonial) => (
                 <motion.div
                   key={testimonial.key}
+                  aria-hidden={testimonial.isDecoy || undefined}
                   className={`flex-shrink-0 w-full ${
                     visibleCount === 3 ? 'md:w-1/3' : visibleCount === 2 ? 'md:w-1/2' : 'w-full'
                   } p-2`}
@@ -296,9 +301,9 @@ const TestimonialSlider: React.FC = () => {
                       </p>
 
                       <div className="mt-auto pt-3 sm:pt-4 border-t border-gray-100">
-                        <h4 className="font-bold text-sm sm:text-base text-gray-900">
+                        <p className="font-bold text-sm sm:text-base text-gray-900">
                           {testimonial.name}
-                        </h4>
+                        </p>
                         <p className="text-xs sm:text-sm font-semibold text-brand-gold mt-0.5">
                           {testimonial.year}
                         </p>

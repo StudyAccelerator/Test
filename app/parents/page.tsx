@@ -21,9 +21,24 @@ const BULLETS: [string, string][] = [
   ],
 ]
 
+const parentsSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'Free Parent Guide',
+  url: 'https://alevelaccelerators.com/parents/',
+  description:
+    'A free guide for parents that explains why a child may be working hard at A-level but still not getting the grades they need, and what actually moves results.',
+  isPartOf: { '@type': 'WebSite', '@id': 'https://alevelaccelerators.com/#website' },
+  about: { '@type': 'Organization', '@id': 'https://alevelaccelerators.com/#organization' },
+}
+
 export default function ParentsLanding() {
   return (
     <main className="bg-brand-cream">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(parentsSchema) }}
+      />
 
       {/* ── Logo bar ────────────────────────────────────────────────────── */}
       <header className="bg-brand-cream-dark border-b-4 border-brand-gold h-24 overflow-hidden">

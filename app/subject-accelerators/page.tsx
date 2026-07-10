@@ -61,9 +61,9 @@ export default function SubjectAccelerators() {
           </ul>
           <p className="mb-4">There are <strong>no clashes between sessions</strong>, so you can attend all three accelerators without scheduling conflicts:</p>
           <ul className="list-disc ml-8 mb-4 space-y-1">
-            <li><strong>Maths:</strong> Saturdays 13:00–15:00</li>
-            <li><strong>Biology:</strong> Sundays 10:00–12:00</li>
-            <li><strong>Chemistry:</strong> Sundays 13:00–15:00</li>
+            <li><strong>Maths:</strong> Saturdays 13:00 to 15:00</li>
+            <li><strong>Biology:</strong> Sundays 10:00 to 12:00</li>
+            <li><strong>Chemistry:</strong> Sundays 13:00 to 15:00</li>
           </ul>
           <p>If you're taking all three subjects, the bundle pricing (£849) gives you significant savings compared to enrolling individually.</p>
         </>
@@ -92,9 +92,9 @@ export default function SubjectAccelerators() {
         <>
           <p className="mb-4">Sessions are scheduled to minimize clashes with school and other commitments:</p>
           <ul className="list-disc ml-8 mb-4 space-y-1">
-            <li><strong>Maths:</strong> Saturdays, 1:00 PM – 3:00 PM (13:00–15:00)</li>
-            <li><strong>Biology:</strong> Sundays, 10:00 AM – 12:00 PM (10:00–12:00)</li>
-            <li><strong>Chemistry:</strong> Sundays, 1:00 PM – 3:00 PM (13:00–15:00)</li>
+            <li><strong>Maths:</strong> Saturdays, 1:00 PM to 3:00 PM (13:00 to 15:00)</li>
+            <li><strong>Biology:</strong> Sundays, 10:00 AM to 12:00 PM (10:00 to 12:00)</li>
+            <li><strong>Chemistry:</strong> Sundays, 1:00 PM to 3:00 PM (13:00 to 15:00)</li>
           </ul>
           <p>Each session is <strong>2 hours long</strong> with time for teaching, practice, Q&A, and consolidation. The weekend timing allows you to focus on schoolwork during the week.</p>
         </>
@@ -104,7 +104,7 @@ export default function SubjectAccelerators() {
       question: "What's the expected workload outside of sessions?",
       answer: (
         <>
-          <p className="mb-4">Each accelerator requires approximately <strong>2–3 hours of independent work per week</strong> outside the live sessions.</p>
+          <p className="mb-4">Each accelerator requires approximately <strong>2 to 3 hours of independent work per week</strong> outside the live sessions.</p>
           <p className="mb-4">This work includes:</p>
           <ul className="list-disc ml-8 mb-4 space-y-1">
             <li>Completing weekly worksheets and practice questions</li>
@@ -120,7 +120,7 @@ export default function SubjectAccelerators() {
       question: "What if I can't attend a session?",
       answer: (
         <>
-          <p className="mb-4">If you miss a live session, <strong>don't worry</strong> — all teaching is recorded.</p>
+          <p className="mb-4">If you miss a live session, <strong>don't worry</strong>: all teaching is recorded.</p>
           <p className="mb-4">Here's what you do:</p>
           <ul className="list-disc ml-8 mb-4 space-y-1">
             <li>Watch the session recording at your own pace</li>
@@ -182,8 +182,24 @@ export default function SubjectAccelerators() {
     },
   ]
 
+  const serviceSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    name: 'A-Level Subject Accelerators',
+    serviceType: 'Live online A-level courses',
+    description:
+      'Live 12-week exam-focused A-level programmes in Biology, Chemistry and Maths, taught online in small groups.',
+    url: 'https://alevelaccelerators.com/subject-accelerators/',
+    areaServed: 'GB',
+    provider: { '@type': 'Organization', '@id': 'https://alevelaccelerators.com/#organization' },
+  }
+
   return (
     <main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }}
+      />
       <Header />
 
       {/* Hero Section */}
@@ -406,7 +422,7 @@ export default function SubjectAccelerators() {
               <div className="flex flex-col bg-gradient-to-br from-blue-50 to-blue-100 p-8 rounded-lg border-2 border-blue-400 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <div className="inline-block px-3 py-1 bg-blue-500 text-white rounded-full text-sm font-semibold mb-4 self-start">Maths</div>
                 <h3 className="text-3xl font-serif font-bold text-brand-purple mb-2">Maths Accelerator</h3>
-                <p className="text-blue-600 font-semibold mb-2">Saturdays · 13:00–15:00</p>
+                <p className="text-blue-600 font-semibold mb-2">Saturdays · 13:00 to 15:00</p>
                 <p className="text-brand-purple font-semibold mb-4">For students who need structure and consistent practice to improve</p>
                 <ul className="space-y-2 text-brand-text mb-6 flex-grow">
                   <li className="flex items-start gap-2">
@@ -433,7 +449,7 @@ export default function SubjectAccelerators() {
               <div className="flex flex-col bg-gradient-to-br from-green-50 to-green-100 p-8 rounded-lg border-2 border-green-500 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <div className="inline-block px-3 py-1 bg-green-600 text-white rounded-full text-sm font-semibold mb-4 self-start">Biology</div>
                 <h3 className="text-3xl font-serif font-bold text-brand-purple mb-2">Biology Accelerator</h3>
-                <p className="text-green-700 font-semibold mb-2">Sundays · 10:00–12:00</p>
+                <p className="text-green-700 font-semibold mb-2">Sundays · 10:00 to 12:00</p>
                 <p className="text-brand-purple font-semibold mb-4">Perfect for students struggling with application and exam questions</p>
                 <ul className="space-y-2 text-brand-text mb-6 flex-grow">
                   <li className="flex items-start gap-2">
@@ -460,7 +476,7 @@ export default function SubjectAccelerators() {
               <div className="flex flex-col bg-gradient-to-br from-purple-50 to-purple-100 p-8 rounded-lg border-2 border-purple-500 shadow-lg transition-all duration-300 hover:shadow-xl hover:-translate-y-2">
                 <div className="inline-block px-3 py-1 bg-purple-600 text-white rounded-full text-sm font-semibold mb-4 self-start">Chemistry</div>
                 <h3 className="text-3xl font-serif font-bold text-brand-purple mb-2">Chemistry Accelerator</h3>
-                <p className="text-purple-700 font-semibold mb-2">Sundays · 13:00–15:00</p>
+                <p className="text-purple-700 font-semibold mb-2">Sundays · 13:00 to 15:00</p>
                 <p className="text-brand-purple font-semibold mb-4">Ideal for students who understand content but lose marks in exams</p>
                 <ul className="space-y-2 text-brand-text mb-6 flex-grow">
                   <li className="flex items-start gap-2">

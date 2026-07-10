@@ -5,12 +5,30 @@ import WorkshopForm from './workshop-form'
 export const metadata = {
   title: 'Free Top 1% Study Systems Workshop | A-Level Accelerators',
   description:
-    'Free live workshop for A-Level students. Learn how to stay on top of your workload, avoid burnout and study like the top 1%. Saturday 2nd May, 10:00am London (live on Zoom).',
+    'Free live workshop for A-Level students. Learn how to stay on top of your workload, avoid burnout and study like the top 1%. Live on Zoom with time for your questions.',
+  alternates: { canonical: 'https://alevelaccelerators.com/workshop/' },
+}
+
+const workshopSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  name: 'Top 1% Study Systems Workshop',
+  serviceType: 'Free live online workshop for A-level students',
+  description:
+    'A free live workshop teaching A-level students how to stay on top of their workload, avoid burnout and study like the top 1%.',
+  url: 'https://alevelaccelerators.com/workshop/',
+  areaServed: 'GB',
+  offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
+  provider: { '@type': 'Organization', '@id': 'https://alevelaccelerators.com/#organization' },
 }
 
 export default function WorkshopLanding() {
   return (
     <main className="bg-brand-cream">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(workshopSchema) }}
+      />
       {/* Minimal logo bar, no nav, to keep ad traffic focused */}
       <header className="bg-brand-cream-dark border-b-4 border-brand-gold h-24 overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-center">
