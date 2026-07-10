@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Header from '@/components/header'
 import { posts, SITE_URL } from '@/lib/posts'
+import { HeroHeadline, HeroWord } from '@/components/home/hero-reveal'
 
 export const metadata: Metadata = {
   title: 'A-Level Revision Blog: Advice From a Doctor & Former Top Student',
@@ -44,8 +45,11 @@ export default function BlogIndex() {
 
       <section className="max-w-5xl mx-auto px-6 pt-14 pb-6 text-center">
         <p className="text-sm font-bold uppercase tracking-wide text-brand-gold mb-3">The A-Level Accelerators Blog</p>
-        <h1 className="text-4xl md:text-5xl text-brand-purple font-serif font-bold leading-tight mb-5">
-          Revision advice that actually works
+        <h1 className="text-4xl md:text-5xl text-brand-purple font-serif font-bold tracking-tight leading-tight mb-5">
+          <HeroHeadline>
+            <HeroWord>Revision</HeroWord> <HeroWord>advice</HeroWord> <HeroWord>that</HeroWord>{' '}
+            <HeroWord className="italic text-brand-gold">actually</HeroWord> <HeroWord>works</HeroWord>
+          </HeroHeadline>
         </h1>
         <p className="text-lg text-brand-text max-w-2xl mx-auto">
           Study techniques, revision timetables, predicted grades and UCAS strategy, written by

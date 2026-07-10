@@ -2,6 +2,7 @@
 
 import { useEffect } from 'react'
 import Header from '@/components/header'
+import { HeroHeadline, HeroWord } from '@/components/home/hero-reveal'
 
 const css = `
 :root{
@@ -855,8 +856,11 @@ export default function RevisionTrackerPage() {
       <Header />
 
       <div className="container">
-        <h1 className="text-3xl sm:text-4xl font-serif font-bold text-brand-purple text-center mt-8 mb-2">
-          Free A-Level Revision Timetable Maker
+        <h1 className="text-3xl sm:text-4xl font-serif font-bold tracking-tight text-brand-purple text-center mt-8 mb-2">
+          <HeroHeadline>
+            <HeroWord className="italic text-brand-gold">Free</HeroWord> <HeroWord>A-Level</HeroWord>{' '}
+            <HeroWord>Revision</HeroWord> <HeroWord>Timetable</HeroWord> <HeroWord>Maker</HeroWord>
+          </HeroHeadline>
         </h1>
         <p className="text-center text-gray-600 mb-6">
           Build a personalised weekly revision timetable in about three minutes.

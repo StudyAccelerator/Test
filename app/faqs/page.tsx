@@ -1,6 +1,7 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import FAQItem from '@/components/ui/faq-item'
+import { HeroHeadline, HeroWord } from '@/components/home/hero-reveal'
 
 export const metadata = {
   title: 'FAQs | A-Level Accelerators',
@@ -145,8 +146,11 @@ export default function FAQsPage() {
 
       <section className="max-w-3xl mx-auto px-6 pt-14 pb-6 text-center">
         <p className="text-sm font-bold uppercase tracking-wide text-brand-gold mb-3">Help &amp; Answers</p>
-        <h1 className="text-4xl md:text-5xl text-brand-purple font-serif font-bold leading-tight mb-5">
-          Frequently Asked Questions
+        <h1 className="text-4xl md:text-5xl text-brand-purple font-serif font-bold tracking-tight leading-tight mb-5">
+          <HeroHeadline>
+            <HeroWord>Frequently</HeroWord> <HeroWord className="italic text-brand-gold">Asked</HeroWord>{' '}
+            <HeroWord>Questions</HeroWord>
+          </HeroHeadline>
         </h1>
         <p className="text-lg text-brand-text max-w-2xl mx-auto">
           Everything students and parents usually want to know about our courses, pricing, teaching and results.

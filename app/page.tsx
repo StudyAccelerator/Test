@@ -31,16 +31,66 @@ const programmesSchema = {
   ],
 }
 
+/* Card artwork: brand-styled DOM graphics, no photography */
+const GradeClimbArt = () => (
+  <div className="flex items-end justify-center gap-3 h-full pb-2" aria-hidden="true">
+    {[
+      ['B', 'h-12 w-12 bg-white text-brand-purple/60 ring-1 ring-brand-purple/10 text-lg'],
+      ['A', 'h-16 w-16 bg-brand-gold/25 text-brand-purple ring-1 ring-brand-gold/40 text-xl'],
+      ['A*', 'h-20 w-20 bg-brand-purple text-brand-gold text-2xl shadow-lg shadow-brand-purple/30'],
+    ].map(([g, cls]) => (
+      <span key={g as string} className={`flex items-center justify-center rounded-2xl font-serif font-bold ${cls}`}>
+        {g}
+      </span>
+    ))}
+    <svg viewBox="0 0 40 40" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" className="h-9 w-9 text-brand-gold -ml-1 mb-10">
+      <path d="M6 32L32 8M32 8h-12M32 8v12" />
+    </svg>
+  </div>
+)
+
+const MarkSchemeArt = () => (
+  <div className="flex items-center justify-center h-full" aria-hidden="true">
+    <div className="w-44 rotate-[-2deg] rounded-xl bg-white p-4 shadow-lg shadow-brand-purple/10 ring-1 ring-brand-purple/10">
+      <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-brand-purple/50 mb-2.5">Mark scheme</p>
+      {[true, true, false].map((ticked, i) => (
+        <div key={i} className="flex items-center gap-2 mb-2">
+          <span className={`flex h-4 w-4 items-center justify-center rounded-full text-[9px] font-bold ${ticked ? 'bg-brand-gold text-brand-purple' : 'ring-1 ring-brand-purple/20 text-transparent'}`}>
+            ✓
+          </span>
+          <span className={`h-1.5 rounded-full ${ticked ? 'bg-brand-purple/25' : 'bg-brand-purple/10'} ${i === 0 ? 'w-24' : i === 1 ? 'w-20' : 'w-24'}`} />
+        </div>
+      ))}
+      <p className="mt-2.5 inline-block rounded-full bg-brand-gold/20 px-2 py-0.5 text-[9px] font-bold text-brand-purple">+2 marks found</p>
+    </div>
+  </div>
+)
+
+const TopOnePercentArt = () => (
+  <div className="flex items-end justify-center gap-2.5 h-full pb-2" aria-hidden="true">
+    {[10, 16, 22].map((h) => (
+      <span key={h} className="w-9 rounded-t-lg bg-brand-purple/15" style={{ height: `${h * 4}px` }} />
+    ))}
+    <div className="relative">
+      <span className="block w-9 rounded-t-lg bg-brand-purple shadow-lg shadow-brand-purple/30" style={{ height: '116px' }} />
+      <span className="absolute -top-8 left-1/2 -translate-x-1/2 rounded-full bg-brand-gold px-2.5 py-1 text-[10px] font-bold text-brand-purple whitespace-nowrap shadow">
+        top 1%
+      </span>
+    </div>
+  </div>
+)
+
 const PROGRAMMES = [
   {
     featured: true,
     audience: 'For Year 12 going into Year 13',
     name: 'Summer Accelerator',
     badge: 'Enrolling now · starts 25th July',
-    photo: '/photos/waleed-pointing.jpg',
-    photoAlt: 'Dr Waleed Ahmad explaining a point at his desk',
+    hook: 'Master the topics that decide your predicted grades.',
+    art: <GradeClimbArt />,
+    artBg: 'bg-gradient-to-br from-brand-gold/15 via-brand-cream to-brand-cream-dark',
     outcome:
-      'Six weeks, live. Master the high-yield Year 13 topics that decide your predicted grades, and walk into September already ahead.',
+      'Six weeks, live. Cover the high-yield Year 13 topics over summer, and walk into September already ahead.',
     points: ['Biology, Chemistry, Maths and Physics', 'Two live sessions a week per subject', 'Every session recorded'],
     href: '/summer-accelerators',
     cta: 'Explore the Summer Accelerator',
@@ -50,8 +100,9 @@ const PROGRAMMES = [
     audience: 'For students who know their weak subject',
     name: 'Subject Accelerators',
     badge: 'Runs through the school year',
-    photo: '/photos/waleed-writing.jpg',
-    photoAlt: 'Working through an exam question plan in a notebook',
+    hook: 'Struggling with your exam technique?',
+    art: <MarkSchemeArt />,
+    artBg: 'bg-gradient-to-br from-brand-purple/[0.07] via-brand-cream to-brand-cream-dark',
     outcome:
       'Twelve-week live exam programmes in Biology, Chemistry and Maths. Small groups, specialist tutors, taught to the mark scheme.',
     points: ['Pick one subject or bundle three', 'Weekend sessions, no clashes', 'Exam technique in every session'],
@@ -63,8 +114,9 @@ const PROGRAMMES = [
     audience: 'For students whose problem is how they study',
     name: 'Top 1% Study System',
     badge: 'The method itself',
-    photo: '/photos/waleed-desk-calm.jpg',
-    photoAlt: 'Dr Waleed Ahmad at his study desk',
+    hook: 'Study like the top 1%.',
+    art: <TopOnePercentArt />,
+    artBg: 'bg-gradient-to-br from-brand-gold/10 via-brand-cream to-brand-purple/[0.06]',
     outcome:
       'High-yield revision, time management and exam performance. The system behind everything we teach, so you stay ahead without burning out.',
     points: ['Active recall and spaced repetition', 'Workload and burnout control', 'Free live workshop to start'],
@@ -146,13 +198,7 @@ export default function Home() {
         />
         <div className="relative max-w-6xl mx-auto px-6 pt-14 pb-24 md:pt-24 md:pb-32 grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
           <div>
-            <HeroFade delay={0}>
-              <span className="inline-flex items-center gap-2 rounded-full border border-brand-purple/10 bg-brand-purple/[0.04] px-4 py-1.5 text-sm font-semibold text-brand-purple">
-                <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
-                Doctor-led A-Level education
-              </span>
-            </HeroFade>
-            <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.04] text-4xl sm:text-5xl lg:text-[4rem] text-brand-purple">
+            <h1 className="font-serif font-bold tracking-tight leading-[1.04] text-4xl sm:text-5xl lg:text-[4rem] text-brand-purple">
               <HeroHeadline>
                 <HeroWord>Top</HeroWord> <HeroWord>grades</HeroWord> <HeroWord>are</HeroWord>{' '}
                 <HeroWord className="italic text-brand-gold">a system,</HeroWord>{' '}
@@ -165,7 +211,7 @@ export default function Home() {
               </p>
             </HeroFade>
             <HeroFade delay={0.55}>
-              <div className="mt-9">
+              <div className="mt-9 flex justify-center max-w-xl">
                 <a
                   href="#programmes"
                   className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
@@ -173,7 +219,7 @@ export default function Home() {
                   Explore the Programmes
                 </a>
               </div>
-              <p className="mt-4 text-sm text-brand-text/55">
+              <p className="mt-4 text-sm text-brand-text/55 text-center max-w-xl">
                 Three programmes, one method. First session risk-free on every course.
               </p>
             </HeroFade>
@@ -184,8 +230,8 @@ export default function Home() {
               <Image
                 src="/photos/waleed-hero.jpg"
                 alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his desk in scrubs"
-                width={1400}
-                height={1050}
+                width={1600}
+                height={900}
                 priority
                 unoptimized
                 className="w-full h-auto"
@@ -210,40 +256,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── 2 · Trust strip ──────────────────────────────────────────────── */}
-      <ScrollFade>
-        <section className="border-y border-brand-purple/10 bg-white/60">
-          <div className="max-w-6xl mx-auto px-6 py-7 flex flex-wrap justify-center gap-3">
-            {[
-              ['MBBS · NHS doctor', 'M8 3v3a3 3 0 0 0 6 0V3M11 9v4a4 4 0 0 0 8 0v-1M19 11a1.5 1.5 0 1 0 0 .01'],
-              ['1,000+ students taught', 'M16 19a4 4 0 0 0-8 0M12 11a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM20 19a3.5 3.5 0 0 0-3-3.4M4 19a3.5 3.5 0 0 1 3-3.4'],
-              ['Biology · Chemistry · Maths · Physics', 'M9 3h6M10 3v5.5L4.5 18A2 2 0 0 0 6.3 21h11.4a2 2 0 0 0 1.8-3L14 8.5V3'],
-              ['AQA, OCR and Edexcel covered', 'M9 12l2 2 4-5M12 3l7 3v5c0 4.5-3 8.5-7 10-4-1.5-7-5.5-7-10V6l7-3Z'],
-              ['First session risk-free', 'M12 8v4l2.5 2.5M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z'],
-            ].map(([label, path]) => (
-              <span
-                key={label}
-                className="inline-flex items-center gap-2.5 rounded-full bg-white ring-1 ring-brand-purple/10 shadow-sm px-4 py-2 text-sm font-semibold text-brand-purple"
-              >
-                <svg
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.8"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  className="h-4 w-4 text-brand-gold"
-                  aria-hidden="true"
-                >
-                  <path d={path} />
-                </svg>
-                {label}
-              </span>
-            ))}
-          </div>
-        </section>
-      </ScrollFade>
-
       {/* ── 3 · Programme router ─────────────────────────────────────────── */}
       <section id="programmes" className="py-24 md:py-32 px-6">
         <div className="max-w-6xl mx-auto">
@@ -261,37 +273,28 @@ export default function Home() {
               <ScrollFade key={p.name} delay={i * 0.12}>
                 <a
                   href={p.href}
-                  className={`group/card relative flex flex-col h-full overflow-hidden rounded-3xl bg-white transition-all duration-300 hover:-translate-y-2 ${
+                  className={`group/card isolate relative flex flex-col h-full overflow-hidden rounded-3xl bg-white transition-all duration-300 hover:-translate-y-2 ${
                     p.featured
                       ? '[box-shadow:0_0_0_2px_rgba(201,169,110,.55),0_2px_4px_rgba(46,37,87,.06),0_16px_32px_rgba(46,37,87,.12)] hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.8),0_8px_16px_rgba(46,37,87,.1),0_24px_48px_rgba(46,37,87,.16)]'
                       : '[box-shadow:0_0_0_1px_rgba(46,37,87,.06),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)] hover:[box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.12)]'
                   }`}
                 >
-                  <div className="relative h-44 overflow-hidden">
-                    <Image
-                      src={p.photo}
-                      alt={p.photoAlt}
-                      width={1200}
-                      height={675}
-                      unoptimized
-                      className="h-full w-full object-cover object-top transition-transform duration-500 group-hover/card:scale-[1.04]"
-                    />
-                    <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-brand-purple/60 via-brand-purple/10 to-transparent" />
+                  <div className={`relative h-44 overflow-hidden rounded-t-3xl ${p.artBg}`}>
+                    {p.art}
                     <span
-                      className={`absolute top-4 left-4 rounded-full text-xs font-bold px-3 py-1.5 backdrop-blur ${
-                        p.featured ? 'bg-brand-gold text-brand-purple' : 'bg-white/85 text-brand-purple'
+                      className={`absolute top-4 left-4 rounded-full text-xs font-bold px-3 py-1.5 ${
+                        p.featured ? 'bg-brand-gold text-brand-purple' : 'bg-white text-brand-purple ring-1 ring-brand-purple/10'
                       }`}
                     >
                       {p.badge}
                     </span>
-                    <p className="absolute bottom-3 left-4 right-4 font-mono text-[11px] uppercase tracking-[0.15em] text-white/90">
-                      {p.audience}
-                    </p>
                   </div>
                   <div className="flex flex-col flex-1 p-7">
-                    <h3 className="font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple">
+                    <p className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/55">{p.audience}</p>
+                    <h3 className="mt-2 font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple">
                       {p.name}
                     </h3>
+                    <p className="mt-2 font-serif italic text-lg text-brand-gold leading-snug">{p.hook}</p>
                     <p className="mt-3 leading-relaxed text-brand-text/75">{p.outcome}</p>
                     <ul className="mt-5 space-y-2 text-sm text-brand-text/70">
                       {p.points.map((pt) => (
@@ -413,13 +416,15 @@ export default function Home() {
                 <p className="mt-4 text-brand-text/75 leading-relaxed max-w-lg">
                   Sessions are live and interactive, never pre-recorded. Expert tutors, every one an A* graduate in the subject they teach, work through real exam questions with you and coach your answers into the language the mark scheme rewards.
                 </p>
-                <a
-                  href={BOOK_A_CALL_LINK}
-                  className="mt-7 inline-flex items-center rounded-full bg-brand-purple text-brand-cream px-7 py-3.5 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
-                >
-                  Book a Free Call
-                </a>
-                <p className="mt-3 text-sm text-brand-text/55">Fifteen minutes, no obligation. An honest look at where you are.</p>
+                <div className="mt-7 flex justify-center max-w-lg">
+                  <a
+                    href={BOOK_A_CALL_LINK}
+                    className="inline-flex items-center rounded-full bg-brand-purple text-brand-cream px-7 py-3.5 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+                  >
+                    Book a Free Call
+                  </a>
+                </div>
+                <p className="mt-3 text-sm text-brand-text/55 text-center max-w-lg">Fifteen minutes, no obligation. An honest look at where you are.</p>
               </div>
               <div>
                 <div className={`${CARD} p-6 md:p-8`}>
@@ -466,7 +471,7 @@ export default function Home() {
             <div aria-hidden="true" className="mx-auto mb-8 h-px w-24 bg-gradient-to-r from-transparent via-brand-gold to-transparent" />
             <span aria-hidden="true" className="font-serif text-7xl leading-none text-brand-gold/60 block">&ldquo;</span>
             <p className="mt-2 font-serif italic tracking-tight text-2xl sm:text-3xl md:text-4xl text-brand-purple leading-snug">
-              As doctors, we do not treat anything before diagnosing it. And my team does not teach anyone before finding where the marks are leaking.
+              A doctor diagnoses to treat accurately, and my team find where the marks are leaking before fixing.
             </p>
             <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60">
               Dr Waleed Ahmad · Founder
@@ -479,7 +484,37 @@ export default function Home() {
       {/* ── 6 · Meet Dr Waleed ───────────────────────────────────────────── */}
       <ScrollFade>
         <section className="px-6 pb-24 md:pb-32">
-          <div className="max-w-6xl mx-auto grid md:grid-cols-[1.15fr_0.85fr] gap-12 md:gap-16 items-center">
+          <div className="max-w-6xl mx-auto grid md:grid-cols-[0.85fr_1.15fr] gap-12 md:gap-16 items-center">
+            <div className="max-w-xs mx-auto md:mx-0 w-full">
+              <div className="relative">
+                <div className={`overflow-hidden ${CARD} !rounded-3xl`}>
+                  <Image
+                    src="/photos/waleed-grad-square.jpg"
+                    alt="Dr Waleed Ahmad at his medical school graduation"
+                    width={900}
+                    height={900}
+                    unoptimized
+                    className="w-full h-auto"
+                  />
+                </div>
+                <div className="absolute -top-5 -right-3 w-20 rotate-3 rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
+                  <Image
+                    src="/photos/waleed-young.jpg"
+                    alt="Waleed as a school student"
+                    width={611}
+                    height={615}
+                    unoptimized
+                    className="w-full h-auto rounded-lg"
+                  />
+                  <p className="text-center text-[9px] font-medium text-brand-text/60 pt-1 pb-0.5">before the system</p>
+                </div>
+              </div>
+              <ul className="mt-6 space-y-2 font-mono text-sm text-brand-purple/70">
+                <li>MBBS · NHS Foundation Doctor</li>
+                <li>Former top-performing A-level student</li>
+                <li>1,000+ students worked with over 6 years</li>
+              </ul>
+            </div>
             <div>
               <p className={EYEBROW}>Who built this</p>
               <h2 className="mt-4 font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
@@ -494,36 +529,6 @@ export default function Home() {
                 </p>
               </div>
             </div>
-            <div className="max-w-xs mx-auto md:mx-0 md:justify-self-end w-full">
-              <ul className="space-y-2 font-mono text-sm text-brand-purple/70">
-                <li>MBBS · NHS Foundation Doctor</li>
-                <li>Former top-performing A-level student</li>
-                <li>1,000+ students worked with over 6 years</li>
-              </ul>
-              <div className="relative mt-6">
-                <div className={`overflow-hidden ${CARD} !rounded-3xl`}>
-                  <Image
-                    src="/photos/waleed-grad-square.jpg"
-                    alt="Dr Waleed Ahmad at his medical school graduation"
-                    width={900}
-                    height={900}
-                    unoptimized
-                    className="w-full h-auto"
-                  />
-                </div>
-                <div className="absolute -bottom-5 -left-3 w-20 rotate-[-3deg] rounded-xl bg-white p-1.5 shadow-xl ring-1 ring-brand-purple/10">
-                  <Image
-                    src="/photos/waleed-young.jpg"
-                    alt="Waleed as a school student"
-                    width={700}
-                    height={933}
-                    unoptimized
-                    className="w-full h-auto rounded-lg"
-                  />
-                  <p className="text-center text-[9px] font-medium text-brand-text/60 pt-1 pb-0.5">before the system</p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
       </ScrollFade>
@@ -532,7 +537,6 @@ export default function Home() {
       <ScrollFade>
         <section id="tracker" className="px-6 pb-24 md:pb-32">
           <div className="max-w-4xl mx-auto text-center">
-            <p className={`${EYEBROW} mb-4`}>Free tool</p>
             <h2 className="font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
               Your first week, planned <span className="italic text-brand-gold">tonight</span>
             </h2>

@@ -246,10 +246,10 @@ export default function SubjectAccelerators() {
 
       {/* Key Insight */}
       <ScrollFade>
-        <section className="py-12 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
+        <section className="py-12 px-4 bg-brand-purple border-y-2 border-brand-gold/40">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-xl md:text-2xl text-brand-purple font-semibold">
-              💡 Most students aren't struggling because they're not working hard. They're struggling because they're focusing on the wrong things.
+            <p className="text-xl md:text-2xl text-brand-cream font-semibold">
+              💡 Most students aren't struggling because they're not working hard. They're struggling because they're focusing on <span className="text-brand-gold">the wrong things</span>.
             </p>
           </div>
         </section>
