@@ -4,6 +4,7 @@ import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
 import TestimonialSlider from '@/components/ui/testimonial-slider'
+import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
 
 export const metadata = {
   title: 'A-Level Summer Accelerator | Get Ahead for Year 13 | A-Level Accelerators',
@@ -106,27 +107,49 @@ export default function SummerAccelerators() {
       <Header />
 
       {/* Hero Section */}
-      <section id="hero" className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream pt-24 pb-14 px-8 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-8 leading-tight">
-            <span className="text-brand-gold">Master the Topics That Decide</span> <span className="text-brand-cream">Your Predicted Grades!</span>
+      <section id="hero" className="relative overflow-hidden bg-brand-cream pt-16 pb-16 md:pt-24 md:pb-20 px-6 text-center">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(50% 40% at 50% 0%, rgba(201,169,110,0.14) 0%, rgba(201,169,110,0) 100%)',
+          }}
+        />
+        <div className="relative max-w-4xl mx-auto">
+          <HeroFade delay={0}>
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand-purple/10 bg-brand-purple/[0.04] px-4 py-1.5 text-sm font-semibold text-brand-purple">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
+              Summer Accelerator · six weeks, live
+            </span>
+          </HeroFade>
+          <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.08] text-4xl sm:text-5xl md:text-6xl text-brand-purple">
+            <HeroHeadline>
+              <HeroWord>Master</HeroWord> <HeroWord>the</HeroWord> <HeroWord>Topics</HeroWord>{' '}
+              <HeroWord>That</HeroWord> <HeroWord>Decide</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">Your</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">Predicted</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">Grades!</HeroWord>
+            </HeroHeadline>
           </h1>
-          <p className="text-xl md:text-2xl mb-10 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            A six-week live summer course covering the high-yield Year 13 topics in Biology, Chemistry, Maths and Physics. Taught by subject specialists, led by a doctor.
-          </p>
-          <a
-            href="#pricing"
-            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-          >
-            Start September Ahead
-          </a>
-          <div className="mt-10 flex flex-wrap items-center justify-center gap-x-4 gap-y-2 text-base md:text-lg text-brand-gold opacity-90 font-medium">
-            <span>Led by Dr Waleed &amp; expert A-Level tutors</span>
-            <span aria-hidden="true">·</span>
-            <span>1,000+ students supported</span>
-            <span aria-hidden="true">·</span>
-            <span>First session risk-free</span>
-          </div>
+          <HeroFade delay={0.45}>
+            <p className="mt-6 text-lg md:text-xl text-brand-text/75 leading-relaxed max-w-2xl mx-auto">
+              A six-week live summer course covering the high-yield Year 13 topics in Biology, Chemistry, Maths and Physics. Built by a doctor, taught by subject specialists.
+            </p>
+          </HeroFade>
+          <HeroFade delay={0.55}>
+            <a
+              href="#pricing"
+              className="mt-9 inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+            >
+              Start September Ahead
+            </a>
+            <ul className="mt-8 flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm font-medium text-brand-text/70">
+              <li className="flex items-center gap-2"><span className="text-brand-gold font-bold">✓</span> Built by Dr Waleed, taught by expert A-Level tutors</li>
+              <li className="flex items-center gap-2"><span className="text-brand-gold font-bold">✓</span> 1,000+ students supported</li>
+              <li className="flex items-center gap-2"><span className="text-brand-gold font-bold">✓</span> First session risk-free</li>
+            </ul>
+          </HeroFade>
         </div>
       </section>
 

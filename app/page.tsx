@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
+import TestimonialMarquee from '@/components/home/testimonial-marquee'
 
 export const metadata = {
   title: 'A-Level Accelerators | Live A-Level Courses, Study Systems & Free Revision Tools',
@@ -32,31 +33,56 @@ const programmesSchema = {
 
 const PROGRAMMES = [
   {
+    featured: true,
     audience: 'For Year 12 going into Year 13',
     name: 'Summer Accelerator',
     badge: 'Enrolling now · starts 25th July',
     outcome:
       'Six weeks, live. Master the high-yield Year 13 topics that decide your predicted grades, and walk into September already ahead.',
+    points: ['Biology, Chemistry, Maths and Physics', 'Two live sessions a week per subject', 'Every session recorded'],
     href: '/summer-accelerators',
     cta: 'Explore the Summer Accelerator',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" className="h-6 w-6">
+        <circle cx="12" cy="12" r="4" />
+        <path d="M12 2v2.5M12 19.5V22M4.5 4.5l1.8 1.8M17.7 17.7l1.8 1.8M2 12h2.5M19.5 12H22M4.5 19.5l1.8-1.8M17.7 6.3l1.8-1.8" />
+      </svg>
+    ),
   },
   {
+    featured: false,
     audience: 'For students who know their weak subject',
     name: 'Subject Accelerators',
     badge: 'Runs through the school year',
     outcome:
       'Twelve-week live exam programmes in Biology, Chemistry and Maths. Small groups, specialist tutors, taught to the mark scheme.',
+    points: ['Pick one subject or bundle three', 'Weekend sessions, no clashes', 'Exam technique in every session'],
     href: '/subject-accelerators',
     cta: 'Explore Subject Accelerators',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+        <path d="M4 19.5V6a2 2 0 0 1 2-2h13v13.5" />
+        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H19v4H6.5A2.5 2.5 0 0 1 4 19.5Z" />
+        <path d="M9 8h6M9 11.5h4" />
+      </svg>
+    ),
   },
   {
+    featured: false,
     audience: 'For students whose problem is how they study',
     name: 'Top 1% Study System',
     badge: 'The method itself',
     outcome:
       'High-yield revision, time management and exam performance. The system behind everything we teach, so you stay ahead without burning out.',
+    points: ['Active recall and spaced repetition', 'Workload and burnout control', 'Free live workshop to start'],
     href: '/study-systems',
     cta: 'Explore the Study System',
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+        <path d="M12 20V10M18 20V4M6 20v-4" />
+        <path d="M2 20h20" />
+      </svg>
+    ),
   },
 ]
 
@@ -93,6 +119,21 @@ const WALL_QUOTES = [
       'The lessons were interactive with well explained concepts, easy to follow and very informative. Even the best students had something to improve on',
     name: 'Jay',
     role: 'Year 12 Student',
+  },
+  {
+    quote: 'I really liked the wide range of examples used and discussed throughout the session. There was more active learning',
+    name: 'Catherine',
+    role: 'Year 13 Student',
+  },
+  {
+    quote: 'The whole session was interactive and the tutor was really helpful and informative. Honestly there was nothing I would change',
+    name: 'Rayanna',
+    role: 'A-Level Biology Student',
+  },
+  {
+    quote: 'Well structured and informative walkthroughs, with lots of hard questions and worked solutions',
+    name: 'Ahreen',
+    role: 'A-Level Chemistry Student',
   },
 ]
 
@@ -133,26 +174,20 @@ export default function Home() {
             </h1>
             <HeroFade delay={0.45}>
               <p className="mt-6 text-lg md:text-xl text-brand-text/75 leading-relaxed max-w-xl">
-                Live A-level courses and study systems for Biology, Chemistry, Maths and Physics. Built and taught by Dr Waleed Ahmad MBBS, an NHS doctor who has worked with over 1,000 students.
+                Live A-level courses and study systems for Biology, Chemistry, Maths and Physics. Built by Dr Waleed Ahmad MBBS, an NHS doctor, and taught live by expert tutors who earned A*s themselves.
               </p>
             </HeroFade>
             <HeroFade delay={0.55}>
-              <div className="mt-9 flex flex-col sm:flex-row sm:items-center gap-4">
+              <div className="mt-9">
                 <a
                   href="#programmes"
-                  className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+                  className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
                 >
                   Explore the Programmes
                 </a>
-                <a
-                  href="/revision-tracker"
-                  className="inline-flex justify-center items-center rounded-full border border-brand-purple/20 text-brand-purple px-8 py-4 text-lg font-semibold hover:border-brand-gold hover:bg-brand-gold/5 transition-all"
-                >
-                  Try the Free Tracker
-                </a>
               </div>
               <p className="mt-4 text-sm text-brand-text/55">
-                Three programmes, one method. The tracker is free and takes about three minutes.
+                Three programmes, one method. First session risk-free on every course.
               </p>
             </HeroFade>
           </div>
@@ -172,13 +207,13 @@ export default function Home() {
                 NHS doctor · former top A-level student
               </span>
             </div>
-            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-5 sm:left-auto sm:right-10 sm:w-auto rounded-2xl bg-white/90 backdrop-blur border border-brand-gold/30 shadow-xl px-5 py-3.5 flex items-center gap-4">
+            <div className="mt-4 sm:mt-0 sm:absolute sm:-bottom-6 sm:-left-4 sm:w-auto rounded-2xl bg-white/90 backdrop-blur border border-brand-gold/30 shadow-xl px-5 py-3.5 flex items-center gap-4">
               <div className="h-11 w-11 shrink-0 rounded-full bg-brand-purple text-brand-gold flex items-center justify-center font-serif font-bold text-lg">
                 W
               </div>
               <div className="leading-tight">
                 <p className="font-bold text-brand-purple">Dr Waleed Ahmad, MBBS</p>
-                <p className="text-sm text-brand-text/70">Founder · teaches every cohort</p>
+                <p className="text-sm text-brand-text/70">Founder · built the method</p>
               </div>
             </div>
           </HeroFade>
@@ -216,27 +251,49 @@ export default function Home() {
               Everything we run trains the same thing: turning what you know into marks. Start from where you actually are.
             </p>
           </ScrollFade>
-          <div className="mt-14 grid md:grid-cols-3 border-y border-brand-purple/10">
+          <div className="mt-14 grid md:grid-cols-3 gap-6">
             {PROGRAMMES.map((p, i) => (
               <ScrollFade key={p.name} delay={i * 0.12}>
                 <a
                   href={p.href}
-                  className="group/card relative flex flex-col h-full py-10 px-8 md:border-r border-brand-purple/10 md:first:border-l max-md:border-b max-md:last:border-b-0 hover:bg-gradient-to-t hover:from-brand-purple/[0.03] hover:to-transparent transition-colors"
+                  className={`group/card relative flex flex-col h-full overflow-hidden rounded-3xl bg-white p-8 transition-all duration-300 hover:-translate-y-2 ${
+                    p.featured
+                      ? '[box-shadow:0_0_0_2px_rgba(201,169,110,.55),0_2px_4px_rgba(46,37,87,.06),0_16px_32px_rgba(46,37,87,.12)] hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.8),0_8px_16px_rgba(46,37,87,.1),0_24px_48px_rgba(46,37,87,.16)]'
+                      : '[box-shadow:0_0_0_1px_rgba(46,37,87,.06),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)] hover:[box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.12)]'
+                  }`}
                 >
                   <span
                     aria-hidden="true"
-                    className="absolute left-0 top-10 w-1 h-6 group-hover/card:h-12 bg-brand-gold rounded-r-full transition-all duration-300"
+                    className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-brand-gold/0 via-brand-gold to-brand-gold/0 opacity-70 group-hover/card:opacity-100 transition-opacity"
                   />
-                  <p className={EYEBROW}>{p.audience}</p>
-                  <h3 className="mt-4 font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple group-hover/card:translate-x-2 transition-transform duration-300">
+                  <div className="flex items-start justify-between gap-3">
+                    <span className="flex h-12 w-12 items-center justify-center rounded-2xl bg-brand-purple/[0.06] text-brand-purple group-hover/card:bg-brand-gold/20 group-hover/card:text-brand-purple transition-colors">
+                      {p.icon}
+                    </span>
+                    <span
+                      className={`rounded-full text-xs font-bold px-3 py-1.5 ${
+                        p.featured ? 'bg-brand-gold text-brand-purple' : 'bg-brand-cream-dark text-brand-purple'
+                      }`}
+                    >
+                      {p.badge}
+                    </span>
+                  </div>
+                  <h3 className="mt-5 font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple">
                     {p.name}
                   </h3>
-                  <span className="mt-3 self-start rounded-full bg-brand-gold/15 text-brand-purple text-xs font-bold px-3 py-1">
-                    {p.badge}
-                  </span>
+                  <p className="mt-1 font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/55">{p.audience}</p>
                   <p className="mt-4 leading-relaxed text-brand-text/75">{p.outcome}</p>
-                  <span className="mt-auto pt-8 font-semibold text-brand-gold group-hover/card:underline underline-offset-4">
-                    {p.cta} →
+                  <ul className="mt-5 space-y-2 text-sm text-brand-text/70">
+                    {p.points.map((pt) => (
+                      <li key={pt} className="flex items-start gap-2.5">
+                        <span className="mt-1 h-1.5 w-1.5 shrink-0 rounded-full bg-brand-gold" aria-hidden="true" />
+                        {pt}
+                      </li>
+                    ))}
+                  </ul>
+                  <span className="mt-auto pt-7 inline-flex items-center gap-1.5 font-semibold text-brand-purple group-hover/card:text-brand-gold transition-colors">
+                    {p.cta}
+                    <span aria-hidden="true" className="transition-transform group-hover/card:translate-x-1.5">→</span>
                   </span>
                 </a>
               </ScrollFade>
@@ -258,16 +315,11 @@ export default function Home() {
         <section className="px-6 pb-24 md:pb-32">
           <div className="max-w-5xl mx-auto text-center">
             <p className={`${EYEBROW} mb-8`}>How every programme works</p>
-            <p className="font-serif tracking-tight text-3xl sm:text-4xl md:text-[3.4rem] text-brand-purple leading-[1.15]">
-              I <span className="italic text-brand-gold">diagnose</span>
-              <sup className="font-mono text-sm text-brand-purple/50 ml-1">01</sup> how you actually study, {' '}
-              <span className="italic text-brand-gold">rebuild</span>
-              <sup className="font-mono text-sm text-brand-purple/50 ml-1">02</sup> your revision around what moves marks, and {' '}
-              <span className="italic text-brand-gold">coach</span>
-              <sup className="font-mono text-sm text-brand-purple/50 ml-1">03</sup> you all the way to exam day.
+            <p className="font-serif tracking-tight text-3xl sm:text-4xl md:text-5xl text-brand-purple leading-[1.25]">
+              We <span className="italic text-brand-gold">diagnose</span> how you actually study, <span className="italic text-brand-gold">rebuild</span> your revision around what moves marks, and <span className="italic text-brand-gold">coach</span> you all the way to exam day.
             </p>
             <p className="mt-8 text-brand-text/60 max-w-xl mx-auto">
-              I am a doctor. I do not treat anything before diagnosing it, and we do not teach anyone before finding where the marks are leaking.
+              I am a doctor. I do not treat anything before diagnosing it, and my team does not teach anyone before finding where the marks are leaking.
             </p>
           </div>
         </section>
@@ -349,7 +401,7 @@ export default function Home() {
                   Live teaching, straight to exam technique
                 </h3>
                 <p className="mt-4 text-brand-text/75 leading-relaxed max-w-lg">
-                  Sessions are live and interactive, never pre-recorded. You attempt real exam questions, get feedback on your actual answers, and learn to write in the language the mark scheme rewards.
+                  Sessions are live and interactive, never pre-recorded. Expert tutors, every one an A* graduate in the subject they teach, work through real exam questions with you and coach your answers into the language the mark scheme rewards.
                 </p>
                 <a
                   href={BOOK_A_CALL_LINK}
@@ -361,18 +413,26 @@ export default function Home() {
               </div>
               <div>
                 <div className={`${CARD} p-6 md:p-8`}>
-                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Session note · week 4</p>
-                  <p className="text-brand-text leading-relaxed">
-                    &ldquo;You lost 3 marks on the 6-marker to phrasing, not knowledge. We drilled the mark scheme wording today. Before Thursday: two timed questions, same topic, closed notes.&rdquo;
-                  </p>
-                  <p className="mt-4 text-sm font-semibold text-brand-purple">Dr Waleed</p>
+                  <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Inside a live session</p>
+                  <ul className="space-y-3">
+                    {[
+                      ['Recap and recall check', '10 min', 'bg-brand-cream-dark text-brand-purple'],
+                      ['Real exam questions, attempted live', '60 min', 'bg-brand-purple text-brand-cream'],
+                      ['Feedback on your answers + Q&A', '20 min', 'bg-brand-gold/25 text-brand-purple'],
+                    ].map(([what, len, cls]) => (
+                      <li key={what as string} className="flex items-center gap-3">
+                        <span className={`flex-1 rounded-xl px-4 py-3 text-sm font-semibold ${cls}`}>{what}</span>
+                        <span className="font-mono text-xs text-brand-purple/50 shrink-0">{len}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
                 <figure className={`${CARD} p-6 mt-5`}>
                   <blockquote className="text-brand-text/85 leading-relaxed">
-                    &ldquo;We go straight into exam practice instead of spending ages on content, and it works.&rdquo;
+                    &ldquo;It was really useful having the breakdown of exam questions gone through step by step, then explaining the answers after we had attempted them.&rdquo;
                   </blockquote>
                   <figcaption className="mt-3 text-sm font-semibold text-brand-purple">
-                    Maahil · A-Level Chemistry Student
+                    Vernon · Year 12 Student
                   </figcaption>
                 </figure>
               </div>
@@ -385,13 +445,13 @@ export default function Home() {
       <ScrollFade>
         <section className="px-6 pb-24 md:pb-32">
           <div className="max-w-6xl mx-auto grid md:grid-cols-[0.9fr_1.1fr] gap-12 md:gap-16 items-center">
-            <div className="relative">
+            <div className="relative max-w-md mx-auto md:mx-0">
               <div className={`overflow-hidden -rotate-1 ${CARD} !rounded-3xl`}>
                 <Image
-                  src="/photos/waleed-notebook.jpg"
-                  alt="Dr Waleed Ahmad planning a student session at his desk"
-                  width={1200}
-                  height={675}
+                  src="/photos/waleed-graduation.jpg"
+                  alt="Dr Waleed Ahmad at his medical school graduation"
+                  width={900}
+                  height={1200}
                   unoptimized
                   className="w-full h-auto"
                 />
@@ -490,38 +550,27 @@ export default function Home() {
             <h2 className="text-center font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight">
               What students <span className="italic text-brand-gold">actually</span> say
             </h2>
-            <div className="mt-14 columns-1 md:columns-3 gap-6 [&>figure]:break-inside-avoid">
-              {WALL_QUOTES.map((t) => (
-                <figure key={t.name} className={`${CARD} p-7 mb-6`}>
-                  <span aria-hidden="true" className="font-serif text-5xl leading-none text-brand-gold/70 block">
-                    &ldquo;
-                  </span>
-                  <blockquote className="mt-2 text-brand-text/85 leading-relaxed">{t.quote}</blockquote>
-                  <figcaption className="mt-5 text-sm">
-                    <span className="font-bold text-brand-purple">{t.name}</span>
-                    <span className="text-brand-text/60"> · {t.role}</span>
-                  </figcaption>
-                </figure>
-              ))}
+            <div className="mt-14">
+              <TestimonialMarquee quotes={WALL_QUOTES} />
             </div>
           </div>
         </section>
       </ScrollFade>
 
       {/* ── 9 · Final CTA: the one dark chapter ─────────────────────────── */}
-      <section className="bg-brand-purple text-brand-cream py-24 md:py-32 px-6 text-center">
+      <section className="bg-brand-purple text-brand-cream py-16 md:py-20 px-6 text-center">
         <div className="max-w-3xl mx-auto">
           <ScrollFade>
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-8">Start here</p>
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-5">Start here</p>
             <h2 className="font-serif tracking-tight text-4xl md:text-6xl leading-[1.08]">
               Stop revising <span className="italic text-brand-gold">harder.</span>
               <br />
               Start revising right.
             </h2>
-            <p className="mt-8 text-lg text-brand-cream/80 leading-relaxed max-w-xl mx-auto">
+            <p className="mt-6 text-lg text-brand-cream/80 leading-relaxed max-w-xl mx-auto">
               Fifteen minutes with Dr Waleed. An honest diagnosis of where the marks are leaking, and a clear recommendation, even if it is not us.
             </p>
-            <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
+            <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <a
                 href={BOOK_A_CALL_LINK}
                 className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-9 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"

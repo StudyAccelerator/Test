@@ -3,6 +3,7 @@ import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
+import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
 
 export const metadata = {
   title: 'A-Level Accelerators - Live 12-Week Exam Programs',
@@ -203,23 +204,43 @@ export default function SubjectAccelerators() {
       <Header />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream pt-20 pb-14 px-8 text-center">
-        <div className="max-w-5xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-serif text-brand-gold mb-6 font-bold">
-            Struggling with A-Level <span className="text-green-400">Biology</span>, <span className="text-purple-300">Chemistry</span> or <span className="text-blue-300">Maths</span>?
+      <section className="relative overflow-hidden bg-brand-cream pt-16 pb-16 md:pt-24 md:pb-20 px-6 text-center">
+        <div
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0"
+          style={{
+            background:
+              'radial-gradient(50% 40% at 50% 0%, rgba(201,169,110,0.14) 0%, rgba(201,169,110,0) 100%)',
+          }}
+        />
+        <div className="relative max-w-4xl mx-auto">
+          <HeroFade delay={0}>
+            <span className="inline-flex items-center gap-2 rounded-full border border-brand-purple/10 bg-brand-purple/[0.04] px-4 py-1.5 text-sm font-semibold text-brand-purple">
+              <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
+              Subject Accelerators · 12-week live programmes
+            </span>
+          </HeroFade>
+          <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.08] text-4xl sm:text-5xl md:text-6xl text-brand-purple">
+            <HeroHeadline>
+              <HeroWord>Struggling</HeroWord> <HeroWord>with</HeroWord> <HeroWord>A-Level</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">Biology,</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">Chemistry</HeroWord>{' '}
+              <HeroWord>or</HeroWord> <HeroWord className="italic text-brand-gold">Maths?</HeroWord>
+            </HeroHeadline>
           </h1>
-          <p className="text-2xl md:text-3xl mb-8 opacity-95 max-w-3xl mx-auto">
-            Get structured, high-impact support that actually improves your grades, without relying on endless tutoring.
-          </p>
-          <p className="text-lg mb-10 opacity-90 max-w-2xl mx-auto">
-            Designed for students who are falling behind, stuck on certain topics, or not seeing results from revision.
-          </p>
-          <a
-            href="#subjects"
-            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-semibold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-          >
-            Explore Your Subject Programme
-          </a>
+          <HeroFade delay={0.45}>
+            <p className="mt-6 text-lg md:text-xl text-brand-text/75 leading-relaxed max-w-2xl mx-auto">
+              Structured, high-impact support that actually improves your grades, without relying on endless tutoring. Designed for students who are falling behind, stuck on certain topics, or not seeing results from revision.
+            </p>
+          </HeroFade>
+          <HeroFade delay={0.55}>
+            <a
+              href="#subjects"
+              className="mt-9 inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+            >
+              Explore Your Subject Programme
+            </a>
+          </HeroFade>
         </div>
       </section>
 
