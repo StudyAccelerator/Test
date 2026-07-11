@@ -33,7 +33,7 @@ export const TECHNIQUES: Record<SessionType, Technique> = {
       'Phone in another room. Blurt first: 15 to 20 minutes writing everything you know about the topic from memory, notes closed.',
       'Check against your notes or the spec in a different colour, about 15 minutes. The red is your gap list.',
       'Short break. Then relearn only the red, roughly 30 minutes. Not the whole topic, just the gaps.',
-      'Finish by re-blurting the red bits from memory. Keep the sheet. The page is a diagnosis, and you will re-test it later in the week.',
+      "Finish by re-blurting the red bits from memory. Keep the sheet. The page is a diagnosis, and you'll re-test it later in the week.",
     ],
     bg: '#2E2557',
     fg: '#F3EBD8',
@@ -49,7 +49,7 @@ export const TECHNIQUES: Record<SessionType, Technique> = {
     howTo: [
       'Past paper questions on this topic, done cold. No notes, no re-reading first.',
       'Mark against the mark scheme straight after each question, not at the end.',
-      'Mix the question types rather than doing ten of the same kind in a row. Mixed practice is harder, and that is the point.',
+      "Mix the question types rather than doing ten of the same kind in a row. Mixed practice is harder, and that's the point.",
       'Every dropped mark goes on a list. That list is what you restudy. No past papers for this topic yet? Flashcards or textbook questions work too.',
     ],
     bg: '#1F6E43',
@@ -62,7 +62,7 @@ export const TECHNIQUES: Record<SessionType, Technique> = {
     shortLabel: 'Review',
     mins: 30,
     breakAfter: 10,
-    strap: 'A short revisit, days later. That is the trick.',
+    strap: "A short revisit, days later. That's the trick.",
     howTo: [
       'Re-test yourself on whatever you got wrong earlier in the week: the red bits of your blurt sheet, or the questions you dropped marks on.',
       'From memory, on a fresh page, about ten minutes. Then check.',

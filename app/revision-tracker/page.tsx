@@ -19,11 +19,13 @@ export default function RevisionTrackerPage() {
             className="pointer-events-none absolute -top-32 left-1/2 h-[22rem] w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-brand-gold/10 blur-3xl"
           />
           <div className="relative mx-auto max-w-3xl">
-            <p className={EYEBROW}>Free A-level revision timetable maker and topic audit</p>
             <h1
-              aria-label="Stop revising in the dark."
-              className="mt-3 font-serif text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl"
+              aria-label="Free A-level revision timetable maker and topic audit. Stop revising in the dark."
+              className="font-serif text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl"
             >
+              <span className={`${EYEBROW} mb-3 block font-normal`}>
+                Free A-level revision timetable maker and topic audit
+              </span>
               <HeroHeadline>
                 <HeroWord>Stop</HeroWord> <HeroWord>revising</HeroWord> <HeroWord>in</HeroWord>{' '}
                 <HeroWord>the</HeroWord> <HeroWord className="italic text-brand-gold">dark.</HeroWord>
@@ -53,8 +55,8 @@ export default function RevisionTrackerPage() {
                   <strong className="text-brand-gold">How this works.</strong>{' '}I&apos;m a doctor. I can&apos;t treat a
                   patient until I&apos;ve found what&apos;s wrong, and revision works exactly the same way. Most
                   timetables just schedule your time. This one audits your topics first, finds where you&apos;re leaking
-                  marks, then builds the week around fixing them. It&apos;s the same structure I&apos;ve used with over
-                  1,000 A-level students.
+                  marks, then builds the week around fixing them. I&apos;ve worked with over 1,000 A-level
+                  students; diagnose before you treat is the whole method.
                 </p>
               </div>
             </HeroFade>

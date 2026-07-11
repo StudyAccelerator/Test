@@ -54,7 +54,8 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
   c.fillText(`${name ? name + "'s" : 'My'} Revision Week`, MG, MG + 34)
   c.font = '15px Arial, sans-serif'
   c.fillStyle = 'rgba(26,21,53,0.65)'
-  const summary = `${plan.sessionCount} sessions · ${Math.round(plan.usedStudyMins / 30) / 2} hours of focused study · weakest topics first · every break protected`
+  const totalH = Math.round(plan.usedStudyMins / 30) / 2
+  const summary = `${plan.sessionCount} session${plan.sessionCount === 1 ? '' : 's'} · ${totalH} hour${totalH === 1 ? '' : 's'} of focused study · weakest topics first · every break protected`
   c.fillText(summary, MG, MG + 62)
   c.font = 'italic 15px Georgia, serif'
   c.fillStyle = '#2E2557'

@@ -160,13 +160,13 @@ function buildDayCapacity(s: WeekSettings, day: number): DayCapacity {
 }
 
 /* Can this day host a session of this type right now? Returns the interval
-   index it would use, or -1. Prefers morning intervals for deep blocks. */
-function findSlot(cap: DayCapacity, type: SessionType, topic: string): number {
+   index it would use, or -1. */
+function findSlot(cap: DayCapacity, type: SessionType, subject: string, topic: string): number {
   const dur = TECHNIQUES[type].mins
   if (cap.studyLeft < dur) return -1
   if (type === 'blurt' && cap.blurtsLeft < 1) return -1
   // one session per topic per day keeps the spacing honest
-  if (cap.sessions.some((sess) => sess.topic === topic)) return -1
+  if (cap.sessions.some((sess) => sess.topic === topic && sess.subject === subject)) return -1
   for (let i = 0; i < cap.remaining.length; i++) {
     // require room for the session; the break after it can shrink at an interval's end
     if (cap.remaining[i] >= dur) return i
@@ -239,7 +239,7 @@ function tryPlaceDose(caps: DayCapacity[], topic: TopicInput, anchor: number, st
     remaining: [...c.remaining],
     studyLeft: c.studyLeft,
     blurtsLeft: c.blurtsLeft,
-    topics: c.sessions.map((sess) => sess.topic),
+    topics: c.sessions.map((sess) => `${sess.subject}|${sess.topic}`),
   }))
   for (const step of steps) {
     const tech = TECHNIQUES[step.type]
@@ -251,13 +251,13 @@ function tryPlaceDose(caps: DayCapacity[], topic: TopicInput, anchor: number, st
       const simDay = sim[d]
       if (simDay.studyLeft < tech.mins) continue
       if (step.type === 'blurt' && simDay.blurtsLeft < 1) continue
-      if (simDay.topics.includes(topic.topic)) continue
+      if (simDay.topics.includes(`${topic.subject}|${topic.topic}`)) continue
       const idx = simDay.remaining.findIndex((r) => r >= tech.mins)
       if (idx < 0) continue
       simDay.remaining[idx] = Math.max(0, simDay.remaining[idx] - (tech.mins + tech.breakAfter))
       simDay.studyLeft -= tech.mins
       if (step.type === 'blurt') simDay.blurtsLeft -= 1
-      simDay.topics.push(topic.topic)
+      simDay.topics.push(`${topic.subject}|${topic.topic}`)
       attempts.push({ day: d, type: step.type, intervalIdx: idx })
       placed = true
       break
@@ -327,7 +327,7 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
   for (const topic of [...parked]) {
     if (topic.rating !== 'solid') continue
     for (let d = 0; d <= 6; d++) {
-      const idx = findSlot(caps[d], 'recall', topic.topic)
+      const idx = findSlot(caps[d], 'recall', topic.subject, topic.topic)
       if (idx >= 0) {
         commit(topic, [{ day: d, type: 'recall', intervalIdx: idx }])
         parked.splice(parked.indexOf(topic), 1)
@@ -476,16 +476,25 @@ export function diagnosisLine(result: PlanResult): string {
     weakMins.set(t.subject, (weakMins.get(t.subject) ?? 0) + mins)
   }
   if (weakMins.size === 0) {
-    return 'Everything is holding. This week is maintenance, and it is meant to feel light.'
+    return "Everything is holding. This week is maintenance, and it's meant to feel light."
   }
   const ranked = [...weakMins.entries()].sort((a, b) => b[1] - a[1])
   const [topSubject, topMins] = ranked[0]
   const totalH = Math.round(result.usedStudyMins / 30) / 2
   const topH = Math.round(topMins / 30) / 2
-  const holding = result.scheduled
-    .filter((t) => t.rating === 'solid')
-    .map((t) => t.subject)
-    .filter((subj) => !weakMins.has(subj))
-  const holdingNote = holding.length ? ` ${[...new Set(holding)].join(' and ')} is holding, so it stays on maintenance.` : ''
+  const holding = [
+    ...new Set(
+      result.scheduled
+        .filter((t) => t.rating === 'solid')
+        .map((t) => t.subject)
+        .filter((subj) => !weakMins.has(subj))
+    ),
+  ]
+  const holdingNote =
+    holding.length === 0
+      ? ''
+      : holding.length === 1
+        ? ` ${holding[0]} is holding, so it stays on maintenance.`
+        : ` ${holding.slice(0, -1).join(', ')} and ${holding[holding.length - 1]} are holding, so they stay on maintenance.`
   return `Diagnosis: ${topSubject} needs the most work, so it gets ${topH} of your ${totalH} study hours this week.${holdingNote}`
 }

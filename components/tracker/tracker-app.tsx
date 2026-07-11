@@ -238,7 +238,7 @@ export default function TrackerApp() {
       <StepCard
         step="1"
         title="Your real week"
-        subtitle="Sleep, meals, school and anything fixed. The plan is built inside what is left, not on top of it."
+        subtitle="Sleep, meals, school and anything fixed. The plan is built inside what's left, not on top of it."
       >
         <div className="grid gap-x-5 sm:grid-cols-2">
           <div>
@@ -304,7 +304,7 @@ export default function TrackerApp() {
         {!sleepOk && (
           <p role="status" className="mb-4 rounded-lg border-l-4 border-red-500 bg-red-50 px-4 py-2.5 text-sm text-red-800">
             That is {Math.floor(sleepMins / 60)}h {String(sleepMins % 60).padStart(2, '0')}m of sleep. You need at least 8
-            hours. Non negotiable; tired brains cannot retrieve.
+            hours. Non-negotiable; tired brains can't retrieve.
           </p>
         )}
 
@@ -387,7 +387,7 @@ export default function TrackerApp() {
             </button>
           </div>
           <p className="mb-3 text-[13px] text-brand-text/55">
-            Sport, work, family, anything you cannot move. It gets blocked out before a single session is placed.
+            Sport, work, family, anything you can't move. It gets blocked out before a single session is placed.
           </p>
           {form.commitments.map((c) => (
             <div key={c.id} className="relative mb-2.5 rounded-xl border border-brand-purple/10 bg-brand-cream p-3 pr-12">
@@ -591,7 +591,7 @@ export default function TrackerApp() {
             <p className="text-[13px] leading-relaxed text-brand-text/70">
               {meter.fits
                 ? 'Weakest topics get the most sessions. Anything you add past capacity gets parked, never crammed.'
-                : 'That is more than one week can properly hold. I will build the week around your weakest ones and park the rest for next week. Nothing gets dropped.'}{' '}
+                : "That's more than one week can properly hold. I'll build the week around your weakest ones and park the rest for next week. Nothing gets dropped."}{' '}
               I cap you at about six focused hours a day; in my experience the hours past six add almost nothing.
             </p>
           </div>

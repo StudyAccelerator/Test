@@ -417,7 +417,7 @@ export default function PlanView({
                   {counts[r]} {RATINGS[r].label.toLowerCase()}
                 </p>
                 <p className="mt-0.5 text-[13px] text-brand-text/60">
-                  {r === 'struggling' && 'Deep blocks plus double recall. That is where the marks are.'}
+                  {r === 'struggling' && "Deep blocks plus double recall. That's where the marks are."}
                   {r === 'shaky' && 'One full cycle each: blurt, recall, then a spaced review.'}
                   {r === 'solid' && 'Short recall sessions only, to keep them warm.'}
                 </p>
@@ -426,12 +426,12 @@ export default function PlanView({
           </div>
           {counts.solid > 0 && (
             <p className="mt-4 text-[15px] leading-relaxed text-brand-text/75">
-              Your Solid topics get maintenance only, and that is deliberate. A 90 minute deep block on a topic you
-              already know is low-yield work in disguise. That is where your saved hours come from.
+              Your Solid topics get maintenance only, and that's deliberate. A 90 minute deep block on a topic you
+              already know is low-yield work in disguise. That's where your saved hours come from.
             </p>
           )}
           <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
-            One more rule: if a Solid topic goes badly in its recall session, it is Shaky on next week&apos;s audit.
+            One more rule: if a Solid topic goes badly in its recall session, it's Shaky on next week&apos;s audit.
             Rebuild this plan every week. The re-rating is the system.
           </p>
 
@@ -439,7 +439,7 @@ export default function PlanView({
             <div className="mt-5 rounded-xl border border-brand-gold/40 bg-brand-gold/10 p-4">
               <h4 className="font-serif text-lg font-bold text-brand-purple">Parked for next week</h4>
               <p className="mt-1 text-[14px] leading-relaxed text-brand-text/70">
-                Your hours properly cover {plan.scheduled.length} topics, so these wait. That is triage, not failure.
+                Your hours properly cover {plan.scheduled.length} topics, so these wait. That's triage, not failure.
                 Cramming them in would wreck the ones that made the cut. They will lead next week&apos;s plan.
               </p>
               <ul className="mt-3 flex flex-wrap gap-2">
@@ -493,8 +493,8 @@ export default function PlanView({
             })}
           </div>
           <p className="mt-4 text-[13px] text-brand-text/55">
-            Why these three? Testing yourself beats re-reading, and spacing beats cramming. That is decades of memory
-            research, and it is the whole design of this week.
+            Why these three? Testing yourself beats re-reading, and spacing beats cramming. That's decades of memory
+            research, and it's the whole design of this week.
           </p>
         </section>
 
