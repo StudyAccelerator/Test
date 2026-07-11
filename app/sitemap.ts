@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${SITE_URL}/`, changeFrequency: 'weekly', priority: 1 },
     { url: `${SITE_URL}/subject-accelerators/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/study-systems/`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/revision-diagnostic/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/revision-tracker/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/summer-accelerators/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/workshop/`, changeFrequency: 'monthly', priority: 0.6 },
