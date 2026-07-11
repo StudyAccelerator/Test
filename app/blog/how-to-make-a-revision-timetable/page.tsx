@@ -158,10 +158,11 @@ export default function Page() {
       </P>
 
       <Callout title="Or let the tool do steps 2 to 5 for you">
-        We built a free Revision Tracker that takes your subjects, your topic-by-topic confidence ratings and
-        your fixed commitments, and generates this exact structure automatically. Deep work, next-day recall,
-        spaced reviews, mixed subjects, capped daily hours. It takes about three minutes and doesn&apos;t ask for
-        an email address. <A href="/revision-tracker">Build your free timetable here</A>.
+        We built a free Revision Tracker that runs this as a topic audit. Rate each topic Struggling, Shaky or
+        Solid, give it your real free hours around school, and it builds the week automatically: Blurt and Fix
+        blocks on your weakest topics, next-day Active Recall, Spaced Reviews days later, subjects mixed, daily
+        hours capped. Anything that doesn&apos;t fit gets parked for next week instead of crammed in. It takes
+        about three minutes. <A href="/revision-tracker">Build your free timetable here</A>.
       </Callout>
 
       <H2 id="example">What a working week actually looks like</H2>

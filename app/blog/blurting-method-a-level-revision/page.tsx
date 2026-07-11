@@ -177,11 +177,11 @@ export default function Page() {
         day 4, day 7 and so on), which times each review for the moment just before you&apos;d forget it.
       </P>
       <P>
-        In practice, your week needs a plan. Deep study sessions for new or weak topics, blurting sessions the
-        next day, and lighter review slots a few days later. You can build this by hand, and my guide
+        In practice, your week needs a plan. Deep blurt-and-fix sessions for new or weak topics, recall sessions
+        the next day, and spaced review slots a few days later. You can build this by hand, and my guide
         to <A href="/blog/how-to-make-a-revision-timetable/">building a revision timetable that actually
-        works</A> walks through it. Or you can let our free tool generate it around your subjects, weak topics
-        and commitments.
+        works</A> walks through it. Or you can let our free tool run it as a topic audit: rate each topic, give
+        it your real hours, and it builds the week around your weakest material.
       </P>
 
       <TrackerCTA />
