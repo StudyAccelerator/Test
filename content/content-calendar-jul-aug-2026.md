@@ -1,12 +1,12 @@
 # A-Level Accelerators | 30-Day Content Calendar
 ### 8 July to 8 August 2026 | one LinkedIn + one Facebook post per day
 
-**How this month is shaped.** We're 6 weeks out from A-level results day (Thursday 14 August 2026). The arc runs in four phases so the content isn't static, it builds:
+**How this month is shaped.** We're five weeks out from A-level results day (**Thursday 13 August 2026**, per JCQ; an earlier draft said 14 August, which was the 2025 date). Heads-up when scheduling: the weekday labels on the day headers below run one day ahead of the real 2026 calendar (8 July 2026 is a Wednesday, not a Tuesday), so schedule by the date and shift any weekend-flavoured post to the true weekend. The arc runs in four phases so the content isn't static, it builds:
 
 - **Phase 1 (8 to 16 July) | Authority & audience.** Reflection, revision truth, founder story. Grow trust and following. Summer Accelerator mentioned softly.
 - **Phase 2 (17 to 27 July) | Year 12 summer & warm-up.** "Get ahead for Year 13" theme rises. Summer Accelerator awareness builds. Results day appears on the horizon.
 - **Phase 3 (28 July to 6 August) | Split: Accelerator launch + results-day build.** Early-August Summer Accelerator relaunch pushes harder. Simultaneously, results-day anxiety content begins for current Year 13s and their parents.
-- **Phase 4 (7 to 8 August +) | Results-day run-in.** Support-led, empathetic. (Results day itself is 14 Aug; a follow-on week should be written nearer the time with live grade-boundary news.)
+- **Phase 4 (7 to 8 August +) | Results-day run-in.** Support-led, empathetic. (Results day itself is 13 Aug; a follow-on week should be written nearer the time with live grade-boundary news.)
 
 **Reminders for whoever posts these:**
 - LinkedIn = parents-as-professionals + authority. Facebook = parents, warmer and simpler.
@@ -696,7 +696,7 @@ No need for a bootcamp. A couple of honest conversations and a couple of focused
 
 ### Day 28 | Mon 4 Aug
 **LinkedIn** (results-day build, for students indirectly / clearing literacy)
-Ten days to results day. Let's demystify the word that scares families most: clearing.
+Nine days to results day. Let's demystify the word that scares families most: clearing.
 
 Clearing is not a failure system. It's how tens of thousands of students find a university place every single year, including students who did brilliantly and simply changed their minds.
 
@@ -707,7 +707,7 @@ Knowing how clearing works removes most of the fear from results day. It turns "
 [VISUAL: "Clearing, explained in 6 steps" carousel.]
 
 **Facebook** (parents)
-Ten days to results day. Let's take the fear out of the scariest word: clearing.
+Nine days to results day. Let's take the fear out of the scariest word: clearing.
 
 Clearing isn't a failure system. It's how tens of thousands of students get a university place every year, including ones who aced it and just changed their minds.
 
@@ -769,7 +769,7 @@ Light review at most, then a proper night's sleep. Same on results morning: the 
 
 ### Day 31 | Thu 7 Aug
 **LinkedIn** (results-day, one week out, dual value)
-One week to results day. A short, practical checklist for the families in the thick of it.
+Six days to results day. A short, practical checklist for the families in the thick of it.
 
 For Year 13 households: save your firm and insurance universities' clearing numbers now. Draft a two-line "backup plan" together so nobody's problem-solving at 8am. Agree your child makes the calls. And plan something kind for the afternoon, whatever happens, because it's an emotional day either way.
 
@@ -780,7 +780,7 @@ Whatever next Thursday holds for you, there's a route through every version of i
 [VISUAL: "Results day: your 1-week checklist" card.]
 
 **Facebook** (parents)
-One week to results day. A quick checklist for families in the thick of it:
+Six days to results day. A quick checklist for families in the thick of it:
 
 Save your child's firm and insurance clearing numbers now. Agree a simple backup plan together so nobody's scrambling at 8am. Let your child make the calls. And plan something kind for the afternoon, whatever the result. It's an emotional day either way.
 
@@ -792,7 +792,7 @@ There's a route through every version of next Thursday. I'll post live guidance 
 
 ### Day 32 | Fri 8 Aug
 **LinkedIn** (bridges to the final week; reassurance + soft accelerator)
-Six days out. Two truths that sit side by side this time of year, and both are worth holding.
+Five days out. Two truths that sit side by side this time of year, and both are worth holding.
 
 For your Year 13: results day is nearly here, and whatever it brings, their options are wider than they'll feel at first light. Grades open doors, but they've never been the whole story of a capable young person, and clearing, resits and reassessment all exist for a reason.
 
@@ -805,7 +805,7 @@ If you'd like help with either (results-day nerves or getting ahead for Year 13)
 [VISUAL: warm dual-theme card, or a simple face photo.]
 
 **Facebook** (parents)
-Six days to results day. Two things are true at once right now.
+Five days to results day. Two things are true at once right now.
 
 For your Year 13: whatever the morning brings, the options are wider than they'll feel at 8am. Grades matter, but they've never been the whole story, and clearing and resits exist for a reason.
 
@@ -815,7 +815,7 @@ Two children, two moments, same thread: a bit of the right work and a bit of cal
 
 ---
 
-## AFTER THIS CALENDAR: the live week (14 Aug results day)
+## AFTER THIS CALENDAR: the live week (13 Aug results day)
 
 Do NOT pre-schedule results day itself. Write it live, morning-of, because grade boundaries, clearing vacancies and the national mood are all news that day. Have three posts drafted and ready to adapt:
 

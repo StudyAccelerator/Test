@@ -41,13 +41,14 @@ Know these so you never contradict them, but never repeat them in a brief:
 - Every blog article is automatically written twice: a website version and a rewritten backlink version for the SEO optimizer. Backlink articles never go on the site.
 - The site deploys from the main branch to Vercel. Live Stripe payment links and the homepage title/H1 are protected.
 
-## Business facts for your planning (snapshot date: 10 July 2026)
+## Business facts for your planning (snapshot date: 11 July 2026)
 
 This section is maintained automatically: every Claude Code session that changes a business fact regenerates this skill and leaves a fresh zip in Waleed's Downloads for re-upload. So trust the snapshot date above. If it is more than a few weeks old, or Waleed tells you something that contradicts it, trust Waleed and remind him a newer version of this skill is probably sitting in his Downloads folder waiting to be re-uploaded.
 
 - Live site: alevelaccelerators.com. The homepage is a programme hub (H1 "Top grades are a system, not a talent.", grade-climb hero graphic, three programme cards, founder story, testimonial wall); the Summer Accelerator has its own sales page holding the live Stripe payment links. Also: 11 SEO blog articles, free revision tracker (main lead magnet), /parents lead-capture page, /faqs, blurting template PDF.
 - Marketing assets: backlink article pack (11 rewrites, PDF, with the SEO optimizer), 30-day content calendar, optimised week 1 of posts with finished graphics.
-- Key dates: the Summer Accelerator cohort starts 25 July 2026. A-level results day is 14 August 2026, the biggest brand moment of the year; those posts get written live on the day, never pre-scheduled.
+- Email: **The Sunday Session**, the weekly student newsletter (every Sunday 5pm UK, students only, parents excluded). Launch run drafted in the repo through late August, including a results-morning special; Waleed approves each issue before it sends. It fulfils the "one email a week" promise made by the post-diagnostic email sequence.
+- Key dates: the Summer Accelerator cohort starts 25 July 2026; the September Subject Accelerator cohort starts Sunday 6 September 2026. **A-level results day is Thursday 13 August 2026** (JCQ; 14 August was the 2025 date and appeared in older docs), the biggest brand moment of the year; those posts get written live on the day, never pre-scheduled.
 
 ## Worked example
 
