@@ -651,7 +651,8 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
       name,
       yearGroup: yearLabel(answers.year as string),
       subjects: ((answers.subjects as string[]) ?? []).join(', '),
-      worrySubject: answers.worry === 'unsure' ? 'Not sure' : ((answers.worry as string) ?? ''),
+      /* Empty when unsure so MailerLite merge defaults can fire ({$diag_worry_subject|default('...')}) */
+      worrySubject: answers.worry === 'unsure' ? '' : ((answers.worry as string) ?? ''),
       currentGrade: gradeLabel(answers.currentGrade as string),
       targetGrade: gradeLabel(answers.targetGrade as string),
       hoursPerWeek: d.hoursLeak.weeklyPhrase,
@@ -779,8 +780,8 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
               {submitting ? 'Unsealing your report…' : 'Show my report'}
             </button>
             <p className="text-xs text-brand-cream/50 leading-relaxed">
-              Free, and stays free. You will also get Dr Waleed&apos;s weekly revision email: the things school never
-              taught you, one a week. Unsubscribe any time.
+              Free, and stays free. You will also get Dr Waleed&apos;s revision emails: the fixes from your report,
+              one at a time, then one a week. Unsubscribe any time.
             </p>
           </form>
         </motion.div>
