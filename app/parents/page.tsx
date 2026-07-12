@@ -101,7 +101,7 @@ export default function ParentsLanding() {
           <div className="mx-auto max-w-4xl">
             <p className={`${EYEBROW} text-center`}>Inside the guide</p>
             <h2 className="mt-2 text-center font-serif text-3xl font-bold text-brand-purple">
-              Four pages. Nothing padded.
+              A short read. Nothing padded.
             </h2>
             <p className="mx-auto mt-3 max-w-2xl text-center leading-relaxed text-brand-text/70">
               Written for parents who can see their child trying hard but not getting the results
