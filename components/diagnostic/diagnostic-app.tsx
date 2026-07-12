@@ -268,7 +268,7 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
             <HeroFade delay={0.05}>
               <p className="inline-flex items-center gap-2 rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-1.5 text-xs font-bold text-brand-purple">
                 <span className="inline-block h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
-                The A-Level Revision Diagnostic · free
+                The A-Level Revision Diagnostic
               </p>
             </HeroFade>
             <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.05] text-4xl sm:text-5xl lg:text-[3.6rem] text-brand-purple">
