@@ -78,10 +78,14 @@ export type PlanResult = {
   days: DayPlan[]
   scheduled: ScheduledTopic[]
   parked: TopicInput[]
+  papers: { subject: string; day: number }[] // one timed paper per subject, when the week has room
   availableStudyMins: number // week's capped, usable study capacity
   usedStudyMins: number
   sessionCount: number
 }
+
+/* The label a timed paper session carries in place of a topic */
+export const PAPER_TOPIC = 'Past paper questions'
 
 const WIND_DOWN = 30
 const MEAL_MINS = 30
@@ -365,6 +369,41 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
     }
   }
 
+  // timed paper pass: the blog's weekly cycle ends with a test, so each
+  // subject with enough on the plan earns one mixed past paper session under
+  // exam conditions, once that subject has been introduced. Free days first.
+  const papers: { subject: string; day: number }[] = []
+  const subjectsInPlan = [...new Set(scheduled.map((t) => t.subject))]
+  for (const subject of subjectsInPlan) {
+    const subjectTopics = scheduled.filter((t) => t.subject === subject)
+    if (subjectTopics.length < 2) continue
+    const firstDay = Math.min(...subjectTopics.flatMap((t) => t.sessions.map((sess) => sess.day)))
+    const blurtDays = subjectTopics.flatMap((t) => t.sessions.filter((sess) => sess.type === 'blurt').map((sess) => sess.day))
+    const lastBlurt = blurtDays.length ? Math.max(...blurtDays) : firstDay
+    const candidatesAfter = (cutoffDay: number) =>
+      Array.from({ length: 7 }, (_, d) => d)
+        .filter((d) => d > cutoffDay)
+        .sort((a, b) => {
+          if (caps[a].isSchoolDay !== caps[b].isSchoolDay) return caps[a].isSchoolDay ? 1 : -1
+          return caps[b].studyLeft - caps[a].studyLeft
+        })
+    // ideally the paper tests the week's material, so it follows the last deep
+    // block; if nothing fits there, any day after the subject's introduction
+    let placed = false
+    for (const cutoff of lastBlurt > firstDay ? [lastBlurt, firstDay] : [firstDay]) {
+      for (const d of candidatesAfter(cutoff)) {
+        const idx = findSlot(caps[d], 'paper', subject, PAPER_TOPIC)
+        if (idx >= 0) {
+          takeSlot(caps[d], 'paper', subject, PAPER_TOPIC, idx)
+          papers.push({ subject, day: d })
+          placed = true
+          break
+        }
+      }
+      if (placed) break
+    }
+  }
+
   // top up pass: if hours remain, the weakest topics earn extra retrieval
   // rather than leaving half the weekend idle. Bounded per topic (one extra
   // recall for weak topics, then one extra review for struggling ones), always
@@ -398,7 +437,7 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
   // keep the audit honest: scheduled list in weakest first order
   const tierRank: Record<Rating, number> = { struggling: 0, shaky: 1, solid: 2 }
   scheduled.sort((a, b) => tierRank[a.rating] - tierRank[b.rating])
-  return { caps, scheduled, parked }
+  return { caps, scheduled, parked, papers }
 }
 
 /* Lay one day's assigned sessions onto the clock. Deep blocks first (peak
@@ -415,7 +454,7 @@ function layoutDay(s: WeekSettings, day: number, cap: DayCapacity): DayPlan {
   }))
 
   const queue: { type: SessionType; subject: string; topic: string }[] = []
-  const typeOrder: SessionType[] = ['blurt', 'recall', 'review']
+  const typeOrder: SessionType[] = ['blurt', 'paper', 'recall', 'review']
   const pool = [...cap.sessions]
   let lastSubject = ''
   while (pool.length) {
@@ -488,7 +527,7 @@ function layoutDay(s: WeekSettings, day: number, cap: DayCapacity): DayPlan {
 }
 
 export function planWeek(s: WeekSettings, topics: TopicInput[]): PlanResult {
-  const { caps, scheduled, parked } = assignWeek(s, topics)
+  const { caps, scheduled, parked, papers } = assignWeek(s, topics)
   const days = caps.map((cap, d) => layoutDay(s, d, cap))
   const usedStudyMins = days.reduce((sum, d) => sum + d.studyMins, 0)
   const freshCaps = Array.from({ length: 7 }, (_, d) => buildDayCapacity(s, d))
@@ -497,10 +536,10 @@ export function planWeek(s: WeekSettings, topics: TopicInput[]): PlanResult {
     0
   )
   const sessionCount = days.reduce(
-    (sum, d) => sum + d.events.filter((e) => e.kind === 'blurt' || e.kind === 'recall' || e.kind === 'review').length,
+    (sum, d) => sum + d.events.filter((e) => e.kind === 'blurt' || e.kind === 'recall' || e.kind === 'review' || e.kind === 'paper').length,
     0
   )
-  return { days, scheduled, parked, availableStudyMins, usedStudyMins, sessionCount }
+  return { days, scheduled, parked, papers, availableStudyMins, usedStudyMins, sessionCount }
 }
 
 /* Raw free minutes across the week (gaps between sleep, meals and fixed

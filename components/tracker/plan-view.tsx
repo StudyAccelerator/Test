@@ -12,7 +12,7 @@ const CARD =
 const DAY_SHORT = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']
 
 const isSession = (kind: PlacedEvent['kind']): kind is SessionType =>
-  kind === 'blurt' || kind === 'recall' || kind === 'review'
+  kind === 'blurt' || kind === 'recall' || kind === 'review' || kind === 'paper'
 
 function fmtRange(ev: PlacedEvent) {
   return `${toHHMM(ev.startMin)} to ${toHHMM(ev.endMin)}`
@@ -282,7 +282,7 @@ function PrintSheet({ plan, form, diagnosis }: { plan: PlanResult; form: Tracker
           </div>
         ))}
       </div>
-      <div className="mt-2 grid grid-cols-3 gap-2 border-t border-brand-purple/30 pt-1.5">
+      <div className="mt-2 grid grid-cols-4 gap-2 border-t border-brand-purple/30 pt-1.5">
         {(Object.keys(TECHNIQUES) as SessionType[]).map((k) => {
           const tech = TECHNIQUES[k]
           return (
@@ -439,6 +439,13 @@ export default function PlanView({
               parking it.
             </p>
           )}
+          {plan.papers.length > 0 && (
+            <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
+              {plan.papers.length === 1 ? 'One subject also gets' : `${plan.papers.length} subjects also get`} a Timed
+              Paper session: mixed past paper questions, clock running, mark scheme closed. Exams test recall under
+              pressure, and the clock is part of the exam.
+            </p>
+          )}
           <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
             One more rule: if a Solid topic goes badly in its recall session, it's Shaky on next week&apos;s audit.
             Rebuild this plan every week. The re-rating is the system.
@@ -472,7 +479,7 @@ export default function PlanView({
           <h3 id="method-heading" className="mt-1 mb-4 font-serif text-2xl font-bold text-brand-purple">
             The plan only works if the sessions do
           </h3>
-          <div className="grid gap-4 md:grid-cols-3">
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
             {(Object.keys(TECHNIQUES) as SessionType[]).map((k) => {
               const tech = TECHNIQUES[k]
               return (

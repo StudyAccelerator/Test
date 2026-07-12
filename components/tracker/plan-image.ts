@@ -10,7 +10,7 @@ import { TECHNIQUES, type SessionType } from '@/lib/tracker/techniques'
 const DAY_LABELS = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 
 const isSession = (kind: PlacedEvent['kind']): kind is SessionType =>
-  kind === 'blurt' || kind === 'recall' || kind === 'review'
+  kind === 'blurt' || kind === 'recall' || kind === 'review' || kind === 'paper'
 
 function loadLogo(): Promise<HTMLImageElement | null> {
   return new Promise((resolve) => {
@@ -134,7 +134,7 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
         // greyscale-safe edge
         c.strokeStyle = '#FFFFFF'
         c.lineWidth = 3
-        c.setLineDash(tech.edge === 'dashed' ? [6, 4] : tech.edge === 'dotted' ? [2, 4] : [])
+        c.setLineDash(tech.edge === 'dashed' ? [6, 4] : tech.edge === 'dotted' ? [2, 4] : tech.edge === 'double' ? [12, 3] : [])
         c.beginPath()
         c.moveTo(x + 4, top + 2)
         c.lineTo(x + 4, top + ht - 2)
@@ -191,7 +191,7 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
     c.fillRect(lx, legY, 18, 18)
     c.strokeStyle = '#FFFFFF'
     c.lineWidth = 2.5
-    c.setLineDash(tech.edge === 'dashed' ? [5, 3] : tech.edge === 'dotted' ? [2, 3] : [])
+    c.setLineDash(tech.edge === 'dashed' ? [5, 3] : tech.edge === 'dotted' ? [2, 3] : tech.edge === 'double' ? [10, 3] : [])
     c.beginPath()
     c.moveTo(lx + 3, legY + 2)
     c.lineTo(lx + 3, legY + 16)

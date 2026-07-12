@@ -3,7 +3,7 @@
    the week grid, the day cards, the legend, the print sheet and the PNG
    renderer, so the method can never drift between surfaces. */
 
-export type SessionType = 'blurt' | 'recall' | 'review'
+export type SessionType = 'blurt' | 'recall' | 'review' | 'paper'
 
 export type Technique = {
   label: string
@@ -19,7 +19,7 @@ export type Technique = {
   fg: string
   tint: string
   /* Greyscale-safe left-edge treatment used in print and the PNG */
-  edge: 'solid' | 'dashed' | 'dotted'
+  edge: 'solid' | 'dashed' | 'dotted' | 'double'
 }
 
 export const TECHNIQUES: Record<SessionType, Technique> = {
@@ -73,6 +73,23 @@ export const TECHNIQUES: Record<SessionType, Technique> = {
     fg: '#2E2557',
     tint: 'rgba(201,169,110,0.16)',
     edge: 'dotted',
+  },
+  paper: {
+    label: 'Timed Paper',
+    shortLabel: 'Paper',
+    mins: 60,
+    breakAfter: 15,
+    strap: 'Mixed questions, clock running.',
+    howTo: [
+      'Pick 3 or 4 past paper questions that mix this week\'s topics with older ones from the same subject. Set the timer to exam pace.',
+      'Exam conditions: no notes, no mark scheme, no pausing the clock. Performing under pressure is its own skill.',
+      'Mark it straight after. Chase the method marks, not just the final answers.',
+      'Anything that cost you marks goes on your list, and its topic gets re-rated on next week\'s audit.',
+    ],
+    bg: '#7A2F3B',
+    fg: '#F3EBD8',
+    tint: 'rgba(122,47,59,0.10)',
+    edge: 'double',
   },
 }
 
