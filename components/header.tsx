@@ -1,7 +1,8 @@
 'use client'
 
-import { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef, useCallback } from 'react'
 import Image from 'next/image'
+import { AnimatePresence, motion } from 'framer-motion'
 
 const PROGRAMME_LINKS = [
   ['/summer-accelerators', 'Summer Accelerator'],
@@ -22,11 +23,14 @@ const MORE_LINKS = [
 
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
 
+const EASE = [0.22, 1, 0.36, 1] as const
+
 export default function Header() {
   const [hasScrolled, setHasScrolled] = useState(false)
   const [open, setOpen] = useState(false)
   const [toolsOpen, setToolsOpen] = useState(false)
   const toolsRef = useRef<HTMLDivElement>(null)
+  const closeTimer = useRef<ReturnType<typeof setTimeout> | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -37,7 +41,23 @@ export default function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  /* Close the free tools dropdown on outside click or Escape */
+  /* Hover intent: open straight away, close on a short grace delay so the
+     cursor can travel from the trigger into the panel without it vanishing. */
+  const openTools = useCallback(() => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    setToolsOpen(true)
+  }, [])
+
+  const scheduleClose = useCallback(() => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+    closeTimer.current = setTimeout(() => setToolsOpen(false), 180)
+  }, [])
+
+  useEffect(() => () => {
+    if (closeTimer.current) clearTimeout(closeTimer.current)
+  }, [])
+
+  /* Close on outside click (touch devices) or Escape */
   useEffect(() => {
     if (!toolsOpen) return
     const onClick = (e: MouseEvent) => {
@@ -90,11 +110,22 @@ export default function Header() {
               {label}
             </a>
           ))}
-          {/* Free tools dropdown */}
-          <div className="relative" ref={toolsRef}>
+          {MORE_LINKS.map(([href, label]) => (
+            <a key={href} href={href} className="text-brand-purple hover:text-brand-gold font-semibold transition">
+              {label}
+            </a>
+          ))}
+          {/* Free tools dropdown: opens on hover or focus, click still works for touch */}
+          <div
+            className="relative"
+            ref={toolsRef}
+            onMouseEnter={openTools}
+            onMouseLeave={scheduleClose}
+          >
             <button
               type="button"
               onClick={() => setToolsOpen(!toolsOpen)}
+              onFocus={openTools}
               aria-expanded={toolsOpen}
               aria-haspopup="true"
               className={`inline-flex items-center gap-1.5 font-semibold transition ${
@@ -115,31 +146,45 @@ export default function Header() {
                 <path d="M6 9l6 6 6-6" />
               </svg>
             </button>
-            {toolsOpen && (
-              <div className="absolute left-1/2 -translate-x-1/2 top-full mt-3 w-56 rounded-2xl bg-white p-2 [box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.16)]">
-                <span
-                  aria-hidden="true"
-                  className="absolute -top-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-white [box-shadow:-1px_-1px_0_rgba(46,37,87,.08)]"
-                />
-                {FREE_TOOL_LINKS.map(([href, label]) => (
-                  <a
-                    key={href}
-                    href={href}
-                    onClick={() => setToolsOpen(false)}
-                    className="flex items-center justify-between rounded-xl px-4 py-2.5 font-semibold text-brand-purple hover:bg-brand-gold/10 hover:text-brand-gold transition"
-                  >
-                    {label}
-                    <span aria-hidden="true" className="text-brand-gold/70 text-sm">→</span>
-                  </a>
-                ))}
-              </div>
-            )}
+            <AnimatePresence>
+              {toolsOpen && (
+                <motion.div
+                  initial={{ opacity: 0, y: -10, scale: 0.97 }}
+                  animate={{ opacity: 1, y: 0, scale: 1 }}
+                  exit={{ opacity: 0, y: -6, scale: 0.98, transition: { duration: 0.14, ease: 'easeIn' } }}
+                  transition={{ duration: 0.24, ease: EASE }}
+                  style={{ transformOrigin: 'top center' }}
+                  className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-56"
+                >
+                  <div className="relative rounded-2xl bg-white p-2 [box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.16)]">
+                    <span
+                      aria-hidden="true"
+                      className="absolute -top-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-white [box-shadow:-1px_-1px_0_rgba(46,37,87,.08)]"
+                    />
+                    {FREE_TOOL_LINKS.map(([href, label], i) => (
+                      <motion.a
+                        key={href}
+                        href={href}
+                        onClick={() => setToolsOpen(false)}
+                        initial={{ opacity: 0, y: 5 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.2, ease: EASE, delay: 0.05 + i * 0.045 }}
+                        className="group flex items-center justify-between rounded-xl px-4 py-2.5 font-semibold text-brand-purple hover:bg-brand-gold/10 hover:text-brand-gold transition"
+                      >
+                        {label}
+                        <span
+                          aria-hidden="true"
+                          className="text-brand-gold/70 text-sm transition-transform duration-200 group-hover:translate-x-0.5"
+                        >
+                          →
+                        </span>
+                      </motion.a>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-          {MORE_LINKS.map(([href, label]) => (
-            <a key={href} href={href} className="text-brand-purple hover:text-brand-gold font-semibold transition">
-              {label}
-            </a>
-          ))}
           <a
             href={BOOK_A_CALL_LINK}
             target="_blank"
@@ -175,8 +220,7 @@ export default function Header() {
               {label}
             </a>
           ))}
-          <p className="mt-2 px-3 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple/50">Free tools</p>
-          {FREE_TOOL_LINKS.map(([href, label]) => (
+          {MORE_LINKS.map(([href, label]) => (
             <a
               key={href}
               href={href}
@@ -186,8 +230,8 @@ export default function Header() {
               {label}
             </a>
           ))}
-          <div aria-hidden="true" className="my-1 h-px bg-brand-purple/10" />
-          {MORE_LINKS.map(([href, label]) => (
+          <p className="mt-2 px-3 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple/50">Free tools</p>
+          {FREE_TOOL_LINKS.map(([href, label]) => (
             <a
               key={href}
               href={href}
