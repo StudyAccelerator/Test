@@ -178,7 +178,7 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
         c.fillStyle = '#2E2557'
         c.font = 'bold 12px Arial, sans-serif'
         c.textAlign = 'left'
-        c.fillText('Freestyle', x + 10, top + 16)
+        c.fillText('Open Hour', x + 10, top + 16)
         if (ht >= 34) {
           c.font = '11px Arial, sans-serif'
           c.globalAlpha = 0.7
@@ -235,7 +235,7 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
   c.setLineDash([])
   c.fillStyle = '#2E2557'
   c.font = 'bold 13px Arial, sans-serif'
-  c.fillText('Freestyle (60 min)', lx + 24, legY + 14)
+  c.fillText('Open Hour (60 min)', lx + 24, legY + 14)
   c.font = '12px Arial, sans-serif'
   c.fillStyle = 'rgba(26,21,53,0.6)'
   c.fillText('Optional: light work or a break. Your call.', lx + 24, legY + 32)

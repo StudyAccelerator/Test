@@ -543,7 +543,7 @@ function layoutDay(s: WeekSettings, day: number, cap: DayCapacity, hasFreestyle:
         kind: item.type,
         subject: item.subject,
         topic: item.topic,
-        label: item.type === 'freestyle' ? 'Freestyle' : undefined,
+        label: item.type === 'freestyle' ? 'Open Hour' : undefined,
       })
       // the optional freestyle hour is not counted as focused study
       if (item.type !== 'freestyle') studyMins += mins

@@ -122,7 +122,7 @@ function DayCards({
                     <li key={i} className="rounded-2xl border-2 border-dashed border-brand-purple/30 bg-white p-4">
                       <div className="mb-1 flex items-center justify-between gap-2">
                         <span className="rounded-full border border-brand-purple/30 px-2.5 py-0.5 text-[11px] font-bold text-brand-purple">
-                          Freestyle · 60 min
+                          Open Hour · 60 min
                         </span>
                         <span className="font-mono text-[11px] text-brand-purple/60">{fmtRange(ev)}</span>
                       </div>
@@ -295,7 +295,7 @@ function PrintSheet({ plan, form, diagnosis }: { plan: PlanResult; form: Tracker
                 if (ev.kind === 'freestyle') {
                   return (
                     <div key={i} className="mb-1 border border-dashed border-brand-purple/50 px-1 py-0.5 text-[8.5px] leading-tight text-brand-purple">
-                      <span className="block font-bold">{toHHMM(ev.startMin)} Freestyle · 60m</span>
+                      <span className="block font-bold">{toHHMM(ev.startMin)} Open Hour · 60m</span>
                       <span className="block">Your call: any subject, any method</span>
                     </div>
                   )
@@ -472,9 +472,9 @@ export default function PlanView({
           )}
           {freestyleCount > 0 && (
             <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
-              {freestyleCount === 1 ? 'One optional Freestyle hour sits' : `${freestyleCount} optional Freestyle hours sit`}{' '}
-              on top of your focused study: light work on anything you like, or a proper break if you need one. They can
-              nudge a day past the cap, but only ever by that one hour.
+              {freestyleCount === 1 ? 'One optional Open Hour sits' : `${freestyleCount} optional Open Hours sit`}{' '}
+              on top of your focused study. They are the only blocks you design yourself: light work on anything you
+              like, or a proper break if you need one. How to use them is explained below with the other sessions.
             </p>
           )}
           {plan.papers.length > 0 && (
@@ -546,8 +546,30 @@ export default function PlanView({
               )
             })}
           </div>
+          {freestyleCount > 0 && (
+            <article className="mt-4 rounded-2xl border-2 border-dashed border-brand-purple/30 bg-white p-6">
+              <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
+                <span className="rounded-full border border-brand-purple/30 px-3 py-1 text-[12px] font-bold text-brand-purple">
+                  Open Hour · 60 min · optional
+                </span>
+                <p className="font-serif text-lg font-bold text-brand-purple">The only block you design yourself.</p>
+              </div>
+              <ol className="mt-2 list-decimal space-y-1.5 pl-5 text-[14px] leading-relaxed text-brand-text/75 sm:columns-2 sm:gap-8">
+                <li>
+                  It's optional, and it sits on top of your focused hours. Use it or skip it. A rest you chose is part
+                  of the system, not a failure.
+                </li>
+                <li>
+                  If you use it, keep it light: flashcards, one past paper question, tidying a topic's notes into a gap
+                  list, or a gentle second pass on whatever nagged you today.
+                </li>
+                <li>No new content and no 90 minute grinds. The Open Hour tops the day up. It doesn't extend it.</li>
+                <li>Decide how you'll spend it at the start of the hour, not halfway through. Drifting is the only wrong answer.</li>
+              </ol>
+            </article>
+          )}
           <p className="mt-4 text-[13px] text-brand-text/55">
-            Why these three? Testing yourself beats re-reading, and spacing beats cramming. That's decades of memory
+            Why these sessions? Testing yourself beats re-reading, and spacing beats cramming. That's decades of memory
             research, and it's the whole design of this week.
           </p>
         </section>
