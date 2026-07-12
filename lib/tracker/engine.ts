@@ -63,7 +63,16 @@ export type DayPlan = {
   studyMins: number
 }
 
-export type ScheduledTopic = TopicInput & { sessions: { day: number; type: SessionType }[] }
+/* How much of the ideal dose a topic received:
+   full = the ideal spaced cycle; compressed = complete cycle, tighter spacing;
+   starter = blurt + next day recall, spaced review carries to next week;
+   single = one maintenance recall (solid topics only) */
+export type Coverage = 'full' | 'compressed' | 'starter' | 'single'
+
+export type ScheduledTopic = TopicInput & {
+  sessions: { day: number; type: SessionType }[]
+  coverage: Coverage
+}
 
 export type PlanResult = {
   days: DayPlan[]
@@ -79,7 +88,7 @@ const MEAL_MINS = 30
 const FREE_DAY_CAP = 360 // 6h of study, the published "hours past six add almost nothing" line
 const SCHOOL_DAY_CAP = 150 // 2.5h after a full school day
 const SCHOOL_DAY_THRESHOLD = 4 * 60 // a day with 4h+ of fixed daytime commitments is a school-pattern day
-const MAX_BLURTS_FREE_DAY = 2
+const MAX_BLURTS_FREE_DAY = 3 // three deep blocks a day, the blog's exam season shape
 const MAX_BLURTS_SCHOOL_DAY = 1
 
 type Interval = { start: number; end: number }
@@ -230,6 +239,14 @@ const RESCUE_DOSE: DoseStep[] = [
   { type: 'review', offset: 2, fallbacks: [3, 4] },
 ]
 
+/* Late week starter: the blurt and its next day recall happen this week, the
+   spaced review lands at the top of next week's rebuilt plan. The deep block
+   still gets retrieval follow up, which is the non negotiable. */
+const STARTER_DOSE: DoseStep[] = [
+  { type: 'blurt', offset: 0, fallbacks: [] },
+  { type: 'recall', offset: 1, fallbacks: [] },
+]
+
 /* Try to place a dose. Returns the placements or null. Does not mutate
    capacity unless the whole dose fits. */
 function tryPlaceDose(caps: DayCapacity[], topic: TopicInput, anchor: number, steps: DoseStep[]): Attempt[] | null {
@@ -301,14 +318,14 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
     return null
   }
 
-  function commit(topic: TopicInput, placed: Attempt[]) {
+  function commit(topic: TopicInput, placed: Attempt[], coverage: Coverage) {
     for (const a of placed) takeSlot(caps[a.day], a.type, topic.subject, topic.topic, a.intervalIdx)
-    scheduled.push({ ...topic, sessions: placed.map((a) => ({ day: a.day, type: a.type })) })
+    scheduled.push({ ...topic, sessions: placed.map((a) => ({ day: a.day, type: a.type })), coverage })
   }
 
   for (const topic of topics.length ? ordered : []) {
     const placed = placeWithDose(topic, DOSES[topic.rating], latestAnchor(topic.rating))
-    if (placed) commit(topic, placed)
+    if (placed) commit(topic, placed, 'full')
     else parked.push(topic)
   }
 
@@ -318,7 +335,19 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
     if (topic.rating === 'solid') continue
     const placed = placeWithDose(topic, RESCUE_DOSE, 4)
     if (placed) {
-      commit(topic, placed)
+      commit(topic, placed, 'compressed')
+      parked.splice(parked.indexOf(topic), 1)
+    }
+  }
+
+  // starter pass: a weak topic that still has no home gets its cycle STARTED
+  // late in the week (blurt plus next day recall); the spaced review leads
+  // next week's rebuilt plan. Better than parking it while Saturday sits empty.
+  for (const topic of [...parked]) {
+    if (topic.rating === 'solid') continue
+    const placed = placeWithDose(topic, STARTER_DOSE, 5)
+    if (placed) {
+      commit(topic, placed, 'starter')
       parked.splice(parked.indexOf(topic), 1)
     }
   }
@@ -329,9 +358,39 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
     for (let d = 0; d <= 6; d++) {
       const idx = findSlot(caps[d], 'recall', topic.subject, topic.topic)
       if (idx >= 0) {
-        commit(topic, [{ day: d, type: 'recall', intervalIdx: idx }])
+        commit(topic, [{ day: d, type: 'recall', intervalIdx: idx }], 'single')
         parked.splice(parked.indexOf(topic), 1)
         break
+      }
+    }
+  }
+
+  // top up pass: if hours remain, the weakest topics earn extra retrieval
+  // rather than leaving half the weekend idle. Bounded per topic (one extra
+  // recall for weak topics, then one extra review for struggling ones), always
+  // after the topic's first session and never twice in a day, so it deepens
+  // coverage without cramming anything new.
+  const topupRounds: { rating: Rating; type: SessionType }[] = [
+    { rating: 'struggling', type: 'recall' },
+    { rating: 'shaky', type: 'recall' },
+    { rating: 'struggling', type: 'review' },
+    { rating: 'shaky', type: 'review' },
+  ]
+  for (const round of topupRounds) {
+    for (const t of scheduled) {
+      if (t.rating !== round.rating || t.sessions.length < 2) continue
+      const firstDay = Math.min(...t.sessions.map((sess) => sess.day))
+      // spread onto the day with the most room, after the topic's introduction
+      const candidates = Array.from({ length: 7 }, (_, d) => d)
+        .filter((d) => d > firstDay && !t.sessions.some((sess) => sess.day === d))
+        .sort((a, b) => caps[b].studyLeft - caps[a].studyLeft)
+      for (const d of candidates) {
+        const idx = findSlot(caps[d], round.type, t.subject, t.topic)
+        if (idx >= 0) {
+          takeSlot(caps[d], round.type, t.subject, t.topic, idx)
+          t.sessions.push({ day: d, type: round.type })
+          break
+        }
       }
     }
   }

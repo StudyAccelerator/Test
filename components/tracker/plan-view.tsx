@@ -322,6 +322,7 @@ export default function PlanView({
     () => subjectDotMap(plan.scheduled.map((t) => t.subject)),
     [plan]
   )
+  const starters = plan.scheduled.filter((t) => t.coverage === 'starter')
   const counts = {
     struggling: plan.scheduled.filter((t) => t.rating === 'struggling').length,
     shaky: plan.scheduled.filter((t) => t.rating === 'shaky').length,
@@ -418,7 +419,7 @@ export default function PlanView({
                 </p>
                 <p className="mt-0.5 text-[13px] text-brand-text/60">
                   {r === 'struggling' && "Deep blocks plus double recall. That's where the marks are."}
-                  {r === 'shaky' && 'One full cycle each: blurt, recall, then a spaced review.'}
+                  {r === 'shaky' && 'A full cycle: blurt, recall, then a spaced review.'}
                   {r === 'solid' && 'Short recall sessions only, to keep them warm.'}
                 </p>
               </div>
@@ -428,6 +429,14 @@ export default function PlanView({
             <p className="mt-4 text-[15px] leading-relaxed text-brand-text/75">
               Your Solid topics get maintenance only, and that's deliberate. A 90 minute deep block on a topic you
               already know is low-yield work in disguise. That's where your saved hours come from.
+            </p>
+          )}
+          {starters.length > 0 && (
+            <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
+              {starters.length === 1 ? 'One topic' : `${starters.length} topics`} only just fit, so{' '}
+              {starters.length === 1 ? 'it gets' : 'they get'}{' '}a starter cycle: the blurt and its next day recall
+              happen this week, and the spaced review leads next week&apos;s plan. Starting a topic properly beats
+              parking it.
             </p>
           )}
           <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
