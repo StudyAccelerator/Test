@@ -150,10 +150,10 @@ export default function Header() {
             <AnimatePresence>
               {toolsOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: -8 }}
+                  initial={{ opacity: 0, y: -6 }}
                   animate={{ opacity: 1, y: 0 }}
-                  exit={{ opacity: 0, y: -6, transition: { duration: 0.12, ease: 'easeIn' } }}
-                  transition={{ duration: 0.18, ease: EASE }}
+                  exit={{ opacity: 0, y: -4, transition: { duration: 0.1, ease: 'easeIn' } }}
+                  transition={{ duration: 0.15, ease: EASE }}
                   className="absolute left-1/2 -ml-28 top-full pt-3 w-56"
                 >
                   <div className="relative rounded-2xl bg-white p-2 [box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.16)]">
@@ -161,14 +161,13 @@ export default function Header() {
                       aria-hidden="true"
                       className="absolute -top-1.5 left-1/2 -translate-x-1/2 h-3 w-3 rotate-45 bg-white [box-shadow:-1px_-1px_0_rgba(46,37,87,.08)]"
                     />
-                    {FREE_TOOL_LINKS.map(([href, label], i) => (
-                      <motion.a
+                    {/* Links render static inside the panel: the panel animates as one piece,
+                        so nothing shifts after it opens. */}
+                    {FREE_TOOL_LINKS.map(([href, label]) => (
+                      <a
                         key={href}
                         href={href}
                         onClick={() => setToolsOpen(false)}
-                        initial={{ opacity: 0, y: 5 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.2, ease: EASE, delay: 0.05 + i * 0.045 }}
                         className="group flex items-center justify-between rounded-xl px-4 py-2.5 font-semibold text-brand-purple hover:bg-brand-gold/10 hover:text-brand-gold transition"
                       >
                         {label}
@@ -178,7 +177,7 @@ export default function Header() {
                         >
                           →
                         </span>
-                      </motion.a>
+                      </a>
                     ))}
                   </div>
                 </motion.div>
