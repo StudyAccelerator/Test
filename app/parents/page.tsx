@@ -180,6 +180,28 @@ export default function ParentsLanding() {
         </section>
       </ScrollFade>
 
+      {/* ── Diagnostic pointer ───────────────────────────────────────────── */}
+      <ScrollFade delay={0.1}>
+        <section className="py-16 px-6 bg-white">
+          <div className="max-w-3xl mx-auto text-center">
+            <h2 className="text-2xl md:text-3xl text-brand-purple font-serif font-bold mb-4">
+              Want to see the problem before you fix it?
+            </h2>
+            <p className="text-lg text-brand-text leading-relaxed mb-6">
+              Ask your teenager to take our free Revision Diagnostic. Twenty questions, about four
+              minutes, and it shows exactly where their revision is leaking hours and marks. You will
+              both know what to fix first, before spending a penny on help.
+            </p>
+            <a
+              href="/revision-diagnostic"
+              className="inline-block px-8 py-3 bg-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold-light transition"
+            >
+              Send Them the Free Diagnostic
+            </a>
+          </div>
+        </section>
+      </ScrollFade>
+
       {/* ── Footer ───────────────────────────────────────────────────────── */}
       <footer className="bg-brand-purple text-brand-cream py-8 px-6 border-t-4 border-brand-gold">
         <div className="max-w-4xl mx-auto text-center">

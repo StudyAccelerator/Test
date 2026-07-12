@@ -14,6 +14,7 @@ const FREE_TOOL_LINKS = [
   ['/revision-diagnostic', 'Revision Diagnostic'],
   ['/revision-tracker', 'Revision Tracker'],
   ['/A-Level-Accelerators-Blurting-Template.pdf', 'Blurting Template'],
+  ['/newsletter', 'Sunday Session Newsletter'],
 ]
 
 const MORE_LINKS = [

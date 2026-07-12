@@ -113,11 +113,11 @@ const groups: Group[] = [
       },
       {
         q: 'What is the best way to revise for A-levels?',
-        a: "Active recall (testing yourself from memory), spaced repetition (bringing topics back at growing intervals), and timed past papers. Re-reading and highlighting feel productive but barely move grades. Our blog covers this in depth, and the free Revision Tracker builds these methods into a weekly plan for you.",
+        a: "Active recall (testing yourself from memory), spaced repetition (bringing topics back at growing intervals), and timed past papers. Re-reading and highlighting feel productive but barely move grades. Our blog covers this in depth, the free Revision Diagnostic will tell you which of these habits you are missing, and the free Revision Tracker builds them into a weekly plan for you.",
       },
       {
         q: 'Do you offer free resources?',
-        a: "Yes. Our revision blog, the free Revision Tracker timetable tool, and a printable blurting template are all free and linked in the footer of every page.",
+        a: "Yes. The free Revision Diagnostic scores how you actually study and tells you what to fix first. The free Revision Tracker builds you a weekly plan around your weakest topics. Add the revision blog, a printable blurting template, and The Sunday Session, our weekly newsletter for students, and you can get a long way before paying us anything. All of it is linked in the footer of every page.",
       },
     ],
   },

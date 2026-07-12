@@ -1,7 +1,8 @@
 /*
- * MailerLite client-side integration for the Revision Diagnostic.
- * Same direct-API approach as the revision tracker and parents form.
- * The diag_* custom fields and the group already exist in the account.
+ * MailerLite client-side integration for the Revision Diagnostic and the
+ * Sunday Session newsletter signup. Same direct-API approach as the revision
+ * tracker and parents form. The diag_* custom fields and both groups already
+ * exist in the account.
  */
 
 const ML_API_KEY =
@@ -62,6 +63,33 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
     return 'network-error'
   } catch (err) {
     console.error('[diagnostic] MailerLite fetch failed:', err)
+    return 'network-error'
+  }
+}
+
+/* "Sunday Session" group, created 12 July 2026: the weekly newsletter send list */
+const NEWSLETTER_GROUP_ID = '192801700892903405'
+
+export async function subscribeNewsletter(email: string, name: string): Promise<SubscribeResult> {
+  try {
+    const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${ML_API_KEY}`,
+      },
+      body: JSON.stringify({
+        email,
+        fields: { name },
+        groups: [NEWSLETTER_GROUP_ID],
+      }),
+    })
+    if (res.ok) return 'ok'
+    if (res.status === 422) return 'invalid-email'
+    console.error('[newsletter] MailerLite error:', res.status, await res.text())
+    return 'network-error'
+  } catch (err) {
+    console.error('[newsletter] MailerLite fetch failed:', err)
     return 'network-error'
   }
 }
