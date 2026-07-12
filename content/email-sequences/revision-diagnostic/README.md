@@ -33,6 +33,7 @@ The three variants make three different cases on purpose:
      - Yes: the five `subject/` emails.
      - No: the five `system/` emails (route value "Top 1% Study System").
 4. Every email: From name **Dr Waleed | A-Level Accelerators**, from and reply-to **Waleed@alevelaccelerators.com**. Same identity on every send, forever. Replies must land somewhere Waleed actually reads, because the sequence asks students to reply on purpose.
+   **Timing note:** the diagnostic went live (12 July) before this automation was switched on, and the "joins a group" trigger only fires on the join event. Anyone who completed the diagnostic before the automation is live will NOT receive the sequence automatically. Fix when switching on: in the Revision Diagnostic group, remove those early subscribers from the group and re-add them (a fresh join event fires the trigger), or send them E0 manually as a one-off campaign.
 5. Send times are in each file's header (5pm UK for the teaching emails, 11am for the pitch and door emails). In MailerLite, set the delays so sends land near those times rather than exactly 24 hours after signup.
 6. After the last email in each branch, no further steps: subscribers simply remain in the group and receive the normal weekly campaigns. Do not add them to any other automation from here.
 
