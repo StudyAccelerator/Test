@@ -15,6 +15,7 @@ const FREE_TOOL_LINKS = [
   ['/revision-tracker', 'Revision Tracker'],
   ['/A-Level-Accelerators-Blurting-Template.pdf', 'Blurting Template'],
   ['/newsletter', 'Sunday Session Newsletter'],
+  ['/parents', "Free Parents' Guide"],
 ]
 
 const MORE_LINKS = [

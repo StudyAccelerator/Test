@@ -36,6 +36,7 @@ export default function Footer() {
                 <li><a href="/blog/" className="text-brand-gold hover:text-white transition">Revision Blog</a></li>
                 <li><a href="/A-Level-Accelerators-Blurting-Template.pdf" className="text-brand-gold hover:text-white transition">Blurting Template</a></li>
                 <li><a href="/newsletter" className="text-brand-gold hover:text-white transition">The Sunday Session</a></li>
+                <li><a href="/parents" className="text-brand-gold hover:text-white transition">Free Parents&apos; Guide</a></li>
               </ul>
             </div>
             <div>
