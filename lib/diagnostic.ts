@@ -1017,9 +1017,10 @@ export function diagnose(answers: Answers): Diagnosis {
   }
 }
 
-/* Compact score string for the CRM, human-scannable in MailerLite. */
+/* Score string for the CRM, human-scannable in MailerLite. Full labels, not
+   letter codes, so students reading their report email know what each number is. */
 export function scoresToString(scores: Scores): string {
-  return `M${scores.method} R${scores.retention} E${scores.examCraft} T${scores.prioritisation} C${scores.consistency}`
+  return `Method ${scores.method}, Retention ${scores.retention}, Exam Craft ${scores.examCraft}, Targeting ${scores.prioritisation}, Consistency ${scores.consistency}`
 }
 
 export function gradeLabel(id: string | undefined): string {

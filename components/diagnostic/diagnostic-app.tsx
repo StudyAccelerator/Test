@@ -638,7 +638,7 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
       lowYieldHours: `about ${d.hoursLeak.lowYieldHours} of ${d.hoursLeak.weeklyPhrase}`,
       archetype: d.archetype.name,
       bottleneck: d.bottleneckLabel,
-      scores: `${scoresToString(d.scores)} overall ${d.overall}`,
+      scores: `${scoresToString(d.scores)}, overall ${d.overall}`,
       route: d.routing.primary.name,
     })
 
