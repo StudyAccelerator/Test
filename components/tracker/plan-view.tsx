@@ -43,7 +43,7 @@ function DayCards({
       {mode === 'tabs' && (
       <div role="tablist" aria-label="Day of the week" className="mb-4 grid grid-cols-7 gap-1">
         {plan.days.map((day) => {
-          const count = day.events.filter((e) => isSession(e.kind)).length
+          const count = day.events.filter((e) => isSession(e.kind) || e.kind === 'freestyle').length
           const active = day.dayIndex === selected
           return (
             <button
@@ -68,7 +68,7 @@ function DayCards({
       </div>
       )}
       {plan.days.map((day) => {
-        const hasStudy = day.events.some((e) => isSession(e.kind))
+        const hasStudy = day.events.some((e) => isSession(e.kind) || e.kind === 'freestyle')
         const sessions = hasStudy ? day.events.filter((e) => e.kind !== 'free') : []
         return (
           <section
@@ -114,6 +114,22 @@ function DayCards({
                         {ev.subject}: {ev.topic}
                       </p>
                       <p className="mt-0.5 text-[13px] text-brand-text/60">{tech.strap}</p>
+                    </li>
+                  )
+                }
+                if (ev.kind === 'freestyle') {
+                  return (
+                    <li key={i} className="rounded-2xl border-2 border-dashed border-brand-purple/30 bg-white p-4">
+                      <div className="mb-1 flex items-center justify-between gap-2">
+                        <span className="rounded-full border border-brand-purple/30 px-2.5 py-0.5 text-[11px] font-bold text-brand-purple">
+                          Freestyle · 60 min
+                        </span>
+                        <span className="font-mono text-[11px] text-brand-purple/60">{fmtRange(ev)}</span>
+                      </div>
+                      <p className="text-[15px] font-bold text-brand-purple">Your call</p>
+                      <p className="mt-0.5 text-[13px] text-brand-text/60">
+                        Any subject, any method. A past paper question, flashcards, tidying a weak topic. You choose.
+                      </p>
                     </li>
                   )
                 }
@@ -209,9 +225,11 @@ function WeekGrid({ plan, dots }: { plan: PlanResult; dots: Map<string, string> 
                 const style =
                   ev.kind === 'fixed'
                     ? 'bg-[#A0A0B8] text-white'
-                    : ev.kind === 'free'
-                      ? 'border border-dashed border-brand-purple/20 text-brand-text/40 italic'
-                      : 'bg-brand-cream-dark text-brand-text/60'
+                    : ev.kind === 'freestyle'
+                      ? 'border-2 border-dashed border-brand-purple/40 bg-brand-purple/5 font-bold text-brand-purple'
+                      : ev.kind === 'free'
+                        ? 'border border-dashed border-brand-purple/20 text-brand-text/40 italic'
+                        : 'bg-brand-cream-dark text-brand-text/60'
                 return (
                   <div
                     key={i}
@@ -273,6 +291,14 @@ function PrintSheet({ plan, form, diagnosis }: { plan: PlanResult; form: Tracker
                     </div>
                   )
                 }
+                if (ev.kind === 'freestyle') {
+                  return (
+                    <div key={i} className="mb-1 border border-dashed border-brand-purple/50 px-1 py-0.5 text-[8.5px] leading-tight text-brand-purple">
+                      <span className="block font-bold">{toHHMM(ev.startMin)} Freestyle · 60m</span>
+                      <span className="block">Your call: any subject, any method</span>
+                    </div>
+                  )
+                }
                 return (
                   <div key={i} className="mb-1 border-l-[3px] border-brand-text/25 bg-black/5 px-1 py-0.5 text-[8px] leading-tight text-brand-text/70">
                     {toHHMM(ev.startMin)} {ev.label}
@@ -323,6 +349,10 @@ export default function PlanView({
     [plan]
   )
   const starters = plan.scheduled.filter((t) => t.coverage === 'starter')
+  const freestyleCount = plan.days.reduce(
+    (sum, d) => sum + d.events.filter((e) => e.kind === 'freestyle').length,
+    0
+  )
   const counts = {
     struggling: plan.scheduled.filter((t) => t.rating === 'struggling').length,
     shaky: plan.scheduled.filter((t) => t.rating === 'shaky').length,
@@ -437,6 +467,12 @@ export default function PlanView({
               {starters.length === 1 ? 'it gets' : 'they get'}{' '}a starter cycle: the blurt and its next day recall
               happen this week, and the spaced review leads next week&apos;s plan. Starting a topic properly beats
               parking it.
+            </p>
+          )}
+          {freestyleCount > 0 && (
+            <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
+              {freestyleCount === 1 ? 'One spare hour' : `${freestyleCount} spare hours`} under the daily cap became{' '}
+              Freestyle blocks: an hour on anything you like. A past paper, flashcards, tidying a weak topic. Your call.
             </p>
           )}
           {plan.papers.length > 0 && (

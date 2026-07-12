@@ -50,7 +50,7 @@ export type WeekSettings = {
 export type PlacedEvent = {
   startMin: number
   endMin: number
-  kind: SessionType | 'meal' | 'fixed' | 'break' | 'free'
+  kind: SessionType | 'freestyle' | 'meal' | 'fixed' | 'break' | 'free'
   subject?: string
   topic?: string
   label?: string
@@ -88,7 +88,15 @@ export type PlanResult = {
 export const PAPER_TOPIC = 'Past paper questions'
 
 const WIND_DOWN = 30
-const MEAL_MINS = 30
+/* Meals are proper pauses, not pit stops: a full hour for lunch and dinner
+   splits the day into three natural working blocks */
+const BREAKFAST_MINS = 30
+const LUNCH_MINS = 60
+const DINNER_MINS = 60
+/* A freestyle block: an hour of the student's own choosing, added only when a
+   working day still has spare capacity under the daily ceiling */
+const FREESTYLE_MINS = 60
+const FREESTYLE_BREAK = 15
 const FREE_DAY_CAP = 360 // 6h of study, the published "hours past six add almost nothing" line
 const SCHOOL_DAY_CAP = 150 // 2.5h after a full school day
 const SCHOOL_DAY_THRESHOLD = 4 * 60 // a day with 4h+ of fixed daytime commitments is a school-pattern day
@@ -121,16 +129,16 @@ function dayBlockers(s: WeekSettings, day: number): { start: number; end: number
     const end = Math.min(c.endMin, cutoff)
     if (end > start) raw.push({ start, end, kind: 'fixed', label: c.label })
   }
-  const meals: [number, string][] = [
-    [s.breakfastMin, 'Breakfast'],
-    [s.lunchMin, 'Lunch'],
-    [s.dinnerMin, 'Dinner'],
+  const meals: [number, string, number][] = [
+    [s.breakfastMin, 'Breakfast', BREAKFAST_MINS],
+    [s.lunchMin, 'Lunch', LUNCH_MINS],
+    [s.dinnerMin, 'Dinner', DINNER_MINS],
   ]
-  for (const [t, label] of meals) {
-    if (t < s.wakeMin || t + MEAL_MINS > cutoff) continue
+  for (const [t, label, dur] of meals) {
+    if (t < s.wakeMin || t + dur > cutoff) continue
     // commitments win over meals
-    const clash = raw.some((b) => t < b.end && t + MEAL_MINS > b.start)
-    if (!clash) raw.push({ start: t, end: t + MEAL_MINS, kind: 'meal', label })
+    const clash = raw.some((b) => t < b.end && t + dur > b.start)
+    if (!clash) raw.push({ start: t, end: t + dur, kind: 'meal', label })
   }
   raw.sort((a, b) => a.start - b.start)
   // merge overlapping fixed blocks
@@ -434,16 +442,30 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
     }
   }
 
+  // freestyle pass: a working day with spare capacity under the ceiling gets
+  // one open hour of the student's own choosing. Days with fewer than two
+  // sessions stay light on purpose: a maintenance week should feel like one.
+  const freestyleDays: number[] = []
+  for (let d = 0; d < 7; d++) {
+    const cap = caps[d]
+    if (cap.sessions.length < 2 || cap.studyLeft < FREESTYLE_MINS) continue
+    const idx = cap.remaining.findIndex((r) => r >= FREESTYLE_MINS)
+    if (idx < 0) continue
+    cap.remaining[idx] = Math.max(0, cap.remaining[idx] - (FREESTYLE_MINS + FREESTYLE_BREAK))
+    cap.studyLeft -= FREESTYLE_MINS
+    freestyleDays.push(d)
+  }
+
   // keep the audit honest: scheduled list in weakest first order
   const tierRank: Record<Rating, number> = { struggling: 0, shaky: 1, solid: 2 }
   scheduled.sort((a, b) => tierRank[a.rating] - tierRank[b.rating])
-  return { caps, scheduled, parked, papers }
+  return { caps, scheduled, parked, papers, freestyleDays }
 }
 
 /* Lay one day's assigned sessions onto the clock. Deep blocks first (peak
    energy), then recalls, then reviews, switching subjects between sessions
    where possible to keep the student fresh. */
-function layoutDay(s: WeekSettings, day: number, cap: DayCapacity): DayPlan {
+function layoutDay(s: WeekSettings, day: number, cap: DayCapacity, hasFreestyle: boolean): DayPlan {
   const cutoff = cutoffMin(s)
   const blockers = dayBlockers(s, day)
   const events: PlacedEvent[] = blockers.map((b) => ({
@@ -453,61 +475,82 @@ function layoutDay(s: WeekSettings, day: number, cap: DayCapacity): DayPlan {
     label: b.label,
   }))
 
-  const queue: { type: SessionType; subject: string; topic: string }[] = []
-  const typeOrder: SessionType[] = ['blurt', 'paper', 'recall', 'review']
-  const pool = [...cap.sessions]
+  type QueueItem = { type: SessionType | 'freestyle'; subject: string; topic: string }
+  const itemMins = (q: QueueItem) => (q.type === 'freestyle' ? FREESTYLE_MINS : TECHNIQUES[q.type].mins)
+  const itemBreak = (q: QueueItem) => (q.type === 'freestyle' ? FREESTYLE_BREAK : TECHNIQUES[q.type].breakAfter)
+
+  const queue: QueueItem[] = cap.sessions.map((sess) => ({ type: sess.type, subject: sess.subject, topic: sess.topic }))
+  if (hasFreestyle) queue.push({ type: 'freestyle', subject: '', topic: '' })
+
+  /* Deep blocks first while the head is fresh, papers next, then recall and
+     review, with the open freestyle hour at the tail of the day */
+  const pickOrder: (SessionType | 'freestyle')[] = ['blurt', 'paper', 'recall', 'review', 'freestyle']
   let lastSubject = ''
-  while (pool.length) {
-    let pickIdx = -1
-    for (const t of typeOrder) {
-      const candidates = pool
-        .map((sess, i) => ({ sess, i }))
-        .filter(({ sess }) => sess.type === t)
+  function pickFit(room: number): number {
+    for (const t of pickOrder) {
+      const candidates = queue
+        .map((q, i) => ({ q, i }))
+        .filter(({ q }) => q.type === t && itemMins(q) <= room)
       if (!candidates.length) continue
-      const differ = candidates.find(({ sess }) => sess.subject !== lastSubject)
-      pickIdx = (differ ?? candidates[0]).i
-      break
+      const differ = candidates.find(({ q }) => q.subject !== lastSubject && q.subject !== '')
+      return (differ ?? candidates[0]).i
     }
-    const [picked] = pool.splice(pickIdx, 1)
-    queue.push({ type: picked.type, subject: picked.subject, topic: picked.topic })
-    lastSubject = picked.subject
+    return -1
   }
 
+  /* The day's open segments, divided by meals and commitments. Sessions are
+     spread across them in proportion to their size, so a full day breathes
+     between morning, afternoon and evening instead of packing the morning
+     and dumping all the slack at the end. */
+  const segments: { start: number; end: number }[] = []
+  {
+    let segCursor = s.wakeMin
+    for (const b of blockers) {
+      if (b.start > segCursor) segments.push({ start: segCursor, end: b.start })
+      segCursor = Math.max(segCursor, b.end)
+    }
+    if (cutoff > segCursor) segments.push({ start: segCursor, end: cutoff })
+  }
+  const openTime = segments.reduce((sum, seg) => sum + (seg.end - seg.start), 0)
+  const queueLoad = queue.reduce((sum, q) => sum + itemMins(q) + itemBreak(q), 0)
+  const fillFraction = Math.min(1, (queueLoad * 1.08) / Math.max(1, openTime))
+
   let studyMins = 0
-  let cursor = s.wakeMin
-  let guard = 200
-  while (queue.length && cursor < cutoff && guard-- > 0) {
-    const inside = blockers.find((b) => b.start <= cursor && b.end > cursor)
-    if (inside) {
-      cursor = inside.end
-      continue
-    }
-    const next = blockers.find((b) => b.start >= cursor)
-    const limit = Math.min(next ? next.start : cutoff, cutoff)
-    const room = limit - cursor
-    const fitIdx = queue.findIndex((q) => TECHNIQUES[q.type].mins <= room)
-    if (fitIdx < 0) {
-      cursor = limit
-      continue
-    }
-    const [sess] = queue.splice(fitIdx, 1)
-    const tech = TECHNIQUES[sess.type]
-    events.push({
-      startMin: cursor,
-      endMin: cursor + tech.mins,
-      kind: sess.type,
-      subject: sess.subject,
-      topic: sess.topic,
-    })
-    studyMins += tech.mins
-    cursor += tech.mins
-    if (queue.length && limit - cursor >= tech.breakAfter + 30) {
-      events.push({ startMin: cursor, endMin: cursor + tech.breakAfter, kind: 'break', label: 'Break' })
-      cursor += tech.breakAfter
-    } else if (queue.length) {
-      cursor = limit
+  const segCursors = segments.map((seg) => seg.start)
+
+  function placeInSegment(si: number, targetMins: number) {
+    const seg = segments[si]
+    let used = segCursors[si] - seg.start
+    while (queue.length && used < targetMins) {
+      const room = seg.end - segCursors[si]
+      const idx = pickFit(room)
+      if (idx < 0) break
+      const [item] = queue.splice(idx, 1)
+      const mins = itemMins(item)
+      events.push({
+        startMin: segCursors[si],
+        endMin: segCursors[si] + mins,
+        kind: item.type,
+        subject: item.subject,
+        topic: item.topic,
+        label: item.type === 'freestyle' ? 'Freestyle' : undefined,
+      })
+      studyMins += mins
+      segCursors[si] += mins
+      used += mins
+      if (item.subject) lastSubject = item.subject
+      const brk = itemBreak(item)
+      if (queue.length && seg.end - segCursors[si] >= brk + 30) {
+        events.push({ startMin: segCursors[si], endMin: segCursors[si] + brk, kind: 'break', label: 'Break' })
+        segCursors[si] += brk
+        used += brk
+      }
     }
   }
+
+  // proportional pass, then a mop up pass so nothing assigned goes unplaced
+  segments.forEach((seg, si) => placeInSegment(si, Math.round((seg.end - seg.start) * fillFraction)))
+  segments.forEach((seg, si) => placeInSegment(si, seg.end - seg.start))
 
   events.sort((a, b) => a.startMin - b.startMin)
 
@@ -527,8 +570,8 @@ function layoutDay(s: WeekSettings, day: number, cap: DayCapacity): DayPlan {
 }
 
 export function planWeek(s: WeekSettings, topics: TopicInput[]): PlanResult {
-  const { caps, scheduled, parked, papers } = assignWeek(s, topics)
-  const days = caps.map((cap, d) => layoutDay(s, d, cap))
+  const { caps, scheduled, parked, papers, freestyleDays } = assignWeek(s, topics)
+  const days = caps.map((cap, d) => layoutDay(s, d, cap, freestyleDays.includes(d)))
   const usedStudyMins = days.reduce((sum, d) => sum + d.studyMins, 0)
   const freshCaps = Array.from({ length: 7 }, (_, d) => buildDayCapacity(s, d))
   const availableStudyMins = freshCaps.reduce(
@@ -536,7 +579,11 @@ export function planWeek(s: WeekSettings, topics: TopicInput[]): PlanResult {
     0
   )
   const sessionCount = days.reduce(
-    (sum, d) => sum + d.events.filter((e) => e.kind === 'blurt' || e.kind === 'recall' || e.kind === 'review' || e.kind === 'paper').length,
+    (sum, d) =>
+      sum +
+      d.events.filter(
+        (e) => e.kind === 'blurt' || e.kind === 'recall' || e.kind === 'review' || e.kind === 'paper' || e.kind === 'freestyle'
+      ).length,
     0
   )
   return { days, scheduled, parked, papers, availableStudyMins, usedStudyMins, sessionCount }

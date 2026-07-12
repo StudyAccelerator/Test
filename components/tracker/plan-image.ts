@@ -167,6 +167,24 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
           c.fillText(`${toHHMM(ev.startMin)} to ${toHHMM(ev.endMin)}`, x + 12, top + ht - 8)
           c.globalAlpha = 1
         }
+      } else if (ev.kind === 'freestyle') {
+        c.fillStyle = 'rgba(46,37,87,0.05)'
+        c.fillRect(x + 2, top, COL_W - 7, ht)
+        c.strokeStyle = 'rgba(46,37,87,0.45)'
+        c.lineWidth = 1.5
+        c.setLineDash([5, 4])
+        c.strokeRect(x + 3.5, top + 1.5, COL_W - 10, ht - 3)
+        c.setLineDash([])
+        c.fillStyle = '#2E2557'
+        c.font = 'bold 12px Arial, sans-serif'
+        c.textAlign = 'left'
+        c.fillText('Freestyle', x + 10, top + 16)
+        if (ht >= 34) {
+          c.font = '11px Arial, sans-serif'
+          c.globalAlpha = 0.7
+          c.fillText('Your call: any subject', x + 10, top + 32)
+          c.globalAlpha = 1
+        }
       } else {
         const isFixed = ev.kind === 'fixed'
         c.fillStyle = isFixed ? '#A0A0B8' : '#F3EBD8'
@@ -206,6 +224,21 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
     c.fillText(tech.strap, lx + 24, legY + 32)
     lx += Math.max(c.measureText(tech.strap).width, c.measureText(label).width) + 60
   }
+
+  // freestyle legend entry
+  c.fillStyle = 'rgba(46,37,87,0.05)'
+  c.fillRect(lx, legY, 18, 18)
+  c.strokeStyle = 'rgba(46,37,87,0.45)'
+  c.lineWidth = 1.5
+  c.setLineDash([4, 3])
+  c.strokeRect(lx + 1, legY + 1, 16, 16)
+  c.setLineDash([])
+  c.fillStyle = '#2E2557'
+  c.font = 'bold 13px Arial, sans-serif'
+  c.fillText('Freestyle (60 min)', lx + 24, legY + 14)
+  c.font = '12px Arial, sans-serif'
+  c.fillStyle = 'rgba(26,21,53,0.6)'
+  c.fillText('Your call: any subject, any method.', lx + 24, legY + 32)
 
   // subject key
   let sx = MG
