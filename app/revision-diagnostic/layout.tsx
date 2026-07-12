@@ -4,7 +4,7 @@ import { LANDING_FAQS } from '@/lib/diagnostic'
 export const metadata: Metadata = {
   title: 'Free A-Level Revision Diagnostic | Find Where Your Marks Are Leaking',
   description:
-    'A free 4 minute diagnostic for A-level students. Get your revision profile, scores for the five systems behind every top grade, an honest estimate of your wasted study hours, and a personalised 7 day plan. Built by Dr Waleed Ahmad MBBS.',
+    'A free 4 minute diagnostic quiz for A-level students. Get your revision profile, scores for the five systems behind every top grade, an honest estimate of your wasted study hours, and a personalised 7 day plan. Built by Dr Waleed Ahmad MBBS.',
   alternates: { canonical: 'https://alevelaccelerators.com/revision-diagnostic/' },
 }
 
