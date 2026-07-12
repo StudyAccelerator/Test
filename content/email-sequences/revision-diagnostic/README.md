@@ -25,7 +25,7 @@ The three variants make three different cases on purpose:
 
 ## Building it in MailerLite (step by step)
 
-1. **Automations, then "Create workflow".** Trigger: "When a subscriber joins a group", group = **Revision Diagnostic**. Turn OFF re-entry (a retaker should not restart the sequence).
+1. **Open the waiting draft.** A disabled draft automation named "Revision Diagnostic follow-up (build per repo guide)" was created in the account via the API on 12 July 2026 (MailerLite's API can create and name automations but cannot add their steps, so the workflow itself is assembled in the editor). Open it and set the trigger: "When a subscriber joins a group", group = **Revision Diagnostic**. Turn OFF re-entry (a retaker should not restart the sequence).
 2. First step: **Email E0** (`00-shared-your-report.md`), sent immediately.
 3. Add a **Delay: 1 day**, then a **Condition** step: custom field `diag_route` **equals** `Summer Accelerator`.
    - Yes branch: the five `summer/` emails with delays matching the table (day 1, 3, 6, 8, 11).

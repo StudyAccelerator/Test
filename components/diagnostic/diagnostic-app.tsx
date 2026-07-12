@@ -41,7 +41,6 @@ interface Stored {
   v: 1
   answers: Answers
   firstName: string
-  refCode: string
   unlockedAt: string | null
 }
 
@@ -71,7 +70,6 @@ export default function DiagnosticApp() {
   const [stage, setStage] = useState<Stage>('intro')
   const [answers, setAnswers] = useState<Answers>({})
   const [firstName, setFirstName] = useState('')
-  const [refCode, setRefCode] = useState('')
   const [diagnosis, setDiagnosis] = useState<Diagnosis | null>(null)
   const [resumeCount, setResumeCount] = useState(0)
 
@@ -81,7 +79,6 @@ export default function DiagnosticApp() {
     if (!stored) return
     setAnswers(stored.answers)
     setFirstName(stored.firstName)
-    setRefCode(stored.refCode)
     if (stored.unlockedAt && allAnswered(stored.answers)) {
       setDiagnosis(diagnose(stored.answers))
       setStage('report')
@@ -89,21 +86,6 @@ export default function DiagnosticApp() {
       setResumeCount(Object.keys(stored.answers).length)
     }
   }, [])
-
-  const persist = useCallback(
-    (patch: Partial<Stored>) => {
-      const current = loadStored()
-      saveStored({
-        v: 1,
-        answers,
-        firstName,
-        refCode,
-        unlockedAt: current?.unlockedAt ?? null,
-        ...patch,
-      })
-    },
-    [answers, firstName, refCode]
-  )
 
   const handleAnswer = useCallback((id: string, value: string | string[]) => {
     setAnswers((prev) => {
@@ -119,7 +101,6 @@ export default function DiagnosticApp() {
         v: 1,
         answers: next,
         firstName: current?.firstName ?? '',
-        refCode: current?.refCode ?? '',
         unlockedAt: null,
       })
       return next
@@ -138,11 +119,10 @@ export default function DiagnosticApp() {
 
   const handleAnalysed = useCallback(() => setStage('gate'), [])
 
-  const handleUnlock = (name: string, code: string) => {
+  const handleUnlock = (name: string) => {
     setFirstName(name)
-    setRefCode(code)
     setDiagnosis(diagnose(answers))
-    saveStored({ v: 1, answers, firstName: name, refCode: code, unlockedAt: new Date().toISOString() })
+    saveStored({ v: 1, answers, firstName: name, unlockedAt: new Date().toISOString() })
     setStage('report')
     window.scrollTo({ top: 0 })
   }
@@ -168,7 +148,7 @@ export default function DiagnosticApp() {
       {stage === 'analysing' && <Analysing onDone={handleAnalysed} />}
       {stage === 'gate' && <EmailGate answers={answers} onUnlock={handleUnlock} />}
       {stage === 'report' && diagnosis && (
-        <Report diagnosis={diagnosis} answers={answers} firstName={firstName || 'you'} refCode={refCode} onRetake={handleRetake} />
+        <Report diagnosis={diagnosis} answers={answers} firstName={firstName || 'you'} onRetake={handleRetake} />
       )}
       {(stage === 'intro' || stage === 'report') && <Footer />}
     </>
@@ -621,7 +601,7 @@ function AnimatedDots() {
    Email gate
    ═══════════════════════════════════════════════════════════════════════ */
 
-function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: string, refCode: string) => void }) {
+function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: string) => void }) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const failCount = useRef(0)
@@ -644,7 +624,6 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
 
     setSubmitting(true)
     const d = diagnose(answers)
-    const refCode = 'ALA-' + Math.random().toString(36).slice(2, 6).toUpperCase()
 
     const result = await subscribeDiagnostic({
       email,
@@ -666,7 +645,7 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     if (result === 'ok') {
       window.fbq?.('track', 'Lead')
       window.gtag?.('event', 'generate_lead')
-      onUnlock(name, refCode)
+      onUnlock(name)
       return
     }
     if (result === 'invalid-email') {
@@ -677,7 +656,7 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     /* Network hiccup: one retry prompt, then never hold the report hostage. */
     failCount.current += 1
     if (failCount.current >= 2) {
-      onUnlock(name, refCode)
+      onUnlock(name)
       return
     }
     setSubmitting(false)

@@ -10,7 +10,6 @@ import {
   dimNote,
   gradeLabel,
   verdictFor,
-  yearLabel,
 } from '@/lib/diagnostic'
 
 const EASE = [0.22, 1, 0.36, 1] as const
@@ -133,11 +132,10 @@ interface ReportProps {
   diagnosis: Diagnosis
   answers: Answers
   firstName: string
-  refCode: string
   onRetake: () => void
 }
 
-export default function Report({ diagnosis, answers, firstName, refCode, onRetake }: ReportProps) {
+export default function Report({ diagnosis, answers, firstName, onRetake }: ReportProps) {
   const { archetype, scores, overall, bottleneck, hoursLeak, prescription, plan, routing } = diagnosis
   const worry = (answers.worry as string) ?? ''
   const worryShown = worry && worry !== 'unsure' ? worry : ''
@@ -152,7 +150,7 @@ export default function Report({ diagnosis, answers, firstName, refCode, onRetak
   const downloadCard = async () => {
     setDownloading(true)
     try {
-      drawShareCard(firstName, archetype.name, archetype.strapline, overall, scores, refCode)
+      drawShareCard(firstName, archetype.name, archetype.strapline, overall, scores)
     } finally {
       setTimeout(() => setDownloading(false), 800)
     }
@@ -175,8 +173,6 @@ export default function Report({ diagnosis, answers, firstName, refCode, onRetak
               <span className="text-brand-gold">Revision Diagnostic</span>
               <span aria-hidden="true" className="hidden sm:inline h-px w-8 bg-brand-gold/40" />
               <span>Personal report</span>
-              <span aria-hidden="true" className="hidden sm:inline h-px w-8 bg-brand-gold/40" />
-              <span>Ref {refCode}</span>
             </div>
 
             <div className="mt-10 md:mt-12 grid md:grid-cols-[1.6fr_1fr] gap-10 md:gap-8 items-center">
@@ -523,7 +519,7 @@ export default function Report({ diagnosis, answers, firstName, refCode, onRetak
             </div>
           </div>
           <p className="mt-6 text-center text-sm text-brand-text/55">
-            {yearLabel(answers.year as string)} · Diagnostic ref {refCode} · Share it with whoever pays for things in your house.
+            Share it with whoever pays for things in your house.
           </p>
         </div>
       </section>
@@ -537,8 +533,7 @@ function drawShareCard(
   archetypeName: string,
   strapline: string,
   overall: number,
-  scores: import('@/lib/diagnostic').Scores,
-  refCode: string
+  scores: import('@/lib/diagnostic').Scores
 ) {
   const W = 1080
   const H = 1350
@@ -583,11 +578,11 @@ function drawShareCard(
   c.font = 'italic 40px Georgia, serif'
   c.fillText(strapline, W / 2, 400)
 
-  /* Score ring */
+  /* Score ring: number centred inside, label sits clear below the ring */
   const cx = W / 2
-  const cy = 640
-  const r = 150
-  c.lineWidth = 26
+  const cy = 590
+  const r = 135
+  c.lineWidth = 24
   c.strokeStyle = 'rgba(251,248,243,0.12)'
   c.beginPath()
   c.arc(cx, cy, r, 0, Math.PI * 2)
@@ -598,11 +593,12 @@ function drawShareCard(
   c.arc(cx, cy, r, -Math.PI / 2, -Math.PI / 2 + (Math.PI * 2 * overall) / 100)
   c.stroke()
   c.fillStyle = '#FBF8F3'
-  c.font = 'bold 120px Georgia, serif'
-  c.fillText(String(overall), cx, cy + 40)
+  c.font = 'bold 110px Georgia, serif'
+  c.textAlign = 'center'
+  c.fillText(String(overall), cx, cy + 38)
   c.fillStyle = 'rgba(251,248,243,0.55)'
   c.font = '24px Menlo, monospace'
-  c.fillText('SYSTEM SCORE / 100', cx, cy + 90)
+  c.fillText('SYSTEM SCORE / 100', cx, cy + r + 52)
 
   /* Dimension bars */
   const dims: [string, number][] = [
@@ -614,7 +610,7 @@ function drawShareCard(
   ]
   const barX = 160
   const barW = W - 2 * barX
-  let y = 900
+  let y = 878
   c.textAlign = 'left'
   dims.forEach(([lbl, val]) => {
     c.fillStyle = 'rgba(251,248,243,0.8)'
@@ -633,17 +629,17 @@ function drawShareCard(
     c.fillStyle = '#C9A96E'
     roundRect(c, barX, y + 12, Math.max(14, (barW * val) / 100), 14, 7)
     c.fill()
-    y += 74
+    y += 66
   })
 
-  /* Footer */
+  /* Footer, spaced clear of the last bar */
   c.textAlign = 'center'
   c.fillStyle = 'rgba(251,248,243,0.5)'
   c.font = '24px Menlo, monospace'
-  c.fillText('Find your profile free at', W / 2, H - 96)
+  c.fillText('Find your profile free at', W / 2, H - 108)
   c.fillStyle = '#FBF8F3'
   c.font = 'bold 30px Menlo, monospace'
-  c.fillText('alevelaccelerators.com/revision-diagnostic', W / 2, H - 56)
+  c.fillText('alevelaccelerators.com/revision-diagnostic', W / 2, H - 62)
 
   cv.toBlob((blob) => {
     if (!blob) return
