@@ -149,12 +149,11 @@ export default function Header() {
             <AnimatePresence>
               {toolsOpen && (
                 <motion.div
-                  initial={{ opacity: 0, y: -10, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -6, scale: 0.98, transition: { duration: 0.14, ease: 'easeIn' } }}
-                  transition={{ duration: 0.24, ease: EASE }}
-                  style={{ transformOrigin: 'top center' }}
-                  className="absolute left-1/2 -translate-x-1/2 top-full pt-3 w-56"
+                  initial={{ opacity: 0, y: -8 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -6, transition: { duration: 0.12, ease: 'easeIn' } }}
+                  transition={{ duration: 0.18, ease: EASE }}
+                  className="absolute left-1/2 -ml-28 top-full pt-3 w-56"
                 >
                   <div className="relative rounded-2xl bg-white p-2 [box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.16)]">
                     <span
