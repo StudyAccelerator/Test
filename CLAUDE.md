@@ -42,6 +42,10 @@ All written content (blog, social, PDFs, page copy) follows `.claude/skills/cont
 4. Run the compliance scan (dashes, curly quotes, banned words) before committing.
 5. Write the backlink twin.
 
+## The weekly newsletter (The Sunday Session)
+
+The recurring student newsletter lives in `content/email-newsletter/`: README (cadence, format, MailerLite build guide, deliverability), dated issue files ready to paste into MailerLite, and the topic bank for future issues. Cadence is every Sunday 5pm UK, students only (parents group always excluded), sent from Waleed@alevelaccelerators.com. It is the "one email a week" the post-diagnostic sequence promises, so its existence is a commitment: sessions that change offers, dates or pages should check whether a drafted issue mentions them. Waleed approves every issue before it sends. Key date fact: A-level results day 2026 is Thursday 13 August (JCQ), not 14 August as some older docs said.
+
 ## Automatic upkeep (standing rule, applies to every session)
 
 Waleed prefers automatic updates to memory, skills, and features over being asked to maintain them. Concretely:

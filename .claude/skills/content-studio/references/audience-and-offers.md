@@ -30,7 +30,7 @@ The content mix should shift with the calendar. Rough weighting is a guide, not 
 - **Early-mid July:** exams done, results pending. Students decompressing, parents thinking ahead. Theme: reflection, "what top students do over summer", introduce the Summer Accelerator softly. Results day is ~6 weeks out.
 - **Late July:** build toward results day and the Year 12 summer. Summer Accelerator awareness rising. Start seeding "get ahead for Year 13".
 - **Early August:** **Summer Accelerator relaunch.** Push harder on the summer programme. Results day now ~2 weeks out, anxiety climbing. Content splits: half results-day support (for current Year 13s and parents), half Year-12-summer / accelerator (for the incoming cohort).
-- **A-level results day (mid-August, third Thursday):** THE peak. Results-day support, clearing guidance, "missed your grades, here's what to do", "beat your predicted, now what". Empathetic, fast, genuinely useful. This is the single biggest brand-awareness day of the year. Have posts pre-written and ready.
+- **A-level results day (a mid-August Thursday, set by JCQ; 2026: Thursday 13 August, results to students at 8am, GCSE the following Thursday 20 August):** THE peak. Results-day support, clearing guidance, "missed your grades, here's what to do", "beat your predicted, now what". Empathetic, fast, genuinely useful. This is the single biggest brand-awareness day of the year. Have posts pre-written and ready.
 - **Late August:** clearing still live; pivot toward the new academic year, resits, "starting Year 13 strong". Accelerator/Study System for the year ahead.
 - **September to October:** predicted grades get set; UCAS deadlines (mid-Oct for medicine/Oxbridge). Huge parent-anxiety window. Predicted-grades content, "how to improve a prediction", Subject Accelerator push.
 - **Nov to Dec:** mocks. Revision-system content, Study System push.
@@ -39,4 +39,6 @@ The content mix should shift with the calendar. Rough weighting is a guide, not 
 
 ## The funnel these feed
 
-Free content (all platforms) builds trust and audience. Lead magnets (tracker, blog, parent guide, blurting template) capture emails. The email list + retargeting sells the paid programmes. Every post should move someone one step: stranger to follower, follower to email, email to booked call, call to customer. Match the CTA to the step.
+Free content (all platforms) builds trust and audience. Lead magnets (diagnostic, tracker, blog, parent guide, blurting template) capture emails. The email list + retargeting sells the paid programmes. Every post should move someone one step: stranger to follower, follower to email, email to booked call, call to customer. Match the CTA to the step.
+
+Once on the list, students get **The Sunday Session**: the weekly newsletter (every Sunday 5pm UK, one teach per issue, students only, never parents). Format, rules and drafted issues live in `content/email-newsletter/` in the repo; any email-content request should follow that README the way social requests follow this skill.
