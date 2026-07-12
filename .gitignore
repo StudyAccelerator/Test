@@ -33,3 +33,7 @@ lerna-debug.log*
 *.zip
 *.backup
 /Photos\ /
+
+# HQ dashboard: personal data and keys stay local, never in the repo
+/dashboard/data/
+/dashboard/.env

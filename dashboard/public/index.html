@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex, nofollow" />
+  <title>A-Level Accelerators HQ</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%232E2557'/%3E%3Ctext x='16' y='21' font-family='Georgia' font-size='13' fill='%23C9A96E' text-anchor='middle'%3EHQ%3C/text%3E%3C/svg%3E" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="shell">
+
+    <header class="topbar">
+      <div class="brand">
+        <span class="brand-name">A-Level Accelerators</span>
+        <span class="brand-tag">HQ</span>
+      </div>
+      <div class="topbar-right">
+        <span id="top-date" class="top-date"></span>
+        <span id="top-site" class="pill pill-muted">checking site&hellip;</span>
+        <span id="top-countdown" class="pill pill-gold"></span>
+      </div>
+    </header>
+
+    <main class="grid">
+
+      <section class="panel col-8" id="panel-triage">
+        <div class="panel-head">
+          <h2>Needs your attention</h2>
+          <span class="chip chip-live" title="Worked out from live data and your local lists">computed</span>
+        </div>
+        <div id="triage-body" class="panel-body"><p class="loading">Reading the business&hellip;</p></div>
+      </section>
+
+      <section class="panel col-4" id="panel-pulse">
+        <div class="panel-head">
+          <h2>Pulse</h2>
+        </div>
+        <div id="pulse-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+      </section>
+
+      <section class="panel col-12" id="panel-email">
+        <div class="panel-head">
+          <h2>Email engine</h2>
+          <span id="email-chip" class="chip chip-live">live &middot; MailerLite</span>
+        </div>
+        <div id="email-body" class="panel-body"><p class="loading">Fetching MailerLite&hellip;</p></div>
+      </section>
+
+      <section class="panel col-4" id="panel-stripe">
+        <div class="panel-head">
+          <h2>Stripe</h2>
+          <span id="stripe-chip" class="chip chip-pending">pending</span>
+        </div>
+        <div id="stripe-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+      </section>
+
+      <section class="panel col-4" id="panel-subs">
+        <div class="panel-head">
+          <h2>Running costs</h2>
+          <span class="chip chip-manual" title="Your own list, edited here">your list</span>
+        </div>
+        <div id="subs-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+      </section>
+
+      <section class="panel col-4" id="panel-bank">
+        <div class="panel-head">
+          <h2>Bank</h2>
+          <span class="chip chip-pending">pending</span>
+        </div>
+        <div id="bank-body" class="panel-body"></div>
+      </section>
+
+      <section class="panel col-7" id="panel-linkedin">
+        <div class="panel-head">
+          <h2>LinkedIn</h2>
+          <span class="chip chip-manual" title="LinkedIn offers no analytics API for personal profiles, so you log each post here in about 30 seconds">manual log</span>
+        </div>
+        <div id="linkedin-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+      </section>
+
+      <section class="panel col-5" id="panel-facebook">
+        <div class="panel-head">
+          <h2>Facebook</h2>
+          <span class="chip chip-pending">pending</span>
+        </div>
+        <div id="facebook-body" class="panel-body"></div>
+      </section>
+
+      <section class="panel col-7" id="panel-projects">
+        <div class="panel-head">
+          <h2>Projects and milestones</h2>
+        </div>
+        <div id="projects-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+      </section>
+
+      <section class="panel col-5" id="panel-tasks">
+        <div class="panel-head">
+          <h2>Tasks</h2>
+        </div>
+        <div id="tasks-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+      </section>
+
+      <section class="panel col-12" id="panel-competitors">
+        <div class="panel-head">
+          <h2>Competitor radar</h2>
+          <span id="competitors-chip" class="chip chip-manual">watchlist</span>
+        </div>
+        <div id="competitors-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+      </section>
+
+      <section class="panel col-5" id="panel-inbox">
+        <div class="panel-head">
+          <h2>Inbox</h2>
+          <span class="chip chip-pending">pending</span>
+        </div>
+        <div id="inbox-body" class="panel-body"></div>
+      </section>
+
+      <section class="panel col-7" id="panel-connections">
+        <div class="panel-head">
+          <h2>Connections</h2>
+        </div>
+        <div id="connections-body" class="panel-body"></div>
+      </section>
+
+    </main>
+
+    <footer class="foot">
+      <span>Private. Runs on your Mac only, bound to 127.0.0.1. Nothing here is published anywhere.</span>
+      <button id="refresh-btn" class="ghost-btn" type="button">Refresh live data</button>
+    </footer>
+  </div>
+
+  <div id="tooltip" class="tooltip" hidden></div>
+  <noscript><p style="padding:2rem">The dashboard needs JavaScript turned on.</p></noscript>
+  <script src="app.js"></script>
+</body>
+</html>

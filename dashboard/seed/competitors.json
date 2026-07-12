@@ -1,0 +1,79 @@
+{
+  "researchedAt": "2026-07-12",
+  "note": "Researched 12 July 2026. Every count below was verified against the source linked on it that day. Counts that could not be verified say not counted rather than a guess.",
+  "synthesis": {
+    "summary": "The free-resource giants (Physics & Maths Tutor, Save My Exams, Seneca) own search traffic and notes, and the live-class space is contested by MyEdSpace, whose teacher-fronted TikTok accounts dwarf their brand account. Up Learn owns the money-back guarantee angle. Nobody in this list owns a diagnose-first method taught by a doctor, nobody is serious on LinkedIn for students, and nobody speaks to parents on Facebook with any care.",
+    "moves": [
+      "Stay loud on LinkedIn. None of these seven is active there for students. It is genuinely uncontested and it is already your channel.",
+      "Treat results day like MyEdSpace treats it, but in your voice: the Rescue tool plus calm doctor-led posts, pre-written well before 13 August, helping rather than selling that morning.",
+      "Person-fronted video beats brand-fronted video in this market. MyEdSpace's teacher account has roughly nine times the brand account's followers. Your equivalent is Waleed-fronted diagnosis clips, one per bottleneck.",
+      "Do not compete on notes or past papers against PMT and Save My Exams. Compete on method and accountability, which the resource giants do not sell.",
+      "Tailored Tutors shows a personal brand alone does not scale (864 followers). Your diagnostic funnel is the difference. Point every piece of content at it."
+    ],
+    "watchNext": [
+      "MyEdSpace's results day campaign in August",
+      "Up Learn's guarantee messaging around results week",
+      "Whether Save My Exams moves into live teaching"
+    ]
+  },
+  "watchlist": [
+    {
+      "name": "MyEdSpace",
+      "website": "https://www.myedspace.co.uk",
+      "positioning": "Live online classes at scale with teacher-fronted social accounts. Press coverage (Primary Times, Aug 2025) claims their teachers have over 4 million combined followers. The closest model to yours and the most aggressive marketer on results day.",
+      "channels": [
+        { "platform": "TikTok (brand)", "url": "https://www.tiktok.com/@myedspace", "followers": 6397, "followersAsOf": "2026-07-12", "source": "https://www.tiktok.com/@myedspace" },
+        { "platform": "TikTok (physics teacher)", "url": "https://www.tiktok.com/@myedspace_physics", "followers": 57700, "followersAsOf": "2026-07-12", "source": "https://www.tiktok.com/@myedspace_physics" }
+      ]
+    },
+    {
+      "name": "Up Learn",
+      "website": "https://uplearn.co.uk",
+      "positioning": "VC-backed A-level courses selling an A star or A guarantee with your money back, claiming use by over 100,000 students. Premium price, heavy on proof and outcome claims.",
+      "channels": [
+        { "platform": "Instagram", "url": "https://www.instagram.com/up.learn", "followers": 8585, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/up.learn/?hl=en" },
+        { "platform": "YouTube", "url": "https://www.youtube.com/@up_learn", "followers": null, "followersAsOf": null, "source": null }
+      ]
+    },
+    {
+      "name": "Physics & Maths Tutor",
+      "website": "https://www.physicsandmathstutor.com",
+      "positioning": "The default free revision resource site for A-level students, with a paid tuition arm bolted on. Owns enormous organic search traffic; social presence is thin and fragmented.",
+      "channels": [
+        { "platform": "TikTok", "url": "https://www.tiktok.com/@physicsmathstutor", "followers": null, "followersAsOf": null, "source": null }
+      ]
+    },
+    {
+      "name": "Save My Exams",
+      "website": "https://www.savemyexams.com",
+      "positioning": "Subscription revision notes covering every board and subject, written by examiners. Competes for the same searches your blog targets.",
+      "channels": [
+        { "platform": "Instagram", "url": "https://www.instagram.com/savemyexams", "followers": 64000, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/savemyexams/" }
+      ]
+    },
+    {
+      "name": "SnapRevise",
+      "website": "https://www.snaprevise.co.uk",
+      "positioning": "A-level and GCSE video courses. Pre-recorded rather than live, so weaker on accountability, which is your strength.",
+      "channels": [
+        { "platform": "YouTube", "url": "https://www.youtube.com/@SnapRevise", "followers": null, "followersAsOf": null, "source": null }
+      ]
+    },
+    {
+      "name": "Seneca Learning",
+      "website": "https://senecalearning.com",
+      "positioning": "Free interactive learning platform with a premium tier. Huge user base through schools, shallow on method.",
+      "channels": [
+        { "platform": "Instagram", "url": "https://www.instagram.com/senecalearning", "followers": 14000, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/senecalearning/" }
+      ]
+    },
+    {
+      "name": "Tailored Tutors",
+      "website": "https://www.tailoredtutors.co.uk",
+      "positioning": "A-level video courses and tutoring, strongest in Biology and Chemistry, fronted by a personal brand like yours but without a diagnostic funnel behind it.",
+      "channels": [
+        { "platform": "Instagram", "url": "https://www.instagram.com/tailoredtutors_uk", "followers": 864, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/tailoredtutors_uk/" }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+[
+  { "id": "s1", "name": "Claude", "monthly": null, "note": "" },
+  { "id": "s2", "name": "Canva", "monthly": null, "note": "" },
+  { "id": "s3", "name": "MailerLite", "monthly": null, "note": "" },
+  { "id": "s4", "name": "Zoom", "monthly": null, "note": "" },
+  { "id": "s5", "name": "Vercel", "monthly": null, "note": "Hobby tier is free. Enter 0 if so." },
+  { "id": "s6", "name": "Domain and email", "monthly": null, "note": "" }
+]

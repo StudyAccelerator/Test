@@ -1,0 +1,58 @@
+[
+  {
+    "id": "p1",
+    "name": "Summer Accelerator",
+    "status": "live",
+    "milestone": "Sales page live with Stripe payment links",
+    "due": null,
+    "note": "The flagship paid programme. Full sales page at /summer-accelerators."
+  },
+  {
+    "id": "p2",
+    "name": "Revision Diagnostic funnel",
+    "status": "attention",
+    "milestone": "Switch on the remaining follow-up automations",
+    "due": "2026-07-14",
+    "note": "Tool live, 16-email sequence built in MailerLite. Instant report and Summer route on, the rest await your review. Triage tracks the live count."
+  },
+  {
+    "id": "p3",
+    "name": "Results Day Rescue",
+    "status": "next",
+    "milestone": "Ship by Tuesday 12 August",
+    "due": "2026-08-12",
+    "note": "Calm decision tool for results morning. Roadmap item 1. Results day is Thursday 13 August."
+  },
+  {
+    "id": "p4",
+    "name": "Parent Diagnostic",
+    "status": "planned",
+    "milestone": "Ship late August, before school starts",
+    "due": "2026-08-31",
+    "note": "The diagnostic reworded for the buyer. Highest conversion tool on the roadmap."
+  },
+  {
+    "id": "p5",
+    "name": "Topic Audit",
+    "status": "planned",
+    "milestone": "September to early October, Biology and Chemistry first",
+    "due": "2026-10-05",
+    "note": "Topic-level weakness data per student. You sanity-check the spec topic lists."
+  },
+  {
+    "id": "p6",
+    "name": "Mock Result Debrief",
+    "status": "planned",
+    "milestone": "Ship early November, before mock season",
+    "due": "2026-11-02",
+    "note": "Post-mortem tool for mock results. Feeds spring cohort decisions."
+  },
+  {
+    "id": "p7",
+    "name": "First real results data",
+    "status": "waiting",
+    "milestone": "Results day, Thursday 13 August",
+    "due": "2026-08-13",
+    "note": "First outcome data. Until it arrives, no grade claims anywhere in marketing."
+  }
+]

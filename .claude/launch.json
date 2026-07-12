@@ -7,6 +7,12 @@
       "runtimeArgs": ["run", "dev"],
       "port": 3000,
       "autoPort": true
+    },
+    {
+      "name": "hq-dashboard",
+      "runtimeExecutable": "node",
+      "runtimeArgs": ["dashboard/server.js"],
+      "port": 4400
     }
   ]
 }
