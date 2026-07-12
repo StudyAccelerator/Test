@@ -16,7 +16,7 @@ The rule for everything below: a new tool earns its place only if it either (a) 
 
 ### 1. Results Day Rescue (ship by Tuesday 12 August)
 
-- **What:** A calm, fast decision tool for the morning of results day (Thursday 14 August, then GCSE results the week after). The student enters what they got against what they needed, subject by subject, and it walks them to their actual options: firm choice confirmed, insurance, clearing, appeal or remark, resit, gap year. Output is a one-page action plan for the next 48 hours, in priority order, with the honest trade-offs of each route.
+- **What:** A calm, fast decision tool for the morning of results day (Thursday 13 August, then GCSE results the week after). The student enters what they got against what they needed, subject by subject, and it walks them to their actual options: firm choice confirmed, insurance, clearing, appeal or remark, resit, gap year. Output is a one-page action plan for the next 48 hours, in priority order, with the honest trade-offs of each route.
 - **Why:** Results day is the single biggest brand moment of the year and the one day students and parents search in a panic. Nobody sells anything that morning; the brand that helps calmly wins the autumn.
 - **Routes to:** resitters go to Subject Accelerators (September cohort starts the 6th), incoming Year 13s who scraped through AS content go to Study System or Subject Accelerators. But the CTA that morning is soft: the plan itself plus "book a free call when the dust settles".
 - **Data captured:** results vs needed grades per subject, chosen route, resit intent. A resit-intent flag in July-August is the warmest Subject Accelerator lead that exists.
