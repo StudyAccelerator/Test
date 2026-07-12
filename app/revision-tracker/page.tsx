@@ -1004,6 +1004,12 @@ export default function RevisionTrackerPage() {
           <div className="tips" style={{marginTop:'1rem', background: 'var(--cream)', color: 'var(--text)', borderLeft: '4px solid var(--gold)'}}>
             <strong style={{color: 'var(--gold)'}}>Tip:</strong> After downloading as an image, you can print it out and stick it on your wall, that&apos;s the most effective way to use this plan. Put it somewhere you&apos;ll see it every day!
           </div>
+          <div className="tips" style={{marginTop:'1rem'}}>
+            <strong>A timetable fixes when you revise. Not how.</strong>
+            If you work hard and the grades still are not moving, the leak is usually the method itself. The free{' '}
+            <a href="/revision-diagnostic" style={{color:'var(--gold)', textDecoration:'underline'}}>Revision Diagnostic</a>{' '}
+            scores how you actually study and tells you what to fix first. Takes about 4 minutes.
+          </div>
         </section>
       </div>
     </>
