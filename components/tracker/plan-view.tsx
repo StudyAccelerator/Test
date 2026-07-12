@@ -126,9 +126,10 @@ function DayCards({
                         </span>
                         <span className="font-mono text-[11px] text-brand-purple/60">{fmtRange(ev)}</span>
                       </div>
-                      <p className="text-[15px] font-bold text-brand-purple">Your call</p>
+                      <p className="text-[15px] font-bold text-brand-purple">Optional hour. Your call.</p>
                       <p className="mt-0.5 text-[13px] text-brand-text/60">
-                        Any subject, any method. A past paper question, flashcards, tidying a weak topic. You choose.
+                        Light work on any subject, any method. Flashcards, a past paper question, tidying a topic. Or a
+                        proper break if you're spent. No guilt either way.
                       </p>
                     </li>
                   )
@@ -471,8 +472,9 @@ export default function PlanView({
           )}
           {freestyleCount > 0 && (
             <p className="mt-3 text-[15px] leading-relaxed text-brand-text/75">
-              {freestyleCount === 1 ? 'One spare hour' : `${freestyleCount} spare hours`} under the daily cap became{' '}
-              Freestyle blocks: an hour on anything you like. A past paper, flashcards, tidying a weak topic. Your call.
+              {freestyleCount === 1 ? 'One optional Freestyle hour sits' : `${freestyleCount} optional Freestyle hours sit`}{' '}
+              on top of your focused study: light work on anything you like, or a proper break if you need one. They can
+              nudge a day past the cap, but only ever by that one hour.
             </p>
           )}
           {plan.papers.length > 0 && (

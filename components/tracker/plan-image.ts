@@ -182,7 +182,7 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
         if (ht >= 34) {
           c.font = '11px Arial, sans-serif'
           c.globalAlpha = 0.7
-          c.fillText('Your call: any subject', x + 10, top + 32)
+          c.fillText('Optional: your call', x + 10, top + 32)
           c.globalAlpha = 1
         }
       } else {
@@ -238,7 +238,7 @@ export async function renderPlanImage(plan: PlanResult, form: TrackerForm, diagn
   c.fillText('Freestyle (60 min)', lx + 24, legY + 14)
   c.font = '12px Arial, sans-serif'
   c.fillStyle = 'rgba(26,21,53,0.6)'
-  c.fillText('Your call: any subject, any method.', lx + 24, legY + 32)
+  c.fillText('Optional: light work or a break. Your call.', lx + 24, legY + 32)
 
   // subject key
   let sx = MG

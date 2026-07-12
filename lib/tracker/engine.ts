@@ -412,24 +412,33 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
     }
   }
 
-  // top up pass: if hours remain, the weakest topics earn extra retrieval
-  // rather than leaving half the weekend idle. Bounded per topic (one extra
-  // recall for weak topics, then one extra review for struggling ones), always
-  // after the topic's first session and never twice in a day, so it deepens
-  // coverage without cramming anything new.
+  // top up pass: if hours remain, the weakest topics earn extra work rather
+  // than leaving half the weekend idle. One blurt per topic per week is a
+  // SOFT rule: a struggling topic can earn a second Blurt and Fix at least
+  // two days after its first (a genuine spaced re-visit of the gaps), and a
+  // shaky topic can too once everything weaker is served. Bounded per topic,
+  // always after the topic's introduction, never twice in a day.
   const topupRounds: { rating: Rating; type: SessionType }[] = [
+    { rating: 'struggling', type: 'blurt' },
     { rating: 'struggling', type: 'recall' },
     { rating: 'shaky', type: 'recall' },
     { rating: 'struggling', type: 'review' },
+    { rating: 'shaky', type: 'blurt' },
     { rating: 'shaky', type: 'review' },
   ]
   for (const round of topupRounds) {
     for (const t of scheduled) {
       if (t.rating !== round.rating || t.sessions.length < 2) continue
       const firstDay = Math.min(...t.sessions.map((sess) => sess.day))
+      if (round.type === 'blurt') {
+        // second deep visit only: max two blurts per topic per week
+        if (t.sessions.filter((sess) => sess.type === 'blurt').length >= 2) continue
+      }
+      const blurtDaysOfTopic = t.sessions.filter((sess) => sess.type === 'blurt').map((sess) => sess.day)
+      const minDay = round.type === 'blurt' && blurtDaysOfTopic.length ? Math.max(...blurtDaysOfTopic) + 2 : firstDay + 1
       // spread onto the day with the most room, after the topic's introduction
       const candidates = Array.from({ length: 7 }, (_, d) => d)
-        .filter((d) => d > firstDay && !t.sessions.some((sess) => sess.day === d))
+        .filter((d) => d >= minDay && !t.sessions.some((sess) => sess.day === d))
         .sort((a, b) => caps[b].studyLeft - caps[a].studyLeft)
       for (const d of candidates) {
         const idx = findSlot(caps[d], round.type, t.subject, t.topic)
@@ -442,17 +451,18 @@ function assignWeek(s: WeekSettings, topics: TopicInput[]) {
     }
   }
 
-  // freestyle pass: a working day with spare capacity under the ceiling gets
-  // one open hour of the student's own choosing. Days with fewer than two
-  // sessions stay light on purpose: a maintenance week should feel like one.
+  // freestyle pass: a working day with a decent gap left gets one OPTIONAL
+  // open hour of the student's own choosing. It sits on top of the six
+  // focused hours rather than inside them (light work or even a proper break,
+  // so a day can nudge past the cap, but never by more than this one block).
+  // Days with fewer than two sessions stay light on purpose.
   const freestyleDays: number[] = []
   for (let d = 0; d < 7; d++) {
     const cap = caps[d]
-    if (cap.sessions.length < 2 || cap.studyLeft < FREESTYLE_MINS) continue
-    const idx = cap.remaining.findIndex((r) => r >= FREESTYLE_MINS)
+    if (cap.sessions.length < 2) continue
+    const idx = cap.remaining.findIndex((r) => r >= FREESTYLE_MINS + FREESTYLE_BREAK)
     if (idx < 0) continue
     cap.remaining[idx] = Math.max(0, cap.remaining[idx] - (FREESTYLE_MINS + FREESTYLE_BREAK))
-    cap.studyLeft -= FREESTYLE_MINS
     freestyleDays.push(d)
   }
 
@@ -535,7 +545,8 @@ function layoutDay(s: WeekSettings, day: number, cap: DayCapacity, hasFreestyle:
         topic: item.topic,
         label: item.type === 'freestyle' ? 'Freestyle' : undefined,
       })
-      studyMins += mins
+      // the optional freestyle hour is not counted as focused study
+      if (item.type !== 'freestyle') studyMins += mins
       segCursors[si] += mins
       used += mins
       if (item.subject) lastSubject = item.subject
@@ -582,7 +593,7 @@ export function planWeek(s: WeekSettings, topics: TopicInput[]): PlanResult {
     (sum, d) =>
       sum +
       d.events.filter(
-        (e) => e.kind === 'blurt' || e.kind === 'recall' || e.kind === 'review' || e.kind === 'paper' || e.kind === 'freestyle'
+        (e) => e.kind === 'blurt' || e.kind === 'recall' || e.kind === 'review' || e.kind === 'paper'
       ).length,
     0
   )
