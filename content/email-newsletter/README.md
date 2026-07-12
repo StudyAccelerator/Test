@@ -64,7 +64,7 @@ From 30 August onward, write weekly from `topic-bank.md` using the production ch
 1. Duplicate the "Sunday Session" template into a regular campaign.
 2. Paste the issue body; set subject (pick A or B), preheader, and the `[BUTTON: label -> url]` markers as plain button blocks.
 3. From name **Dr Waleed | A-Level Accelerators**, from and reply-to **Waleed@alevelaccelerators.com**. Identical to the sequence, forever.
-4. Recipients: groups **Sunday Session + tracker signups + workshop signups**, excluding **parents**.
+4. Recipients: the send list in the "Direct MailerLite control" section below.
 5. Check the auto-generated plain-text version reads sanely.
 6. Schedule for Sunday 17:00 UK (the special: Thursday 13 August 07:00 UK).
 7. First two sends only: seed-test to Gmail, Outlook and iCloud first. If Gmail files it under Promotions, cut a link and plain the layout further, then retest. The sequence's domain authentication work (DKIM, SPF, DMARC) must be green before issue one; it's the same domain, so if the sequence sends are landing Primary, the Session inherits that standing.
@@ -90,6 +90,25 @@ From 30 August onward, write weekly from `topic-bank.md` using the production ch
 ### Issue file convention
 
 Each issue file starts with a header block: issue code and title, send datetime, audience line, Subject A, Subject B, Preheader, Goal, Links (count and list), plus any send-time checks. Then `---`, then the body exactly as it goes into MailerLite, using `{$name}` and `[BUTTON: label -> url]` markers, same conventions as the sequence files.
+
+## Direct MailerLite control from Claude Code (added 11 July 2026, evening)
+
+Verified against the live account via API. Sessions can read the account today; write access (create groups, draft campaigns, schedule sends) goes through either of two channels Waleed controls:
+
+1. **The official MailerLite connector** on Waleed's claude.ai account. It is already installed; it needs authorising once (claude.ai, Settings, Connectors, MailerLite). After that, sessions create and schedule campaigns through normal tool permissions.
+2. **A dedicated API token** stored as `MAILERLITE_API_TOKEN` in the Claude Code environment settings (for scheduled sessions, where connectors may not attach). Generate it in MailerLite under Integrations, API. Do not commit it; the full-access key already committed for the site forms should eventually be replaced with something scoped, since anything in the repo or the client bundle is public.
+
+What the API cannot do, in any mode: build or edit automation workflows (read-only endpoints). The diagnostic sequence and its "copy to group: Sunday Session" graduation step are a one-time build in the MailerLite editor. As of 11 July no diagnostic automation exists in the account yet.
+
+**The send list** (verified group names and IDs; MailerLite dedupes across groups at send):
+
+Include: Sunday Session (create on first use), Revision Tracker Users `187183128836573106`, Revision Diagnostic `192687508025247162` (swap this one for graduates-only via the Sunday Session group once the automation's graduation step exists), Lecture Series Students `179596195547580232`, Lecture Series Students (New Group) `185843873480705989`, Top 1% Study Systems Workshop `184392744125334599`, Workshop `179320609561380062`, Workshop Atendees `186350189379847805`, Re-invite Workshop `185844353497826496`, Study Series Free Workshop `186744403779388652`, Newsletter Signups `181053980331214369` (legacy, currently empty).
+
+Never include: Parent Leads `188021995515937985`, Buyers, UCAT group, 1:1 Calls.
+
+Warmth evidence for launching to the full student list: the account's last blasts (early May 2026) reached roughly 400 subscribers at 47 to 52% opens. Two months quiet is fine; SS1 opens by re-introducing itself.
+
+**The weekly Routine.** A scheduled Claude Code Routine ("Sunday Session weekly producer") fires every Saturday morning: it loads or writes the next issue, re-verifies facts and links, runs the compliance scan, prepares the MailerLite draft campaign when write access exists (paste-ready copy when it doesn't), and messages Waleed for approval. His approval reply in that conversation is what schedules the Sunday 5pm send. No approval, no send. Pause or delete the Routine any time by asking a session, or from the Claude Code Routines list.
 
 ## Measurement (check after each send, judge monthly)
 
