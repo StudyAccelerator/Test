@@ -25,13 +25,14 @@ The three variants make three different cases on purpose:
 
 ## Building it in MailerLite (step by step)
 
-1. **Open the waiting draft.** A disabled draft automation named "Revision Diagnostic follow-up (build per repo guide)" was created in the account via the API on 12 July 2026 (MailerLite's API can create and name automations but cannot add their steps, so the workflow itself is assembled in the editor). Open it and set the trigger: "When a subscriber joins a group", group = **Revision Diagnostic**. Turn OFF re-entry (a retaker should not restart the sequence).
-2. First step: **Email E0** (`00-shared-your-report.md`), sent immediately.
-3. Add a **Delay: 1 day**, then a **Condition** step: custom field `diag_route` **equals** `Summer Accelerator`.
-   - Yes branch: the five `summer/` emails with delays matching the table (day 1, 3, 6, 8, 11).
-   - No branch: add a second **Condition**: `diag_route` **contains** `Subject Accelerator` (values arrive as "Chemistry Subject Accelerator", "Biology Subject Accelerator", "Maths Subject Accelerator" or plain "Subject Accelerator", so use *contains*, not *equals*).
-     - Yes: the five `subject/` emails.
-     - No: the five `system/` emails (route value "Top 1% Study System").
+1. **Built 12 July 2026 as four linear automations instead of one branched workflow.** The route decision happens on the website, not in MailerLite: `lib/mailerlite.ts` adds every completion to the "Revision Diagnostic" group AND one of three route groups (Diagnostic Route: Summer Accelerator `192802205272639254`, Diagnostic Route: Subject Accelerator `192802207993693338`, Diagnostic Route: Study System `192802211655321354`), using the same Summer-first / contains-Subject / else-System logic this guide specified for condition steps. Four automations exist in the account, all created disabled with subjects, delays and full body copy loaded:
+   - "Revision Diagnostic: instant report email (E0)" `192802303922669455`, trigger = joins "Revision Diagnostic".
+   - "Revision Diagnostic: Summer Accelerator route" `192802413740033360`, trigger = joins the summer route group.
+   - "Revision Diagnostic: Subject Accelerator route" `192802636764808949`, trigger = joins the subject route group.
+   - "Revision Diagnostic: Study System route" `192802538796352885`, trigger = joins the study system route group.
+   Each route runs delay 1 day, email 1, delay 2 days, email 2, delay 3 days, email 3, delay 2 days, email 4, delay 3 days, email 5 (days 1, 3, 6, 8, 11). The older empty shell "Revision Diagnostic follow-up (build per repo guide)" `192745483429479786` is superseded and can be deleted.
+2. **Waleed's switch-on checklist, in the dashboard:** review each email's copy and styling in the editor (bodies are loaded as text; apply the template spec below), confirm sender name and reply-to on every email, turn OFF re-entry on all four automations (a retaker should not restart), then enable all four together. The route automations must not go live without E0, or students get teaching emails with no report email first.
+3. The route logic in `lib/mailerlite.ts` is the source of truth for which sequence a student receives. If route names ever change in `lib/diagnostic.ts`, update `routeGroupId()` in the same commit.
 4. Every email: From name **Dr Waleed | A-Level Accelerators**, from and reply-to **Waleed@alevelaccelerators.com**. Same identity on every send, forever. Replies must land somewhere Waleed actually reads, because the sequence asks students to reply on purpose.
    **Timing note:** the diagnostic went live (12 July) before this automation was switched on, and the "joins a group" trigger only fires on the join event. Anyone who completed the diagnostic before the automation is live will NOT receive the sequence automatically. Fix when switching on: in the Revision Diagnostic group, remove those early subscribers from the group and re-add them (a fresh join event fires the trigger), or send them E0 manually as a one-off campaign.
 5. Send times are in each file's header (5pm UK for the teaching emails, 11am for the pitch and door emails). In MailerLite, set the delays so sends land near those times rather than exactly 24 hours after signup.

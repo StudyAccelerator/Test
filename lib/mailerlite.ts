@@ -11,6 +11,24 @@ const ML_API_KEY =
 /* "Revision Diagnostic" group, created 11 July 2026 */
 const DIAG_GROUP_ID = '192687508025247162'
 
+/* Route-specific groups, created 12 July 2026. Joining one of these fires the
+   matching follow-up automation, replacing condition steps inside MailerLite:
+   the route logic lives here, where it is version-controlled and testable. */
+const ROUTE_GROUPS = {
+  summer: '192802205272639254',
+  subject: '192802207993693338',
+  system: '192802211655321354',
+} as const
+
+/* Mirrors the sequence build guide: route values arrive as "Summer Accelerator",
+   "Chemistry Subject Accelerator" (or plain "Subject Accelerator"), or
+   "Top 1% Study System", so match Summer first, then contains-Subject, else system. */
+export function routeGroupId(route: string): string {
+  if (route.includes('Summer Accelerator')) return ROUTE_GROUPS.summer
+  if (route.includes('Subject Accelerator')) return ROUTE_GROUPS.subject
+  return ROUTE_GROUPS.system
+}
+
 export interface DiagnosticSubscriber {
   email: string
   name: string
@@ -54,7 +72,7 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
           diag_route: sub.route,
           diag_date: new Date().toISOString().slice(0, 10),
         },
-        groups: [DIAG_GROUP_ID],
+        groups: [DIAG_GROUP_ID, routeGroupId(sub.route)],
       }),
     })
     if (res.ok) return 'ok'
