@@ -1,21 +1,21 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Free A-Level Revision Timetable Maker | Revision Tracker',
+  title: 'Free A-Level Revision Timetable Maker and Topic Audit',
   description:
-    'Build a personalised weekly A-level revision timetable in about three minutes, free. Spaced repetition and active recall sessions placed automatically around your subjects and commitments.',
+    'Audit your weakest A-level topics, keep the week inside the hours you genuinely have, and get a printable revision timetable where every session uses a real technique: blurting, active recall and spaced review. Free, in about three minutes.',
   alternates: { canonical: 'https://alevelaccelerators.com/revision-tracker/' },
 }
 
 const webAppSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'A-Level Revision Timetable Maker',
+  name: 'A-Level Revision Timetable Maker and Topic Audit',
   url: 'https://alevelaccelerators.com/revision-tracker/',
   applicationCategory: 'EducationalApplication',
   operatingSystem: 'Web browser',
   description:
-    'Free tool that builds a personalised weekly A-level revision timetable in about three minutes, scheduling deep work, active recall and spaced review sessions around your subjects and commitments.',
+    'Free tool that audits your weakest A-level topics, caps the week to the hours you genuinely have, and builds a printable revision timetable of blurting, active recall and spaced review sessions around school and commitments.',
   offers: { '@type': 'Offer', price: '0', priceCurrency: 'GBP' },
   provider: { '@type': 'Organization', '@id': 'https://alevelaccelerators.com/#organization' },
 }
