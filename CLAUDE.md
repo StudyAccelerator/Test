@@ -59,6 +59,10 @@ All written content (blog, social, PDFs, page copy) follows `.claude/skills/cont
 
 The recurring student newsletter lives in `content/email-newsletter/`: README (cadence, format, MailerLite build guide, deliverability), dated issue files ready to paste into MailerLite, and the topic bank for future issues. Cadence is every Sunday 5pm UK, students only (parents group always excluded), sent from Waleed@alevelaccelerators.com. It is the "one email a week" the post-diagnostic sequence promises, so its existence is a commitment: sessions that change offers, dates or pages should check whether a drafted issue mentions them. Waleed approves every issue before it sends. Key date fact: A-level results day 2026 is Thursday 13 August (JCQ), not 14 August as some older docs said.
 
+## Partnerships (research and outreach)
+
+Growth through partnerships is a standing play: established education companies with big audiences, offered something they do not currently have. The repeatable process is the `partnership-outreach` skill (`.claude/skills/partnership-outreach/`): point it at a company and it produces a sourced dossier, a designed trade, a named decision maker with routes, and a draft email. Hard rules: nothing is ever sent (Waleed approves and sends everything himself), no invented numbers (estimates carry their basis and date), and the research goes in front of Waleed before the email is treated as final. Outputs live in `content/partnerships/<company-slug>/` with an index in `content/partnerships/README.md`. Outreach credibility assets (The Medic Life, PasTest, r/A-levels) live in the skill's `references/assets-and-trades.md`, not in content-studio. First target researched: Physics & Maths Tutor (PMT Education), 13 July 2026, awaiting Waleed's review.
+
 ## Automatic upkeep (standing rule, applies to every session)
 
 Waleed prefers automatic updates to memory, skills, and features over being asked to maintain them. Concretely:
