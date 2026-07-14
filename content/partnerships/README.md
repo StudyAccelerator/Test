@@ -11,4 +11,4 @@ Each target gets `content/partnerships/<company-slug>/` containing:
 
 | Target | Folder | Researched | Status |
 | --- | --- | --- | --- |
-| Physics & Maths Tutor (PMT Education) | `physicsandmathstutor/` | 13 July 2026 | Dossier and draft email awaiting Waleed's review. Nothing sent. |
+| Physics & Maths Tutor (PMT Education) | `physicsandmathstutor/` | 13 July 2026 | Dossier and draft email v2 (give-first framework) awaiting Waleed's review. Nothing sent. |

@@ -64,15 +64,15 @@ Find the person who can say yes to this specific trade. Founder-led company: the
 
 ### 5. Draft the email
 
-The email gets a call, nothing more. Rules:
+The email gets a call, nothing more. Its structure is the give-first framework in `references/email-framework.md`, distilled from Daniel Priestley, Alex Hormozi, Mark Tilbury and Steven Bartlett. Read that file before drafting; it is the default for all outreach. The short version:
 
-- Under 160 words. One idea, one concrete first step, one small ask (15 to 20 minutes, he fits around their diary).
-- The first line is about them, and specific enough that no other company could receive the same email. No flattery padding, no "I hope this finds you well", no "huge fan of what you do".
-- One credibility line drawn from the approved record. Never the CV, never a grades claim.
-- If there is competitor overlap, include the conflict-killer (method only, no selling, they keep the recordings: whatever makes the no harder).
-- Waleed's voice throughout: contractions, short sentences, direct address, plain words.
-- Two or three subject line options. Plain and specific beats clever. No "quick question".
-- Deliver alongside the email: a LinkedIn note version, one follow-up nudge (four or five working days later, two or three sentences, gives them a clean way to say no), and a pre-send checklist for Waleed (verify the address, send morning midweek from Waleed@alevelaccelerators.com, one link maximum, log the send in the README index).
+- **Do the work first.** The offered thing exists before the email does (a one-page outline, a plan with dates), and it goes in the output file as a ready-to-send appendix.
+- **The five moves, in order: Gift, Receipts, Trade, Window, Ask.** Open with their win and the thing you are giving them. Never open with their problem or gap: that analysis stays in the dossier and surfaces on the call.
+- Receipts are one or two lines of names and numbers from the approved record. Never the CV, never a grades claim.
+- The trade carries the risk removal (they approve everything, they keep the assets, no selling) and kills the obvious objection in one clause.
+- One small ask (15 minutes, he fits around their diary) followed by the easy no ("one line back and I'll leave it there").
+- Under 160 words, Waleed's voice throughout (read `.claude/skills/content-studio/references/brand-voice.md` first), two or three subject options of three to six plain words.
+- Deliver alongside the email: the made thing as an appendix, a LinkedIn note version under 300 characters, the day 4 and day 10 follow-ups per the framework, and a pre-send checklist for Waleed (verify the address, send morning midweek from Waleed@alevelaccelerators.com, one link maximum, log the send in the README index).
 
 ### 6. Deliver
 
