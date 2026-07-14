@@ -63,7 +63,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'competitors', 'history']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -177,7 +177,12 @@ async function fetchMailerlite() {
 }
 
 async function fetchStripe() {
-  if (!STRIPE_KEY) return { pending: true }
+  /* Until a restricted key exists, serve the last real snapshot a Claude
+     session pulled through the Stripe connector, clearly dated. */
+  if (!STRIPE_KEY) {
+    const snap = readStore('stripe-snapshot', null)
+    return snap ? { snapshot: snap } : { pending: true }
+  }
 
   const call = async (pathname) => {
     const res = await fetch(`https://api.stripe.com/v1${pathname}`, {
@@ -345,13 +350,18 @@ async function handleApi(req, res, url) {
   }
 
   if (seg[1] === 'connections') {
+    const has = (name, test) => {
+      const v = readStore(name, null)
+      return v && (!test || test(v))
+    }
     return sendJson(res, 200, {
       mailerlite: ML_KEY ? 'live' : 'pending',
-      stripe: STRIPE_KEY ? 'live' : 'pending',
+      stripe: STRIPE_KEY ? 'live' : has('stripe-snapshot') ? 'snapshot' : 'pending',
       site: 'live',
-      linkedin: 'manual',
-      facebook: 'pending',
-      gmail: 'pending',
+      linkedin: has('linkedin', (v) => v.extractedAt) ? 'extracted' : 'manual',
+      facebook: has('facebook', (v) => v.extractedAt) ? 'extracted' : 'pending',
+      gmail: has('gmail') ? 'extracted' : 'pending',
+      calendar: has('calendar') ? 'extracted' : 'pending',
       bank: 'pending',
     })
   }

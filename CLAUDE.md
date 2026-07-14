@@ -30,11 +30,13 @@ The marketing site and lead-magnet tools for A-Level Accelerators, Waleed Ahmad'
 
 Waleed's business command centre lives in `dashboard/` in this repo. Run it with `npm run hq` (or the `hq-dashboard` entry in `.claude/launch.json`), open http://127.0.0.1:4400. Zero npm dependencies, binds to localhost only, and it is NEVER deployed or linked from the public site.
 
-- Live sources: MailerLite (reuses the key in `lib/mailerlite.ts`; subscribers, groups, automation on/off states, campaign rates) and a site uptime ping plus last-deploy git info. One real snapshot per day accumulates in `dashboard/data/history.json` for the growth trend.
-- Pending sources, clearly labelled in the UI: Stripe (needs a read-only restricted key in `dashboard/.env` as `STRIPE_KEY`), Gmail (needs Waleed's one-off OAuth), Facebook ads (nothing to measure until ads run), bank (optional).
-- The honesty rule is load-bearing: no invented or placeholder numbers, ever. Unconnected sources show pending states. LinkedIn is a manual post log because LinkedIn has no personal analytics API.
-- `dashboard/data/` (Waleed's tasks, costs, logs, history) and `dashboard/.env` are gitignored: personal data never reaches GitHub. `dashboard/seed/` holds committed defaults, copied to `data/` on first run.
-- The competitor radar seed was researched 12 July 2026 with per-count sources. To refresh it, verify counts against real sources and update `dashboard/seed/competitors.json` and the `data/` copy; never type in guessed numbers.
+- Live sources: MailerLite (reuses the key in `lib/mailerlite.ts`; subscribers, groups, automation on/off states, campaign rates) and a site uptime ping plus last-deploy git info (origin/main, flags unpushed commits). One real snapshot per day accumulates in `dashboard/data/history.json` for the growth trend.
+- Extracted sources (real numbers pulled by a Claude session into gitignored `dashboard/data/` stores, each dated in the UI): Stripe via Waleed's Stripe connector (`stripe-snapshot.json`: balance, full payment history, monthly revenue), his own LinkedIn analytics via his logged-in Chrome (`linkedin.json`: every post with exact impressions), Facebook page state (`facebook.json`), business Gmail digest (`gmail.json`, feeds triage), and calendar week (`calendar.json`). Refresh any of them on request; the UI says when each was extracted.
+- Still pending: always-on Stripe (needs a read-only restricted key in `dashboard/.env` as `STRIPE_KEY`; the snapshot serves meanwhile), Facebook ad metrics (nothing to measure until ads run), bank (optional).
+- The honesty rule is load-bearing: no invented or placeholder numbers, ever. Unconnected sources show pending states, extracted ones show their date.
+- `dashboard/data/` (Waleed's tasks, costs, logs, history, extracts) and `dashboard/.env` are gitignored: personal data never reaches GitHub. `dashboard/seed/` holds committed defaults, copied to `data/` on first run.
+- The competitor radar was deep-researched 12 to 14 July 2026 by parallel agents with an adversarial fact-check pass (Up Learn fully verified; MyEdSpace, PMT, Save My Exams, Seneca single-pass with sources; SnapRevise and Tailored Tutors blocked by the account spend limit). Committed in `dashboard/seed/competitors.json`. To refresh, verify counts against real sources; never type in guessed numbers.
+- The UI is sectioned and colour-coded (Today coral, Money green, Audience gold, Content blue, Operations lavender, Market rose) with tables and hand-rolled SVG charts. Keep new panels inside this system.
 
 ## Business audit (13 July 2026)
 
