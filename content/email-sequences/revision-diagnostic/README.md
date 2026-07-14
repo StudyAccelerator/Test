@@ -44,6 +44,8 @@ The three variants make three different cases on purpose:
 
 Every use in these emails carries a fallback, written as `{$field|default('...')}`, and the copy is worded so the fallback reads naturally. One quirk to know: when a student answers "Not sure" to the worry-subject question, the site now stores the field as **empty** (deliberately), so the `default('your weakest subject')` fallback fires and the grammar survives. An empty `diag_worry_subject` in the CRM therefore means "student wasn't sure", not missing data.
 
+Two later additions (14 July 2026), not yet used in these emails: the gate now also captures an optional **phone** (built-in field) and **`diag_taker`** ("student" or "parent", empty when not answered). Both are only sent when given, so blanks never overwrite stored values. `diag_taker` matters for the future: these 16 emails are written to the student, and a parent-taker variant is a known gap. Until one exists, parents receive the student-addressed emails, which the site warns them about at the gate ("read it together"). Phone numbers are for call follow-up, and the gate promises "used for that, nothing else": no SMS marketing against this field without changing that promise first.
+
 ### Two placeholders to check at send time
 
 - Summer copy references the live cohort without hard dates except where the site itself does. If the sales page dates change, S3/S5 stay true as written.

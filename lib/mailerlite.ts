@@ -32,6 +32,10 @@ export function routeGroupId(route: string): string {
 export interface DiagnosticSubscriber {
   email: string
   name: string
+  /* Optional at the gate: cleaned digits, or '' when not given */
+  phone: string
+  /* 'student' | 'parent' | '' when not answered */
+  taker: string
   yearGroup: string
   subjects: string
   worrySubject: string
@@ -49,6 +53,12 @@ export type SubscribeResult = 'ok' | 'invalid-email' | 'network-error'
 
 export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<SubscribeResult> {
   try {
+    /* phone and diag_taker are only sent when given, so a retake with the
+       fields left blank never wipes values already stored on the subscriber */
+    const optional: Record<string, string> = {}
+    if (sub.phone) optional.phone = sub.phone
+    if (sub.taker) optional.diag_taker = sub.taker
+
     const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
       method: 'POST',
       headers: {
@@ -58,6 +68,7 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
       body: JSON.stringify({
         email: sub.email,
         fields: {
+          ...optional,
           name: sub.name,
           year_group: sub.yearGroup,
           subjects: sub.subjects,

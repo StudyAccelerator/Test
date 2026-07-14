@@ -273,16 +273,19 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
             </HeroFade>
             <h1 className="mt-6 font-serif font-bold tracking-tight leading-[1.05] text-4xl sm:text-5xl lg:text-[3.6rem] text-brand-purple">
               <HeroHeadline>
-                <HeroWord>Find</HeroWord> <HeroWord>out</HeroWord> <HeroWord>where</HeroWord>{' '}
-                <HeroWord>your</HeroWord> <HeroWord>marks</HeroWord> <HeroWord>are</HeroWord>{' '}
-                <HeroWord className="italic text-brand-gold">leaking.</HeroWord>
+                <HeroWord>Frustrated</HeroWord> <HeroWord>by</HeroWord> <HeroWord>marks</HeroWord>{' '}
+                <HeroWord>that</HeroWord> <HeroWord>don&apos;t</HeroWord> <HeroWord>match</HeroWord>{' '}
+                <HeroWord className="italic text-brand-gold">the hours?</HeroWord>
               </HeroHeadline>
             </h1>
             <HeroFade delay={0.45}>
-              <p className="mt-6 text-lg md:text-xl text-brand-text/75 leading-relaxed max-w-xl">
-                20 honest questions. About 4 minutes. You get your revision profile, a score for the five systems
-                behind every top grade, the number of weekly hours you are likely wasting, and a personalised plan
-                for what to fix first.
+              <p className="mt-6 text-lg md:text-xl text-brand-text/80 leading-relaxed max-w-xl">
+                You&apos;re putting the work in. Or you&apos;re watching your teenager put it in, night after
+                night, and the grade still won&apos;t move. Effort was never the problem. Where it goes is.
+              </p>
+              <p className="mt-4 text-base md:text-lg text-brand-text/65 leading-relaxed max-w-xl">
+                20 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
+                then hands you your revision profile and a plan for what to fix first.
               </p>
             </HeroFade>
             <HeroFade delay={0.55}>
@@ -297,7 +300,8 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
                 </button>
               </div>
               <p className="mt-4 text-sm text-brand-text/55">
-                No right answers. Just honest ones. Your report is ready in about 4 minutes.
+                No right answers. Just honest ones. Parents: you can take it for your child. Answer as they
+                actually revise, not as you hope they do.
               </p>
             </HeroFade>
           </div>
@@ -494,7 +498,8 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
               You can&apos;t fix a leak <span className="italic text-brand-gold">you can&apos;t see.</span>
             </h2>
             <p className="mt-6 text-lg text-brand-cream/80 leading-relaxed max-w-xl mx-auto">
-              Four minutes of honesty now saves you a summer of revision that feels productive and moves nothing.
+              Four minutes of honesty now saves a whole summer of revision that feels productive and moves
+              nothing.
             </p>
             <button
               type="button"
@@ -604,7 +609,9 @@ function AnimatedDots() {
 function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: string) => void }) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  const [taker, setTaker] = useState<'student' | 'parent' | null>(null)
   const failCount = useRef(0)
+  const phoneWarned = useRef(false)
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -612,6 +619,7 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     const data = new FormData(e.currentTarget)
     const name = (data.get('firstName') as string).trim()
     const email = (data.get('email') as string).trim()
+    const phoneRaw = ((data.get('phone') as string) ?? '').trim()
 
     if (!name) {
       setError('Pop your first name in so the report knows who it belongs to.')
@@ -621,6 +629,15 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
       setError('That email does not look right. Check for typos.')
       return
     }
+    /* Phone stays optional and never blocks the report: one gentle nudge on a
+       number that looks mistyped, then the report opens regardless. */
+    const phoneClean = phoneRaw.replace(/[\s().-]/g, '')
+    const phoneValid = phoneClean === '' || /^\+?\d{7,15}$/.test(phoneClean)
+    if (!phoneValid && !phoneWarned.current) {
+      phoneWarned.current = true
+      setError('That phone number looks incomplete. Fix it or clear the box. Your report opens either way.')
+      return
+    }
 
     setSubmitting(true)
     const d = diagnose(answers)
@@ -628,6 +645,8 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     const result = await subscribeDiagnostic({
       email,
       name,
+      phone: phoneValid ? phoneClean : '',
+      taker: taker ?? '',
       yearGroup: yearLabel(answers.year as string),
       subjects: ((answers.subjects as string[]) ?? []).join(', '),
       /* Empty when unsure so MailerLite merge defaults can fire ({$diag_worry_subject|default('...')}) */
@@ -714,9 +733,41 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
           </p>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-4">
+            <fieldset>
+              <legend className="block text-sm font-bold text-brand-cream/85 mb-1.5">
+                Who&apos;s filling this in?
+              </legend>
+              <div className="flex gap-2.5">
+                {(
+                  [
+                    ['student', 'The student'],
+                    ['parent', 'A parent'],
+                  ] as const
+                ).map(([value, label]) => (
+                  <button
+                    key={value}
+                    type="button"
+                    onClick={() => setTaker(value)}
+                    aria-pressed={taker === value}
+                    className={`flex-1 rounded-xl border-2 px-4 py-3 text-sm font-bold transition ${
+                      taker === value
+                        ? 'border-brand-gold bg-brand-gold/15 text-brand-gold'
+                        : 'border-white/10 bg-white/[0.06] text-brand-cream/75 hover:border-white/25'
+                    }`}
+                  >
+                    {label}
+                  </button>
+                ))}
+              </div>
+              {taker === 'parent' && (
+                <p className="mt-2 text-xs text-brand-cream/55 leading-relaxed">
+                  The report and emails come to you. The report is written to the student, so read it together.
+                </p>
+              )}
+            </fieldset>
             <div>
               <label htmlFor="diag-name" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
-                First name
+                {taker === 'parent' ? 'Your first name' : 'First name'}
               </label>
               <input
                 id="diag-name"
@@ -743,6 +794,24 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
                 placeholder="your@email.com"
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
+            </div>
+            <div>
+              <label htmlFor="diag-phone" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
+                Phone number <span className="font-normal text-brand-cream/50">(optional)</span>
+              </label>
+              <input
+                id="diag-phone"
+                name="phone"
+                type="tel"
+                inputMode="tel"
+                maxLength={20}
+                autoComplete="tel"
+                placeholder="07..."
+                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
+              />
+              <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
+                Add one if you&apos;d like to talk the report through. Used for that, nothing else.
+              </p>
             </div>
 
             {error && (

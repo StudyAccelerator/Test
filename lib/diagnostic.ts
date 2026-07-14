@@ -1048,6 +1048,10 @@ export const LANDING_FAQS = [
     a: 'A-level students: Year 12, Year 13, resitters, and anyone starting sixth form in September. The questions adapt to where you are, and so does the recommendation at the end.',
   },
   {
+    q: 'Can I take it for my son or daughter?',
+    a: 'Yes, plenty of parents do. Answer each question the way your child actually revises, honest rather than hopeful, and the diagnosis holds. The report is written to the student, so the best move is to read it together. It starts a much better conversation than asking whether they have revised.',
+  },
+  {
     q: 'Will you tell me my revision is fine?',
     a: 'If it is, yes. One of the seven profiles is The Optimiser, and if you land there the report says so and shows you how to sharpen rather than fix. Honesty is the whole point of a diagnostic.',
   },
