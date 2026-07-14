@@ -280,8 +280,8 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
             </h1>
             <HeroFade delay={0.45}>
               <p className="mt-6 text-lg md:text-xl text-brand-text/80 leading-relaxed max-w-xl">
-                You&apos;re putting the work in. Or you&apos;re watching your teenager put it in, night after
-                night, and the grade still won&apos;t move. Effort was never the problem. Where it goes is.
+                Even though you&apos;re putting the work in. Or watching your teenager put it in, night after
+                night. Effort was never the problem. Where it goes is.
               </p>
               <p className="mt-4 text-base md:text-lg text-brand-text/65 leading-relaxed max-w-xl">
                 20 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
@@ -340,7 +340,7 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
               {(
                 [
                   ['9.4%', 'of UK A-level entries were an A* last summer. The offers worth chasing usually want at least one.', false],
-                  ['1 in 5', 'UK 18 year olds with a results day decision missed their first-choice university last year.', false],
+                  ['29%', 'of UK university students win a place at a Russell Group university. The competitive courses inside them take far fewer.', false],
                   ['1,000+', 'A-level students Dr Waleed has helped towards top grades and first-choice offers.', true],
                 ] as const
               ).map(([stat, caption, ours]) => (
@@ -357,11 +357,9 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
               ))}
             </div>
             <p className="mt-6 text-center text-[15px] md:text-base text-brand-text/75 leading-relaxed max-w-2xl mx-auto">
-              That gap, between the grades you have and the grades your offer needs, closes with a system, not
-              more hours. The diagnostic measures your gap in 4 minutes and gives you the plan to close it.
-            </p>
-            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-brand-text/40">
-              JCQ, summer 2025 · UCAS, results day 2025
+              Don&apos;t be in the 90.6% who miss the A*, or the 71% who never get a Russell Group place. That
+              gap closes with a system, not more hours. The diagnostic measures yours in 4 minutes and gives
+              you the plan to close it.
             </p>
           </div>
         </section>
