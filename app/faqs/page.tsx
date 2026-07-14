@@ -4,7 +4,7 @@ import FAQItem from '@/components/ui/faq-item'
 import { HeroHeadline, HeroWord } from '@/components/home/hero-reveal'
 
 export const metadata = {
-  title: 'FAQs | A-Level Accelerators',
+  title: 'FAQs',
   description:
     'Answers to common questions from students and parents about A-Level Accelerators: our live courses, pricing, tutors, exam boards, results and refunds.',
   alternates: { canonical: 'https://alevelaccelerators.com/faqs/' },

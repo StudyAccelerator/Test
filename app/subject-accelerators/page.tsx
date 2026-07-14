@@ -6,7 +6,7 @@ import FAQItem from '@/components/ui/faq-item'
 import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
 
 export const metadata = {
-  title: 'A-Level Accelerators - Live 12-Week Exam Programs',
+  title: 'Live 12-Week A-Level Exam Programmes',
   description: 'Boost your A-Level Biology, Chemistry, and Maths performance with Subject Accelerators. Gain expert guidance, targeted revision, and exam-focused learning.',
   alternates: { canonical: 'https://alevelaccelerators.com/subject-accelerators/' },
 }

@@ -176,6 +176,7 @@ export default function Page() {
       </P>
 
       <CourseCTA
+        href="/subject-accelerators"
         heading="See what specialist-led group teaching looks like"
         body="A-Level Accelerators runs live online programmes in Biology, Chemistry, Maths and Physics. Small groups, exam-question-first teaching, led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
         label="See Our A-Level Courses"

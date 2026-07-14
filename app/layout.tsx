@@ -1,4 +1,6 @@
 import type { Metadata } from "next"
+import { Analytics } from "@vercel/analytics/next"
+import MetaPixel from "@/components/meta-pixel"
 import "./globals.css"
 
 const SITE_URL = "https://alevelaccelerators.com"
@@ -61,6 +63,21 @@ export const metadata: Metadata = {
     siteName: "A-Level Accelerators",
     type: "website",
     url: "https://alevelaccelerators.com",
+    images: [
+      {
+        url: "/og-default.png",
+        width: 1200,
+        height: 630,
+        alt: "A-Level Accelerators: top grades are a system, not a talent.",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "A-Level Accelerators | Live Online A-Level Courses & Tutoring",
+    description:
+      "Live online A-level courses in Biology, Chemistry, Maths and Physics, led by Dr Waleed Ahmad, MBBS, plus free revision tools.",
+    images: ["/og-default.png"],
   },
 }
 
@@ -81,7 +98,11 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(educationalOrgSchema) }}
         />
       </head>
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+        <MetaPixel />
+      </body>
     </html>
   )
 }

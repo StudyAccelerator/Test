@@ -226,6 +226,7 @@ export default function Page() {
       </P>
 
       <CourseCTA
+        href="/subject-accelerators"
         heading="Want your predictions to take care of themselves?"
         body="Our small-group A-level courses in Biology, Chemistry, Maths and Physics are built around exactly this: mastering the high-yield topics and exam technique that move real assessment results, which is what moves predictions. Taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
         label="See Our A-Level Courses"

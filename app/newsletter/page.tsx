@@ -7,7 +7,7 @@ import NewsletterSignup from '@/components/newsletter-signup'
 const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/60'
 
 export const metadata: Metadata = {
-  title: 'The Sunday Session: free weekly A-level newsletter | A-Level Accelerators',
+  title: 'The Sunday Session: free weekly A-level newsletter',
   description:
     'One thing school never taught you, every Sunday at 5pm. A free weekly email for A-level students from Dr Waleed Ahmad: one revision method per issue, usable that evening.',
   alternates: { canonical: 'https://alevelaccelerators.com/newsletter/' },

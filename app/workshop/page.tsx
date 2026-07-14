@@ -3,7 +3,7 @@ import { ScrollFade } from '@/components/ui/scroll-fade'
 import WorkshopForm from './workshop-form'
 
 export const metadata = {
-  title: 'Free Top 1% Study Systems Workshop | A-Level Accelerators',
+  title: 'Free Top 1% Study Systems Workshop',
   description:
     'Free live workshop for A-Level students. Learn how to stay on top of your workload, avoid burnout and study like the top 1%. Live on Zoom with time for your questions.',
   alternates: { canonical: 'https://alevelaccelerators.com/workshop/' },
@@ -62,12 +62,7 @@ export default function WorkshopLanding() {
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-8 justify-center items-center text-base md:text-lg mb-10">
             <div className="flex items-center gap-2">
               <span className="text-brand-gold">📅</span>
-              <span><strong>Saturday 2nd May</strong></span>
-            </div>
-            <div className="hidden sm:block w-px h-6 bg-brand-gold opacity-40" />
-            <div className="flex items-center gap-2">
-              <span className="text-brand-gold">🕙</span>
-              <span><strong>10:00am</strong> (London time)</span>
+              <span><strong>New date announced soon</strong></span>
             </div>
             <div className="hidden sm:block w-px h-6 bg-brand-gold opacity-40" />
             <div className="flex items-center gap-2">
@@ -82,7 +77,7 @@ export default function WorkshopLanding() {
           >
             Reserve My Free Spot →
           </a>
-          <p className="text-sm opacity-80 mt-4">Limited spots, workshop runs live online.</p>
+          <p className="text-sm opacity-80 mt-4">Reserve your spot now and we&apos;ll email you the next date and the Zoom link.</p>
         </div>
       </section>
 
@@ -197,7 +192,7 @@ export default function WorkshopLanding() {
                 Reserve Your Free Spot
               </h2>
               <p className="text-lg opacity-90">
-                Saturday 2nd May · 10:00am London · Live on Zoom
+                Live on Zoom · Reserve your spot and we&apos;ll send you the next date and joining link
               </p>
             </div>
 

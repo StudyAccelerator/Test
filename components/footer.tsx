@@ -37,6 +37,7 @@ export default function Footer() {
                 <li><a href="/A-Level-Accelerators-Blurting-Template.pdf" className="text-brand-gold hover:text-white transition">Blurting Template</a></li>
                 <li><a href="/newsletter" className="text-brand-gold hover:text-white transition">The Sunday Session</a></li>
                 <li><a href="/parents" className="text-brand-gold hover:text-white transition">Free Parents&apos; Guide</a></li>
+                <li><a href="/workshop" className="text-brand-gold hover:text-white transition">Free Workshop</a></li>
               </ul>
             </div>
             <div>
@@ -45,6 +46,8 @@ export default function Footer() {
                 <li><a href="/faqs" className="text-brand-gold hover:text-white transition">FAQs</a></li>
                 <li><a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a></li>
                 <li><a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition">Book a Free Call</a></li>
+                <li><a href="/privacy" className="text-brand-gold hover:text-white transition">Privacy Policy</a></li>
+                <li><a href="/terms" className="text-brand-gold hover:text-white transition">Terms</a></li>
               </ul>
             </div>
           </div>
