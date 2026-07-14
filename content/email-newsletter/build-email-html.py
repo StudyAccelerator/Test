@@ -59,10 +59,7 @@ def build(fname, campaign_name):
     body = body.strip()
     paras = [para_html(b) for b in re.split(r'\n\s*\n', body) if b.strip()]
     subline = 'Results morning special' if special else 'One thing school never taught you. Every Sunday, 5pm.'
-    h = f'''<!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{html.escape(subject)}</title></head>
-<body style="margin:0;padding:0;background:#ffffff;">
-<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">{html.escape(preheader)}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
+    h = f"""<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">{html.escape(preheader)}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;"><tr><td align="center">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;"><tr><td style="padding:32px 24px 40px 24px;">
 <p style="margin:0 0 4px 0;font-family:Georgia,'Times New Roman',serif;font-size:24px;color:#2E2557;">The Sunday Session</p>
@@ -74,8 +71,7 @@ Dr Waleed Ahmad, MBBS &middot; A-Level Accelerators &middot; <a href="https://al
 You're getting this because you signed up at alevelaccelerators.com (the diagnostic, the tracker or a workshop).<br>
 <a href="{{$unsubscribe}}" style="{LINK_STYLE}">Unsubscribe</a></p>
 </div>
-</td></tr></table></td></tr></table>
-</body></html>'''
+</td></tr></table></td></tr></table>"""
     out = f'{OUT}/{fname.replace(".md", ".html")}'
     open(out, 'w').write(h)
     return {'campaign_name': campaign_name, 'subject': subject, 'preheader': preheader, 'html_file': out, 'source': fname}
