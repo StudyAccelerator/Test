@@ -334,6 +334,35 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
                 first, then fix the right thing. This is the exact audit I run with my own students.&rdquo;
               </p>
             </div>
+
+            {/* The gap, in numbers */}
+            <div className={`${CARD} mt-6 grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-brand-purple/[0.08]`}>
+              {(
+                [
+                  ['9.4%', 'of UK A-level entries were an A* last summer. The offers worth chasing usually want at least one.', false],
+                  ['1 in 5', 'UK 18 year olds with a results day decision missed their first-choice university last year.', false],
+                  ['1,000+', 'A-level students Dr Waleed has helped towards top grades and first-choice offers.', true],
+                ] as const
+              ).map(([stat, caption, ours]) => (
+                <div key={stat} className="px-6 py-6 md:px-8 text-center sm:text-left">
+                  <p
+                    className={`font-serif font-bold text-4xl md:text-[2.6rem] leading-none ${
+                      ours ? 'text-brand-gold' : 'text-brand-purple'
+                    }`}
+                  >
+                    {stat}
+                  </p>
+                  <p className="mt-2.5 text-sm text-brand-text/65 leading-relaxed">{caption}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mt-6 text-center text-[15px] md:text-base text-brand-text/75 leading-relaxed max-w-2xl mx-auto">
+              That gap, between the grades you have and the grades your offer needs, closes with a system, not
+              more hours. The diagnostic measures your gap in 4 minutes and gives you the plan to close it.
+            </p>
+            <p className="mt-3 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-brand-text/40">
+              JCQ, summer 2025 · UCAS, results day 2025
+            </p>
           </div>
         </section>
       </ScrollFade>

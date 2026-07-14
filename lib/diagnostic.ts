@@ -1036,6 +1036,10 @@ export function yearLabel(id: string | undefined): string {
 /* Landing FAQs, shared by the page and its FAQPage structured data. */
 export const LANDING_FAQS = [
   {
+    q: 'Why should I take it?',
+    a: "Because I've seen where the marks actually go. I'm Dr Waleed, I got into medicine, and I've worked with over 1,000 A-level students. Marks leak in patterns, and the same seven profiles come up again and again. Take the diagnostic and I'll show you which one you are, where your marks are leaking, and exactly how to fix it.",
+  },
+  {
     q: 'Is it actually free?',
     a: 'Yes. The diagnostic, the report and the 7 day plan are free. You enter your email once, your report opens, and you also get my weekly revision email. Unsubscribe any time and the report stays yours.',
   },
