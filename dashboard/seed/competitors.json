@@ -1,79 +1,703 @@
 {
-  "researchedAt": "2026-07-12",
-  "note": "Researched 12 July 2026. Every count below was verified against the source linked on it that day. Counts that could not be verified say not counted rather than a guess.",
-  "synthesis": {
-    "summary": "The free-resource giants (Physics & Maths Tutor, Save My Exams, Seneca) own search traffic and notes, and the live-class space is contested by MyEdSpace, whose teacher-fronted TikTok accounts dwarf their brand account. Up Learn owns the money-back guarantee angle. Nobody in this list owns a diagnose-first method taught by a doctor, nobody is serious on LinkedIn for students, and nobody speaks to parents on Facebook with any care.",
-    "moves": [
-      "Stay loud on LinkedIn. None of these seven is active there for students. It is genuinely uncontested and it is already your channel.",
-      "Treat results day like MyEdSpace treats it, but in your voice: the Rescue tool plus calm doctor-led posts, pre-written well before 13 August, helping rather than selling that morning.",
-      "Person-fronted video beats brand-fronted video in this market. MyEdSpace's teacher account has roughly nine times the brand account's followers. Your equivalent is Waleed-fronted diagnosis clips, one per bottleneck.",
-      "Do not compete on notes or past papers against PMT and Save My Exams. Compete on method and accountability, which the resource giants do not sell.",
-      "Tailored Tutors shows a personal brand alone does not scale (864 followers). Your diagnostic funnel is the difference. Point every piece of content at it."
-    ],
-    "watchNext": [
-      "MyEdSpace's results day campaign in August",
-      "Up Learn's guarantee messaging around results week",
-      "Whether Save My Exams moves into live teaching"
-    ]
-  },
-  "watchlist": [
-    {
-      "name": "MyEdSpace",
-      "website": "https://www.myedspace.co.uk",
-      "positioning": "Live online classes at scale with teacher-fronted social accounts. Press coverage (Primary Times, Aug 2025) claims their teachers have over 4 million combined followers. The closest model to yours and the most aggressive marketer on results day.",
-      "channels": [
-        { "platform": "TikTok (brand)", "url": "https://www.tiktok.com/@myedspace", "followers": 6397, "followersAsOf": "2026-07-12", "source": "https://www.tiktok.com/@myedspace" },
-        { "platform": "TikTok (physics teacher)", "url": "https://www.tiktok.com/@myedspace_physics", "followers": 57700, "followersAsOf": "2026-07-12", "source": "https://www.tiktok.com/@myedspace_physics" }
-      ]
-    },
-    {
-      "name": "Up Learn",
-      "website": "https://uplearn.co.uk",
-      "positioning": "VC-backed A-level courses selling an A star or A guarantee with your money back, claiming use by over 100,000 students. Premium price, heavy on proof and outcome claims.",
-      "channels": [
-        { "platform": "Instagram", "url": "https://www.instagram.com/up.learn", "followers": 8585, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/up.learn/?hl=en" },
-        { "platform": "YouTube", "url": "https://www.youtube.com/@up_learn", "followers": null, "followersAsOf": null, "source": null }
-      ]
-    },
-    {
-      "name": "Physics & Maths Tutor",
-      "website": "https://www.physicsandmathstutor.com",
-      "positioning": "The default free revision resource site for A-level students, with a paid tuition arm bolted on. Owns enormous organic search traffic; social presence is thin and fragmented.",
-      "channels": [
-        { "platform": "TikTok", "url": "https://www.tiktok.com/@physicsmathstutor", "followers": null, "followersAsOf": null, "source": null }
-      ]
-    },
-    {
-      "name": "Save My Exams",
-      "website": "https://www.savemyexams.com",
-      "positioning": "Subscription revision notes covering every board and subject, written by examiners. Competes for the same searches your blog targets.",
-      "channels": [
-        { "platform": "Instagram", "url": "https://www.instagram.com/savemyexams", "followers": 64000, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/savemyexams/" }
-      ]
-    },
-    {
-      "name": "SnapRevise",
-      "website": "https://www.snaprevise.co.uk",
-      "positioning": "A-level and GCSE video courses. Pre-recorded rather than live, so weaker on accountability, which is your strength.",
-      "channels": [
-        { "platform": "YouTube", "url": "https://www.youtube.com/@SnapRevise", "followers": null, "followersAsOf": null, "source": null }
-      ]
-    },
-    {
-      "name": "Seneca Learning",
-      "website": "https://senecalearning.com",
-      "positioning": "Free interactive learning platform with a premium tier. Huge user base through schools, shallow on method.",
-      "channels": [
-        { "platform": "Instagram", "url": "https://www.instagram.com/senecalearning", "followers": 14000, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/senecalearning/" }
-      ]
-    },
-    {
-      "name": "Tailored Tutors",
-      "website": "https://www.tailoredtutors.co.uk",
-      "positioning": "A-level video courses and tutoring, strongest in Biology and Chemistry, fronted by a personal brand like yours but without a diagnostic funnel behind it.",
-      "channels": [
-        { "platform": "Instagram", "url": "https://www.instagram.com/tailoredtutors_uk", "followers": 864, "followersAsOf": "2026-07-12", "source": "https://www.instagram.com/tailoredtutors_uk/" }
-      ]
-    }
+ "researchedAt": "2026-07-14",
+ "note": "Deep research run 12 to 14 July 2026 by parallel agents with a fact-check pass. Up Learn is fully verified; the other briefs are single-pass research with sources on every number. Counts that could not be sourced say not counted.",
+ "synthesis": {
+  "summary": "Every big player sells content volume or outcome claims backed by money: Up Learn buys reach for its money back guarantee (7.5M to 10.2M view testimonial ads against organic posts in the hundreds), MyEdSpace fronts teacher personal brands and claims hard grade outcomes, and the resource giants own search. Nobody diagnoses before they prescribe, nobody serves parents beyond static blog guides, and nobody is on LinkedIn for students. Your genuine openings are the diagnose-first method, the parent channel, and calm doctor-led results day content.",
+  "moves": [
+   "Post on LinkedIn this week. The channel is uncontested, your last post was 1 June, and your own data shows story plus framework wins: the three-photos post hit 1,481 impressions and the pyramid 1,446, versus 308 to 542 for promos.",
+   "Own parent-facing results day video in the next four weeks. Every observed parent play in the niche is a static blog guide. A doctor on camera speaking to parents has no competitor, and it feeds the Parent Diagnostic and future Facebook ads.",
+   "Ship Results Day Rescue by 12 August and pre-write the calm results morning content. Up Learn and MyEdSpace both run results day campaigns that sell; yours helps first, which is the brand.",
+   "Fix email deliverability before the sequence scales: DMARC compliance is 0 percent per the 13 July report. The 16-email engine dies in spam otherwise.",
+   "Prepare the outcomes answer for 13 August. MyEdSpace already claims 67 percent A or A star in Physics. When your first real results land, publish verified outcomes fast; until then the honest no-claims line is a credibility contrast."
+  ],
+  "contentPlaybook": [
+   "Person-fronted beats brand-fronted everywhere in this niche: MyEdSpace grows through teacher personal brands, and your own three-photos story is your best post ever. Keep everything Waleed-fronted.",
+   "Framework graphics travel: the A star Performance Pyramid is your number two post. Make one graphic per diagnostic bottleneck and reuse them across channels.",
+   "Testimonial story ads work at scale (Up Learn ran student TikToks to 7.5M and 10.2M views as paid ads). Your organic version now is student story posts; the paid version waits for real results data.",
+   "Study-with-me demand is enormous but brand-light and cooling. A Sunday Session lock-in tied to the revision tracker borrows the demand and points it at owned tools."
+  ],
+  "watchNext": [
+   "MyEdSpace results day campaign in August, the loudest one in the niche",
+   "Up Learn results day prize campaign, running 14 August to 1 September",
+   "Whether Save My Exams moves into live teaching",
+   "SnapRevise and Tailored Tutors deep briefs, blocked this pass by the spend limit"
   ]
+ },
+ "niche": {
+  "summary": "Five weeks before results day (Thursday 13 August 2026), the UK A-level content niche is dominated by teacher-fronted explainer libraries on YouTube (Cognito reports roughly 2 million lesson views a month), high-volume study-with-me and lock-in content on TikTok, and exam technique breakdowns from credentialed teachers. Results day itself is owned by university clearing campaigns, restaurant freebies and student reaction UGC rather than by tutoring brands. Parents are served only by static blog guides (PMT, UCAS, gov.uk) with almost no video or community content, and no observed player uses LinkedIn for students, so A-Level Accelerators' two chosen channels sit in genuine gaps. One competitor, MyEdSpace, is now making hard grade-outcome claims, which raises the bar Waleed will need to answer with real data after August 2026.",
+  "formats": [
+   {
+    "format": "Teacher-fronted explainer video libraries on YouTube (full syllabus coverage, one topic per video)",
+    "evidence": "Cognito states 350,000 students on its platform, lessons viewed approximately 2 million times a month, and around 400 videos; Mr Bruff states his videos have surpassed 80 million views from 212 nations (both pages seen 2026-07-12). Search results also cited 453,000 subscribers for Mr Bruff (Grokipedia) and Freesciencelessons at over 800,000 subscribers, though those two counts were seen only in search snippets.",
+    "source": "https://www.cognitoedu.org/about-us.html and https://mrbruff.com/"
+   },
+   {
+    "format": "Study-with-me and lock-in content on TikTok (ambient revision, routines, accountability)",
+    "evidence": "Search results seen 2026-07-12 showed #study at over 2.7 million posts and 40.1 billion total views, #studywithme at 2.6 million posts and #studytok at 4.3 million posts. Fortune (September 2025) reported the Great Lock In trend with a claimed 56% of Gen Z signing up. Metricool's 2026 study notes TikTok video views fell 31.3% year on year, so the format is high volume but cooling.",
+    "source": "https://tiktokhashtags.com/hashtag/study/ and https://fortune.com/2025/09/11/what-is-the-great-lock-in-gen-z-millennial-hustle-culture-burnout/"
+   },
+   {
+    "format": "Exam technique and mark-scheme breakdowns from real subject teachers (short clips, predicted papers, common-mistake posts)",
+    "evidence": "MaChemGuy (A-level Chemistry teacher, OCR-endorsed channel) had 45,000 YouTube subscribers and over 10 million views as of June 2023 per a school resource page seen in search results, and 11.5K TikTok followers per his TikTok profile snippet (seen 2026-07-12). TikTok discover pages for predicted papers and unofficial mark schemes (for example Physics and Maths Tutor predicted paper mark schemes) show sustained student search demand, exact view counts null.",
+    "source": "https://www.tiktok.com/@machemguy and https://sites.google.com/hartlepoolsixth.ac.uk/year11getahead/machemguy"
+   },
+   {
+    "format": "Results-day reaction and clearing UGC (students opening results on camera, creator-led clearing explainers)",
+    "evidence": "TikTok maintains dedicated discover pages for A Level Results Day Reaction and multiple 2025 reaction vlogs exist on YouTube (view counts null, not verifiable via fetch). The best public numbers are from Uni Compare's creator-led TikTok clearing campaign (1 July to 17 August 2023): 54,380 installs, 32,239 registrations, CPI cut from 3.28 to 1.12 pounds, and 8th most downloaded app globally on results day.",
+    "source": "https://www.360om.agency/news-insights/tiktok-publishes-uni-compare-360-oms-award-winning-clearing-campaign-case-study"
+   },
+   {
+    "format": "Parent-targeted results day and A-level guides (long-form blog, not video)",
+    "evidence": "PMT Education published a parents' guide to A-level results day, last updated 7 January 2026, correctly citing Thursday 13 August 2026, and routing parents to PMT tutoring at the end. UCAS, gov.uk Education Hub (August 2025) and university clearing hubs (Sussex) run similar static guides. No public engagement numbers found for any of them (null), and no observed parent-facing video or community format from tutoring brands.",
+    "source": "https://www.pmt.education/blog/parents/parents-guide-to-a-level-results-day/"
+   }
+  ],
+  "resultsDayPlays": [
+   "Nando's ran its Results Day Dash again in August 2025: free quarter chicken or starter for students showing A-level or GCSE results, echoed by Las Iguanas (free churros, 5 to 22 August 2025), Frankie and Benny's (free pizza) and Wagamama (25% off, 14 to 20 August 2025). Source: https://www.nandos.co.uk/blog/results-day and https://www.hellorayo.co.uk/cool-fm/lifestyle/food-drink/nandos-results-day-dash-2025",
+   "Jeremy Clarkson posted his annual bad-grades reassurance tweet on 14 August 2025, the niche's biggest recurring organic moment. Source: https://www.lbc.co.uk/article/a-level-results-jeremy-clarkson-5Hjd95y_2/",
+   "Clearing 2025 (August 2025): universities leaned on student-fronted social video, for example University of Greenwich promoted a Priority Clearing phone line on TikTok, University of York told one student's near-miss story (Jay) across The Guardian, YouTube and Instagram, and University of Lincoln used humour and branded hoodies in student TikToks. Source: https://www.terminalfour.com/blog/posts/whos-cutting-through-the-noise-in-clearing-2025-examples-from-uk-universities.html",
+   "Uni Compare and agency 360OM ran a creator-led TikTok clearing campaign from 1 July to 17 August 2023 with 7 handpicked education creators and 10 video assets: 54,380 installs and the 8th most downloaded app globally on results day. TikTok later published it as an official case study. Source: https://www.360om.agency/news-insights/tiktok-publishes-uni-compare-360-oms-award-winning-clearing-campaign-case-study",
+   "PMT Education pre-positioned for the 2026 cycle early: its parents' guide to results day (Thursday 13 August 2026) was updated on 7 January 2026 and ends by routing parents to PMT tutoring. Source: https://www.pmt.education/blog/parents/parents-guide-to-a-level-results-day/",
+   "MyTutor's schools arm published results day preparation tips and pushed resit tutoring as the post-results offer (page seen 2026-07-12). Source: https://schools.mytutor.co.uk/blog/get-ready-results-day-top-tips-during-and-after",
+   "The Department for Education's Education Hub published Nine tips for supporting your child on results day in August 2025, confirming parents are treated as a results day audience by institutions but mostly via static text. Source: https://educationhub.blog.gov.uk/2025/08/nine-tips-for-supporting-your-child-on-results-day/"
+  ],
+  "opportunities": [
+   "Parents on video and in community: every observed parent play (PMT, UCAS, gov.uk, university clearing hubs) is a static blog guide. Nobody fronts a person parents can trust on camera. Waleed's doctor credibility plus the existing parents' guide PDF and planned Facebook channel could own parent-facing results day video in the 4 weeks before 13 August 2026.",
+   "LinkedIn for students is uncontested: no tutoring brand or teacher creator surfaced on LinkedIn in any search this scan. Waleed's student-facing LinkedIn channel has no visible direct competitor, so consistency there compounds.",
+   "Results day content for Year 12, not just Year 13: nearly all observed content targets students receiving grades or entering clearing. A 'what this results day should change about your Year 13' angle five weeks out has no visible owner and feeds the Summer Accelerator and September Subject Accelerators directly.",
+   "Method and systems content over syllabus coverage: explainer libraries (Cognito, Freesciencelessons, MaChemGuy) saturate topic teaching, but few creators own the how-to-study layer with a diagnostic, clinical framing. The revision diagnostic is a shareable format competitors do not have.",
+   "Honest positioning against grade claims: MyEdSpace publicly claims 67% of its A-level Physics students got A or A* versus 32% nationally (myedspace.co.uk, seen 2026-07-12). Until real results arrive on 13 August 2026, lean on method transparency; then publish verified outcomes fast, because the niche's loudest competitor is already fighting on outcomes.",
+   "Post-results resit audience direct to students: MyTutor pitches resit support through schools, but little creator content speaks to resitters or disappointed students directly in the fortnight after results day. A Clarkson-adjacent 'grades are a system failure, not a talent failure' message fits the brand line exactly.",
+   "Ride study-with-me volume without competing on it: study hashtags carry tens of billions of views but are brand-light and views are falling (Metricool reports a 31.3% TikTok view drop year on year). A structured accountability wrapper, for example a Sunday Session lock-in tied to the tracker, borrows the format's demand while pointing at owned tools."
+  ]
+ },
+ "watchlist": [
+  {
+   "name": "Up Learn",
+   "website": "https://uplearn.co.uk",
+   "positioning": "VC-backed London edtech (founded 2016 per Tracxn, 4.36m dollars raised over 2 seed rounds) selling self-study A-level and GCSE video courses built on cognitive science and AI. Positions entirely around the guarantee: \"A*/A or your money back\", claiming 97% of students who complete a course get A* or A, \"1 in 3\" A Level students using Up Learn, 600+ schools and over 50,000 scholarships (all four claims confirmed live on uplearn.co.uk on 12 July 2026).",
+   "offer": "Self-study video courses per subject in 6 A-level subjects (Economics, Maths, Chemistry, Physics, Psychology, Biology) plus GCSE Combined Science (AQA). A-level pricing confirmed on uplearn.co.uk/pricing on 12 July 2026: Up Core \u00a3319.99 or Up Master \u00a3419.99 per subject until 2027 exams; \u00a3549.98 or \u00a3694.98 until 2028 exams; monthly at \u00a374.99 or \u00a399.99. GCSE from \u00a349.99/month or \u00a3249.99 to \u00a3399.99 annual. Up Master adds 2 exam papers marked by experienced official examiners and unlimited one-to-one 24/7 tutor support (Core gets basic 24/7 online support). All plans carry the money-back grade guarantee (A*/A at A-level, \"8-8 or more\" at GCSE) and a 3-day free trial.",
+   "channels": [
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@up.learn",
+     "followers": 35500,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of tiktok.com/@up.learn seen 2026-07-12 (35.5K followers, 1.3M likes). The researcher's direct profile fetch the same day read 35,800, so the live figure sits between 35.5K and 35.8K; the snippet is the independently reproducible source. The 361 videos count is single-sourced from the researcher's fetch."
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/@up_learn",
+     "followers": 4390,
+     "followersAsOf": "2026-07-12",
+     "source": "https://socialcounts.org/youtube-live-subscriber-count/UCjbOCVqp-YIA2lRr0KsfCTA re-fetched 2026-07-12: 4,390 subscribers, 39,683,266 total channel views (39.68M, not 39.66M as first researched) across 136 videos, a paid-ads signature"
+    },
+    {
+     "platform": "LinkedIn",
+     "url": "https://www.linkedin.com/company/up-learn",
+     "followers": 8710,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of linkedin.com/company/up-learn, independently re-confirmed at 8,710 followers on 2026-07-12"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/up.learn/",
+     "followers": 8585,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of instagram.com/up.learn, independently re-confirmed on 2026-07-12: 8,585 followers, 563 posts"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/getuplearn/",
+     "followers": 1900,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of facebook.com/getuplearn seen 2026-07-12. An independent snippet the same day shows about 2K followers, consistent with 1.9K; the exact 1,900 and 1,999 likes figures are single-sourced at that precision"
+    }
+   ],
+   "topPosts": [
+    {
+     "platform": "TikTok",
+     "description": "Creator testimonial ad with student influencer Danirex: \"@Danirex getting Ds?! after using Up Learn? never\", posted 18 Sep 2025",
+     "url": "https://www.tiktok.com/@up.learn/video/7551369246975036694",
+     "metric": 10200000,
+     "metricType": "views",
+     "asOf": "2026-07-12",
+     "source": "Researcher's direct fetch of the video page JSON on 2026-07-12 (also 36,000 likes, 167 comments, 961 shares). Video existence and title confirmed via Google search on 2026-07-12; the view count itself is single-sourced as TikTok blocks direct re-fetching"
+    },
+    {
+     "platform": "TikTok",
+     "description": "Danirex testimonial \"Up Learn changed my life\", posted 1 Aug 2025",
+     "url": "https://www.tiktok.com/@up.learn/video/7533587026554162454",
+     "metric": 7500000,
+     "metricType": "views",
+     "asOf": "2026-07-12",
+     "source": "Researcher's direct fetch of the video page JSON on 2026-07-12. A Google snippet seen 2026-07-12 independently shows 25.1K likes and 132 comments for this video, matching the researcher's 25,100 likes, which corroborates the fetch; the 7.5M view count itself is single-sourced"
+    },
+    {
+     "platform": "TikTok",
+     "description": "Organic Easter post, 1 Apr 2026: study anywhere on one device. Shows their unboosted reach is tiny next to the ad numbers",
+     "url": "https://www.tiktok.com/@up.learn/video/7623732195106082070",
+     "metric": 715,
+     "metricType": "views",
+     "asOf": "2026-07-12",
+     "source": "Researcher's direct fetch of the video page JSON on 2026-07-12 (18 likes, 2 comments, 0 shares). Could not be independently re-checked; single-sourced"
+    }
+   ],
+   "contentThemes": [
+    "Student influencer testimonial ads (Danirex, Freya Amara) built on the grade transformation story",
+    "The money-back guarantee as the hook in nearly every caption and ad",
+    "Influencer discount codes worth \u00a325 off (TAHMID25 confirmed in coupon listings on 12 July 2026; the researched FREYA25 code from Feb 2025 could not be independently verified)",
+    "Convenience and study-anywhere framing (Easter and holiday posts, everything on one device)",
+    "Results day celebration content and prize campaigns for schools and students",
+    "B2B school content: teacher dashboards, webinars, MAT and trust features",
+    "Gimmick formats like \"Up Learn Wrapped\" (Spotify Wrapped parody, Dec 2023)"
+   ],
+   "recentMoves": [
+    "Apr 2026: still posting organic TikTok (Easter study-anywhere post) but reach is minimal at 715 views per the researcher's fetch (single-sourced), suggesting growth is paid, school-led and search-led rather than organic social",
+    "Jan 2026: 98 employees per Tracxn (as of 31 Jan 2026, confirmed), total funding 4.36m dollars over 2 seed rounds (1.2m plus 3.16m, Forward Partners lead, confirmed via Tracxn); no new funding round found in the last 6 months",
+    "2025/26 academic year: GCSE Combined Science (AQA) launched as their first move beyond A-level, sold from \u00a349.99/month with an \"8-8 or more\" money-back guarantee (confirmed live on the pricing page 12 July 2026)",
+    "27 Jun 2025 webinar (confirmed on uplearn.co.uk): 25/26 school platform push including teacher assignment tools, SSO, Cyber Essentials certification, parent progress emails, expanded Psychology content (Forensic Psychology and Relationships, the AQA Paper 3 options) and over 2,000 Maths questions reviewed, plus an Impact Report 2025",
+    "Aug to Sep 2025: heavy paid creator-style TikTok ads hit 7.5M and 10.2M views (single-sourced fetches, likes corroborated) on an account with around 35.5K followers",
+    "Results day: the \"Celebrate Results Day with Up Learn\" prize campaign page is live on uplearn.co.uk (confirmed 12 July 2026), running 14 August to 1 September with \u00a350 Amazon vouchers for three winners; the page claims a combined social reach of over 68,000 followers, which is their own marketing figure",
+    "Ongoing: Trustpilot confirmed at 4 stars from 871 reviews (12 July 2026); confirmed recurring complaints are errors in practice quizzes and slow tutor replies; the researched complaint about incomplete Biology and Psychology content was not re-verified and is single-sourced"
+   ],
+   "whatWorks": "The guarantee plus paid creator ads. \"A*/A or your money back\" is the entire pitch, and they buy reach for it: student influencer testimonial TikToks hit 7.5M to 10.2M views while their organic posts get a few hundred, and their YouTube shows 39.68M views against only 4,390 subscribers, the classic ad-traffic signature. The schools channel (600+ schools) compounds it.",
+   "ourAngle": "Do not fight the guarantee or the ad budget; fight the model. Up Learn is a faceless library of pre-recorded videos with no diagnosis of why a student is stuck, and its Trustpilot complaints (quiz errors, slow tutor replies, and per the researcher incomplete Biology and Psychology content) are exactly where a live doctor-founder teaching Biology and Chemistry wins. Position A-Level Accelerators as the opposite: diagnose first with the free revision diagnostic (their funnel has no equivalent), then live teaching from Dr Waleed rather than more videos to watch. On price, their self-study courses run \u00a3319.99 to \u00a3694.98 per subject, so live small-group programmes at similar money are an easy value story for parents on Facebook. Their organic social is weak everywhere (35.5K TikTok followers, 8.6K Instagram, 4.4K YouTube subs), so Waleed's founder-led LinkedIn and future Facebook content can out-engage them organically without matching spend. Copy one play: they own results day with a celebration campaign, so plan founder-led results day content for 13 August 2026, which is also the day A-Level Accelerators finally gets its own results data. Until then, honest \"no grade claims yet\" positioning contrasts credibly with a 97% claim that quietly applies only to students who complete the course.",
+   "sources": [
+    "https://uplearn.co.uk/",
+    "https://uplearn.co.uk/pricing/",
+    "https://www.tiktok.com/@up.learn",
+    "https://www.tiktok.com/@up.learn/video/7551369246975036694",
+    "https://www.tiktok.com/@up.learn/video/7533587026554162454",
+    "https://www.tiktok.com/@up.learn/video/7623732195106082070",
+    "https://socialcounts.org/youtube-live-subscriber-count/UCjbOCVqp-YIA2lRr0KsfCTA",
+    "https://www.youtube.com/@up_learn",
+    "https://www.instagram.com/up.learn/",
+    "https://www.linkedin.com/company/up-learn",
+    "https://www.facebook.com/getuplearn/",
+    "https://uplearn.co.uk/uplearn-new-features-25-26-academic-year/",
+    "https://uplearn.co.uk/celebrate-results-day-with-up-learn/",
+    "https://uk.trustpilot.com/review/uplearn.co.uk",
+    "https://help.uplearn.co.uk/en/articles/10534593-what-a-level-purchasing-options-are-available",
+    "https://tracxn.com/d/companies/uplearn/__eDoGiLqQzWVLNGOXriB2zyZ8eHCDmjN3zbuxYDAMlgE"
+   ],
+   "verifyNotes": [
+    "Confirmed all pricing exactly on uplearn.co.uk/pricing on 12 July 2026: Up Core \u00a3319.99 and Up Master \u00a3419.99 until 2027 exams, \u00a3549.98 and \u00a3694.98 until 2028, \u00a374.99 and \u00a399.99 monthly, GCSE \u00a349.99/month and \u00a3249.99 to \u00a3399.99 annual, both money-back guarantees live",
+    "Confirmed all four homepage marketing claims on uplearn.co.uk: 97% A*/A after completing a course, 1 in 3 A Level students, 600+ schools, over 50,000 scholarships, plus the 6 A-level subjects and GCSE Combined Science (AQA)",
+    "Confirmed YouTube via socialcounts.org re-fetch: 4,390 subscribers and 136 videos; corrected total channel views from 39.66M to 39.68M (39,683,266)",
+    "Corrected TikTok followers from 35,800 to 35,500: the profile blocks direct fetches and the independently reproducible Google snippet (12 July 2026) reads 35.5K; the 1.3M total likes figure was corroborated by the same snippet, the 361 videos count stays single-sourced",
+    "Confirmed LinkedIn 8,710 followers and Instagram 8,585 followers with 563 posts via fresh search snippets on 12 July 2026",
+    "Kept Facebook at 1,900: a fresh snippet shows about 2K followers, consistent with the researched 1.9K, but the exact figure is single-sourced",
+    "TikTok ad view counts (10.2M and 7.5M) could not be re-fetched directly; the 7.5M video's 25.1K likes matched an independent snippet exactly, corroborating the researcher's fetch, so both view counts are kept and flagged single-sourced; the Easter post's 715 views is kept single-sourced",
+    "Confirmed Trustpilot at 4 stars from 871 reviews via search snippet; confirmed complaints are quiz errors and slow tutor replies; the incomplete Biology and Psychology content complaint could not be re-verified and is now flagged as single-sourced",
+    "Confirmed Tracxn figures: 4.36m dollars total over 2 seed rounds (tightened from roughly 4.4m) and 98 employees as of 31 Jan 2026",
+    "Confirmed the 27 June 2025 webinar page and its feature list (SSO, Cyber Essentials, parent emails, over 2,000 Maths questions reviewed, Psychology Forensic and Relationships content)",
+    "Confirmed the results day campaign page is live and added its actual dates (14 August to 1 September) and prizes (\u00a350 Amazon vouchers); noted its 68,000 followers reach claim is Up Learn's own marketing figure",
+    "Could not verify the FREYA25 discount code anywhere; coupon aggregators list TAHMID25 for \u00a325 off, confirming the influencer code pattern, so the theme was reworded and FREYA25 flagged unverified"
+   ],
+   "verified": true
+  },
+  {
+   "name": "MyEdSpace",
+   "website": "https://myedspace.co.uk",
+   "positioning": "Venture-backed online school (founded 2022, $15m Series A in September 2025) selling live group lessons from \"the UK's top teachers\" across Year 5 to A-level, positioned as world-class education at a fraction of private tutoring cost. Growth is driven by teacher-fronted personal brands (NeilDoesMaths, LauraDoesBiology) rather than the corporate account, plus heavy results-stat marketing.",
+   "offer": "Live online group courses: two live lessons per subject per week (72 per year), workbooks, homework, recordings, delivered via YouTube livestream; a Pro tier adds a 1 to 1 personal mentor. Framing is \"just under \u00a35 per hour\" and \"\u00a32 to \u00a37 per hour\"; exact per-subject prices are not published on the site (a search snippet of their FAQ quoted full courses from \u00a3409 per subject per year, but this is not visible on the current pages). Also: \u00a310 for a 10-day trial, 14-day money-back guarantee, 20% sibling discount, free Summer School included, plus standalone Exam Masterclasses and a schools product.",
+   "channels": [
+    {
+     "platform": "TikTok (brand, @myedspace)",
+     "url": "https://www.tiktok.com/@myedspace",
+     "followers": 6480,
+     "followersAsOf": "2026-07-12",
+     "source": "Profile viewed live in browser at tiktok.com/@myedspace (6480 followers, 341.3K likes)"
+    },
+    {
+     "platform": "TikTok (subject, @myedspace_physics)",
+     "url": "https://www.tiktok.com/@myedspace_physics",
+     "followers": 60300,
+     "followersAsOf": "2026-07-12",
+     "source": "Profile viewed live in browser at tiktok.com/@myedspace_physics (60.3K followers, 692.9K likes)"
+    },
+    {
+     "platform": "TikTok (teacher, @neildoesmaths)",
+     "url": "https://www.tiktok.com/@neildoesmaths",
+     "followers": 217800,
+     "followersAsOf": "2026-07-12",
+     "source": "Profile viewed live in browser at tiktok.com/@neildoesmaths (217.8K followers, 4.3M likes)"
+    },
+    {
+     "platform": "Instagram (brand, @myedspace)",
+     "url": "https://www.instagram.com/myedspace/",
+     "followers": 50000,
+     "followersAsOf": "2026-07-12",
+     "source": "Instagram page meta description viewed live: 50K followers, 270 posts"
+    },
+    {
+     "platform": "Instagram (teacher, @neildoesmaths)",
+     "url": "https://www.instagram.com/neildoesmaths/",
+     "followers": 399000,
+     "followersAsOf": "2026-07-12",
+     "source": "Instagram page meta description viewed live: 399K followers, 824 posts"
+    },
+    {
+     "platform": "YouTube (@myedspace)",
+     "url": "https://www.youtube.com/@myedspace",
+     "followers": 7050,
+     "followersAsOf": "2026-07-12",
+     "source": "Channel page viewed live: 7.05k subscribers, 73 videos; subject channels 1.29k to 2.59k subscribers each"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/MyEdSpace/",
+     "followers": 11572,
+     "followersAsOf": "2026-07-12",
+     "source": "Facebook page meta description viewed live: 11,572 likes, 3,078 talking about this"
+    },
+    {
+     "platform": "LinkedIn",
+     "url": "https://www.linkedin.com/company/myedspace",
+     "followers": 8642,
+     "followersAsOf": "2026-07-12",
+     "source": "LinkedIn company page meta description viewed live: 8,642 followers"
+    }
+   ],
+   "topPosts": [
+    {
+     "platform": "TikTok (@myedspace)",
+     "description": "Mitosis meme dance with LauraDoesBiology and JoeDoesBiology teachers, posted 24 March 2025; their standout viral post",
+     "metric": 277200,
+     "metricType": "likes",
+     "url": "https://www.tiktok.com/@myedspace/video/7485460633756962055",
+     "asOf": "2026-07-12",
+     "source": "Video page viewed live in browser: 277.2K likes, 996 comments, 20.1K saves, 47.2K shares"
+    },
+    {
+     "platform": "TikTok (@neildoesmaths)",
+     "description": "A Level Maths, Integration in 60 seconds, whiteboard exam solve posted 4 February 2025; typical of the teacher-brand format",
+     "metric": 25000,
+     "metricType": "likes",
+     "url": "https://www.tiktok.com/@neildoesmaths/video/7467609725211790625",
+     "asOf": "2026-07-12",
+     "source": "Video page viewed live in browser: 25K likes, 267 comments, 2,274 saves, 1,058 shares"
+    },
+    {
+     "platform": "YouTube (@myedspace)",
+     "description": "Private Tutoring Quality Without the Private Tutoring Price, brand ad posted around mid June 2026; shows how weak their YouTube is versus TikTok",
+     "metric": 164,
+     "metricType": "views",
+     "url": "https://www.youtube.com/@myedspace",
+     "asOf": "2026-07-12",
+     "source": "Channel home page viewed live in browser: 164 views, posted 3 weeks ago"
+    }
+   ],
+   "contentThemes": [
+    "Teacher-fronted meme and trend videos on TikTok (teachers dancing, rating desserts, trend sounds) with the brand as backdrop",
+    "60-second exam question solves per subject (integration, vectors, normal distribution) on teacher accounts",
+    "Free lead magnets pushed in captions: 100+ free study notes, free Summer School, \u00a310 trial",
+    "Results-stat proof marketing: triple the national average of GCSE grade 9s, 51% of GCSE Maths grades 7 to 9, 4.8 Trustpilot",
+    "Cost comparison against private tutoring: under \u00a35 an hour versus \u00a360 to \u00a3100 an hour",
+    "Seasonal funnel discipline: every bio on every account currently points at one Summer School signup link"
+   ],
+   "recentMoves": [
+    "September 2025: raised $15m (about \u00a311.5m) Series A led by White Star Capital with Educapital, Emerge, Active Partners and Coalition Capital",
+    "September 2025: announced US launch and ran its first live US lesson; a @myedspace_us Instagram account now exists",
+    "August 2025: results round-up campaign claiming 16,000+ students and GCSE grade 9s at triple the national average",
+    "August 2025: press push rebooting Summer School for Gen Z and Gen Alpha, leaning on its TikTok teachers (Primary Times, The Educator)",
+    "July 2026: all social bios across every account funnel to the Summer School 2026 page (myedspace.co.uk/summerschool26 with per-channel tracking slugs)",
+    "Ongoing into 2026: standalone Exam Masterclasses product and a schools version (exammasterclasses.myedspace.co.uk, schools.myedspace.co.uk), plus a \u00a310 10-day trial offer"
+   ],
+   "whatWorks": "Teacher personal brands beat the corporate brand by 30 to 60 times: NeilDoesMaths has 399K Instagram followers and 217.8K TikTok followers while the MyEdSpace brand TikTok has 6,480, and their biggest viral hits are teachers doing trend formats, not course ads.",
+   "ourAngle": "Do not fight them on price, scale or TikTok volume; copy the one mechanic their own numbers prove: a named teacher's face outperforms a brand logo, and Waleed already is the named teacher with a doctor story MyEdSpace cannot match. Their weak flanks are exactly where A-Level Accelerators plays: YouTube is dead for them (7k subscribers, recent videos at 164 views), LinkedIn is corporate-only while Waleed's is student-facing, and they sell generic group lessons with no diagnose-first method, so the revision diagnostic is a differentiator they cannot copy quickly. Steal their funnel discipline for results day: every bio and page pointed at one seasonal offer with tracked links, applied to 13 August 2026 with Waleed's personal results-day story plus the diagnostic as the entry point. Note their proof-stat aggression (triple national average) for August 2026 when Waleed's first results data arrives.",
+   "sources": [
+    "https://myedspace.co.uk/",
+    "https://shop.myedspace.co.uk/",
+    "https://myedspace.co.uk/faq",
+    "https://checkout.myedspace.com/pages/myedspace-frequently-asked-questions",
+    "https://myedspace.co.uk/10-day-trial",
+    "https://www.tiktok.com/@myedspace",
+    "https://www.tiktok.com/@myedspace_physics",
+    "https://www.tiktok.com/@neildoesmaths",
+    "https://www.tiktok.com/@myedspace/video/7485460633756962055",
+    "https://www.tiktok.com/@neildoesmaths/video/7467609725211790625",
+    "https://www.instagram.com/myedspace/",
+    "https://www.instagram.com/neildoesmaths/",
+    "https://www.youtube.com/@myedspace",
+    "https://www.facebook.com/MyEdSpace/",
+    "https://www.linkedin.com/company/myedspace",
+    "https://www.orrick.com/en/News/2025/09/MyEdSpace-Raises-15M-11-9M-in-Series-A-Funding",
+    "https://www.edtechinnovationhub.com/news/myedspace-raises-15-million-in-series-a-funding-and-announces-plans-to-launch-in-the-us-this-month",
+    "https://www.primarytimes.co.uk/teesside/news/2025/08/tiktok-teachers-and-emoji-feedback-myedspace-reboots-summer-school-for-gen-z-alpha",
+    "https://myedspace.co.uk/blog/post/2025-22-exam-results-round-up",
+    "https://exammasterclasses.myedspace.co.uk/",
+    "https://schools.myedspace.co.uk/"
+   ],
+   "verified": false
+  },
+  {
+   "channels": [
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@pmteducation",
+     "followers": 9722,
+     "followersAsOf": "2026-07-12",
+     "source": "Profile page fetched directly 12 July 2026: followerCount 9722, heartCount 2000000, 516 videos"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/@PMTEducation",
+     "followers": 9130,
+     "followersAsOf": "2026-07-12",
+     "source": "Channel about page fetched directly 12 July 2026: 9.13k subscribers, 1,631,191 total views, 1,765 videos"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/pmteducation/",
+     "followers": 23000,
+     "followersAsOf": "2026-07-12",
+     "source": "Search snippet of instagram.com/pmteducation seen 12 July 2026: 23K followers"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/PMTEducation/",
+     "followers": 11226,
+     "followersAsOf": "2026-07-12",
+     "source": "Search snippet of facebook.com/PMTEducation seen 12 July 2026: 11,226 likes, 11K followers"
+    },
+    {
+     "platform": "LinkedIn",
+     "url": "https://www.linkedin.com/company/pmt-education",
+     "followers": 248,
+     "followersAsOf": "2026-07-12",
+     "source": "Search snippet of linkedin.com/company/pmt-education seen 12 July 2026: 248 followers"
+    }
+   ],
+   "contentThemes": [
+    "Free past papers, notes and questions by topic across nine subjects, GCSE and A-level",
+    "Exam-season predicted and mock papers, gated behind a free PMT account",
+    "Relatable StudyTok exam memes on TikTok, low production, brand as a shared student in-joke",
+    "Past-paper walkthrough and model-solution videos on YouTube (1,765 videos)",
+    "Blog advice for students plus a thin parents section (one parents' guide to revision resources)",
+    "Tutor recruitment content to feed the marketplace (how to set your rate as a tutor)"
+   ],
+   "name": "Physics & Maths Tutor (PMT / PMT Education)",
+   "offer": "Free revision resources are the core product: past papers, notes, questions by topic, solution banks, predicted and mock papers. Paid: a tutor marketplace with 400+ hand-picked tutors from \u00a320 per hour, and group crash courses (GCSE Physics online Easter course \u00a3165 per person; A Level Maths Easter course \u00a395 to \u00a3345 per person, four days Pure plus one-day Stats and Mechanics). Two free bursary places reserved on every course. No guarantee and no grade-outcome claims published; the main proof point is \"More than 21,500+ happy students\" and a National Tutoring Awards 2025 win.",
+   "ourAngle": "PMT wins on resource volume and SEO, not brand: 2 million TikTok likes against under 10,000 followers shows students use the site without following anyone, and there is no named founder voice in their marketing. Waleed should not fight the resource library; he should own what PMT structurally cannot: a doctor-founder with a diagnose-first method and premium live programmes, against their anonymous from \u00a320 per hour marketplace that makes no guarantee and no results claims. Copy their one proven funnel move for the 13 August 2026 results-day window: they gate exam-moment assets (predicted papers) behind a free account, and the revision diagnostic is the direct equivalent, so build the calendar around exam season the way they do. Their meme TikToks prove a tiny education account can reach 100,000 plus A-level students with cheap relatable humour, and their parent content is a single blog post, so the Facebook parent channel is effectively uncontested by them.",
+   "positioning": "The default free revision resource site for UK GCSE and A-level students, founded in 2014 by Gorkem Cavli and registered as a non-profit in 2019, positioning as \"the one-stop shop for education\". The brand is the resource library itself; tuition and crash courses are monetisation layered on top of that trust, with quality framing (\"hand-selected and personally interviewed\" tutors) rather than results claims.",
+   "recentMoves": [
+    "May 2026: released 2026 A-level and GCSE predicted papers and fresh mock papers, gated behind a free PMT account (whats-new page, May 2026 entries)",
+    "Spring 2026: Easter crash courses sold online and in London; GCSE Physics online at \u00a3165, A Level Maths at \u00a395 to \u00a3345",
+    "Jan to May 2026: steady monthly resource drops on the whats-new page (CAIE Biology notes updated Jan 2026, Nov 2024 past papers live Mar 2026, Edexcel IAL Jan 2025 papers live Apr 2026)",
+    "2025: won a National Tutoring Award, now badged on the pmt.education homepage and about page",
+    "June 2025: last big TikTok hit, an exam meme at 116,700 views; brand-account posting since then looks sparse"
+   ],
+   "sources": [
+    "https://www.physicsandmathstutor.com/",
+    "https://www.physicsandmathstutor.com/tuition/",
+    "https://www.physicsandmathstutor.com/whats-new/",
+    "https://www.pmt.education/",
+    "https://www.pmt.education/about/",
+    "https://www.pmt.education/resources/predicted-papers/",
+    "https://www.pmt.education/courses/bookings/a-level/maths/easter-online/",
+    "https://www.tiktok.com/@pmteducation",
+    "https://www.tiktok.com/@pmteducation/video/7348494658558823713",
+    "https://www.tiktok.com/@pmteducation/video/7514764594137582870",
+    "https://www.tiktok.com/@pmteducation/video/7447651074107903265",
+    "https://www.youtube.com/@PMTEducation",
+    "https://www.instagram.com/pmteducation/",
+    "https://www.facebook.com/PMTEducation/",
+    "https://www.linkedin.com/company/pmt-education"
+   ],
+   "topPosts": [
+    {
+     "platform": "TikTok",
+     "description": "Study meme, \"me after studying for five minutes without checking my phone\", posted 20 March 2024; also 48,100 likes and 13,400 shares",
+     "url": "https://www.tiktok.com/@pmteducation/video/7348494658558823713",
+     "metric": 350700,
+     "metricType": "views",
+     "asOf": "2026-07-12",
+     "source": "Video page fetched directly 12 July 2026 (playCount 350700, diggCount 48100)"
+    },
+    {
+     "platform": "TikTok",
+     "description": "Exam-season meme \"The audacity\", posted 11 June 2025; also 18,800 likes",
+     "url": "https://www.tiktok.com/@pmteducation/video/7514764594137582870",
+     "metric": 116700,
+     "metricType": "views",
+     "asOf": "2026-07-12",
+     "source": "Video page fetched directly 12 July 2026 (playCount 116700, diggCount 18800)"
+    },
+    {
+     "platform": "TikTok",
+     "description": "\"DON'T PANIC\" notice during the December 2024 domain outage, redirecting students to pmt.education; also 783 likes and 71 comments",
+     "url": "https://www.tiktok.com/@pmteducation/video/7447651074107903265",
+     "metric": 19800,
+     "metricType": "views",
+     "asOf": "2026-07-12",
+     "source": "Video page fetched directly 12 July 2026 (playCount 19800)"
+    }
+   ],
+   "website": "https://www.physicsandmathstutor.com/",
+   "whatWorks": "The SEO resource moat is the whole funnel: UK students already default to PMT for past papers, so exam-season predicted and mock papers gated behind a free account convert that search traffic into registered users and course buyers with almost no social media effort (their biggest channel, TikTok, has under 10,000 followers).",
+   "verified": false
+  },
+  {
+   "name": "Save My Exams",
+   "website": "https://www.savemyexams.com",
+   "positioning": "Freemium subscription revision platform (founded 2016, London, 11 to 50 staff) positioned as \"the home of revision\": exam specific notes, questions, flashcards and mock exams \"made by trusted examiners\" for GCSE, IGCSE, A Level, IB and AP. Their scale is the pitch: site copy claims 3M+ students, teachers and parents, and a TikTok promo cites 2 million users.",
+   "offer": "Free tier (limited notes and questions) plus Premium unlocking full revision notes, exam questions, flashcards, mock exams and Smart Lessons. Their own support pages say Premium starts from 4 pounds per month with a 7 day free trial, and 10 free premium scholarship accounts are given away monthly; the join page hides exact tier pricing behind signup, so full price ladder is not public on the pages fetched. No results guarantee found.",
+   "channels": [
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@savemyexams",
+     "followers": 72800,
+     "followersAsOf": "2026-07-12",
+     "source": "Profile read live in browser at tiktok.com/@savemyexams (72.8K followers, 1.1M likes)"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/savemyexams/",
+     "followers": 64000,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of instagram.com/savemyexams (64K followers, 1,201 posts)"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/@savemyexams",
+     "followers": 23300,
+     "followersAsOf": "2026-07-12",
+     "source": "Channel page read live in browser (23.3k subscribers, 737 videos)"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/SaveMyExamsUK/",
+     "followers": 31669,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of facebook.com/SaveMyExamsUK (31,669 likes, about 31K followers)"
+    },
+    {
+     "platform": "LinkedIn",
+     "url": "https://www.linkedin.com/company/save-my-exams",
+     "followers": 4168,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of linkedin.com/company/save-my-exams"
+    }
+   ],
+   "topPosts": [
+    {
+     "platform": "TikTok",
+     "description": "Promo video: See why 2 million others use Save My Exams to boost their revision (their scale proof pitch, likely boosted)",
+     "metric": 33100,
+     "metricType": "likes",
+     "url": "https://www.tiktok.com/@savemyexams/video/7507679606665694486",
+     "source": "TikTok page snippet in Google search results, 12 July 2026",
+     "asOf": "2026-07-12"
+    },
+    {
+     "platform": "TikTok",
+     "description": "Results day congratulations post for CIE IGCSE students (also 72 comments), their strongest organic engagement pattern",
+     "metric": 530,
+     "metricType": "likes",
+     "url": "https://www.tiktok.com/@savemyexams/video/7402621447803374881",
+     "source": "TikTok page snippet in Google search results, 12 July 2026",
+     "asOf": "2026-07-12"
+    },
+    {
+     "platform": "YouTube",
+     "description": "How to Check Your GCSE Results Online & In Person, a results day prep video published about 10 days before 12 July 2026",
+     "metric": 130,
+     "metricType": "views",
+     "url": "https://www.youtube.com/@savemyexams/videos",
+     "source": "Channel Latest videos list read live in browser, 12 July 2026",
+     "asOf": "2026-07-12"
+    }
+   ],
+   "contentThemes": [
+    "Exam board specific micro lessons (near daily GCSE Physics videos for AQA and Edexcel on YouTube)",
+    "Examiner authority: every bio and banner says made by trusted examiners",
+    "Mock exams, predicted grades and predicted papers",
+    "Results day support and congratulation posts (GCSE, IGCSE, IB)",
+    "Study tips, misconception busting and examiner report explainers",
+    "Named student success stories",
+    "Scale proof promos citing 2 million users"
+   ],
+   "recentMoves": [
+    "July 2026: publishing exam board specific GCSE Physics micro lessons to YouTube almost daily (737 videos on the channel), but most new uploads get under 50 views despite 23.3k subscribers",
+    "Early July 2026: results day prep video (How to Check Your GCSE Results Online & In Person) published roughly 6 weeks before results day, an early start on the August moment",
+    "Seen July 2026: Mock Exams study tool live on site (first promoted on TikTok in April 2025), pitched as aligned to exam specifications and able to predict your grade",
+    "Seen July 2026: Smart Lessons listed among study tools on the site, a newer product beside notes, flashcards and past papers",
+    "Ongoing as of July 2026: monthly scholarship gives 10 students free premium accounts, plus a promotions and discount codes page",
+    "No funding or acquisition news found for 2025 or 2026; an October 2024 LinkedIn post describes founder Jamie Undrell building it bootstrapped"
+   ],
+   "whatWorks": "The examiner authority freemium machine: a huge SEO library of exam board specific notes pulls millions of students in free, and the same \"made by trusted examiners\" line is repeated identically across every channel bio, so credibility does the selling while a cheap subscription (from 4 pounds a month) converts at scale. Their social engagement per organic post is actually modest; brand scale, not virality, is the engine.",
+   "ourAngle": "Do not compete with their library; position against it. Their weakness is that notes are passive: a student can have every Save My Exams page open and still revise badly, which is exactly the problem Waleed's diagnose first method and live teaching solve. Frame it as \"notes tell you what to learn, a system tells you how\", and even reference resources like theirs as raw material the diagnostic organises. Tactically: their new YouTube uploads get under 50 views despite 23.3k subscribers, proof that faceless content at scale has weak per post pull, so Waleed's founder led, doctor credibility posts can out engage them per post on LinkedIn where they are barely present (4,168 followers, corporate page). Copy two plays for results day 13 August 2026: publish results day prep content 4 to 6 weeks early like they did, and plan congratulation and story posts, which earn their best organic engagement (their IGCSE results post drew 72 comments). Their scholarship giveaway also validates generosity as a funnel; Waleed's free diagnostic and tracker are the equivalent, and can be pitched as more personalised than anything a 3 million user platform can offer.",
+   "sources": [
+    "https://www.savemyexams.com/",
+    "https://www.savemyexams.com/join/",
+    "https://www.savemyexams.com/learning-hub/support/why-pay-for-save-my-exams/",
+    "https://www.savemyexams.com/learning-hub/support/is-save-my-exams-free/",
+    "https://www.savemyexams.com/scholarship/",
+    "https://www.savemyexams.com/study-tools/mock-exams/",
+    "https://www.savemyexams.com/promotions/",
+    "https://www.tiktok.com/@savemyexams",
+    "https://www.tiktok.com/@savemyexams/video/7507679606665694486",
+    "https://www.tiktok.com/@savemyexams/video/7402621447803374881",
+    "https://www.tiktok.com/@savemyexams/video/7494286587157564694",
+    "https://www.instagram.com/savemyexams/",
+    "https://www.youtube.com/@savemyexams",
+    "https://www.linkedin.com/company/save-my-exams",
+    "https://www.facebook.com/SaveMyExamsUK/",
+    "https://www.linkedin.com/posts/shadchnev_jamie-undrell-built-save-my-exams-the-old-fashioned-activity-7252181524723200000-JM3E",
+    "https://find-and-update.company-information.service.gov.uk/company/10730279"
+   ],
+   "verified": false
+  },
+  {
+   "name": "Seneca Learning",
+   "website": "https://senecalearning.com",
+   "positioning": "Free interactive revision and homework platform covering KS2 to A level, positioned as \"learn 2x faster for free\" with neuroscience-backed quizzes, memes and GIFs, claiming 14 million students and roughly 95 percent UK exam coverage. Owned by GoStudent since March 2022; monetises via premium tiers and school licences, not live teaching.",
+   "offer": "Free core platform is unlimited. Paid tiers listed as Supreme, Exam Boost and Amelia AI Assistant (24/7 AI tutor, mini mocks, AI marking), but consumer prices are behind a login so pricing is not fully public. Verified prices: Seneca Guarantee add-on at 5.99 GBP per month (money back if a student misses 7 to 9 at GCSE or A or A* at A level, with heavy eligibility conditions), and schools at 646 GBP ex VAT per year after a free 12-month trial for 600 plus pupil schools.",
+   "channels": [
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@senecalearn",
+     "followers": 5777,
+     "followersAsOf": "2026-07-12",
+     "source": "Profile page viewed in browser, https://www.tiktok.com/@senecalearn (also 192.9K total likes)"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/senecalearning/",
+     "followers": 14000,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of https://www.instagram.com/senecalearning/ (14K followers, 772 posts)"
+    },
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/channel/UC6MESCv3-w_lKQiAWZf-s8A",
+     "followers": 10600,
+     "followersAsOf": "2026-07-12",
+     "source": "Channel page viewed in browser, @senecalearning3176, 10.6k subscribers, 816 videos"
+    },
+    {
+     "platform": "LinkedIn",
+     "url": "https://www.linkedin.com/company/senecalearning",
+     "followers": 4736,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of https://www.linkedin.com/company/senecalearning"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/senecalearning/",
+     "followers": 2100,
+     "followersAsOf": "2026-07-12",
+     "source": "Google search snippet of https://www.facebook.com/senecalearning/ (2.1K followers, 1,969 likes)"
+    }
+   ],
+   "topPosts": [
+    {
+     "platform": "TikTok",
+     "description": "Launch video for their meme 'internet vocabulary course' (brainrot, delulu hashtags), posted 4 April 2025, their biggest visible engagement",
+     "metric": 14100,
+     "metricType": "likes",
+     "url": "https://www.tiktok.com/@senecalearn/video/7489466440983022870",
+     "asOf": "2026-07-12",
+     "source": "Video page viewed in browser (14.1K likes, 336 comments, 995 bookmarks, 1,964 shares; views not shown on watch page)"
+    },
+    {
+     "platform": "TikTok",
+     "description": "Follow-up brainrot vocabulary video 'smashed it', posted 17 April 2025",
+     "metric": 16000,
+     "metricType": "likes",
+     "url": "https://www.tiktok.com/@senecalearn/video/7494305018292604182",
+     "asOf": "2026-07-12",
+     "source": "Video page viewed in browser (16K likes, 492 comments, 1,366 bookmarks, 3,248 shares)"
+    },
+    {
+     "platform": "YouTube",
+     "description": "Most viewed recent upload, 'Seneca for Teachers: the Magic Quizzes', about 3 months old; shows their YouTube is now a low-traffic product tutorial channel",
+     "metric": 64,
+     "metricType": "views",
+     "url": "https://www.youtube.com/channel/UC6MESCv3-w_lKQiAWZf-s8A",
+     "asOf": "2026-07-12",
+     "source": "Channel videos list viewed in browser (recent uploads range 11 to 64 views)"
+    }
+   ],
+   "contentThemes": [
+    "Meme-native student content on TikTok (brainrot vocabulary course, revision hacks, exam banter) aimed at GCSE and A level students",
+    "Free-first product marketing: 'learn 2x faster for free', 14 million students, exam-board-specific courses",
+    "AI feature promotion: Amelia AI tutor, AI-marked exam questions, Mini Mocks",
+    "Teacher and school-facing tutorials and CPD content (most recent YouTube output)",
+    "Grade reassurance via the money-back Seneca Guarantee rather than personal success stories"
+   ],
+   "recentMoves": [
+    "Around April 2026: published an 'AI Booster Package' video series on YouTube (Amelia in-session feedback, Mini Mocks, 24/7 homework help, exam practice questions), a clear push to monetise AI features",
+    "May 2026: Amelia AI Assistant help documentation updated 15 May 2026; Amelia now sold as its own premium tier alongside Supreme and Exam Boost (EdTech Impact listing updated 13 July 2026)",
+    "School pricing formalised in help centre (seen July 2026): free 12-month trial then 646 GBP ex VAT per year for schools over 600 pupils",
+    "April 2025 (just over a year ago, still their standout play): viral 'brainrot' internet vocabulary course on TikTok, their only content with mass engagement; TikTok output appears largely dormant since spring 2025",
+    "Context: acquired by GoStudent on 1 March 2022 (Crunchbase), so it is the free funnel of a large tutoring group"
+   ],
+   "whatWorks": "The free product itself is the growth engine (14 million claimed students via schools and word of mouth); on social, the only thing that has clearly worked is trend-native meme content, with the April 2025 brainrot course videos pulling 14K to 16K likes against a tiny 5,777-follower TikTok.",
+   "ourAngle": "Seneca is a content platform, not a rival for live taught programmes, so position around it rather than against it: students already use Seneca but nobody diagnoses how they study, which is exactly Waleed's \"diagnose before you treat\" gap. Their social proof is weak relative to their size (under 6k TikTok, sub-100-view YouTube, dormant 2.1k Facebook), so a small consistent student-voice channel can out-engage them, and their parent-facing Facebook neglect leaves Waleed's priority buyer channel uncontested. Their 5.99 GBP per month money-back guarantee proves parents and students pay for grade assurance; from August 2026 Waleed can answer it with real named results instead of refund small print. Copy one tactic: their only viral content rode a student meme trend within days, so build trend-reactive TikTok or Reels formats into the content-studio workflow, especially around results day on 13 August 2026.",
+   "sources": [
+    "https://senecalearning.com/en-GB/",
+    "https://help.senecalearning.com/en/articles/3746290-how-much-is-premium",
+    "https://help.senecalearning.com/en/articles/2678953-what-is-the-seneca-money-back-guarantee",
+    "https://help.senecalearning.com/en/articles/13413714-seneca-for-schools-benefits-pricing-plans",
+    "https://edtechimpact.com/products/seneca/",
+    "https://www.tiktok.com/@senecalearn",
+    "https://www.tiktok.com/@senecalearn/video/7489466440983022870",
+    "https://www.tiktok.com/@senecalearn/video/7494305018292604182",
+    "https://www.youtube.com/channel/UC6MESCv3-w_lKQiAWZf-s8A",
+    "https://www.instagram.com/senecalearning/",
+    "https://www.linkedin.com/company/senecalearning",
+    "https://www.facebook.com/senecalearning/",
+    "https://www.crunchbase.com/organization/seneca-learning",
+    "https://help.senecalearning.com/en/articles/6992722-how-do-i-use-amelia-ai-assistant"
+   ],
+   "verified": false
+  },
+  {
+   "name": "SnapRevise",
+   "website": "https://www.snaprevise.co.uk",
+   "verified": false,
+   "positioning": "A-level and GCSE video courses, YouTube centred. Pre-recorded rather than live, so weaker on accountability, which is your strength.",
+   "offer": "Pricing not researched yet.",
+   "channels": [
+    {
+     "platform": "YouTube",
+     "url": "https://www.youtube.com/@SnapRevise",
+     "followers": null,
+     "followersAsOf": null,
+     "source": null
+    }
+   ],
+   "topPosts": [],
+   "contentThemes": [],
+   "recentMoves": [],
+   "whatWorks": null,
+   "ourAngle": null,
+   "radarNote": "Deep research agent hit the account spend limit. Re-run when it resets."
+  },
+  {
+   "name": "Tailored Tutors",
+   "website": "https://www.tailoredtutors.co.uk",
+   "verified": false,
+   "positioning": "A-level video courses and tutoring, strongest in Biology and Chemistry, fronted by a personal brand like yours but with no diagnostic funnel behind it.",
+   "offer": "Pricing not researched yet.",
+   "channels": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/tailoredtutors_uk",
+     "followers": 864,
+     "followersAsOf": "2026-07-12",
+     "source": "https://www.instagram.com/tailoredtutors_uk/"
+    }
+   ],
+   "topPosts": [],
+   "contentThemes": [],
+   "recentMoves": [],
+   "whatWorks": null,
+   "ourAngle": "Proof that a personal brand alone does not scale. Your diagnostic funnel is the difference; point every post at it.",
+   "radarNote": "Deep research agent hit the account spend limit. Follower count is from the 12 July light pass."
+  }
+ ]
 }

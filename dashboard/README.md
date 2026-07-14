@@ -25,13 +25,14 @@ No number on the dashboard is ever invented. A source is either live, manual (yo
 | Source | Status | Notes |
 | --- | --- | --- |
 | MailerLite | Live | Reuses the same API key the site's signup forms already use (`lib/mailerlite.ts`). Override with `ML_API_KEY` in `dashboard/.env` if that key is ever rotated. |
-| Website uptime | Live | Pings https://alevelaccelerators.com each load, shows latest git commit as "last site update". |
-| Stripe | Pending | Create a **restricted, read only** key (Balance, Charges, Payouts) in Stripe, then put `STRIPE_KEY=rk_live_...` in `dashboard/.env` and restart. The panel goes live by itself. |
-| LinkedIn | Manual | LinkedIn has no analytics API for personal profiles. Log each post's numbers on the panel, 30 seconds each, and the trend is real. |
-| Facebook ads | Pending | Nothing to measure until the first campaign is live. Then connect Meta. |
-| Gmail | Pending | Needs a one-off Google OAuth sign in from Waleed (read only scope). |
+| Website uptime | Live | Pings https://alevelaccelerators.com each load, shows the last pushed commit as "last deploy" and flags unpushed local commits. |
+| Stripe | Snapshot | Real account numbers (balance, full payment history, monthly revenue) pulled through Waleed's Stripe connector by a Claude session into `data/stripe-snapshot.json`, dated in the UI. For always-on live numbers, create a **restricted, read only** key (Balance, Charges) and put `STRIPE_KEY=rk_live_...` in `dashboard/.env`; the panel upgrades itself. |
+| LinkedIn | Extracted | LinkedIn has no analytics API for personal profiles, so a Claude Code session extracts post analytics through Waleed's own logged-in Chrome (first done 12 July 2026: all posts with exact impressions, follower count, 365 day totals, in `data/linkedin.json`). Log new posts by hand on the panel, or ask a session to "re-extract my LinkedIn numbers". |
+| Facebook | Extracted, ads pending | Page state extracted the same way (12 July 2026: 0 followers, 1 post). Ad metrics need Meta once the first campaign runs. |
+| Gmail | Extracted | Business inbox digest via Waleed's Gmail connector into `data/gmail.json`: thread volume, items needing attention (these feed the triage panel), honest observations. Ask a session to "re-check my inbox" to refresh. |
+| Calendar | Extracted | The week ahead from the business Google Calendar into `data/calendar.json`; today's events show on the Pulse panel. |
 | Bank | Pending | Optional. Monzo and Starling have safe read only personal tokens; other banks are not worth the Open Banking setup. Stripe is the business source of truth meanwhile. |
-| Competitor radar | Watchlist | Qualitative watchlist seeded 12 July 2026. Follower counts appear only after a research pass verifies them against a source. Ask a Claude Code session to "refresh the competitor radar". |
+| Competitor radar | Researched | Deep multi-agent research 12 to 14 July 2026 with an adversarial fact-check pass, committed in `seed/competitors.json`. Every count carries its source; Up Learn fully verified, others single-pass. Refresh by asking a session to "refresh the competitor radar". |
 
 ## Layout of this folder
 

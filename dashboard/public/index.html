@@ -23,107 +23,149 @@
       </div>
     </header>
 
-    <main class="grid">
+    <main>
 
-      <section class="panel col-8" id="panel-triage">
-        <div class="panel-head">
-          <h2>Needs your attention</h2>
-          <span class="chip chip-live" title="Worked out from live data and your local lists">computed</span>
+      <div class="section" style="--accent:#e39a97">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><path d="M1 9h3l2-5 3 8 2-5h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <span>Today</span><i></i>
         </div>
-        <div id="triage-body" class="panel-body"><p class="loading">Reading the business&hellip;</p></div>
-      </section>
+        <div class="grid">
+          <section class="panel col-7" id="panel-triage">
+            <div class="panel-head">
+              <h2>Needs your attention</h2>
+              <span class="chip chip-live" title="Worked out from live data and your local lists">computed</span>
+            </div>
+            <div id="triage-body" class="panel-body"><p class="loading">Reading the business&hellip;</p></div>
+          </section>
+          <section class="panel col-5" id="panel-pulse">
+            <div class="panel-head"><h2>Pulse</h2></div>
+            <div id="pulse-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+          </section>
+        </div>
+      </div>
 
-      <section class="panel col-4" id="panel-pulse">
-        <div class="panel-head">
-          <h2>Pulse</h2>
+      <div class="section" style="--accent:#8ecfa8">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5v7M6 6.3c0-2 4-2 4 0 0 1.1-1 1.4-2 1.7-1 .3-2 .6-2 1.7 0 2 4 2 4 0" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
+          <span>Money</span><i></i>
         </div>
-        <div id="pulse-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
-      </section>
+        <div class="grid">
+          <section class="panel col-5" id="panel-stripe">
+            <div class="panel-head">
+              <h2>Stripe</h2>
+              <span id="stripe-chip" class="chip chip-pending">pending</span>
+            </div>
+            <div id="stripe-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+          </section>
+          <section class="panel col-4" id="panel-subs">
+            <div class="panel-head">
+              <h2>Running costs</h2>
+              <span class="chip chip-manual" title="Your own list, edited here">your list</span>
+            </div>
+            <div id="subs-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+          </section>
+          <section class="panel col-3" id="panel-bank">
+            <div class="panel-head">
+              <h2>Bank</h2>
+              <span class="chip chip-pending">optional</span>
+            </div>
+            <div id="bank-body" class="panel-body"></div>
+          </section>
+        </div>
+      </div>
 
-      <section class="panel col-12" id="panel-email">
-        <div class="panel-head">
-          <h2>Email engine</h2>
-          <span id="email-chip" class="chip chip-live">live &middot; MailerLite</span>
+      <div class="section" style="--accent:#c9a96e">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><rect x="1.5" y="3" width="13" height="10" rx="1.5" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M2 4l6 5 6-5" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg>
+          <span>Audience and email</span><i></i>
         </div>
-        <div id="email-body" class="panel-body"><p class="loading">Fetching MailerLite&hellip;</p></div>
-      </section>
+        <div class="grid">
+          <section class="panel col-12" id="panel-email">
+            <div class="panel-head">
+              <h2>Email engine</h2>
+              <span id="email-chip" class="chip chip-live">live &middot; MailerLite</span>
+            </div>
+            <div id="email-body" class="panel-body"><p class="loading">Fetching MailerLite&hellip;</p></div>
+          </section>
+        </div>
+      </div>
 
-      <section class="panel col-4" id="panel-stripe">
-        <div class="panel-head">
-          <h2>Stripe</h2>
-          <span id="stripe-chip" class="chip chip-pending">pending</span>
+      <div class="section" style="--accent:#8fb8e8">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><path d="M2 10V6l8-3v10l-8-3z" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M12 6.5a2.5 2.5 0 010 3M4.5 10.5V13" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Content</span><i></i>
         </div>
-        <div id="stripe-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
-      </section>
+        <div class="grid">
+          <section class="panel col-7" id="panel-linkedin">
+            <div class="panel-head">
+              <h2>LinkedIn</h2>
+              <span id="linkedin-chip" class="chip chip-manual" title="LinkedIn offers no analytics API for personal profiles. A Claude session extracts your analytics through your own browser, or you log posts here in 30 seconds">manual log</span>
+            </div>
+            <div id="linkedin-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+          </section>
+          <section class="panel col-5" id="panel-facebook">
+            <div class="panel-head">
+              <h2>Facebook</h2>
+              <span id="facebook-chip" class="chip chip-pending">pending</span>
+            </div>
+            <div id="facebook-body" class="panel-body"></div>
+          </section>
+        </div>
+      </div>
 
-      <section class="panel col-4" id="panel-subs">
-        <div class="panel-head">
-          <h2>Running costs</h2>
-          <span class="chip chip-manual" title="Your own list, edited here">your list</span>
+      <div class="section" style="--accent:#b5a8e0">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><rect x="1.5" y="2" width="5.5" height="12" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/><rect x="9" y="2" width="5.5" height="7" rx="1" fill="none" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>Operations</span><i></i>
         </div>
-        <div id="subs-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
-      </section>
+        <div class="grid">
+          <section class="panel col-7" id="panel-projects">
+            <div class="panel-head"><h2>Projects and milestones</h2></div>
+            <div id="projects-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+          </section>
+          <section class="panel col-5" id="panel-tasks">
+            <div class="panel-head"><h2>Tasks</h2></div>
+            <div id="tasks-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+          </section>
+        </div>
+      </div>
 
-      <section class="panel col-4" id="panel-bank">
-        <div class="panel-head">
-          <h2>Bank</h2>
-          <span class="chip chip-pending">pending</span>
+      <div class="section" style="--accent:#e0a8b8">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.5"/><circle cx="8" cy="8" r="3.5" fill="none" stroke="currentColor" stroke-width="1.2" opacity="0.75"/><circle cx="8" cy="8" r="1" fill="currentColor"/><path d="M8 8l4.5-4.5" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          <span>Market</span><i></i>
         </div>
-        <div id="bank-body" class="panel-body"></div>
-      </section>
+        <div class="grid">
+          <section class="panel col-12" id="panel-competitors">
+            <div class="panel-head">
+              <h2>Competitor radar</h2>
+              <span id="competitors-chip" class="chip chip-manual">watchlist</span>
+            </div>
+            <div id="competitors-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
+          </section>
+        </div>
+      </div>
 
-      <section class="panel col-7" id="panel-linkedin">
-        <div class="panel-head">
-          <h2>LinkedIn</h2>
-          <span class="chip chip-manual" title="LinkedIn offers no analytics API for personal profiles, so you log each post here in about 30 seconds">manual log</span>
+      <div class="section" style="--accent:#8f86b8">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><path d="M6.5 9.5l3-3M5 11l-1.5 1.5a2.1 2.1 0 01-3-3L3 7m10-1l1.5-1.5a2.1 2.1 0 00-3-3L10 3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" transform="translate(1,1)"/></svg>
+          <span>Inbox and connections</span><i></i>
         </div>
-        <div id="linkedin-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
-      </section>
-
-      <section class="panel col-5" id="panel-facebook">
-        <div class="panel-head">
-          <h2>Facebook</h2>
-          <span class="chip chip-pending">pending</span>
+        <div class="grid">
+          <section class="panel col-5" id="panel-inbox">
+            <div class="panel-head">
+              <h2>Business inbox</h2>
+              <span id="inbox-chip" class="chip chip-pending">pending</span>
+            </div>
+            <div id="inbox-body" class="panel-body"></div>
+          </section>
+          <section class="panel col-7" id="panel-connections">
+            <div class="panel-head"><h2>Connections</h2></div>
+            <div id="connections-body" class="panel-body"></div>
+          </section>
         </div>
-        <div id="facebook-body" class="panel-body"></div>
-      </section>
-
-      <section class="panel col-7" id="panel-projects">
-        <div class="panel-head">
-          <h2>Projects and milestones</h2>
-        </div>
-        <div id="projects-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
-      </section>
-
-      <section class="panel col-5" id="panel-tasks">
-        <div class="panel-head">
-          <h2>Tasks</h2>
-        </div>
-        <div id="tasks-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
-      </section>
-
-      <section class="panel col-12" id="panel-competitors">
-        <div class="panel-head">
-          <h2>Competitor radar</h2>
-          <span id="competitors-chip" class="chip chip-manual">watchlist</span>
-        </div>
-        <div id="competitors-body" class="panel-body"><p class="loading">Loading&hellip;</p></div>
-      </section>
-
-      <section class="panel col-5" id="panel-inbox">
-        <div class="panel-head">
-          <h2>Inbox</h2>
-          <span class="chip chip-pending">pending</span>
-        </div>
-        <div id="inbox-body" class="panel-body"></div>
-      </section>
-
-      <section class="panel col-7" id="panel-connections">
-        <div class="panel-head">
-          <h2>Connections</h2>
-        </div>
-        <div id="connections-body" class="panel-body"></div>
-      </section>
+      </div>
 
     </main>
 
