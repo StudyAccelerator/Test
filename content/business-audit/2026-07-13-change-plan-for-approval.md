@@ -21,7 +21,7 @@ This makes the audit's play 1 (the cohort sprint on the warm list) the confirmed
 3. og:image: one branded 1200x630 share card, wired site-wide, so shared links carry a proper card on WhatsApp, Facebook and LinkedIn.
 4. Titles: remove the doubled "| A-Level Accelerators" suffix on the six affected pages (includes the homepage title render; the chosen wording stays, only the duplicated suffix goes) and change "Programs" to "Programmes" in the subject page title.
 5. llms.txt: add the Revision Diagnostic and Sunday Session newsletter pages.
-6. Summer page scarcity line: swap "limited spaces" for the real capacity number. Blocked until Waleed supplies the number.
+6. (Removed at Waleed's instruction. The scarcity line stays as "limited capacity" with no public number, and no cohort date beyond the 25 July already on the page is made public.)
 
 ## Batch 2: legal pages (drafted now, deploy only after Waleed reads them)
 
@@ -39,7 +39,7 @@ This makes the audit's play 1 (the cohort sprint on the warm list) the confirmed
 ## Batch 4: repo, analytics and records
 
 14. Merge the partnership branch (`claude/partnership-research-outreach-a4a4gy`) into main so the PMT dossier and skill stop being stranded. Sending the outreach email remains a separate decision.
-15. Wire Vercel Web Analytics into the code (cookieless, no consent banner needed). Waleed flips the toggle in the Vercel dashboard. The Meta pixel stays deferred until the privacy policy is live and paid testing is approved.
+15. Wire Vercel Web Analytics (cookieless, Waleed flips the toggle in the Vercel dashboard) and the Meta pixel. Per Waleed's instruction the pixel is included now, not deferred; it is wired dormant and only loads and sets a cookie once `NEXT_PUBLIC_META_PIXEL_ID` is set in the environment, so switching it on is a one-line env change. It should be switched on together with the privacy policy going live.
 16. Delete 4 dead branches: the two old workshop landing pages, the abandoned analytics branch, tender-knuth. gh-pages stays. Irreversible, so it needs its own tick.
 17. Records: write the Stripe findings into the audit (aggregates only), mark ask 2 answered, refresh dashboard seed tasks, CLAUDE.md and the Cowork snapshot.
 
@@ -47,11 +47,28 @@ This makes the audit's play 1 (the cohort sprint on the warm list) the confirmed
 
 Every email send (SS1 on Sunday 19 July, the re-opening email, the workshop invite), the PMT outreach send, Results Day Rescue, the 25 July September-flip session, the MailerLite key rotation (scheduled after the cohort closes), anything paid, and the September group dedupe.
 
-## Decisions needed from Waleed
+## Decisions (answered 14 July)
 
-- **A. Cohort date:** 25 July as published, or moved once to a stated August date, or "undecided, run the fixes and hold the date-dependent copy".
-- **B. Batches:** which of 1 to 4 to execute (recommendation: all four).
-- **C. Deletions:** draft campaigns, dead branches, both, or neither.
-- **D. Two numbers when ready:** the honest cohort capacity, and the next workshop date if one is set.
+- **A. Cohort date:** 25 July for now, may change, and the possibility of change stays private. Nothing new made public; the page keeps its existing 25 July.
+- **B. Batches:** all four approved, Waleed does the final merge to main.
+- **C. Deletions:** all dead branches yes; MailerLite drafts kept for now.
+- **D. Numbers:** no public cohort number ("limited capacity" stays); no workshop date set yet.
 
-Reply format example: "Date: 25 July. Batches: all. Deletions: both. Capacity: N."
+## Execution status (14 July)
+
+Done on the branch (awaiting Waleed's merge to deploy):
+- Batch 1 site fixes: all done and verified in the static export. Point 6 dropped per decision A.
+- Batch 2 legal pages: /privacy and /terms drafted, footer-linked, in the sitemap. They deploy when Waleed merges; the bracketed placeholders (entity, address, ICO number) are the review gate and must be filled first.
+- Batch 4 code: Vercel Analytics and the dormant Meta pixel wired; partnership branch merged into the lineage; audit and docs updated with the Stripe truth.
+
+Done live (already in effect):
+- MailerLite: empty legacy "Newsletter Signups" group deleted; empty superseded automation shell deleted. Drafts untouched.
+
+Could not be done from this session, handed to Waleed:
+- The four dead branches could not be deleted: the session's git credentials only allow pushing to the working branch, so the remote refused the deletions with HTTP 403. Delete them in the GitHub branches UI: `claude/workshop-landing-page-8kpY1`, `claude/workshop-landing-page-OzlxS`, `vercel/install-vercel-web-analytics-87om45`, `claude/tender-knuth-GptLs`.
+- The parent nurture email link swap stays a dashboard task, because its real content is a designed HTML email and the API can only overwrite the plain-text fallback, which would destroy the design. Steps and ready copy are in `content/parent-guide/delivery-email.md`: pause the automation, edit the first email's download button to `https://alevelaccelerators.com/ALevel-Accelerators-Parent-Guide.pdf`, reactivate.
+
+Waleed's switch-ons after merge:
+- Enable Web Analytics in the Vercel project dashboard.
+- Add `NEXT_PUBLIC_META_PIXEL_ID` in Vercel when ready to start pixel tracking, ideally the same time the privacy policy goes live.
+- Fill the bracketed placeholders in /privacy and /terms.
