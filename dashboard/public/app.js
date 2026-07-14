@@ -103,7 +103,7 @@ function svgEl(tag, attrs) {
 
 /* Single-series line with area fill, direct label on the latest point,
    recessive axis, hover tooltip per point. */
-function renderLineChart(container, points, valueLabel, color = '#c9a96e') {
+function renderLineChart(container, points, valueLabel, color = '#b08a3e') {
   container.innerHTML = ''
   const w = Math.max(container.clientWidth || 300, 260)
   const h = 130
@@ -129,7 +129,7 @@ function renderLineChart(container, points, valueLabel, color = '#c9a96e') {
     svg.appendChild(
       svgEl('line', {
         x1: m.left, x2: w - m.right, y1: y(gv), y2: y(gv),
-        stroke: 'rgba(251,248,243,0.06)', 'stroke-width': 1,
+        stroke: 'rgba(26,21,53,0.07)', 'stroke-width': 1,
       })
     )
   }
@@ -146,15 +146,15 @@ function renderLineChart(container, points, valueLabel, color = '#c9a96e') {
   svg.appendChild(svgEl('circle', { cx: x(points.length - 1), cy: y(last.value), r: 3.5, fill: color }))
   const lastLabel = svgEl('text', {
     x: x(points.length - 1) + 8, y: y(last.value) + 4,
-    fill: '#fbf8f3', 'font-size': 12, 'font-family': 'Georgia, serif',
+    fill: '#1a1535', 'font-size': 12, 'font-family': 'Georgia, serif',
   })
   lastLabel.textContent = nf.format(last.value)
   svg.appendChild(lastLabel)
 
   /* first and last date labels */
-  const t0 = svgEl('text', { x: m.left, y: h - 6, fill: 'rgba(143,134,184,0.9)', 'font-size': 10 })
+  const t0 = svgEl('text', { x: m.left, y: h - 6, fill: '#756d96', 'font-size': 10 })
   t0.textContent = shortDate(points[0].date)
-  const t1 = svgEl('text', { x: w - m.right, y: h - 6, fill: 'rgba(143,134,184,0.9)', 'font-size': 10, 'text-anchor': 'end' })
+  const t1 = svgEl('text', { x: w - m.right, y: h - 6, fill: '#756d96', 'font-size': 10, 'text-anchor': 'end' })
   t1.textContent = shortDate(last.date)
   svg.appendChild(t0)
   svg.appendChild(t1)
@@ -173,7 +173,7 @@ function renderLineChart(container, points, valueLabel, color = '#c9a96e') {
 }
 
 /* Single-series bars with rounded data ends, 2px gaps, hover tooltip. */
-function renderBarChart(container, items, color = '#c9a96e', valueFormat = nf.format.bind(nf)) {
+function renderBarChart(container, items, color = '#b08a3e', valueFormat = nf.format.bind(nf)) {
   container.innerHTML = ''
   const w = Math.max(container.clientWidth || 300, 260)
   const h = 120
@@ -189,7 +189,7 @@ function renderBarChart(container, items, color = '#c9a96e', valueFormat = nf.fo
   svg.appendChild(
     svgEl('line', {
       x1: m.left, x2: w - m.right, y1: h - m.bottom, y2: h - m.bottom,
-      stroke: 'rgba(251,248,243,0.12)', 'stroke-width': 1,
+      stroke: 'rgba(26,21,53,0.16)', 'stroke-width': 1,
     })
   )
 
@@ -205,7 +205,7 @@ function renderBarChart(container, items, color = '#c9a96e', valueFormat = nf.fo
     svg.appendChild(bar)
 
     const lbl = svgEl('text', {
-      x: bx + barW / 2, y: h - 6, fill: 'rgba(143,134,184,0.9)', 'font-size': 9.5, 'text-anchor': 'middle',
+      x: bx + barW / 2, y: h - 6, fill: '#756d96', 'font-size': 9.5, 'text-anchor': 'middle',
     })
     lbl.textContent = d.label
     svg.appendChild(lbl)
@@ -215,7 +215,7 @@ function renderBarChart(container, items, color = '#c9a96e', valueFormat = nf.fo
   const last = items[items.length - 1]
   const lx = m.left + (items.length - 1) * band + band / 2
   const lastLbl = svgEl('text', {
-    x: lx, y: y(last.value) - 5, fill: '#fbf8f3', 'font-size': 11, 'text-anchor': 'middle', 'font-family': 'Georgia, serif',
+    x: lx, y: y(last.value) - 5, fill: '#1a1535', 'font-size': 11, 'text-anchor': 'middle', 'font-family': 'Georgia, serif',
   })
   lastLbl.textContent = valueFormat(last.value)
   svg.appendChild(lastLbl)
@@ -275,7 +275,12 @@ function renderPulse() {
     },
     {
       k: 'Subscribers',
-      v: state.ml && state.ml.total != null ? `<b>${nf.format(state.ml.total)}</b> on the list` : 'loading',
+      v:
+        state.ml && state.ml.active != null
+          ? `<b>${nf.format(state.ml.active)}</b> active`
+          : state.ml && state.ml.total != null
+            ? `<b>${nf.format(state.ml.total)}</b> on the list`
+            : 'loading',
     },
     {
       k: 'In Stripe',
@@ -350,7 +355,13 @@ function renderEmail() {
           <td class="t-strong" title="${esc(a.name)}">${esc(a.name.length > 44 ? a.name.slice(0, 43) + '…' : a.name)}</td>
           <td class="num ${a.sent ? '' : 't-dim'}">${a.sent ? nf.format(a.sent) : 'none'}</td>
           <td class="num ${a.sent ? '' : 't-dim'}">${a.sent ? pct(a.openRate) : ''}</td>
-          <td class="num">${a.enabled ? '<span class="state-on">ON</span>' : '<span class="state-off">OFF</span>'}</td>
+          <td class="num">${
+            a.enabled
+              ? '<span class="state-on">ON</span>'
+              : a.emails > 0
+                ? '<span class="state-off">OFF</span>'
+                : '<span class="t-dim" title="No emails inside, nothing to send">empty</span>'
+          }</td>
         </tr>`
         )
         .join('')}</tbody>
@@ -391,9 +402,13 @@ function renderEmail() {
   body.innerHTML = `
     <div class="email-grid">
       <div>
-        <div class="label">All subscribers</div>
-        <div class="hero-number">${nf.format(ml.total)}</div>
-        <div class="hero-sub">across the whole account, live from MailerLite</div>
+        <div class="label">Active subscribers</div>
+        <div class="hero-number">${nf.format(ml.active != null ? ml.active : ml.total)}</div>
+        <div class="hero-sub">unique people who can receive email, live from MailerLite${
+          ml.active != null && ml.total > ml.active
+            ? `. ${nf.format(ml.total)} all time including ${nf.format(ml.total - ml.active)} unsubscribed or bounced`
+            : ''
+        }</div>
         <div class="group-tiles">
           ${featured
             .map(
@@ -424,18 +439,20 @@ function renderEmail() {
       </div>
     </div>`
 
-  const hist = state.history.filter((h) => typeof h.total === 'number')
+  /* the growth line tracks active subscribers; older snapshots only recorded
+     the all-time total, so the line starts from the first active reading */
+  const hist = state.history.filter((h) => typeof h.active === 'number')
   const growthEl = $('#growth-chart')
   const noteEl = $('#growth-note')
   if (hist.length >= 2) {
-    renderLineChart(growthEl, hist.map((h) => ({ date: h.date, value: h.total })), 'subscribers')
+    renderLineChart(growthEl, hist.map((h) => ({ date: h.date, value: h.active })), 'active subscribers')
     const first = hist[0]
-    const delta = ml.total - first.total
-    noteEl.textContent = `${delta >= 0 ? '+' : ''}${nf.format(delta)} since ${shortDate(first.date)}. One real snapshot per day the dashboard is open.`
+    const delta = (ml.active != null ? ml.active : 0) - first.active
+    noteEl.textContent = `${delta >= 0 ? '+' : ''}${nf.format(delta)} active since ${shortDate(first.date)}. One real snapshot per day the dashboard is open.`
   } else {
     growthEl.innerHTML = ''
     noteEl.textContent =
-      'History starts today. The dashboard records one real snapshot each day it is open, so this becomes a trend line within a week. No back-dated numbers are faked in.'
+      'Tracking active subscribers from 14 July. One real snapshot per day the dashboard is open makes this a trend line within a week. No back-dated numbers are faked in.'
   }
 }
 
@@ -464,8 +481,8 @@ function renderStripe() {
       <div class="chart-wrap"><div class="label">Net revenue by month</div><div id="stripe-chart"></div></div>
       <div class="money-row"><span class="m-key">Last sale</span><span class="m-val">${esc(shortDate(s.lastSale))} <span class="muted small">(${daysSinceSale} days ago)</span></span></div>
       <div class="money-row"><span class="m-key">Refunded lifetime</span><span class="m-val">${gbp(s.lifetimeRefunds)}</span></div>
-      <p class="small muted" style="margin-bottom:0">${esc(s.source)} ${esc(s.note)} For always-on live numbers, add a read only restricted key as <code style="background:rgba(251,248,243,0.07);border-radius:4px;padding:1px 5px">STRIPE_KEY</code> in dashboard/.env.</p>`
-    renderBarChart($('#stripe-chart'), months, '#8ecfa8', (v) => '£' + nf.format(Math.round(v)))
+      <p class="small muted" style="margin-bottom:0">${esc(s.source)} ${esc(s.note)} Refreshes itself every morning at 7am. For minute-by-minute live numbers, add a read only restricted key as <code>STRIPE_KEY</code> in dashboard/.env.</p>`
+    renderBarChart($('#stripe-chart'), months, '#2f8a5d', (v) => '£' + nf.format(Math.round(v)))
     return
   }
 
@@ -607,7 +624,7 @@ function renderLinkedIn() {
       value: p.impressions,
       tip: `<div class="t-label">${esc(shortDate(p.date))} · ${esc(p.hook || 'post')}</div>${nf.format(p.impressions)} impressions · ${nf.format(p.reactions)} reactions · ${nf.format(p.comments)} comments`,
     }))
-    renderBarChart($('#li-chart'), items, '#8fb8e8')
+    renderBarChart($('#li-chart'), items, '#4a7dbb')
   }
 
   $('#li-add').addEventListener('click', async () => {
@@ -660,6 +677,56 @@ function renderFacebook() {
     </div>
     ${postRows}
     <p class="small muted" style="margin-bottom:0">${esc(fb.extractedNote || '')} This is the priority buyer channel: ads are still pending, and organic needs followers before it can carry anything. When the first campaign goes live, connect Meta here for spend, reach and cost per lead.</p>`
+}
+
+/* -------------------------------------------------- linkedin landscape */
+
+function renderLiLandscape() {
+  const body = $('#li-landscape-body')
+  const chip = $('#li-landscape-chip')
+  const lc = state.liCompetitors
+  if (!lc || !lc.extractedAt) {
+    body.innerHTML = '<p class="empty-state">Not researched yet. Ask a Claude session to "research the LinkedIn landscape".</p>'
+    return
+  }
+  chip.textContent = `researched ${shortDate(lc.extractedAt)}`
+  chip.className = 'chip chip-live'
+
+  const rows = lc.pages
+    .map((p) => {
+      const top = p.posts[0]
+      return `
+      <tr>
+        <td class="t-strong"><a href="${esc(p.url)}" target="_blank" rel="noreferrer" style="color:inherit">${esc(p.name)}</a></td>
+        <td class="num">${nf.format(p.followers)}</td>
+        <td>${esc(p.focus)}</td>
+        <td>${top ? `${esc(top.hook.length > 60 ? top.hook.slice(0, 59) + '…' : top.hook)} <span class="t-dim">(${esc(top.when)})</span>` : ''}</td>
+        <td class="num">${top ? `${nf.format(top.reactions)} · ${nf.format(top.comments)} · ${nf.format(top.reposts)}` : ''}</td>
+      </tr>`
+    })
+    .join('')
+
+  const bench = lc.yourBenchmark
+  body.innerHTML = `
+    <p class="radar-note">${esc(lc.note)}</p>
+    <table class="data-table" style="margin-bottom:12px">
+      <thead><tr><th>Page</th><th class="num">Followers</th><th>What they post</th><th>Top post seen</th><th class="num">React · Comment · Repost</th></tr></thead>
+      <tbody>${rows}
+      ${
+        bench
+          ? `<tr style="background:color-mix(in srgb, var(--accent) 7%, transparent)">
+        <td class="t-strong">You (Dr Waleed)</td>
+        <td class="num">${nf.format(bench.followers)}</td>
+        <td>Student-facing method and story posts, the only ones in this table</td>
+        <td>Three-photos story post <span class="t-dim">(${nf.format(bench.bestPostImpressions)} impressions, your analytics)</span></td>
+        <td class="num">${nf.format(bench.bestPostReactions)} · 1 · 1</td>
+      </tr>`
+          : ''
+      }</tbody>
+    </table>
+    <div class="synth-block"><b class="accent">What this means for your page.</b>
+      <ol class="setup-steps" style="margin-top:6px;margin-bottom:0">${lc.takeaways.map((t) => `<li>${esc(t)}</li>`).join('')}</ol>
+    </div>`
 }
 
 /* ------------------------------------------------------------- projects */
@@ -848,7 +915,7 @@ function renderInbox() {
       )
       .join('')}
     ${(g.observations || []).map((o) => `<p class="small muted" style="margin:8px 0 0">${esc(o)}</p>`).join('')}
-    <p class="small" style="margin-bottom:0"><a href="https://mail.google.com" target="_blank" rel="noreferrer">Open Gmail</a> · Ask a Claude session to "re-check my inbox" to refresh this.</p>`
+    <p class="small" style="margin-bottom:0"><a href="https://mail.google.com" target="_blank" rel="noreferrer">Open Gmail</a> · Refreshes itself every morning at 7am while the Claude app is open.</p>`
 }
 
 /* ---------------------------------------------------------- connections */
@@ -858,11 +925,11 @@ function renderConnections() {
   const defs = [
     { key: 'mailerlite', name: 'MailerLite', what: 'subscribers, groups, automations, campaigns' },
     { key: 'site', name: 'Website', what: 'uptime ping plus latest deploy from git' },
-    { key: 'stripe', name: 'Stripe', what: 'real numbers via the Stripe connector; a restricted key in dashboard/.env makes it always-on' },
+    { key: 'stripe', name: 'Stripe', what: 'real account numbers, refreshed automatically every morning at 7am' },
     { key: 'linkedin', name: 'LinkedIn', what: 'extracted through your own browser by a Claude session, or logged by hand' },
     { key: 'facebook', name: 'Facebook', what: 'page extracted the same way; ad metrics need Meta once a campaign runs' },
-    { key: 'gmail', name: 'Gmail', what: 'business inbox digest, extracted through your Gmail connector' },
-    { key: 'calendar', name: 'Calendar', what: 'the week ahead from your business Google Calendar' },
+    { key: 'gmail', name: 'Gmail', what: 'business inbox digest, refreshed automatically every morning at 7am' },
+    { key: 'calendar', name: 'Calendar', what: 'the week ahead, refreshed automatically every morning at 7am' },
     { key: 'bank', name: 'Bank', what: 'optional, tell me your bank and I will advise' },
   ]
   $('#connections-body').innerHTML = `<div class="conn-grid">${defs
@@ -898,7 +965,9 @@ function renderTriage() {
   }
 
   if (state.ml && state.ml.automations) {
-    const off = state.ml.automations.filter((a) => !a.enabled)
+    /* empty shells with no emails in them cannot send anything, so a disabled
+       one is not a problem worth flagging */
+    const off = state.ml.automations.filter((a) => !a.enabled && a.emails > 0)
     const diag = off.filter((a) => /revision diagnostic/i.test(a.name))
     if (diag.length) {
       items.push({
@@ -1055,6 +1124,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/connections'),
     getJSON('/api/store/gmail'),
     getJSON('/api/store/calendar'),
+    getJSON('/api/store/linkedin-competitors'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -1072,6 +1142,7 @@ async function loadAll(fresh = false) {
   state.gmail = gmailStore && gmailStore.extractedAt ? gmailStore : null
   const calStore = val(12, null)
   state.calendar = calStore && calStore.extractedAt ? calStore : null
+  state.liCompetitors = val(13, null)
 }
 
 function renderAll() {
@@ -1083,6 +1154,7 @@ function renderAll() {
   renderBank()
   renderLinkedIn()
   renderFacebook()
+  renderLiLandscape()
   renderProjects()
   renderTasks()
   renderCompetitors()

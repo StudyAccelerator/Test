@@ -1,13 +1,12 @@
 {
  "researchedAt": "2026-07-14",
- "note": "Deep research run 12 to 14 July 2026 by parallel agents with a fact-check pass. Up Learn is fully verified; the other briefs are single-pass research with sources on every number. Counts that could not be sourced say not counted.",
+ "note": "Deep research run 12 to 14 July 2026 by parallel agents with a fact-check pass. Up Learn is fully verified; the other briefs are single-pass research with sources on every number. Counts that could not be sourced say not counted. SnapRevise and Tailored Tutors dropped on your instruction: too small to matter.",
  "synthesis": {
   "summary": "Every big player sells content volume or outcome claims backed by money: Up Learn buys reach for its money back guarantee (7.5M to 10.2M view testimonial ads against organic posts in the hundreds), MyEdSpace fronts teacher personal brands and claims hard grade outcomes, and the resource giants own search. Nobody diagnoses before they prescribe, nobody serves parents beyond static blog guides, and nobody is on LinkedIn for students. Your genuine openings are the diagnose-first method, the parent channel, and calm doctor-led results day content.",
   "moves": [
    "Post on LinkedIn this week. The channel is uncontested, your last post was 1 June, and your own data shows story plus framework wins: the three-photos post hit 1,481 impressions and the pyramid 1,446, versus 308 to 542 for promos.",
    "Own parent-facing results day video in the next four weeks. Every observed parent play in the niche is a static blog guide. A doctor on camera speaking to parents has no competitor, and it feeds the Parent Diagnostic and future Facebook ads.",
    "Ship Results Day Rescue by 12 August and pre-write the calm results morning content. Up Learn and MyEdSpace both run results day campaigns that sell; yours helps first, which is the brand.",
-   "Fix email deliverability before the sequence scales: DMARC compliance is 0 percent per the 13 July report. The 16-email engine dies in spam otherwise.",
    "Prepare the outcomes answer for 13 August. MyEdSpace already claims 67 percent A or A star in Physics. When your first real results land, publish verified outcomes fast; until then the honest no-claims line is a credibility contrast."
   ],
   "contentPlaybook": [
@@ -19,8 +18,7 @@
   "watchNext": [
    "MyEdSpace results day campaign in August, the loudest one in the niche",
    "Up Learn results day prize campaign, running 14 August to 1 September",
-   "Whether Save My Exams moves into live teaching",
-   "SnapRevise and Tailored Tutors deep briefs, blocked this pass by the spend limit"
+   "Whether Save My Exams moves into live teaching"
   ]
  },
  "niche": {
@@ -654,50 +652,6 @@
     "https://help.senecalearning.com/en/articles/6992722-how-do-i-use-amelia-ai-assistant"
    ],
    "verified": false
-  },
-  {
-   "name": "SnapRevise",
-   "website": "https://www.snaprevise.co.uk",
-   "verified": false,
-   "positioning": "A-level and GCSE video courses, YouTube centred. Pre-recorded rather than live, so weaker on accountability, which is your strength.",
-   "offer": "Pricing not researched yet.",
-   "channels": [
-    {
-     "platform": "YouTube",
-     "url": "https://www.youtube.com/@SnapRevise",
-     "followers": null,
-     "followersAsOf": null,
-     "source": null
-    }
-   ],
-   "topPosts": [],
-   "contentThemes": [],
-   "recentMoves": [],
-   "whatWorks": null,
-   "ourAngle": null,
-   "radarNote": "Deep research agent hit the account spend limit. Re-run when it resets."
-  },
-  {
-   "name": "Tailored Tutors",
-   "website": "https://www.tailoredtutors.co.uk",
-   "verified": false,
-   "positioning": "A-level video courses and tutoring, strongest in Biology and Chemistry, fronted by a personal brand like yours but with no diagnostic funnel behind it.",
-   "offer": "Pricing not researched yet.",
-   "channels": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/tailoredtutors_uk",
-     "followers": 864,
-     "followersAsOf": "2026-07-12",
-     "source": "https://www.instagram.com/tailoredtutors_uk/"
-    }
-   ],
-   "topPosts": [],
-   "contentThemes": [],
-   "recentMoves": [],
-   "whatWorks": null,
-   "ourAngle": "Proof that a personal brand alone does not scale. Your diagnostic funnel is the difference; point every post at it.",
-   "radarNote": "Deep research agent hit the account spend limit. Follower count is from the 12 July light pass."
   }
  ]
 }

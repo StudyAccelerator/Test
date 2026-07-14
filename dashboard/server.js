@@ -63,7 +63,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -113,9 +113,10 @@ async function ml(pathname) {
 const rate = (r) => (r && typeof r.float === 'number' ? r.float : null)
 
 async function fetchMailerlite() {
-  const [groupsRes, totalRes, automationsRes, campaignsRes] = await Promise.all([
+  const [groupsRes, totalRes, activeRes, automationsRes, campaignsRes] = await Promise.all([
     ml('/groups?limit=50&sort=-active_count'),
     ml('/subscribers?limit=0'),
+    ml('/subscribers?filter[status]=active&limit=0'),
     ml('/automations?limit=25').catch(() => ml('/automations?limit=10')),
     ml('/campaigns?filter[status]=sent&limit=10'),
   ])
@@ -154,6 +155,7 @@ async function fetchMailerlite() {
   const payload = {
     fetchedAt: new Date().toISOString(),
     total: totalRes.total,
+    active: activeRes.total,
     groups,
     automations,
     campaigns,
@@ -166,6 +168,7 @@ async function fetchMailerlite() {
   const snapshot = {
     date: today,
     total: payload.total,
+    active: payload.active,
     groups: Object.fromEntries(groups.map((g) => [g.id, g.active])),
   }
   const existing = history.findIndex((h) => h.date === today)

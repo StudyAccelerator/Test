@@ -1,16 +1,16 @@
 [
   {
     "id": "t1",
-    "title": "Review the remaining diagnostic automations in MailerLite and switch them on",
-    "note": "The instant report email and the Summer route are already on. The triage panel lists whichever are still off, live.",
-    "due": "2026-07-14",
+    "title": "Optional tidy-up: delete the empty scaffold automation in MailerLite",
+    "note": "All four real diagnostic automations are on. The disabled \"follow-up (build per repo guide)\" entry is an empty shell with no emails in it.",
+    "due": null,
     "done": false
   },
   {
     "id": "t2",
-    "title": "Approve and schedule this week's Sunday Session issue",
-    "note": "Cadence is every Sunday 5pm UK, students only.",
-    "due": "2026-07-12",
+    "title": "Approve and schedule next week's Sunday Session issue",
+    "note": "You moved this to next week. Cadence is every Sunday 5pm UK, students only.",
+    "due": "2026-07-19",
     "done": false
   },
   {
