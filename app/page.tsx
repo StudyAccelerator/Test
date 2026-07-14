@@ -369,6 +369,13 @@ export default function Home() {
                 <p className="mt-4 text-brand-text/75 leading-relaxed max-w-lg">
                   Every student starts with an honest audit: every topic, rated for real confidence, not familiarity. The topics you avoid are usually where your grade is hiding.
                 </p>
+                <a
+                  href="/revision-diagnostic"
+                  className="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
+                >
+                  Run the free Revision Diagnostic
+                  <span aria-hidden="true">→</span>
+                </a>
               </div>
               <div className={`${CARD} p-6 md:p-8`}>
                 <p className="font-mono text-xs uppercase tracking-[0.15em] text-brand-purple/50 mb-4">Topic audit · Chemistry</p>

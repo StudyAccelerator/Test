@@ -1,0 +1,30 @@
+[
+  {
+    "id": "t1",
+    "title": "Review the remaining diagnostic automations in MailerLite and switch them on",
+    "note": "The instant report email and the Summer route are already on. The triage panel lists whichever are still off, live.",
+    "due": "2026-07-14",
+    "done": false
+  },
+  {
+    "id": "t2",
+    "title": "Approve and schedule this week's Sunday Session issue",
+    "note": "Cadence is every Sunday 5pm UK, students only.",
+    "due": "2026-07-12",
+    "done": false
+  },
+  {
+    "id": "t3",
+    "title": "Create a Stripe restricted key so the money panel goes live",
+    "note": "Steps are on the Money panel. Read-only key, takes about two minutes.",
+    "due": null,
+    "done": false
+  },
+  {
+    "id": "t4",
+    "title": "Decide the launch date for Facebook ads to parents",
+    "note": "Facebook is the priority buyer channel and nothing is running on it yet.",
+    "due": null,
+    "done": false
+  }
+]

@@ -82,8 +82,8 @@ export const TrackerCTA = () => (
   <div className="bg-gradient-to-br from-brand-purple to-brand-purple-light rounded-xl p-8 my-10 text-center">
     <p className="text-2xl font-serif text-brand-gold mb-3">Free: get a revision timetable built for you</p>
     <p className="text-brand-cream mb-6 max-w-xl mx-auto">
-      Answer a few questions about your subjects and weak topics, and our free revision tracker builds you a
-      personalised weekly plan using spaced repetition, the same method covered in this article.
+      Rate every topic honestly, and our free revision tracker builds your week around the weakest ones,
+      with a proven technique attached to every session. It even refuses to let you overload the week.
     </p>
     <a
       href="/revision-tracker"
@@ -189,6 +189,7 @@ const BlogFooter = () => (
       <div className="flex gap-8 justify-center text-sm">
         <a href="/" className="text-brand-gold hover:text-white transition">Courses</a>
         <a href="/blog/" className="text-brand-gold hover:text-white transition">Blog</a>
+        <a href="/revision-diagnostic" className="text-brand-gold hover:text-white transition">Free Revision Diagnostic</a>
         <a href="/revision-tracker" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
         <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
       </div>

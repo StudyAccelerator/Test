@@ -1,23 +1,36 @@
+import type { Metadata } from 'next'
 import Image from 'next/image'
+import Header from '@/components/header'
+import Footer from '@/components/footer'
+import { HeroFade, HeroHeadline, HeroWord } from '@/components/home/hero-reveal'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import ParentsForm from './parents-form'
 
-export const metadata = {
-  title: 'Free Parent Guide | A-Level Accelerators',
+const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/60'
+
+export const metadata: Metadata = {
+  title: "Free Parents' Guide",
   description:
-    'Download the free parent guide that explains why your child may be working hard but still not getting the grades they need.',
+    'Download the free parent guide that explains why your child may be working hard but still not getting the grades they need, and the free plan to fix it.',
   alternates: { canonical: 'https://alevelaccelerators.com/parents/' },
 }
 
-const BULLETS: [string, string][] = [
-  ['Why effort alone', 'is not enough to improve A-Level grades'],
+const INSIDE: [string, string][] = [
   [
-    'The 4-tier system',
-    'that separates B students from A and A* students',
+    'The real reason grades stall',
+    'Why effort alone stops converting into marks, and why more hours on the same method will not move the grade.',
   ],
   [
-    'Three questions to ask your child',
-    'this week that will tell you more than any exam result',
+    'The four tiers of exam performance',
+    'The skill levels that separate B students from A and A* students, and where your child is probably stuck.',
+  ],
+  [
+    'Three questions to ask your child this week',
+    'They open a conversation about how your child studies, not just how much. The answers tell you more than any report card.',
+  ],
+  [
+    'A free plan you can start tonight',
+    'Step by step: the diagnostic, the tracker and the weekly newsletter, before you spend a penny on help.',
   ],
 ]
 
@@ -34,100 +47,95 @@ const parentsSchema = {
 
 export default function ParentsLanding() {
   return (
-    <main className="bg-brand-cream">
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(parentsSchema) }}
-      />
+    <>
+      <Header />
+      <main>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(parentsSchema) }}
+        />
 
-      {/* ── Logo bar ────────────────────────────────────────────────────── */}
-      <header className="bg-brand-cream-dark border-b-4 border-brand-gold h-24 overflow-hidden">
-        <div className="max-w-5xl mx-auto px-6 h-full flex items-center justify-center">
-          <Image
-            src="/logo-header-new.png"
-            alt="A-Level Accelerators"
-            width={450}
-            height={450}
-            className="h-64 w-auto"
-            priority
-            unoptimized
+        {/* ── Hero ─────────────────────────────────────────────────────── */}
+        <section className="relative overflow-hidden px-5 pb-12 pt-12 text-center sm:pt-16">
+          <div
+            aria-hidden="true"
+            className="pointer-events-none absolute -top-32 left-1/2 h-[22rem] w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-brand-gold/10 blur-3xl"
           />
-        </div>
-      </header>
-
-      {/* ── Hero ─────────────────────────────────────────────────────────── */}
-      <section className="bg-gradient-to-br from-brand-purple to-brand-purple-light text-brand-cream py-20 md:py-24 px-6 text-center">
-        <div className="max-w-4xl mx-auto">
-          <div className="inline-block bg-brand-gold text-brand-purple px-4 py-1.5 rounded-full text-xs md:text-sm font-bold uppercase tracking-wider mb-6">
-            Free Parent Guide
-          </div>
-          <h1 className="text-4xl md:text-5xl font-serif font-bold text-brand-gold leading-tight mb-6">
-            Is Your Child Working Hard But Still Not Getting the{' '}
-            <span className="text-white">Grades They Need?</span>
-          </h1>
-          <p className="text-lg md:text-xl mb-6 opacity-90 max-w-3xl mx-auto leading-relaxed">
-            Download the free parent guide that explains exactly why and what to do about it.
-          </p>
-          <p className="text-sm text-brand-gold font-semibold mb-10 opacity-90">
-            By Dr Waleed Ahmad, MBBS. Founder of A-Level Accelerators
-          </p>
-          <a
-            href="#get-guide"
-            className="inline-block px-10 py-4 bg-brand-gold text-brand-purple font-bold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all"
-          >
-            Get the Free Guide
-          </a>
-        </div>
-      </section>
-
-      {/* ── What's inside ────────────────────────────────────────────────── */}
-      <ScrollFade>
-        <section className="py-20 px-6 bg-white">
-          <div className="max-w-3xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4 font-bold">
-              What&apos;s Inside the Guide
-            </h2>
-            <p className="text-center text-brand-text mb-12 text-lg">
-              A straightforward guide written specifically for parents.
-            </p>
-
-            <ul className="space-y-4">
-              {BULLETS.map(([bold, rest]) => (
-                <li
-                  key={bold}
-                  className="flex items-start gap-4 bg-brand-cream/60 border-l-4 border-brand-gold rounded-md p-5"
+          <div className="relative mx-auto max-w-3xl">
+            <h1
+              aria-label="Working hard, but the grades are not moving?"
+              className="font-serif text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl"
+            >
+              <span className={`${EYEBROW} mb-3 block font-normal`}>
+                Free parents&apos; guide · for parents of A-level students
+              </span>
+              <HeroHeadline>
+                <HeroWord>Working</HeroWord> <HeroWord>hard,</HeroWord>{' '}
+                <HeroWord>but</HeroWord> <HeroWord>the</HeroWord> <HeroWord>grades</HeroWord>{' '}
+                <HeroWord className="italic text-brand-gold">aren&apos;t</HeroWord>{' '}
+                <HeroWord className="italic text-brand-gold">moving?</HeroWord>
+              </HeroHeadline>
+            </h1>
+            <HeroFade delay={0.35}>
+              <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-text/70">
+                If your child puts the hours in and the results still don&apos;t show it, effort
+                isn&apos;t the problem. The free parents&apos; guide explains what is, and gives you
+                a plan you can start this week. Written by Dr Waleed Ahmad, MBBS.
+              </p>
+            </HeroFade>
+            <HeroFade delay={0.5}>
+              <div className="mt-8">
+                <a
+                  href="#get-guide"
+                  className="inline-block rounded-md bg-brand-gold px-10 py-4 text-lg font-bold text-brand-purple transition-all hover:-translate-y-0.5 hover:bg-brand-gold-light hover:shadow-lg"
                 >
-                  <span className="text-brand-gold font-bold text-xl leading-none mt-0.5">✓</span>
-                  <p className="text-lg text-brand-text">
-                    <strong className="text-brand-purple">{bold}</strong> {rest}
-                  </p>
-                </li>
-              ))}
-            </ul>
+                  Get the Free Guide
+                </a>
+              </div>
+            </HeroFade>
           </div>
         </section>
-      </ScrollFade>
 
-      {/* ── Who wrote it ─────────────────────────────────────────────────── */}
-      <ScrollFade delay={0.1}>
-        <section className="py-20 px-6 bg-white">
-          <div className="max-w-4xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-12 font-bold">
-              Who Wrote It
+        {/* ── What's inside ─────────────────────────────────────────────── */}
+        <section className="px-5 pb-4">
+          <div className="mx-auto max-w-4xl">
+            <p className={`${EYEBROW} text-center`}>Inside the guide</p>
+            <h2 className="mt-2 text-center font-serif text-3xl font-bold text-brand-purple">
+              A short read. Nothing padded.
             </h2>
-
-            <div className="flex flex-col md:flex-row gap-8 items-center justify-center">
-              <div className="flex-shrink-0 flex flex-col items-center">
+            <p className="mx-auto mt-3 max-w-2xl text-center leading-relaxed text-brand-text/70">
+              Written for parents who can see their child trying hard but not getting the results
+              they deserve.
+            </p>
+            <div className="mt-8 grid gap-4 sm:grid-cols-2">
+              {INSIDE.map(([title, body]) => (
                 <div
-                  className="w-64 h-64 overflow-hidden rounded-2xl"
+                  key={title}
+                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10"
+                >
+                  <h3 className="font-serif text-xl font-bold text-brand-purple">{title}</h3>
+                  <p className="mt-2 leading-relaxed text-brand-text/75">{body}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* ── Who wrote it ──────────────────────────────────────────────── */}
+        <ScrollFade>
+          <section className="px-5 py-14">
+            <div className="mx-auto flex max-w-4xl flex-col items-center justify-center gap-8 md:flex-row md:gap-12">
+              <div className="flex flex-shrink-0 flex-col items-center">
+                <div
+                  className="h-56 w-56 overflow-hidden rounded-2xl"
                   style={{ boxShadow: '3px 3px 8px rgba(46, 37, 87, 0.18)' }}
                 >
                   <Image
                     src="/graduation.jpg"
                     alt="Dr Waleed Ahmad"
-                    width={256}
-                    height={256}
-                    className="w-full h-full object-cover"
+                    width={224}
+                    height={224}
+                    className="h-full w-full object-cover"
                     style={{
                       objectPosition: 'center 45%',
                       transform: 'scale(1.25)',
@@ -136,67 +144,102 @@ export default function ParentsLanding() {
                     unoptimized
                   />
                 </div>
-                <p className="mt-3 text-sm italic text-brand-gold font-semibold">
+                <p className="mt-3 text-sm font-semibold italic text-brand-gold">
                   Dr Waleed Ahmad, MBBS
                 </p>
-                <p className="text-xs text-brand-muted">Founder, A-Level Accelerators</p>
+                <p className="text-xs text-brand-text/60">Founder, A-Level Accelerators</p>
               </div>
 
-              <div className="border-2 border-brand-gold rounded-xl p-6 bg-brand-cream/40 max-w-md">
-                <p className="text-base md:text-lg text-brand-text leading-relaxed mb-4">
-                  As a doctor and former top-performing A-Level student, I have worked with over{' '}
-                  <strong className="text-brand-purple">1,000 students</strong> to help them
-                  improve their grades, manage their workload, and build study systems that
-                  actually work.
+              <div className="max-w-md rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10">
+                <p className={EYEBROW}>Who wrote it</p>
+                <p className="mt-3 leading-relaxed text-brand-text/80">
+                  I&apos;m a doctor and a former top-performing A-level student, and I&apos;ve
+                  worked with over <strong className="text-brand-purple">1,000 students</strong> on
+                  their grades, their workload and their study systems.
                 </p>
-                <p className="text-base md:text-lg text-brand-text leading-relaxed">
-                  I wrote this guide specifically for parents who can see their child is trying
-                  hard but not getting the results they deserve.
+                <p className="mt-3 leading-relaxed text-brand-text/80">
+                  I wrote this guide for parents who can see their child is trying hard but not
+                  getting the results they deserve. It tells you why, without the jargon, and what
+                  to do next.
                 </p>
               </div>
             </div>
+          </section>
+        </ScrollFade>
+
+        {/* ── Form ──────────────────────────────────────────────────────── */}
+        <section id="get-guide" className="scroll-mt-24 px-5 pb-14">
+          <div className="mx-auto max-w-4xl rounded-2xl bg-brand-purple px-6 py-10 sm:px-10">
+            <div className="mx-auto max-w-2xl">
+              <div className="mb-8 text-center text-brand-cream">
+                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-cream/50">
+                  Free, straight to your inbox
+                </p>
+                <h2 className="mt-2 font-serif text-3xl font-bold text-brand-gold">
+                  Get your free guide
+                </h2>
+                <p className="mt-2 text-lg opacity-90">
+                  Enter your details below and we&apos;ll send it over within a minute.
+                </p>
+              </div>
+              <ParentsForm />
+            </div>
           </div>
         </section>
-      </ScrollFade>
 
-      {/* ── Form ─────────────────────────────────────────────────────────── */}
-      <ScrollFade delay={0.1}>
-        <section
-          id="get-guide"
-          className="py-20 px-6 bg-gradient-to-br from-brand-purple to-brand-purple-light scroll-mt-24"
-        >
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center mb-10 text-brand-cream">
-              <h2 className="text-3xl md:text-4xl font-serif font-bold text-brand-gold mb-4">
-                Get Your Free Guide
+        {/* ── The free tools the guide points to ────────────────────────── */}
+        <ScrollFade>
+          <section className="px-5 pb-16">
+            <div className="mx-auto max-w-4xl">
+              <p className={`${EYEBROW} text-center`}>While the guide is on its way</p>
+              <h2 className="mt-2 text-center font-serif text-3xl font-bold text-brand-purple">
+                See the problem before you fix it.
               </h2>
-              <p className="text-lg opacity-90">
-                Enter your details below and we will send it straight to your inbox.
+              <p className="mx-auto mt-3 max-w-2xl text-center leading-relaxed text-brand-text/70">
+                Everything the guide recommends is free and lives on this site. The best first step:
+                ask your teenager to take the diagnostic tonight.
               </p>
+              <div className="mt-8 grid gap-4 sm:grid-cols-3">
+                <a
+                  href="/revision-diagnostic"
+                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 transition hover:shadow-md"
+                >
+                  <p className="font-serif text-lg font-bold text-brand-purple">
+                    Revision Diagnostic
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-text/70">
+                    20 questions, about 4 minutes. Shows exactly where their revision is leaking
+                    hours and marks, so you both know what to fix first.
+                  </p>
+                </a>
+                <a
+                  href="/revision-tracker"
+                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 transition hover:shadow-md"
+                >
+                  <p className="font-serif text-lg font-bold text-brand-purple">Revision Tracker</p>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-text/70">
+                    They rate their topics, it builds their week around the weakest ones, with a
+                    method for every session.
+                  </p>
+                </a>
+                <a
+                  href="/newsletter"
+                  className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 transition hover:shadow-md"
+                >
+                  <p className="font-serif text-lg font-bold text-brand-purple">
+                    The Sunday Session
+                  </p>
+                  <p className="mt-2 text-sm leading-relaxed text-brand-text/70">
+                    My free weekly email for students. One revision method every Sunday at 5pm,
+                    usable that evening.
+                  </p>
+                </a>
+              </div>
             </div>
-
-            <ParentsForm />
-          </div>
-        </section>
-      </ScrollFade>
-
-      {/* ── Footer ───────────────────────────────────────────────────────── */}
-      <footer className="bg-brand-purple text-brand-cream py-8 px-6 border-t-4 border-brand-gold">
-        <div className="max-w-4xl mx-auto text-center">
-          <p className="text-sm mb-2">
-            Questions?{' '}
-            <a
-              href="mailto:Waleed@alevelaccelerators.com"
-              className="text-brand-gold hover:text-white transition"
-            >
-              Waleed@alevelaccelerators.com
-            </a>
-          </p>
-          <p className="text-xs opacity-60">
-            &copy; 2026 A-Level Accelerators. All rights reserved.
-          </p>
-        </div>
-      </footer>
-    </main>
+          </section>
+        </ScrollFade>
+      </main>
+      <Footer />
+    </>
   )
 }

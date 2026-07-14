@@ -31,9 +31,12 @@ export default function Footer() {
             <div>
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Free Resources</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="/blog/" className="text-brand-gold hover:text-white transition">Revision Blog</a></li>
+                <li><a href="/revision-diagnostic" className="text-brand-gold hover:text-white transition">Revision Diagnostic</a></li>
                 <li><a href="/revision-tracker" className="text-brand-gold hover:text-white transition">Revision Tracker</a></li>
+                <li><a href="/blog/" className="text-brand-gold hover:text-white transition">Revision Blog</a></li>
                 <li><a href="/A-Level-Accelerators-Blurting-Template.pdf" className="text-brand-gold hover:text-white transition">Blurting Template</a></li>
+                <li><a href="/newsletter" className="text-brand-gold hover:text-white transition">The Sunday Session</a></li>
+                <li><a href="/parents" className="text-brand-gold hover:text-white transition">Free Parents&apos; Guide</a></li>
               </ul>
             </div>
             <div>
