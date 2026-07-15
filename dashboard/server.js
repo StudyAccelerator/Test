@@ -9,6 +9,8 @@
  *                    (key reused from lib/mailerlite.ts, same as the site forms)
  *   /api/stripe      live balance and takings once STRIPE_KEY exists in
  *                    dashboard/.env, honest pending state until then
+ *   /api/monzo       live Monzo balances, business and personal, once Waleed
+ *                    has signed in himself through /api/monzo/connect
  *   /api/site        uptime ping of the live site plus the latest git commit
  *   /api/store/:name local JSON stores (tasks, subscriptions, linkedin log...)
  *                    kept in dashboard/data/, which is gitignored
@@ -20,6 +22,7 @@
 const http = require('node:http')
 const fs = require('node:fs')
 const path = require('node:path')
+const crypto = require('node:crypto')
 const { execFile } = require('node:child_process')
 
 const HOST = '127.0.0.1'
@@ -63,7 +66,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -113,9 +116,10 @@ async function ml(pathname) {
 const rate = (r) => (r && typeof r.float === 'number' ? r.float : null)
 
 async function fetchMailerlite() {
-  const [groupsRes, totalRes, automationsRes, campaignsRes] = await Promise.all([
+  const [groupsRes, totalRes, activeRes, automationsRes, campaignsRes] = await Promise.all([
     ml('/groups?limit=50&sort=-active_count'),
     ml('/subscribers?limit=0'),
+    ml('/subscribers?filter[status]=active&limit=0'),
     ml('/automations?limit=25').catch(() => ml('/automations?limit=10')),
     ml('/campaigns?filter[status]=sent&limit=10'),
   ])
@@ -154,6 +158,7 @@ async function fetchMailerlite() {
   const payload = {
     fetchedAt: new Date().toISOString(),
     total: totalRes.total,
+    active: activeRes.total,
     groups,
     automations,
     campaigns,
@@ -166,6 +171,7 @@ async function fetchMailerlite() {
   const snapshot = {
     date: today,
     total: payload.total,
+    active: payload.active,
     groups: Object.fromEntries(groups.map((g) => [g.id, g.active])),
   }
   const existing = history.findIndex((h) => h.date === today)
@@ -218,6 +224,122 @@ async function fetchStripe() {
       status: p.status,
       arrival: p.arrival_date,
     })),
+  }
+}
+
+/* ---------------------------------------------------------------- monzo */
+
+/* Monzo is read only here: balances and account names, nothing else. Waleed
+   does the sign in himself in his own browser; this server only ever handles
+   the code Monzo hands back. Tokens live in data/monzo-tokens.json (gitignored,
+   owner-readable only) and are NEVER exposed through /api/store. */
+
+const MONZO_CLIENT_ID = env.MONZO_CLIENT_ID || null
+const MONZO_CLIENT_SECRET = env.MONZO_CLIENT_SECRET || null
+const MONZO_REDIRECT = `http://${HOST}:${PORT}/api/monzo/callback`
+const MONZO_TOKEN_FILE = path.join(DATA_DIR, 'monzo-tokens.json')
+const monzoStates = new Set()
+
+function readMonzoTokens() {
+  try {
+    return JSON.parse(fs.readFileSync(MONZO_TOKEN_FILE, 'utf8'))
+  } catch {
+    return null
+  }
+}
+
+function writeMonzoTokens(tokens) {
+  fs.writeFileSync(MONZO_TOKEN_FILE, JSON.stringify(tokens, null, 2), { mode: 0o600 })
+}
+
+async function monzoTokenCall(params) {
+  const res = await fetch('https://api.monzo.com/oauth2/token', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: new URLSearchParams(params),
+    signal: AbortSignal.timeout(15000),
+  })
+  const body = await res.json()
+  if (!res.ok) throw new Error(body.message || body.code || `Monzo token error ${res.status}`)
+  return body
+}
+
+/* Access tokens last a few hours; a confidential client can refresh them
+   indefinitely, so the panel keeps working without Waleed signing in again. */
+async function monzoAccessToken() {
+  const t = readMonzoTokens()
+  if (!t) return null
+  if (Date.now() < t.expiresAt - 60_000) return t.accessToken
+  if (!t.refreshToken) return null
+  const fresh = await monzoTokenCall({
+    grant_type: 'refresh_token',
+    client_id: MONZO_CLIENT_ID,
+    client_secret: MONZO_CLIENT_SECRET,
+    refresh_token: t.refreshToken,
+  })
+  const next = {
+    accessToken: fresh.access_token,
+    refreshToken: fresh.refresh_token || t.refreshToken,
+    expiresAt: Date.now() + fresh.expires_in * 1000,
+    connectedAt: t.connectedAt,
+  }
+  writeMonzoTokens(next)
+  return next.accessToken
+}
+
+async function fetchMonzo() {
+  if (!MONZO_CLIENT_ID || !MONZO_CLIENT_SECRET) return { pending: 'config', redirect: MONZO_REDIRECT }
+
+  let token = null
+  try {
+    token = await monzoAccessToken()
+  } catch (err) {
+    return { pending: 'auth', error: err.message }
+  }
+  if (!token) return { pending: 'auth' }
+
+  const call = async (pathname) => {
+    const res = await fetch(`https://api.monzo.com${pathname}`, {
+      headers: { Authorization: `Bearer ${token}` },
+      signal: AbortSignal.timeout(15000),
+    })
+    const body = await res.json().catch(() => ({}))
+    if (!res.ok) {
+      const err = new Error(body.message || body.code || `Monzo ${res.status}`)
+      err.code = body.code || ''
+      err.status = res.status
+      throw err
+    }
+    return body
+  }
+
+  try {
+    const { accounts } = await call('/accounts')
+    const open = (accounts || []).filter((a) => !a.closed)
+    const withBalances = []
+    for (const a of open) {
+      const b = await call(`/balance?account_id=${encodeURIComponent(a.id)}`)
+      withBalances.push({
+        name: a.description || a.type,
+        kind: a.type && a.type.includes('business') ? 'business' : 'personal',
+        balance: b.balance,
+        totalBalance: b.total_balance,
+        currency: b.currency,
+        spendToday: b.spend_today,
+      })
+    }
+    const tokens = readMonzoTokens()
+    return {
+      fetchedAt: new Date().toISOString(),
+      connectedAt: tokens ? tokens.connectedAt : null,
+      accounts: withBalances,
+    }
+  } catch (err) {
+    /* Monzo returns this until the sign in is approved in the phone app */
+    if (err.status === 403 || (err.code && err.code.includes('insufficient_permissions'))) {
+      return { pending: 'approval' }
+    }
+    return { error: err.message }
   }
 }
 
@@ -326,6 +448,74 @@ async function handleApi(req, res, url) {
     }
   }
 
+  /* Monzo sign in: Waleed clicks Connect, Monzo emails him a magic link and
+     asks his phone to approve. This server never sees his password. */
+  if (seg[1] === 'monzo' && seg[2] === 'connect') {
+    if (!MONZO_CLIENT_ID) return sendJson(res, 400, { error: 'No MONZO_CLIENT_ID in dashboard/.env' })
+    const state = crypto.randomUUID()
+    monzoStates.add(state)
+    const auth =
+      'https://auth.monzo.com/?' +
+      new URLSearchParams({
+        client_id: MONZO_CLIENT_ID,
+        redirect_uri: MONZO_REDIRECT,
+        response_type: 'code',
+        state,
+      })
+    res.writeHead(302, { Location: auth })
+    return res.end()
+  }
+
+  if (seg[1] === 'monzo' && seg[2] === 'callback') {
+    const code = url.searchParams.get('code')
+    const state = url.searchParams.get('state')
+    const page = (msg) =>
+      `<!doctype html><meta charset="utf-8"><body style="font-family:-apple-system,sans-serif;background:#f8f3e9;color:#1a1535;padding:3rem;max-width:34rem;margin:0 auto"><h1 style="font-family:Georgia,serif;font-weight:normal">Monzo</h1><p>${msg}</p><p><a href="/" style="color:#a87f2f">Back to the dashboard</a></p></body>`
+    if (!code || !state || !monzoStates.has(state)) {
+      res.writeHead(400, { 'Content-Type': 'text/html; charset=utf-8' })
+      return res.end(page('That sign in did not complete. Close this tab and press Connect Monzo again.'))
+    }
+    monzoStates.delete(state)
+    try {
+      const t = await monzoTokenCall({
+        grant_type: 'authorization_code',
+        client_id: MONZO_CLIENT_ID,
+        client_secret: MONZO_CLIENT_SECRET,
+        redirect_uri: MONZO_REDIRECT,
+        code,
+      })
+      writeMonzoTokens({
+        accessToken: t.access_token,
+        refreshToken: t.refresh_token || null,
+        expiresAt: Date.now() + t.expires_in * 1000,
+        connectedAt: new Date().toISOString(),
+      })
+      cache.delete('monzo')
+      res.writeHead(302, { Location: '/' })
+      return res.end()
+    } catch (err) {
+      res.writeHead(500, { 'Content-Type': 'text/html; charset=utf-8' })
+      return res.end(page(`Monzo refused the sign in: ${err.message}`))
+    }
+  }
+
+  if (seg[1] === 'monzo' && seg[2] === 'disconnect' && req.method === 'POST') {
+    try {
+      fs.unlinkSync(MONZO_TOKEN_FILE)
+    } catch {}
+    cache.delete('monzo')
+    return sendJson(res, 200, { ok: true })
+  }
+
+  if (seg[1] === 'monzo') {
+    try {
+      if (url.searchParams.has('fresh')) cache.delete('monzo')
+      return sendJson(res, 200, await cached('monzo', 60_000, fetchMonzo))
+    } catch (err) {
+      return sendJson(res, 200, { error: err.message })
+    }
+  }
+
   if (seg[1] === 'site') {
     try {
       return sendJson(res, 200, await cached('site', 60_000, fetchSite))
@@ -362,7 +552,7 @@ async function handleApi(req, res, url) {
       facebook: has('facebook', (v) => v.extractedAt) ? 'extracted' : 'pending',
       gmail: has('gmail') ? 'extracted' : 'pending',
       calendar: has('calendar') ? 'extracted' : 'pending',
-      bank: 'pending',
+      bank: !MONZO_CLIENT_ID ? 'pending' : readMonzoTokens() ? 'live' : 'needs sign in',
     })
   }
 
@@ -406,7 +596,16 @@ server.listen(PORT, HOST, () => {
   console.log(`  http://${HOST}:${PORT}`)
   console.log('')
   console.log(`  MailerLite: ${ML_KEY ? 'connected' : 'no key found'}`)
-  console.log(`  Stripe:     ${STRIPE_KEY ? 'connected' : 'pending (add STRIPE_KEY to dashboard/.env)'}`)
+  console.log(`  Stripe:     ${STRIPE_KEY ? 'connected' : 'snapshot (add STRIPE_KEY to dashboard/.env for always-on)'}`)
+  console.log(
+    `  Monzo:      ${
+      !MONZO_CLIENT_ID
+        ? 'pending (add MONZO_CLIENT_ID and MONZO_CLIENT_SECRET to dashboard/.env)'
+        : readMonzoTokens()
+          ? 'connected'
+          : 'waiting for you to press Connect Monzo on the Bank panel'
+    }`
+  )
   console.log('  Private:    bound to 127.0.0.1 only')
   console.log('')
 })
