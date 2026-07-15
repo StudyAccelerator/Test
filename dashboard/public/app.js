@@ -224,6 +224,70 @@ function renderBarChart(container, items, color = '#b08a3e', valueFormat = nf.fo
   container.appendChild(svg)
 }
 
+/* Two series of the same unit (pounds), so paired bars on one shared axis.
+   Both series are direct-labelled in the legend, never colour alone. */
+function renderGroupedBars(container, months, series) {
+  container.innerHTML = ''
+  const w = Math.max(container.clientWidth || 300, 260)
+  const h = 150
+  const m = { top: 16, right: 4, bottom: 34, left: 4 }
+  const svg = svgEl('svg', { width: w, height: h, viewBox: `0 0 ${w} ${h}` })
+
+  const hi = Math.max(...months.flatMap((d) => series.map((s) => d[s.key])), 1)
+  const band = (w - m.left - m.right) / months.length
+  const barW = Math.min((band - 14) / series.length, 22)
+  const y = (v) => m.top + (1 - v / hi) * (h - m.top - m.bottom)
+
+  svg.appendChild(
+    svgEl('line', {
+      x1: m.left, x2: w - m.right, y1: h - m.bottom, y2: h - m.bottom,
+      stroke: 'rgba(26,21,53,0.16)', 'stroke-width': 1,
+    })
+  )
+
+  months.forEach((d, i) => {
+    const groupW = series.length * barW + 2
+    const startX = m.left + i * band + (band - groupW) / 2
+    series.forEach((s, j) => {
+      const bx = startX + j * (barW + 2)
+      const by = y(d[s.key])
+      const bar = svgEl('rect', {
+        x: bx, y: by, width: barW, height: Math.max(h - m.bottom - by, 1.5),
+        rx: 3, fill: s.color,
+      })
+      bar.addEventListener('mousemove', (e) =>
+        showTip(
+          `<div class="t-label">${esc(monthName(d.month))}</div>${esc(s.label)} ${gbp(d[s.key])}`,
+          e.clientX,
+          e.clientY
+        )
+      )
+      bar.addEventListener('mouseleave', hideTip)
+      svg.appendChild(bar)
+    })
+
+    const lbl = svgEl('text', {
+      x: m.left + i * band + band / 2, y: h - 18,
+      fill: '#756d96', 'font-size': 9.5, 'text-anchor': 'middle',
+    })
+    lbl.textContent = monthName(d.month).slice(0, 3)
+    svg.appendChild(lbl)
+
+    const net = svgEl('text', {
+      x: m.left + i * band + band / 2, y: h - 5,
+      fill: d.net >= 0 ? '#2f7d57' : '#b3473f', 'font-size': 9.5, 'text-anchor': 'middle', 'font-weight': '600',
+    })
+    net.textContent = (d.net >= 0 ? '+' : '') + '£' + nf.format(Math.round(d.net / 100))
+    svg.appendChild(net)
+  })
+
+  container.appendChild(svg)
+}
+
+function monthName(ym) {
+  return new Date(`${ym}-01T00:00:00`).toLocaleDateString('en-GB', { month: 'long', year: 'numeric' })
+}
+
 /* -------------------------------------------------------------- top bar */
 
 function renderTop() {
@@ -577,7 +641,7 @@ function renderBank() {
   if (!m || m.pending === 'config') {
     chip.textContent = 'needs your sign in'
     chip.className = 'chip chip-pending'
-    const redirect = (m && m.redirect) || 'http://127.0.0.1:4400/api/monzo/callback'
+    const redirect = (m && m.redirect) || 'http://localhost:4400/api/monzo/callback'
     body.innerHTML = `
       <p class="small muted" style="margin-top:0">Monzo can show your business and personal balances here, read only. I cannot sign in as you, so these four steps are yours. About five minutes, once.</p>
       <ol class="setup-steps">
@@ -639,18 +703,49 @@ function renderBank() {
         .join('')}`
       : ''
 
+  const cf = m.cashflow
+  const hasFlow = cf && !cf.error && cf.monthly && cf.monthly.length
+
   body.innerHTML = `
     <div class="li-stats">
       ${business.length ? `<div class="li-stat"><div class="label">Business</div><div class="hero-number">${gbp(sum(business))}</div><div class="hero-sub">${business.length} account${business.length > 1 ? 's' : ''}</div></div>` : ''}
       ${personal.length ? `<div class="li-stat"><div class="label">Personal</div><div class="hero-number">${gbp(sum(personal))}</div><div class="hero-sub">${personal.length} account${personal.length > 1 ? 's' : ''}</div></div>` : ''}
+      ${
+        hasFlow
+          ? `<div class="li-stat"><div class="label">Net, last 30 days</div><div class="hero-number" style="color:${cf.last30.net >= 0 ? 'var(--ok)' : 'var(--alert)'}">${cf.last30.net >= 0 ? '+' : ''}${gbp(cf.last30.net)}</div><div class="hero-sub">${gbp(cf.last30.inflow)} in, ${gbp(cf.last30.outflow)} out</div></div>`
+          : ''
+      }
     </div>
     ${block('Business accounts', business)}
     ${block('Personal accounts', personal)}
+    ${
+      hasFlow
+        ? `<div class="chart-wrap">
+            <div class="label">Money in and out by month</div>
+            <div class="flow-legend">
+              <span><i style="background:#2f8a5d"></i>In</span>
+              <span><i style="background:#b3473f"></i>Out</span>
+              <span class="muted">net below each month</span>
+            </div>
+            <div id="monzo-flow"></div>
+            <p class="chart-note">${nf.format(cf.transactions)} transactions across the last ${cf.windowDays} days on your ${esc(m.cashflowAccount || 'account')}. That window is Monzo's limit, not a choice: their security rules cap unattended access at 90 days, so earlier months cannot be shown.</p>
+          </div>`
+        : cf && cf.error
+          ? `<p class="small muted">Balances are live, but Monzo refused the transaction history: ${esc(cf.error)}</p>`
+          : ''
+    }
     <p class="small muted" style="margin-bottom:6px">Live from Monzo, read only, refreshed each time you open the dashboard.${
-      !business.length ? ' No business account found on this Monzo login, so everything here is personal.' : ''
+      !business.length ? ' No business account on this Monzo login, so everything here is personal.' : ''
     }</p>
     <button id="monzo-disconnect" class="ghost-btn" type="button">Disconnect</button>`
   wire()
+
+  if (hasFlow) {
+    renderGroupedBars($('#monzo-flow'), cf.monthly, [
+      { key: 'inflow', label: 'In', color: '#2f8a5d' },
+      { key: 'outflow', label: 'Out', color: '#b3473f' },
+    ])
+  }
 }
 
 /* ------------------------------------------------------------- linkedin */

@@ -234,9 +234,19 @@ async function fetchStripe() {
    the code Monzo hands back. Tokens live in data/monzo-tokens.json (gitignored,
    owner-readable only) and are NEVER exposed through /api/store. */
 
-const MONZO_CLIENT_ID = env.MONZO_CLIENT_ID || null
-const MONZO_CLIENT_SECRET = env.MONZO_CLIENT_SECRET || null
-const MONZO_REDIRECT = `http://${HOST}:${PORT}/api/monzo/callback`
+/* Read afresh each time rather than caching at boot: editing .env then takes
+   effect immediately, with no restart to forget. */
+function monzoConfig() {
+  const e = loadEnv()
+  return { id: e.MONZO_CLIENT_ID || null, secret: e.MONZO_CLIENT_SECRET || null }
+}
+
+/* Deliberately "localhost" and not the 127.0.0.1 literal: Monzo's CloudFront
+   WAF 403s any auth request carrying a loopback IP in the query string
+   (verified 15 July 2026: identical URL is 200 with localhost, 403 with
+   127.0.0.1). localhost resolves to 127.0.0.1, so the server still only ever
+   listens on the loopback interface. */
+const MONZO_REDIRECT = `http://localhost:${PORT}/api/monzo/callback`
 const MONZO_TOKEN_FILE = path.join(DATA_DIR, 'monzo-tokens.json')
 const monzoStates = new Set()
 
@@ -271,10 +281,11 @@ async function monzoAccessToken() {
   if (!t) return null
   if (Date.now() < t.expiresAt - 60_000) return t.accessToken
   if (!t.refreshToken) return null
+  const cfg = monzoConfig()
   const fresh = await monzoTokenCall({
     grant_type: 'refresh_token',
-    client_id: MONZO_CLIENT_ID,
-    client_secret: MONZO_CLIENT_SECRET,
+    client_id: cfg.id,
+    client_secret: cfg.secret,
     refresh_token: t.refreshToken,
   })
   const next = {
@@ -287,8 +298,73 @@ async function monzoAccessToken() {
   return next.accessToken
 }
 
+/* Monzo's "description" is often just the owner id (user_0000...) rather than
+   anything a human would recognise, so fall back to the account type. */
+const MONZO_TYPE_NAMES = {
+  uk_retail: 'Personal current account',
+  uk_retail_joint: 'Joint account',
+  uk_retail_plus: 'Personal (Plus)',
+  uk_business: 'Business current account',
+  uk_monzo_flex: 'Flex',
+  uk_prepaid: 'Prepaid card',
+}
+
+function monzoAccountName(a) {
+  const d = (a.description || '').trim()
+  const looksLikeAnId = !d || /^(user|acc)_[A-Za-z0-9]+$/.test(d)
+  return looksLikeAnId ? MONZO_TYPE_NAMES[a.type] || a.type || 'Account' : d
+}
+
+/* Money in and out per month. Monzo's strong-customer-authentication rules cap
+   unattended access at the last 90 days, so that is the honest window: no
+   earlier history is available to us without Waleed signing in again. Declines
+   and zero-amount entries are excluded because they never moved money. */
+async function monzoCashflow(call, accountId) {
+  const since = new Date(Date.now() - 89 * 864e5).toISOString()
+  let all = []
+  let cursor = null
+  for (let page = 0; page < 8; page++) {
+    const q = cursor
+      ? `/transactions?account_id=${encodeURIComponent(accountId)}&since=${encodeURIComponent(cursor)}&limit=100`
+      : `/transactions?account_id=${encodeURIComponent(accountId)}&since=${encodeURIComponent(since)}&limit=100`
+    const r = await call(q)
+    const batch = r.transactions || []
+    all = all.concat(batch)
+    if (batch.length < 100) break
+    cursor = batch[batch.length - 1].id
+  }
+
+  const real = all.filter((t) => !t.decline_reason && t.amount !== 0)
+  const byMonth = new Map()
+  for (const t of real) {
+    const key = t.created.slice(0, 7)
+    if (!byMonth.has(key)) byMonth.set(key, { month: key, inflow: 0, outflow: 0 })
+    const e = byMonth.get(key)
+    if (t.amount > 0) e.inflow += t.amount
+    else e.outflow += -t.amount
+  }
+  const monthly = [...byMonth.values()]
+    .sort((a, b) => (a.month < b.month ? -1 : 1))
+    .map((e) => ({ ...e, net: e.inflow - e.outflow }))
+
+  const cutoff = new Date(Date.now() - 30 * 864e5).toISOString()
+  const last30 = real.reduce(
+    (acc, t) => {
+      if (t.created < cutoff) return acc
+      if (t.amount > 0) acc.inflow += t.amount
+      else acc.outflow += -t.amount
+      return acc
+    },
+    { inflow: 0, outflow: 0 }
+  )
+  last30.net = last30.inflow - last30.outflow
+
+  return { monthly, last30, transactions: real.length, windowDays: 89 }
+}
+
 async function fetchMonzo() {
-  if (!MONZO_CLIENT_ID || !MONZO_CLIENT_SECRET) return { pending: 'config', redirect: MONZO_REDIRECT }
+  const cfg = monzoConfig()
+  if (!cfg.id || !cfg.secret) return { pending: 'config', redirect: MONZO_REDIRECT }
 
   let token = null
   try {
@@ -320,7 +396,7 @@ async function fetchMonzo() {
     for (const a of open) {
       const b = await call(`/balance?account_id=${encodeURIComponent(a.id)}`)
       withBalances.push({
-        name: a.description || a.type,
+        name: monzoAccountName(a),
         kind: a.type && a.type.includes('business') ? 'business' : 'personal',
         balance: b.balance,
         totalBalance: b.total_balance,
@@ -328,11 +404,24 @@ async function fetchMonzo() {
         spendToday: b.spend_today,
       })
     }
+    /* cashflow from the main account: the one the balances came from */
+    let cashflow = null
+    const main = open.find((a) => a.type === 'uk_business') || open[0]
+    if (main) {
+      try {
+        cashflow = await monzoCashflow(call, main.id)
+      } catch (err) {
+        cashflow = { error: err.message }
+      }
+    }
+
     const tokens = readMonzoTokens()
     return {
       fetchedAt: new Date().toISOString(),
       connectedAt: tokens ? tokens.connectedAt : null,
       accounts: withBalances,
+      cashflow,
+      cashflowAccount: main ? monzoAccountName(main) : null,
     }
   } catch (err) {
     /* Monzo returns this until the sign in is approved in the phone app */
@@ -451,13 +540,14 @@ async function handleApi(req, res, url) {
   /* Monzo sign in: Waleed clicks Connect, Monzo emails him a magic link and
      asks his phone to approve. This server never sees his password. */
   if (seg[1] === 'monzo' && seg[2] === 'connect') {
-    if (!MONZO_CLIENT_ID) return sendJson(res, 400, { error: 'No MONZO_CLIENT_ID in dashboard/.env' })
+    const cfg = monzoConfig()
+    if (!cfg.id) return sendJson(res, 400, { error: 'No MONZO_CLIENT_ID in dashboard/.env' })
     const state = crypto.randomUUID()
     monzoStates.add(state)
     const auth =
       'https://auth.monzo.com/?' +
       new URLSearchParams({
-        client_id: MONZO_CLIENT_ID,
+        client_id: cfg.id,
         redirect_uri: MONZO_REDIRECT,
         response_type: 'code',
         state,
@@ -477,10 +567,11 @@ async function handleApi(req, res, url) {
     }
     monzoStates.delete(state)
     try {
+      const cfg = monzoConfig()
       const t = await monzoTokenCall({
         grant_type: 'authorization_code',
-        client_id: MONZO_CLIENT_ID,
-        client_secret: MONZO_CLIENT_SECRET,
+        client_id: cfg.id,
+        client_secret: cfg.secret,
         redirect_uri: MONZO_REDIRECT,
         code,
       })
@@ -552,7 +643,7 @@ async function handleApi(req, res, url) {
       facebook: has('facebook', (v) => v.extractedAt) ? 'extracted' : 'pending',
       gmail: has('gmail') ? 'extracted' : 'pending',
       calendar: has('calendar') ? 'extracted' : 'pending',
-      bank: !MONZO_CLIENT_ID ? 'pending' : readMonzoTokens() ? 'live' : 'needs sign in',
+      bank: !monzoConfig().id ? 'pending' : readMonzoTokens() ? 'live' : 'needs sign in',
     })
   }
 
@@ -599,7 +690,7 @@ server.listen(PORT, HOST, () => {
   console.log(`  Stripe:     ${STRIPE_KEY ? 'connected' : 'snapshot (add STRIPE_KEY to dashboard/.env for always-on)'}`)
   console.log(
     `  Monzo:      ${
-      !MONZO_CLIENT_ID
+      !monzoConfig().id
         ? 'pending (add MONZO_CLIENT_ID and MONZO_CLIENT_SECRET to dashboard/.env)'
         : readMonzoTokens()
           ? 'connected'

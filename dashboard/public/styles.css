@@ -633,6 +633,10 @@ code {
 .chart-wrap { margin-top: 16px; }
 .chart-note { color: var(--ink-muted); font-size: 12px; margin-top: 6px; }
 
+.flow-legend { display: flex; gap: 14px; align-items: center; margin: 6px 0 2px; font-size: 11.5px; color: var(--ink-soft); }
+.flow-legend span { display: flex; align-items: center; gap: 5px; }
+.flow-legend i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+
 .tooltip {
   position: fixed;
   z-index: 50;
