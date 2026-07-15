@@ -5,7 +5,7 @@ To: the Sunday Session send list (see README)
 Subject A: Sunday Session: ugly notes win
 Subject B: your notes are lying to you
 Preheader: The beautiful notes trap, what notes are actually for, and one blank page to prove it tonight.
-Goal: teach the notes reframe (deliberately re-frames blurting and says so); door does two jobs: playbook trailer + last strong Summer Accelerator push.
+Goal: teach the notes reframe (deliberately re-frames blurting and says so); door does two jobs: playbook trailer + final pre-start Summer Accelerator push (cohort starts Saturday 8 August, six days after this issue).
 Links: 2 (summer page, blurting article in PS)
 Clinic note: perennial. Swap for a real reply if one fits better.
 
@@ -53,7 +53,7 @@ Two things, both dated.
 
 Results day is a week on Thursday: the 13th. Next Sunday's Session is the full playbook, every outcome, exactly what to do and in what order, including the clearing call script. If someone you know collects results this year, forward next week's email to them. It'll be written to be forwarded.
 
-And for the Year 12s: the Summer Accelerator is one week in, with five weeks of live teaching still ahead, and the recordings cover what's run. If September's been sitting on your mind all summer, this is the honest moment to decide, while most of the value is still in front of you. First session risk-free.
+And for the Year 12s: the Summer Accelerator starts this Saturday, 8th August. Six weeks of live teaching, and joining this week means missing nothing at all. If September's been sitting on your mind all summer, this is the honest moment to decide, with the whole course still in front of you. First session risk-free.
 
 [BUTTON: Join the Summer Accelerator -> https://alevelaccelerators.com/summer-accelerators/]
 

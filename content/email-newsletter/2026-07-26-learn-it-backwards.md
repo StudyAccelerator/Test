@@ -5,7 +5,7 @@ To: the Sunday Session send list (see README)
 Subject A: Sunday Session: learn it backwards
 Subject B: the backwards method for new topics
 Preheader: Why exam questions come first, not last, plus the restart protocol for a collapsed summer plan.
-Goal: teach question-first learning for getting ahead; first paid door (Summer Accelerator, cohort started 25 July).
+Goal: teach question-first learning for getting ahead; first paid door (Summer Accelerator, cohort starts Saturday 8 August).
 Links: 2 (summer page, tracker in PS)
 Clinic note: perennial late-July question. Swap for a real reply if one fits better.
 
@@ -47,7 +47,7 @@ Low-yield: building a new, prettier timetable every Monday. You have a timetable
 
 **The door**
 
-The Summer Accelerator cohort kicked off this weekend: six weeks of live teaching in Biology, Chemistry, Maths and Physics for Year 12s who want September to feel easy. It is, honestly, the taught version of today's Session: content rebuilt live, then exam questions coached against the mark scheme. Joining now is joining on time, because the recordings catch you up on anything that's already run, and the first session is risk-free either way. If getting ahead is your summer plan, this is that plan with a teacher in it.
+The Summer Accelerator cohort starts Saturday 8th August: six weeks of live teaching in Biology, Chemistry, Maths and Physics for Year 12s who want September to feel easy. It is, honestly, the taught version of today's Session: content rebuilt live, then exam questions coached against the mark scheme. Booking now means starting on time with the full six weeks ahead of you, and the first session is risk-free either way. If getting ahead is your summer plan, this is that plan with a teacher in it.
 
 [BUTTON: See the Summer Accelerator -> https://alevelaccelerators.com/summer-accelerators/]
 

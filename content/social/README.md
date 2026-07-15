@@ -1,6 +1,6 @@
 # Weekly social content packs
 
-One folder per week, named by the Monday the content starts: `content/social/2026-07-20/` covers Monday 20 to Sunday 26 July 2026.
+One folder per week, named by the Monday of the week it covers. Exception: the first pack, `content/social/2026-07-20/`, covers eleven days (Thursday 16 to Sunday 26 July 2026) because Waleed set the posting start to 16 July. Both platforms run one post per day, every day.
 
 Each folder contains:
 
@@ -16,4 +16,4 @@ The process in one line: fresh business snapshot decides the push, light researc
 
 **Nothing is ever scheduled or posted by the routine. Waleed approves every pack and posts manually.** After the week runs, he drops the numbers (impressions, comments, diagnostic signups, boost results) into the next Friday session so the engine learns.
 
-First pack: `2026-07-20/` (built 15 July 2026). Its `research-notes.md` is the standing research baseline until a monthly deep refresh replaces it.
+First pack: `2026-07-20/` (built 15 July 2026, covering 16 to 26 July, daily on both platforms). Its `research-notes.md` is the standing research baseline until a monthly deep refresh replaces it.

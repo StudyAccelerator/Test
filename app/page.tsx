@@ -98,7 +98,7 @@ const PROGRAMMES = [
     featured: true,
     audience: 'For Year 12 going into Year 13',
     name: 'Summer Accelerator',
-    badge: 'Enrolling now · starts 25th July',
+    badge: 'Enrolling now · starts 8th August',
     hook: 'Master the topics that decide your predicted grades.',
     art: <GradeClimbArt />,
     artBg: 'bg-gradient-to-br from-brand-gold/15 via-brand-cream to-brand-cream-dark',

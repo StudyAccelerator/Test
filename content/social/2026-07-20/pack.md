@@ -1,103 +1,165 @@
-# Content pack | week commencing Monday 20 July 2026
+# Content pack | Thursday 16 to Sunday 26 July 2026
 
 **Status: DRAFT, awaiting Waleed's approval. Nothing here is scheduled or posted.**
 
-Produced 15 July 2026 by the weekly content routine (see `content/social/README.md`). LinkedIn is written for students, Facebook for parents, per the standing rule. Every visual referenced here either exists in `content/graphics/week-2026-07-20/` or has a complete brief in place.
+Produced 15 July 2026 by the weekly content routine (see `content/social/README.md`), then extended the same day on Waleed's instruction: posting starts Thursday 16 July and both platforms run ONE POST PER DAY. This first pack therefore covers eleven days (Thu 16 to Sun 26 July); packs after this run Monday to Sunday. The four never-posted week-1 posts (written 10 July, graphics already rendered in `content/graphics/week1/`) open the run; the diagnostic week builds on top of them.
+
+The cohort question is resolved: **the Summer Accelerator cohort starts Saturday 8 August 2026.** The site, the diagnostic's routing card and the newsletter drafts now all say 8 August. This run stays diagnostic-first as instructed, seeds the cohort softly on Saturday 25, and the launch push proper belongs to the next two packs (w/c 27 July and w/c 3 August, alongside the results-day arc).
 
 ---
 
-## 1. This week's snapshot (what set the direction)
+## 1. This run's snapshot (what set the direction)
 
 Taken fresh on 15 July 2026. Sources: live MailerLite API, the repo at origin/main, the live site, Waleed's own LinkedIn analytics extract (12 July).
 
-- **The push: the Revision Diagnostic** (`/revision-diagnostic`). It is built, live, and effectively unlaunched: the "Revision Diagnostic" MailerLite group has 2 active subscribers. This week is its public ignition, per Waleed's instruction, and the snapshot agrees: it is the newest asset, the email sequences behind it are on, and nothing else free is this strong.
-- **LinkedIn state:** 952 followers, student audience, no posts since 1 June. This is a restart week, so day one leads with the strongest personal genre and the week's job is consistency, not one viral hit. Best historical posts: the three-photo story (1,481 impressions) and the Performance Pyramid framework (1,446). Worst: direct promos and "which one are you" bait (231 to 308).
-- **Facebook state:** the page is at zero. Posts are written to be forwardable (school WhatsApp groups) and boostable, not for organic page reach that does not exist yet. Boost note in section 6.
-- **The calendar:** exams are done, results day (Thu 13 Aug) is four weeks out, and Year 12s are five to six weeks from Year 13. Predicted grades are the sharpest honest motivator for students and the most useful explainer for parents.
-- **Email:** first Sunday Session issue is expected to go out Sunday 19 July. The diagnostic's E0 email and the three route sequences are live, so every diagnostic completion this week lands in a working funnel.
+- **The push: the Revision Diagnostic** (`/revision-diagnostic`). Built, live, effectively unlaunched: 2 active subscribers in its MailerLite group. This run is its public ignition.
+- **LinkedIn:** 952 followers, student audience, dormant since 1 June. Day one restarts with the strongest personal genre. Best historical posts: photo story (1,481 impressions) and framework visual (1,446); direct promos and bait hooks underperformed (231 to 308).
+- **Facebook:** page at zero. Posts are built to be saved, forwarded and boosted, not for organic page reach that does not exist yet.
+- **Calendar:** results day (Thu 13 Aug) four weeks out; predicted grades are the sharpest honest motivator. Cohort starts Sat 8 Aug, giving a natural late-July/early-August launch arc AFTER this run earns attention with free value.
+- **Email:** first Sunday Session lands Sunday 19 July, 5pm. The diagnostic's E0 and route sequences are on, so every completion lands in a working funnel.
 
-## 2. One decision Waleed must make before Monday
+## 2. The shape of the run
 
-**The live sales page still says the Summer Accelerator cohort starts Saturday 25 July**, which is the Saturday of this content week. The project brief says the relaunch push is early August. Both cannot be true.
+LinkedIn genre engine across the eleven days: 4 story/confession, 5 value (two document carousels), 1 lead-magnet harvest, 1 emotional close. Facebook parent arc: credibility, practical value, script, explainer, tool, trust. The two platforms tell the same argument (diagnose before you treat) to two different audiences, never mixed.
 
-- **If the cohort really starts 25 July:** swap the two Friday posts for the "cohort variant" posts in section 7 and tell me to rework Saturday/Sunday into launch support. Selling days would be nearly gone, so the diagnostic stays the week's engine but Friday goes to the cohort. (Note: the business audit's top-ranked play is exactly this sprint into the 25 July cohort, using the email list and a workshop; these posts would be the social layer of it.)
-- **If the start has moved to August:** approve the pack as is, and the sales page date needs changing separately (say the word and a session will do it).
-
-## 3. Why the week is shaped like this
-
-Research basis (full notes with verified numbers in `research-notes.md`): the individual creators who win with our exact audience run short punchy hooks under 12 words, one sentence per line, specific numbers over adjectives, real screenshots as proof, free resources framed as built things rather than adverts, and exactly one harvest post per week. The three profiles Waleed pointed at confirm it live: Henry Li's proof-screenshot and contrarian posts (102 to 435 reactions at 12k followers), James Chen's free-resource document posts (354 to 649 reactions, reposts doing the distribution), Rumi Abukar's comment-keyword lead magnet (73 comments at 6.5k followers).
-
-The week runs the three-genre engine on LinkedIn (2 story, 2 value, 1 lead magnet) and a parent arc on Facebook (empathy, explainer, tool, trust):
-
-| Day | LinkedIn (students) | Facebook (parents) |
+| Day | LinkedIn (students, 4:30pm) | Facebook (parents) |
 | --- | --- | --- |
-| Mon 20 | Story: the confession, "nobody ever asked how I revise" | Script: three questions that beat "how's revision going" (the saveable one) |
-| Tue 21 | Value: the five systems carousel | |
-| Wed 22 | Story: The Grinder archetype | Explainer: predicted grades, the September deadline parents don't know about |
-| Thu 23 | Lead magnet: the diagnostic, with receipts | |
-| Fri 24 | Value: the six-week runway to predicted grades | Tool: the diagnostic, parent path |
-| Sun 26 | | Trust: why a doctor teaches A-levels |
+| Thu 16 | Confession: terrible method, got into medicine anyway (week 1, D1) | Doctor confession, parent frame (week 1, D1) · 9:30am |
+| Fri 17 | Carousel: past papers done properly (week 1, D2) | Past-paper tip (week 1, D2) · 9:30am |
+| Sat 18 | Recognition vs retrieval (week 1, D3) | Recognition vs retrieval, parent frame (week 1, D3) · 10am |
+| Sun 19 | The four tiers (week 1, D4) | The four tiers, parent frame (week 1, D4) · 7pm |
+| Mon 20 | "Nobody ever asked HOW I revise" (sets up the week) | Script: three questions that beat "how's revision going" · 8:30pm |
+| Tue 21 | Carousel: the five systems | Timetable confession, high-yield vs low-yield (week 1, D5) · 9:30am |
+| Wed 22 | Story: The Grinder archetype | Explainer: predicted grades · 9:30am |
+| Thu 23 | LEAD MAGNET: the diagnostic, with receipts | Story: the student who cried on a call · 9:30am |
+| Fri 24 | The predicted-grades runway | The diagnostic, parent path · 9:30am |
+| Sat 25 | Six hours on a timetable (high-yield confession, week 1, D5 LinkedIn) | Two Septembers: soft cohort seed, 8 Aug named · 10am |
+| Sun 26 | Emotional close: "doing everything and it's still not working" | Trust: why a doctor teaches A-levels · 7pm |
 
-Research notes that shaped the Facebook side specifically (evidence in `research-notes.md`): text and multi-photo posts get roughly 4x the engagement of link posts, so links live in first comments; explicit "share this / comment YES" phrasing is demoted while genuine questions are exempt, so every ask is a real question; the single most-shared format in the parent niche is the practical script or checklist (that's Monday); and the deepest tested parent motivator in this market is visibility and control without nagging, which is exactly what the diagnostic's parent path offers (that's Friday's framing).
+Format rules from the research (full evidence in `research-notes.md`): hooks under 12 words, one sentence per line, specific numbers, ZERO hashtags on LinkedIn, links only in first comments, one harvest mechanic per platform per run, real artefacts beat designed cards wherever Waleed can photograph one.
 
-The arc is deliberate: Monday plants "diagnose before you treat", Tuesday names the five systems the diagnostic scores, Wednesday makes one archetype emotionally real, Thursday hands over the tool, Friday gives the deadline that makes it urgent. Each post stands alone, but in sequence they are one argument.
+## 3. Posting mechanics (applies every day)
 
-## 4. Posting mechanics (applies all week)
-
-- **LinkedIn at 4:30pm UK each day.** The 2026 algorithm research (Buffer, 4.8M posts) found weekday 3 to 8pm now beats mornings, and for students on summer break the after-school-shaped window fits anyway. If a 4:30 slot is impossible around shifts, 7 to 8am is the tested fallback; never two posts in one day.
-- **Facebook: Monday 8:30pm, Wednesday 9:30am, Friday 9:30am, Sunday 7pm.** Parent research puts UK parents at Tue to Thu mornings with an evening secondary peak, so this first week deliberately tests both; log which slot wins.
-- **No hashtags on LinkedIn.** Every verified top performer in this niche uses zero, and 2026 semantic matching has replaced them as a ranking factor. (A few on Facebook are still fine but not needed.)
-- Links NEVER go in the post body. Paste the first comment immediately after publishing.
-- The first 60 to 90 minutes decide reach: comments weigh roughly double reactions and saves weigh more still, so reply to every comment, properly, within the hour.
-- 15 minutes a day commenting genuinely on bigger study/education accounts as Waleed (this is how small accounts borrow reach; the niche discovers each other in comment sections).
-- **Honest expectations for week one:** median reach in 2026 is 8 to 12 percent of followers, so on 952 followers a typical post sees a few hundred impressions. The mechanisms in this pack (comment velocity, saves, the carousel, non-follower interest-graph spread) are what break past that. Judge the week on diagnostic completions and comment quality, not raw impressions.
-- Log impressions, reactions and comments per post at the end of the week; next Friday's pack doubles down on what won.
-- **Visual principle from the research:** with student audiences, real artefacts (Waleed's own handwriting, whiteboard, phone screenshots of the actual tool) outperform designed graphics. The branded cards in this pack are the always-available fallback; whenever Waleed can swap one for a real artefact photo, he should.
+- **LinkedIn 4:30pm UK daily** (2026 evidence: weekday 3 to 8pm beats mornings; fallback 7 to 8am; never two posts in a day).
+- **Facebook mostly 9:30am**, with Monday 8:30pm and the Sundays at 7pm as deliberate evening tests; log which slot wins.
+- Paste each first comment immediately after publishing.
+- Reply to every comment within the hour (comments weigh roughly double reactions; saves more still).
+- 15 minutes a day commenting genuinely on bigger study/education accounts as Waleed.
+- **Honest expectations:** median 2026 reach is 8 to 12 percent of followers, so a typical LinkedIn post sees a few hundred impressions at first. Judge the run on diagnostic completions and comment quality. The Facebook page starts from zero: shares and the boost are its only reach.
+- **Boost:** from Saturday 19, put £3 to £5 a day behind the best-performing Facebook post so far (re-decide after Friday 24; the diagnostic post is the likely winner). UK parents 38 to 55, interests A-level / UCAS / sixth form.
 
 ---
 
-## 5. LINKEDIN, day by day
+## 4. LINKEDIN, day by day (students; 4:30pm; hashtags: none on every post)
 
-### Monday 20 July, 8:30am | Story (the restart post)
+### Thu 16 July | Confession (the restart) | from week 1 Day 1
+**Visual:** ideally a real photo of Waleed (A-level era or doctor-now); fallback `content/graphics/week1/founder-card.png`.
 
-**Goal:** re-open the account with his strongest genre, plant the week's theme.
-**Visual:** a photo of Waleed, ideally two images: one from his A-level or early med school days, one of him now as a doctor (lanyard, scrubs, or teaching setup). Real photos of his face outperform every graphic we have; his best post ever was a three-photo story. **Fallback if no photo by Monday:** `content/graphics/week-2026-07-20/nobody-asked-card.png` (generated, in the folder).
+I got into medicine with a genuinely terrible revision method.
 
-**Copy (paste as is):**
-
-I got into medicine with a revision method I'd never let a student keep.
-
-Re-reading notes until they looked familiar. That was the entire system.
+Not exaggerating. My "system" was re-reading notes until they looked familiar.
 
 It worked because I threw hundreds of extra hours at it. Volume beat inefficiency. Just.
 
-But here's the part that actually bothers me, six years on.
+But I still remember sitting in the exam hall thinking: I knew this yesterday. Where's it gone?
 
-In two years of A-levels, teachers marked my essays, set my homework, wrote my reports.
+If you've felt that, nothing is wrong with your memory. You trained recognition (it looks familiar on the page) when exams test retrieval (produce it from nothing, under time).
 
-Not one person ever asked me HOW I was revising.
+Six years and 1,000+ students later, that one distinction still explains more grades than anything else I know.
 
-The method doing the damage was invisible, because nobody ever looked at it.
+What does your revision actually look like: reading, or retrieving?
+
+**First comment:** none.
+
+### Fri 17 July | Value carousel | from week 1 Day 2
+**Visual:** upload `content/graphics/week1/past-papers-carousel.pdf` as a DOCUMENT post.
+
+Your past paper method is testing you, not teaching you.
+
+Here's the difference.
+
+Most students: do the paper, check the mark scheme, note the score, move on. That measures where you are. It changes nothing.
+
+The mark scheme isn't an answer key. It's a written record of exactly how the examiner thinks.
+
+So after marking, take every lost mark and ask:
+
+1. What exact phrasing was the examiner looking for?
+2. What structure did the model answer follow?
+3. Could I produce that from nothing, under time? If not, what's missing?
+
+That review takes longer than the paper. It's also where the grade actually moves.
+
+Slow and uncomfortable beats fast and useless.
+
+Be honest: do you do the paper, or do you do the review?
+
+**First comment:** none.
+
+### Sat 18 July | Value | from week 1 Day 3
+**Visual:** `content/graphics/week1/recognition-retrieval-card.png`.
+
+"I knew it yesterday" is not a memory problem.
+
+It's a training problem, and it has a specific name.
+
+When you re-read notes, they feel familiar. Your brain files familiar as known. That's recognition.
+
+The exam asks for something different: produce it from a blank page, under pressure, with a clock running. That's retrieval.
+
+You can be brilliant at one and useless at the other. Most students only ever train the comfortable one.
+
+The fix costs nothing. Close the notes, take a blank page, and write everything you can remember. The gaps you find are your actual revision list.
+
+Try it on your weakest topic today and tell me what the page looked like.
+
+**First comment:** none.
+
+### Sun 19 July | Framework | from week 1 Day 4
+**Visual:** `content/graphics/week1/four-tiers-card.png`.
+
+Stuck at a B? You're probably training the wrong tier.
+
+Exam performance stacks in four layers:
+
+Tier 1. Knowledge. Do you understand it?
+Tier 2. Recall. Can you produce it without notes?
+Tier 3. Application. Can you use it on a question you've never seen?
+Tier 4. Exam mastery. Can you do all that under time, on the day?
+
+School teaches Tier 1. Most tutors re-teach Tier 1. Most students spend 95% of their revision there too.
+
+But if you understand your subjects and still sit at a B, Tier 1 was never your problem.
+
+Which tier do you honestly lose your marks in?
+
+**First comment:** none.
+
+### Mon 20 July | Story (sets up the diagnostic week)
+**Visual:** `content/graphics/week-2026-07-20/nobody-asked-card.png`, or a real photo of Waleed at work.
+
+Two years of A-levels. Not one person ever asked me HOW I was revising.
+
+Teachers marked my essays, set my homework, wrote my reports.
+
+Nobody ever looked at the machine producing it all: the method.
+
+I told you last week how bad mine was. Re-reading until things looked familiar, hundreds of extra hours to make up for it.
+
+Here's the part I keep coming back to: it was never caught, because nobody thought revision was a thing you could examine.
 
 I'm a doctor now. When a patient comes in exhausted, we don't guess and we don't start treatment on day one. We take a history first.
 
-Your revision deserves the same. Before you pour more hours into this summer, find out where the current ones actually go.
+Your revision deserves the same, especially before you pour a summer into it.
 
-That's what this week is about. I'll show you, properly, how I'd diagnose a student's revision.
+So this week, that's exactly what we'll do. Tomorrow I'll name the five systems your grade actually runs on. Wednesday, the student I meet most often. Thursday, I hand you the tool that examines the whole thing.
 
 Be honest: has anyone, ever, sat you down and asked how you revise?
 
-**Hashtags:** none.
-**First comment:** none needed (no link in this post, deliberately: restart posts should ask nothing).
+**First comment:** none.
 
----
-
-### Tuesday 21 July, 8:30am | Value (the framework carousel)
-
-**Goal:** authority + saves; name the five systems so Thursday's tool feels inevitable.
-**Visual:** document post. Upload `content/graphics/week-2026-07-20/five-systems-carousel.pdf` as a DOCUMENT (LinkedIn's highest-dwell format). Title it "The five systems behind every grade" when LinkedIn asks.
-
-**Copy:**
+### Tue 21 July | Value carousel (the five systems)
+**Visual:** upload `content/graphics/week-2026-07-20/five-systems-carousel.pdf` as a DOCUMENT post.
 
 Your grade isn't one skill. It's five systems.
 
@@ -119,17 +181,10 @@ Full breakdown in the carousel. Save it for your next revision session.
 
 Which of the five would you honestly score lowest on?
 
-**Hashtags:** none.
 **First comment:** If you'd rather not guess your weakest system, the free diagnostic on my profile scores all five in about 4 minutes: https://alevelaccelerators.com/revision-diagnostic
 
----
-
-### Wednesday 22 July, 12:30pm | Story (the archetype)
-
-**Goal:** emotional identification; the shareable "this is literally me" post.
-**Visual:** `content/graphics/week-2026-07-20/grinder-card.png` (generated archetype card).
-
-**Copy:**
+### Wed 22 July | Story (The Grinder)
+**Visual:** `content/graphics/week-2026-07-20/grinder-card.png`.
 
 The hardest worker in your year might be heading for the lowest grade in the room.
 
@@ -155,17 +210,10 @@ The Grinder is one of seven revision archetypes I see over and over. I'll show y
 
 Is this you, or someone you revise with?
 
-**Hashtags:** none.
-**First comment:** none needed. (Tomorrow gets the link; today earns it.)
+**First comment:** none. (Tomorrow gets the link; today earns it.)
 
----
-
-### Thursday 23 July, 8:30am | Lead magnet (THE post of the week)
-
-**Goal:** diagnostic signups. This is the harvest post the other four earn.
-**Visual:** two real screenshots of the live tool (in the folder): `diagnostic-screen-1.png` (the opening screen) and `diagnostic-screen-2.png` (a question mid-quiz). Real product beats any graphic here.
-
-**Copy:**
+### Thu 23 July | LEAD MAGNET (the post of the run)
+**Visual:** two real screenshots, in `content/graphics/week-2026-07-20/`: `diagnostic-screen-1.png` and `diagnostic-screen-2.png`.
 
 I built a free tool that finds where your revision leaks hours. It takes about 4 minutes.
 
@@ -188,20 +236,12 @@ Link in the comments. When you've done it, comment your archetype below. I have 
 
 I'll reply to every archetype in the comments with the first thing I'd fix.
 
-**Hashtags:** none.
 **First comment:** Here it is: https://alevelaccelerators.com/revision-diagnostic | 20 questions, about 4 minutes, built for Year 12s and 13s. Your report shows your five system scores, your archetype and your estimated weekly hours leak.
 
-**Note for Waleed:** the promise to reply to every archetype comment is the engine of this post. Block out 30 to 45 minutes after posting for it. If comments run past 20, replies can get shorter, but every one gets one.
-**Optional stronger-harvest variant:** the verified niche pattern (a tutor at 6.5k followers pulling 73 and 184 comments) gates the link itself: "Comment DIAGNOSE and I'll send you the link." It converts harder but commits you to DMing every commenter and LinkedIn is tightening on gate mechanics, so the pack defaults to the open link. Say the word if you'd rather run the gated version.
+**Note for Waleed:** block 30 to 45 minutes after posting; the promise to reply to every archetype comment is the engine of this post. Optional harder-harvest variant (gate the link behind "Comment DIAGNOSE and I'll send it") exists in the niche evidence but commits you to DMing every commenter; the pack defaults to the open link.
 
----
-
-### Friday 24 July, 8:30am | Value (the deadline that makes it urgent)
-
-**Goal:** give Year 12s the honest reason to act this summer; second soft push to the diagnostic.
-**Visual:** `content/graphics/week-2026-07-20/predicted-grades-card.png` (generated timeline card).
-
-**Copy:**
+### Fri 24 July | Value (the deadline)
+**Visual:** `content/graphics/week-2026-07-20/predicted-grades-card.png`.
 
 Your predicted grades get written before Year 13 even feels real.
 
@@ -225,20 +265,104 @@ Step one is knowing exactly where your two hours should go. That's what the free
 
 What are you aiming to be predicted? Say it below. Writing it down does something.
 
-**Hashtags:** none.
 **First comment:** The diagnostic: https://alevelaccelerators.com/revision-diagnostic | And if you want your summer planned week by week after it, the free tracker builds your timetable: https://alevelaccelerators.com/revision-tracker
+
+### Sat 25 July | Confession (high-yield vs low-yield) | from week 1 Day 5
+**Visual:** `content/graphics/week1/high-yield-card.png`.
+
+I once spent six hours making a revision timetable.
+
+Six hours. Colour-coded. Beautiful. Barely used it.
+
+It felt like work. It was decoration.
+
+Since then I've learned to sort every revision activity into two piles:
+
+Low-yield (feels productive, moves nothing): re-reading, highlighting, rewriting notes neatly, watching "learn biology in 16 minutes" at 1am.
+
+High-yield (feels hard, moves grades): blurting a topic from memory, timed past paper questions, marking your own work against the real mark scheme, error logs.
+
+The uncomfortable pile is the one that pays. Every time.
+
+What's the low-yield habit you know you need to drop?
+
+**First comment:** none.
+
+### Sun 26 July | Emotional close | from the week 1 addendum
+**Visual:** a candid photo of Waleed if available; otherwise run it text-only (the story carries it).
+
+A student cried on a call with me last month. Not because of her grades.
+
+Because of what she said next: "I'm doing everything everyone tells me to do, and it's still not working."
+
+She wasn't lazy. Her notes were immaculate. Her hours were long. By every visible measure she was doing it right.
+
+And that's exactly why it hurt. When you're doing nothing and failing, you know why. When you're doing everything and failing, you start to believe something is wrong with you.
+
+Nothing was wrong with her. Every hour she had was going into low-yield work: re-reading, rewriting, highlighting. Familiar, comfortable, useless.
+
+We moved the same hours into recall practice and past paper review. No extra time. Different work.
+
+If you're in that place right now, hear this: it has never once been because the student wasn't capable. Something in the method is broken, and methods can be fixed.
+
+**First comment:** If you want to find what's broken before you change anything, the free diagnostic is the place to start: https://alevelaccelerators.com/revision-diagnostic
 
 ---
 
-## 6. FACEBOOK, day by day
+## 5. FACEBOOK, day by day (parents; times per table; warm, under 130 words, forwardable)
 
-Every post: warm, under 130 words, first sentence names the parent's situation, forwardable. Links in first comment only.
+### Thu 16 July, 9:30am | Doctor confession | from week 1 Day 1
+**Visual:** `content/graphics/week1/founder-card.png`.
 
-### Monday 20 July, 8:30pm | The script post (the saveable one)
+I'm a doctor who got into medicine with a revision method that was, honestly, terrible.
 
-**Visual:** `content/graphics/week-2026-07-20/fb-three-questions-card.png` (generated card with the three questions, built to be screenshotted and saved).
+I re-read my notes and hoped. It worked only because I threw endless hours at it.
 
-**Copy:**
+Here's what I know now, 1,000+ students later: a hard-working child stuck at a B almost never has an effort problem. They were just never taught that exams test what you can produce from memory, not what looks familiar on the page.
+
+If your child works hard and the grades don't follow, that gap is usually the whole story. And it's fixable.
+
+**First comment:** none.
+
+### Fri 17 July, 9:30am | Past-paper tip | from week 1 Day 2
+**Visual:** `content/graphics/week1/past-papers-tip.png`.
+
+If your child does loads of past papers and the grade isn't moving, this is usually why.
+
+Most students mark the paper, see the score, and move on. The learning is in what happens after: going through every lost mark and working out exactly what the examiner wanted and why.
+
+That review takes longer than the paper itself. It's also where the marks come from.
+
+Worth forwarding to them, gently.
+
+**First comment:** none.
+
+### Sat 18 July, 10am | Recognition vs retrieval | from week 1 Day 3
+**Visual:** `content/graphics/week1/recognition-retrieval-card.png`.
+
+Ever watched your child revise all evening, then "go blank" in the exam? There's a real reason, and it isn't nerves or memory.
+
+Reading notes trains "I recognise this". Exams test "can I produce this from scratch". They're different skills, and school only ever really exercises the first one.
+
+The fix is simple and free: revise with a closed book and a blank page, writing out everything from memory. Feels harder. Works far better.
+
+**First comment:** none.
+
+### Sun 19 July, 7pm | The four tiers | from week 1 Day 4
+**Visual:** `content/graphics/week1/four-tiers-card.png`.
+
+If your child understands their subjects but the grades say otherwise, this usually explains it.
+
+Exams have four layers: understanding the content, recalling it without notes, applying it to unfamiliar questions, and performing on the day.
+
+School covers the first. So does most tutoring. The A and A* live in the other three, and almost nobody teaches them.
+
+That's the gap we work on. It's also why "more content explaining" so often changes nothing.
+
+**First comment:** none.
+
+### Mon 20 July, 8:30pm | The script post (the saveable one)
+**Visual:** `content/graphics/week-2026-07-20/fb-three-questions-card.png`.
 
 If asking your teenager about revision starts an argument, try changing the question.
 
@@ -256,15 +380,21 @@ None of these mention hours. That's deliberate. After 1,000+ students, I can tel
 
 Save this for dinner tonight.
 
-**First comment:** none (no link on day one; this post exists to be saved and passed on).
+**First comment:** none.
 
----
+### Tue 21 July, 9:30am | Timetable confession | from week 1 Day 5
+**Visual:** `content/graphics/week1/high-yield-card.png`.
 
-### Wednesday 22 July, 9:30am | Explainer (the forwardable one)
+A confession from my own A-levels: I once spent six hours making a beautiful colour-coded timetable. Then barely used it.
 
+A lot of what looks like revision (neat notes, highlighting, rewriting) feels productive and moves nothing. The work that moves grades (testing yourself, timed questions, marking against the real mark scheme) feels harder and less tidy.
+
+If your child's revision looks beautiful but the results don't match, this is usually the reason. The messy method is the one that works.
+
+**First comment:** none.
+
+### Wed 22 July, 9:30am | Explainer: predicted grades
 **Visual:** `content/graphics/week-2026-07-20/fb-predicted-grades-card.png`.
-
-**Copy:**
 
 Most families find this out a year too late: university offers are based on predicted grades, not final results.
 
@@ -280,14 +410,25 @@ Parents of Year 12s: did anyone ever explain this to you? Genuine question, I'm 
 
 **First comment:** On Friday I'm sharing the free tool we use to work out exactly which topics those two hours should go to. If you'd like it sooner: https://alevelaccelerators.com/revision-diagnostic
 
----
+### Thu 23 July, 9:30am | Story: the student who cried
+**Visual:** none needed; the story carries it. (A candid photo of Waleed on a call would beat anything.)
 
-### Friday 24 July, 9:30am | The tool
+A student cried on a call with me last month. Not because of her grades.
 
-**Visual:** `fb-diagnostic-screen.png` (real square screenshot of the live tool showing the headline, the sample report and Waleed's quote, in the folder).
-**Boost:** on Saturday, boost whichever of the week's posts has performed best organically (expect Monday's script post or this one): £3 to £5 a day, UK parents 38 to 55, interests A-level / UCAS / sixth form, through to Thursday. The research is clear that boosting a proven post beats boosting a chosen one. A proper Ads Manager conversion campaign for the diagnostic is a separate, bigger play (it's in the business audit); the boost is just a reach top-up.
+Because of what she said next: "I'm doing everything everyone tells me to do, and it's still not working."
 
-**Copy:**
+She wasn't lazy. Her notes were immaculate. Her hours were long. By every visible measure she was doing it right. And that's exactly why it hurt.
+
+Nothing was wrong with her. Every hour she had was going into re-reading, rewriting and highlighting. Familiar, comfortable, and useless for exams.
+
+We moved the same hours into testing herself and reviewing past papers. No extra time. Different work.
+
+If your child is in that place right now, it has never once been because the student wasn't capable. It's the method. And methods can be fixed.
+
+**First comment:** none.
+
+### Fri 24 July, 9:30am | The tool, parent path
+**Visual:** `content/graphics/week-2026-07-20/fb-diagnostic-screen.png` (real square screenshot of the live tool).
 
 You can see your teenager working hard. What you can't see is whether the method behind it actually works.
 
@@ -305,13 +446,19 @@ Link's in the first comment. If the report surprises you, message me and I'll ha
 
 **First comment:** The free revision check-up: https://alevelaccelerators.com/revision-diagnostic | About 4 minutes. Built for A-level students and their parents.
 
----
+### Sat 25 July, 10am | Two Septembers (soft cohort seed)
+**Visual:** `content/graphics/week1/year12-summer-card.png`.
 
-### Sunday 26 July, 7pm | Trust (the founder post)
+Every September, some Year 13s walk in already ahead, and the rest spend the first term catching up on Year 12 content they've half-forgotten. Usually it's not about ability. It's about how they spent the summer.
 
-**Visual:** a real photo of Waleed (teaching setup, or in work context). **Fallback:** `content/graphics/week1/founder-card.png` (already rendered for week 1, unused, on brand).
+That's exactly what our Summer Accelerator is built for. Six weeks of live teaching on the high-value Year 13 topics in Biology, Chemistry, Maths and Physics. Small groups, exam technique built in, and the next cohort starts Saturday 8th August. First session risk-free.
 
-**Copy:**
+Link in the comments if you'd like a look. Happy to answer any questions here or by message.
+
+**First comment:** The Summer Accelerator (starts Saturday 8th August): https://alevelaccelerators.com/summer-accelerators | And the free revision check-up from yesterday: https://alevelaccelerators.com/revision-diagnostic
+
+### Sun 26 July, 7pm | Trust (the founder post)
+**Visual:** a real photo of Waleed (teaching or work setting); fallback: run it text-only (founder-card already ran on the 16th).
 
 A fair question I get from parents: why does a doctor spend his weekends teaching A-level students?
 
@@ -327,53 +474,9 @@ If your child is heading into Year 13, start with the free tools on the site, th
 
 ---
 
-## 7. Cohort-variant posts (ONLY if the 25 July start date stands)
+## 6. Optional: one 40-second video (highest upside if Waleed films it)
 
-Swap these in for the two Friday posts. Everything else stays.
-
-### Friday 24 July LinkedIn variant (students)
-
-**Visual:** none needed, or a session screenshot if one exists.
-
-**Copy:**
-
-Tomorrow morning I start teaching a six-week summer course. Here's who it's actually for.
-
-It's for the Year 12 who understands their subjects but watched their grades sit still all year anyway.
-
-Six weeks, live, small groups. Biology, Chemistry, Maths, Physics. We cover the high-yield Year 13 topics before your school does, with the exam technique built in from day one.
-
-So in September, lessons become your second pass. Everyone else is meeting the content for the first time. You're consolidating.
-
-I'm honest about what it costs because the page is public: from £289 a subject. The first session is risk-free, full refund if it's not for you. That's the whole risk.
-
-Doors close when we start tomorrow. Link in the comments if the September I described is the one you want.
-
-If it's not for you, everything I post here stays free, starting with the diagnostic from Thursday.
-
-**First comment:** Details and dates: https://alevelaccelerators.com/summer-accelerators | The free diagnostic: https://alevelaccelerators.com/revision-diagnostic
-
-### Friday 24 July Facebook variant (parents)
-
-**Copy:**
-
-Tomorrow morning our summer programme starts, so this is the last call, and an honest one.
-
-It's six weeks of live teaching for Year 12s going into Year 13. Biology, Chemistry, Maths and Physics. Small groups. The topics that decide predicted grades, taught before school gets to them, with exam technique built in throughout.
-
-It's for the capable student who worked hard this year and has little to show for it, and the family who'd rather use the summer than watch first term become a catch-up scramble.
-
-First session is risk-free with a full refund, so trying it costs nothing but a morning.
-
-Link in the first comment. If you're unsure whether it fits your child, message me tonight and I'll give you a straight answer, even if that answer is "don't buy it".
-
-**First comment:** https://alevelaccelerators.com/summer-accelerators | Starts tomorrow. Happy to answer anything by message.
-
----
-
-## 8. Optional: one 40-second video (highest upside if Waleed films it)
-
-Reels are the only Facebook surface that reaches non-followers organically, which matters enormously for a page starting at zero, and the same clip works on LinkedIn. One phone take, no editing needed beyond captions. If filmed, post it Saturday 25 July on both platforms.
+Reels are the only Facebook surface that reaches non-followers organically, which matters enormously for a page starting at zero, and the same clip works on LinkedIn. One phone take, no editing needed beyond captions. If filmed, it becomes Saturday 25's post on either platform (a Reel counts as that day's post; run the swapped-out copy the following week instead).
 
 **Script (spoken, face to camera, kitchen table or desk):**
 
@@ -387,12 +490,10 @@ Close: "It's free, it takes about four minutes, and the link is in the comments.
 **Caption (LinkedIn, students):** Four minutes. Twenty questions. Your archetype, your five system scores, and where your hours leak. Link in the comments.
 **On-screen text moments:** "7 revision archetypes" when he says seven; "5 systems" on systems; "free, 4 minutes" at the close.
 
-## 8b. The gap days (Thu 17 to Sat 19 July)
+## 7. What comes next (so nothing is hardcoded)
 
-Week 1's posts (10 to 16 July) were never published, so the account restarts cold either way. If Waleed wants posts before Monday: post week 1 Day 1 (the founder confession, `content/week-1-optimized.md`, graphic `content/graphics/week1/founder-card.png`) on Friday 18th, and week 1 Day 3 (recognition vs retrieval) on Saturday 19th. Both are written, compliant and have rendered graphics. Do not run week 1 Day 7 (it pushes the tracker as the main tool; the diagnostic has that job now).
+The next pack (built Friday 24 July, covering Mon 27 July to Sun 2 Aug) inherits two arcs the snapshot already shows: the Summer Accelerator launch run-in to Saturday 8 August (honest launch posts, the audit's list-and-workshop sprint is the email side of it), and the start of the results-day arc (the calm parent guide should publish in early August; results day is Thursday 13 August). The diagnostic stays the standing free CTA underneath both.
 
-## 9. After the week: log these
+## 8. After the run: log these
 
-For each post: impressions, reactions, comments, and (LinkedIn) profile views that day. Plus: Revision Diagnostic group count on Sunday night (baseline 2 on 15 July), and boost spend/results. Drop them in a reply to the next Friday pack request and the routine folds them in.
-
-**Already on next week's radar:** results day is Thursday 13 August. The research shows the results-day share window rewards whoever publishes the calm parent guide FIRST (schools circulate these PDFs in early August). The pack for w/c 27 July should start that arc: a "summer before Year 13" parent post, then the results-day parent checklist in the first days of August.
+For each post: impressions, reactions, comments, and (LinkedIn) profile views that day. Plus: Revision Diagnostic group count each Sunday night (baseline 2 on 15 July), boost spend and results, and which Facebook time slot (morning vs evening) won. Drop them into Friday's session and the routine folds them in.
