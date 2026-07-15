@@ -339,10 +339,10 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
             <div className={`${CARD} mt-6 grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-brand-purple/[0.08]`}>
               {(
                 [
-                  ['9.4%', 'of UK A-level entries were an A* last summer. The offers worth chasing usually want at least one.', false],
-                  ['1,000+', 'A-level students Dr Waleed has helped towards top grades and first-choice offers.', true],
+                  ['9.4%', 'of A-level grades are A*', 'The offers worth chasing usually want at least one.', false],
+                  ['1,000+', 'students helped towards top grades', 'and the first-choice university offers they were chasing.', true],
                 ] as const
-              ).map(([stat, caption, ours]) => (
+              ).map(([stat, lead, caption, ours]) => (
                 <div key={stat} className="px-6 py-6 md:px-8 text-center sm:text-left">
                   <p
                     className={`font-serif font-bold text-4xl md:text-[2.6rem] leading-none ${
@@ -351,7 +351,8 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
                   >
                     {stat}
                   </p>
-                  <p className="mt-2.5 text-sm text-brand-text/65 leading-relaxed">{caption}</p>
+                  <p className="mt-2 font-bold text-brand-purple text-[15px] md:text-base leading-snug">{lead}</p>
+                  <p className="mt-1.5 text-sm text-brand-text/60 leading-relaxed">{caption}</p>
                 </div>
               ))}
             </div>
