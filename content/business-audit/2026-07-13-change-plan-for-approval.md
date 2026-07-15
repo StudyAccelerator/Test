@@ -70,5 +70,14 @@ Could not be done from this session, handed to Waleed:
 
 Waleed's switch-ons after merge:
 - Enable Web Analytics in the Vercel project dashboard.
-- Add `NEXT_PUBLIC_META_PIXEL_ID` in Vercel when ready to start pixel tracking, ideally the same time the privacy policy goes live.
-- Fill the bracketed placeholders in /privacy and /terms.
+- Add `NEXT_PUBLIC_META_PIXEL_ID` in Vercel when ready to start pixel tracking.
+- When ready to publish the legal pages: fill the placeholders and follow `content/legal-drafts/README.md`.
+
+## Update, 15 July: reviewed, redirected and made live
+
+Waleed reviewed the work and redirected two items, then instructed the session to make the branch live.
+
+- **Legal pages parked.** The /privacy and /terms routes, footer links and sitemap entries were removed. The complete drafts moved to `content/legal-drafts/` with restore steps. They stay off the site until Waleed finalises the entity details, and nothing on the site references them.
+- **Deliverability concern withdrawn.** Waleed had already verified (14 July, separate session) that the domain's DMARC, SPF and DKIM records are live and correct, and the third party "0% compliance" emails are a false alarm. The earlier risk note was removed; the standing correction lives in CLAUDE.md so no future session re-flags it.
+- **Folded into the branch before going live:** the 15 July diagnostic conversion rework (frustration-led hero, parent and student audiences, optional phone capture, national-stats proof band), the Sunday Session MailerLite load (7 complete drafts plus the fragment builder), and the HQ dashboard v3 plus Monzo panel from main.
+- **Merged to main and deployed 15 July** on Waleed's instruction.

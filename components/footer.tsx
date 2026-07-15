@@ -46,8 +46,6 @@ export default function Footer() {
                 <li><a href="/faqs" className="text-brand-gold hover:text-white transition">FAQs</a></li>
                 <li><a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a></li>
                 <li><a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition">Book a Free Call</a></li>
-                <li><a href="/privacy" className="text-brand-gold hover:text-white transition">Privacy Policy</a></li>
-                <li><a href="/terms" className="text-brand-gold hover:text-white transition">Terms</a></li>
               </ul>
             </div>
           </div>
