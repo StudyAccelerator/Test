@@ -42,7 +42,7 @@ Your child took my free 20 question diagnostic. Their result points at the metho
 
 The honest structure of it: there's a free live workshop, which I'd suggest your child attends first, because it costs nothing and you'll both be able to judge me on it. Beyond that, the Study Series is £119 for the taught system across four live sessions, and the Study Accelerator is £499 with twelve sessions plus weekly accountability while the habits take hold. For comparison, £499 is about ten hours of typical 1:1 tutoring, which would address one subject and leave the underlying method untouched.
 
-I don't publish grade claims, because our first cohort's results arrive in August and I won't invent numbers before then. What I can offer is the free workshop, my time, and a straight answer about whether this fits your child: reply to this email or book a free fifteen minute call with me at https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to talk it through.
+I don't publish grade claims, because our first cohort's results arrive in August and I won't invent numbers before then. What I can offer is the free workshop, my time, and a straight answer about whether this fits your child: reply to this email or book a free thirty minute call with me at https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to talk it through.
 
 ---
 
