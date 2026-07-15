@@ -9,6 +9,23 @@ FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-
 P_STYLE = f"margin:0 0 18px 0;font-family:{FONT};font-size:17px;line-height:1.6;color:#1a1535;"
 LINK_STYLE = "color:#C9A96E;text-decoration:underline;"
 
+# Waleed's standard photo signature (his real headshot on the MailerLite CDN,
+# pulled from his sent campaigns), restyled to the Sunday Session template.
+PHOTO_SIG = (
+    '<table role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin:8px 0 4px 0;">'
+    '<tr>'
+    '<td valign="top" style="padding-right:16px;">'
+    '<img src="https://storage.mlcdn.com/account_image/2113061/3SoYgyuLfUdmX53Lnw82S2YV4c6PnZsQch9dP7T5.jpg"'
+    ' width="64" height="64" alt="Dr Waleed Ahmad"'
+    ' style="display:block;width:64px;height:64px;border-radius:64px;"></td>'
+    f'<td valign="middle" style="font-family:{FONT};font-size:15px;line-height:1.55;color:#1a1535;">'
+    '<strong>Dr Waleed Ahmad, MBBS</strong><br>'
+    'Founder, A-Level Accelerators<br>'
+    f'<a href="https://alevelaccelerators.com" style="{LINK_STYLE}">alevelaccelerators.com</a>&nbsp;&middot;&nbsp;'
+    f'<a href="mailto:Waleed@alevelaccelerators.com" style="{LINK_STYLE}">Waleed@alevelaccelerators.com</a>'
+    '</td></tr></table>'
+)
+
 ISSUES = [
     ('2026-07-19-the-four-tiers.md',        'SS1 · The four tiers (Sun 19 Jul, 5pm)'),
     ('2026-07-26-learn-it-backwards.md',    'SS2 · Learn it backwards (Sun 26 Jul, 5pm)'),
@@ -58,6 +75,18 @@ def build(fname, campaign_name):
         body = re.sub(r'\[IF NOT LIVE, KEEP THIS LINE INSTEAD: (.*?)\s*\]', r'\1', body)
     body = body.strip()
     paras = [para_html(b) for b in re.split(r'\n\s*\n', body) if b.strip()]
+    # Swap the two text sign-off lines ("Waleed" + "Dr Waleed Ahmad, MBBS / Founder...")
+    # for the photo signature block. The closing phrase ("Keep going!" etc.) stays above it.
+    sig_line = f'<p style="{P_STYLE}">Waleed</p>'
+    swapped, i = [], 0
+    while i < len(paras):
+        if paras[i] == sig_line and i + 1 < len(paras) and 'Dr Waleed Ahmad, MBBS' in paras[i + 1]:
+            swapped.append(PHOTO_SIG)
+            i += 2
+        else:
+            swapped.append(paras[i])
+            i += 1
+    paras = swapped
     subline = 'Results morning special' if special else 'One thing school never taught you. Every Sunday, 5pm.'
     h = f"""<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">{html.escape(preheader)}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;"><tr><td align="center">
@@ -65,9 +94,8 @@ def build(fname, campaign_name):
 <p style="margin:0 0 4px 0;font-family:Georgia,'Times New Roman',serif;font-size:24px;color:#2E2557;">The Sunday Session</p>
 <p style="margin:0 0 28px 0;font-family:{FONT};font-size:13px;color:#6b6580;">{subline}</p>
 {chr(10).join(paras)}
-<div style="border-top:2px solid #C9A96E;margin-top:32px;padding-top:16px;">
+<div style="border-top:2px solid #C9A96E;margin-top:28px;padding-top:16px;">
 <p style="margin:0;font-family:{FONT};font-size:13px;line-height:1.6;color:#6b6580;">
-Dr Waleed Ahmad, MBBS &middot; A-Level Accelerators &middot; <a href="https://alevelaccelerators.com" style="{LINK_STYLE}">alevelaccelerators.com</a><br>
 You're getting this because you signed up at alevelaccelerators.com (the diagnostic, the tracker or a workshop).<br>
 <a href="{{$unsubscribe}}" style="{LINK_STYLE}">Unsubscribe</a></p>
 </div>
