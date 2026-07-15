@@ -21,7 +21,7 @@ The three variants make three different cases on purpose:
 
 - **Summer** (Year 12s in the launch window): urgency is structural, the summer itself is shrinking. Pitch day 6, door day 11. No fake deadlines: the copy is written to stay honest even if read in August ("the cohort will already be moving, recordings catch you up").
 - **Study System** (method-side diagnoses): the free workshop is the primary CTA, tiers second. Lowest-friction route because these students need to experience the method working before they'll buy structure.
-- **Subject** (exam-craft diagnoses in Biology, Chemistry or Maths): the September 6th cohort is the moment, the summer bridge plan keeps them engaged until then, and the predicted-grades calendar is the honest urgency.
+- **Subject** (exam-craft diagnoses in Biology, Chemistry or Maths): the September 13th cohort is the moment, the summer bridge plan keeps them engaged until then, and the predicted-grades calendar is the honest urgency.
 
 ## Building it in MailerLite (step by step)
 
@@ -49,7 +49,7 @@ Two later additions (14 July 2026), not yet used in these emails: the gate now a
 ### Two placeholders to check at send time
 
 - Summer copy references the live cohort without hard dates except where the site itself does. If the sales page dates change, S3/S5 stay true as written.
-- B3/B4/B5 name **Sunday 6th September** and the session times (Maths Sat 1pm to 3pm, Biology Sun 10am to 12pm, Chemistry Sun 1pm to 3pm), matching the subject-accelerators page today. If the cohort or times move, update these three emails with the page.
+- B3/B4/B5 name **Sunday 13th September** (moved from 6th on 15 July 2026 so the Subject cohort starts the day after the Summer Accelerator's last session) and the session times (Maths Sat 1pm to 3pm, Biology Sun 10am to 12pm, Chemistry Sun 1pm to 3pm), matching the subject-accelerators page today. If the cohort or times move, update these three emails with the page AND in the live MailerLite automation, which is switched on.
 - No email links to Stripe. All CTAs go to site pages or the call scheduler, so payment links can never go stale inside a sent email.
 
 ## Deliverability: the actual plan

@@ -36,7 +36,7 @@ Do that and you arrive in September already moving, whether or not you ever join
 
 Here's the honest version of why timing matters, with no countdown clock attached.
 
-The cohort starts Sunday 6th September and runs twelve weeks, which lands the whole programme across the exact window when autumn assessments happen and predicted grades get set. Join in September and your coached answers become the evidence your teachers see. There isn't a second autumn. That's not scarcity marketing, it's just the calendar, and it's the same calendar whether I mention it or not.
+The cohort starts Sunday 13th September and runs twelve weeks, which lands the whole programme across the exact window when autumn assessments happen and predicted grades get set. Join in September and your coached answers become the evidence your teachers see. There isn't a second autumn. That's not scarcity marketing, it's just the calendar, and it's the same calendar whether I mention it or not.
 
 Places are capped because the sessions only work small; when a subject fills, it fills. If you already know you're in, booking now simply removes the August scramble and lets you spend the summer on the bridge plan with the decision made. If you're genuinely unsure, don't buy on urgency, mine or anyone's: run two more weeks of the drill, look at your letter distribution, and let the evidence decide. A log full of W and T says this programme. A log full of K says content first, and I'll tell you the same on a call for free.
 
