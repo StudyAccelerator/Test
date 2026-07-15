@@ -168,7 +168,7 @@ export default function ParentsForm() {
           className={fieldClass}
         />
         <p className="mt-1.5 text-xs leading-relaxed text-brand-text/50">
-          Only if you&apos;d like a quick call about your child&apos;s options. No hard sell.
+          Add it if you&apos;d like to talk through where your child&apos;s grades are now and where they want them to be.
         </p>
       </div>
 
