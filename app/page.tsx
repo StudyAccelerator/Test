@@ -154,7 +154,7 @@ export default function Home() {
           aria-hidden="true"
           className="pointer-events-none absolute -top-24 right-[-10%] h-[28rem] w-[36rem] rounded-full bg-brand-gold/10 blur-3xl"
         />
-        <div className="relative max-w-6xl mx-auto px-6 pt-14 pb-24 md:pt-24 md:pb-32 grid lg:grid-cols-[1fr_1.05fr] gap-12 items-center">
+        <div className="relative max-w-6xl mx-auto px-6 pt-14 pb-12 md:pt-24 md:pb-16 grid lg:grid-cols-[1fr_1.05fr] gap-12 items-center">
           <div>
             <h1 className="font-serif font-bold tracking-tight leading-[1.04] text-4xl sm:text-5xl lg:text-[4rem] text-brand-purple">
               <HeroHeadline>
@@ -274,7 +274,7 @@ export default function Home() {
       </section>
 
       {/* ── 3 · Programme router ─────────────────────────────────────────── */}
-      <section id="programmes" className="py-24 md:py-32 px-6">
+      <section id="programmes" className="pt-12 pb-24 md:pt-16 md:pb-32 px-6">
         <div className="max-w-6xl mx-auto">
           <ScrollFade>
             <p className={`${EYEBROW} mb-4`}>Choose your route</p>

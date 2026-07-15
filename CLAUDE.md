@@ -49,6 +49,10 @@ Waleed's business command centre lives in `dashboard/` in this repo. Run it with
 
 A full business audit and ranked growth plan lives at `content/business-audit/2026-07-13-business-audit-and-growth-plan.md`: live funnel numbers from MailerLite, competitor pricing snapshot, domain-rating comparison, dead-weight list, five ranked growth plays, and a section 9 list of numbers and decisions awaited from Waleed. Sessions doing marketing, launch or pricing work should read it first. It contains no invented figures; keep it that way when updating it.
 
+## Facebook groups channel (15 July 2026)
+
+The Facebook groups distribution research lives at `content/facebook-groups/2026-07-15-facebook-groups-and-parent-competitors.md`: a ranked, inside-the-login-vetted list of groups worth joining (with rules, activity and what performs in each), plus a verified competitor breakdown of who converts UK parents on Facebook and how (MyEdSpace ads machine, Think Academy and 11 Plus Journey group funnels, franchise assessment funnels). Sessions doing Facebook, parent-channel or group content work should read it first. Waleed joins groups himself; sessions never join, post or comment in groups on his behalf without his explicit instruction. The honesty rule applies: single-source figures in that file say so.
+
 ## Content rules (MANDATORY, no exceptions)
 
 All written content (blog, social, PDFs, page copy) follows `.claude/skills/content-studio/` — use that skill for any content request. The non-negotiables:
@@ -59,6 +63,10 @@ All written content (blog, social, PDFs, page copy) follows `.claude/skills/cont
 - No invented statistics. Approved proof points only (see `.claude/skills/content-studio/references/audience-and-offers.md`). No grade-outcome claims yet: Waleed has no results data until August 2026.
 - No "we match you with a tutor" marketplace framing. Waleed teaches; it is his method.
 - Every blog article is written twice: the website version (repo) plus a fully rewritten backlink twin (`content/backlink-articles/`, never published on the site). Rules in `.claude/skills/content-studio/references/blog-dual-versions.md`.
+
+## The weekly content pack (Fridays)
+
+Social content ships as a weekly pack: every Friday 9am the scheduled task `weekly-content-pack-friday` runs the `weekly-content-pack` skill (`.claude/skills/weekly-content-pack/SKILL.md`) and produces the FOLLOWING week's LinkedIn (students) and Facebook (parents) posts with visuals, in `content/social/<monday-date>/`. The routine starts with a fresh business snapshot that decides what the week drives toward (never hardcode the push), keeps the two audiences separate, makes the visuals (brand-card pipeline in `content/graphics-src/` + real product screenshots), and is idempotent (a complete existing pack is reported, not rebuilt). It never schedules, posts or boosts anything: Waleed approves every pack and posts manually, then feeds the week's numbers back into the next run. First pack: w/c 20 July 2026, built 15 July around the revision diagnostic. Niche research baseline (the individual creators who win with our ICP, plus 2026 algorithm mechanics for both platforms) lives in the latest pack's `research-notes.md`.
 
 ## How to add a blog post
 
