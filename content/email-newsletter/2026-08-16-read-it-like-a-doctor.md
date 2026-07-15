@@ -7,7 +7,7 @@ Subject B: what Thursday's number actually says
 Preheader: Results are data, not verdicts. The triage method, the remark question answered honestly, and what new Year 13s should steal from Thursday.
 Goal: post-results triage for the hurt, preview-value for the new Year 13s; first September cohort door.
 Links: 2 (subject page, scheduler)
-Send-time checks: cohort still starts Sunday 6th September ("three weeks today" is written against 16 Aug).
+Send-time checks: cohort starts Sunday 13th September ("four weeks today" is written against 16 Aug).
 Clinic note: remark/priority-review question; verify current JCQ wording ("review of marking") hasn't changed.
 
 ---
@@ -48,7 +48,7 @@ Low-yield: other people's results posts. They contain no information about your 
 
 **The door**
 
-The September Subject Accelerator cohort starts three weeks today: Sunday 6th September. Twelve weeks, live, small groups, Biology, Chemistry and Maths, and the opening stretch lands exactly across the window when predicted grades get set. It's built for two students: the resitter whose triage says exam craft, and the new Year 13 who wants the autumn's tests coached properly. If your triage says "content gaps everywhere in a subject I don't even need", it's not for you, and I'll tell you that for free on a call.
+The September Subject Accelerator cohort starts four weeks today: Sunday 13th September. Twelve weeks, live, small groups, Biology, Chemistry and Maths, and the opening stretch lands exactly across the window when predicted grades get set. It's built for two students: the resitter whose triage says exam craft, and the new Year 13 who wants the autumn's tests coached properly. If your triage says "content gaps everywhere in a subject I don't even need", it's not for you, and I'll tell you that for free on a call.
 
 [BUTTON: See the September cohort -> https://alevelaccelerators.com/subject-accelerators/]
 

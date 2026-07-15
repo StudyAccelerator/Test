@@ -5,9 +5,9 @@ To: the Sunday Session send list (see README)
 Subject A: Sunday Session: the prediction window
 Subject B: your predicted grades get set in weeks
 Preheader: How teachers actually set predictions, why the first fortnight weighs most, and the one page evidence plan.
-Goal: the September urgency teach; strongest cohort door of the arc (two weeks out).
+Goal: the September urgency teach; strongest cohort door of the arc (three weeks out).
 Links: 3 (subject page, scheduler, diagnostic in PS)
-Send-time checks: cohort starts Sunday 6th September ("two weeks today" is written against 23 Aug); UCAS 15 October deadline for medicine, dentistry, veterinary and Oxbridge still correct.
+Send-time checks: cohort starts Sunday 13th September ("three weeks today" is written against 23 Aug); UCAS 15 October deadline for medicine, dentistry, veterinary and Oxbridge still correct.
 Clinic note: perennial September anxiety. Swap for a real reply if one fits better.
 
 ---
@@ -50,7 +50,7 @@ Low-yield: September optimism with no calendar behind it. Intentions don't get p
 
 **The door**
 
-Two weeks today, the September cohort starts: Sunday 6th September. Twelve weeks live in Biology, Chemistry or Maths, running straight through the prediction window, which is the whole point. Coached exam answers in September become the marked evidence your teachers are looking at in October. Small groups, capped, and when a subject fills, it fills. If you already know you're in, book it now and spend the fortnight on the evidence plan with the decision made. If you're torn, fifteen free minutes and I'll tell you straight, including "keep your money and run the plan solo" if that's the honest answer.
+Three weeks today, the September cohort starts: Sunday 13th September. Twelve weeks live in Biology, Chemistry or Maths, running straight through the prediction window, which is the whole point. Coached exam answers in September become the marked evidence your teachers are looking at in October. Small groups, capped, and when a subject fills, it fills. If you already know you're in, book it now and spend the next three weeks on the evidence plan with the decision made. If you're torn, fifteen free minutes and I'll tell you straight, including "keep your money and run the plan solo" if that's the honest answer.
 
 [BUTTON: Book my place for September -> https://alevelaccelerators.com/subject-accelerators/]
 
