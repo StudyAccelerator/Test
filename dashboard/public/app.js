@@ -36,6 +36,7 @@ const state = {
   facebook: null,
   gmail: null,
   calendar: null,
+  monzo: null,
   competitors: null,
   connections: null,
 }
@@ -558,9 +559,98 @@ function renderSubs() {
 /* ----------------------------------------------------------------- bank */
 
 function renderBank() {
-  $('#bank-body').innerHTML = `
-    <p class="small muted" style="margin-top:0">Not linked, and it may not need to be: Stripe already shows what the business holds.</p>
-    <p class="small muted">For a business vs personal split, tell me your bank. Monzo and Starling have safe read only tokens I can wire in; other banks need Open Banking, which is more setup than it is worth right now.</p>`
+  const body = $('#bank-body')
+  const chip = $('#bank-chip')
+  const m = state.monzo
+
+  const wire = () => {
+    const btn = $('#monzo-connect')
+    if (btn) btn.addEventListener('click', () => (window.location.href = '/api/monzo/connect'))
+    const dis = $('#monzo-disconnect')
+    if (dis)
+      dis.addEventListener('click', async () => {
+        await fetch('/api/monzo/disconnect', { method: 'POST' })
+        boot(true)
+      })
+  }
+
+  if (!m || m.pending === 'config') {
+    chip.textContent = 'needs your sign in'
+    chip.className = 'chip chip-pending'
+    const redirect = (m && m.redirect) || 'http://127.0.0.1:4400/api/monzo/callback'
+    body.innerHTML = `
+      <p class="small muted" style="margin-top:0">Monzo can show your business and personal balances here, read only. I cannot sign in as you, so these four steps are yours. About five minutes, once.</p>
+      <ol class="setup-steps">
+        <li>Go to <a href="https://developers.monzo.com" target="_blank" rel="noreferrer">developers.monzo.com</a> and sign in with the email on your Monzo account. Monzo emails you a magic link and asks your phone to approve.</li>
+        <li>Click <b>Clients</b>, then <b>New OAuth Client</b>. Name it <b>HQ Dashboard</b>, set Redirect URL to<br /><code>${esc(redirect)}</code><br />and set Confidentiality to <b>Confidential</b>.</li>
+        <li>Copy the Client ID and Client secret into <code>dashboard/.env</code>:<br /><code>MONZO_CLIENT_ID=oauth2client_...</code><br /><code>MONZO_CLIENT_SECRET=mnzconf...</code></li>
+        <li>Restart the dashboard. A <b>Connect Monzo</b> button appears here.</li>
+      </ol>
+      <p class="small muted" style="margin-bottom:0">Monzo's API is read only for balances. It cannot move your money, and the secret never leaves your Mac.</p>`
+    return
+  }
+
+  if (m.pending === 'auth') {
+    chip.textContent = 'ready to connect'
+    chip.className = 'chip chip-pending'
+    body.innerHTML = `
+      <p class="small muted" style="margin-top:0">Your Monzo client is set up. One click and Monzo will email you a magic link, then ask your phone to approve.</p>
+      ${m.error ? `<p class="small" style="color:var(--alert)">Last attempt: ${esc(m.error)}</p>` : ''}
+      <button id="monzo-connect" class="gold-btn" type="button">Connect Monzo</button>`
+    wire()
+    return
+  }
+
+  if (m.pending === 'approval') {
+    chip.textContent = 'approve in the app'
+    chip.className = 'chip chip-pending'
+    body.innerHTML = `
+      <p class="small muted" style="margin-top:0">Signed in, but Monzo is holding the data back until you approve it. Open the <b>Monzo app on your phone</b>, find the notification asking to allow access, and accept it. Then refresh this page.</p>
+      <button id="monzo-disconnect" class="ghost-btn" type="button">Disconnect</button>`
+    wire()
+    return
+  }
+
+  if (m.error) {
+    chip.textContent = 'error'
+    chip.className = 'chip chip-error'
+    body.innerHTML = `
+      <p class="small" style="color:var(--alert);margin-top:0">Monzo said: ${esc(m.error)}</p>
+      <button id="monzo-disconnect" class="ghost-btn" type="button">Disconnect and start again</button>`
+    wire()
+    return
+  }
+
+  chip.textContent = 'live · Monzo'
+  chip.className = 'chip chip-live'
+  const business = m.accounts.filter((a) => a.kind === 'business')
+  const personal = m.accounts.filter((a) => a.kind === 'personal')
+  const sum = (list) => list.reduce((acc, a) => acc + a.totalBalance, 0)
+
+  const block = (label, list) =>
+    list.length
+      ? `
+      <div class="subhead">${label}</div>
+      ${list
+        .map(
+          (a) =>
+            `<div class="money-row"><span class="m-key">${esc(a.name)}</span><span class="m-val">${gbp(a.totalBalance)}</span></div>`
+        )
+        .join('')}`
+      : ''
+
+  body.innerHTML = `
+    <div class="li-stats">
+      ${business.length ? `<div class="li-stat"><div class="label">Business</div><div class="hero-number">${gbp(sum(business))}</div><div class="hero-sub">${business.length} account${business.length > 1 ? 's' : ''}</div></div>` : ''}
+      ${personal.length ? `<div class="li-stat"><div class="label">Personal</div><div class="hero-number">${gbp(sum(personal))}</div><div class="hero-sub">${personal.length} account${personal.length > 1 ? 's' : ''}</div></div>` : ''}
+    </div>
+    ${block('Business accounts', business)}
+    ${block('Personal accounts', personal)}
+    <p class="small muted" style="margin-bottom:6px">Live from Monzo, read only, refreshed each time you open the dashboard.${
+      !business.length ? ' No business account found on this Monzo login, so everything here is personal.' : ''
+    }</p>
+    <button id="monzo-disconnect" class="ghost-btn" type="button">Disconnect</button>`
+  wire()
 }
 
 /* ------------------------------------------------------------- linkedin */
@@ -930,7 +1020,7 @@ function renderConnections() {
     { key: 'facebook', name: 'Facebook', what: 'page extracted the same way; ad metrics need Meta once a campaign runs' },
     { key: 'gmail', name: 'Gmail', what: 'business inbox digest, refreshed automatically every morning at 7am' },
     { key: 'calendar', name: 'Calendar', what: 'the week ahead, refreshed automatically every morning at 7am' },
-    { key: 'bank', name: 'Bank', what: 'optional, tell me your bank and I will advise' },
+    { key: 'bank', name: 'Monzo', what: 'business and personal balances, read only, after a one-off sign in by you' },
   ]
   $('#connections-body').innerHTML = `<div class="conn-grid">${defs
     .map((d) => {
@@ -1125,6 +1215,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/store/gmail'),
     getJSON('/api/store/calendar'),
     getJSON('/api/store/linkedin-competitors'),
+    getJSON('/api/monzo'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -1143,6 +1234,7 @@ async function loadAll(fresh = false) {
   const calStore = val(12, null)
   state.calendar = calStore && calStore.extractedAt ? calStore : null
   state.liCompetitors = val(13, null)
+  state.monzo = val(14, null)
 }
 
 function renderAll() {
