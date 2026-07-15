@@ -88,7 +88,7 @@ export default function Page() {
 
       <H2 id="why-it-matters">Why the choice matters more than parents realise</H2>
       <P>
-        Here&apos;s something I say in every workshop I run. Schools teach students what to learn, but almost nobody
+        Here&apos;s something I say to my students all the time. Schools teach students what to learn, but almost nobody
         teaches them how to perform in exams. Those are two different skills. Most students who sit at a B
         aren&apos;t short of knowledge. They lose marks on application, exam technique and recall under pressure.
       </P>

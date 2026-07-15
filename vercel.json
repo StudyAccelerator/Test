@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/workshop", "destination": "/", "permanent": true },
+    { "source": "/workshop/", "destination": "/", "permanent": true }
+  ]
+}

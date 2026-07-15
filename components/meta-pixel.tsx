@@ -7,7 +7,7 @@ import Script from 'next/script'
    so it is not a secret. NEXT_PUBLIC_META_PIXEL_ID overrides it. This is the same
    base-pixel loader Meta hands out; the site loads it once here, so nothing needs
    pasting into the site by hand. The fbq('track', 'Lead') calls in the diagnostic,
-   parents, newsletter, tracker and workshop forms then record conversions. */
+   parents, newsletter and tracker forms then record conversions. */
 const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '1585888179629830'
 
 export default function MetaPixel() {

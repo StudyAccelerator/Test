@@ -2,8 +2,8 @@
    when someone completes a signup anywhere on the site. Both calls are safe
    no-ops until their IDs are set (dormant pixel / GA), so calling this never
    errors when analytics is off. The diagnostic and parents forms fire these
-   two events inline already; the tracker, newsletter and workshop forms call
-   trackLead() so every capture point on the site reports a conversion. */
+   two events inline already; the tracker and newsletter forms call trackLead()
+   so every capture point on the site reports a conversion. */
 type TrackFn = (...args: unknown[]) => void
 
 export function trackLead(): void {
