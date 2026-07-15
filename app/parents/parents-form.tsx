@@ -1,12 +1,15 @@
 'use client'
 
 import { useState } from 'react'
-import Image from 'next/image'
 
 // Direct MailerLite API call, same proven approach as the revision tracker
 const ML_API_KEY =
   'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiI0IiwianRpIjoiYjUzMWQ4MTgyNzM5NmM3MTViZDVjN2ZhZDY5ZTYxMjNiYzZjMTViNjM1Y2Q3YjkwODI4YWY1YjlmMzgwYjE4Yjg5MmQ0N2FmM2M3YTM0ZWYiLCJpYXQiOjE3Nzg1MTIzODEuMjUwMjI2LCJuYmYiOjE3Nzg1MTIzODEuMjUwMjI5LCJleHAiOjQ5MzQxODU5ODEuMjQ2MjY1LCJzdWIiOiIyMTMxNzg2Iiwic2NvcGVzIjpbXX0.QQkqYoMhCzwoGI4g3LfZWhiGWZ_dWxGfQOrNfebTqL4R7OKHgpaEduW-J9AAdhWo2_bsRpKvi6NnVJA_rdeTPQUBnCmmXcvzahU4bVx7_Ulff0Ld_8_8a5boETdU3UrKTWMCjdXQkmpJ-1TiM5_Mi4iLOpB0vvPvG_U3Cya_ORnGsTSyDv5qQ7MQHqjytbaZ0R_aRWDA1-emMFymr2dXOv-iOW1Dly1dflxrIo6Yb0BPA-v6Chs4TjlHdEvwFvSRgzZAATN9dDSjGENQbhQIFmuUGQ00HiP1xsmS6qKaCU__iARC8z91GZyrbcf0m9ryHNhkScckYMoGu1sYIC9Hm2Wj_BKpI970L0-CAT5dDpolTbTd8absVHR3UOxuiWZSEHVcumvtPsZ6K5GP0zQ_ccFlMaqLrPs7o80wy9DWt97fDZ8_KuScHY20zKSG-beSojlzuUXXj4rpH33-9PeJ4puXIMirOWzsKJIaEEckRDumvyhawrliPhHMwelKhgpCxMZlA_Bc3-nwZMDiEZf_CtXgXOkzUSkJohkboZBELdeLOrv83EPRhpHXahEyZkOhURucBLtb5Fs0lFIkLKeI-RXAz_7TPByqlHkcxZV8xObgZpqtCGVd1q8oI2pwrD7D85H4i5wP70q-Lsv8BZl_G8RTosjdYckZn0nXlOTjehM'
 const ML_GROUP_ID = '188021995515937985'
+
+// Shared field styling: soft border, gentle cream fill, gold focus ring
+const fieldClass =
+  'w-full rounded-xl border border-brand-purple/15 bg-brand-cream/50 px-4 py-3.5 text-brand-text placeholder:text-brand-text/35 transition focus:border-brand-gold focus:bg-white focus:outline-none focus:ring-4 focus:ring-brand-gold/15'
 
 declare global {
   interface Window {
@@ -30,6 +33,12 @@ export default function ParentsForm() {
     const firstName = formData.get('firstName') as string
     const email     = formData.get('email')     as string
     const yearGroup = formData.get('yearGroup') as string
+    const phone     = (((formData.get('phone') as string) ?? '').trim()).replace(/[\s().-]/g, '')
+
+    // Only send the fields we have. Phone is optional, so a blank never
+    // overwrites a number already stored on the subscriber.
+    const fields: Record<string, string> = { name: firstName, year_group: yearGroup }
+    if (phone) fields.phone = phone
 
     try {
       const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
@@ -40,7 +49,7 @@ export default function ParentsForm() {
         },
         body: JSON.stringify({
           email,
-          fields: { name: firstName, year_group: yearGroup },
+          fields,
           groups: [ML_GROUP_ID],
         }),
       })
@@ -69,33 +78,37 @@ export default function ParentsForm() {
   /* ── Success state ──────────────────────────────────────────────────── */
   if (submitted) {
     return (
-      <div className="bg-white rounded-2xl shadow-lg border-4 border-brand-gold p-10 text-center">
-        <div className="flex justify-center mb-6">
-          <Image
-            src="/logo-mark.png"
-            alt="A-Level Accelerators"
-            width={80}
-            height={80}
-            className="w-20 h-20 object-contain"
-            unoptimized
-          />
+      <div className="rounded-2xl bg-white p-8 text-center shadow-[0_24px_60px_rgba(0,0,0,.22)] sm:p-10">
+        <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-full bg-brand-gold/15 ring-1 ring-brand-gold/30">
+          <svg
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="h-8 w-8 text-brand-gold"
+            aria-hidden="true"
+          >
+            <path d="M20 6L9 17l-5-5" />
+          </svg>
         </div>
-        <h3 className="text-3xl font-serif font-bold text-brand-purple mb-4">
-          {submittedName}, your guide is on its way!
+        <h3 className="font-serif text-2xl font-bold text-brand-purple sm:text-3xl">
+          {submittedName}, your guide is on its way
         </h3>
-        <p className="text-lg text-brand-text mb-4">
-          You should receive it within the next minute.
+        <p className="mx-auto mt-3 max-w-sm leading-relaxed text-brand-text/70">
+          It lands in your inbox within a minute. If it is not there, have a quick look in your spam
+          or promotions folder, it sometimes hides.
         </p>
-        <p className="text-sm text-brand-muted">
-          Please check your spam and promotions folder if you do not see it in your inbox.
-          If you have any questions, simply reply to that email or{' '}
+        <p className="mx-auto mt-5 max-w-sm text-sm leading-relaxed text-brand-text/55">
+          Any questions, just reply to that email or{' '}
           <a
             href="mailto:Waleed@alevelaccelerators.com"
-            className="text-brand-gold underline hover:text-brand-purple transition"
+            className="font-semibold text-brand-gold underline underline-offset-2 transition hover:text-brand-purple"
           >
-            click here to email us
-          </a>{' '}
-          and I will get back to you as soon as I can!
+            email me directly
+          </a>
+          . I read every one.
         </p>
       </div>
     )
@@ -105,11 +118,11 @@ export default function ParentsForm() {
   return (
     <form
       onSubmit={handleSubmit}
-      className="bg-white rounded-2xl shadow-lg border-2 border-brand-gold/40 p-8 md:p-10 space-y-5"
+      className="space-y-5 rounded-2xl bg-white p-8 shadow-[0_24px_60px_rgba(0,0,0,.22)] sm:p-10"
     >
       {/* First name */}
       <div>
-        <label htmlFor="firstName" className="block text-sm font-bold text-brand-purple mb-2">
+        <label htmlFor="firstName" className="mb-1.5 block text-sm font-semibold text-brand-purple">
           First name <span className="text-brand-gold">*</span>
         </label>
         <input
@@ -119,13 +132,13 @@ export default function ParentsForm() {
           required
           autoComplete="given-name"
           placeholder="e.g. Sarah"
-          className="w-full px-4 py-3 rounded-md border-2 border-brand-cream-dark bg-brand-cream/40 text-brand-text focus:outline-none focus:border-brand-gold transition"
+          className={fieldClass}
         />
       </div>
 
       {/* Email */}
       <div>
-        <label htmlFor="email" className="block text-sm font-bold text-brand-purple mb-2">
+        <label htmlFor="email" className="mb-1.5 block text-sm font-semibold text-brand-purple">
           Email address <span className="text-brand-gold">*</span>
         </label>
         <input
@@ -135,13 +148,33 @@ export default function ParentsForm() {
           required
           autoComplete="email"
           placeholder="your@email.com"
-          className="w-full px-4 py-3 rounded-md border-2 border-brand-cream-dark bg-brand-cream/40 text-brand-text focus:outline-none focus:border-brand-gold transition"
+          className={fieldClass}
         />
+      </div>
+
+      {/* Mobile number (optional) */}
+      <div>
+        <label htmlFor="phone" className="mb-1.5 block text-sm font-semibold text-brand-purple">
+          Mobile number <span className="font-normal text-brand-text/45">(optional)</span>
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          inputMode="tel"
+          maxLength={20}
+          autoComplete="tel"
+          placeholder="07..."
+          className={fieldClass}
+        />
+        <p className="mt-1.5 text-xs leading-relaxed text-brand-text/50">
+          Add it if you&apos;d like to talk through where your child&apos;s grades are now and where they want them to be.
+        </p>
       </div>
 
       {/* Child's year group */}
       <div>
-        <label htmlFor="yearGroup" className="block text-sm font-bold text-brand-purple mb-2">
+        <label htmlFor="yearGroup" className="mb-1.5 block text-sm font-semibold text-brand-purple">
           Child&apos;s year group <span className="text-brand-gold">*</span>
         </label>
         <select
@@ -149,7 +182,7 @@ export default function ParentsForm() {
           name="yearGroup"
           required
           defaultValue=""
-          className="w-full px-4 py-3 rounded-md border-2 border-brand-cream-dark bg-brand-cream/40 text-brand-text focus:outline-none focus:border-brand-gold transition appearance-none"
+          className={`${fieldClass} appearance-none`}
           style={{
             backgroundImage:    `url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'><path fill='%232E2557' d='M0 0l5 6 5-6z'/></svg>")`,
             backgroundRepeat:   'no-repeat',
@@ -170,7 +203,7 @@ export default function ParentsForm() {
 
       {/* Error */}
       {error && (
-        <p className="text-red-600 text-sm font-medium bg-red-50 border border-red-200 rounded-md px-4 py-3">
+        <p className="rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-medium text-red-600">
           {error}
         </p>
       )}
@@ -179,13 +212,17 @@ export default function ParentsForm() {
       <button
         type="submit"
         disabled={submitting}
-        className="w-full px-8 py-4 bg-brand-gold text-brand-purple font-bold rounded-md text-lg hover:bg-brand-gold-light hover:-translate-y-0.5 hover:shadow-lg transition-all disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+        className="w-full rounded-full bg-brand-gold px-8 py-4 text-lg font-bold text-brand-purple shadow-[0_12px_28px_rgba(201,169,110,.35)] transition-all hover:-translate-y-0.5 hover:bg-brand-gold-light disabled:cursor-not-allowed disabled:opacity-60 disabled:hover:translate-y-0"
       >
-        {submitting ? 'Sending your guide…' : 'Send Me the Free Guide'}
+        {submitting ? 'Sending your guide…' : 'Send me the free guide'}
       </button>
 
-      <p className="text-xs text-brand-muted text-center">
-        No spam. Just useful advice for parents of A-Level students.
+      <p className="flex items-center justify-center gap-1.5 text-xs text-brand-text/50">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-3.5 w-3.5 text-brand-gold" aria-hidden="true">
+          <rect x="3" y="11" width="18" height="11" rx="2" />
+          <path d="M7 11V7a5 5 0 0 1 10 0v4" />
+        </svg>
+        No spam. Just useful advice for parents of A-level students.
       </p>
     </form>
   )

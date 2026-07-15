@@ -132,7 +132,7 @@ const PROGRAMMES = [
     artBg: 'bg-gradient-to-br from-brand-gold/10 via-brand-cream to-brand-purple/[0.06]',
     outcome:
       'High-yield revision, time management and exam performance. The system behind everything we teach, so you stay ahead without burning out.',
-    points: ['Active recall and spaced repetition', 'Workload and burnout control', 'Free live workshop to start'],
+    points: ['Active recall and spaced repetition', 'Workload and burnout control', 'Exam performance under pressure'],
     href: '/study-systems',
     cta: 'Explore the Study System',
   },
