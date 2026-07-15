@@ -336,14 +336,13 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
             </div>
 
             {/* The gap, in numbers */}
-            <div className={`${CARD} mt-6 grid sm:grid-cols-3 divide-y sm:divide-y-0 sm:divide-x divide-brand-purple/[0.08]`}>
+            <div className={`${CARD} mt-6 grid sm:grid-cols-2 divide-y sm:divide-y-0 sm:divide-x divide-brand-purple/[0.08]`}>
               {(
                 [
-                  ['9.4%', 'of UK A-level entries were an A* last summer. The offers worth chasing usually want at least one.', false],
-                  ['6%', "of applicants to Oxford's toughest course, Economics and Management, get an offer. The best places go to a tiny few.", false],
-                  ['1,000+', 'A-level students Dr Waleed has helped towards top grades and first-choice offers.', true],
+                  ['9.4%', 'of A-level grades are A*', 'The offers worth chasing usually want at least one.', false],
+                  ['1,000+', 'students helped towards top grades', 'and the first-choice university offers they were chasing.', true],
                 ] as const
-              ).map(([stat, caption, ours]) => (
+              ).map(([stat, lead, caption, ours]) => (
                 <div key={stat} className="px-6 py-6 md:px-8 text-center sm:text-left">
                   <p
                     className={`font-serif font-bold text-4xl md:text-[2.6rem] leading-none ${
@@ -352,14 +351,15 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
                   >
                     {stat}
                   </p>
-                  <p className="mt-2.5 text-sm text-brand-text/65 leading-relaxed">{caption}</p>
+                  <p className="mt-2 font-bold text-brand-purple text-[15px] md:text-base leading-snug">{lead}</p>
+                  <p className="mt-1.5 text-sm text-brand-text/60 leading-relaxed">{caption}</p>
                 </div>
               ))}
             </div>
             <p className="mt-6 text-center text-[15px] md:text-base text-brand-text/75 leading-relaxed max-w-2xl mx-auto">
-              Don&apos;t be in the 90.6% who miss the A*, or the 94% the best courses turn away. That gap
-              closes with a system, not more hours. The diagnostic measures yours in 4 minutes and gives you
-              the plan to close it.
+              Don&apos;t be in the 90.6% who miss the A*. That gap, between the grade you have and the grade
+              your offer needs, closes with a system, not more hours. The diagnostic measures yours in 4
+              minutes and gives you the plan to close it.
             </p>
           </div>
         </section>
