@@ -298,6 +298,70 @@ async function monzoAccessToken() {
   return next.accessToken
 }
 
+/* Monzo's "description" is often just the owner id (user_0000...) rather than
+   anything a human would recognise, so fall back to the account type. */
+const MONZO_TYPE_NAMES = {
+  uk_retail: 'Personal current account',
+  uk_retail_joint: 'Joint account',
+  uk_retail_plus: 'Personal (Plus)',
+  uk_business: 'Business current account',
+  uk_monzo_flex: 'Flex',
+  uk_prepaid: 'Prepaid card',
+}
+
+function monzoAccountName(a) {
+  const d = (a.description || '').trim()
+  const looksLikeAnId = !d || /^(user|acc)_[A-Za-z0-9]+$/.test(d)
+  return looksLikeAnId ? MONZO_TYPE_NAMES[a.type] || a.type || 'Account' : d
+}
+
+/* Money in and out per month. Monzo's strong-customer-authentication rules cap
+   unattended access at the last 90 days, so that is the honest window: no
+   earlier history is available to us without Waleed signing in again. Declines
+   and zero-amount entries are excluded because they never moved money. */
+async function monzoCashflow(call, accountId) {
+  const since = new Date(Date.now() - 89 * 864e5).toISOString()
+  let all = []
+  let cursor = null
+  for (let page = 0; page < 8; page++) {
+    const q = cursor
+      ? `/transactions?account_id=${encodeURIComponent(accountId)}&since=${encodeURIComponent(cursor)}&limit=100`
+      : `/transactions?account_id=${encodeURIComponent(accountId)}&since=${encodeURIComponent(since)}&limit=100`
+    const r = await call(q)
+    const batch = r.transactions || []
+    all = all.concat(batch)
+    if (batch.length < 100) break
+    cursor = batch[batch.length - 1].id
+  }
+
+  const real = all.filter((t) => !t.decline_reason && t.amount !== 0)
+  const byMonth = new Map()
+  for (const t of real) {
+    const key = t.created.slice(0, 7)
+    if (!byMonth.has(key)) byMonth.set(key, { month: key, inflow: 0, outflow: 0 })
+    const e = byMonth.get(key)
+    if (t.amount > 0) e.inflow += t.amount
+    else e.outflow += -t.amount
+  }
+  const monthly = [...byMonth.values()]
+    .sort((a, b) => (a.month < b.month ? -1 : 1))
+    .map((e) => ({ ...e, net: e.inflow - e.outflow }))
+
+  const cutoff = new Date(Date.now() - 30 * 864e5).toISOString()
+  const last30 = real.reduce(
+    (acc, t) => {
+      if (t.created < cutoff) return acc
+      if (t.amount > 0) acc.inflow += t.amount
+      else acc.outflow += -t.amount
+      return acc
+    },
+    { inflow: 0, outflow: 0 }
+  )
+  last30.net = last30.inflow - last30.outflow
+
+  return { monthly, last30, transactions: real.length, windowDays: 89 }
+}
+
 async function fetchMonzo() {
   const cfg = monzoConfig()
   if (!cfg.id || !cfg.secret) return { pending: 'config', redirect: MONZO_REDIRECT }
@@ -332,7 +396,7 @@ async function fetchMonzo() {
     for (const a of open) {
       const b = await call(`/balance?account_id=${encodeURIComponent(a.id)}`)
       withBalances.push({
-        name: a.description || a.type,
+        name: monzoAccountName(a),
         kind: a.type && a.type.includes('business') ? 'business' : 'personal',
         balance: b.balance,
         totalBalance: b.total_balance,
@@ -340,11 +404,24 @@ async function fetchMonzo() {
         spendToday: b.spend_today,
       })
     }
+    /* cashflow from the main account: the one the balances came from */
+    let cashflow = null
+    const main = open.find((a) => a.type === 'uk_business') || open[0]
+    if (main) {
+      try {
+        cashflow = await monzoCashflow(call, main.id)
+      } catch (err) {
+        cashflow = { error: err.message }
+      }
+    }
+
     const tokens = readMonzoTokens()
     return {
       fetchedAt: new Date().toISOString(),
       connectedAt: tokens ? tokens.connectedAt : null,
       accounts: withBalances,
+      cashflow,
+      cashflowAccount: main ? monzoAccountName(main) : null,
     }
   } catch (err) {
     /* Monzo returns this until the sign in is approved in the phone app */
