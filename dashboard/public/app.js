@@ -577,7 +577,7 @@ function renderBank() {
   if (!m || m.pending === 'config') {
     chip.textContent = 'needs your sign in'
     chip.className = 'chip chip-pending'
-    const redirect = (m && m.redirect) || 'http://127.0.0.1:4400/api/monzo/callback'
+    const redirect = (m && m.redirect) || 'http://localhost:4400/api/monzo/callback'
     body.innerHTML = `
       <p class="small muted" style="margin-top:0">Monzo can show your business and personal balances here, read only. I cannot sign in as you, so these four steps are yours. About five minutes, once.</p>
       <ol class="setup-steps">

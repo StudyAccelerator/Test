@@ -234,9 +234,19 @@ async function fetchStripe() {
    the code Monzo hands back. Tokens live in data/monzo-tokens.json (gitignored,
    owner-readable only) and are NEVER exposed through /api/store. */
 
-const MONZO_CLIENT_ID = env.MONZO_CLIENT_ID || null
-const MONZO_CLIENT_SECRET = env.MONZO_CLIENT_SECRET || null
-const MONZO_REDIRECT = `http://${HOST}:${PORT}/api/monzo/callback`
+/* Read afresh each time rather than caching at boot: editing .env then takes
+   effect immediately, with no restart to forget. */
+function monzoConfig() {
+  const e = loadEnv()
+  return { id: e.MONZO_CLIENT_ID || null, secret: e.MONZO_CLIENT_SECRET || null }
+}
+
+/* Deliberately "localhost" and not the 127.0.0.1 literal: Monzo's CloudFront
+   WAF 403s any auth request carrying a loopback IP in the query string
+   (verified 15 July 2026: identical URL is 200 with localhost, 403 with
+   127.0.0.1). localhost resolves to 127.0.0.1, so the server still only ever
+   listens on the loopback interface. */
+const MONZO_REDIRECT = `http://localhost:${PORT}/api/monzo/callback`
 const MONZO_TOKEN_FILE = path.join(DATA_DIR, 'monzo-tokens.json')
 const monzoStates = new Set()
 
@@ -271,10 +281,11 @@ async function monzoAccessToken() {
   if (!t) return null
   if (Date.now() < t.expiresAt - 60_000) return t.accessToken
   if (!t.refreshToken) return null
+  const cfg = monzoConfig()
   const fresh = await monzoTokenCall({
     grant_type: 'refresh_token',
-    client_id: MONZO_CLIENT_ID,
-    client_secret: MONZO_CLIENT_SECRET,
+    client_id: cfg.id,
+    client_secret: cfg.secret,
     refresh_token: t.refreshToken,
   })
   const next = {
@@ -288,7 +299,8 @@ async function monzoAccessToken() {
 }
 
 async function fetchMonzo() {
-  if (!MONZO_CLIENT_ID || !MONZO_CLIENT_SECRET) return { pending: 'config', redirect: MONZO_REDIRECT }
+  const cfg = monzoConfig()
+  if (!cfg.id || !cfg.secret) return { pending: 'config', redirect: MONZO_REDIRECT }
 
   let token = null
   try {
@@ -451,13 +463,14 @@ async function handleApi(req, res, url) {
   /* Monzo sign in: Waleed clicks Connect, Monzo emails him a magic link and
      asks his phone to approve. This server never sees his password. */
   if (seg[1] === 'monzo' && seg[2] === 'connect') {
-    if (!MONZO_CLIENT_ID) return sendJson(res, 400, { error: 'No MONZO_CLIENT_ID in dashboard/.env' })
+    const cfg = monzoConfig()
+    if (!cfg.id) return sendJson(res, 400, { error: 'No MONZO_CLIENT_ID in dashboard/.env' })
     const state = crypto.randomUUID()
     monzoStates.add(state)
     const auth =
       'https://auth.monzo.com/?' +
       new URLSearchParams({
-        client_id: MONZO_CLIENT_ID,
+        client_id: cfg.id,
         redirect_uri: MONZO_REDIRECT,
         response_type: 'code',
         state,
@@ -477,10 +490,11 @@ async function handleApi(req, res, url) {
     }
     monzoStates.delete(state)
     try {
+      const cfg = monzoConfig()
       const t = await monzoTokenCall({
         grant_type: 'authorization_code',
-        client_id: MONZO_CLIENT_ID,
-        client_secret: MONZO_CLIENT_SECRET,
+        client_id: cfg.id,
+        client_secret: cfg.secret,
         redirect_uri: MONZO_REDIRECT,
         code,
       })
@@ -552,7 +566,7 @@ async function handleApi(req, res, url) {
       facebook: has('facebook', (v) => v.extractedAt) ? 'extracted' : 'pending',
       gmail: has('gmail') ? 'extracted' : 'pending',
       calendar: has('calendar') ? 'extracted' : 'pending',
-      bank: !MONZO_CLIENT_ID ? 'pending' : readMonzoTokens() ? 'live' : 'needs sign in',
+      bank: !monzoConfig().id ? 'pending' : readMonzoTokens() ? 'live' : 'needs sign in',
     })
   }
 
@@ -599,7 +613,7 @@ server.listen(PORT, HOST, () => {
   console.log(`  Stripe:     ${STRIPE_KEY ? 'connected' : 'snapshot (add STRIPE_KEY to dashboard/.env for always-on)'}`)
   console.log(
     `  Monzo:      ${
-      !MONZO_CLIENT_ID
+      !monzoConfig().id
         ? 'pending (add MONZO_CLIENT_ID and MONZO_CLIENT_SECRET to dashboard/.env)'
         : readMonzoTokens()
           ? 'connected'
