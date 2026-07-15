@@ -18,7 +18,7 @@ Today I want to show you the trained version, because there's an honest limit to
 
 **What it is**
 
-Twelve weeks of live, exam-focused teaching in one subject: Biology, Chemistry or Maths. Small groups, taught by specialists who scored top grades in the exact subject they teach. The next cohort starts Sunday 13th September, which is deliberately the second weekend of the school year: your exam craft trains alongside the content from the opening weeks of Year 13, instead of being bolted on in a panic after Christmas mocks.
+Twelve weeks of live, exam-focused teaching in one subject: Biology, Chemistry or Maths. Small groups, taught by specialists who scored top grades in the exact subject they teach and helped hundreds do the same. The next cohort starts Sunday 13th September, which is deliberately the second weekend of the school year: your exam craft trains alongside the content from the opening weeks of Year 13, instead of being bolted on in a panic after Christmas mocks.
 
 Every session runs the way you'd hope after these emails: high-yield content review, then the bulk of the time inside real exam questions with the mark scheme open, your answers coached into the language that pays. It's the examiner drill, with the examiner in the room. The timings are built for school life: Maths runs Saturdays 1pm to 3pm, Biology Sundays 10am to 12pm, Chemistry Sundays 1pm to 3pm, so nothing clashes with school, and nothing clashes with each other if you take two. Expect two to three hours of independent work a week between sessions. Every session is recorded if life gets in the way.
 

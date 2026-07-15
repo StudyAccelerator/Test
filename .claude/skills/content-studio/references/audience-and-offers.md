@@ -21,7 +21,8 @@
 - Worked with 1,000+ A-level students.
 - Across the recent 12-week Biology and Chemistry Accelerators, students rated topic confidence before and after each session; the average rose from 6.2 to 8.3 out of 10 (74 responses). Use this carefully and only where a number helps; grade-outcome claims are NOT yet available.
 - Real student feedback quotes are on the site testimonial carousel (Arooj, Jay, Catherine, Maahil, Menahil, Rayanna, Naysa, Furkan, etc.). These are safe to quote.
-- **Not allowed yet:** "X% got an A*", specific grade jumps, university admission stats. Waleed does not have results data yet. Do not imply he does.
+- **The tutors' own track record (approved by Waleed, 16 July 2026):** the Subject Accelerator specialists "achieved top grades in that subject themselves, and helped hundreds do the same". This is a claim about the tutors' careers, not about A-Level Accelerators' own results, and Waleed has confirmed it stands. It is live in the subject sequence emails B3 and B4. Keep it; do not strip it as an outcome claim.
+- **Not allowed yet:** "X% got an A*", specific grade jumps, university admission stats **for A-Level Accelerators' own students**. Waleed does not have his own results data until August 2026. Do not imply he does. (The tutors' track record above is the one approved exception, and it is about the tutors, not the programme.)
 
 ## Seasonal calendar (UK A-level year) | steer content by where we are
 
