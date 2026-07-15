@@ -46,7 +46,7 @@ Your child took a 20 question diagnostic on my website. It found the specific pl
 
 The honest numbers: from £289 for a subject for the full six weeks, which works out around £12 per teaching hour. Typical 1:1 tutoring averages £50 an hour. The first session is risk-free, so if it isn't right for your child, you say so and pay nothing further. I won't promise grade outcomes; anyone who does is guessing. I'll promise structure, honest teaching, and that you'll be able to see the method working within a fortnight in how your child talks about revision.
 
-Any questions at all, reply to this email or book a free fifteen minute call with me directly: https://scheduler.zoom.us/dr-waleed-ahmad/a-level. I'm always happy to talk it through.
+Any questions at all, reply to this email or book a free thirty minute call with me directly: https://scheduler.zoom.us/dr-waleed-ahmad/a-level. I'm always happy to talk it through.
 
 ---
 

@@ -32,7 +32,7 @@ Keep the error log. Retest it every Sunday. It's the most personalised revision 
 
 Do that for the rest of the summer and you'll walk into September ahead of most students in the country, having paid me nothing. I'll still be in your inbox once a week with the things school never taught you, and when you smash something or get stuck on something, reply and tell me. I read every one.
 
-And if you're genuinely torn, don't sit in the middle feeling guilty about it. Fifteen minutes, free, and I'll tell you straight whether the Accelerator fits your situation, even if the honest answer is "keep your money and run the free plan": https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+And if you're genuinely torn, don't sit in the middle feeling guilty about it. Half an hour, free, and I'll tell you straight whether the Accelerator fits your situation, even if the honest answer is "keep your money and run the free plan": https://scheduler.zoom.us/dr-waleed-ahmad/a-level
 
 Either way, {$name}, you started this by answering twenty questions honestly, and you now know things about your own revision that most students never find out. Whatever you decide about the programme, that part is already done, and it's already yours.
 

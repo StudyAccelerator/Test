@@ -44,7 +44,7 @@ The recommendation is our Subject Accelerator in their priority subject: twelve 
 
 Cost is £339 for the twelve weeks in one subject, which for scale is less than seven hours of typical 1:1 tutoring at the national average of around £50 an hour. Sessions are recorded if a weekend is missed. On evidence: I publish no grade claims yet, our first cohort's results arrive in August, and I'd treat anyone in this industry who promises grades with suspicion. What we do measure is topic confidence before and after each session; across the recent Biology and Chemistry cohorts it averaged 6.2 out of 10 before and 8.3 after, over 74 responses.
 
-If it would help to talk it through, reply to this email or book a free fifteen minute call with me: https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to help, and if I don't think the programme fits your child, I'll say so on the call.
+If it would help to talk it through, reply to this email or book a free thirty minute call with me: https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to help, and if I don't think the programme fits your child, I'll say so on the call.
 
 ---
 
