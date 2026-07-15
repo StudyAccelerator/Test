@@ -9,8 +9,11 @@ import Script from 'next/script'
    form and the diagnostic record those conversions in GA automatically.
 
    A GA4 Measurement ID looks like G-XXXXXXXXXX and is found in Google Analytics
-   under Admin, then Data streams, then the web stream. */
-const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? ''
+   under Admin, then Data streams, then the web stream. The live property for
+   alevelaccelerators.com is G-RGPD6KKPR4 (stream "A-Level Accelerators
+   Website"), hardcoded as the default; a Measurement ID is public (it ships in
+   every page's HTML), so it is not a secret. NEXT_PUBLIC_GA_ID can override it. */
+const GA_ID = process.env.NEXT_PUBLIC_GA_ID ?? 'G-RGPD6KKPR4'
 
 export default function GoogleAnalytics() {
   if (!GA_ID) return null
