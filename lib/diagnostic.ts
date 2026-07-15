@@ -1036,6 +1036,10 @@ export function yearLabel(id: string | undefined): string {
 /* Landing FAQs, shared by the page and its FAQPage structured data. */
 export const LANDING_FAQS = [
   {
+    q: 'Why should I take it?',
+    a: "Because I've seen where the marks actually go. I'm Dr Waleed, I got into medicine, and I've worked with over 1,000 A-level students. Marks leak in patterns, and the same seven profiles come up again and again. Take the diagnostic and I'll show you which one you are, where your marks are leaking, and exactly how to fix it.",
+  },
+  {
     q: 'Is it actually free?',
     a: 'Yes. The diagnostic, the report and the 7 day plan are free. You enter your email once, your report opens, and you also get my weekly revision email. Unsubscribe any time and the report stays yours.',
   },
@@ -1046,6 +1050,10 @@ export const LANDING_FAQS = [
   {
     q: 'Who is it for?',
     a: 'A-level students: Year 12, Year 13, resitters, and anyone starting sixth form in September. The questions adapt to where you are, and so does the recommendation at the end.',
+  },
+  {
+    q: 'Can I take it for my son or daughter?',
+    a: 'Yes, plenty of parents do. Answer each question the way your child actually revises, honest rather than hopeful, and the diagnosis holds. The report is written to the student, so the best move is to read it together. It starts a much better conversation than asking whether they have revised.',
   },
   {
     q: 'Will you tell me my revision is fine?',
