@@ -17,6 +17,7 @@ import {
   type TrackerForm,
 } from '@/lib/tracker/form'
 import { RATINGS, type Rating } from '@/lib/tracker/techniques'
+import { trackLead } from '@/lib/analytics'
 import PlanView from './plan-view'
 
 /* MailerLite direct integration: do not change the endpoint, key, group or
@@ -207,6 +208,7 @@ export default function TrackerApp() {
         groups: [ML_GROUP_ID],
       }),
     }).catch((err) => console.warn('MailerLite subscribe failed:', err))
+    trackLead()
 
     const result = planWeek(settings, topics)
     setPlan(result)

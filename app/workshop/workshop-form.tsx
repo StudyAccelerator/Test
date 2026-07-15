@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { trackLead } from '@/lib/analytics'
 
 const MAILERLITE_FORM_ACTION = 'https://assets.mailerlite.com/jsonp/2113061/forms/184389361466344885/subscribe'
 
@@ -30,6 +31,7 @@ export default function WorkshopForm() {
         body: params,
         mode: 'no-cors',
       })
+      trackLead()
       setSubmitted(true)
     } catch {
       setError('Something went wrong. Please try again or email Waleed@alevelaccelerators.com.')
