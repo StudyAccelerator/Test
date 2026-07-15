@@ -27,6 +27,7 @@ The marketing site and lead-magnet tools for A-Level Accelerators, Waleed Ahmad'
 - `/faqs`, `/blog` (11 articles), `/subject-accelerators`, `/study-systems`, `/workshop`
 - Legal pages: /privacy and /terms are deliberately NOT live. Complete drafts sit in `content/legal-drafts/` (with restore steps in its README) awaiting details only Waleed can finalise. Never route, link or publish them without his explicit instruction.
 - Canonical domain everywhere: https://alevelaccelerators.com (non-www)
+- Measurement: Google Search Console is verified and collecting (the SEO side). On-site analytics is wired in `app/layout.tsx`: Vercel Web Analytics (`<Analytics/>`, cookieless, enable it in the Vercel project to collect), plus a Meta pixel (`components/meta-pixel.tsx`) and Google Analytics 4 (`components/google-analytics.tsx`) that stay dormant until `NEXT_PUBLIC_META_PIXEL_ID` / `NEXT_PUBLIC_GA_ID` are set. The pixel and GA set cookies, so switch them on alongside a live privacy policy and consent. Do not re-add analytics packages: the wiring already exists.
 
 ## The HQ dashboard (private, internal, built 12 July 2026)
 

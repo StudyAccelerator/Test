@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Analytics } from "@vercel/analytics/next"
 import MetaPixel from "@/components/meta-pixel"
+import GoogleAnalytics from "@/components/google-analytics"
 import "./globals.css"
 
 const SITE_URL = "https://alevelaccelerators.com"
@@ -101,6 +102,7 @@ export default function RootLayout({
       <body>
         {children}
         <Analytics />
+        <GoogleAnalytics />
         <MetaPixel />
       </body>
     </html>
