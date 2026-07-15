@@ -898,10 +898,10 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     ],
     href: '/study-systems/',
     cta: 'Explore the Study System',
-    meta: 'Works alongside any subject · start with the free workshop',
+    meta: 'Works alongside any subject you take',
   })
 
-  const callLine = 'Not sure it is the right fit? Book a free 15 minute call with Dr Waleed and he will tell you honestly, even if the answer is neither.'
+  const callLine = 'Not sure which fits? Book a free 30 minute call with Dr Waleed and he will help you decide, even if the honest answer is none of them yet.'
 
   /* Starting A-levels soon: content programmes do not fit yet, the method does. */
   if (year === 'pre') {

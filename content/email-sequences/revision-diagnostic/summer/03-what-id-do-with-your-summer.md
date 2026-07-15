@@ -46,7 +46,7 @@ If you're still reading, one of two things is true. Either you want the details:
 
 [BUTTON: See the Summer Accelerator -> https://alevelaccelerators.com/summer-accelerators/]
 
-Or you're not sure, in which case don't buy anything. Book fifteen minutes with me instead and I'll tell you honestly whether it fits, even if the answer is no: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Or you're not sure, in which case don't buy anything. Book half an hour with me instead and I'll tell you honestly whether it fits, even if the answer is no: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
 
 Either way, tomorrow's 90 minutes still belongs to the worst topic on your list.
 

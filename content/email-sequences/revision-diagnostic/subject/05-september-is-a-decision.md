@@ -42,7 +42,7 @@ Places are capped because the sessions only work small; when a subject fills, it
 
 [BUTTON: Book my place for September -> https://alevelaccelerators.com/subject-accelerators/]
 
-Or the fifteen minute honest-answer option: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Or the thirty minute honest-answer option: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
 
 **Either way**
 
