@@ -8,7 +8,7 @@ Waleed's outreach credibility does not come from grade-outcome data. He has none
 
 - **The Medic Life:** ran an interview lecture series that took over 250 students through in 10 weeks.
 - **PasTest:** partnered with PasTest, the larger brand carrying his work.
-- **r/A-levels:** ran free workshops for r/A-levels, the largest A-level community on Reddit and Discord, with outstanding reviews.
+- **r/A-levels:** ran free workshops for r/A-levels (r/alevel, 201,660 members as of July 2026), the largest A-level community on Reddit and Discord, with outstanding reviews. The claim is true and approved; note for accuracy in conversation that the sub's audience is largely international CAIE students (see `content/reddit/2026-07-15-reddit-verdict-and-plan.md`), so frame it as community scale and delivery proof, not as UK reach.
 - **Dr Waleed Ahmad, MBBS:** practising NHS foundation-year doctor, former top-performing A-level student who got into medicine. It is his method, taught by him. Never a marketplace of tutors.
 - Worked with 1,000+ A-level students (approved figure).
 - Session confidence ratings: across the recent 12-week Biology and Chemistry Accelerators, average topic confidence rose from 6.2 to 8.3 out of 10 (74 responses). Use sparingly and only where a number genuinely helps.
