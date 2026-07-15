@@ -64,6 +64,10 @@ All written content (blog, social, PDFs, page copy) follows `.claude/skills/cont
 - No "we match you with a tutor" marketplace framing. Waleed teaches; it is his method.
 - Every blog article is written twice: the website version (repo) plus a fully rewritten backlink twin (`content/backlink-articles/`, never published on the site). Rules in `.claude/skills/content-studio/references/blog-dual-versions.md`.
 
+## The weekly content pack (Fridays)
+
+Social content ships as a weekly pack: every Friday 9am the scheduled task `weekly-content-pack-friday` runs the `weekly-content-pack` skill (`.claude/skills/weekly-content-pack/SKILL.md`) and produces the FOLLOWING week's LinkedIn (students) and Facebook (parents) posts with visuals, in `content/social/<monday-date>/`. The routine starts with a fresh business snapshot that decides what the week drives toward (never hardcode the push), keeps the two audiences separate, makes the visuals (brand-card pipeline in `content/graphics-src/` + real product screenshots), and is idempotent (a complete existing pack is reported, not rebuilt). It never schedules, posts or boosts anything: Waleed approves every pack and posts manually, then feeds the week's numbers back into the next run. First pack: w/c 20 July 2026, built 15 July around the revision diagnostic. Niche research baseline (the individual creators who win with our ICP, plus 2026 algorithm mechanics for both platforms) lives in the latest pack's `research-notes.md`.
+
 ## How to add a blog post
 
 1. Add an entry to the top of the array in `lib/posts.ts`.
