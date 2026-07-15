@@ -866,7 +866,7 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     ],
     href: '/summer-accelerators/',
     cta: 'Explore the Summer Accelerator',
-    meta: 'Cohort starts Saturday 25th July · from £289 per subject',
+    meta: 'Cohort starts Saturday 8th August · from £289 per subject',
   })
 
   const subjectAccel = (why: string): Route => ({

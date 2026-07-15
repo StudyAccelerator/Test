@@ -49,7 +49,7 @@ Every email send (SS1 on Sunday 19 July, the re-opening email, the workshop invi
 
 ## Decisions (answered 14 July)
 
-- **A. Cohort date:** 25 July for now, may change, and the possibility of change stays private. Nothing new made public; the page keeps its existing 25 July.
+- **A. Cohort date:** 25 July for now, may change, and the possibility of change stays private. Nothing new made public; the page keeps its existing 25 July. *[Superseded 15 July 2026: Waleed set the start to Saturday 8 August 2026 and the change is public on the site.]*
 - **B. Batches:** all four approved, Waleed does the final merge to main.
 - **C. Deletions:** all dead branches yes; MailerLite drafts kept for now.
 - **D. Numbers:** no public cohort number ("limited capacity" stays); no workshop date set yet.

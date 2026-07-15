@@ -7,7 +7,7 @@ import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
 
 export const metadata = {
   title: 'A-Level Summer Accelerator | Get Ahead for Year 13',
-  description: 'A 6-week live A-Level summer course for Year 12 students going into Year 13. Master the high-yield topics that decide your predicted grades. Biology, Chemistry, Maths and Physics. Starts 25th July.',
+  description: 'A 6-week live A-Level summer course for Year 12 students going into Year 13. Master the high-yield topics that decide your predicted grades. Biology, Chemistry, Maths and Physics. Starts 8th August.',
   alternates: { canonical: 'https://alevelaccelerators.com/summer-accelerators/' },
 }
 
@@ -38,7 +38,7 @@ export default function SummerAccelerators() {
     },
     {
       q: "When does it start and how's it structured?",
-      a: "The next cohort starts Saturday 25th July. It runs for six weeks, with two live sessions a week, two hours each. That's 24 hours of live teaching across the summer. Exact session times are confirmed when you book.",
+      a: "The next cohort starts Saturday 8th August. It runs for six weeks, with two live sessions a week, two hours each. That's 24 hours of live teaching. Exact session times are confirmed when you book.",
     },
     {
       q: "Which subjects can I choose?",
@@ -153,7 +153,7 @@ export default function SummerAccelerators() {
         <section className="py-6 px-4 bg-brand-purple border-y-2 border-brand-gold/50">
           <div className="max-w-4xl mx-auto text-center">
             <p className="text-base md:text-lg text-brand-cream font-semibold">
-              ⏳ The next cohort starts <span className="text-brand-gold">Saturday 25th July</span> with limited spaces. Secure your place now!
+              ⏳ The next cohort starts <span className="text-brand-gold">Saturday 8th August</span> with limited spaces. Secure your place now!
             </p>
           </div>
         </section>
@@ -376,7 +376,7 @@ export default function SummerAccelerators() {
               Secure Your Summer Place
             </h2>
             <p className="text-center text-lg text-brand-cream opacity-80 mb-10 max-w-2xl mx-auto">
-              The next cohort starts Saturday 25th July. Session times never overlap, so you can take all four subjects and still attend every session live.
+              The next cohort starts Saturday 8th August. Session times never overlap, so you can take all four subjects and still attend every session live.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch mb-10">
@@ -614,7 +614,7 @@ export default function SummerAccelerators() {
       {/* Sticky mobile CTA: on a page this long, the next buy button is
           thousands of pixels from the hero on a phone */}
       <div className="fixed bottom-0 inset-x-0 z-40 md:hidden bg-brand-purple border-t-2 border-brand-gold px-4 py-2.5 flex items-center justify-between gap-3">
-        <span className="text-brand-cream text-sm font-medium leading-snug">Cohort starts 25th July</span>
+        <span className="text-brand-cream text-sm font-medium leading-snug">Cohort starts 8th August</span>
         <a
           href="#pricing"
           className="shrink-0 px-5 py-2 bg-brand-gold text-brand-purple text-sm font-bold rounded-md"
