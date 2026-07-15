@@ -33,6 +33,12 @@ export default function ParentsForm() {
     const firstName = formData.get('firstName') as string
     const email     = formData.get('email')     as string
     const yearGroup = formData.get('yearGroup') as string
+    const phone     = (((formData.get('phone') as string) ?? '').trim()).replace(/[\s().-]/g, '')
+
+    // Only send the fields we have. Phone is optional, so a blank never
+    // overwrites a number already stored on the subscriber.
+    const fields: Record<string, string> = { name: firstName, year_group: yearGroup }
+    if (phone) fields.phone = phone
 
     try {
       const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
@@ -43,7 +49,7 @@ export default function ParentsForm() {
         },
         body: JSON.stringify({
           email,
-          fields: { name: firstName, year_group: yearGroup },
+          fields,
           groups: [ML_GROUP_ID],
         }),
       })
@@ -144,6 +150,26 @@ export default function ParentsForm() {
           placeholder="your@email.com"
           className={fieldClass}
         />
+      </div>
+
+      {/* Mobile number (optional) */}
+      <div>
+        <label htmlFor="phone" className="mb-1.5 block text-sm font-semibold text-brand-purple">
+          Mobile number <span className="font-normal text-brand-text/45">(optional)</span>
+        </label>
+        <input
+          id="phone"
+          name="phone"
+          type="tel"
+          inputMode="tel"
+          maxLength={20}
+          autoComplete="tel"
+          placeholder="07..."
+          className={fieldClass}
+        />
+        <p className="mt-1.5 text-xs leading-relaxed text-brand-text/50">
+          Only if you&apos;d like a quick call about your child&apos;s options. No hard sell.
+        </p>
       </div>
 
       {/* Child's year group */}
