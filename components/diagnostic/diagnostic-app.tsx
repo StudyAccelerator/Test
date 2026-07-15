@@ -280,8 +280,8 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
             </h1>
             <HeroFade delay={0.45}>
               <p className="mt-6 text-lg md:text-xl text-brand-text/80 leading-relaxed max-w-xl">
-                Even though you&apos;re putting the work in. Or watching your teenager put it in, night after
-                night. Effort was never the problem. Where it goes is.
+                Even though you&apos;re putting the work in, or watching your teenager put it in night after
+                night? Effort was never the problem. Where it goes is.
               </p>
               <p className="mt-4 text-base md:text-lg text-brand-text/65 leading-relaxed max-w-xl">
                 20 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
@@ -340,7 +340,7 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
               {(
                 [
                   ['9.4%', 'of UK A-level entries were an A* last summer. The offers worth chasing usually want at least one.', false],
-                  ['29%', 'of UK university students win a place at a Russell Group university. The competitive courses inside them take far fewer.', false],
+                  ['6%', "of applicants to Oxford's toughest course, Economics and Management, get an offer. The best places go to a tiny few.", false],
                   ['1,000+', 'A-level students Dr Waleed has helped towards top grades and first-choice offers.', true],
                 ] as const
               ).map(([stat, caption, ours]) => (
@@ -357,9 +357,9 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
               ))}
             </div>
             <p className="mt-6 text-center text-[15px] md:text-base text-brand-text/75 leading-relaxed max-w-2xl mx-auto">
-              Don&apos;t be in the 90.6% who miss the A*, or the 71% who never get a Russell Group place. That
-              gap closes with a system, not more hours. The diagnostic measures yours in 4 minutes and gives
-              you the plan to close it.
+              Don&apos;t be in the 90.6% who miss the A*, or the 94% the best courses turn away. That gap
+              closes with a system, not more hours. The diagnostic measures yours in 4 minutes and gives you
+              the plan to close it.
             </p>
           </div>
         </section>
