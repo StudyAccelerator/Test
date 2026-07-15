@@ -14,9 +14,11 @@ import {
   Diagnosis,
   LANDING_FAQS,
   QUESTIONS,
+  Taker,
   diagnose,
   gradeLabel,
   scoresToString,
+  supportLabel,
   yearLabel,
 } from '@/lib/diagnostic'
 import { subscribeDiagnostic } from '@/lib/mailerlite'
@@ -33,7 +35,7 @@ const CARD =
   'rounded-2xl bg-white [box-shadow:0_0_0_1px_rgba(46,37,87,.05),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)]'
 const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60'
 
-type Stage = 'intro' | 'quiz' | 'analysing' | 'gate' | 'report'
+type Stage = 'intro' | 'fork' | 'quiz' | 'analysing' | 'gate' | 'report'
 
 const STORAGE_KEY = 'ala-diagnostic-v1'
 
@@ -42,6 +44,9 @@ interface Stored {
   answers: Answers
   firstName: string
   unlockedAt: string | null
+  /* Added with the parent path. Absent in older saves, which were all student runs. */
+  taker?: Taker
+  childName?: string
 }
 
 function loadStored(): Stored | null {
@@ -70,44 +75,88 @@ export default function DiagnosticApp() {
   const [stage, setStage] = useState<Stage>('intro')
   const [answers, setAnswers] = useState<Answers>({})
   const [firstName, setFirstName] = useState('')
+  const [childName, setChildName] = useState('')
+  const [taker, setTaker] = useState<Taker | null>(null)
   const [diagnosis, setDiagnosis] = useState<Diagnosis | null>(null)
   const [resumeCount, setResumeCount] = useState(0)
 
-  /* Restore a previous run: unlocked report, or progress mid-quiz. */
+  /* Restore a previous run: unlocked report, or progress mid-quiz. Saves that
+     predate the fork have no taker; every one of those was a student run.
+     A ?for=parents deep link (for parent-facing ads) preselects the fork. */
   useEffect(() => {
     const stored = loadStored()
-    if (!stored) return
-    setAnswers(stored.answers)
-    setFirstName(stored.firstName)
-    if (stored.unlockedAt && allAnswered(stored.answers)) {
-      setDiagnosis(diagnose(stored.answers))
-      setStage('report')
-    } else {
+    if (stored) {
+      setAnswers(stored.answers)
+      setFirstName(stored.firstName)
+      setChildName(stored.childName ?? '')
+      const storedTaker = stored.taker ?? (Object.keys(stored.answers).length > 0 ? 'student' : null)
+      if (storedTaker) setTaker(storedTaker)
+      if (stored.unlockedAt && allAnswered(stored.answers)) {
+        setDiagnosis(diagnose(stored.answers, storedTaker ?? 'student'))
+        setStage('report')
+        return
+      }
       setResumeCount(Object.keys(stored.answers).length)
+      if (storedTaker) return
     }
+    try {
+      const param = new URLSearchParams(window.location.search).get('for')
+      if (param === 'parents' || param === 'parent') setTaker('parent')
+      if (param === 'students' || param === 'student') setTaker('student')
+    } catch {}
   }, [])
 
-  const handleAnswer = useCallback((id: string, value: string | string[]) => {
-    setAnswers((prev) => {
-      const next = { ...prev, [id]: value }
-      /* Changing subjects can invalidate the worry answer */
-      if (id === 'subjects') {
-        const worry = next.worry as string | undefined
-        const list = value as string[]
-        if (worry && worry !== 'unsure' && !list.includes(worry)) delete next.worry
-      }
+  const persist = useCallback(
+    (partial: Partial<Stored>) => {
       const current = loadStored()
       saveStored({
         v: 1,
-        answers: next,
+        answers: current?.answers ?? {},
         firstName: current?.firstName ?? '',
-        unlockedAt: null,
+        unlockedAt: current?.unlockedAt ?? null,
+        taker: taker ?? current?.taker,
+        childName: current?.childName ?? '',
+        ...partial,
       })
-      return next
-    })
-  }, [])
+    },
+    [taker]
+  )
 
+  const handleAnswer = useCallback(
+    (id: string, value: string | string[]) => {
+      setAnswers((prev) => {
+        const next = { ...prev, [id]: value }
+        /* Changing subjects can invalidate the worry answer */
+        if (id === 'subjects') {
+          const worry = next.worry as string | undefined
+          const list = value as string[]
+          if (worry && worry !== 'unsure' && !list.includes(worry)) delete next.worry
+        }
+        persist({ answers: next, unlockedAt: null })
+        return next
+      })
+    },
+    [persist]
+  )
+
+  /* Start: straight to the quiz when the path is already known (resume or
+     deep link), otherwise to the fork. */
   const startQuiz = () => {
+    setStage(taker ? 'quiz' : 'fork')
+    window.scrollTo({ top: 0 })
+  }
+
+  const chooseTaker = (t: Taker) => {
+    setTaker(t)
+    const current = loadStored()
+    saveStored({
+      v: 1,
+      answers: current?.answers ?? {},
+      firstName: current?.firstName ?? '',
+      unlockedAt: null,
+      taker: t,
+      childName: current?.childName ?? '',
+    })
     setStage('quiz')
     window.scrollTo({ top: 0 })
   }
@@ -119,10 +168,18 @@ export default function DiagnosticApp() {
 
   const handleAnalysed = useCallback(() => setStage('gate'), [])
 
-  const handleUnlock = (name: string) => {
+  const handleUnlock = (name: string, child: string) => {
     setFirstName(name)
-    setDiagnosis(diagnose(answers))
-    saveStored({ v: 1, answers, firstName: name, unlockedAt: new Date().toISOString() })
+    setChildName(child)
+    setDiagnosis(diagnose(answers, taker ?? 'student'))
+    saveStored({
+      v: 1,
+      answers,
+      firstName: name,
+      unlockedAt: new Date().toISOString(),
+      taker: taker ?? 'student',
+      childName: child,
+    })
     setStage('report')
     window.scrollTo({ top: 0 })
   }
@@ -134,24 +191,117 @@ export default function DiagnosticApp() {
     setAnswers({})
     setDiagnosis(null)
     setResumeCount(0)
-    setStage('quiz')
+    setTaker(null)
+    setStage('fork')
     window.scrollTo({ top: 0 })
   }
 
   return (
     <>
       {(stage === 'intro' || stage === 'report') && <Header />}
-      {stage === 'intro' && <Landing onStart={startQuiz} resumeCount={resumeCount} />}
+      {stage === 'intro' && <Landing onStart={startQuiz} resumeCount={resumeCount} taker={taker} />}
+      {stage === 'fork' && <Fork onChoose={chooseTaker} onExit={() => setStage('intro')} />}
       {stage === 'quiz' && (
-        <Quiz answers={answers} onAnswer={handleAnswer} onComplete={handleQuizComplete} onExit={() => setStage('intro')} />
+        <Quiz
+          answers={answers}
+          taker={taker ?? 'student'}
+          onAnswer={handleAnswer}
+          onComplete={handleQuizComplete}
+          onExit={() => setStage('intro')}
+        />
       )}
       {stage === 'analysing' && <Analysing onDone={handleAnalysed} />}
-      {stage === 'gate' && <EmailGate answers={answers} onUnlock={handleUnlock} />}
+      {stage === 'gate' && <EmailGate answers={answers} taker={taker ?? 'student'} onUnlock={handleUnlock} />}
       {stage === 'report' && diagnosis && (
-        <Report diagnosis={diagnosis} answers={answers} firstName={firstName || 'you'} onRetake={handleRetake} />
+        <Report
+          diagnosis={diagnosis}
+          answers={answers}
+          firstName={firstName || 'you'}
+          taker={taker ?? 'student'}
+          childName={childName}
+          onRetake={handleRetake}
+        />
       )}
       {(stage === 'intro' || stage === 'report') && <Footer />}
     </>
+  )
+}
+
+/* ════════════════════════════════════════════════════════════════════════
+   Fork: who is this diagnostic for?
+   ═══════════════════════════════════════════════════════════════════════ */
+
+function Fork({ onChoose, onExit }: { onChoose: (t: Taker) => void; onExit: () => void }) {
+  return (
+    <div className="min-h-[100svh] flex flex-col bg-brand-cream">
+      <div className="max-w-3xl w-full mx-auto px-5 pt-6">
+        <button
+          type="button"
+          onClick={onExit}
+          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple/60 hover:text-brand-purple transition -ml-1 px-1 py-1"
+        >
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
+            <path d="M15 18l-6-6 6-6" />
+          </svg>
+          Back
+        </button>
+      </div>
+      <div className="flex-1 flex items-center justify-center px-5 pb-16">
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, ease: EASE }}
+          className="w-full max-w-2xl"
+        >
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-4 text-center">Before we start</p>
+          <h1 className="font-serif font-bold tracking-tight text-3xl sm:text-4xl text-brand-purple text-center leading-tight">
+            Who&apos;s taking this?
+          </h1>
+          <p className="mt-3 text-center text-brand-text/60 leading-relaxed max-w-md mx-auto">
+            Same diagnosis either way. The questions are just written for whoever&apos;s answering.
+          </p>
+          <div className="mt-9 grid sm:grid-cols-2 gap-4">
+            <button
+              type="button"
+              onClick={() => onChoose('student')}
+              className={`${CARD} group p-6 sm:p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.6),0_16px_32px_rgba(46,37,87,.14)]`}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-purple/[0.07] text-xl" aria-hidden="true">
+                🎓
+              </span>
+              <h2 className="mt-4 font-serif font-bold text-2xl text-brand-purple">I&apos;m the student</h2>
+              <p className="mt-2 text-[15px] text-brand-text/65 leading-relaxed">
+                Taking A-levels and want to know where your marks are leaking.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand-gold">
+                Start my diagnostic
+                <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+              </span>
+            </button>
+            <button
+              type="button"
+              onClick={() => onChoose('parent')}
+              className={`${CARD} group p-6 sm:p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.6),0_16px_32px_rgba(46,37,87,.14)]`}
+            >
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/15 text-xl" aria-hidden="true">
+                👨‍👧
+              </span>
+              <h2 className="mt-4 font-serif font-bold text-2xl text-brand-purple">I&apos;m a parent</h2>
+              <p className="mt-2 text-[15px] text-brand-text/65 leading-relaxed">
+                Watching your child work hard for grades that don&apos;t show it.
+              </p>
+              <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand-gold">
+                Start the diagnostic
+                <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+              </span>
+            </button>
+          </div>
+          <p className="mt-6 text-center text-sm text-brand-text/50 leading-relaxed max-w-md mx-auto">
+            Parents: it works best with your teenager next to you, but answering from what you see day to day works too.
+          </p>
+        </motion.div>
+      </div>
+    </div>
   )
 }
 
@@ -247,7 +397,15 @@ function ReportPreviewCluster() {
   )
 }
 
-function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: number }) {
+function Landing({
+  onStart,
+  resumeCount,
+  taker,
+}: {
+  onStart: () => void
+  resumeCount: number
+  taker: Taker | null
+}) {
   const archetypeNames = [
     'The Grinder',
     'The Perfectionist',
@@ -284,8 +442,8 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
                 night? Effort was never the problem. Where it goes is.
               </p>
               <p className="mt-4 text-base md:text-lg text-brand-text/65 leading-relaxed max-w-xl">
-                20 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
-                then hands you your revision profile and a plan for what to fix first.
+                21 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
+                then hands you the revision profile behind it and a plan for what to fix first.
               </p>
             </HeroFade>
             <HeroFade delay={0.55}>
@@ -295,13 +453,17 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
                   onClick={onStart}
                   className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
                 >
-                  {resumeCount > 0 ? `Resume my diagnostic (${resumeCount} of ${QUESTIONS.length} done)` : 'Start my diagnostic'}
+                  {resumeCount > 0
+                    ? `Resume my diagnostic (${resumeCount} of ${QUESTIONS.length} done)`
+                    : taker === 'parent'
+                      ? "Start the parents' diagnostic"
+                      : 'Start my diagnostic'}
                   <span aria-hidden="true" className="ml-2">→</span>
                 </button>
               </div>
               <p className="mt-4 text-sm text-brand-text/55">
-                No right answers. Just honest ones. Parents: you can take it for your child. Answer as they
-                actually revise, not as you hope they do.
+                No right answers. Just honest ones. Students and parents each get their own version: you
+                choose at the start.
               </p>
             </HeroFade>
           </div>
@@ -479,7 +641,7 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
           <div className="max-w-5xl mx-auto">
             <div className="grid sm:grid-cols-3 gap-6">
               {[
-                ['01', 'Answer honestly', '20 questions about how you actually revise. About 4 minutes. No trick questions.'],
+                ['01', 'Answer honestly', '21 questions about how the revision actually happens. About 4 minutes. No trick questions.'],
                 ['02', 'We score the system', 'Your answers score five systems and locate your single biggest leak.'],
                 ['03', 'Get the report', 'Profile, scores, wasted-hours estimate, 7 day plan, and your recommended route.'],
               ].map(([n, t, b]) => (
@@ -554,7 +716,7 @@ function Landing({ onStart, resumeCount }: { onStart: () => void; resumeCount: n
    ═══════════════════════════════════════════════════════════════════════ */
 
 const ANALYSIS_STEPS = [
-  'Reading your 20 answers',
+  `Reading your ${QUESTIONS.length} answers`,
   'Scoring your five systems',
   'Locating the primary leak',
   'Writing your prescription',
@@ -633,12 +795,20 @@ function AnimatedDots() {
    Email gate
    ═══════════════════════════════════════════════════════════════════════ */
 
-function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: string) => void }) {
+function EmailGate({
+  answers,
+  taker,
+  onUnlock,
+}: {
+  answers: Answers
+  taker: Taker
+  onUnlock: (name: string, childName: string) => void
+}) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  const [taker, setTaker] = useState<'student' | 'parent' | null>(null)
   const failCount = useRef(0)
   const phoneWarned = useRef(false)
+  const isParent = taker === 'parent'
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -647,6 +817,8 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     const name = (data.get('firstName') as string).trim()
     const email = (data.get('email') as string).trim()
     const phoneRaw = ((data.get('phone') as string) ?? '').trim()
+    const child = ((data.get('childName') as string) ?? '').trim()
+    const notes = ((data.get('notes') as string) ?? '').trim().slice(0, 250)
 
     if (!name) {
       setError('Pop your first name in so the report knows who it belongs to.')
@@ -667,13 +839,16 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     }
 
     setSubmitting(true)
-    const d = diagnose(answers)
+    const d = diagnose(answers, taker)
 
     const result = await subscribeDiagnostic({
       email,
       name,
       phone: phoneValid ? phoneClean : '',
-      taker: taker ?? '',
+      taker,
+      childName: isParent ? child : '',
+      support: supportLabel(answers.support as string),
+      notes,
       yearGroup: yearLabel(answers.year as string),
       subjects: ((answers.subjects as string[]) ?? []).join(', '),
       /* Empty when unsure so MailerLite merge defaults can fire ({$diag_worry_subject|default('...')}) */
@@ -691,7 +866,7 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     if (result === 'ok') {
       window.fbq?.('track', 'Lead')
       window.gtag?.('event', 'generate_lead')
-      onUnlock(name)
+      onUnlock(name, isParent ? child : '')
       return
     }
     if (result === 'invalid-email') {
@@ -702,7 +877,7 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
     /* Network hiccup: one retry prompt, then never hold the report hostage. */
     failCount.current += 1
     if (failCount.current >= 2) {
-      onUnlock(name)
+      onUnlock(name, isParent ? child : '')
       return
     }
     setSubmitting(false)
@@ -752,49 +927,18 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
         >
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">Diagnostic complete</p>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl sm:text-4xl text-brand-cream leading-tight">
-            Your report is ready.
+            {isParent ? 'Their report is ready.' : 'Your report is ready.'}
           </h2>
           <p className="mt-3 text-brand-cream/70 leading-relaxed">
-            20 answers scored. One place to send it. Your profile, your five scores and your 7 day plan open the
-            moment you do.
+            {isParent
+              ? `${QUESTIONS.length} answers scored. One place to send it. Their profile, their five scores and the plan to fix it open the moment you do.`
+              : `${QUESTIONS.length} answers scored. One place to send it. Your profile, your five scores and your 7 day plan open the moment you do.`}
           </p>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-4">
-            <fieldset>
-              <legend className="block text-sm font-bold text-brand-cream/85 mb-1.5">
-                Who&apos;s filling this in?
-              </legend>
-              <div className="flex gap-2.5">
-                {(
-                  [
-                    ['student', 'The student'],
-                    ['parent', 'A parent'],
-                  ] as const
-                ).map(([value, label]) => (
-                  <button
-                    key={value}
-                    type="button"
-                    onClick={() => setTaker(value)}
-                    aria-pressed={taker === value}
-                    className={`flex-1 rounded-xl border-2 px-4 py-3 text-sm font-bold transition ${
-                      taker === value
-                        ? 'border-brand-gold bg-brand-gold/15 text-brand-gold'
-                        : 'border-white/10 bg-white/[0.06] text-brand-cream/75 hover:border-white/25'
-                    }`}
-                  >
-                    {label}
-                  </button>
-                ))}
-              </div>
-              {taker === 'parent' && (
-                <p className="mt-2 text-xs text-brand-cream/55 leading-relaxed">
-                  The report and emails come to you. The report is written to the student, so read it together.
-                </p>
-              )}
-            </fieldset>
             <div>
               <label htmlFor="diag-name" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
-                {taker === 'parent' ? 'Your first name' : 'First name'}
+                {isParent ? 'Your first name' : 'First name'}
               </label>
               <input
                 id="diag-name"
@@ -803,10 +947,25 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
                 required
                 maxLength={30}
                 autoComplete="given-name"
-                placeholder="e.g. Waleed"
+                placeholder={isParent ? 'e.g. Sarah' : 'e.g. Waleed'}
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
             </div>
+            {isParent && (
+              <div>
+                <label htmlFor="diag-child" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
+                  Your child&apos;s first name <span className="font-normal text-brand-cream/50">(optional)</span>
+                </label>
+                <input
+                  id="diag-child"
+                  name="childName"
+                  type="text"
+                  maxLength={30}
+                  placeholder="So the report can use their name"
+                  className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
+                />
+              </div>
+            )}
             <div>
               <label htmlFor="diag-email" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
                 Email address
@@ -837,8 +996,27 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
               <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
-                Add one if you&apos;d like to talk the report through. Used for that, nothing else.
+                {isParent
+                  ? "Add it if you'd like to talk through where your child's grades are now and where they need to be."
+                  : "Add one if you'd like to talk the report through. Used for that, nothing else."}
               </p>
+            </div>
+            <div>
+              <label htmlFor="diag-notes" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
+                Anything else you think matters? <span className="font-normal text-brand-cream/50">(optional)</span>
+              </label>
+              <textarea
+                id="diag-notes"
+                name="notes"
+                rows={3}
+                maxLength={250}
+                placeholder={
+                  isParent
+                    ? 'Anything my questions missed: exam boards, school situation, what you have already tried.'
+                    : 'Anything my questions missed: exam boards, retakes, school situation, anything.'
+                }
+                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition resize-none"
+              />
             </div>
 
             {error && (
@@ -852,11 +1030,12 @@ function EmailGate({ answers, onUnlock }: { answers: Answers; onUnlock: (name: s
               disabled={submitting}
               className="w-full rounded-full bg-brand-gold text-brand-purple px-8 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-[0_12px_28px_rgba(201,169,110,.35)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
             >
-              {submitting ? 'Unsealing your report…' : 'Show my report'}
+              {submitting ? 'Unsealing the report…' : isParent ? 'Show me the report' : 'Show my report'}
             </button>
             <p className="text-xs text-brand-cream/50 leading-relaxed">
-              Free, and stays free. You will also get Dr Waleed&apos;s revision emails: the fixes from your report,
-              one at a time, then one a week. Unsubscribe any time.
+              {isParent
+                ? "Free, and stays free. You will also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."
+                : "Free, and stays free. You will also get Dr Waleed's revision emails: the fixes from your report, one at a time, then one a week. Unsubscribe any time."}
             </p>
           </form>
         </motion.div>

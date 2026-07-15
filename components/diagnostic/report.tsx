@@ -7,6 +7,7 @@ import {
   DIMS,
   DIM_META,
   Diagnosis,
+  Taker,
   dimNote,
   gradeLabel,
   verdictFor,
@@ -132,10 +133,12 @@ interface ReportProps {
   diagnosis: Diagnosis
   answers: Answers
   firstName: string
+  taker: Taker
+  childName: string
   onRetake: () => void
 }
 
-export default function Report({ diagnosis, answers, firstName, onRetake }: ReportProps) {
+export default function Report({ diagnosis, answers, firstName, taker, childName, onRetake }: ReportProps) {
   const { archetype, scores, overall, bottleneck, hoursLeak, prescription, plan, routing } = diagnosis
   const worry = (answers.worry as string) ?? ''
   const worryShown = worry && worry !== 'unsure' ? worry : ''
@@ -144,13 +147,16 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
   const blocks = Math.round(hoursLeak.weeklyMid)
   const leakBlocks = Math.min(blocks - 1, hoursLeak.lowYieldHours)
   const isOptimiser = archetype.id === 'optimiser'
+  const isParent = taker === 'parent'
+  /* How the parent report refers to the student */
+  const child = childName || 'your child'
 
   const [downloading, setDownloading] = useState(false)
 
   const downloadCard = async () => {
     setDownloading(true)
     try {
-      drawShareCard(firstName, archetype.name, archetype.strapline, overall, scores)
+      drawShareCard(isParent ? childName : firstName, archetype.name, archetype.strapline, overall, scores)
     } finally {
       setTimeout(() => setDownloading(false), 800)
     }
@@ -178,9 +184,12 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
             <div className="mt-10 md:mt-12 grid md:grid-cols-[1.6fr_1fr] gap-10 md:gap-8 items-center">
               <div>
                 <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-cream/60">
-                  Prepared for <span className="text-brand-cream">{firstName}</span> · {today}
+                  Prepared for <span className="text-brand-cream">{firstName}</span>
+                  {isParent && <> · about <span className="text-brand-cream">{child}</span></>} · {today}
                 </p>
-                <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">Your revision profile</p>
+                <p className="mt-6 font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">
+                  {isParent ? (childName ? `${childName}'s revision profile` : "Your child's revision profile") : 'Your revision profile'}
+                </p>
                 <h1 className="mt-3 font-serif font-bold tracking-tight text-5xl sm:text-6xl md:text-7xl leading-[0.98]">
                   <span className="italic text-brand-gold">{archetype.name}</span>
                 </h1>
@@ -196,7 +205,7 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
               <div className="flex md:flex-col items-center justify-center gap-6">
                 <ScoreRing value={overall} />
                 <p className="max-w-[10rem] text-center text-sm text-brand-cream/60 leading-snug">
-                  Your revision system score, across five dimensions
+                  {isParent ? 'Their revision system score, across five dimensions' : 'Your revision system score, across five dimensions'}
                 </p>
               </div>
             </div>
@@ -228,9 +237,9 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
       </section>
 
       {/* ══ 01 · The finding ══ */}
-      <Section number="01" title="The finding" lead="What your answers actually show">
+      <Section number="01" title="The finding" lead={isParent ? 'What your answers actually show' : 'What your answers actually show'}>
         <div className="space-y-4 text-[1.05rem] text-brand-text/80 leading-relaxed">
-          {archetype.diagnosis.map((para, i) => (
+          {(isParent ? archetype.diagnosisParent : archetype.diagnosis).map((para, i) => (
             <p key={i}>{para}</p>
           ))}
         </div>
@@ -247,10 +256,12 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
         <div className="max-w-3xl mx-auto">
           <p className={EYEBROW}>02 · The five systems</p>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-[2rem] leading-tight text-brand-purple">
-            Your revision system, scored
+            {isParent ? 'Their revision system, scored' : 'Your revision system, scored'}
           </h2>
           <p className="mt-3 text-brand-text/65 leading-relaxed max-w-xl">
-            Top grades run on five systems working together. Here is where each of yours stands today.
+            {isParent
+              ? 'Top grades run on five systems working together. Here is where each of theirs stands today.'
+              : 'Top grades run on five systems working together. Here is where each of yours stands today.'}
           </p>
           <div className="mt-8 space-y-5">
             {DIMS.map((d, i) => {
@@ -273,7 +284,9 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
                       <span className="text-sm text-brand-purple/40 font-sans font-semibold"> /100</span>
                     </p>
                   </div>
-                  <p className="mt-1 text-sm text-brand-text/55 italic">{DIM_META[d].question}</p>
+                  <p className="mt-1 text-sm text-brand-text/55 italic">
+                    {isParent ? DIM_META[d].questionParent : DIM_META[d].question}
+                  </p>
                   <div className="mt-3 h-2 rounded-full bg-brand-purple/[0.08] overflow-hidden">
                     <motion.div
                       className={`h-full rounded-full ${TONE_BAR[v.tone]}`}
@@ -283,7 +296,7 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
                       transition={{ duration: 0.9, ease: EASE, delay: i * 0.06 }}
                     />
                   </div>
-                  <p className="mt-3 text-[15px] text-brand-text/75 leading-snug">{dimNote(d, scores[d])}</p>
+                  <p className="mt-3 text-[15px] text-brand-text/75 leading-snug">{dimNote(d, scores[d], taker)}</p>
                 </div>
               )
             })}
@@ -297,7 +310,9 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
         title="Where the hours go"
         lead={
           isOptimiser
-            ? 'Your hours are mostly landing where they should'
+            ? isParent
+              ? 'Their hours are mostly landing where they should'
+              : 'Your hours are mostly landing where they should'
             : 'The expensive part is not the hours. It is where they go.'
         }
       >
@@ -338,16 +353,18 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
           </div>
           <p className="mt-6 text-lg md:text-xl font-serif text-brand-purple leading-snug">
             {isOptimiser ? (
-              <>Of your {hoursLeak.weeklyPhrase} weekly hours, only around{' '}
+              <>Of {isParent ? 'their' : 'your'} {hoursLeak.weeklyPhrase} weekly hours, only around{' '}
               <span className="font-bold">{hoursLeak.lowYieldHours}</span> look low-yield. That is what strong looks like.</>
             ) : (
-              <>About <span className="font-bold text-3xl">{hoursLeak.lowYieldHours}</span> of your {hoursLeak.weeklyPhrase} weekly
-              hours are going into work that <span className="italic text-brand-gold">feels</span> productive but scores very little.</>
+              <>About <span className="font-bold text-3xl">{hoursLeak.lowYieldHours}</span> of {isParent ? 'their' : 'your'}{' '}
+              {hoursLeak.weeklyPhrase} weekly hours are going into work that{' '}
+              <span className="italic text-brand-gold">feels</span> productive but scores very little.</>
             )}
           </p>
           <p className="mt-3 text-sm text-brand-text/55 leading-relaxed">
-            Based on what you told us about your default methods. The point is not to study more hours. It is to make the
-            same hours score.
+            {isParent
+              ? 'Based on what you told us about their default methods. The point is not more hours. It is making the same hours score.'
+              : 'Based on what you told us about your default methods. The point is not to study more hours. It is to make the same hours score.'}
           </p>
         </div>
       </Section>
@@ -360,6 +377,12 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
             {prescription.headline}
           </h2>
           <p className="mt-3 text-brand-text/70 leading-relaxed max-w-xl">{prescription.why}</p>
+          {isParent && (
+            <p className="mt-4 rounded-xl border border-brand-gold/30 bg-brand-gold/[0.08] px-4 py-3 text-sm text-brand-text/75 leading-relaxed max-w-xl">
+              These steps are written as instructions to {child}, on purpose: they are the handover. Show them
+              this page, or better, sit in on the first one.
+            </p>
+          )}
           <div className="mt-8 space-y-4">
             {prescription.steps.map((step, i) => (
               <motion.div
@@ -398,9 +421,11 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
       </section>
 
       {/* ══ 05 · Next 7 days ══ */}
-      <Section number="05" title="The plan" lead="Your next 7 days">
+      <Section number="05" title="The plan" lead={isParent ? `${childName ? `${childName}'s` : 'Their'} next 7 days` : 'Your next 7 days'}>
         <p className="text-brand-text/65 leading-relaxed max-w-xl -mt-2 mb-8">
-          Small, specific, and in order. Do these and next week starts from a different place.
+          {isParent
+            ? 'Small, specific, and in order. Put it somewhere visible and let the ticking-off do the nagging for you.'
+            : 'Small, specific, and in order. Do these and next week starts from a different place.'}
         </p>
         <ol className="relative space-y-0 border-l-2 border-brand-gold/30 ml-3">
           {plan.map((item, i) => (
@@ -436,7 +461,7 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
         <div className="relative max-w-3xl mx-auto">
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">06 · {routing.primary.eyebrow}</p>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl md:text-4xl leading-tight text-brand-cream">
-            {firstName}, this is your fastest route
+            {isParent ? `${firstName}, this is ${childName ? `${childName}'s` : 'their'} fastest route` : `${firstName}, this is your fastest route`}
           </h2>
 
           <motion.div
@@ -448,7 +473,7 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
           >
             <div className="flex flex-wrap items-center gap-3">
               <span className="rounded-full bg-brand-gold text-brand-purple text-xs font-bold px-3 py-1.5">
-                Matched to your diagnosis
+                {isParent ? 'Matched to their diagnosis' : 'Matched to your diagnosis'}
               </span>
               <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/50">{routing.primary.meta}</span>
             </div>
@@ -519,7 +544,9 @@ export default function Report({ diagnosis, answers, firstName, onRetake }: Repo
             </div>
           </div>
           <p className="mt-6 text-center text-sm text-brand-text/55">
-            Share it with whoever pays for things in your house.
+            {isParent
+              ? "Read it with them. It starts a better conversation than asking whether they've revised."
+              : 'Share it with whoever pays for things in your house.'}
           </p>
         </div>
       </section>
