@@ -492,7 +492,7 @@ Close: "It's free, it takes about four minutes, and the link is in the comments.
 
 ## 7. What comes next (so nothing is hardcoded)
 
-The next pack (built Friday 24 July, covering Mon 27 July to Sun 2 Aug) inherits two arcs the snapshot already shows: the Summer Accelerator launch run-in to Saturday 8 August (honest launch posts, the audit's list-and-workshop sprint is the email side of it), and the start of the results-day arc (the calm parent guide should publish in early August; results day is Thursday 13 August). The diagnostic stays the standing free CTA underneath both.
+The next pack (built Friday 24 July, covering Mon 27 July to Sun 2 Aug) inherits two arcs the snapshot already shows: the Summer Accelerator launch run-in to Saturday 8 August (honest launch posts on social; the email list and the paid diagnostic ads carry the rest, since Waleed has ruled out further live workshops), and the start of the results-day arc (the calm parent guide should publish in early August; results day is Thursday 13 August). The diagnostic stays the standing free CTA underneath both.
 
 ## 8. After the run: log these
 
