@@ -49,6 +49,10 @@ Waleed's business command centre lives in `dashboard/` in this repo. Run it with
 
 A full business audit and ranked growth plan lives at `content/business-audit/2026-07-13-business-audit-and-growth-plan.md`: live funnel numbers from MailerLite, competitor pricing snapshot, domain-rating comparison, dead-weight list, five ranked growth plays, and a section 9 list of numbers and decisions awaited from Waleed. Sessions doing marketing, launch or pricing work should read it first. It contains no invented figures; keep it that way when updating it.
 
+## Facebook groups channel (15 July 2026)
+
+The Facebook groups distribution research lives at `content/facebook-groups/2026-07-15-facebook-groups-and-parent-competitors.md`: a ranked, inside-the-login-vetted list of groups worth joining (with rules, activity and what performs in each), plus a verified competitor breakdown of who converts UK parents on Facebook and how (MyEdSpace ads machine, Think Academy and 11 Plus Journey group funnels, franchise assessment funnels). Sessions doing Facebook, parent-channel or group content work should read it first. Waleed joins groups himself; sessions never join, post or comment in groups on his behalf without his explicit instruction. The honesty rule applies: single-source figures in that file say so.
+
 ## Content rules (MANDATORY, no exceptions)
 
 All written content (blog, social, PDFs, page copy) follows `.claude/skills/content-studio/` — use that skill for any content request. The non-negotiables:
