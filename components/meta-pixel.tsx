@@ -2,12 +2,13 @@
 
 import Script from 'next/script'
 
-/* Meta (Facebook) Pixel. Dormant until NEXT_PUBLIC_META_PIXEL_ID is set in the
-   deployment environment: with no ID, nothing loads and no cookie is set, so the
-   pixel only starts tracking once the ID is added in Vercel and the site is
-   redeployed. The fbq('track', ...) calls already in the parents form and the
-   diagnostic then start recording lead conversions automatically. */
-const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID
+/* Meta (Facebook) Pixel. Live pixel 1585888179629830 ("A-Level Accelerators"),
+   hardcoded as the default; a pixel ID is public (it ships in every page's HTML),
+   so it is not a secret. NEXT_PUBLIC_META_PIXEL_ID overrides it. This is the same
+   base-pixel loader Meta hands out; the site loads it once here, so nothing needs
+   pasting into the site by hand. The fbq('track', 'Lead') calls in the diagnostic,
+   parents, newsletter and tracker forms then record conversions. */
+const PIXEL_ID = process.env.NEXT_PUBLIC_META_PIXEL_ID ?? '1585888179629830'
 
 export default function MetaPixel() {
   if (!PIXEL_ID) return null

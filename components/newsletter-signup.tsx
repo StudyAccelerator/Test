@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import { subscribeNewsletter } from '@/lib/mailerlite'
+import { trackLead } from '@/lib/analytics'
 
 type FormState = 'idle' | 'sending' | 'done' | 'error'
 
@@ -24,6 +25,7 @@ export default function NewsletterSignup() {
     setState('sending')
     const result = await subscribeNewsletter(trimmedEmail, trimmedName)
     if (result === 'ok') {
+      trackLead()
       setState('done')
     } else if (result === 'invalid-email') {
       setState('error')

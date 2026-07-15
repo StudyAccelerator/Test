@@ -68,7 +68,7 @@ export default function Page() {
       </QuickAnswer>
 
       <Lead>
-        Let me ask you the question I ask in every workshop. Are you someone who reads through your notes,
+        Let me ask you a question I ask my students. Are you someone who reads through your notes,
         feels like you know the topic, then opens an exam paper and can&apos;t produce it? That gap has a simple
         cause. Most revision trains recognition, and exams test retrieval. They&apos;re different skills, and once
         you start training the right one, the same hours produce completely different results. Here&apos;s how to
