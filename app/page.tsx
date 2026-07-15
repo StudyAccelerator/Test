@@ -448,7 +448,7 @@ export default function Home() {
                     Book a Free Call
                   </a>
                 </div>
-                <p className="mt-3 text-sm text-brand-text/55 text-center max-w-lg">Fifteen minutes, no obligation. An honest look at where you are.</p>
+                <p className="mt-3 text-sm text-brand-text/55 text-center max-w-lg">Half an hour, no obligation. An honest look at where you are.</p>
               </div>
               <div>
                 <div className={`${CARD} p-6 md:p-8`}>
@@ -621,7 +621,7 @@ export default function Home() {
               Start revising right.
             </h2>
             <p className="mt-6 text-lg text-brand-cream/80 leading-relaxed max-w-xl mx-auto">
-              Fifteen minutes with Dr Waleed. An honest diagnosis of where the marks are leaking, and a clear recommendation, even if it is not us.
+              Half an hour with Dr Waleed. An honest diagnosis of where the marks are leaking, and a clear recommendation, even if it is not us.
             </p>
             <div className="mt-8 flex flex-col sm:flex-row justify-center gap-4">
               <a
