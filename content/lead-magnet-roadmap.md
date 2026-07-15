@@ -23,13 +23,11 @@ The rule for everything below: a new tool earns its place only if it either (a) 
 - **Effort:** medium. One to two sessions. No new engine needed, it is a decision tree plus the report shell we already have. The report visual style is already built.
 - **Also:** have the content-studio posts pre-written (the seasonal calendar already says this).
 
-### 2. Parent Diagnostic (ship late August, before school starts)
+### 2. Parent Diagnostic — SHIPPED EARLY, 15 July 2026, as the fork inside the Revision Diagnostic
 
-- **What:** The Revision Diagnostic's twin for the buyer. "Is your child revising effectively? 12 questions, 3 minutes." Parent answers about what they observe: hours, behaviours, mood, results pattern. Report is parent-framed: what is actually happening, what it costs, what to say and what not to say at the kitchen table, and which programme fixes it. Same engine, reworded questions and report, parent voice throughout (calm, doctor-led, reassuring).
-- **Why:** Parents sign off the purchase and live on Facebook, and right now the only parent asset is the static guide on `/parents`. A diagnostic gives them something the guide cannot: their own child's specific picture. This is the highest-conversion tool on this list because it produces qualified, motivated buyers, not just users.
-- **Routes to:** book a free call as the primary CTA (parents convert on calls), programme pages secondary.
-- **Data captured:** child's year group and subjects, observed bottleneck, parent concern level, plus the same route field. Lands in its own MailerLite group so parent emails never mix with student emails.
-- **Effort:** medium. The scoring engine, wizard, gate and report components are all reusable; the work is the copy and a handful of parent-specific questions.
+- **What shipped:** rather than a separate tool, the Revision Diagnostic itself now forks at the start: "I'm the student" / "I'm a parent". The parent path asks every question about the child in observational wording (same engine, same scoring), adds a tutoring/support question and a free-text box for both paths, and renders the whole report in the parent's voice with the child's name. `?for=parents` preselects the path for Facebook ads.
+- **Why the change:** one URL to advertise, one engine to maintain, and parents get the full 21-question diagnosis rather than a 12-question lite version.
+- **Follow-up:** parents land in their own MailerLite groups feeding a dedicated 13-email buyer sequence (`content/email-sequences/revision-diagnostic-parents/`), built as four automations, awaiting Waleed's review and switch-on.
 
 ### 3. Topic Audit (ship September to early October, Biology and Chemistry first)
 

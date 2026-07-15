@@ -20,6 +20,16 @@ const ROUTE_GROUPS = {
   system: '192802211655321354',
 } as const
 
+/* Parent path, created 15 July 2026: parents who complete the parent
+   diagnostic join these INSTEAD of the student groups, so they receive the
+   parent-voiced automations and never the student sequence. */
+const PARENT_GROUP_ID = '193102828818925394'
+const PARENT_ROUTE_GROUPS = {
+  summer: '193102829177537641',
+  subject: '193102829598016991',
+  system: '193102829963970408',
+} as const
+
 /* Mirrors the sequence build guide: route values arrive as "Summer Accelerator",
    "Chemistry Subject Accelerator" (or plain "Subject Accelerator"), or
    "Top 1% Study System", so match Summer first, then contains-Subject, else system. */
@@ -29,13 +39,24 @@ export function routeGroupId(route: string): string {
   return ROUTE_GROUPS.system
 }
 
+export function parentRouteGroupId(route: string): string {
+  if (route.includes('Summer Accelerator')) return PARENT_ROUTE_GROUPS.summer
+  if (route.includes('Subject Accelerator')) return PARENT_ROUTE_GROUPS.subject
+  return PARENT_ROUTE_GROUPS.system
+}
+
 export interface DiagnosticSubscriber {
   email: string
   name: string
   /* Optional at the gate: cleaned digits, or '' when not given */
   phone: string
-  /* 'student' | 'parent' | '' when not answered */
+  /* 'student' | 'parent': decided at the fork, drives which groups (and so
+     which automations) the subscriber lands in */
   taker: string
+  /* Optional extras: '' when not given, and then never sent */
+  childName: string
+  support: string
+  notes: string
   yearGroup: string
   subjects: string
   worrySubject: string
@@ -53,11 +74,22 @@ export type SubscribeResult = 'ok' | 'invalid-email' | 'network-error'
 
 export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<SubscribeResult> {
   try {
-    /* phone and diag_taker are only sent when given, so a retake with the
-       fields left blank never wipes values already stored on the subscriber */
+    /* Optional fields are only sent when given, so a retake with them left
+       blank never wipes values already stored on the subscriber */
     const optional: Record<string, string> = {}
     if (sub.phone) optional.phone = sub.phone
     if (sub.taker) optional.diag_taker = sub.taker
+    if (sub.childName) optional.diag_child_name = sub.childName
+    if (sub.support) optional.diag_support = sub.support
+    if (sub.notes) optional.diag_notes = sub.notes
+
+    /* Parents join the parent master group and a parent route group, never
+       the student groups: the follow-up automations hang off group joins,
+       and a parent must never receive the student-voiced sequence. */
+    const groups =
+      sub.taker === 'parent'
+        ? [PARENT_GROUP_ID, parentRouteGroupId(sub.route)]
+        : [DIAG_GROUP_ID, routeGroupId(sub.route)]
 
     const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
       method: 'POST',
@@ -83,7 +115,7 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
           diag_route: sub.route,
           diag_date: new Date().toISOString().slice(0, 10),
         },
-        groups: [DIAG_GROUP_ID, routeGroupId(sub.route)],
+        groups,
       }),
     })
     if (res.ok) return 'ok'
