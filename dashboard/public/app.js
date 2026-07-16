@@ -1350,9 +1350,12 @@ function renderAll() {
   renderTriage()
 }
 
+let lastLoadAt = 0
+
 async function boot(fresh = false) {
   await loadAll(fresh)
   renderAll()
+  lastLoadAt = Date.now()
 }
 
 $('#refresh-btn').addEventListener('click', () => boot(true))
@@ -1365,5 +1368,45 @@ window.addEventListener('resize', () => {
 
 /* live data refreshes itself every five minutes while the tab is open */
 setInterval(() => boot(false), 5 * 60_000)
+
+/* ------------------------------------------------------------ phone app */
+
+/* installable app shell; the service worker never caches API data */
+if ('serviceWorker' in navigator) navigator.serviceWorker.register('sw.js').catch(() => {})
+
+/* bottom chips track the swipeable pages and jump between them */
+const mnav = $('#mnav')
+if (mnav) {
+  const links = [...mnav.querySelectorAll('a')]
+  const pager = document.querySelector('main')
+  links.forEach((a) =>
+    a.addEventListener('click', (e) => {
+      e.preventDefault()
+      const target = document.querySelector(a.getAttribute('href'))
+      if (!target) return
+      /* instant jump: a smooth scroll loses a fight with mandatory snap
+         points and ends up back where it started */
+      const left = target.getBoundingClientRect().left - pager.getBoundingClientRect().left + pager.scrollLeft
+      pager.scrollTo({ left })
+    })
+  )
+  const io = new IntersectionObserver(
+    (entries) => {
+      for (const en of entries) {
+        if (en.isIntersecting) {
+          links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === `#${en.target.id}`))
+        }
+      }
+    },
+    { root: document.querySelector('main'), threshold: 0.6 }
+  )
+  document.querySelectorAll('main .section').forEach((s) => io.observe(s))
+  $('#mnav-refresh').addEventListener('click', () => boot(true))
+}
+
+/* coming back to the app on the phone refreshes stale data */
+document.addEventListener('visibilitychange', () => {
+  if (!document.hidden && Date.now() - lastLoadAt > 3 * 60_000) boot()
+})
 
 boot()
