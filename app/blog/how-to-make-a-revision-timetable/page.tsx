@@ -162,7 +162,7 @@ export default function Page() {
         Solid, give it your real free hours around school, and it builds the week automatically: Blurt and Fix
         blocks on your weakest topics, next-day Active Recall, Spaced Reviews days later, subjects mixed, daily
         hours capped. Anything that doesn&apos;t fit gets parked for next week instead of crammed in. It takes
-        about three minutes. <A href="/revision-tracker">Build your free timetable here</A>.
+        about three minutes. <A href="/revision-tracker/">Build your free timetable here</A>.
       </Callout>
 
       <H2 id="example">What a working week actually looks like</H2>
@@ -170,8 +170,8 @@ export default function Page() {
         Take a Year 13 student with Biology, Chemistry and Maths, revising around school in the spring term. A
         realistic week looks like this. One deep-work block on a weak topic most weekdays, 45 to 60 minutes. A
         next-day recall slot for whatever yesterday&apos;s deep work covered, 20 to 30 minutes. Light reviews
-        stacked onto two evenings. One longer weekend session built around past paper questions. Total: 8 to
-        10 hours, every subject touched several times, no heroics. And two evenings completely free, so the
+        stacked onto two evenings. One longer weekend session built around past paper questions. Total: 7 to 9
+        hours, every subject touched several times, no heroics. And two evenings completely free, so the
         plan bends instead of breaking.
       </P>
 

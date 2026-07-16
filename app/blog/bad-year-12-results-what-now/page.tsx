@@ -35,7 +35,7 @@ export const metadata: Metadata = {
 const faqs: FAQ[] = [
   {
     q: 'Do Year 12 results affect my final A-level grade?',
-    a: "No. Your final A-level grade comes entirely from the exams you sit at the end of Year 13. Year 12 mocks and end-of-year exams never appear on your certificate. What they do affect is your predicted grades, which shape your university options, and that's why they're worth taking seriously without panicking about them.",
+    a: "No. Your final A-level grade comes from the exams you sit at the end of Year 13, plus coursework in the minority of subjects that include it. Year 12 mocks and end-of-year exams never appear on your certificate. What they do affect is your predicted grades, which shape your university options, and that's why they're worth taking seriously without panicking about them.",
   },
   {
     q: 'Do universities see my Year 12 results?',
@@ -47,7 +47,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Can I still get an A* after a bad Year 12?',
-    a: "Yes, and students do it every year. A-levels are assessed entirely at the end of Year 13, so the grade belongs to whoever turns up to those exams. The honest condition: something has to change. The same method that produced a D in Year 12 produces a D in Year 13, just with more stress attached. Different method, different outcome.",
+    a: "Yes, and students do it every year. A-levels are assessed at the end of Year 13, so the grade belongs to whoever turns up to those exams. The honest condition: something has to change. The same method that produced a D in Year 12 produces a D in Year 13, just with more stress attached. Different method, different outcome.",
   },
   {
     q: 'Are Year 12 mocks harder than the real A-level exams?',
@@ -156,7 +156,7 @@ export default function Page() {
       <Callout title="If you sat real AS exams">
         Most Year 12 exams in England are internal, but if you sat actual AS-levels, those grades are
         standalone qualifications and they stay on your record. They still don&apos;t decide your final
-        A-level grade: A-levels are assessed entirely at the end of Year 13. The repair plan is identical.
+        A-level grade: A-levels are assessed at the end of Year 13. The repair plan is identical.
       </Callout>
 
       <H2 id="september">September: changing your teacher&apos;s mind</H2>

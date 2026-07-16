@@ -69,7 +69,7 @@ export default function Page() {
       </QuickAnswer>
 
       <Lead>
-        I&apos;m going to be more honest about tutoring than most people who sell it. With every student I teach, I ask
+        I&apos;m going to be more honest about tutoring than most people who sell it. With every group I teach, I ask
         students to put a yes in the chat if they&apos;ve ever had a private tutor. Most of them say yes. Then I ask
         how many of them got the grade jump they were hoping for. The chat goes rather quiet. Having worked
         with over 1,000 A-level students, I can tell you why that happens, and it&apos;s not because tutors are bad

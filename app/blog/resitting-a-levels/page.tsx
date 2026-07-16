@@ -41,7 +41,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Are A-level resits harder than the first attempt?',
-    a: "The papers are the same standard, set and graded the same way. What changes is your position: you've already covered the whole course, you know exactly where you lost marks, and you've a full year to fix it. Resit students who treat the year seriously routinely jump two grades or more. The risk isn't harder papers. It's drifting through the year without structure.",
+    a: "The papers are the same standard, set and graded the same way. What changes is your position: you've already covered the whole course, you know exactly where you lost marks, and you've got a full year to fix it. Resit students who treat the year seriously can jump two grades or more. The risk isn't harder papers. It's drifting through the year without structure.",
   },
   {
     q: 'How much do A-level resits cost?',
@@ -71,7 +71,7 @@ export default function Page() {
       <Lead>
         Results day maths is brutal. One grade can be the difference between the course you planned and a
         completely different path. So let me say the thing that students in that position most need to hear: a
-        resit year isn't a failure year. Some of the most impressive students I&apos;ve worked with are the ones
+        resit year isn&apos;t a failure year. Some of the most impressive students I&apos;ve worked with are the ones
         who took a second run at it, because this time they knew exactly what they were doing and why. Here&apos;s
         how resitting actually works, what it costs, and how to make the year count.
       </Lead>
@@ -136,7 +136,7 @@ export default function Page() {
       </OL>
 
       <P>
-        Still weighing a resit against clearing, an appeal or your insurance choice? Work through{' '}
+        Still weighing a resit against Clearing, an appeal or your insurance choice? Work through{' '}
         <A href="/blog/didnt-get-the-grades-a-level-results/">the results day triage guide</A>{' '}first: it
         puts all four options in the right order for the morning itself.
       </P>

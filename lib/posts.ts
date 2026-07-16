@@ -51,7 +51,7 @@ export const posts: Post[] = [
     slug: 'a-level-results-day-parents-guide',
     title: "A-Level Results Day 2026: A Parent's Guide From a Doctor",
     description:
-      'What to do before 8am on 13 August 2026, what to say if the grades disappoint, why your child makes the calls, and how clearing really works. Independent advice from a doctor, not a university with places to fill.',
+      'What to do before 8am on 13 August 2026, what to say if the grades disappoint, why your child makes the calls, and how Clearing really works. Independent advice from a doctor, not a university with places to fill.',
     datePublished: '2026-07-14',
     dateModified: '2026-07-14',
     readingMinutes: 10,
@@ -68,7 +68,7 @@ export const posts: Post[] = [
     slug: 'didnt-get-the-grades-a-level-results',
     title: "Didn't Get the Grades? The A-Level Results Day Triage (2026)",
     description:
-      'A doctor\'s step-by-step triage for A-level results day 2026: read UCAS Hub first, who to call and in what order, how clearing and appeals really work, and the decisions that should wait 48 hours.',
+      'A doctor\'s step-by-step triage for A-level results day 2026: read UCAS Hub first, who to call and in what order, how Clearing and appeals really work, and the decisions that should wait 48 hours.',
     datePublished: '2026-07-12',
     dateModified: '2026-07-12',
     readingMinutes: 10,
@@ -85,7 +85,7 @@ export const posts: Post[] = [
     slug: 'missed-university-offer-by-one-grade',
     title: "Missed Your University Offer by One Grade? Here's Exactly What Happens",
     description:
-      'A one-grade miss is a decision, not a rejection: how universities judge near-misses, what UCAS Hub shows, the word-for-word script for the admissions call, and how to play clearing if both say no.',
+      'A one-grade miss is a decision, not a rejection: how universities judge near-misses, what UCAS Hub shows, the word-for-word script for the admissions call, and how to play Clearing if both say no.',
     datePublished: '2026-07-10',
     dateModified: '2026-07-10',
     readingMinutes: 9,

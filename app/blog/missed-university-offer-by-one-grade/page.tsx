@@ -85,8 +85,8 @@ export default function Page() {
       <P>
         By the time you wake up on results day, your university has already seen your grades and made a
         first decision: they received results before you did. Three things drive whether a one-grade miss
-        gets confirmed. <Strong>Space:</Strong>{' '}if the course has capacity, borderline offers get generous.
-        <Strong> Which grade slipped:</Strong>{' '}dropping the B in your third subject reads differently from
+        gets confirmed. <Strong>Space:</Strong>{' '}if the course has capacity, borderline cases get treated generously.
+        <Strong> Which grade slipped:</Strong>{' '}dropping to a B in your third subject reads differently from
         dropping the A in the subject you&apos;re applying to study. <Strong>Your file:</Strong>{' '}they liked
         you enough to make an offer; a strong application still argues for you now. None of this is luck.
         It&apos;s a decision made by people, which means a polite, prepared phone call can still influence it.

@@ -40,7 +40,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'How many hours a week should a Year 12 student study outside lessons?',
-    a: 'During term time, aim for 1 to 1.5 hours per subject per week of genuine consolidation on top of homework. So roughly 4 to 6 hours a week for three subjects. It sounds modest, but done weekly with active recall it stops the content debt building up, which is what forces panicked 8-hour days later.',
+    a: 'During term time, aim for around 1.5 hours per subject per week of genuine consolidation on top of homework. So roughly 4 to 6 hours a week across three or four subjects. It sounds modest, but done weekly with active recall it stops the content debt building up, which is what forces panicked 8-hour days later.',
   },
   {
     q: 'Is it better to revise in the morning or at night?',
@@ -101,7 +101,7 @@ export default function Page() {
       <H2 id="by-stage">The numbers, by year group and season</H2>
       <H3>Year 12, term time: 4 to 6 hours a week</H3>
       <P>
-        On top of homework, aim for 1 to 1.5 hours per subject per week of genuine consolidation. Turn the
+        On top of homework, aim for around 1.5 hours per subject per week of genuine consolidation. Turn the
         week&apos;s lessons into flashcards, blurt the new topics, do a handful of exam questions. It sounds
         undramatic. It&apos;s also exactly what separates students who arrive at Year 12 exams calm from students
         who discover in May that they&apos;ve got a year of debt to repay. And remember, Year 12 exams largely set
@@ -109,7 +109,7 @@ export default function Page() {
       </P>
       <H3>The Year 12 summer: 1.5 to 2 hours a day</H3>
       <P>
-        Two weeks of full rest, then roughly 60 to 80 hours across the holiday, split between repairing weak
+        Two weeks of full rest, then roughly 30 to 50 focused hours across the holiday, split between repairing weak
         Year 12 topics and previewing early Year 13 content. Hour for hour, this is the most valuable revision period of
         the entire two years. I&apos;ve written a <A href="/blog/year-12-summer-revision/">complete guide to the
         Year 12 summer</A>.
@@ -144,7 +144,7 @@ export default function Page() {
         </LI>
         <LI>
           Space your subjects. Revisit each topic on a rising interval (next day, then day 3 or 4, then a week
-          later) rather than binging one subject for a week. Mixing feels harder. It remembers better.
+          later) rather than binging one subject for a week. Mixing feels harder. It sticks better.
         </LI>
         <LI>
           Protect your sleep like a grade depends on it, because it does. Overnight is when the day&apos;s recall

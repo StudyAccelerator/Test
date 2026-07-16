@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 const faqs: FAQ[] = [
   {
     q: 'How much should I study over the Year 12 summer holidays?',
-    a: 'Around 1.5 to 2 focused hours a day, five days a week, is the sweet spot. Enough to consolidate Year 12 and preview key Year 13 topics without burning out before the most important year of school. That works out to roughly 60 to 80 hours across the holiday, which makes a huge difference if you spend it on the right material.',
+    a: 'Around 1.5 to 2 focused hours a day, five days a week, is the sweet spot. Enough to consolidate Year 12 and preview key Year 13 topics without burning out before the most important year of school. That works out to roughly 30 to 50 focused hours across the holiday, which makes a huge difference if you spend it on the right material.',
   },
   {
     q: 'Should I start Year 13 content over the summer or just revise Year 12?',
@@ -78,7 +78,7 @@ export default function Page() {
         points={[
           "Predicted grades, the numbers that decide which universities you can apply to, are typically set in September or October. They're based mostly on how you finished Year 12.",
           "So the Year 12 summer is the last input into those numbers. It's not a neutral gap between school years.",
-          'You need roughly 60 to 80 focused hours across the holiday. About 1.5 to 2 hours a day, five days a week, after two full weeks off.',
+          'You need roughly 30 to 50 focused hours across the holiday. About 1.5 to 2 hours a day, five days a week, after two full weeks off.',
           'Split the time: around 40% repairing weak Year 12 topics, 60% previewing first-term Year 13 content.',
           'Forgetting is the enemy. Six weeks of zero contact with your subjects and a big chunk of Year 12 quietly disappears. Year 13 builds directly on it.',
         ]}
@@ -98,7 +98,7 @@ export default function Page() {
           predicted grades</A>.
         </LI>
         <LI>
-          A-level content is cumulative. Year 13 maths assumes Year 12 maths. A2 organic chemistry assumes AS
+          A-level content is cumulative. Year 13 maths assumes Year 12 maths. Year 13 organic chemistry assumes Year 12
           organic chemistry. Any gap you carry into September doesn&apos;t stay the same size. It grows, because
           every new topic built on it wobbles too.
         </LI>
@@ -128,7 +128,7 @@ export default function Page() {
         starts, put it in your phone, and honour it the way you&apos;d honour an exam date.
       </P>
 
-      <H2 id="the-plan">Step 2: The 60 to 80 hour summer plan</H2>
+      <H2 id="the-plan">Step 2: The 30 to 50 hour summer plan</H2>
       <P>
         Here&apos;s the structure I recommend to our students. About 1.5 to 2 hours a day, five days a week, for
         the remaining four to five weeks. Mornings work best. Get it done early and the rest of the day is

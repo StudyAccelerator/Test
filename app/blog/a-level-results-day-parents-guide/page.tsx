@@ -149,9 +149,10 @@ export default function Page() {
 
       <H2 id="clearing-for-parents">Clearing in 2026, translated for parents</H2>
       <P>
-        Clearing is how UCAS matches unplaced students to courses with space, from results morning until
-        19 October 2026, and it placed just under 70,000 students in 2025. Strong courses appear in it
-        every year. Your child will see official vacancy listings plus a personalised &quot;matches&quot; list,
+        Clearing is how UCAS matches unplaced students to courses with space. It has been open since
+        early July, but for results-day students the real window runs from results morning until 19
+        October 2026, and it placed just under 70,000 students in 2025. Strong courses appear in it
+        every year. Your child sees official vacancy listings plus a personalised &quot;matches&quot; list,
         phones a shortlist, collects verbal offers, and adds one choice in UCAS from 1pm.
       </P>
       <P>

@@ -44,7 +44,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'Should I learn Year 13 content over the summer?',
-    a: "Preview it, don't master it. Skim the first topics of each subject so the vocabulary is familiar, and spend the bigger share of your time fixing weak Year 12 topics. Year 13 content builds directly on Year 12, so a shaky foundation costs you twice.",
+    a: "Preview it, don't master it. Skim the first topics of each subject so the vocabulary is familiar. The summer guide splits working time roughly 40/60 between repairing weak Year 12 topics and previewing new content, and if Year 12 went badly, tilt it further toward repair: Year 13 content builds directly on Year 12, so a shaky foundation costs you twice.",
   },
   {
     q: 'Do Year 12 results affect my predicted grades?',
@@ -140,7 +140,7 @@ export default function Page() {
         </LI>
         <LI>
           <Strong>Draft your UCAS basics.</Strong>{' '}A shortlist of five courses and a rough personal
-          statement draft. Rough is fine. Existing is the point, because September you will be busy proving
+          statement draft. Rough is fine. Existing is the point, because in September you will be busy proving
           things to your teachers.
         </LI>
         <LI>
@@ -153,7 +153,7 @@ export default function Page() {
 
       <Callout title="The honest hours target">
         About 1.5 to 2 focused hours a day, five days a week, for the last month of the holiday. That&apos;s
-        roughly 40 to 60 hours of real work, and it&apos;s enough to change how September goes. Eight-hour
+        roughly 30 to 40 hours of real work, and it&apos;s enough to change how September goes. Eight-hour
         summer days aren&apos;t dedication, they&apos;re a burnout deposit you&apos;ll withdraw in November.
       </Callout>
 

@@ -70,7 +70,7 @@ export default function Page() {
       <Lead>
         Every autumn I speak to students who have just found out their predicted grades, and they&apos;re gutted.
         A BBB prediction when they need AAB. A teacher who played it safe. A UCAS application that suddenly
-        can&apos;t carry the universities they actually want. Here&apos;s the good news: a predicted grade isn't a
+        can&apos;t carry the universities they actually want. Here&apos;s the good news: a predicted grade isn&apos;t a
         verdict. It&apos;s a judgement based on evidence, and evidence can change. The bad news? Almost every
         student who tries to change it starts too late.
       </Lead>
@@ -80,7 +80,7 @@ export default function Page() {
           'Your teachers set your predicted grades, usually in September or October of Year 13, based mostly on your end of Year 12 exams.',
           "They can be changed any time before your school submits your UCAS application. After that, they're locked.",
           'Teachers need evidence to raise a prediction. Better mock results, resat assessments, consistent classwork. Not promises.',
-          "Realistically you've the summer holiday plus the first half term of Year 13 to build that evidence.",
+          "Realistically you've got the summer holiday plus the first half term of Year 13 to build that evidence.",
           'Applying for medicine, dentistry or Oxbridge? The deadline is mid-October, so your evidence needs to exist by early October.',
         ]}
       />
@@ -120,7 +120,7 @@ export default function Page() {
           is the summer holiday plus about four weeks of term. That&apos;s it.
         </LI>
         <LI>
-          Everything else: the main UCAS deadline is the end of January, and most students submit somewhere
+          Everything else: the main UCAS deadline is in mid-January, and most students submit somewhere
           between October and December. You&apos;ve got the whole autumn term. If you use it.
         </LI>
       </UL>
