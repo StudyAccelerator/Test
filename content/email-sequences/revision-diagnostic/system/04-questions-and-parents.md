@@ -6,7 +6,9 @@ Subject A: "I've tried flashcards before and it didn't stick"
 Subject B: the honest answers, before you decide anything
 Preheader: Tried it before, essay subjects, no time, is it worth it: answered straight. Plus the section for your parents.
 Goal: clear the real objections, arm the parent conversation with a forwardable block.
-Links: 2 (workshop, call scheduler)
+Links: 1 (call scheduler)
+
+> Reconciled to the live MailerLite email on 16 July 2026: the free first step is a call with Waleed, not a workshop (the workshop is retired). The live email is the authoritative copy; minor wording may differ.
 
 ---
 
@@ -28,7 +30,7 @@ The system isn't on top. It replaces the expensive habits with cheaper ones. You
 
 **"Is £499 actually worth it?"**
 
-Depends what you'd do instead, so here's the comparison done honestly. £499 is roughly ten hours with an average private tutor at £50 an hour. Ten hours of 1:1 improves one subject's content for one stretch of one year, and changes nothing about how you study. The Study Accelerator spends the same money installing the machine that every subject runs on, this year, next year, and frankly at university too. And if £499 is not realistic, the £119 Study Series teaches the complete system without the accountability layer, and the workshop below costs nothing at all. There is a version of this at every budget including zero, and I'll never pretend otherwise.
+Depends what you'd do instead, so here's the comparison done honestly. £499 is roughly ten hours with an average private tutor at £50 an hour. Ten hours of 1:1 improves one subject's content for one stretch of one year, and changes nothing about how you study. The Study Accelerator spends the same money installing the machine that every subject runs on, this year, next year, and frankly at university too. And if £499 is not realistic, the £119 Study Series teaches the complete system without the accountability layer. There is a version of this at every budget including zero, and I'll never pretend otherwise.
 
 ---
 
@@ -40,15 +42,15 @@ Hello, I'm Dr Waleed Ahmad, an NHS foundation doctor and the founder of A-Level 
 
 Your child took my free 20 question diagnostic. Their result points at the method itself rather than any single subject, which is genuinely good news: it's the most fixable finding there is, and fixing it moves every subject at once. The recommendation is our Top 1% Study System, which teaches and then installs the same evidence-based approach I had to learn the hard way in medical school: testing yourself instead of re-reading, returning to material before it fades, and working to the exam's marking criteria.
 
-The honest structure of it: there's a free live workshop, which I'd suggest your child attends first, because it costs nothing and you'll both be able to judge me on it. Beyond that, the Study Series is £119 for the taught system across four live sessions, and the Study Accelerator is £499 with twelve sessions plus weekly accountability while the habits take hold. For comparison, £499 is about ten hours of typical 1:1 tutoring, which would address one subject and leave the underlying method untouched.
+The honest structure of it: the Study Series is £119 for the taught system across four live sessions, and the Study Accelerator is £499 with twelve sessions plus weekly accountability while the habits take hold. For comparison, £499 is about ten hours of typical 1:1 tutoring, which would address one subject and leave the underlying method untouched. If you'd like to size me up first, a free 30 minute call with me costs nothing and you'll both get a straight answer.
 
-I don't publish grade claims, because our first cohort's results arrive in August and I won't invent numbers before then. What I can offer is the free workshop, my time, and a straight answer about whether this fits your child: reply to this email or book a free thirty minute call with me at https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to talk it through.
+I don't publish grade claims, because our first cohort's results arrive in August and I won't invent numbers before then. If you're unsure whether this would genuinely help, what I can offer is my time and a straight answer about whether this fits your child: reply to this email or book a free 30 minute call with me at https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to talk it through.
 
 ---
 
-If any question of yours isn't here, {$name}, hit reply and ask. Otherwise, the free workshop is the next step, and it's the right next step whether or not you ever spend a pound:
+If any question of yours isn't here, {$name}, hit reply and ask. Otherwise, a quick call with me is the easiest next step, and it's the right one whether or not you ever spend a pound:
 
-[BUTTON: Reserve my free workshop spot -> https://alevelaccelerators.com/workshop/]
+[BUTTON: Right Here -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
 
 Keep going!
 

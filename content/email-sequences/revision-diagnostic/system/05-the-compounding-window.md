@@ -2,11 +2,13 @@
 
 Send: Day 11, around 11am UK
 Segment: diag_route contains "Study System"
-Subject A: the tax you're paying weekly, {$name}
+Subject A: the academic tax you're paying weekly, {$name}
 Subject B: fix the machine before September starts the engine
 Preheader: Why the system pays most when it's installed now, your free path either way, and what happens next in this inbox.
-Goal: close the arc with the compounding argument, workshop CTA, generous free path, hand off to weekly email.
-Links: 2 (workshop, call scheduler)
+Goal: close the arc with the compounding argument, the Study Systems and free-call CTAs, a generous free path, hand off to weekly email.
+Links: 2 (study systems page, call scheduler)
+
+> Reconciled to the live MailerLite email on 16 July 2026: the free door is a call with Waleed (plus running the method solo), not a workshop (the workshop is retired). The live email is the authoritative copy; minor wording may differ.
 
 ---
 
@@ -20,17 +22,17 @@ Which is why "I'll sort my method out when things get serious" is the most expen
 
 Install it now and the arithmetic runs the other way. Every topic from here on gets learned once, returned to twice for twenty minutes, and kept. September's content lands on a system instead of a pile. And when the autumn assessments arrive, the ones that set predicted grades and, for the older ones among you, go to UCAS, they meet a student whose method has been compounding since summer.
 
-So, plainly, the three doors:
+So, plainly, the two doors:
 
-**Door one, free, live:** the Top 1% Study Systems Workshop. An hour with me on Zoom, the whole approach laid out honestly, your questions answered. Zero cost, zero obligation, and you'll know within the hour whether the way I teach is for you.
+**Door one, the install:** the Study System itself. £119 for the taught Series, £499 for the Accelerator with weekly accountability while the habits set. Everything I said about it two emails ago stands, including who should keep their money.
 
-[BUTTON: Reserve my free workshop spot -> https://alevelaccelerators.com/workshop/]
+[BUTTON: Click Here for All of the Information -> https://alevelaccelerators.com/study-systems/]
 
-**Door two, the install:** the Study System itself. £119 for the taught Series, £499 for the Accelerator with weekly accountability while the habits set. Everything is at https://alevelaccelerators.com/study-systems/ and everything I said about it two emails ago stands, including who should keep their money.
+**Door two, free, solo:** run what you already have. Try your best to seriously blurt daily, ugly pages, second colour, second pass. Book every topic's day 2 and day 5 returns into a calendar the moment you finish it. Keep the error log, retest on Sundays. Forty-five minute sessions, phone in another room, decide tomorrow's topic tonight. That's the system. You've had it for free across three emails, and a student who runs it solo beats a student who bought it and didn't, every single time.
 
-**Door three, free, solo:** run what you already have. Seriously. Blurt daily, ugly pages, second colour, second pass. Book every topic's day 2 and day 5 returns into a calendar the moment you finish it. Keep the error log, retest on Sundays. Forty-five minute sessions, phone in another room, decide tomorrow's topic tonight. That's the system. You've had it for free across three emails, and a student who runs it solo beats a student who bought it and didn't, every single time.
+If you're stuck between the two, thirty free minutes with me and I'll tell you which one fits, even when the answer is door two:
 
-If you're stuck between doors, fifteen free minutes with me and I'll tell you which one fits, even when the answer is door three: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+[BUTTON: Click Here to Book a Call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
 
 From next week I'm in your inbox once a week: one thing school never taught you, usable that evening. When something from your report starts working, reply and tell me. Those replies are, honestly, the best part of this job.
 
