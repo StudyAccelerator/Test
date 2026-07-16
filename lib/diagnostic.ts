@@ -262,22 +262,6 @@ export const QUESTIONS: Question[] = [
       { id: 'using', label: 'I revise on it, so it is always there', labelParent: 'They revise on it, so it is always there', scores: { consistency: 0.35 } },
     ],
   },
-  {
-    id: 'focus',
-    section: 1,
-    title: 'How long can you genuinely focus before you drift?',
-    titleParent: 'How long can they genuinely focus before drifting?',
-    helpParent: 'From what you see. Honest beats flattering.',
-    type: 'single',
-    layout: 'cards',
-    weights: { consistency: 2 },
-    options: [
-      { id: 'f90', label: '90 minutes or more', scores: { consistency: 1 } },
-      { id: 'f45', label: 'About 45 minutes', scores: { consistency: 0.75 } },
-      { id: 'f20', label: 'Maybe 20 minutes', scores: { consistency: 0.4 } },
-      { id: 'f10', label: 'I drift within 10', labelParent: 'They drift within 10', scores: { consistency: 0.15 } },
-    ],
-  },
 
   /* ── Section 3: How you revise ── */
   {
@@ -1247,7 +1231,7 @@ export const LANDING_FAQS = [
   },
   {
     q: 'How long does it take?',
-    a: 'About 4 minutes. 21 questions, one tap each. Your answers save as you go, so you can leave and pick up where you stopped.',
+    a: 'About 4 minutes. 20 questions, one tap each. Your answers save as you go, so you can leave and pick up where you stopped.',
   },
   {
     q: 'Who is it for?',

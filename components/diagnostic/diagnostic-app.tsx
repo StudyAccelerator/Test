@@ -442,7 +442,7 @@ function Landing({
                 night? Effort was never the problem. Where it goes is.
               </p>
               <p className="mt-4 text-base md:text-lg text-brand-text/65 leading-relaxed max-w-xl">
-                21 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
+                20 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
                 then hands you the revision profile behind it and a plan for what to fix first.
               </p>
             </HeroFade>
@@ -641,7 +641,7 @@ function Landing({
           <div className="max-w-5xl mx-auto">
             <div className="grid sm:grid-cols-3 gap-6">
               {[
-                ['01', 'Answer honestly', '21 questions about how the revision actually happens. About 4 minutes. No trick questions.'],
+                ['01', 'Answer honestly', '20 questions about how the revision actually happens. About 4 minutes. No trick questions.'],
                 ['02', 'We score the system', 'Your answers score five systems and locate your single biggest leak.'],
                 ['03', 'Get the report', 'Profile, scores, wasted-hours estimate, 7 day plan, and your recommended route.'],
               ].map(([n, t, b]) => (
@@ -824,6 +824,10 @@ function EmailGate({
       setError('Pop your first name in so the report knows who it belongs to.')
       return
     }
+    if (isParent && !child) {
+      setError("Add your child's first name so the report and plan can be about them by name.")
+      return
+    }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError('That email does not look right. Check for typos.')
       return
@@ -954,14 +958,15 @@ function EmailGate({
             {isParent && (
               <div>
                 <label htmlFor="diag-child" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
-                  Your child&apos;s first name <span className="font-normal text-brand-cream/50">(optional)</span>
+                  Your child&apos;s first name
                 </label>
                 <input
                   id="diag-child"
                   name="childName"
                   type="text"
+                  required
                   maxLength={30}
-                  placeholder="So the report can use their name"
+                  placeholder="So the report and plan are about them by name"
                   className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
                 />
               </div>

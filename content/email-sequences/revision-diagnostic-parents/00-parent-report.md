@@ -11,7 +11,7 @@ Links: 1 (report page)
 
 {$name},
 
-Thanks for taking the diagnostic for {$diag_child_name|default('your child')}. I know answering twenty one questions about someone else's revision takes honesty, so here is the same honesty back.
+Thanks for taking the diagnostic for {$diag_child_name|default('your child')}. I know answering twenty questions about someone else's revision takes honesty, so here is the same honesty back.
 
 The diagnosis came out as **{$diag_archetype|default('their revision profile')}**, with the biggest leak in **{$diag_bottleneck|default('how they revise')}**. In plain English: the problem is not effort, and it is not ability. It is that some of {$diag_hours_per_week|default('their')} weekly study hours, our estimate was {$diag_low_yield_hours|default('a fair chunk')}, are going into work that feels productive but does not turn into marks.
 
