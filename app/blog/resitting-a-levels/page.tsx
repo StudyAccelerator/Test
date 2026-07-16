@@ -137,7 +137,7 @@ export default function Page() {
 
       <P>
         Still weighing a resit against clearing, an appeal or your insurance choice? Work through{' '}
-        <A href="/blog/didnt-get-the-grades-a-level-results/">the results day triage guide</A> first: it
+        <A href="/blog/didnt-get-the-grades-a-level-results/">the results day triage guide</A>{' '}first: it
         puts all four options in the right order for the morning itself.
       </P>
 
@@ -161,11 +161,11 @@ export default function Page() {
           marks were lost: which topics, and whether the cause was knowledge, application or technique.
         </LI>
         <LI>
-          Build a <A href="/blog/how-to-make-a-revision-timetable/">topic-level revision plan</A> weighted
+          Build a <A href="/blog/how-to-make-a-revision-timetable/">topic-level revision plan</A>{' '}weighted
           toward those weak areas, and run it all year, not just in the spring.
         </LI>
         <LI>
-          Revise with <A href="/blog/blurting-method-a-level-revision/">active recall</A> and spaced
+          Revise with <A href="/blog/blurting-method-a-level-revision/">active recall</A>{' '}and spaced
           repetition rather than re-reading. If re-reading worked, the first attempt would have gone
           differently.
         </LI>

@@ -43,7 +43,7 @@ const faqs: FAQ[] = [
   },
   {
     q: 'How important are Year 12 mocks?',
-    a: "They're the main evidence teachers use when setting predicted grades in the autumn of Year 13, and they're your best diagnostic data: they show exactly which topics and which skills leak marks under real conditions. What they are not is a ceiling. A bad mock predicts nothing about a student who changes method over the summer.",
+    a: "They're the main evidence teachers use when setting predicted grades in September or October of Year 13, and they're your best diagnostic data: they show exactly which topics and which skills leak marks under real conditions. What they are not is a ceiling. A bad mock predicts nothing about a student who changes method over the summer.",
   },
   {
     q: 'Can I still get an A* after a bad Year 12?',
@@ -68,7 +68,7 @@ export default function Page() {
 
       <Lead>
         Let me guess how it went. You worked. Maybe not perfectly, but you worked, and the grades came back
-        C, D, or worse, and now there&apos;s a quiet panic about what this means for university and whether
+        B, C, or worse, and now there&apos;s a quiet panic about what this means for university and whether
         you&apos;re just not an A student. I&apos;m a doctor. When a test result comes back bad, we don&apos;t
         diagnose the patient as &quot;bad at health&quot;. We find the cause. Year 12 results are a test result,
         and I&apos;ve seen enough of them, across more than 1,000 students, to tell you the cause is almost
@@ -117,22 +117,22 @@ export default function Page() {
       </P>
       <UL>
         <LI>
-          <Strong>A knowledge gap.</Strong> Some topics genuinely never went in, usually from a patch of
+          <Strong>A knowledge gap.</Strong>{' '}Some topics genuinely never went in, usually from a patch of
           term where you fell behind and never circled back. The tell: you couldn&apos;t have answered those
           questions even with the textbook open.
         </LI>
         <LI>
-          <Strong>A recall failure.</Strong> You knew it the night before. In the exam it was gone. That&apos;s
+          <Strong>A recall failure.</Strong>{' '}You knew it the night before. In the exam it was gone. That&apos;s
           not a memory problem, it&apos;s a method problem: recognising your notes is not the same as
           retrieving them from a blank page, and exams only pay for retrieval.
         </LI>
         <LI>
-          <Strong>An application gap.</Strong> You could recite the content but the question was dressed in
+          <Strong>An application gap.</Strong>{' '}You could recite the content but the question was dressed in
           an unfamiliar context and the marks slipped away. Common in maths and the sciences, where knowing
           and using are different tiers.
         </LI>
         <LI>
-          <Strong>A technique gap.</Strong> Ran out of time, missed command words, wrote everything you knew
+          <Strong>A technique gap.</Strong>{' '}Ran out of time, missed command words, wrote everything you knew
           instead of what the mark scheme pays for. The knowledge was fine. The performance wasn&apos;t.
         </LI>
       </UL>
@@ -148,9 +148,9 @@ export default function Page() {
       <P>
         Once you know your failure pattern, the summer plan is short and boring, which is why it works.
         Rest properly first. Then around 1.5 to 2 focused hours a day: close your three weakest topics per
-        subject using <A href="/blog/blurting-method-a-level-revision/">blurting</A> and past-paper
+        subject using <A href="/blog/blurting-method-a-level-revision/">blurting</A>{' '}and past-paper
         questions rather than re-reading, and lightly preview the first Year 13 topics. I&apos;ve laid out the
-        full structure in <A href="/blog/how-to-prepare-for-year-13/">how to prepare for Year 13</A> and{' '}
+        full structure in <A href="/blog/how-to-prepare-for-year-13/">how to prepare for Year 13</A>{' '}and{' '}
         <A href="/blog/year-12-summer-revision/">the Year 12 summer guide</A>, so I won&apos;t repeat it here.
       </P>
       <Callout title="If you sat real AS exams">

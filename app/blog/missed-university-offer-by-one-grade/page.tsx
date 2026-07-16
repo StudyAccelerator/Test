@@ -85,19 +85,19 @@ export default function Page() {
       <P>
         By the time you wake up on results day, your university has already seen your grades and made a
         first decision: they received results before you did. Three things drive whether a one-grade miss
-        gets confirmed. <Strong>Space:</Strong> if the course has capacity, borderline offers get generous.
-        <Strong> Which grade slipped:</Strong> dropping the B in your third subject reads differently from
-        dropping the A in the subject you&apos;re applying to study. <Strong>Your file:</Strong> they liked
+        gets confirmed. <Strong>Space:</Strong>{' '}if the course has capacity, borderline offers get generous.
+        <Strong> Which grade slipped:</Strong>{' '}dropping the B in your third subject reads differently from
+        dropping the A in the subject you&apos;re applying to study. <Strong>Your file:</Strong>{' '}they liked
         you enough to make an offer; a strong application still argues for you now. None of this is luck.
         It&apos;s a decision made by people, which means a polite, prepared phone call can still influence it.
       </P>
 
       <H2 id="hub-states">Read the Hub correctly before you dial</H2>
       <UL>
-        <LI><Strong>&quot;Unconditional&quot;:</Strong> you&apos;re in. The grade you dropped no longer matters. Celebrate.</LI>
-        <LI><Strong>A changed course offer:</Strong> your firm is offering you an alternative: different course, foundation year, or different start. You choose whether to accept. Research it before you reply.</LI>
-        <LI><Strong>&quot;Unsuccessful&quot; at your firm:</Strong> the decision passes to your insurance automatically. If you met the insurance conditions, that place is yours.</LI>
-        <LI><Strong>Unsuccessful at both:</Strong> you&apos;re in Clearing, and the phone becomes your main tool. Keep reading.</LI>
+        <LI><Strong>&quot;Unconditional&quot;:</Strong>{' '}you&apos;re in. The grade you dropped no longer matters. Celebrate.</LI>
+        <LI><Strong>A changed course offer:</Strong>{' '}your firm is offering you an alternative: different course, foundation year, or different start. You choose whether to accept. Research it before you reply.</LI>
+        <LI><Strong>&quot;Unsuccessful&quot; at your firm:</Strong>{' '}the decision passes to your insurance automatically. If you met the insurance conditions, that place is yours.</LI>
+        <LI><Strong>Unsuccessful at both:</Strong>{' '}you&apos;re in Clearing, and the phone becomes your main tool. Keep reading.</LI>
       </UL>
 
       <H2 id="the-script">The call to your firm: what to say, word for word</H2>
@@ -106,17 +106,17 @@ export default function Page() {
         personal ID, your grades and your offer conditions in front of you. Then:
       </P>
       <P>
-        <Strong>Opening:</Strong> &quot;Good morning. My name is [name], UCAS ID [number]. I hold a firm offer
+        <Strong>Opening:</Strong>{' '}&quot;Good morning. My name is [name], UCAS ID [number]. I hold a firm offer
         for [course] and I&apos;ve just missed my conditions: I got AAB against AAA, with the B in [subject].
         I wanted to ask whether you&apos;re able to confirm my place.&quot;
       </P>
       <P>
-        <Strong>If they hesitate:</Strong> &quot;This course is genuinely my first choice, and I&apos;d take the
+        <Strong>If they hesitate:</Strong>{' '}&quot;This course is genuinely my first choice, and I&apos;d take the
         place without hesitation if you can make it work. Is there anything that would help my case, or
         anyone else I should speak to?&quot;
       </P>
       <P>
-        <Strong>If it&apos;s a no:</Strong> &quot;I understand. Is there a related course or a foundation route
+        <Strong>If it&apos;s a no:</Strong>{' '}&quot;I understand. Is there a related course or a foundation route
         you&apos;d consider me for instead?&quot; Then thank them properly. Thirty seconds of grace on a hard
         call costs nothing and is remembered more often than you&apos;d think.
       </P>
@@ -156,7 +156,7 @@ export default function Page() {
       <P>
         A one-grade miss feels enormous at 8:05am. By September it&apos;s a footnote: you&apos;ll be at your
         firm, your insurance, a Clearing course you chose deliberately, or planning{' '}
-        <A href="/blog/resitting-a-levels/">a resit year</A> with a better method than the first attempt.
+        <A href="/blog/resitting-a-levels/">a resit year</A>{' '}with a better method than the first attempt.
         Every one of those paths leads somewhere good. If you want the whole morning mapped out step by
         step, start with{' '}
         <A href="/blog/didnt-get-the-grades-a-level-results/">the results day triage guide</A>.

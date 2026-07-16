@@ -96,9 +96,9 @@ export default function Page() {
 
       <H2 id="timeline">How the morning actually runs on 13 August 2026</H2>
       <UL>
-        <LI><Strong>From 8am:</Strong> results are released to students, and the UCAS Hub embargo lifts. The Hub shows your placement decision, not your grades: the grades come from school or your exam board documents.</LI>
-        <LI><Strong>8am onwards:</Strong> exam boards publish grade boundaries publicly, if you want to see how close a mark sits to the line. That matters for the appeal question later.</LI>
-        <LI><Strong>From 1pm:</Strong> if you&apos;re in Clearing, you can add a Clearing choice in UCAS. The morning is for phone calls and decisions; the button comes after lunch.</LI>
+        <LI><Strong>From 8am:</Strong>{' '}results are released to students, and the UCAS Hub embargo lifts. The Hub shows your placement decision, not your grades: the grades come from school or your exam board documents.</LI>
+        <LI><Strong>8am onwards:</Strong>{' '}exam boards publish grade boundaries publicly, if you want to see how close a mark sits to the line. That matters for the appeal question later.</LI>
+        <LI><Strong>From 1pm:</Strong>{' '}if you&apos;re in Clearing, you can add a Clearing choice in UCAS. The morning is for phone calls and decisions; the button comes after lunch.</LI>
       </UL>
 
       <H2 id="step-1">Step 1: read the Hub before you feel anything</H2>
@@ -106,7 +106,7 @@ export default function Page() {
         The single most common results-day mistake is reacting to the grades before reading the decision.
         Universities set conditions, but they confirm students who narrowly miss them every single year:
         in 2025, 82% of UK 18-year-old offer-holders were placed at their firm choice, and a record 439,180
-        applicants were accepted on the day. Your Hub may say <Strong>Unconditional</Strong> even though
+        applicants were accepted on the day. Your Hub may say <Strong>Unconditional</Strong>{' '}even though
         your grades dipped. It may offer you a changed course: same university, adjusted programme,
         sometimes a foundation year. Read it slowly. If you&apos;re placed somewhere you&apos;re happy with, the
         triage ends here and the day becomes a celebration.
@@ -119,7 +119,7 @@ export default function Page() {
         Is there any flexibility, or an alternative course you&apos;d consider me for?&quot; Sometimes the answer
         is yes. Then, if needed, your insurance: if you&apos;ve met their conditions, that place is yours to
         confirm. If you missed your offer by a single grade, read{' '}
-        <A href="/blog/missed-university-offer-by-one-grade/">the one-grade miss guide</A> before you dial;
+        <A href="/blog/missed-university-offer-by-one-grade/">the one-grade miss guide</A>{' '}before you dial;
         it includes a word-for-word script for the call.
       </P>
 
@@ -176,7 +176,7 @@ export default function Page() {
       <P>
         And if you&apos;re a parent reading this to prepare: your job on the morning is specific and it isn&apos;t
         dialling. We&apos;ve written{' '}
-        <A href="/blog/a-level-results-day-parents-guide/">a separate guide for parents</A> on exactly how
+        <A href="/blog/a-level-results-day-parents-guide/">a separate guide for parents</A>{' '}on exactly how
         to help without making it worse.
       </P>
 

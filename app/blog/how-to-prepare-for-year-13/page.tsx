@@ -67,11 +67,12 @@ export default function Page() {
       </QuickAnswer>
 
       <Lead>
-        Year 13 has a dirty secret: the year is half decided before it starts. Predicted grades get set
+        Year 13 has a big secret: the year is half decided before it starts. Predicted grades get set
         within weeks of you walking back through the door. The UCAS deadline for medicine and Oxbridge lands
         about six weeks into term. And every new topic your teachers introduce sits on top of Year 12
         foundations that may or may not hold. I&apos;ve worked with over 1,000 A-level students, and the ones
-        who have a calm Year 13 aren&apos;t the cleverest. They&apos;re the ones who used August properly.
+        who have a calm Year 13 aren&apos;t necessarily the cleverest. They&apos;re the ones who used August
+        properly.
       </Lead>
 
       <KeyTakeaways
@@ -115,37 +116,37 @@ export default function Page() {
       <H2 id="the-plan">The pre-September plan, in order</H2>
       <OL>
         <LI>
-          <Strong>Take two real weeks off.</Strong> Zero guilt. Burnout in October costs far more than a
+          <Strong>Take two real weeks off.</Strong>{' '}Zero guilt. Burnout in October costs far more than a
           fortnight of rest in July.
         </LI>
         <LI>
-          <Strong>Diagnose Year 12 honestly.</Strong> Before you revise anything, work out what actually went
+          <Strong>Diagnose Year 12 honestly.</Strong>{' '}Before you revise anything, work out what actually went
           wrong and why. Was it missing knowledge, or knowledge you couldn&apos;t recall under pressure? Weak
           understanding, or weak exam technique? The fix is different for each, and guessing wastes your
-          summer. Our free <A href="/revision-diagnostic/">revision diagnostic</A> does this in about three
+          summer. Our free <A href="/revision-diagnostic/">revision diagnostic</A>{' '}does this in about three
           minutes if you want the shortcut.
         </LI>
         <LI>
-          <Strong>Close your three weakest topics per subject.</Strong> Not all of them. The three per
+          <Strong>Close your three weakest topics per subject.</Strong>{' '}Not all of them. The three per
           subject that hurt most, worked on with active recall and past-paper questions rather than
           re-reading. If blurting is new to you, start with{' '}
           <A href="/blog/blurting-method-a-level-revision/">the blurting method</A>.
         </LI>
         <LI>
-          <Strong>Preview, lightly, the first Year 13 topics.</Strong> Skim them so the vocabulary is
+          <Strong>Preview, lightly, the first Year 13 topics.</Strong>{' '}Skim them so the vocabulary is
           familiar when your teacher introduces them. I&apos;ve set out the full summer structure, including
           the 40/60 split between fixing and previewing, in{' '}
           <A href="/blog/year-12-summer-revision/">the Year 12 summer revision guide</A>.
         </LI>
         <LI>
-          <Strong>Draft your UCAS basics.</Strong> A shortlist of five courses and a rough personal
+          <Strong>Draft your UCAS basics.</Strong>{' '}A shortlist of five courses and a rough personal
           statement draft. Rough is fine. Existing is the point, because September you will be busy proving
           things to your teachers.
         </LI>
         <LI>
-          <Strong>Build the September timetable before September.</Strong> Decide your weekly structure now:
+          <Strong>Build the September timetable before September.</Strong>{' '}Decide your weekly structure now:
           which evenings hold revision, where past papers live, when you rest. Our free{' '}
-          <A href="/revision-tracker/">revision tracker</A> builds the week around your weakest topics
+          <A href="/revision-tracker/">revision tracker</A>{' '}builds the week around your weakest topics
           automatically, and it refuses to let you overload it.
         </LI>
       </OL>

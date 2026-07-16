@@ -52,6 +52,11 @@ def scan(path: str) -> list[str]:
                 issues.append(f"{path}:{i}: REVIEW (metaphor ban) '{w}': {line.strip()[:90]}")
         if re.search(r"\bnot just\b.{3,60}\bbut\b", low):
             issues.append(f"{path}:{i}: 'not just X, but Y' pattern: {line.strip()[:90]}")
+        # JSX eats a plain space after a closing inline tag on the same line;
+        # it must be written as an explicit {' '} expression or the rendered
+        # page shows words jammed together ("results.Service 1").
+        if path.endswith(".tsx") and re.search(r"</(?:Strong|A|em|B)> \S", line):
+            issues.append(f"{path}:{i}: IMPLICIT SPACE after inline tag (use {{' '}}): {line.strip()[:90]}")
         # numeric range joined by hyphen in prose (e.g. "4-6 hours"); allow dates in
         # ISO strings, code identifiers, CSS classes by only flagging digit-digit
         # with surrounding spaces-word context

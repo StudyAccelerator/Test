@@ -35,8 +35,8 @@ export const posts: Post[] = [
     title: 'Bad Year 12 Results? What They Mean for UCAS and How to Fix Them by September',
     description:
       "Bad Year 12 mocks or end-of-year exams don't cap your final A-level grades, but they do set your predictions. A doctor explains the four reasons grades collapse and the six-week repair.",
-    datePublished: '2026-07-16',
-    dateModified: '2026-07-16',
+    datePublished: '2026-07-15',
+    dateModified: '2026-07-15',
     readingMinutes: 9,
     category: 'Predicted Grades & UCAS',
     keywords: [
@@ -52,8 +52,8 @@ export const posts: Post[] = [
     title: "A-Level Results Day 2026: A Parent's Guide From a Doctor",
     description:
       'What to do before 8am on 13 August 2026, what to say if the grades disappoint, why your child makes the calls, and how clearing really works. Independent advice from a doctor, not a university with places to fill.',
-    datePublished: '2026-07-16',
-    dateModified: '2026-07-16',
+    datePublished: '2026-07-14',
+    dateModified: '2026-07-14',
     readingMinutes: 10,
     category: 'For Parents',
     keywords: [
@@ -69,8 +69,8 @@ export const posts: Post[] = [
     title: "Didn't Get the Grades? The A-Level Results Day Triage (2026)",
     description:
       'A doctor\'s step-by-step triage for A-level results day 2026: read UCAS Hub first, who to call and in what order, how clearing and appeals really work, and the decisions that should wait 48 hours.',
-    datePublished: '2026-07-16',
-    dateModified: '2026-07-16',
+    datePublished: '2026-07-12',
+    dateModified: '2026-07-12',
     readingMinutes: 10,
     category: 'Results & Clearing',
     keywords: [
@@ -86,8 +86,8 @@ export const posts: Post[] = [
     title: "Missed Your University Offer by One Grade? Here's Exactly What Happens",
     description:
       'A one-grade miss is a decision, not a rejection: how universities judge near-misses, what UCAS Hub shows, the word-for-word script for the admissions call, and how to play clearing if both say no.',
-    datePublished: '2026-07-16',
-    dateModified: '2026-07-16',
+    datePublished: '2026-07-10',
+    dateModified: '2026-07-10',
     readingMinutes: 9,
     category: 'Results & Clearing',
     keywords: [
@@ -103,8 +103,8 @@ export const posts: Post[] = [
     title: 'A-Level Appeals 2026: How Long They Take and Whether Grades Can Go Down',
     description:
       'How A-level reviews of marking actually work in 2026: the 20 August priority deadline, exact costs per exam board, why grades can go down, and the honest test for whether your paper is worth reviewing.',
-    datePublished: '2026-07-16',
-    dateModified: '2026-07-16',
+    datePublished: '2026-07-09',
+    dateModified: '2026-07-09',
     readingMinutes: 9,
     category: 'Results & Clearing',
     keywords: [
@@ -120,8 +120,8 @@ export const posts: Post[] = [
     title: 'How to Choose an Online A-Level Tutor in the UK',
     description:
       'Most parents pick an A-level tutor on price and a friendly first call. Here is what actually predicts results: the questions to ask, the red flags, and when group teaching beats one-to-one.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-07-07',
+    dateModified: '2026-07-07',
     readingMinutes: 8,
     category: 'Tutoring & Support',
     keywords: [
@@ -137,8 +137,8 @@ export const posts: Post[] = [
     title: 'One-to-One A-Level Tutoring: Does It Actually Improve Grades?',
     description:
       'A doctor who has worked with over 1,000 A-level students gives the honest answer: one-to-one tutoring helps with understanding, but it usually caps out around a B. Here is why, and what to do about it.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-07-06',
+    dateModified: '2026-07-06',
     readingMinutes: 8,
     category: 'Tutoring & Support',
     keywords: [
@@ -154,8 +154,8 @@ export const posts: Post[] = [
     title: 'How to Prepare for A-Level Exams: The Complete Guide',
     description:
       'A step-by-step A-level exam preparation plan from a doctor and former top student: when to start, how to plan, which revision techniques earn marks, and the mistakes that quietly cost grades.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-07-05',
+    dateModified: '2026-07-05',
     readingMinutes: 10,
     category: 'Study Planning',
     keywords: [
@@ -171,8 +171,8 @@ export const posts: Post[] = [
     title: 'Resitting A-Levels: How It Works, What It Costs and Key Deadlines',
     description:
       'Everything you need to know about A-level resits: who can retake, when exams run, realistic costs, how resits affect UCAS and university offers, and how to make the retake year count.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-07-04',
+    dateModified: '2026-07-04',
     readingMinutes: 9,
     category: 'Results & Clearing',
     keywords: [
@@ -188,8 +188,8 @@ export const posts: Post[] = [
     title: 'What Is the Best Way to Revise for A-Levels?',
     description:
       'The revision methods that actually move grades, ranked by a doctor and former top A-level student, plus subject-specific advice for maths, chemistry, physics and biology.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-07-03',
+    dateModified: '2026-07-03',
     readingMinutes: 9,
     category: 'Revision Techniques',
     keywords: [
@@ -206,8 +206,8 @@ export const posts: Post[] = [
     title: 'How to Feel Confident Before A-Level Exams (Without Cramming)',
     description:
       'Exam confidence is built, not felt. A doctor explains how to beat A-level exam anxiety with a simple routine: mocks, sleep, and proof you can perform, so the night before feels calm instead of chaotic.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-07-02',
+    dateModified: '2026-07-02',
     readingMinutes: 8,
     category: 'Exam Technique',
     keywords: [
@@ -223,8 +223,8 @@ export const posts: Post[] = [
     title: 'How to Improve Your A-Level Predicted Grades Before UCAS',
     description:
       'Predicted grades get set early in Year 13, and yes, you can change them. A doctor and former top A-level student explains exactly what evidence teachers need, and how long it takes to build.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-07-01',
+    dateModified: '2026-07-01',
     readingMinutes: 9,
     category: 'Predicted Grades & UCAS',
     keywords: [
@@ -240,8 +240,8 @@ export const posts: Post[] = [
     title: 'Should You Revise Over the Year 12 Summer? What Top Students Actually Do',
     description:
       'The summer between Year 12 and Year 13 decides more than most students realise. Predicted grades get set within weeks of returning. Here is what to do, and what to skip.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-06-30',
+    dateModified: '2026-06-30',
     readingMinutes: 8,
     category: 'Study Planning',
     keywords: [
@@ -257,8 +257,8 @@ export const posts: Post[] = [
     title: 'The Blurting Method: How to Use It for A-Level Revision (Step-by-Step)',
     description:
       'Blurting is the revision technique top students swear by, and most people do it wrong. A step-by-step guide from a doctor and former top A-level student, plus a free printable template.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-06-29',
+    dateModified: '2026-06-29',
     readingMinutes: 8,
     category: 'Revision Techniques',
     keywords: [
@@ -274,8 +274,8 @@ export const posts: Post[] = [
     title: 'How Many Hours a Day Should You Revise for A-Levels?',
     description:
       'The honest answer from a doctor who got top A-level grades: 3 to 5 focused hours beats 8 distracted ones. Exact hour targets by year group and time of year, and why more is often worse.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-06-28',
+    dateModified: '2026-06-28',
     readingMinutes: 7,
     category: 'Study Planning',
     keywords: [
@@ -290,8 +290,8 @@ export const posts: Post[] = [
     title: 'How to Make an A-Level Revision Timetable That Actually Works',
     description:
       'Most revision timetables fail within a week because they ignore how memory works. Build one around spaced repetition and active recall instead. Full method, plus a free tool that does it for you.',
-    datePublished: '2026-07-08',
-    dateModified: '2026-07-08',
+    datePublished: '2026-06-27',
+    dateModified: '2026-06-27',
     readingMinutes: 9,
     category: 'Study Planning',
     keywords: [

@@ -146,7 +146,7 @@ export default function Page() {
         </LI>
         <LI>
           Use testing, not re-reading. The <A href="/blog/blurting-method-a-level-revision/">blurting
-          method</A> and past paper questions, not highlighters. You&apos;re trying to produce marks on paper in
+          method</A>{' '}and past paper questions, not highlighters. You&apos;re trying to produce marks on paper in
           September, and only practising recall does that.
         </LI>
       </UL>
@@ -170,7 +170,7 @@ export default function Page() {
 
       <TrackerCTA />
 
-      <H2 id="what-to-skip">What <em>not</em> to do this summer</H2>
+      <H2 id="what-to-skip">What <em>not</em>{' '}to do this summer</H2>
       <UL>
         <LI>
           Don&apos;t try to teach yourself the whole of Year 13. That road leads to burnout and half-learned

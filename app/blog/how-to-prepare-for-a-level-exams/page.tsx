@@ -91,7 +91,7 @@ export default function Page() {
       <H3>September to December: build the base</H3>
       <P>
         Nothing dramatic here. One to two hours per subject per week of consolidation on top of homework: turn
-        each week&apos;s lessons into flashcards, <A href="/blog/blurting-method-a-level-revision/">blurt</A> the
+        each week&apos;s lessons into flashcards, <A href="/blog/blurting-method-a-level-revision/">blurt</A>{' '}the
         new topics, do a few exam questions. This is quiet, boring and completely decisive, because it means
         January-you inherits a tidy house instead of a year of debt. It also feeds directly into your predicted
         grades, which get set from your assessments along the way.
@@ -99,7 +99,7 @@ export default function Page() {
       <H3>January to March: structured revision begins</H3>
       <P>
         Six months out is when preparation proper starts. Build a full
-        <A href="/blog/how-to-make-a-revision-timetable/"> revision timetable</A> at topic level, weighted
+        <A href="/blog/how-to-make-a-revision-timetable/"> revision timetable</A>{' '}at topic level, weighted
         toward your weak areas. Start doing past paper questions by topic. This is also the window to fix any
         foundations that are genuinely broken, while there&apos;s still time to relearn rather than patch.
       </P>
@@ -125,7 +125,7 @@ export default function Page() {
         this week, rebuilt every Sunday based on what your testing showed. Fill at most 80% of your available
         time so bad days have somewhere to go. The full method is in my guide
         to <A href="/blog/how-to-make-a-revision-timetable/">building a revision timetable that actually
-        works</A>, or our free <A href="/revision-tracker">Revision Tracker</A> will generate one for you in
+        works</A>, or our free <A href="/revision-tracker">Revision Tracker</A>{' '}will generate one for you in
         about three minutes.
       </P>
 

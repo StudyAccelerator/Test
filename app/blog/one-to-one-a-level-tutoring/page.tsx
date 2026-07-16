@@ -155,7 +155,7 @@ export default function Page() {
         programme with small enough groups that nobody can hide.</LI>
         <LI>Understands the content but stuck at a B or C? A system problem, not a knowledge problem. Look for
         structured, exam-focused teaching plus a proper <A href="/blog/how-to-make-a-revision-timetable/">revision
-        system</A> between sessions.</LI>
+        system</A>{' '}between sessions.</LI>
         <LI>Already at an A and pushing for A*? Past papers, mark scheme fluency and exam strategy. At that
         level, technique is nearly everything.</LI>
       </OL>

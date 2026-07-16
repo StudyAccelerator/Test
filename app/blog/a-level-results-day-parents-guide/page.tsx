@@ -58,7 +58,7 @@ export default function Page() {
   return (
     <ArticleLayout post={post} faqs={faqs}>
       <QuickAnswer>
-        Your job on A-level results morning is prepared calm. Results release from 8am on Thursday 13
+        Your job on A-level results morning is prepared and calm. Results release from 8am on Thursday 13
         August 2026; the UCAS Hub shows the university decision at the same time; Clearing choices can be
         added from 1pm. If the grades disappoint, your child makes the university calls (most admissions
         teams will only speak to the applicant) while you run everything around the calls: the paperwork,
@@ -69,10 +69,10 @@ export default function Page() {
       <Lead>
         I work in a hospital, and I watch families receive difficult news every week. The relatives who
         help most all share one skill: they stay steady so the patient doesn&apos;t have to. Results morning
-        runs on the same physics. Six years ago I was the teenager opening the envelope, and I can tell
-        you exactly what I needed from the adults in the room: not answers, not spin, just someone whose
-        face said the world was still standing. Here&apos;s how to be that parent on 13 August, with the 2026
-        dates, the process, and the scripts.
+        runs on the same physics. And I&apos;ve seen it happen time and time again with my own students:
+        what a teenager needs from the adults in the room on results morning isn&apos;t answers, and it
+        isn&apos;t spin. It&apos;s someone whose face says the world is still standing. Here&apos;s how to be that
+        parent on 13 August, with the 2026 dates, the process, and the scripts.
       </Lead>
 
       <KeyTakeaways
@@ -89,17 +89,17 @@ export default function Page() {
       <H2 id="before-the-day">Before the day: three things to sort this week</H2>
       <UL>
         <LI>
-          <Strong>Know the numbers.</Strong> Write down the firm offer, the insurance offer, and their exact
+          <Strong>Know the numbers.</Strong>{' '}Write down the firm offer, the insurance offer, and their exact
           conditions, plus your child&apos;s UCAS personal ID. On the morning, this piece of paper is worth
           more than any advice.
         </LI>
         <LI>
-          <Strong>Agree the plan.</Strong> Where will they open the results: school or home? Who gets told,
+          <Strong>Agree the plan.</Strong>{' '}Where will they open the results: school or home? Who gets told,
           and who doesn&apos;t, in the first hour? Whose phone stays off? Teenagers do better when the morning
           has a shape.
         </LI>
         <LI>
-          <Strong>Agree the sentence.</Strong> Decide together, in advance, what happens if it goes wrong:
+          <Strong>Agree the sentence.</Strong>{' '}Decide together, in advance, what happens if it goes wrong:
           &quot;then we&apos;ll look at the options, and there are several.&quot; Don&apos;t promise it&apos;ll be fine.
           False reassurance is a loan the morning may call in.
         </LI>
@@ -111,7 +111,7 @@ export default function Page() {
         important screen: it shows whether your child is placed, not what they scored. Teachers saw the
         results the previous day under embargo, so the school&apos;s exams office is the fastest expert help
         available all morning. Exam boards publish grade boundaries from 8am too, which matters only if a
-        mark looks close enough to a boundary to query. And <Strong>1pm</Strong> is when Clearing choices
+        mark looks close enough to a boundary to query. And <Strong>1pm</Strong>{' '}is when Clearing choices
         can be added in UCAS, which builds a natural pause into a hard morning: time to compare rather
         than grab.
       </P>
@@ -171,7 +171,7 @@ export default function Page() {
         route for university-dependent grades closes on <Strong>20 August 2026</Strong>: the process,
         costs and honest odds are in <A href="/blog/a-level-appeals-2026/">the appeals guide</A>. If a
         resit year enters the conversation, know that the next A-level exams are June 2027 (there&apos;s no
-        autumn series), and read <A href="/blog/resitting-a-levels/">how resits actually work</A> before
+        autumn series), and read <A href="/blog/resitting-a-levels/">how resits actually work</A>{' '}before
         anyone commits to anything. Saturday, with tea, is when those conversations belong.
       </P>
 
@@ -182,7 +182,7 @@ export default function Page() {
         methods formed. If you&apos;ve watched your younger child work hard all year for grades that don&apos;t
         match the effort, that gap has a cause, and it&apos;s almost never intelligence or laziness. It&apos;s
         method, and method is fixable while there&apos;s still time on the clock. That&apos;s the entire reason
-        our <A href="/parents/">free guide for parents</A> and the diagnostic below exist.
+        our <A href="/parents/">free guide for parents</A>{' '}and the diagnostic below exist.
       </P>
 
       <DiagnosticCTA audience="parent" />

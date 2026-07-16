@@ -112,7 +112,7 @@ export default function Page() {
         Memory decays on a curve, so one heroic session on a topic is a plan for forgetting it. Bring each
         topic back at growing intervals: learn it, recall it the next day, review it on day 3 or 4, test it at
         a week. Each pass takes less time and the memory lasts longer. A proper
-        <A href="/blog/how-to-make-a-revision-timetable/"> revision timetable</A> builds this in automatically.
+        <A href="/blog/how-to-make-a-revision-timetable/"> revision timetable</A>{' '}builds this in automatically.
       </P>
       <H3>Timed past papers</H3>
       <P>
@@ -168,7 +168,7 @@ export default function Page() {
         deep work, next-day recall, a light review and a test. Work in 45 to 60 minute blocks, phone in
         another room, and protect your sleep, because that&apos;s when the day&apos;s work gets written into long-term
         memory. If you want the schedule built for you, our free <A href="/revision-tracker">Revision
-        Tracker</A> generates the whole structure in about three minutes.
+        Tracker</A>{' '}generates the whole structure in about three minutes.
       </P>
 
       <TrackerCTA />

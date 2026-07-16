@@ -104,14 +104,14 @@ export default function Page() {
       <H3>Start with a plan, months out</H3>
       <P>
         Nothing calms an anxious student like a plan they believe. A weekly
-        <A href="/blog/how-to-make-a-revision-timetable/"> revision timetable</A> at topic level, weighted
+        <A href="/blog/how-to-make-a-revision-timetable/"> revision timetable</A>{' '}at topic level, weighted
         toward weak areas, removes the nightly negotiation with yourself. You always know what today&apos;s
         session is for, and you can see the pile shrinking week by week. That visible progress is confidence,
         being manufactured on schedule.
       </P>
       <H3>Revise for understanding, test for proof</H3>
       <P>
-        Learn with <A href="/blog/blurting-method-a-level-revision/">active recall</A> so knowledge is
+        Learn with <A href="/blog/blurting-method-a-level-revision/">active recall</A>{' '}so knowledge is
         genuinely retrievable, not just familiar. Then collect proof: topic scores, past paper marks, a list
         of topics that moved from red to green. Keep the record somewhere visible. On a wobbly day, evidence
         beats reassurance.

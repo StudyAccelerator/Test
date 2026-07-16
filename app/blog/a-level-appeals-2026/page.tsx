@@ -91,18 +91,18 @@ export default function Page() {
       </P>
       <OL>
         <LI>
-          <Strong>Reviews of results.</Strong> Service 1 is a clerical re-check (were the marks added up
+          <Strong>Reviews of results.</Strong>{' '}Service 1 is a clerical re-check (were the marks added up
           and recorded correctly). Service 2 is a review of marking: a senior examiner checks the original
           marking applied the mark scheme properly. There&apos;s a priority version of Service 2 for students
           whose higher-education place depends on the outcome. Service 3 is a review of moderation and
           applies to internally assessed work.
         </LI>
         <LI>
-          <Strong>Appeal to the exam board.</Strong> If you believe the review itself went wrong, either
+          <Strong>Appeal to the exam board.</Strong>{' '}If you believe the review itself went wrong, either
           procedurally or in how the mark scheme was applied, your centre can lodge a formal appeal.
         </LI>
         <LI>
-          <Strong>Ofqual&apos;s Exam Procedures Review Service.</Strong> The final rung, which checks whether
+          <Strong>Ofqual&apos;s Exam Procedures Review Service.</Strong>{' '}The final rung, which checks whether
           the board followed its own procedures. Very few cases go this far.
         </LI>
       </OL>
@@ -115,11 +115,11 @@ export default function Page() {
 
       <H2 id="should-you">The decision test: should you ask for a review at all?</H2>
       <P>
-        Disappointment is not evidence. Here&apos;s the test I&apos;d apply, in order. <Strong>One:</Strong> how
+        Disappointment is not evidence. Here&apos;s the test I&apos;d apply, in order. <Strong>One:</Strong>{' '}how
         far is the mark from the next boundary? Boundaries are public from 8am on results day; one or two
-        marks away is review territory, fifteen is not. <Strong>Two:</Strong> what does the teacher who
+        marks away is review territory, fifteen is not. <Strong>Two:</Strong>{' '}what does the teacher who
         knows your work say after seeing the script or your paper breakdown? They&apos;ve seen hundreds of
-        these. <Strong>Three:</Strong> what&apos;s actually at stake? A university place changes the maths
+        these. <Strong>Three:</Strong>{' '}what&apos;s actually at stake? A university place changes the maths
         completely; bragging rights don&apos;t. If all three line up, request it on results morning. If they
         don&apos;t, spend your energy on <A href="/blog/didnt-get-the-grades-a-level-results/">the parts of
         results day you can control</A>.
@@ -130,16 +130,16 @@ export default function Page() {
         Before a clerical re-check or review of marking starts, you sign written consent acknowledging
         that marks and grades can move in either direction. This isn&apos;t small print: papers do get
         re-marked downward. It&apos;s why the boundary check cuts both ways. Two marks above a boundary
-        with a shaky paper is a reason <Strong>not</Strong> to request a review, and a mark comfortably
+        with a shaky paper is a reason <Strong>not</Strong>{' '}to request a review, and a mark comfortably
         mid-grade has little to gain and something to lose. The one carve-out: a review of moderation
         can&apos;t lower your published subject grade in that series.
       </P>
 
       <H2 id="deadlines">The 2026 deadlines and clocks</H2>
       <UL>
-        <LI><Strong>20 August 2026:</Strong> deadline to request a priority review of marking (university-dependent students). Answered within 15 calendar days.</LI>
-        <LI><Strong>24 September 2026:</Strong> deadline for all other review requests.</LI>
-        <LI><Strong>Clocks:</Strong> clerical re-check up to 10 calendar days; review of marking up to 20; review of moderation up to 35.</LI>
+        <LI><Strong>20 August 2026:</Strong>{' '}deadline to request a priority review of marking (university-dependent students). Answered within 15 calendar days.</LI>
+        <LI><Strong>24 September 2026:</Strong>{' '}deadline for all other review requests.</LI>
+        <LI><Strong>Clocks:</Strong>{' '}clerical re-check up to 10 calendar days; review of marking up to 20; review of moderation up to 35.</LI>
       </UL>
       <Callout title="If a university place hangs on the review">
         Do two things on results morning, in parallel. Ask your school to submit the priority review, and

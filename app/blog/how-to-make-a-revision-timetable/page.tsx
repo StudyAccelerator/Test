@@ -140,7 +140,7 @@ export default function Page() {
       </P>
       <UL>
         <LI>Day 1, deep work: learn or relearn the topic properly. Notes, videos, worked examples.</LI>
-        <LI>Day 2, active recall: <A href="/blog/blurting-method-a-level-revision/">blurt it</A> or do
+        <LI>Day 2, active recall: <A href="/blog/blurting-method-a-level-revision/">blurt it</A>{' '}or do
         questions from memory, and mark the gaps.</LI>
         <LI>Day 3 or 4, light review: a short pass over the gaps, 15 to 20 minutes.</LI>
         <LI>Day 7, test: past paper questions on the topic, timed where possible.</LI>

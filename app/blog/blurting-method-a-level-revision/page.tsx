@@ -180,7 +180,7 @@ export default function Page() {
         In practice, your week needs a plan. Deep blurt-and-fix sessions for new or weak topics, recall sessions
         the next day, and spaced review slots a few days later. You can build this by hand, and my guide
         to <A href="/blog/how-to-make-a-revision-timetable/">building a revision timetable that actually
-        works</A> walks through it. Or you can let our free tool run it as a topic audit: rate each topic, give
+        works</A>{' '}walks through it. Or you can let our free tool run it as a topic audit: rate each topic, give
         it your real hours, and it builds the week around your weakest material.
       </P>
 
