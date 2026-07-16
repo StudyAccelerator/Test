@@ -1,45 +1,45 @@
-# The give-first outreach framework
+# The outreach framework: connection first
 
-Distilled 13 July 2026 from the public teaching of Daniel Priestley, Alex Hormozi, Mark Tilbury and Steven Bartlett, at Waleed's request, after the first PMT draft opened by telling the target what they were missing. That "here's what's wrong, here's the fix" opener is the default move most gurus push, and Waleed has rejected it. This file is the default structure for every outreach email this skill produces. Worked example: `content/partnerships/physicsandmathstutor/outreach-email.md`.
+Distilled 13 July 2026 from the public teaching of Daniel Priestley, Alex Hormozi, Mark Tilbury and Steven Bartlett, then calibrated 16 July 2026 against Waleed's own read of the PMT drafts. Two earlier structures failed his ear: a gap-led draft ("here's what you're missing") read like every guru pitch, and a gift-led draft ("I want to give your students X") read salesy and abrupt, with labelled fragments ("Why me:", "The trade:") that do not sound like him. What survived both rounds is below. This is the default structure for every outreach email this skill produces. Worked example: `content/partnerships/physicsandmathstutor/outreach-email.md`.
 
-## The threads that repeat across the four voices
+## What the four voices agree on (and still holds)
 
-**Daniel Priestley** (Key Person of Influence, Oversubscribed): partnerships are one of his five pillars, and the pitch is a collaboration between peers whose audiences overlap, never a fan asking a favour. Bring assets, not ideas: a made thing that keeps working after the meeting ends. Handle the obvious objection inside the pitch rather than hoping it never comes up.
+- **Daniel Priestley:** partnerships are pitched peer to peer, as collaborations between people whose audiences overlap, never as a fan asking a favour. Bring assets, not ideas. Handle the obvious objection inside the pitch.
+- **Alex Hormozi:** real homework, real value on the table, proof over promises (names and numbers, not adjectives), one call to action, and most replies come from the follow-up.
+- **Mark Tilbury:** value first, relationship over the ask, think in years. Brief, about them, no fanboying for its own sake.
+- **Steven Bartlett:** do the work before you ask and show it. Ask like you are going somewhere with or without them. Write like a human note. Follow up without shame.
 
-**Alex Hormozi** ($100M Leads): personalise with real homework, then lead with big fast value: give something you could charge for, so the email is worth receiving even if they never reply. Proof beats promises: names and numbers, not adjectives. One clear call to action per message. Most replies come from the follow-up, not the first send.
+Their threads live on in the laws and moves below. The order is Waleed's own: he opens with the genuine connection, not the offer.
 
-**Mark Tilbury**: value is the currency. Give it first, free if needed, and think in years, not replies: the relationship outlasts any single ask. Make it about them and respect their time: specific, brief, no fanboying. Verify you are talking to someone who actually holds what you want before investing the effort.
+## The laws
 
-**Steven Bartlett**: do the work before you ask, then show it: the cold pitches he celebrates arrived with the thing already made. Ask with "with or without you" energy: you are going somewhere and inviting them along, not asking to be rescued. Write like a human note, not a campaign: short, specific, zero marketing gloss. Follow up without shame and take the no gracefully.
+1. **Sounds like Waleed or it's wrong.** Flowing prose he would say aloud on a call. No labelled fragments inside the email, no "so I'll get straight to it", no staccato section headers. If a sentence would feel odd spoken to the person over coffee, rewrite it.
+2. **Do the work first.** The concrete thing (a one-page outline, a plan with dates) exists before the email does, but it is presented as one shape the partnership could take, not the fixed pitch. It usually lands in the day 4 follow-up or on the call.
+3. **Truth over polish.** Approved figures only (`assets-and-trades.md`). No grade-outcome claims, even when Waleed's dictation reaches for them: hold the line and tell him why. Every personal-story line ("I used your site for my own A-levels") gets flagged for his truth check before send.
+4. **One ask.** A single call ask written as a full sentence, then the easy no ("one line back and I'll leave it there"). 150 to 200 words when the story needs it, never longer.
+5. **The gap arrives late, as an opportunity with a precedent.** Never open with their problem, and never lead with the offer either. Name their win first, place his lane next to it, and let a past partnership carry the point ("I built this for PasTest when they had the same shape of gap"). Diagnosis lectures stay in the dossier.
 
-## The three laws
+## The four moves, in order
 
-1. **Do the work first.** Before drafting, make the offered thing real: a one-page outline, a sample, a plan with dates. An idea is a request; an asset is a gift. The email should be able to say "it's already built".
-2. **One idea, one ask, under 160 words.** A second idea belongs in the dossier and comes out on the call.
-3. **Open with their win, never their problem.** The gap analysis stays in the dossier and surfaces on the call, if they ask. A cold email that opens with what the reader is doing wrong puts them on defence by line two. Lead with what you will give them and why it fits what they have built.
-
-## The five moves, in order
-
-1. **The Gift.** One or two lines. Something specific about them that proves homework (their win, not their gap), then the thing you want to give them. By line two the reader knows what they get and that it costs them almost nothing.
-2. **The Receipts.** One or two lines of credibility: names and numbers from the approved record in `assets-and-trades.md`, verifiable in one search. Never the CV.
-3. **The Trade.** What they get, what it costs them (the best offers cost only promotion and a yes), who does the work (Waleed), and the risk removal: they approve everything, they keep the assets, no selling. Kill the obvious objection here in one clause.
-4. **The Window.** Why now. Peg to the UK academic calendar so the offer has a natural deadline without fake urgency. The window can live inside the gift line if it fits.
-5. **The Ask.** One small step: 15 minutes, he fits around their diary. Then the easy no: "if it's not right, one line back and I'll leave it there." The easy no is load-bearing: it reads as confidence, respects their time, and converts silent maybes into replies.
+1. **The Connection.** Why them, why him, in his own history: the fan line only Waleed could write (he revised from PMT himself), then who he is now in one breath (NHS doctor, founder, worked with 1,000+ A-level students). This does the personalisation work, answers "why is this stranger writing to me", and earns the next paragraph.
+2. **The Receipts.** Past partnerships woven in as short stories, not a list: The Medic Life (interview lecture series, over 250 students in 10 weeks), PasTest (built and delivered a programme at speed), r/A-levels (three free workshops for the largest A-level community on Reddit). Names and numbers from the approved record, verifiable in one search. This answers "they have plenty of tutors already, why him": the value is the proven partnership record and the method lane, not the ability to run a session.
+3. **The Territory.** The partnership interest, stated plainly. Their win on the what; his lane on the how; the gap as a shared opportunity with the precedent attached. Offer one possible shape but keep it open: "might be X, might be something better we find together". The call is where the shape gets designed, not the email.
+4. **The Ask.** 15 minutes to work out what would genuinely serve their students, fitted around their diary. Then the easy no. If a calendar moment gives it a natural deadline (September habits, mocks, results week), name it here.
 
 ## Subject lines
 
-Three to six plain words. Specific, human, reads like a note from a person: no title-case marketing, no cleverness, no "quick question". The gift beats the mystery.
+Three to six plain words, human, true. The fan line beats the offer line: "PMT got me through A-levels" opens better than anything with "free" in it. No title-case marketing, no cleverness, no "quick question".
 
 ## Follow-ups
 
-- **Day 4: add value, never "just bumping".** Send the made thing itself, pasted inline, so they can judge the offer in two minutes without a call.
-- **Day 10: graceful close.** State the with-or-without-you plan only if it is true, offer the clean no again, and name when you will next be in touch. Then stop.
+- **Day 4: add the concrete shape.** Paste the one-pager inline, framed as one option, so they can judge in two minutes. Never "just bumping".
+- **Day 10: warm, graceful close.** A gratitude line if true, the clean no again, and when he will circle back. With-or-without-you plans only if real. Then stop.
 
 ## Pre-flight checklist
 
-- Opener specific enough that no other company could receive this email.
-- The gift is stated before anything about Waleed except the receipts.
-- Every claim would survive being challenged on the call.
-- One link maximum, no attachments on the first email, plain text.
+- The opener is a connection only Waleed could claim, and every story line is flagged for his truth check.
+- Approved figures only; nothing outcome-shaped survived from dictation.
+- The gap appears after their win, framed as an opportunity, with a precedent.
+- One ask, one link maximum, no attachments, plain text.
 - Voice check against `.claude/skills/content-studio/references/brand-voice.md`; dash, curly-quote and banned-word scan.
 - Waleed has seen the dossier and answered its questions. Nothing sends without him.

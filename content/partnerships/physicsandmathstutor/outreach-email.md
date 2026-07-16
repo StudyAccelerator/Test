@@ -1,29 +1,29 @@
-# PMT outreach email: DRAFT v2 for Waleed's approval
+# PMT outreach email: DRAFT v3 for Waleed's approval
 
-Status: DRAFT, nothing sent. Rewritten 13 July 2026 to the give-first framework (`.claude/skills/partnership-outreach/references/email-framework.md`) after Waleed's direction: open with how we help them and the credibility, end on a clean ask, and drop the "here's what's wrong, here's the fix" framing. v1 (gap-led) is in git history if ever wanted. Finalise only after reading `research.md` and answering the questions at its end.
+Status: DRAFT, nothing sent. Rewritten 16 July 2026 to Waleed's connection-first arc after he rejected v2 as salesy and not his voice: open with the genuine fan connection and who he is, weave the credibility in as stories, raise the partnership and the gap late and gently with the PasTest precedent, and leave the exact shape open for the call. v1 (gap-led) and v2 (gift-led) are in git history. Finalise only after the truth checks below.
 
 - **To:** Görkem Çavlı, founder and Managing Director, PMT Education
 - **Route:** LinkedIn note plus email together. The address gorkem@pmt.education is RocketReach-listed and unverified: verify it before sending, and if it hard-bounces, go LinkedIn only.
 - **From:** Waleed@alevelaccelerators.com
 - **When:** Tuesday to Thursday, 8 to 10am UK
 
-## Subject options (short, plain, reads like a note)
+## Subject options (short, plain, true)
 
-1. Free September series for PMT students
-2. A free series for your students
-3. an idea for PMT students (lowercase on purpose: reads most like a personal note)
+1. PMT got me through A-levels
+2. Partnership idea for PMT
+3. a fan letter with an idea (lowercase on purpose: reads most like a personal note)
 
 ## The email
 
 Hi Görkem,
 
-Every student I teach has PMT open in another tab, so I'll get straight to it: I'd like to give your students a free live series this September on how to run their revision, right when Year 12s and 13s are setting their habits for the year.
+I'll be honest, this is partly a fan letter. PMT got me through my own A-levels, and now that I'm on the other side of the desk it's still the first tab my students open. These days I'm an NHS doctor and I run A-Level Accelerators, where I've worked with over 1,000 A-level students, most of them revising from your resources.
 
-Why me: I'm an NHS doctor and a former top A-level student, and I teach study systems: how to revise, not what. I ran an interview lecture series for The Medic Life that took 250+ students through in 10 weeks, I've partnered with PasTest, and my free workshops for r/A-levels got outstanding reviews.
+I've done this before with names bigger than mine. I ran an interview lecture series for The Medic Life that took over 250 students through in 10 weeks. When PasTest wanted a programme for aspiring medics, I built and delivered it at speed. And I've run three free workshops for r/A-levels, the largest A-level community on Reddit, with outstanding reviews.
 
-The trade: I build and deliver everything, you approve every slide, and PMT keeps the recordings. Method only, no subject content, no selling. All it costs PMT is promotion to your own audience.
+I'd like to explore doing something with PMT. You've won on materials: nobody covers the what like you do. The how, the actual system of revising, is my whole lane, and it feels like the same shape of gap I helped PasTest fill. Free live sessions for your students is one idea. It might not be the best one. I'd rather work that out with you.
 
-Worth 15 minutes? The three sessions are already sketched on one page and I'll send it over either way. If it's not right for PMT, one line back and I'll leave it there.
+If you're open to it, give me 15 minutes and I'll fit around your diary. And if it's not for PMT, one line back and I'll leave it there.
 
 Waleed
 
@@ -37,29 +37,29 @@ PS. If you want a feel for how I teach method: my free 20-question revision diag
 
 ## LinkedIn connection note (under 300 characters)
 
-Hi Görkem. I'd like to give PMT students a free live series this September: how to run their revision, taught by me, built for PMT, recordings yours. NHS doctor; 250+ students in 10 weeks for The Medic Life; r/A-levels workshops. Worth 15 minutes?
+Hi Görkem. PMT got me through my own A-levels. Now I'm an NHS doctor running A-Level Accelerators (1,000+ students taught) and I've built programmes for PasTest and The Medic Life. I'd like to explore a partnership with PMT. Open to 15 minutes?
 
-## Follow-up one (day 4: adds the made thing, never "just bumping")
+## Follow-up one (day 4: adds the concrete shape, never "just bumping")
 
-Hi Görkem, here's the page I mentioned, so you can judge this in two minutes.
+Hi Görkem, following up with something concrete so this isn't just an idea in an email.
 
-The Revision Systems Series: three live sessions for PMT students in September.
+One shape this could take: a free live revision systems series for PMT students in September, right as Year 12s and 13s set their habits for the year.
 
 1. Build the system. Why hours don't equal marks, the topic audit, and every student leaves with their week actually planned.
 2. Make it stick. Retrieval over rereading: blurting, active recall and spaced review, scheduled so they really happen.
 3. Perform on paper. Mark schemes, timed papers and recall under pressure, with mocks treated as diagnosis, not judgement.
 
-I build and deliver all of it, you approve every slide, PMT keeps the recordings. If it's a no, one line does it.
+I'd build and deliver all of it, you'd approve every slide, and PMT would keep the recordings. But it's one shape. If a different one serves your students better, I'm listening. And if it's a no, one line does it.
 
 Waleed
 
-## Follow-up two (day 10: graceful close)
+## Follow-up two (day 10: warm close)
 
-Hi Görkem, last one from me. I'm teaching this in September either way, and I'd rather teach it with PMT than anywhere else. If the timing's wrong, tell me and I'll come back before mocks season with something smaller.
+Hi Görkem, last one from me, I promise. The offer stands: my method, your students, whatever shape serves them best. If the timing's wrong, tell me and I'll come back around mocks season. Either way, thank you for what PMT did for my own grades.
 
 Waleed
 
-## The one-page series outline (ready to paste or send when asked)
+## The one-page outline (one shape this could take; ready for the call or follow-up one)
 
 **The Revision Systems Series | free live sessions for PMT students, September 2026**
 
@@ -71,21 +71,21 @@ Format: 60 minutes live plus Q&A per session, on PMT's infrastructure or mine, r
 
 ## Pre-send checklist
 
-1. Answer the questions at the end of `research.md`. The opener stays only if "every student I teach has PMT open in another tab" is literally true to your experience; soften it if not.
-2. Follow-up two says you're teaching the series either way. Keep that line only if you genuinely will (your own channels count); cut it if not, because the confidence only works when it's true.
-3. Verify gorkem@pmt.education. Hard bounce means LinkedIn only.
-4. Send the LinkedIn note the same morning as the email.
-5. One link maximum (the PS). No attachments, plain text. The one-pager goes inline in follow-up one, never as an attachment on the first email.
-6. Send from Waleed@alevelaccelerators.com, morning, midweek.
-7. Log the send below and in `content/partnerships/README.md`.
+1. **Settle one name before anything sends.** Your dictated note said "Medify and PasTest"; the approved record ties the 250+ lecture series to The Medic Life, so that is what the draft says. If Medify is also real (or is the one you meant), say the word and it gets added or swapped. Do not send until this is settled.
+2. **Kept out on purpose:** "helped thousands achieve top grades" from your note. Grade-outcome claims are banned by your own standing rule until results data exists in August, and the approved figure is 1,000+ students. The draft says "worked with over 1,000 A-level students".
+3. **Truth checks, line by line:** "PMT got me through my own A-levels" (adjust to GCSEs if that is the truth), "most of them revising from your resources", "when PasTest wanted a programme for aspiring medics, I built and delivered it at speed" (reword to exactly what happened), "three free workshops for r/A-levels", and follow-up two's "thank you for what PMT did for my own grades".
+4. Verify gorkem@pmt.education. Hard bounce means LinkedIn only.
+5. Send the LinkedIn note the same morning as the email.
+6. One link maximum (the PS, if kept). No attachments, plain text; the one-pager goes inline in follow-up one, never attached to the first email.
+7. Send from Waleed@alevelaccelerators.com, morning, midweek.
+8. Log the send below and in `content/partnerships/README.md`.
 
-## Why it's built this way (the five moves, mapped)
+## Why it's built this way (the four moves, mapped)
 
-- **Gift:** paragraph one gives the series before saying anything about Waleed, and the PMT-in-another-tab line is their win doing the personalisation work.
-- **Receipts:** paragraph two, names and numbers only.
-- **Trade:** paragraph three, with the objection killer (method only, no selling, they keep the recordings) inside it.
-- **Window:** inside paragraph one: September, habit-setting fortnight.
-- **Ask:** 15 minutes plus the easy no, which converts silent maybes into replies.
+- **Connection:** paragraph one is the fan line only you could write, plus who you are now. It answers "why is this stranger writing to me" before any offer appears.
+- **Receipts:** paragraph two, woven as short stories with names and numbers. It answers "we have plenty of tutors, why him": the record is partnerships delivered, not sessions run.
+- **Territory:** paragraph three names their win first, then your lane, then the gap as a shared opportunity with the PasTest precedent. The shape stays open on purpose: the call is where it gets designed.
+- **Ask:** one full-sentence ask, 15 minutes, then the easy no.
 
 ## Send log
 

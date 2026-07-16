@@ -64,15 +64,15 @@ Find the person who can say yes to this specific trade. Founder-led company: the
 
 ### 5. Draft the email
 
-The email gets a call, nothing more. Its structure is the give-first framework in `references/email-framework.md`, distilled from Daniel Priestley, Alex Hormozi, Mark Tilbury and Steven Bartlett. Read that file before drafting; it is the default for all outreach. The short version:
+The email gets a call, nothing more. Its structure is the connection-first framework in `references/email-framework.md`: distilled from Daniel Priestley, Alex Hormozi, Mark Tilbury and Steven Bartlett, then calibrated against Waleed's own ear (gap-led and gift-led openers both failed it). Read that file before drafting; it is the default for all outreach. The short version:
 
-- **Do the work first.** The offered thing exists before the email does (a one-page outline, a plan with dates), and it goes in the output file as a ready-to-send appendix.
-- **The five moves, in order: Gift, Receipts, Trade, Window, Ask.** Open with their win and the thing you are giving them. Never open with their problem or gap: that analysis stays in the dossier and surfaces on the call.
-- Receipts are one or two lines of names and numbers from the approved record. Never the CV, never a grades claim.
-- The trade carries the risk removal (they approve everything, they keep the assets, no selling) and kills the obvious objection in one clause.
-- One small ask (15 minutes, he fits around their diary) followed by the easy no ("one line back and I'll leave it there").
-- Under 160 words, Waleed's voice throughout (read `.claude/skills/content-studio/references/brand-voice.md` first), two or three subject options of three to six plain words.
-- Deliver alongside the email: the made thing as an appendix, a LinkedIn note version under 300 characters, the day 4 and day 10 follow-ups per the framework, and a pre-send checklist for Waleed (verify the address, send morning midweek from Waleed@alevelaccelerators.com, one link maximum, log the send in the README index).
+- **Four moves, in order: Connection, Receipts, Territory, Ask.** Open with the genuine connection only Waleed could claim (his own history with them, who he is now), weave the receipts in as short stories, then the partnership interest with the gap arriving late as a shared opportunity with a precedent, then one ask.
+- **Sounds like Waleed or it's wrong.** Flowing prose he would say on a call: no labelled fragments ("Why me:", "The trade:"), no salesy abruptness.
+- **Do the work first.** The concrete thing exists before the email does and lives in the output file, framed as one shape the partnership could take, usually shared in the day 4 follow-up.
+- **Truth over polish.** Approved figures only, no grade-outcome claims even when dictation reaches for them, and every personal-story line flagged for Waleed's truth check.
+- One ask (15 minutes, fitted around their diary) plus the easy no. 150 to 200 words when the story needs it.
+- Waleed's voice throughout (read `.claude/skills/content-studio/references/brand-voice.md` first), two or three subject options of three to six plain, human, true words: the fan line beats the offer line.
+- Deliver alongside the email: the made thing as an appendix, a LinkedIn note version under 300 characters, the day 4 and day 10 follow-ups per the framework, and a pre-send checklist for Waleed (truth checks first, verify the address, send morning midweek from Waleed@alevelaccelerators.com, one link maximum, log the send in the README index).
 
 ### 6. Deliver
 
