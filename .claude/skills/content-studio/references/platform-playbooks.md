@@ -10,7 +10,7 @@ Format rules per platform. These reflect how each algorithm actually distributes
 
 1. **Emotion/story posts** (parenting feelings, personal journey, student transformation moments): these build the audience. Highest reach genre by far.
 2. **Technique/framework posts** (the how-to material): these build authority and saves. Modest reach, high trust.
-3. **Lead-magnet posts** (free workshop, free guide, "comment X for the link"): these harvest. They only pull hundreds of signups when genres 1 and 2 have built the audience first. On a small account they still convert, just in smaller numbers, and they're worth one slot a week.
+3. **Lead-magnet posts** (the diagnostic, free guide, "comment X for the link"): these harvest. They only pull hundreds of signups when genres 1 and 2 have built the audience first. On a small account they still convert, just in smaller numbers, and they're worth one slot a week.
 
 Target weekly ratio: 2 story/emotion, 2 technique, 1 lead-magnet. The mistake to avoid is publishing only genre 2 (which is what Waleed's early posts did) or only genre 3 (which reads as an advert channel).
 
