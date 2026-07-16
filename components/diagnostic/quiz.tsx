@@ -4,10 +4,15 @@ import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 import { AnimatePresence, motion, useReducedMotion } from 'framer-motion'
 import {
   Answers,
-  Question,
   QUESTIONS,
   SECTIONS,
+  SECTIONS_PARENT,
+  Taker,
   getWorryOptions,
+  oDetail,
+  oLabel,
+  qHelp,
+  qTitle,
 } from '@/lib/diagnostic'
 
 const EASE = [0.22, 1, 0.36, 1] as const
@@ -15,12 +20,13 @@ const LETTERS = 'ABCDEFGHIJKL'
 
 interface QuizProps {
   answers: Answers
+  taker: Taker
   onAnswer: (id: string, value: string | string[]) => void
   onComplete: () => void
   onExit: () => void
 }
 
-export default function Quiz({ answers, onAnswer, onComplete, onExit }: QuizProps) {
+export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: QuizProps) {
   /* Resume where the student left off: first unanswered question. */
   const firstUnanswered = QUESTIONS.findIndex((q) => answers[q.id] === undefined)
   const [index, setIndex] = useState(firstUnanswered === -1 ? QUESTIONS.length - 1 : firstUnanswered)
@@ -142,7 +148,7 @@ export default function Quiz({ answers, onAnswer, onComplete, onExit }: QuizProp
               Back
             </button>
             <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55">
-              {SECTIONS[question.section]}
+              {(taker === 'parent' ? SECTIONS_PARENT : SECTIONS)[question.section]}
             </p>
             <p className="font-mono text-[11px] tracking-[0.08em] text-brand-purple/55 tabular-nums">
               {String(index + 1).padStart(2, '0')} / {total}
@@ -172,14 +178,20 @@ export default function Quiz({ answers, onAnswer, onComplete, onExit }: QuizProp
               exit="exit"
               transition={{ duration: reduceMotion ? 0.1 : 0.3, ease: EASE }}
             >
+              {taker === 'parent' && index === 0 && (
+                <div className="mb-6 rounded-xl border border-brand-gold/30 bg-brand-gold/[0.08] px-4 py-3 text-sm text-brand-text/75 leading-relaxed">
+                  Best done with your teenager next to you. If they&apos;re not around, answer from what you
+                  actually see day to day. Honest beats perfect.
+                </div>
+              )}
               <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-4">
                 {question.type === 'multi' ? 'Pick all that apply' : 'Pick one'}
               </p>
               <h2 className="font-serif font-bold tracking-tight text-[1.65rem] leading-snug sm:text-4xl sm:leading-tight text-brand-purple">
-                {question.title}
+                {qTitle(question, taker)}
               </h2>
-              {question.help && (
-                <p className="mt-3 text-brand-text/60 leading-relaxed">{question.help}</p>
+              {qHelp(question, taker) && (
+                <p className="mt-3 text-brand-text/60 leading-relaxed">{qHelp(question, taker)}</p>
               )}
 
               {/* Options */}
@@ -212,7 +224,7 @@ export default function Quiz({ answers, onAnswer, onComplete, onExit }: QuizProp
                             ✓
                           </span>
                         )}
-                        {opt.label}
+                        {oLabel(opt, taker)}
                       </button>
                     )
                   })}
@@ -245,11 +257,11 @@ export default function Quiz({ answers, onAnswer, onComplete, onExit }: QuizProp
                         </span>
                         <span className="min-w-0">
                           <span className={`block font-semibold leading-snug ${selected ? 'text-brand-cream' : 'text-brand-purple'}`}>
-                            {opt.label}
+                            {oLabel(opt, taker)}
                           </span>
-                          {opt.detail && (
+                          {oDetail(opt, taker) && (
                             <span className={`mt-0.5 block text-sm leading-snug ${selected ? 'text-brand-cream/70' : 'text-brand-text/55'}`}>
-                              {opt.detail}
+                              {oDetail(opt, taker)}
                             </span>
                           )}
                         </span>
