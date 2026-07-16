@@ -11,7 +11,7 @@ One shared email the moment someone finishes the diagnostic, then five emails ov
 | 0 (instant) | E0 Your report | | | |
 | 1 | | S1 The Year 12 autopsy | Y1 The blurting protocol | B1 Marking like an examiner |
 | 3 | | S2 The 90 minute summer day | Y2 The calendar that remembers | B2 The examiner's dictionary |
-| 6 | | S3 The pitch | Y3 The pitch (workshop first) | B3 The pitch (September cohort) |
+| 6 | | S3 The pitch | Y3 The pitch (free call on-ramp) | B3 The pitch (September cohort) |
 | 8 | | S4 Questions + parent section | Y4 Questions + parent section | B4 Questions + parent section |
 | 11 | | S5 The door | Y5 The compounding window | B5 September is a decision |
 
@@ -20,7 +20,7 @@ Value first, conversion throughout: the pitch emails only ask for the sale after
 The three variants make three different cases on purpose:
 
 - **Summer** (Year 12s in the launch window): urgency is structural, the summer itself is shrinking. Pitch day 6, door day 11. No fake deadlines: the copy is written to stay honest even if read in August ("the cohort will already be moving, recordings catch you up").
-- **Study System** (method-side diagnoses): the free workshop is the primary CTA, tiers second. Lowest-friction route because these students need to experience the method working before they'll buy structure.
+- **Study System** (method-side diagnoses): the tiers, with a free 30 minute call as the low-friction CTA and a money-back guarantee, plus a generous free solo path. These students need to trust the method before they'll buy structure, so the route stays low-pressure. (The workshop that once fronted this route is retired; the live emails were reconciled to the call on 16 July 2026.)
 - **Subject** (exam-craft diagnoses in Biology, Chemistry or Maths): the September 13th cohort is the moment, the summer bridge plan keeps them engaged until then, and the predicted-grades calendar is the honest urgency.
 
 ## Building it in MailerLite (step by step)

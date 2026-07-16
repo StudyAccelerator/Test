@@ -4,9 +4,11 @@ Send: Day 6, around 11am UK
 Segment: diag_route contains "Study System"
 Subject A: you don't need more discipline, {$name}
 Subject B: the system, installed (start free)
-Preheader: The free workshop, the Top 1% Study System, and exactly who should keep their money.
-Goal: the earned pitch. Free workshop as the on-ramp, then the Study System tiers, with an explicit who-should-not-buy section.
-Links: 2 (workshop, study systems page)
+Preheader: The Top 1% Study System, a free call if you want one, and who should keep their money.
+Goal: the earned pitch. The Study System tiers, with a free call as the low-friction on-ramp and an explicit who-should-not-buy section.
+Links: 2 (call scheduler, study systems page)
+
+> Reconciled to the live MailerLite email on 16 July 2026: the on-ramp is a free call with Waleed plus the Study Systems page, not a workshop (the workshop is retired). The live email is the authoritative copy; minor wording may differ.
 
 ---
 
@@ -20,21 +22,17 @@ Because knowing a method and running a method are different problems. Week one r
 
 Your diagnostic told the same story, by the way. {$diag_bottleneck|default('Your primary leak')} isn't a knowledge gap. It's a how-you-work gap, and how-you-work gaps don't close because you read a good email. They close when the structure stops depending on your mood.
 
-That's what the Top 1% Study System is: the method you've been learning this week, installed properly, with other people holding the frame while it becomes automatic. And the way in costs nothing, so let me start there.
+That's what the Top 1% Study System is: the method you've been learning this week, installed properly, with other people holding the frame while it becomes automatic.
 
-**Step one is free: the live workshop**
+**Step one: understanding the programme**
 
-I run a free live workshop on Zoom: the Top 1% Study Systems Workshop. An honest session on how top students actually manage workload, memory and exam performance without burning out, with time for your questions at the end. No slides recycled from a textbook, no recording of someone else's cohort, and no obligation to buy anything afterwards. Some students take the workshop, run the system solo, and that's a win. I'd genuinely rather that than you buying something you didn't need.
+A real breakdown of how top students actually manage workload and exam performance without burning out. No slides recycled from a textbook, no recording of someone else's cohort, and your money back if you join and don't find it helpful, no questions asked.
 
-[BUTTON: Reserve my free workshop spot -> https://alevelaccelerators.com/workshop/]
+The Study System comes in two serious versions:
 
-**If you want it installed rather than explained**
+The Study Series, £119. Four live sessions that teach the complete system: high-yield revision, the memory architecture, time management, exam performance. Plus fortnightly group Q&A whilst you apply it. This is "learn the system" for students who'll then drive it themselves.
 
-Beyond the workshop, the Study System comes in two serious versions:
-
-The Study Series, £119. Four live sessions that teach the complete system: high-yield revision, the memory architecture, time management, exam performance. Plus fortnightly group Q&A while you bed it in. This is "learn the system" for students who'll then drive it themselves.
-
-The Study Accelerator, £499. Twelve live sessions and, more importantly, weekly accountability and personalised guidance while the system takes root in your actual week, with your actual timetable and your actual bad Tuesdays. This is "implement the system", and it exists because implementation is where week three lives. Most students who are serious pick this tier, and the maths is worth seeing plainly: £499 is about ten hours with an average £50 an hour private tutor, who would fix one subject's content and leave the method that caused the problem untouched. The system moves every subject at once, this year and next.
+The Study Accelerator, £499. Twelve live sessions and, more importantly, weekly accountability and personalised guidance while the system takes root in your actual week, with your actual timetable. This is "implement the system", and it exists because implementation is where week three lives. Most students who are serious pick this tier, and the maths is worth seeing plainly: £499 is about ten hours with an average £50 an hour private tutor, who would fix one subject's content and leave the method that caused the problem untouched. The system moves every subject at once, this year and next.
 
 (There's a year-round mentorship tier above these. If that's relevant to your family, it's on the page, but the two above are where almost everyone belongs.)
 
@@ -42,16 +40,19 @@ What do students actually say from inside these sessions? Biju, who joined durin
 
 I won't show you grade statistics because I don't have any yet, and I'd rather tell you that plainly than imply otherwise. First results data arrives in August. Until then you're trusting the method, the teaching, and your own diagnostic, which is exactly the evidence I'd want you to use.
 
-**Who should keep their money**
+**Who is this programme not for**
 
-If your real problem is one science subject's content, a study system is the wrong first purchase: fix the subject (that's what our subject-specific programmes are for, and your report would have said so). If money is tight, take the free workshop, run this week's emails, and you have 90 percent of it. And if you haven't tried a single blurt page yet, do that first. Buying a system is not the same as running one, and I'd rather you found that out at £0.
+If your real problem is one science subject's content, a study system is the wrong first purchase: fix the subject (that's what our subject-specific programmes are for, and your report would have said so). If you're not sure whether the programme is the right fit for you, book a free 30 minute call with me, and I'll help you figure out what to prioritise (even if that's "don't spend your money, focus on the free resources first").
 
-If the diagnostic was right about you, though, and the leak is how you work, this is the treatment, and the first appointment is free:
+[BUTTON: Book a free call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
 
-[BUTTON: Reserve my free workshop spot -> https://alevelaccelerators.com/workshop/]
+If the diagnostic was right about you, though, and the leak is how you work, this is the treatment.
 
-Full details of both tiers, if you want them now: https://alevelaccelerators.com/study-systems/
+Full details of both tiers, if you want them now:
 
-Keep going!
+[BUTTON: Top 1% Study Systems -> https://alevelaccelerators.com/study-systems/]
 
+Let me know if you have any questions :)
+
+Kind regards,
 Waleed
