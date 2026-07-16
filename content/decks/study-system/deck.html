@@ -33,8 +33,8 @@
   .slide.dark { background: var(--purple); color: var(--cream); }
   .slide.dark::before { content: ""; position: absolute; top: -220px; right: -180px; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(closest-side, rgba(201,169,110,.14), rgba(201,169,110,0)); z-index: 0; }
 
-  .eyebrow { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(46,37,87,.55); }
-  .ebar { display: inline-block; width: 26px; height: 2px; background: var(--gold); vertical-align: middle; margin-right: 12px; margin-bottom: 3px; }
+  .eyebrow { display: flex; align-items: center; gap: 12px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(46,37,87,.55); }
+  .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--gold); flex-shrink: 0; }
   .dark .eyebrow { color: var(--gold); }
 
   .cover-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 61px; line-height: 1.07; letter-spacing: -.012em; color: var(--cream); }
@@ -51,10 +51,10 @@
   .brandline svg { display: block; }
 
   .card { background: #fff; border-radius: 16px; box-shadow: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05), 0 12px 24px rgba(46,37,87,.06); }
-  .card.gold-ring { box-shadow: 0 0 0 2px rgba(201,169,110,.6), 0 4px 8px rgba(46,37,87,.06), 0 18px 36px rgba(46,37,87,.12); }
+  .card.gold-ring { border: 2px solid rgba(201,169,110,.6); box-shadow: 0 4px 8px rgba(46,37,87,.06), 0 18px 36px rgba(46,37,87,.12); }
   .dark-card { background: rgba(255,255,255,.055); box-shadow: 0 0 0 1px rgba(255,255,255,.13); border-radius: 16px; }
-  .chip { display: inline-block; border: 1px solid rgba(251,248,243,.28); border-radius: 999px; padding: 9px 18px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: rgba(251,248,243,.92); white-space: nowrap; }
-  .chip .dot { color: var(--gold); margin-right: 8px; }
+  .chip { display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(251,248,243,.28); border-radius: 999px; padding: 9px 18px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: rgba(251,248,243,.92); white-space: nowrap; }
+  .chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
   .pill { display: inline-block; background: var(--gold); color: var(--purple); border-radius: 999px; padding: 6px 14px; font-size: 11.5px; font-weight: 800; letter-spacing: .04em; }
 
   .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
@@ -135,13 +135,13 @@
 
   <div class="row grow" style="align-items:center; gap:56px;">
     <div style="max-width:680px;">
-      <p class="eyebrow"><span class="ebar"></span>Top 1% Study System</p>
+      <p class="eyebrow">Top 1% Study System</p>
       <h1 class="cover-title" style="margin-top:22px;">Stay ahead <span class="gold-i">without burning out.</span></h1>
       <p class="lede" style="max-width:620px;">Workload, revision method and exam performance, taught as one system. The method behind everything we run, for students whose problem is how they study.</p>
       <div style="display:flex; gap:12px; margin-top:34px; flex-wrap:wrap;">
-        <span class="chip"><span class="dot">•</span>Next cohort Wednesday 16 September</span>
-        <span class="chip"><span class="dot">•</span>Live online · three levels of support</span>
-        <span class="chip"><span class="dot">•</span>From £119</span>
+        <span class="chip">Next cohort Wednesday 16 September</span>
+        <span class="chip">Live online · three levels of support</span>
+        <span class="chip">From £119</span>
       </div>
     </div>
     <div class="grow" style="display:flex; justify-content:center;">
@@ -163,7 +163,7 @@
 
 <!-- 02 · At a glance -->
 <section data-document-role="page" data-label="At a glance" class="slide">
-  <p class="eyebrow"><span class="ebar"></span>The programme in one slide</p>
+  <p class="eyebrow">The programme in one slide</p>
   <h2 class="slide-title">A system for every subject <span class="gold-i">at once.</span></h2>
   <div class="grow" style="display:flex; align-items:center;">
   <div class="tiles" style="flex:1; margin-top:0;">
@@ -182,7 +182,7 @@
 <section data-document-role="page" data-label="The real challenge" class="slide">
   <div class="row grow" style="gap:54px; align-items:center;">
     <div style="flex:1.05;">
-      <p class="eyebrow"><span class="ebar"></span>The real challenge</p>
+      <p class="eyebrow">The real challenge</p>
       <h2 class="slide-title">The content is not <span class="gold-i">the hard part.</span></h2>
       <p class="lede">Lessons, homework, revision, mocks and UCAS all land at once. Most students respond by working harder. That is exactly why they stay stuck.</p>
       <p class="serif" style="margin-top:24px; font-style:italic; font-size:21px; color:var(--gold); max-width:540px;">You're not struggling because you're lazy. You're using the wrong system.</p>
@@ -212,7 +212,7 @@
 <section data-document-role="page" data-label="Who built this" class="slide">
   <div class="row grow" style="gap:56px; align-items:center;">
     <div style="flex:1.15;">
-      <p class="eyebrow"><span class="ebar"></span>Who built this</p>
+      <p class="eyebrow">Who built this</p>
       <h2 class="slide-title">Built by a doctor who <span class="gold-i">learned the hard way.</span></h2>
       <p class="lede" style="max-width:560px;">I did everything school said. Re-reading, highlighting, beautiful notes. I got into medicine only because I threw hundreds of extra hours at a method that wasted most of them. Medical school taught me to study properly. That system is what I teach here.</p>
       <div class="ticks" style="margin-top:22px;">
@@ -232,7 +232,7 @@
 
 <!-- 05 · The first four weeks -->
 <section data-document-role="page" data-label="The first four weeks" class="slide">
-  <p class="eyebrow"><span class="ebar"></span>The first four weeks</p>
+  <p class="eyebrow">The first four weeks</p>
   <h2 class="slide-title">Four weeks to install <span class="gold-i">the system.</span></h2>
   <div class="grow" style="display:flex; align-items:center;">
   <div style="flex:1; display:grid; grid-template-columns:repeat(2, 1fr); gap:18px;">
@@ -247,7 +247,7 @@
 
 <!-- 06 · The 12-week arc -->
 <section data-document-role="page" data-label="The 12-week arc" class="slide">
-  <p class="eyebrow"><span class="ebar"></span>Inside the Study Accelerator</p>
+  <p class="eyebrow">Inside the Study Accelerator</p>
   <p class="statement" style="margin-top:26px;">The first four weeks build your system. The next eight make it <span class="gold-i">stick.</span></p>
   <div class="grow"></div>
   <div class="steps">
@@ -260,7 +260,7 @@
 
 <!-- 07 · Proof -->
 <section data-document-role="page" data-label="Proof" class="slide">
-  <p class="eyebrow"><span class="ebar"></span>Proof</p>
+  <p class="eyebrow">Proof</p>
   <h2 class="slide-title">What students say when it <span class="gold-i">clicks.</span></h2>
   <div class="row grow" style="gap:22px; margin-top:26px; align-items:stretch;">
     <div style="flex:1; display:flex; flex-direction:column; gap:18px;">
@@ -277,7 +277,7 @@
 
 <!-- 08 · Levels and pricing -->
 <section data-document-role="page" data-label="Pricing" class="slide">
-  <p class="eyebrow"><span class="ebar"></span>Pricing</p>
+  <p class="eyebrow">Pricing</p>
   <h2 class="slide-title">Choose the level of support.</h2>
   <div class="grow" style="display:flex; flex-direction:column; justify-content:center;">
   <div class="prices cols-3" style="max-width:1000px; margin:0 auto; width:100%;">
@@ -304,7 +304,7 @@
 <section data-document-role="page" data-label="The next step" class="slide dark">
   <div class="row grow" style="align-items:center; gap:60px;">
     <div style="max-width:660px;">
-      <p class="eyebrow"><span class="ebar"></span>The next step</p>
+      <p class="eyebrow">The next step</p>
       <h1 class="cover-title" style="font-size:52px; margin-top:20px;">Fix how you study, and every subject <span class="gold-i">moves at once.</span></h1>
       <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px;">
         <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">01</span><span style="font-size:16px;">Pick the level of support on this call.</span></div>
@@ -312,8 +312,8 @@
         <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">03</span><span style="font-size:16px;">Try the first session risk-free. Full refund, no questions asked.</span></div>
       </div>
       <div style="display:flex; gap:12px; margin-top:28px;">
-        <span class="chip"><span class="dot">•</span>Next cohort Wednesday 16 September</span>
-        <span class="chip"><span class="dot">•</span>Limited spots</span>
+        <span class="chip">Next cohort Wednesday 16 September</span>
+        <span class="chip">Limited spots</span>
       </div>
     </div>
     <div class="grow" style="display:flex; justify-content:center;">
