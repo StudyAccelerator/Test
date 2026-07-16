@@ -998,6 +998,145 @@ function renderTasks() {
   $('#task-new').addEventListener('keydown', (e) => e.key === 'Enter' && add())
 }
 
+/* ---------------------------------------------------------- live leads */
+
+/* Parents asking for A-level help right now, swept hourly by the
+   facebook-lead-radar scheduled task. Drafts only: Waleed sends every one
+   himself, which is why there is no send button anywhere in here. */
+function renderLeads() {
+  const body = $('#leads-body')
+  const chip = $('#leads-chip')
+  const store = state.leads
+
+  if (!store) {
+    chip.textContent = 'no sweep yet'
+    chip.className = 'chip chip-manual'
+    body.innerHTML =
+      '<p class="empty-state">No sweep has run yet. The radar checks Facebook every hour and drops any parent asking for A-level or GCSE help here, with a reply drafted for you to send.</p>'
+    return
+  }
+
+  if (store.lastSweepStatus === 'failed') {
+    chip.textContent = 'sweep failed'
+    chip.className = 'chip chip-error'
+  } else {
+    chip.textContent = `swept ${sweepAgo(store.lastSweep)}`
+    chip.className = 'chip chip-live'
+  }
+
+  /* A-level is the core market, GCSE the future-client tier, so A-level
+     always lists first regardless of find order */
+  const marketRank = (l) => (l.market === 'gcse' ? 1 : 0)
+  const fresh = (store.leads || []).filter((l) => l.status === 'new').sort((a, b) => marketRank(a) - marketRank(b))
+  const worked = (store.leads || []).filter((l) => l.status !== 'new')
+
+  const card = (l) => `
+    <div class="lead-card" data-id="${esc(l.id)}"${l.status !== 'new' ? ' data-worked' : ''}>
+      <div class="lead-top">
+        <span class="lead-sub">${esc(l.subject || 'General')}${l.market === 'gcse' ? ' <em class="lead-market">GCSE, future market</em>' : ''}</span>
+        <span class="lead-age">${esc(l.postedAgo || '')} old${
+    l.competingReplies != null ? ` &middot; ${nf.format(l.competingReplies)} replies already` : ''
+  }</span>
+      </div>
+      <div class="lead-quote">${esc(l.quote || '')}</div>
+      <div class="lead-meta">${esc(l.author || 'Unknown')} in ${esc(l.group || 'a group')}${
+    l.year ? ` &middot; ${esc(l.year)}` : ''
+  }</div>
+      ${l.why ? `<div class="lead-why">${esc(l.why)}</div>` : ''}
+      <div class="lead-draft" id="draft-${esc(l.id)}">${esc(l.draft || '')}</div>
+      <div class="lead-actions">
+        <a class="gold-btn" href="${esc(l.url)}" target="_blank" rel="noreferrer">Open post</a>
+        <button class="ghost-btn lead-copy" type="button">Copy draft</button>
+        <button class="ghost-btn lead-sent" type="button">Mark sent</button>
+        <button class="ghost-btn lead-skip" type="button">Skip</button>
+      </div>
+      ${
+        l.copies && l.copies.length
+          ? `<div class="lead-copies">Also posted in ${nf.format(l.copies.length)} other group${
+              l.copies.length > 1 ? 's' : ''
+            }: ${l.copies.map((c, i) => `<a href="${esc(c)}" target="_blank" rel="noreferrer">copy ${i + 1}</a>`).join(', ')}</div>`
+          : ''
+      }
+    </div>`
+
+  const skipped = store.skippedCounts || {}
+  const skipBits = Object.entries(skipped)
+    .filter(([, n]) => n > 0)
+    .map(([k, n]) => `${nf.format(n)} ${skipLabel(k)}`)
+    .join(', ')
+
+  body.innerHTML = `
+    ${
+      fresh.length
+        ? fresh.map(card).join('')
+        : `<p class="empty-state">No new leads this sweep. ${esc(
+            store.lastSweepNote || ''
+          )}</p>`
+    }
+    ${worked.length ? `<div class="subhead">Worked</div>${worked.map(card).join('')}` : ''}
+    <p class="small muted lead-foot">Drafts only. You send every one yourself.${
+      skipBits ? ` Last sweep filtered out ${skipBits}.` : ''
+    }</p>`
+
+  const setStatus = async (id, status) => {
+    const l = state.leads.leads.find((x) => x.id === id)
+    if (!l) return
+    l.status = status
+    l.workedAt = new Date().toISOString()
+    await putStore('leads', state.leads)
+    renderLeads()
+    renderTriage()
+  }
+
+  body.querySelectorAll('.lead-copy').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const id = btn.closest('.lead-card').dataset.id
+      const l = state.leads.leads.find((x) => x.id === id)
+      try {
+        await navigator.clipboard.writeText(l.draft || '')
+        btn.textContent = 'Copied'
+        setTimeout(() => (btn.textContent = 'Copy draft'), 1400)
+      } catch {
+        const range = document.createRange()
+        range.selectNodeContents($('#draft-' + id))
+        const sel = window.getSelection()
+        sel.removeAllRanges()
+        sel.addRange(range)
+        btn.textContent = 'Selected, press Cmd C'
+        setTimeout(() => (btn.textContent = 'Copy draft'), 2200)
+      }
+    })
+  })
+  body.querySelectorAll('.lead-sent').forEach((btn) =>
+    btn.addEventListener('click', () => setStatus(btn.closest('.lead-card').dataset.id, 'sent'))
+  )
+  body.querySelectorAll('.lead-skip').forEach((btn) =>
+    btn.addEventListener('click', () => setStatus(btn.closest('.lead-card').dataset.id, 'skipped'))
+  )
+}
+
+function skipLabel(key) {
+  const map = {
+    gcse: 'GCSE (from before the 17 Jul widening)',
+    tutorAds: 'tutors advertising',
+    tooOld: 'too old to be worth it',
+    notUk: 'not UK',
+    otherSubject: 'subjects we do not teach',
+    otherLevel: '11+/primary/university',
+    gcseOverCap: 'GCSE over the 3-per-sweep cap',
+  }
+  return map[key] || key
+}
+
+function sweepAgo(iso) {
+  const mins = Math.round((Date.now() - new Date(iso)) / 60000)
+  if (mins < 2) return 'just now'
+  if (mins < 60) return `${mins}m ago`
+  const hrs = Math.round(mins / 60)
+  if (hrs < 24) return `${hrs}h ago`
+  return shortDate(iso)
+}
+
 /* ---------------------------------------------------------- competitors */
 
 function renderCompetitors() {
@@ -1132,6 +1271,28 @@ function renderConnections() {
 function renderTriage() {
   const items = []
   const today = new Date().toISOString().slice(0, 10)
+
+  /* a fresh lead decays fast: the whole play is replying while the post is
+     still near the top of its group, so this outranks everything else */
+  if (state.leads && state.leads.leads) {
+    const fresh = state.leads.leads.filter((l) => l.status === 'new')
+    if (fresh.length) {
+      items.push({
+        sev: 'high',
+        title: `${fresh.length} parent${fresh.length > 1 ? 's are' : ' is'} asking for tutoring help right now`,
+        why: `${fresh
+          .map((l) => `${l.market === 'gcse' ? 'GCSE ' : ''}${l.subject || 'general'}, ${l.postedAgo || 'recent'} old`)
+          .join('; ')}. Draft${fresh.length > 1 ? 's' : ''} ready in Live leads below. Reply fast or the post sinks.`,
+      })
+    }
+  }
+  if (state.leads && state.leads.lastSweepStatus === 'failed') {
+    items.push({
+      sev: 'med',
+      title: 'The Facebook lead radar could not run',
+      why: `${state.leads.lastSweepNote || 'Unknown reason.'} Usually this means Chrome was closed or Facebook was logged out.`,
+    })
+  }
 
   if (state.site && !state.site.up) {
     items.push({
@@ -1311,6 +1472,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/store/calendar'),
     getJSON('/api/store/linkedin-competitors'),
     getJSON('/api/monzo'),
+    getJSON('/api/store/leads'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -1330,6 +1492,8 @@ async function loadAll(fresh = false) {
   state.calendar = calStore && calStore.extractedAt ? calStore : null
   state.liCompetitors = val(13, null)
   state.monzo = val(14, null)
+  const leadStore = val(15, null)
+  state.leads = leadStore && leadStore.lastSweep ? leadStore : null
 }
 
 function renderAll() {
@@ -1347,6 +1511,7 @@ function renderAll() {
   renderCompetitors()
   renderInbox()
   renderConnections()
+  renderLeads()
   renderTriage()
 }
 

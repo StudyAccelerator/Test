@@ -77,7 +77,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -659,6 +659,8 @@ async function handleApi(req, res, url) {
       } catch {}
     }
     const resultsDay = Math.ceil((new Date('2026-08-13T00:00:00') - Date.now()) / 86400000)
+    const leadStore = readStore('leads', null)
+    const newLeads = leadStore && leadStore.leads ? leadStore.leads.filter((l) => l.status === 'new').length : 0
     return sendJson(res, 200, {
       updatedAt: new Date().toISOString(),
       openTasks: open.length,
@@ -668,6 +670,7 @@ async function handleApi(req, res, url) {
       stripeBalance: snap ? snap.balanceAvailable : null,
       lastSale: snap ? snap.lastSale : null,
       daysToResultsDay: resultsDay,
+      newLeads,
     })
   }
 

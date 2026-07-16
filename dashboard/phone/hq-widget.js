@@ -68,6 +68,14 @@ try {
     clear.textColor = GREEN
   }
 
+  if (d.newLeads) {
+    w.addSpacer(4)
+    const lead = w.addText(`\u{1F514} ${d.newLeads} parent${d.newLeads > 1 ? "s" : ""} asking for a tutor`)
+    lead.font = Font.boldSystemFont(11)
+    lead.textColor = GOLD
+    lead.lineLimit = 1
+  }
+
   if (d.todayEvents && d.todayEvents.length) {
     w.addSpacer(4)
     const e = d.todayEvents[0]
