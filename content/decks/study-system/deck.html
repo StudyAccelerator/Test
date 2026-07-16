@@ -33,8 +33,8 @@
   .slide.dark { background: var(--purple); color: var(--cream); }
   .slide.dark::before { content: ""; position: absolute; top: -220px; right: -180px; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(closest-side, rgba(201,169,110,.14), rgba(201,169,110,0)); z-index: 0; }
 
-  .eyebrow { display: flex; align-items: center; gap: 12px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(46,37,87,.55); }
-  .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--gold); flex-shrink: 0; }
+  .eyebrow { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(46,37,87,.55); }
+  .ebar { display: inline-block; width: 26px; height: 2px; background: var(--gold); vertical-align: middle; margin-right: 12px; margin-bottom: 3px; }
   .dark .eyebrow { color: var(--gold); }
 
   .cover-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 61px; line-height: 1.07; letter-spacing: -.012em; color: var(--cream); }
@@ -53,8 +53,8 @@
   .card { background: #fff; border-radius: 16px; box-shadow: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05), 0 12px 24px rgba(46,37,87,.06); }
   .card.gold-ring { box-shadow: 0 0 0 2px rgba(201,169,110,.6), 0 4px 8px rgba(46,37,87,.06), 0 18px 36px rgba(46,37,87,.12); }
   .dark-card { background: rgba(255,255,255,.055); box-shadow: 0 0 0 1px rgba(255,255,255,.13); border-radius: 16px; }
-  .chip { display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(251,248,243,.28); border-radius: 999px; padding: 9px 18px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: rgba(251,248,243,.92); white-space: nowrap; }
-  .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .chip { display: inline-block; border: 1px solid rgba(251,248,243,.28); border-radius: 999px; padding: 9px 18px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: rgba(251,248,243,.92); white-space: nowrap; }
+  .chip .dot { color: var(--gold); margin-right: 8px; }
   .pill { display: inline-block; background: var(--gold); color: var(--purple); border-radius: 999px; padding: 6px 14px; font-size: 11.5px; font-weight: 800; letter-spacing: .04em; }
 
   .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
@@ -63,9 +63,8 @@
   .tile .v { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 23px; line-height: 1.2; color: var(--purple); margin-top: 10px; }
   .tile .s { font-size: 13.5px; line-height: 1.5; color: rgba(26,21,53,.62); margin-top: 7px; }
 
-  .ticks { list-style: none; }
-  .ticks li { display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.5; color: rgba(26,21,53,.78); }
-  .ticks li + li { margin-top: 13px; }
+  .ticks .tickrow { display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.5; color: rgba(26,21,53,.78); }
+  .ticks .tickrow + .tickrow { margin-top: 13px; }
   .ticks .t { color: var(--gold); font-weight: 800; flex-shrink: 0; }
   .ticks .x { color: #b3544f; font-weight: 800; flex-shrink: 0; }
 
@@ -101,18 +100,18 @@
   .price .save { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-top: 6px; min-height: 13px; }
   .price .amt { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 44px; color: var(--purple); margin-top: 12px; }
   .price .per { font-size: 12px; color: rgba(26,21,53,.55); margin-top: 4px; }
-  .price ul { list-style: none; margin-top: 16px; text-align: left; }
-  .price li { display: flex; gap: 9px; font-size: 13px; line-height: 1.45; color: rgba(26,21,53,.72); }
-  .price li + li { margin-top: 8px; }
-  .price li .t { color: var(--gold); font-weight: 800; }
+  .plist { margin-top: 16px; text-align: left; }
+  .plist .tickrow { display: flex; gap: 9px; font-size: 13px; line-height: 1.45; color: rgba(26,21,53,.72); }
+  .plist .tickrow + .tickrow { margin-top: 8px; }
+  .plist .t { color: var(--gold); font-weight: 800; flex-shrink: 0; }
   .price .flag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); }
 
   .photo-frame { background: #fff; padding: 7px; border-radius: 18px; box-shadow: 0 0 0 1px rgba(46,37,87,.08), 0 16px 32px rgba(46,37,87,.18); transform: rotate(-1.6deg); }
   .photo-frame img { display: block; width: 100%; border-radius: 12px; }
   .photo-frame .cap { text-align: center; font-size: 11.5px; font-weight: 600; color: rgba(26,21,53,.6); padding: 8px 0 4px; }
 
-  .climb { display: flex; align-items: flex-end; gap: 13px; }
-  .climb .rung { width: 84px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+  .climb { position: relative; width: 375px; height: 154px; }
+  .climb .rung { position: absolute; bottom: 0; width: 84px; border-radius: 14px; display: flex; align-items: center; justify-content: center; text-align: center; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
   .climb .r1 { height: 54px; font-size: 19px; background: rgba(255,255,255,.07); box-shadow: 0 0 0 1px rgba(255,255,255,.09); color: rgba(251,248,243,.45); }
   .climb .r2 { height: 84px; font-size: 23px; background: rgba(255,255,255,.12); box-shadow: 0 0 0 1px rgba(255,255,255,.12); color: rgba(251,248,243,.7); }
   .climb .r3 { height: 116px; font-size: 27px; background: rgba(201,169,110,.26); box-shadow: 0 0 0 1px rgba(201,169,110,.4); color: var(--gold-light); }
@@ -136,23 +135,22 @@
 
   <div class="row grow" style="align-items:center; gap:56px;">
     <div style="max-width:680px;">
-      <p class="eyebrow">Top 1% Study System</p>
+      <p class="eyebrow"><span class="ebar"></span>Top 1% Study System</p>
       <h1 class="cover-title" style="margin-top:22px;">Stay ahead <span class="gold-i">without burning out.</span></h1>
       <p class="lede" style="max-width:620px;">Workload, revision method and exam performance, taught as one system. The method behind everything we run, for students whose problem is how they study.</p>
       <div style="display:flex; gap:12px; margin-top:34px; flex-wrap:wrap;">
-        <span class="chip"><span class="dot"></span>Next cohort Wednesday 16 September</span>
-        <span class="chip"><span class="dot"></span>Live online · three levels of support</span>
-        <span class="chip"><span class="dot"></span>From £119</span>
+        <span class="chip"><span class="dot">•</span>Next cohort Wednesday 16 September</span>
+        <span class="chip"><span class="dot">•</span>Live online · three levels of support</span>
+        <span class="chip"><span class="dot">•</span>From £119</span>
       </div>
     </div>
     <div class="grow" style="display:flex; justify-content:center;">
-      <div style="position:relative; display:flex; align-items:flex-end; gap:12px; padding-top:48px;">
-        <span style="width:44px; height:46px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
-        <span style="width:44px; height:72px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
-        <span style="width:44px; height:96px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
-        <span style="position:relative; width:44px; height:140px; border-radius:10px 10px 4px 4px; background:var(--gold); box-shadow:0 16px 32px rgba(0,0,0,.35);">
-          <span class="pill" style="position:absolute; top:-40px; left:50%; transform:translateX(-50%); white-space:nowrap;">top 1%</span>
-        </span>
+      <div style="position:relative; width:212px; height:188px;">
+        <span style="position:absolute; display:block; bottom:0; left:0; width:44px; height:46px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
+        <span style="position:absolute; display:block; bottom:0; left:56px; width:44px; height:72px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
+        <span style="position:absolute; display:block; bottom:0; left:112px; width:44px; height:96px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
+        <span style="position:absolute; display:block; bottom:0; left:168px; width:44px; height:140px; border-radius:10px 10px 4px 4px; background:var(--gold); box-shadow:0 16px 32px rgba(0,0,0,.35);"></span>
+        <span class="pill" style="position:absolute; top:4px; left:152px; width:76px; text-align:center; padding:6px 0; white-space:nowrap;">top 1%</span>
       </div>
     </div>
   </div>
@@ -165,7 +163,7 @@
 
 <!-- 02 · At a glance -->
 <section data-document-role="page" data-label="At a glance" class="slide">
-  <p class="eyebrow">The programme in one slide</p>
+  <p class="eyebrow"><span class="ebar"></span>The programme in one slide</p>
   <h2 class="slide-title">A system for every subject <span class="gold-i">at once.</span></h2>
   <div class="grow" style="display:flex; align-items:center;">
   <div class="tiles" style="flex:1; margin-top:0;">
@@ -184,7 +182,7 @@
 <section data-document-role="page" data-label="The real challenge" class="slide">
   <div class="row grow" style="gap:54px; align-items:center;">
     <div style="flex:1.05;">
-      <p class="eyebrow">The real challenge</p>
+      <p class="eyebrow"><span class="ebar"></span>The real challenge</p>
       <h2 class="slide-title">The content is not <span class="gold-i">the hard part.</span></h2>
       <p class="lede">Lessons, homework, revision, mocks and UCAS all land at once. Most students respond by working harder. That is exactly why they stay stuck.</p>
       <p class="serif" style="margin-top:24px; font-style:italic; font-size:21px; color:var(--gold); max-width:540px;">You're not struggling because you're lazy. You're using the wrong system.</p>
@@ -192,18 +190,18 @@
     <div style="flex:1;">
       <div class="card" style="padding:26px 30px;">
         <p class="mono" style="font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:rgba(46,37,87,.48);">Most students</p>
-        <ul class="ticks" style="margin-top:14px;">
-          <li><span class="x">✗</span><span>Try to do everything at once</span></li>
-          <li><span class="x">✗</span><span>Study for hours and see no improvement</span></li>
-          <li><span class="x">✗</span><span>Rely on willpower and burn out</span></li>
-        </ul>
+        <div class="ticks" style="margin-top:14px;">
+          <div class="tickrow"><span class="x">✗</span><span>Try to do everything at once</span></div>
+          <div class="tickrow"><span class="x">✗</span><span>Study for hours and see no improvement</span></div>
+          <div class="tickrow"><span class="x">✗</span><span>Rely on willpower and burn out</span></div>
+        </div>
         <div style="height:1px; background:linear-gradient(90deg, transparent, rgba(201,169,110,.5), transparent); margin:20px 0;"></div>
         <p class="mono" style="font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold);">Top students</p>
-        <ul class="ticks" style="margin-top:14px;">
-          <li><span class="t">✓</span><span>Focus only on what moves the needle</span></li>
-          <li><span class="t">✓</span><span>Follow a system, not a feeling</span></li>
-          <li><span class="t">✓</span><span>Stay consistent without burning out</span></li>
-        </ul>
+        <div class="ticks" style="margin-top:14px;">
+          <div class="tickrow"><span class="t">✓</span><span>Focus only on what moves the needle</span></div>
+          <div class="tickrow"><span class="t">✓</span><span>Follow a system, not a feeling</span></div>
+          <div class="tickrow"><span class="t">✓</span><span>Stay consistent without burning out</span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -214,13 +212,13 @@
 <section data-document-role="page" data-label="Who built this" class="slide">
   <div class="row grow" style="gap:56px; align-items:center;">
     <div style="flex:1.15;">
-      <p class="eyebrow">Who built this</p>
+      <p class="eyebrow"><span class="ebar"></span>Who built this</p>
       <h2 class="slide-title">Built by a doctor who <span class="gold-i">learned the hard way.</span></h2>
       <p class="lede" style="max-width:560px;">I did everything school said. Re-reading, highlighting, beautiful notes. I got into medicine only because I threw hundreds of extra hours at a method that wasted most of them. Medical school taught me to study properly. That system is what I teach here.</p>
-      <ul class="ticks" style="margin-top:22px;">
-        <li><span class="t">✓</span><span>The systems I built through my own A-levels and refined under medical school pressure</span></li>
-        <li><span class="t">✓</span><span>Method over subject: it works across every A-level you take</span></li>
-      </ul>
+      <div class="ticks" style="margin-top:22px;">
+        <div class="tickrow"><span class="t">✓</span><span>The systems I built through my own A-levels and refined under medical school pressure</span></div>
+        <div class="tickrow"><span class="t">✓</span><span>Method over subject: it works across every A-level you take</span></div>
+      </div>
     </div>
     <div style="flex:0.85; display:flex; justify-content:center;">
       <div class="photo-frame" style="width:360px;">
@@ -234,7 +232,7 @@
 
 <!-- 05 · The first four weeks -->
 <section data-document-role="page" data-label="The first four weeks" class="slide">
-  <p class="eyebrow">The first four weeks</p>
+  <p class="eyebrow"><span class="ebar"></span>The first four weeks</p>
   <h2 class="slide-title">Four weeks to install <span class="gold-i">the system.</span></h2>
   <div class="grow" style="display:flex; align-items:center;">
   <div style="flex:1; display:grid; grid-template-columns:repeat(2, 1fr); gap:18px;">
@@ -249,7 +247,7 @@
 
 <!-- 06 · The 12-week arc -->
 <section data-document-role="page" data-label="The 12-week arc" class="slide">
-  <p class="eyebrow">Inside the Study Accelerator</p>
+  <p class="eyebrow"><span class="ebar"></span>Inside the Study Accelerator</p>
   <p class="statement" style="margin-top:26px;">The first four weeks build your system. The next eight make it <span class="gold-i">stick.</span></p>
   <div class="grow"></div>
   <div class="steps">
@@ -262,7 +260,7 @@
 
 <!-- 07 · Proof -->
 <section data-document-role="page" data-label="Proof" class="slide">
-  <p class="eyebrow">Proof</p>
+  <p class="eyebrow"><span class="ebar"></span>Proof</p>
   <h2 class="slide-title">What students say when it <span class="gold-i">clicks.</span></h2>
   <div class="row grow" style="gap:22px; margin-top:26px; align-items:stretch;">
     <div style="flex:1; display:flex; flex-direction:column; gap:18px;">
@@ -279,22 +277,22 @@
 
 <!-- 08 · Levels and pricing -->
 <section data-document-role="page" data-label="Pricing" class="slide">
-  <p class="eyebrow">Pricing</p>
+  <p class="eyebrow"><span class="ebar"></span>Pricing</p>
   <h2 class="slide-title">Choose the level of support.</h2>
   <div class="grow" style="display:flex; flex-direction:column; justify-content:center;">
   <div class="prices cols-3" style="max-width:1000px; margin:0 auto; width:100%;">
     <div class="card price">
       <p class="name">Study Series</p><p class="save"></p><p class="amt">£119</p><p class="per">learn the system</p>
-      <ul><li><span class="t">✓</span><span>4 live sessions</span></li><li><span class="t">✓</span><span>Fortnightly group Q&amp;A</span></li></ul>
+      <div class="plist"><div class="tickrow"><span class="t">✓</span><span>4 live sessions</span></div><div class="tickrow"><span class="t">✓</span><span>Fortnightly group Q&amp;A</span></div></div>
     </div>
     <div class="card price gold-ring">
       <span class="flag pill">Most chosen</span>
       <p class="name">Study Accelerator</p><p class="save">12 weeks</p><p class="amt">£499</p><p class="per">implement the system</p>
-      <ul><li><span class="t">✓</span><span>12 sessions plus weekly accountability</span></li><li><span class="t">✓</span><span>1:1 guidance, templates and feedback</span></li></ul>
+      <div class="plist"><div class="tickrow"><span class="t">✓</span><span>12 sessions plus weekly accountability</span></div><div class="tickrow"><span class="t">✓</span><span>1:1 guidance, templates and feedback</span></div></div>
     </div>
     <div class="card price">
       <p class="name">Top 1% Mentorship</p><p class="save">Year round</p><p class="amt">£2,000</p><p class="per">per year · optimise and accelerate</p>
-      <ul><li><span class="t">✓</span><span>Fortnightly calls all year</span></li><li><span class="t">✓</span><span>24/7 access to Dr Waleed, fully customised plan</span></li></ul>
+      <div class="plist"><div class="tickrow"><span class="t">✓</span><span>Fortnightly calls all year</span></div><div class="tickrow"><span class="t">✓</span><span>24/7 access to Dr Waleed, fully customised plan</span></div></div>
     </div>
   </div>
   <p style="margin-top:26px; font-size:14px; color:rgba(26,21,53,.65); text-align:center;">Most students choose the Accelerator for faster results and accountability. <strong style="color:var(--purple);">First session risk-free: full refund, no questions asked.</strong></p>
@@ -306,7 +304,7 @@
 <section data-document-role="page" data-label="The next step" class="slide dark">
   <div class="row grow" style="align-items:center; gap:60px;">
     <div style="max-width:660px;">
-      <p class="eyebrow">The next step</p>
+      <p class="eyebrow"><span class="ebar"></span>The next step</p>
       <h1 class="cover-title" style="font-size:52px; margin-top:20px;">Fix how you study, and every subject <span class="gold-i">moves at once.</span></h1>
       <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px;">
         <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">01</span><span style="font-size:16px;">Pick the level of support on this call.</span></div>
@@ -314,18 +312,17 @@
         <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">03</span><span style="font-size:16px;">Try the first session risk-free. Full refund, no questions asked.</span></div>
       </div>
       <div style="display:flex; gap:12px; margin-top:28px;">
-        <span class="chip"><span class="dot"></span>Next cohort Wednesday 16 September</span>
-        <span class="chip"><span class="dot"></span>Limited spots</span>
+        <span class="chip"><span class="dot">•</span>Next cohort Wednesday 16 September</span>
+        <span class="chip"><span class="dot">•</span>Limited spots</span>
       </div>
     </div>
     <div class="grow" style="display:flex; justify-content:center;">
-      <div style="position:relative; display:flex; align-items:flex-end; gap:12px; padding-top:48px;">
-        <span style="width:44px; height:46px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
-        <span style="width:44px; height:72px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
-        <span style="width:44px; height:96px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
-        <span style="position:relative; width:44px; height:140px; border-radius:10px 10px 4px 4px; background:var(--gold); box-shadow:0 16px 32px rgba(0,0,0,.35);">
-          <span class="pill" style="position:absolute; top:-40px; left:50%; transform:translateX(-50%); white-space:nowrap;">top 1%</span>
-        </span>
+      <div style="position:relative; width:212px; height:188px;">
+        <span style="position:absolute; display:block; bottom:0; left:0; width:44px; height:46px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
+        <span style="position:absolute; display:block; bottom:0; left:56px; width:44px; height:72px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
+        <span style="position:absolute; display:block; bottom:0; left:112px; width:44px; height:96px; border-radius:10px 10px 4px 4px; background:rgba(255,255,255,.10);"></span>
+        <span style="position:absolute; display:block; bottom:0; left:168px; width:44px; height:140px; border-radius:10px 10px 4px 4px; background:var(--gold); box-shadow:0 16px 32px rgba(0,0,0,.35);"></span>
+        <span class="pill" style="position:absolute; top:4px; left:152px; width:76px; text-align:center; padding:6px 0; white-space:nowrap;">top 1%</span>
       </div>
     </div>
   </div>
