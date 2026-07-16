@@ -58,9 +58,9 @@ Waleed's SECOND HQ, deliberately separate from the dashboard: the short-form con
 - Carousel graphics pipeline: HTML sources in `content-hq/graphics-src/`, rendered by `render.py` (headless Chrome + PIL split); visually check every render for overflow. All package copy obeys the content rules and `scripts/compliance-scan.py`.
 - `content-hq/data/` and `content-hq/.env` are gitignored; `content-hq/seed/` holds the committed baseline (the 17 July research snapshot). The niche strategy headline from that research: the A-level-only lane at scale is EMPTY (every mega account is GCSE), and no UK doctor does A-level revision content. That intersection is the positioning.
 
-## Business audit (13 July 2026)
+## Business audit (13 July 2026, reaudited 16 July 2026)
 
-A full business audit and ranked growth plan lives at `content/business-audit/2026-07-13-business-audit-and-growth-plan.md`: live funnel numbers from MailerLite, competitor pricing snapshot, domain-rating comparison, dead-weight list, five ranked growth plays, and a section 9 list of numbers and decisions awaited from Waleed. Sessions doing marketing, launch or pricing work should read it first. It contains no invented figures; keep it that way when updating it.
+The current audit is `content/business-audit/2026-07-16-reaudit-and-road-to-1m.md` (16 July): live re-measured funnel and SEO numbers, an execution scoreboard against the 13 July plays, Companies House evidence on which business shapes verifiably clear £1M a year in this market (Justin Craig is the profitable small-group comparator), a four-stage gated roadmap to £1M, and a section 9 list of numbers only Waleed can supply (hours, capacity, tutor economics). The 13 July original (`2026-07-13-business-audit-and-growth-plan.md`) remains the baseline with the full competitor and funnel detail plus the recorded Stripe account truth (18 payments, £5,573 net lifetime, none at current prices). Sessions doing marketing, launch or pricing work should read the 16 July doc first. Neither contains invented figures; keep it that way when updating them.
 
 ## Facebook groups channel (15 July 2026)
 
