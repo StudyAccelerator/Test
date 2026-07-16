@@ -34,6 +34,19 @@ No number on the dashboard is ever invented. A source is either live, manual (yo
 | Monzo | Needs Waleed's sign in | Live business and personal balances, read only. Waleed creates a Confidential OAuth client at developers.monzo.com (redirect `http://localhost:4400/api/monzo/callback`), puts `MONZO_CLIENT_ID` and `MONZO_CLIENT_SECRET` in `dashboard/.env` (see `.env.example`), restarts, then presses **Connect Monzo** on the Bank panel and approves the notification in the Monzo phone app. Tokens land in `data/monzo-tokens.json` (gitignored, owner-only) and refresh themselves; they are never exposed through the store API. Claude cannot do this sign in on his behalf. |
 | Competitor radar | Researched | Deep multi-agent research 12 to 14 July 2026 with an adversarial fact-check pass, committed in `seed/competitors.json`. Every count carries its source; Up Learn fully verified, others single-pass. Refresh by asking a session to "refresh the competitor radar". |
 
+## On your phone
+
+The dashboard is an installable app (a PWA): on a phone it becomes swipeable full-screen pages, Tasks first, with section chips along the bottom. Nothing is hosted publicly; the phone talks to the Mac directly, so the Mac must be awake with `npm run hq` running.
+
+**Reaching the Mac (pick one):**
+
+1. **Tailscale, recommended.** Install Tailscale (free) on the Mac and the phone, sign in to both with the same account, then on the Mac run `tailscale serve --bg localhost:4400`. The dashboard appears at a private `https://...ts.net` address that only your own devices can reach, from anywhere, encrypted. The server stays bound to 127.0.0.1.
+2. **Home Wi-Fi only.** Put `HQ_HOST=0.0.0.0` and an `HQ_TOKEN=<any long random string>` in `dashboard/.env`, restart, then open `http://<the Mac's IP>:4400/?key=<token>` on the phone once (the token plants a year-long cookie; without it the server answers 401). Works only at home.
+
+**Install as an app:** open the address on the phone, then iPhone Safari: Share, Add to Home Screen. Android Chrome: menu, Add to Home screen / Install. It opens full screen with the HQ icon, and shows an honest "cannot reach your Mac" page when the Mac is off.
+
+**Home screen widget (iPhone):** iOS does not let web apps make widgets, so the widget runs in the free Scriptable app: setup steps are at the top of `phone/hq-widget.js` (paste the script, set your address, add a Scriptable widget). It shows open tasks, today's calendar, subscribers and the Stripe balance from `/api/widget`, refreshed on Apple's schedule of roughly every 15 to 60 minutes. On Android, ask a session for the equivalent.
+
 ## Layout of this folder
 
 - `server.js` is the whole backend. Static files plus `/api/*` proxies so keys never reach the browser.

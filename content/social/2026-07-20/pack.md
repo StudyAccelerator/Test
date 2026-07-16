@@ -20,18 +20,17 @@ Rebuilt 16 July after Waleed's review of v1. What changed and why:
 | Day | LinkedIn 4:30pm (students) | FB page 9:30am (parents) | FB groups, evening (parents) |
 | --- | --- | --- | --- |
 | Thu 16 | Confession, then/now photos | Who am I + "revising all day" ask | Join all groups, set up profile, comments only |
-| Fri 17 | Past papers carousel... no, document is Tue; past papers post + desk photo | "I'll start Monday" collection | Comments only |
+| Fri 17 | Past papers method + desk photo | "I'll start Monday" collection | Comments only |
 | Sat 18 | Recognition vs retrieval + photo | A or B: re-read or past paper | Comments only, lighter weekend |
 | Sun 19 | Four tiers + photo | The question I hear most from parents | Comments; final profile polish |
-| Mon 20 | Nobody asked HOW + photo | Three questions that beat "how's revision going" | FIRST post: Parents of Teenagers UK (advice-ask) |
-| Tue 21 | Five systems carousel (de-branded) | Six-hour timetable confession | 11+ & GCSE & A Level Success UK (normalisation) |
-| Wed 22 | The Grinder + school-era photo | Predicted grades: did anyone tell you? | GCSE resources UK (confession) |
+| Mon 20 | Nobody asked HOW + photo | Three questions that beat "how's revision going" | Comments only (standing rule) |
+| Tue 21 | Five systems carousel (de-branded) | Six-hour timetable confession | OPTIONAL: 11+ & GCSE & A Level Success UK (normalisation) |
+| Wed 22 | The Grinder + school-era photo | Predicted grades: did anyone tell you? | Comments only |
 | Thu 23 | Diagnostic launch + real screenshots | Kitchen-table photo: real revision is messy | A-Level Tuition (unpopular opinion) + AMA outreach to admins |
-| Fri 24 | Predicted grades runway + photo | The diagnostic, parent path | GCSE and A-level Revision UK (results-day ask) |
+| Fri 24 | Predicted grades runway + photo | The diagnostic, parent path | Comments only (results-day ask held for August) |
 | Sat 25 | Six-hours timetable confession + photo | Two Septembers + summer programme | Home Ed Looking For Tutors (the one open pitch) |
 | Sun 26 | The student who cried + photo | Why a doctor teaches + hospital photo | Rest, reply catch-up, log what worked |
 
-(The Fri 17 LinkedIn cell above: the past-papers post runs with the writing-at-desk photo; the carousel stays on Tuesday.)
 
 ## 3. Mechanics
 
@@ -432,9 +431,15 @@ Reels are the only Facebook surface that reaches non-followers organically. Scri
 
 Groups from `content/facebook-groups/2026-07-15-facebook-groups-and-parent-competitors.md`. Waleed does every group action himself, as himself. Hard rules first, then the day-by-day, then the post drafts.
 
+### The correction from the groups session (16 July, observed data)
+
+The Facebook research session reviewed this playbook against what it saw inside the groups and made one structural correction, which this version adopts: **standing precedes posting.** The strongest data point in the whole research: a member of UK Medicine Applicants who joined in November 2024, built 1,560 group contribution points over 19 months, and THEN posted a free webinar drew 145 comments; his repeat three weeks later collapsed 88 percent. Waleed joins these groups this week, so during 16 to 26 July the plan is comments-only in every group EXCEPT the two where posting is the group's stated purpose and nobody has standing anyway (A-Level Tuition, Home Ed Looking For Tutors). The held drafts below are written and banked for the August pack, when two weeks of visible helpfulness will exist and results day makes them land harder.
+
+Its other observed corrections, all adopted: Parents of Teenagers UK is comments-only permanently for us (its rules ban promotion AND medical questions, every post is human-approved, and the doctor framing is a liability there, not an asset); GCSE resources UK bans ALL external links, not just gated ones, and its feed shows no conversation posts at all (it is a group for answering requests, not authoring); 11+ & GCSE & A Level Success UK bans any mention of DMs in posts or comments; and everything everywhere is posted from Waleed's PERSONAL profile, never the Dr Waleed Ahmad Page (two key groups block Pages outright; see `content/facebook-groups/2026-07-15-personal-facebook-strategy.md`).
+
 ### The rules that keep you welcome
 
-1. **Days 1 to 4 are comments only.** Answer live parent threads fully, in-thread, no links, no "DM me". A brand-new member's first authored post reads as spam; a familiar commenter's first post reads as community.
+1. **This run is comments-first almost everywhere.** Answer live parent threads fully, in-thread, no links, no "DM me". A brand-new member's first authored post reads as spam; a familiar commenter's first post reads as community. Two to three helpful comments a week in a group also holds the Top Contributor badge (rolling 28-day window).
 2. **Profile is the landing page.** Before the first comment: bio line ("NHS doctor. A-level tutor. I fix how students revise."), featured section (the diagnostic and site), work field set. Every good comment produces profile clicks; make them land.
 3. **One authored group post per day, maximum.** Never the same text in two groups (Facebook's duplicate detection, plus parents belong to several of these groups and will notice). Every draft below is unique on purpose.
 4. **Links: only where a group's rules allow, only in comments, and the email-gated diagnostic NEVER in Homeschooling & Home Education Information and Support UK (their rules remove signup-page links; the ungated tracker is fine there).**
@@ -445,20 +450,24 @@ Groups from `content/facebook-groups/2026-07-15-facebook-groups-and-parent-compe
 
 ### Day by day
 
-- **Thu 16:** Join: GCSE resources UK, A-Level Tuition, Home Education Looking For Tutors (UK), 11+ & GCSE & A Level Success UK, UK Medicine Applicants 2026 & 2027 (personal profile; entry questions), Friendly Home Education UK (entry password: AWE HE Club), Parents of Teenagers UK (honesty-screened entry questions), Homeschooling & Home Education Information and Support UK, GCSE and A-level Revision UK. Set up the profile-as-landing-page. Then 20 minutes of comments in GCSE resources UK and A-Level Tuition: find tutor-request and revision-question threads, answer properly.
-- **Fri 17:** Comments, 20 minutes. In Home Ed Looking For Tutors, tutor requests may be answered WITH an offer (that group exists for it). Elsewhere, value only.
-- **Sat 18 and Sun 19:** Light weekend commenting, 10 minutes each day. Weekends are quiet in groups; do not author anything yet.
-- **Mon 20, 7:30pm:** First authored post: **Parents of Teenagers UK** (draft A). Zero-sell advice-ask, the format their admins approve. Submit in the evening and let the approval land when it lands.
-- **Tue 21, 7:30pm:** **11+ & GCSE & A Level Success UK** (draft B), the normalisation ask.
-- **Wed 22, 7:30pm:** **GCSE resources UK** (draft C), the confession. By now he has commented there for six days.
-- **Thu 23, 7:30pm:** **A-Level Tuition** (draft D), the unpopular opinion; it will stand out against the tutor ads. **Also today: AMA outreach messages to the admins (drafts F and G).**
-- **Fri 24, 7:30pm:** **GCSE and A-level Revision UK** (draft E), the results-day ask, in the group whose one visible parent post drew 89 comments. This group is starving; this is the seed of owning it.
-- **Sat 25, morning:** **Home Education Looking For Tutors (UK)** (draft H), the one open pitch of the whole run, in the group whose purpose is exactly that.
-- **Sun 26:** No new posts. Reply catch-up everywhere, thank-yous, and log per group: comments, friend requests, DMs, any diagnostic completions mentioning groups. Next Friday's pack builds on what moved.
+- **Thu 16:** Join: GCSE resources UK, A-Level Tuition, Home Education Looking For Tutors (UK), 11+ & GCSE & A Level Success UK, UK Medicine Applicants 2026 & 2027 (personal profile; entry questions), Friendly Home Education UK (entry password: AWE HE Club, for the join questions only), Parents of Teenagers UK (honesty-screened entry questions), Homeschooling & Home Education Information and Support UK, GCSE and A-level Revision UK. Set up the profile-as-landing-page (personal profile, Professional Mode; the Page cannot enter the key groups). Then 20 minutes of comments in GCSE resources UK and A-Level Tuition: find tutor-request and revision-question threads, answer properly. GCSE resources UK allows NO links of any kind, ever, including group links.
+- **Fri 17 to Sun 26, every day, 15 to 20 minutes:** comments across the groups. This IS the group strategy for this run: value-complete answers to parent requests and revision questions, building the standing that August's authored posts will spend. In Home Ed Looking For Tutors, tutor requests may be answered WITH an offer (that group exists for it). Everywhere else, value only, no links, business mentioned only when a thread literally asks for a tutor.
+- **Tue 21, 7:30pm (OPTIONAL):** **11+ & GCSE & A Level Success UK** (draft B), the normalisation ask. The one borderline authored post of the run: the group's own Rule 3 requires posts to "ask a genuine question or share a real experience", which draft B is built to be, and parents there are in buying mode. But he will be a 6-day member, so the standing rule says skip if in doubt. Waleed's call. Rule 2 there bans links, prices and ANY mention of DMs, in posts and comments alike.
+- **Thu 23, 7:30pm:** **A-Level Tuition** (draft D), the unpopular opinion. Posting is normal there and standing is irrelevant (34 posts a day); a well-made post stands out against the tutor ads, then sinks within hours. Babysit the first two, then let it go. **Also today: AMA outreach messages to the admins (drafts F and G).**
+- **Sat 25, morning:** **Home Education Looking For Tutors (UK)** (draft H), the one open pitch of the whole run, in the group whose purpose is exactly that. Optional stronger variant: withhold the links and close with "comment or message me and I'll send it over" (the observed 145-comment webinar post in the medicine group used exactly this, and this group's rules allow it).
+- **Sun 26:** No new posts. Reply catch-up everywhere, thank-yous, and log per group: comments answered, friend requests, DMs, any diagnostic completions mentioning groups. Next Friday's pack builds on what moved.
+
+### Held for the August pack (written, banked, do not post in this run)
+
+The groups session's standing rule moves three drafts to August, when two weeks of visible helpfulness exist and results day sharpens them:
+
+- **Draft A (advice-ask)** is RETIRED from Parents of Teenagers UK entirely: their rules ban promotion AND medical questions, every post is human-approved, and the doctor framing is the liability there, not the asset. That group is comments-only for us, permanently. The draft itself survives; August can aim it at GCSE and A Level Parents in UK (the tiny 689-member exact-fit group, Pages allowed) or run it on the page.
+- **Draft C (confession, GCSE resources UK)**: hold until standing exists. The observed feed there is purely transactional (requests and answers); an early authored post reads as noise.
+- **Draft E (results-day ask, GCSE and A-level Revision UK)**: hold for early August, when "two weeks today" plus real standing plus the Bella/Chloe AMA conversation make it land far harder. The group is starving and is not going anywhere.
 
 ### The group post drafts (each used once, never recycled)
 
-**Draft A · Parents of Teenagers UK · Mon 20**
+**Draft A · advice-ask · HELD for August (retired from Parents of Teenagers UK; re-aim at GCSE and A Level Parents in UK or the page)**
 
 Question for parents who've been through A-level exam season: what actually worked to keep the temperature down at home?
 
@@ -468,7 +477,7 @@ You're the experts on that part, not me. What helped? And what made things worse
 
 I'll pass the best of this on to the families I work with, credited to "a wise parent on the internet".
 
-**Draft B · 11+ & GCSE & A Level Success UK · Tue 21**
+**Draft B · 11+ & GCSE & A Level Success UK · Tue 21, OPTIONAL (their Rule 3 invites genuine questions; skip if in doubt)**
 
 Is it just the students I meet, or does every teenager in Britain have a version of "I'll start properly on Monday"?
 
@@ -478,7 +487,7 @@ Mine, at 17, was "after this episode". There were a lot of episodes.
 
 I tutor A-levels now, and I promise this pattern has nothing to do with laziness (that's a longer story for another evening). Tonight I just want the collection: what's the version in your house?
 
-**Draft C · GCSE resources UK · Wed 22**
+**Draft C · GCSE resources UK · HELD for August (build standing first)**
 
 Confession from a doctor who did fine in his A-levels: my Year 12 mocks were genuinely bad.
 
@@ -498,7 +507,7 @@ If you're enforcing "hours at the desk" this summer, you're probably, kindly, me
 
 Push back if you disagree, I'm genuinely interested in how parents see it. And if anyone wants the ninety-minute version spelled out, ask below and I'll write it out properly.
 
-**Draft E · GCSE and A-level Revision UK · Fri 24**
+**Draft E · GCSE and A-level Revision UK · HELD for early August (standing + two-weeks-today timing)**
 
 Four weeks today until A-level results day.
 

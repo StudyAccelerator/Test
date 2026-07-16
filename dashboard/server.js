@@ -25,7 +25,6 @@ const path = require('node:path')
 const crypto = require('node:crypto')
 const { execFile } = require('node:child_process')
 
-const HOST = '127.0.0.1'
 const PORT = Number(process.env.PORT || 4400)
 const ROOT = __dirname
 const PUBLIC_DIR = path.join(ROOT, 'public')
@@ -48,6 +47,18 @@ function loadEnv() {
 }
 
 const env = loadEnv()
+
+/* Default is loopback only: private by construction, and the right mode when
+   the phone reaches the Mac through Tailscale (whose proxy connects locally).
+   HQ_HOST=0.0.0.0 in .env opens it to the home network instead; that mode
+   demands HQ_TOKEN so a guest on the Wi-Fi cannot open the dashboard. */
+const HOST = env.HQ_HOST || '127.0.0.1'
+const HQ_TOKEN = env.HQ_TOKEN || null
+
+function isLoopback(req) {
+  const a = req.socket.remoteAddress || ''
+  return a === '127.0.0.1' || a === '::1' || a === '::ffff:127.0.0.1'
+}
 
 /* The site already ships this key in client code for the signup forms, so the
    dashboard reuses it rather than duplicating a secret. ML_API_KEY in .env wins. */
@@ -630,6 +641,36 @@ async function handleApi(req, res, url) {
     }
   }
 
+  /* Compact summary for the phone widget: open tasks, today's calendar and
+     the headline numbers, all from the same honest sources as the panels. */
+  if (seg[1] === 'widget') {
+    const allTasks = readStore('tasks', [])
+    const open = allTasks.filter((t) => !t.done)
+    const today = new Date().toISOString().slice(0, 10)
+    const cal = readStore('calendar', null)
+    const events = (cal && cal.extractedAt && cal.events ? cal.events : [])
+      .filter((e) => e.start.slice(0, 10) === today)
+      .map((e) => ({ start: e.start, title: e.title }))
+    const snap = readStore('stripe-snapshot', null)
+    let active = null
+    if (ML_KEY) {
+      try {
+        active = (await cached('ml', 3 * 60_000, fetchMailerlite)).active
+      } catch {}
+    }
+    const resultsDay = Math.ceil((new Date('2026-08-13T00:00:00') - Date.now()) / 86400000)
+    return sendJson(res, 200, {
+      updatedAt: new Date().toISOString(),
+      openTasks: open.length,
+      tasks: open.slice(0, 4).map((t) => ({ title: t.title, due: t.due })),
+      todayEvents: events,
+      activeSubscribers: active,
+      stripeBalance: snap ? snap.balanceAvailable : null,
+      lastSale: snap ? snap.lastSale : null,
+      daysToResultsDay: resultsDay,
+    })
+  }
+
   if (seg[1] === 'connections') {
     const has = (name, test) => {
       const v = readStore(name, null)
@@ -652,6 +693,26 @@ async function handleApi(req, res, url) {
 
 const server = http.createServer(async (req, res) => {
   const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`)
+
+  /* Token gate for non-loopback visitors when HQ_TOKEN is set. Opening
+     /?key=TOKEN once plants a year-long cookie; the Monzo callback is exempt
+     because Monzo's redirect cannot carry the cookie. */
+  if (HQ_TOKEN && !isLoopback(req) && url.pathname !== '/api/monzo/callback') {
+    const cookieOk = (req.headers.cookie || '').split(/;\s*/).includes(`hq=${HQ_TOKEN}`)
+    const keyOk = url.searchParams.get('key') === HQ_TOKEN
+    if (keyOk && !cookieOk) {
+      url.searchParams.delete('key')
+      res.writeHead(302, {
+        'Set-Cookie': `hq=${HQ_TOKEN}; Path=/; Max-Age=31536000; HttpOnly; SameSite=Lax`,
+        Location: url.pathname + (url.searchParams.size ? `?${url.searchParams}` : ''),
+      })
+      return res.end()
+    }
+    if (!cookieOk && !keyOk) {
+      res.writeHead(401, { 'Content-Type': 'text/plain; charset=utf-8' })
+      return res.end('Private dashboard. Open it once as /?key=YOUR_TOKEN to unlock this device.')
+    }
+  }
 
   if (url.pathname.startsWith('/api/')) {
     try {
@@ -697,6 +758,13 @@ server.listen(PORT, HOST, () => {
           : 'waiting for you to press Connect Monzo on the Bank panel'
     }`
   )
-  console.log('  Private:    bound to 127.0.0.1 only')
+  if (HOST === '127.0.0.1') {
+    console.log('  Private:    bound to 127.0.0.1 only (phones reach it through Tailscale)')
+  } else if (HQ_TOKEN) {
+    console.log(`  Network:    listening on ${HOST}, guarded by HQ_TOKEN`)
+  } else {
+    console.log(`  WARNING:    listening on ${HOST} with NO HQ_TOKEN set.`)
+    console.log('              Anyone on this network can open the dashboard. Add HQ_TOKEN to .env.')
+  }
   console.log('')
 })
