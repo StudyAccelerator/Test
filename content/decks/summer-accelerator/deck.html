@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<title>A-Level Accelerators · Summer Accelerator</title>
+<!--
+  Summer Accelerator sales-call deck. Built with the deck-studio skill, 16 July 2026.
+  Facts sourced from app/summer-accelerators/page.tsx and
+  .claude/skills/content-studio/references/audience-and-offers.md on that date.
+  Render: scripts/render-deck.sh content/decks/summer-accelerator/deck.html
+-->
+<style>
+  :root {
+    --purple: #2E2557;
+    --purple-light: #3d3370;
+    --cream: #FBF8F3;
+    --cream-dark: #F3EBD8;
+    --gold: #C9A96E;
+    --gold-light: #e0b577;
+    --ink: #1a1535;
+    --muted: #6b6584;
+  }
+  @page { size: 1280px 720px; margin: 0; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { background: #fff; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", sans-serif; color: var(--ink); }
+  .serif { font-family: Georgia, "Times New Roman", serif; }
+  .mono { font-family: "SF Mono", Menlo, Consolas, monospace; }
+
+  .slide { position: relative; width: 1280px; height: 720px; overflow: hidden; background: var(--cream); padding: 60px 72px 96px; page-break-after: always; display: flex; flex-direction: column; }
+  .slide:last-child { page-break-after: auto; }
+  .slide > * { position: relative; z-index: 1; }
+  .slide.dark { background: var(--purple); color: var(--cream); }
+  .slide.dark::before { content: ""; position: absolute; top: -220px; right: -180px; width: 620px; height: 620px; border-radius: 50%; background: radial-gradient(closest-side, rgba(201,169,110,.14), rgba(201,169,110,0)); z-index: 0; }
+
+  .eyebrow { display: flex; align-items: center; gap: 12px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .22em; text-transform: uppercase; color: rgba(46,37,87,.55); }
+  .eyebrow::before { content: ""; width: 26px; height: 2px; background: var(--gold); flex-shrink: 0; }
+  .dark .eyebrow { color: var(--gold); }
+
+  .cover-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 61px; line-height: 1.07; letter-spacing: -.012em; color: var(--cream); }
+  .slide-title { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 39px; line-height: 1.14; letter-spacing: -.008em; color: var(--purple); margin-top: 16px; max-width: 940px; }
+  .dark .slide-title { color: var(--cream); }
+  .gold-i { font-family: Georgia, "Times New Roman", serif; font-style: italic; color: var(--gold); }
+  .lede { margin-top: 14px; font-size: 17.5px; line-height: 1.58; color: rgba(26,21,53,.74); max-width: 780px; }
+  .dark .lede { color: rgba(251,248,243,.82); }
+  .statement { font-family: Georgia, "Times New Roman", serif; font-size: 44px; line-height: 1.3; color: var(--purple); letter-spacing: -.005em; max-width: 1020px; }
+
+  .foot { position: absolute; left: 72px; right: 72px; bottom: 28px; display: flex; justify-content: space-between; align-items: center; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 600; letter-spacing: .18em; text-transform: uppercase; color: rgba(26,21,53,.42); z-index: 2; }
+  .dark .foot { color: rgba(251,248,243,.5); }
+  .brandline { display: flex; align-items: center; gap: 9px; }
+  .brandline svg { display: block; }
+
+  .card { background: #fff; border-radius: 16px; box-shadow: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05), 0 12px 24px rgba(46,37,87,.06); }
+  .card.gold-ring { box-shadow: 0 0 0 2px rgba(201,169,110,.6), 0 4px 8px rgba(46,37,87,.06), 0 18px 36px rgba(46,37,87,.12); }
+  .dark-card { background: rgba(255,255,255,.055); box-shadow: 0 0 0 1px rgba(255,255,255,.13); border-radius: 16px; }
+  .chip { display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(251,248,243,.28); border-radius: 999px; padding: 9px 18px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: rgba(251,248,243,.92); white-space: nowrap; }
+  .chip .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+  .pill { display: inline-block; background: var(--gold); color: var(--purple); border-radius: 999px; padding: 6px 14px; font-size: 11.5px; font-weight: 800; letter-spacing: .04em; }
+
+  .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
+  .tile { padding: 24px 26px 22px; }
+  .tile .k { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: rgba(46,37,87,.48); }
+  .tile .v { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 23px; line-height: 1.2; color: var(--purple); margin-top: 10px; }
+  .tile .s { font-size: 13.5px; line-height: 1.5; color: rgba(26,21,53,.62); margin-top: 7px; }
+
+  .ticks { list-style: none; }
+  .ticks li { display: flex; gap: 12px; align-items: flex-start; font-size: 15.5px; line-height: 1.5; color: rgba(26,21,53,.78); }
+  .ticks li + li { margin-top: 13px; }
+  .ticks .t { color: var(--gold); font-weight: 800; flex-shrink: 0; }
+  .ticks .x { color: #b3544f; font-weight: 800; flex-shrink: 0; }
+
+  .steps { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .step-card { padding: 26px 28px; }
+  .step-card .n { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 700; letter-spacing: .2em; color: var(--gold); }
+  .step-card h3 { font-family: Georgia, "Times New Roman", serif; font-size: 23px; color: var(--purple); margin-top: 10px; }
+  .step-card p { font-size: 14.5px; line-height: 1.55; color: rgba(26,21,53,.68); margin-top: 9px; }
+
+  .bars { display: flex; flex-direction: column; gap: 13px; }
+  .bar { display: flex; align-items: center; gap: 14px; }
+  .bar .seg { flex: 1; border-radius: 12px; padding: 15px 20px; font-size: 14.5px; font-weight: 600; }
+  .bar .len { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11.5px; font-weight: 600; color: rgba(46,37,87,.5); flex-shrink: 0; }
+  .seg.q { background: var(--cream-dark); color: var(--purple); }
+  .seg.g { background: rgba(201,169,110,.24); color: var(--purple); }
+  .seg.p { background: var(--purple); color: var(--cream); }
+
+  .stat { display: flex; flex-direction: column; justify-content: center; }
+  .stat .num { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 56px; line-height: 1; color: var(--purple); letter-spacing: -.01em; }
+  .stat .lbl { font-size: 13px; line-height: 1.5; color: rgba(26,21,53,.6); margin-top: 10px; }
+
+  .quote { padding: 24px 26px; display: flex; flex-direction: column; justify-content: center; }
+  .quote .stars { color: var(--gold); font-size: 12px; letter-spacing: .28em; }
+  .quote p { font-size: 15px; line-height: 1.6; color: rgba(26,21,53,.85); margin-top: 12px; }
+  .quote .who { margin-top: 14px; font-size: 13px; font-weight: 700; color: var(--purple); }
+  .quote .who span { display: block; font-weight: 400; font-size: 11.5px; color: rgba(26,21,53,.55); margin-top: 2px; }
+
+  .prices { display: grid; gap: 18px; align-items: stretch; }
+  .prices.cols-4 { grid-template-columns: repeat(4, 1fr); }
+  .prices.cols-3 { grid-template-columns: repeat(3, 1fr); }
+  .price { position: relative; padding: 26px 24px 24px; text-align: center; display: flex; flex-direction: column; }
+  .price .name { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 19px; color: var(--purple); }
+  .price .save { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 10px; font-weight: 700; letter-spacing: .16em; text-transform: uppercase; color: var(--gold); margin-top: 6px; min-height: 13px; }
+  .price .amt { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 44px; color: var(--purple); margin-top: 12px; }
+  .price .per { font-size: 12px; color: rgba(26,21,53,.55); margin-top: 4px; }
+  .price ul { list-style: none; margin-top: 16px; text-align: left; }
+  .price li { display: flex; gap: 9px; font-size: 13px; line-height: 1.45; color: rgba(26,21,53,.72); }
+  .price li + li { margin-top: 8px; }
+  .price li .t { color: var(--gold); font-weight: 800; }
+  .price .flag { position: absolute; top: -13px; left: 50%; transform: translateX(-50%); }
+
+  .photo-frame { background: #fff; padding: 7px; border-radius: 18px; box-shadow: 0 0 0 1px rgba(46,37,87,.08), 0 16px 32px rgba(46,37,87,.18); transform: rotate(-1.6deg); }
+  .photo-frame img { display: block; width: 100%; border-radius: 12px; }
+  .photo-frame .cap { text-align: center; font-size: 11.5px; font-weight: 600; color: rgba(26,21,53,.6); padding: 8px 0 4px; }
+
+  .climb { display: flex; align-items: flex-end; gap: 13px; }
+  .climb .rung { width: 84px; border-radius: 14px; display: flex; align-items: center; justify-content: center; font-family: Georgia, "Times New Roman", serif; font-weight: 700; }
+  .climb .r1 { height: 54px; font-size: 19px; background: rgba(255,255,255,.07); box-shadow: 0 0 0 1px rgba(255,255,255,.09); color: rgba(251,248,243,.45); }
+  .climb .r2 { height: 84px; font-size: 23px; background: rgba(255,255,255,.12); box-shadow: 0 0 0 1px rgba(255,255,255,.12); color: rgba(251,248,243,.7); }
+  .climb .r3 { height: 116px; font-size: 27px; background: rgba(201,169,110,.26); box-shadow: 0 0 0 1px rgba(201,169,110,.4); color: var(--gold-light); }
+  .climb .r4 { height: 154px; font-size: 33px; background: var(--gold); color: var(--purple); box-shadow: 0 18px 36px rgba(0,0,0,.35); }
+
+  .row { display: flex; }
+  .grow { flex: 1; }
+</style>
+</head>
+<body>
+
+<!-- 01 · Cover -->
+<section class="slide dark">
+  <div class="row" style="justify-content:space-between; align-items:center;">
+    <div class="brandline" style="gap:10px;">
+      <svg width="19" height="16" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--gold)"/><path d="M10 11 L12.6 15.6 L7.4 15.6 Z" fill="var(--gold)"/></svg>
+      <span class="mono" style="font-size:12px; font-weight:700; letter-spacing:.2em; text-transform:uppercase; color:rgba(251,248,243,.9);">A-Level Accelerators</span>
+    </div>
+    <span class="mono" style="font-size:11px; letter-spacing:.18em; text-transform:uppercase; color:rgba(251,248,243,.45);">Programme briefing · Summer 2026</span>
+  </div>
+
+  <div class="row grow" style="align-items:center; gap:56px;">
+    <div style="max-width:680px;">
+      <p class="eyebrow">The Summer Accelerator</p>
+      <h1 class="cover-title" style="margin-top:22px;">Walk into Year 13 <span class="gold-i">already ahead.</span></h1>
+      <p class="lede" style="max-width:620px;">A six-week live summer course in the high-yield Year 13 topics that decide predicted grades. Built by a doctor, taught by subject specialists.</p>
+      <div style="display:flex; gap:12px; margin-top:34px; flex-wrap:wrap;">
+        <span class="chip"><span class="dot"></span>Starts Saturday 8 August</span>
+        <span class="chip"><span class="dot"></span>Six weeks · live online</span>
+        <span class="chip"><span class="dot"></span>Biology · Chemistry · Maths · Physics</span>
+      </div>
+    </div>
+    <div class="grow" style="display:flex; justify-content:center;">
+      <div class="climb">
+        <div class="rung r1">C/D</div>
+        <div class="rung r2">B</div>
+        <div class="rung r3">A</div>
+        <div class="rung r4">A*</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="foot">
+    <span>Dr Waleed Ahmad, MBBS · Founder</span>
+    <span>alevelaccelerators.com</span>
+  </div>
+</section>
+
+<!-- 02 · At a glance -->
+<section class="slide">
+  <p class="eyebrow">The programme in one slide</p>
+  <h2 class="slide-title">Six weeks that set up <span class="gold-i">the whole year.</span></h2>
+  <div class="grow" style="display:flex; align-items:center;">
+  <div class="tiles" style="flex:1; margin-top:0;">
+    <div class="card tile"><p class="k">Format</p><p class="v">Six weeks, live online</p><p class="s">Two sessions a week per subject, two hours each</p></div>
+    <div class="card tile"><p class="k">Teaching</p><p class="v">24 hours per subject</p><p class="s">Live specialist teaching, never pre-recorded</p></div>
+    <div class="card tile"><p class="k">Subjects</p><p class="v">Biology, Chemistry, Maths, Physics</p><p class="s">AQA, OCR and Edexcel</p></div>
+    <div class="card tile"><p class="k">Focus</p><p class="v">High-yield Year 13 topics</p><p class="s">The ones that set predicted grades</p></div>
+    <div class="card tile"><p class="k">Safety net</p><p class="v">Every session recorded</p><p class="s">Timetabled so subjects never clash</p></div>
+    <div class="card tile"><p class="k">Price</p><p class="v">From £289 per subject</p><p class="s">£9 to £12 an hour of live teaching</p></div>
+  </div>
+  </div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Summer Accelerator · 02</span></div>
+</section>
+
+<!-- 03 · Why summer matters -->
+<section class="slide">
+  <div class="row grow" style="gap:54px; align-items:center;">
+    <div style="flex:1.05;">
+      <p class="eyebrow">Why summer matters</p>
+      <h2 class="slide-title">Predicted grades are decided <span class="gold-i">early.</span></h2>
+      <p class="lede">Year 13 opens with the mocks that set predictions, and predictions carry the UCAS application. The summer before is the one clear window to get ahead of them.</p>
+      <p class="serif" style="margin-top:24px; font-style:italic; font-size:21px; color:var(--gold); max-width:520px;">The gap opens in August. September just reveals it.</p>
+    </div>
+    <div style="flex:1;">
+      <div class="card" style="padding:26px 30px;">
+        <p class="mono" style="font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:rgba(46,37,87,.48);">Students who coast the summer</p>
+        <ul class="ticks" style="margin-top:14px;">
+          <li><span class="x">✗</span><span>Meet key topics for the first time in September</span></li>
+          <li><span class="x">✗</span><span>Spend the first term catching up</span></li>
+          <li><span class="x">✗</span><span>Walk into prediction mocks underprepared</span></li>
+        </ul>
+        <div style="height:1px; background:linear-gradient(90deg, transparent, rgba(201,169,110,.5), transparent); margin:20px 0;"></div>
+        <p class="mono" style="font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:var(--gold);">Students who use the Accelerator</p>
+        <ul class="ticks" style="margin-top:14px;">
+          <li><span class="t">✓</span><span>Start on top of the high-value topics</span></li>
+          <li><span class="t">✓</span><span>Stay ahead instead of chasing the class</span></li>
+          <li><span class="t">✓</span><span>Meet the mocks confident and prepared</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Summer Accelerator · 03</span></div>
+</section>
+
+<!-- 04 · Who built this -->
+<section class="slide">
+  <div class="row grow" style="gap:56px; align-items:center;">
+    <div style="flex:1.15;">
+      <p class="eyebrow">Who built this</p>
+      <h2 class="slide-title">Built by a doctor who <span class="gold-i">learned the hard way.</span></h2>
+      <p class="lede" style="max-width:560px;">I did everything school said. Re-reading, highlighting, beautiful notes. I got into medicine only because I threw hundreds of extra hours at a method that wasted most of them. Medical school taught me to study properly. That system runs every session.</p>
+      <ul class="ticks" style="margin-top:22px;">
+        <li><span class="t">✓</span><span>Taught live by specialists who achieved top grades in their subject and helped hundreds do the same</span></li>
+        <li><span class="t">✓</span><span>Dr Waleed teaches the final sessions himself: exam technique, active recall, study strategy</span></li>
+      </ul>
+    </div>
+    <div style="flex:0.85; display:flex; justify-content:center;">
+      <div class="photo-frame" style="width:360px;">
+        <img src="../../../public/photos/waleed-portrait-wide.jpg" alt="Dr Waleed Ahmad at his desk in scrubs">
+        <p class="cap">Dr Waleed Ahmad, MBBS · NHS foundation doctor · 1,000+ students over six years</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Summer Accelerator · 04</span></div>
+</section>
+
+<!-- 05 · The method -->
+<section class="slide">
+  <p class="eyebrow">How every programme works</p>
+  <p class="statement" style="margin-top:26px;">We <span class="gold-i">diagnose</span> where marks are leaking, <span class="gold-i">rebuild</span> revision around what moves them, and <span class="gold-i">coach</span> all the way to exam day.</p>
+  <div class="grow"></div>
+  <div class="steps">
+    <div class="card step-card"><p class="n">01 · Diagnose</p><h3>Find the leaks</h3><p>Every topic rated for real confidence, not familiarity. The avoided topics are where the grade hides.</p></div>
+    <div class="card step-card"><p class="n">02 · Rebuild</p><h3>Point hours at marks</h3><p>Deep work, recall the next day, spaced review. Same hours, aimed at the right work.</p></div>
+    <div class="card step-card"><p class="n">03 · Coach</p><h3>Train the technique</h3><p>Real exam questions, answered in the language the mark scheme rewards.</p></div>
+  </div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Summer Accelerator · 05</span></div>
+</section>
+
+<!-- 06 · Inside a session -->
+<section class="slide">
+  <p class="eyebrow">Inside a live session</p>
+  <h2 class="slide-title">Two hours, engineered <span class="gold-i">for marks.</span></h2>
+  <div class="row grow" style="gap:44px; margin-top:26px; align-items:center;">
+    <div style="flex:1.3;">
+      <div class="bars">
+        <div class="bar"><div class="seg q" style="flex:none; width:42%;">Recap and recall check</div><span class="len">10 min</span></div>
+        <div class="bar"><div class="seg g" style="flex:none; width:65%;">High-yield content review</div><span class="len">30 min</span></div>
+        <div class="bar"><div class="seg p" style="flex:none; width:88%;">Real exam questions, mark scheme mastery</div><span class="len">60 min</span></div>
+        <div class="bar"><div class="seg q" style="flex:none; width:53%;">Personalised feedback and Q&amp;A</div><span class="len">20 min</span></div>
+      </div>
+    </div>
+    <div style="flex:1;">
+      <div class="card" style="padding:26px 30px;">
+        <p class="mono" style="font-size:10.5px; font-weight:700; letter-spacing:.18em; text-transform:uppercase; color:rgba(46,37,87,.48);">Every package includes</p>
+        <ul class="ticks" style="margin-top:14px;">
+          <li><span class="t">✓</span><span>24 hours of live teaching per subject</span></li>
+          <li><span class="t">✓</span><span>Every session recorded</span></li>
+          <li><span class="t">✓</span><span>No clashes between subjects</span></li>
+          <li><span class="t">✓</span><span>Final sessions led by Dr Waleed</span></li>
+          <li><span class="t">✓</span><span>First session risk-free</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Summer Accelerator · 06</span></div>
+</section>
+
+<!-- 07 · Proof -->
+<section class="slide">
+  <p class="eyebrow">Proof</p>
+  <h2 class="slide-title">Students feel the difference <span class="gold-i">and say so.</span></h2>
+  <div class="row grow" style="gap:22px; margin-top:26px; align-items:stretch;">
+    <div style="flex:1; display:flex; flex-direction:column; gap:18px;">
+      <div class="card stat" style="padding:24px 28px; flex:1;"><p class="num">6.2 to 8.3</p><p class="lbl">Average topic confidence out of ten, rated before and after each session across our recent 12-week Biology and Chemistry programmes. 74 responses.</p></div>
+      <div class="card stat" style="padding:24px 28px; flex:1;"><p class="num">1,000+</p><p class="lbl">A-level students worked with over six years.</p></div>
+    </div>
+    <div style="flex:1.5; display:flex; gap:18px;">
+      <div class="card quote" style="flex:1;"><span class="stars">★★★★★</span><p>"I liked how the session was so exam-technique focused, with a great balance of exam questions and the content behind them."</p><p class="who">Furkan<span>Year 13 Student</span></p></div>
+      <div class="card quote" style="flex:1;"><span class="stars">★★★★★</span><p>"The content was explained really well and there was a brilliant range of questions. I love the way everything is taught"</p><p class="who">Menahil<span>Year 13 Student</span></p></div>
+    </div>
+  </div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Summer Accelerator · 07</span></div>
+</section>
+
+<!-- 08 · Pricing -->
+<section class="slide">
+  <p class="eyebrow">Pricing</p>
+  <h2 class="slide-title">Secure a summer place.</h2>
+  <div class="grow" style="display:flex; flex-direction:column; justify-content:center;">
+  <div class="prices cols-4">
+    <div class="card price">
+      <p class="name">One Subject</p><p class="save"></p><p class="amt">£289</p><p class="per">per subject</p>
+      <ul><li><span class="t">✓</span><span>Full six-week Accelerator</span></li><li><span class="t">✓</span><span>24 hours of live teaching</span></li></ul>
+    </div>
+    <div class="card price">
+      <p class="name">Two Subjects</p><p class="save">Save £39</p><p class="amt">£539</p><p class="per">any two subjects</p>
+      <ul><li><span class="t">✓</span><span>48 hours of live teaching</span></li><li><span class="t">✓</span><span>Everything in One Subject, twice</span></li></ul>
+    </div>
+    <div class="card price gold-ring">
+      <span class="flag pill">Most popular</span>
+      <p class="name">Three Subjects</p><p class="save">Save £128</p><p class="amt">£739</p><p class="per">any three subjects</p>
+      <ul><li><span class="t">✓</span><span>72 hours of live teaching</span></li><li><span class="t">✓</span><span>The choice most students make</span></li></ul>
+    </div>
+    <div class="card price">
+      <p class="name">Four Subjects</p><p class="save">Best value · Save £307</p><p class="amt">£849</p><p class="per">all four subjects</p>
+      <ul><li><span class="t">✓</span><span>96 hours of live teaching</span></li><li><span class="t">✓</span><span>The complete head start</span></li></ul>
+    </div>
+  </div>
+  <p style="margin-top:26px; font-size:14px; color:rgba(26,21,53,.65);">£9 to £12 an hour of live teaching, against a £50 an hour average for 1:1 tutoring. <strong style="color:var(--purple);">First session risk-free: full refund, no questions asked.</strong></p>
+  </div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Summer Accelerator · 08</span></div>
+</section>
+
+<!-- 09 · Close -->
+<section class="slide dark">
+  <div class="row grow" style="align-items:center; gap:60px;">
+    <div style="max-width:660px;">
+      <p class="eyebrow">The next step</p>
+      <h1 class="cover-title" style="font-size:52px; margin-top:20px;">September is decided <span class="gold-i">in August.</span></h1>
+      <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px;">
+        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">01</span><span style="font-size:16px;">Choose subjects on this call. Session times never clash.</span></div>
+        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">02</span><span style="font-size:16px;">Enrol today at alevelaccelerators.com/summer-accelerators</span></div>
+        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">03</span><span style="font-size:16px;">Try the first session risk-free. Full refund, no questions asked.</span></div>
+      </div>
+      <div style="display:flex; gap:12px; margin-top:28px;">
+        <span class="chip"><span class="dot"></span>Cohort starts Saturday 8 August</span>
+        <span class="chip"><span class="dot"></span>Summer rate, before September pricing</span>
+      </div>
+    </div>
+    <div class="grow" style="display:flex; justify-content:center;">
+      <div class="climb">
+        <div class="rung r1">C/D</div>
+        <div class="rung r2">B</div>
+        <div class="rung r3">A</div>
+        <div class="rung r4">A*</div>
+      </div>
+    </div>
+  </div>
+  <div class="foot">
+    <span>Waleed@alevelaccelerators.com</span>
+    <span>alevelaccelerators.com</span>
+  </div>
+</section>
+
+</body>
+</html>

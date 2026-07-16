@@ -90,6 +90,10 @@ The recurring student newsletter lives in `content/email-newsletter/`: README (c
 
 Growth through partnerships is a standing play: established education companies with big audiences, offered something they do not currently have. The repeatable process is the `partnership-outreach` skill (`.claude/skills/partnership-outreach/`): point it at a company and it produces a sourced dossier, a designed trade, a named decision maker with routes, and a draft email. Hard rules: nothing is ever sent (Waleed approves and sends everything himself), no invented numbers (estimates carry their basis and date), and the research goes in front of Waleed before the email is treated as final. Outputs live in `content/partnerships/<company-slug>/` with an index in `content/partnerships/README.md`. Outreach credibility assets (The Medic Life, PasTest, r/A-levels) live in the skill's `references/assets-and-trades.md`, not in content-studio. First target researched: Physics & Maths Tutor (PMT Education), 13 July 2026, awaiting Waleed's review.
 
+## Sales-call decks (deck-studio skill, 16 July 2026)
+
+Slide decks Waleed keeps open live on sales and partnership calls are produced by the `deck-studio` skill (`.claude/skills/deck-studio/`): a designed HTML deck (1280x720 slides on the site's brand tokens) rendered to a 16:9 PDF with `scripts/render-deck.sh`. Use the skill for any deck request: programme sale, workshop, partnership pitch, existing or new. Decks live in `content/decks/<slug>/` (HTML and PDF committed together, index in `content/decks/README.md`). They are private sales material: never published on the site, never linked from it, never moved into `public/`. Waleed reviews every deck before it is used. Facts come only from live pages and approved proof points, prices must match the live page they came from, and `scripts/compliance-scan.py` runs on every deck source. First three decks (Summer Accelerator, Subject Accelerators, Top 1% Study System) built 16 July 2026.
+
 ## Automatic upkeep (standing rule, applies to every session)
 
 Waleed prefers automatic updates to memory, skills, and features over being asked to maintain them. Concretely:
