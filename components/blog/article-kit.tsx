@@ -47,7 +47,7 @@ export const A = ({ href, children }: { href: string; children: React.ReactNode 
 /* ---------- Answer-engine blocks ---------- */
 
 // Direct answer box at the top of the article: the snippet AI assistants and
-// featured snippets lift. Keep it to 2-3 sentences that answer the title question.
+// featured snippets lift. Keep it to 2 to 3 sentences that answer the title question.
 export const QuickAnswer = ({ children }: { children: React.ReactNode }) => (
   <div className="bg-white border-l-4 border-brand-gold rounded-r-lg shadow-md p-6 mb-10">
     <p className="text-sm font-bold uppercase tracking-wide text-brand-gold mb-2">Quick answer</p>
@@ -94,11 +94,32 @@ export const TrackerCTA = () => (
   </div>
 )
 
+export const DiagnosticCTA = ({ audience = 'student' }: { audience?: 'student' | 'parent' }) => (
+  <div className="bg-gradient-to-br from-brand-purple to-brand-purple-light rounded-xl p-8 my-10 text-center">
+    <p className="text-2xl font-serif text-brand-gold mb-3">
+      {audience === 'parent'
+        ? "Free: find out what's actually going wrong with your child's revision"
+        : 'Free: find out where your marks are actually leaking'}
+    </p>
+    <p className="text-brand-cream mb-6 max-w-xl mx-auto">
+      {audience === 'parent'
+        ? 'The free Revision Diagnostic asks 20 questions about how your child studies, then names the exact pattern holding their grades back and what to do about it. There is a parent version, answered from what you observe at home.'
+        : 'The free Revision Diagnostic asks 20 questions about how you actually study, then names the exact pattern costing you marks, how many hours a week it wastes, and the fix. It takes about three minutes.'}
+    </p>
+    <a
+      href={audience === 'parent' ? '/revision-diagnostic/?for=parents' : '/revision-diagnostic/'}
+      className="inline-block px-8 py-3 bg-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold-light transition"
+    >
+      {audience === 'parent' ? 'Take the Parent Diagnostic' : 'Take the Free Diagnostic'}
+    </a>
+  </div>
+)
+
 export const CourseCTA = ({
   heading = 'Want expert help, not just advice?',
   body = 'A-Level Accelerators runs live online classes in Biology, Chemistry, Maths and Physics, taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. Small groups, real exam technique, first session risk-free.',
   label = 'See Our A-Level Courses',
-  href = '/',
+  href = '/subject-accelerators',
 }: {
   heading?: string
   body?: string

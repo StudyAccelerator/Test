@@ -14,6 +14,40 @@ export const SITE_URL = 'https://alevelaccelerators.com'
 // Newest first. Add new posts to the top; /blog and sitemap.xml pick them up automatically.
 export const posts: Post[] = [
   {
+    slug: 'how-to-prepare-for-year-13',
+    title: 'How to Prepare for Year 13: The Complete Pre-September Checklist',
+    description:
+      'Year 13 is half decided before it starts: predicted grades are set within weeks of September. A doctor and former top student lays out the six-week preparation plan that actually matters.',
+    datePublished: '2026-07-16',
+    dateModified: '2026-07-16',
+    readingMinutes: 9,
+    category: 'Study Planning',
+    keywords: [
+      'how to prepare for year 13',
+      'get ahead for year 13',
+      'summer before year 13',
+      'year 12 to year 13 transition',
+      'preparing for a level year 2',
+    ],
+  },
+  {
+    slug: 'bad-year-12-results-what-now',
+    title: 'Bad Year 12 Results? What They Mean for UCAS and How to Fix Them by September',
+    description:
+      "Bad Year 12 mocks or end-of-year exams don't cap your final A-level grades, but they do set your predictions. A doctor explains the four reasons grades collapse and the six-week repair.",
+    datePublished: '2026-07-16',
+    dateModified: '2026-07-16',
+    readingMinutes: 9,
+    category: 'Predicted Grades & UCAS',
+    keywords: [
+      'bad year 12 results',
+      'year 12 mocks went badly',
+      'how important are year 12 mocks',
+      'year 12 exam results what to do',
+      'do year 12 results matter',
+    ],
+  },
+  {
     slug: 'how-to-choose-an-a-level-tutor',
     title: 'How to Choose an Online A-Level Tutor in the UK',
     description:
