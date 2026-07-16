@@ -14,7 +14,9 @@ Format rules per platform. These reflect how each algorithm actually distributes
 
 Target weekly ratio: 2 story/emotion, 2 technique, 1 lead-magnet. The mistake to avoid is publishing only genre 2 (which is what Waleed's early posts did) or only genre 3 (which reads as an advert channel).
 
-**What the algorithm rewards now:** dwell time and meaningful comments in the first 60 to 90 minutes; consistency (3 to 5 posts a week) on one narrow topic so the system learns our topic DNA; document/PDF carousels (the highest-engagement format, roughly 2 to 3x text dwell). It punishes external links in the body, hashtag stuffing, and engagement bait ("comment X and I'll DM you"), which now gets buried.
+**What the algorithm rewards now:** dwell time and meaningful comments in the first 60 to 90 minutes; consistency on one narrow topic so the system learns our topic DNA; document/PDF carousels for information-dense material. It punishes external links in the body, hashtag stuffing, engagement bait, and (since May 2026, explicitly) generic AI-look content.
+
+**Visuals, corrected by Waleed 16 July 2026: real photos of him, raw and natural, not designed graphics.** Branded quote cards and wordmark panels pattern-match the content class LinkedIn now suppresses; photos containing the author's face earn on the order of 20 to 60 percent more reach (directional numbers, van der Blom lineage). Rules: 4:5 portrait 1080x1350, phone quality is fine, match the photo to the story (scrubs for medical framing, school-era photo for confessions, desk for method posts), occasional 2 to 4 photo galleries, and at most ONE line of light text on a minority of photos (5 to 8 words, plain white with soft shadow, no panel, no logo, repeated in the post text). His photo library is the repo's `Photos ` folder; posting-ready crops go in the week's graphics folder. The exceptions that stay designed: document carousels (de-branded: no wordmark on every slide) and real product screenshots.
 
 **The anatomy of a high-performing LinkedIn post:**
 1. **Hook: max 8 to 12 words on line one.** Only ~200 characters show before "see more" (less on mobile). The hook's only job is the click. Best hooks: a confession, a contrarian claim, a specific number, a felt moment. Never a warm-up sentence.
@@ -30,16 +32,16 @@ Target weekly ratio: 2 story/emotion, 2 technique, 1 lead-magnet. The mistake to
 
 **Why we're here:** Facebook is THE parent channel and the priority platform for reaching buyers. UK parents research tutors through recommendations, and Facebook groups + Mumsnet threads are where those recommendations happen. Waleed finds parents easier to reach here than anywhere else.
 
-**The anatomy of a high-performing Facebook post (parents):**
-1. **First sentence = the reader's situation, named.** "If your child does loads of past papers and the grade isn't moving..." Parents stop scrolling when they see their own house described.
-2. **Short, warm, plain.** 50 to 120 words. One-thumb skimmable. No jargon.
-3. **A photo beats a graphic, a graphic beats plain text.** Real teaching screenshots and faces outperform everything.
-4. **End with either a gentle question or a tiny action** ("maybe worth mentioning to them this week"). Parents share useful posts to school WhatsApp groups; write things worth forwarding.
-5. Links in first comment. Boost the week's best post £2 to £5/day at UK parents 38 to 55.
+**The anatomy of a high-performing Facebook post (parents), corrected by Waleed 16 July 2026: conversation first, broadcast never.**
+1. **Every post is built to start a conversation, not raise awareness.** A "doctor explains a fact" post is a broadcast and dies. The winning shapes: the advice-ask (ask parents for THEIR wisdom), the normalisation ask ("is it just our house..."), the specific situational question, the confession ending in a question, this-or-that choices, and the kitchen-table phone photo with an ask. Meta demotes engagement bait but explicitly exempts asking for advice, help or recommendations, so the genuine ask is also the algorithm-safe format.
+2. **First sentence = the reader's situation or a genuine question.** Then short, warm, plain: 50 to 130 words, no jargon.
+3. **Text-first. Most page posts carry NO image.** Text posts are the top-engagement organic format and branded card graphics read as adverts. When an image earns its place it is a real phone photo (a handwritten blurt sheet, Waleed at the hospital, a marked-up paper), never a designed card.
+4. **End with a question a parent can answer from their own kitchen table**, then reply to every comment within the hour; the thread is the content.
+5. Links in first comment only, parent-facing diagnostic links use `/revision-diagnostic/?for=parents`. Boost the week's proven winner £2 to £5/day at UK parents 38 to 55.
 
 **Structure decision (important):** a personal-style profile with 0 followers won't grow. The play is:
 1. Run **Dr Waleed Ahmad** as a proper **Facebook Page** (it already exists; needs cover photo, pinned post, reviews enabled, and consistent posting so the page looks alive when a parent checks us out).
-2. But the real Facebook growth channel is **groups**: local parent groups, "A-level parents UK" style groups, school-gate community groups. Join as Waleed, answer questions helpfully for weeks before ever mentioning the business. When someone asks "can anyone recommend an A-level tutor?", the answer that wins is a helpful, specific reply, not an advert.
+2. But the real Facebook growth channel is **groups**: the vetted, ranked list with per-group rules lives in `content/facebook-groups/2026-07-15-facebook-groups-and-parent-competitors.md`, and the worked playbook (comment-first days, one authored post per day, unique text per group, evening timing, the three sanctioned ways the diagnostic may enter a group, AMA-via-admins) is in the 2026-07-20 content pack section 7. Join as Waleed, answer questions helpfully before ever posting, and when someone asks "can anyone recommend an A-level tutor?", the answer that wins is a helpful, specific reply, not an advert. Never use comment-keyword mechanics in other people's groups.
 3. Weekly cadence on the page: 4 to 5 posts a week so the page looks alive; the page is proof-of-legitimacy more than a reach engine.
 
 **Rules:**

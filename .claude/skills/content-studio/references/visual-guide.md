@@ -1,6 +1,6 @@
 # Visual guide
 
-Text-only posts underperform. On LinkedIn and Facebook, a strong visual is usually the difference between 300 and 3,000 views. This file says when to make one, what kind, and how.
+**Corrected by Waleed, 16 July 2026, and this correction outranks everything below: the default visual is a REAL PHOTO of Waleed, raw and natural, from the repo's `Photos ` folder.** Heavily designed graphics (quote cards, wordmark panels, brand-coloured templates) read as AI-generated, and LinkedIn started suppressing that content class in May 2026. Photos with his face outperform designed images by a wide margin. Crop to 4:5 (1080x1350), match the photo to the story, and add at most one line of light text (5 to 8 words, white with a soft shadow, no panel, no logo) on a minority of images. On Facebook, text-only posts are the default and the only images worth attaching are real phone photos. The designed formats that survive: de-branded document carousels for genuinely information-dense frameworks, and real product screenshots. Everything below about card graphics is now fallback-only, for when no real photo fits.
 
 ## Brand look
 

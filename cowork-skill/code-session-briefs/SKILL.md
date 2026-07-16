@@ -37,7 +37,7 @@ Know these so you never contradict them, but never repeat them in a brief:
 - All content is written in Waleed's spoken voice from his real transcripts, with zero em or en dashes, no AI-sounding vocabulary, and British English.
 - No invented statistics or grade-outcome claims (no results data exists until August 2026). Only pre-approved proof points are used.
 - No tutor-marketplace framing ("we match you with a tutor"). Waleed teaches; it is his method.
-- LinkedIn content targets students (his followers are Year 12/13s). Facebook targets parents (the buyer channel). Never mixed in one post.
+- LinkedIn content targets students (his followers are Year 12/13s). Facebook targets parents (the buyer channel). Never mixed in one post. Since 16 July 2026: LinkedIn visuals are real photos of Waleed (never branded card graphics), and Facebook content is conversation-first (genuine questions and asks, never broadcast facts), with Facebook groups as the real parent channel.
 - Every blog article is automatically written twice: a website version and a rewritten backlink version for the SEO optimizer. Backlink articles never go on the site.
 - The site deploys from the main branch to Vercel. Live Stripe payment links and the homepage title/H1 are protected.
 
