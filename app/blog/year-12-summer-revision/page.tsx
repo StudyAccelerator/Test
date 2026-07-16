@@ -200,6 +200,11 @@ export default function Page() {
         covering the high-yield Year 13 topics in Biology, Chemistry, Maths and Physics, so you walk into
         September already ahead. Right when predicted grades are being decided.
       </P>
+      <P>
+        And revision is only one part of the pre-September job. The UCAS admin, the personal statement
+        draft and the first-fortnight plan are covered in{' '}
+        <A href="/blog/how-to-prepare-for-year-13/">how to prepare for Year 13</A>.
+      </P>
 
       <CourseCTA
         href="/summer-accelerators"

@@ -48,6 +48,74 @@ export const posts: Post[] = [
     ],
   },
   {
+    slug: 'a-level-results-day-parents-guide',
+    title: "A-Level Results Day 2026: A Parent's Guide From a Doctor",
+    description:
+      'What to do before 8am on 13 August 2026, what to say if the grades disappoint, why your child makes the calls, and how clearing really works. Independent advice from a doctor, not a university with places to fill.',
+    datePublished: '2026-07-16',
+    dateModified: '2026-07-16',
+    readingMinutes: 10,
+    category: 'For Parents',
+    keywords: [
+      'a level results day parents guide',
+      'a level results day advice for parents',
+      'clearing advice for parents',
+      'how to support my child on results day',
+      'a level results day 2026',
+    ],
+  },
+  {
+    slug: 'didnt-get-the-grades-a-level-results',
+    title: "Didn't Get the Grades? The A-Level Results Day Triage (2026)",
+    description:
+      'A doctor\'s step-by-step triage for A-level results day 2026: read UCAS Hub first, who to call and in what order, how clearing and appeals really work, and the decisions that should wait 48 hours.',
+    datePublished: '2026-07-16',
+    dateModified: '2026-07-16',
+    readingMinutes: 10,
+    category: 'Results & Clearing',
+    keywords: [
+      'what to do if you fail your a levels',
+      'bad a level results what to do',
+      'a level results day 2026 what to do',
+      'missed my grades a level',
+      'a level results day triage',
+    ],
+  },
+  {
+    slug: 'missed-university-offer-by-one-grade',
+    title: "Missed Your University Offer by One Grade? Here's Exactly What Happens",
+    description:
+      'A one-grade miss is a decision, not a rejection: how universities judge near-misses, what UCAS Hub shows, the word-for-word script for the admissions call, and how to play clearing if both say no.',
+    datePublished: '2026-07-16',
+    dateModified: '2026-07-16',
+    readingMinutes: 9,
+    category: 'Results & Clearing',
+    keywords: [
+      'missed my university offer by one grade',
+      'missed offer by one grade will they accept me',
+      'firm choice missed conditions',
+      'what to say clearing call',
+      'ucas hub results day',
+    ],
+  },
+  {
+    slug: 'a-level-appeals-2026',
+    title: 'A-Level Appeals 2026: How Long They Take and Whether Grades Can Go Down',
+    description:
+      'How A-level reviews of marking actually work in 2026: the 20 August priority deadline, exact costs per exam board, why grades can go down, and the honest test for whether your paper is worth reviewing.',
+    datePublished: '2026-07-16',
+    dateModified: '2026-07-16',
+    readingMinutes: 9,
+    category: 'Results & Clearing',
+    keywords: [
+      'a level appeals 2026',
+      'can a level grades go down on appeal',
+      'how long do a level appeals take',
+      'a level remark cost',
+      'priority review of marking deadline',
+    ],
+  },
+  {
     slug: 'how-to-choose-an-a-level-tutor',
     title: 'How to Choose an Online A-Level Tutor in the UK',
     description:

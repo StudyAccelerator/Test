@@ -78,8 +78,12 @@ Social content ships as a weekly pack: every Friday 9am the scheduled task `week
 1. Add an entry to the top of the array in `lib/posts.ts`.
 2. Create `app/blog/<slug>/page.tsx` copying an existing article's structure (metadata with canonical, faqs array, ArticleLayout from `components/blog/article-kit.tsx`).
 3. `/blog` index and `app/sitemap.ts` pick it up automatically.
-4. Run the compliance scan (dashes, curly quotes, banned words) before committing.
+4. Run the compliance scan before committing: `python3 scripts/compliance-scan.py <files>` (dashes, curly quotes, banned words, hyphen ranges). It exists as a real script since 16 July 2026; scan every content file you touch.
 5. Write the backlink twin.
+
+## The blog content pipeline (16 July 2026)
+
+A competitor-informed batch of ~24 SEO/AEO posts is being delivered in reviewable waves: plan, evidence and standing rules in `content/blog-pipeline/2026-07-16-seo-aeo-content-pipeline.md` (read it before any blog batch work). Each wave is built on its own `claude/seo-blog-wave-<n>` branch and NOTHING merges to main until Waleed approves that wave; approval means merge, push, then confirm live URLs. Wave 1 (six results-day/UCAS posts plus cluster fixes) was built 16 July on `claude/seo-blog-wave-1`, review pending. Waves 2 to 4 topics are in the plan doc; re-score against fresh SERPs before building each. Results day 2026 is Thursday 13 August (results 8am, Clearing choices addable from 1pm; priority appeals deadline 20 August; no autumn A-level resit series). The article kit has a `DiagnosticCTA` (student and parent variants; parent links `/revision-diagnostic/?for=parents`) and `CourseCTA` now defaults to `/subject-accelerators`.
 
 ## The weekly newsletter (The Sunday Session)
 

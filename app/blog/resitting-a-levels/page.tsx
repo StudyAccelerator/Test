@@ -135,6 +135,12 @@ export default function Page() {
         </LI>
       </OL>
 
+      <P>
+        Still weighing a resit against clearing, an appeal or your insurance choice? Work through{' '}
+        <A href="/blog/didnt-get-the-grades-a-level-results/">the results day triage guide</A> first: it
+        puts all four options in the right order for the morning itself.
+      </P>
+
       <H2 id="ucas">Resits and your UCAS application</H2>
       <P>
         You must declare resits on UCAS, including the grades you previously achieved. That&apos;s not the
