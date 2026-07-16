@@ -22,9 +22,9 @@ The honest counterweights, so this is a decision and not a pitch:
 - **Reddit holds your users, not your buyers.** Students, majority male, no parents. Conversion runs student, then free tool, then email, then parent. Facebook remains the buyer channel; Reddit feeds the top of the funnel and your authority. Ofcom's data says UK teens use Reddit as a search destination more than a hangout (48% of 13 to 17s search social platforms daily, with Reddit one of Ofcom's three named examples; average UK Reddit session time is just 4 minutes a day against TikTok's 28). Treat Reddit as search-fed, not scroll-fed.
 - **Active teen usage is minority-share:** roughly 18% of US teens use Reddit (Pew 2025, US proxy, no UK teen figure published) against 60 to 90% for TikTok/Instagram/YouTube. The audience quality is high (self-selected strugglers asking for help) but the raw reach argument belongs to TikTok, not Reddit.
 - **Attribution will be murky and slow.** No links in most posts means no clean click trail. If you need a channel that proves itself in a fortnight, this is not it. The measurement section below sets honest expectations.
-- **It must not displace the launch.** Everything in this plan fits inside about 90 minutes a week plus workshops you would want to run anyway, and nothing in it competes with the 8 August cohort sprint.
+- **It must not displace the launch.** Everything in this plan fits inside about 90 minutes a week plus the sessions you choose to teach in their community, and nothing in it competes with the 8 August cohort sprint.
 
-**The Hassan call, plainly: yes, run the Year 12 summer session, and message him today.** It is your proven mechanic pointed at a bigger room through the only compliant door that sub has. But go in with eyes open about what r/alevel is (Part 1) and what the session is for: standing, testimonials, list growth and a rehearsal, not direct UK cohort sales. The full playbook is Part 4, step 2.
+**The Hassan call, plainly: yes, run the Year 12 summer session, and message him today.** It is your proven mechanic pointed at a bigger room through the only compliant door that sub has, and it is the version that survives retiring your own workshops: their audience, their invitation, no page and no funnel for you to maintain. But go in with eyes open about what r/alevel is (Part 1) and what the session is for: standing, testimonials and list growth, not direct UK cohort sales. The full playbook is Part 4, step 2.
 
 ---
 
@@ -104,7 +104,7 @@ What this means practically: **every excellent answer is written once and works 
 
 ## Part 4: The plan (step by step, starting today, Wednesday 16 July 2026)
 
-Time budget: about 90 minutes a week of your time on answers, plus the workshops and AMA moments you would choose to do anyway. Claude sessions do the drafting, logging, monitoring and prep; you do all the posting, always.
+Time budget: about 90 minutes a week of your time on answers, plus the r/alevel session and the AMA. Claude sessions do the drafting, logging, monitoring and prep; you do all the posting, always.
 
 ### Step 1 (today, 20 minutes): create the real-identity account
 
@@ -118,7 +118,7 @@ Keep your personal account for private browsing; never mix the two. No Claude se
 
 Message Hassan with three things:
 
-1. **Confirm the Year 12 summer session and book the date.** Proposed: the week of 20 to 26 July, evening, around your rota. "How Year 12s can make the most of the summer before Year 13" is the right session: it is the exact S1 teaching spine you already have drafted for your own workshop arc, so preparing it twice costs nothing. Ask him what format worked best before (their Discord stage, Zoom, whatever they prefer). Ask honestly what the sub's UK vs international split feels like from the inside; pitch the session so it serves both (revision systems and summer planning are board-agnostic; UCAS specifics can be a segment near the end flagged as UK-focused).
+1. **Confirm the Year 12 summer session and book the date.** Proposed: the week of 20 to 26 July, evening, around your rota. "How Year 12s can make the most of the summer before Year 13" is the right session: the teaching spine already exists in your drafted S1 sequence email, so the prep is a reshape rather than a build. Ask him what format worked best before (their Discord stage, Zoom, whatever they prefer). Ask honestly what the sub's UK vs international split feels like from the inside; pitch the session so it serves both (revision systems and summer planning are board-agnostic; UCAS specifics can be a segment near the end flagged as UK-focused).
 2. **Ask for the visible traces this time.** A mod-approved announcement post in the sub itself, not only on Discord, under your new real-name account, with a mod-pinned comment carrying any links the mods bless; a replay or summary post afterwards; and, if the session lands well, your free tools added to the sub's resource repository bookmarks. All of it is theirs to grant, none of it costs them anything, and it converts a private favour into a public, permanent, searchable asset. If they are only comfortable with some of it, take what is offered gladly.
 3. **Ask two scouting questions.** Does the mod team do verified flairs (yours would be "NHS Doctor | A-level tutor" or similar)? And does he know the r/6thForm mod team, and would he be willing to be named as a reference if you approach them about a results-week AMA (step 5)? Mod communities overlap; a warm word from a fellow mod is worth more than any pitch.
 
@@ -155,9 +155,9 @@ An equivalent informal AMA in r/GCSE around GCSE results (Thursday 20 August), f
 
 ## Part 5: What this costs and what it protects
 
-**Cost:** step 1 and 2 today are half an hour. The cadence is about 90 minutes a week. The workshop and AMA are evenings you already choose to spend teaching, pointed at bigger rooms. Claude sessions absorb the monitoring, drafting and logging.
+**Cost:** step 1 and 2 today are half an hour. The cadence is about 90 minutes a week. The r/alevel session and the AMA are two evenings, pointed at rooms far bigger than your list. Claude sessions absorb the monitoring, drafting and logging.
 
-**Protection of the launch:** nothing here touches the 8 August cohort mechanics. The r/alevel session doubles as the rehearsal for your own list's workshop (same teaching spine), and the results-week moves are already in the business audit as play 2. Reddit never gets priority over a broadcast, a workshop for your own list, or the parent channel. If a week is too full, the cadence is the thing that slips, and that is fine: the account, the standing and the sanctioned relationships do not decay in a week.
+**Protection of the launch:** nothing here touches the 8 August cohort mechanics, and the results-week moves are already in the business audit as play 2. Note one thing that changed after the audit was written: you have retired your own workshops and the /workshop page. That does not undercut this plan, because the r/alevel sessions are not your own workshops. They are teaching slots in someone else's community, run at their invitation, with no landing page, no registration funnel and no page to keep current. That is the version of the mechanic worth keeping: the delivery, without the upkeep. Reddit still never gets priority over a broadcast or the parent channel. If a week is too full, the cadence is the thing that slips, and that is fine: the account, the standing and the sanctioned relationships do not decay in a week.
 
 **Protection of the relationship:** Hassan's sanction is the scarcest asset in this plan. Every ask of him above is small, optional and reversible, and every session run through his door must be worth more to his community than to you. That is good ethics and better strategy. The moment the mods profit-check you, the door closes for everyone, permanently.
 
