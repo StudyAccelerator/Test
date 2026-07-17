@@ -178,3 +178,43 @@ An equivalent informal AMA in r/GCSE around GCSE results (Thursday 20 August), f
 ## Appendix: source notes
 
 Subreddit data: read inside the logged-in account and via Reddit's about.json endpoints, 15 July 2026; growth percentages from GummySearch pages for each sub (data dates 8 to 15 July 2026). Rules quoted verbatim from each sub's published rules page on the day. AMA precedents from in-sub search on the day. Web pass: Reddit Help spam and manipulated-content policies (via search snippets; pages block crawlers); Semrush AI-citation studies June and October 2025; Profound citation study via Press Gazette (4 August 2025) and Ofcom Online Nation 2025 (10 December 2025); Ofcom Children and Parents Media Use 2025 (7 May 2025) and 2026 (21 May 2026); Pew Research Teens fact sheet (2025 fieldwork); Reddit Pro via TechCrunch (8 March 2024, 7 January 2025); r/science AMA evidence from Hara, Abbazio & Perkins, PLOS One (15 May 2019); Zurich r/changemyview case via Washington Post, NBC, 404 Media, Retraction Watch (April to May 2025); Google/Reddit licensing via CBS News (February 2024) and Reddit's S-1. Practitioner-only claims (shadowban mechanics, 19:1 norm, profile-link pattern) are marked as such in the text and rest on at least four mutually consistent vendor sources; treat them as craft knowledge, not fact. Single-source items are flagged inline. The past r/A-levels workshops' reception is Waleed's own report and the partnership assets file; no public trace was found in the sub's searchable archive, which is itself a finding (Part 1).
+
+---
+
+## Addendum, 17 July 2026: the subject subreddits, the own-subreddit question, and premeduk AMAs
+
+Researched the same way as Part 1: subreddit data read via Reddit's own JSON endpoints from inside the logged-in account, 17 July 2026. This addendum answers two questions Waleed raised after the main document shipped: are there more subs worth working, and should he create his own.
+
+### The subject subreddits: four quiet answer lanes
+
+The main map covered the big general subs. Below them sits a tier of subject-specific subs that match Waleed's four teaching subjects exactly, and their rules are looser because their problem is scarcity of good answers, not marketing pressure:
+
+| Sub | Members | Activity (age of 4 to 6 newest posts) | The promotion rule, quoted in full | Read on it |
+|---|---|---|---|---|
+| r/alevelmaths | 24,800 | 8 to 13 hours: several posts a day | "No Payments or Financial Transactions" | Most active and most permissive. Answers welcome |
+| r/ALevelChemistry | 16,365 | 8 to 92 hours | "No links to paid services" | Answers fine, no paid links |
+| r/ALevelBiology | 14,158 | 7 to 43 hours | No promotion rule published at all | Act as if r/6thForm's rule applies anyway |
+| r/ALevelPhysics | 8,215 | 6 to 58 hours | "No advertising paid services" | Answers fine |
+
+Why this tier matters despite the smaller numbers: questions here sit unanswered for hours or days, the audience is students at the exact moment of subject pain, and a doctor-tutor writing genuinely excellent subject answers is far more visible than in r/6thForm's meme stream. These are the best karma-per-minute lanes on the platform for the answer cadence in Part 4, and subject answers double as AEO assets ("how do I answer 25 markers in A-level biology" is a search query). Slot them into the cadence right behind r/6thForm; same discipline, no links ever, the maths/chem/physics rules above ban only transactions and paid links but the Part 6 rules stay the standard everywhere.
+
+Checked and not worth time: r/furthermaths (1,296 members, newest post 16 months old, dead), r/ALevelStem (51 members), r/2026Alevel (23), r/2027ALevel (1,668, sparse and cohort-shaped), r/PhysicsStudents (140K but global homework-help with a self-promotion ban and no UK identity).
+
+### Should you start your own subreddit? No, and the evidence is unusually clean
+
+The competitors already ran this experiment with more money and bigger audiences than yours, and the results were read live on 17 July 2026:
+
+- **r/SaveMyExams: does not exist** (404). A DR 63 company with 64K Instagram followers has no subreddit at all.
+- **r/UpLearn: 2 members** (created 2024). **r/MyEdSpace: 1 member** (restricted, created 2025). The market's heaviest ad spender has a one-member subreddit.
+- **r/senecalearning: 58 members since 2019.** A platform claiming 14 million students grew a Reddit community of 58 people in seven years.
+- PMT, Tailored Tutors and Medic Mind: no functioning subs found.
+
+That is every funded competitor either declining to try or failing publicly. The mechanics explain it. A new subreddit has no discovery surface: Reddit has no invite engine the way Facebook groups do, so growth comes from being mentioned in existing subs, which is exactly the self-promotion those subs ban. You would be marketing an empty room through channels that prohibit marketing. Meanwhile the audience is already aggregated (the mapped subs hold roughly 900K combined memberships) and moderating a public space for minors is a duty-of-care commitment: r/6thForm publishes a formal safeguarding statement, and r/alevel's rule set exists to police exam leaks, crisis posts and doxxing. An FY rota cannot staff that.
+
+The clincher: everything an own sub would give you, your Reddit profile already gives you free. Followers who see your posts in their feed, pinned posts, a bio with links, and zero moderation duty. **The profile is your owned asset on Reddit.** The own-community play is real, but it belongs on Facebook, where the buyers are and where invite and discovery mechanics actually work: the A-Level Parents UK group is already roadmapped (`content/facebook-groups/2026-07-16-own-group-roadmap.md`). One own community, on the platform built for it, aimed at the people who pay. Not two.
+
+Revisit only if, months from now, the profile has thousands of followers and sanctioned events keep filling, and even then the case will be weak against simply going deeper in the subs that already exist.
+
+### r/premeduk AMAs: informal precedent exists
+
+In-sub search (17 July) finds accepted student-run AMAs at modest scale: a final-year medical student AMA in 2026 (13 points, 13 comments), "I got in with AAB, and a B at resit. AMA" in 2025 (12 points, 13 comments). No formal approval framework like r/6thForm's, and rule 1 (no self-promotion) still applies, so any AMA there is pure value with the credential doing the work. The right moment is the October UCAS medicine-deadline window, not results week. Pencil it for autumn, after the r/6thForm AMA has played out, and treat it as the doctor's home-turf version of the same format.
