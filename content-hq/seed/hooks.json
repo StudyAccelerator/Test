@@ -1,0 +1,1445 @@
+{
+  "updatedAt": "2026-07-17T22:30:00Z",
+  "note": "Built 17 July 2026: Waleed's 21 collected hooks (marked yours), each investigated against real videos, plus 24 more patterns found in the same sweep. Metrics carry their source and date; null beats a guess. Radar sweeps append new patterns as they appear.",
+  "howToUse": [
+    "Put the credential in the first two seconds, spoken or as first-frame text. The same proven hooks flopped on faceless small accounts (a 98 like feels-illegal TikTok, a 77 view exam-tomorrow Short) while credentialed versions of the same promises did millions. NHS doctor plus taught 1,000+ students is the differentiator, not the garnish.",
+    "The hook opens the loop; the format underneath cashes it. Identical hooks swung from 9,931 to 955,295 plays on one account depending on whether a concrete numbered protocol sat under them (the 955K video had an 8.3 percent save rate), and an identical title did 294K on one channel and 1,239 on another. Pair every hook with a save-worthy body: a numbered protocol, a closed only-N fact, or a walkthrough with a receipt on screen.",
+    "Mirror the spoken hook in the first-frame text layer. Trend phrases and rating formats (10/10, disgustingly good) only parse and only get picked up by TikTok search and discover pages when the text carries them; spoken-only hooks are invisible to search, and search-shaped hooks keep earning views months after posting.",
+    "Rotate hook families instead of repeating one. Run a named series stamp as the furniture, use contrarian corrections and challenge hooks to farm comments, then convert those comments with reply-to-real-comment videos; that comment loop is what built the biggest UK exam accounts. Never stage the comments.",
+    "Match urgency hooks to the real UK calendar and bank them: mocks November to February, exams May to June, results day Thursday 13 August 2026. A night-before hook in July reads as out of touch, so off-season weeks run the evergreen authority, utility and contrarian hooks instead.",
+    "Avoid worn ad-coded phrasings and never launder numbers. Gonna, listen up, infomercial countdowns and if-you're-not-using-X pattern-match to ads UK teens skip; say revise, not study; and any percentage, only-N or difficulty claim needs a real receipt (examiners' report, spec, mark scheme) on screen, never an invented statistic or a predicted paper."
+  ],
+  "hooks": [
+    {
+      "id": "thing-you-were-taught-is-not",
+      "hook": "[Thing you were taught] is NOT [what you think it is]",
+      "source": "research",
+      "category": "contrarian",
+      "verdict": "proven",
+      "mechanism": "Directly contradicting received classroom wisdom creates instant cognitive dissonance in exactly the audience that was taught the thing, provokes defensive comments that feed distribution, and positions the creator as the insider who knows better. Because follower count is not a TikTok ranking factor, myth-bust shapes are the fastest reach lever for a brand-new account.",
+      "examples": [
+        {
+          "creator": "Mr Salles (Dominic Salles)",
+          "title": "Macbeth's Hamartia is NOT Ambition! (one of a title system including 10 FATAL Mistakes in LIT Essays and Why You NEED a Thesis Statement)",
+          "platform": "TikTok",
+          "url": null,
+          "metric": null,
+          "metricSource": "Titles read off his live TikTok profile 17 Jul 2026, recorded in content-hq/seed/creators.json; no per-video counts were sourced",
+          "postedWhen": null
+        },
+        {
+          "creator": "Elizabeth Filips (adjacent study niche, supporting scale evidence)",
+          "title": "You're Not Forgetful (myth-bust plus absolution framing)",
+          "platform": "YouTube",
+          "url": null,
+          "metric": "3.98M views",
+          "metricSource": "Channel RSS observed 17 Jul 2026, recorded in content-hq/seed/playbook.json",
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "The single best fit in the whole library. His product thesis is that students revise wrongly, not lazily, so the corrections write themselves from the diagnostic: rereading is not revision, highlighting is not revision, a mock is a diagnosis not a prognosis. The medical framing makes his versions sound like a doctor correcting a misdiagnosis rather than a creator picking fights. Always end on the replacement technique, never the takedown; the absolution variant (you're not stupid, your method is) is the highest-trust version for anxious A-level students.",
+      "adaptation": "Rereading your notes is NOT revision. I'm an NHS doctor and I need you to hear this before September, because it's the number one thing I see bright students get wrong."
+    },
+    {
+      "id": "viral-advice-is-wrong-evidence",
+      "hook": "This viral advice is wrong, and here's what the evidence actually says",
+      "source": "research",
+      "category": "authority",
+      "verdict": "proven",
+      "mechanism": "Correction premise plus receipts. Naming a specific popular claim triggers viewers who have seen it (instant relevance) and the credential promises the correction is safe to trust. A 2026 CHI study found viewers exposed to expert debunking videos believed the misinformation significantly less in all six tested conditions, and rated the experts more credible than the original creators.",
+      "examples": [
+        {
+          "creator": "Dr Idz (Dr Idrees Mughal, MBBS, MRes), UK doctor",
+          "title": "Reply-style debunks of viral nutrition claims, quoting the original video then the research",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@dr_idz",
+          "metric": "1.9M followers, 26.7M likes",
+          "metricSource": "TikTok profile @dr_idz figures as surfaced in web search results, July 2026",
+          "postedWhen": "2021 to present"
+        },
+        {
+          "creator": "Dr Karan Rajan, NHS surgeon",
+          "title": "Fact-first myth-busting in 60 seconds (sleep myths, gut health, viral hacks)",
+          "platform": "TikTok",
+          "url": "https://async.com/blog/karan-rajan-tiktok-doctor/",
+          "metric": "5M+ TikTok followers, 352M+ likes",
+          "metricSource": "async.com profile piece (async.com/blog/karan-rajan-tiktok-doctor)",
+          "postedWhen": "2020 to present"
+        },
+        {
+          "creator": "Dr Muneeb Shah (@dermdoctor), dermatologist",
+          "title": "Stitch-and-correct responses to viral skincare misinformation",
+          "platform": "TikTok",
+          "url": "https://thedo.osteopathic.org/columns/tiktok-doc-how-muneeb-shah-do-a-k-a-dermdoctor-became-a-top-health-influencer-on-social-media/",
+          "metric": "18M TikTok followers",
+          "metricSource": "The DO (thedo.osteopathic.org) and Business of Fashion coverage of his skincare brand launch",
+          "postedWhen": "2020 to present"
+        }
+      ],
+      "fitForWaleed": "Arguably THE lane for him. Study advice misinformation is as rampant as health misinformation, no UK doctor is debunking it for A-level students, and diagnose before you treat is already his framing. It is the exact format that built the biggest UK medical TikTok accounts (Dr Idz, Dr Karan Rajan). One rule: only debunk claims where the evidence is genuinely settled (retrieval practice vs rereading, spacing vs cramming); half-certain debunks burn the credibility the format runs on.",
+      "adaptation": "You've seen the tip that says rewrite your notes until they stick. I'm a doctor, and decades of memory research rank rereading and recopying near the bottom of what works. Here's what sits at the top."
+    },
+    {
+      "id": "study-when-you-dont-feel-like-it",
+      "hook": "How to study when you don't feel like studying",
+      "source": "waleed",
+      "category": "utility",
+      "verdict": "proven",
+      "mechanism": "A perfect state-match call-out: the student scrolling past it at 9pm instead of revising IS, at that second, someone who does not feel like studying, so it reads as personally addressed without naming an audience. It validates before it instructs and promises a fix that does not require the one thing the viewer lacks: motivation. It is also search-shaped (TikTok maintains a dedicated discover page for the phrase), so it keeps getting served long after posting.",
+      "examples": [
+        {
+          "creator": "Med School Insiders (Kevin Jubbal, MD)",
+          "title": "How to STUDY When You DON'T FEEL LIKE IT!",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=a8QnjbezpaU",
+          "metric": "3.1m views, 146k likes; channel 1.81m subscribers",
+          "metricSource": "Read live on the YouTube watch page in browser, 17 Jul 2026",
+          "postedWhen": "Nov 2018 (page shows '7 years ago'; a search result dates it 17 Nov 2018)"
+        },
+        {
+          "creator": "@studiedwithme",
+          "title": "Study Motivation when U DON'T FEEL LIKE STUDYING (Short)",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/-09FnXwuILE",
+          "metric": "3m views, 55k likes, 250 comments",
+          "metricSource": "Views from the Shorts shelf on YouTube search results for the exact phrase; likes/comments from the Shorts player page, both read in browser 17 Jul 2026",
+          "postedWhen": null
+        },
+        {
+          "creator": "@jesstudyofficial",
+          "title": "TikTok: 'Do you struggle with studying because you feel tired after school?' (3-2-1 method; surfaced by TikTok's discover page for 'how to study if you don't feel like studying')",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@jesstudyofficial/video/7350714834515660065",
+          "metric": "762.7K likes, 2,865 comments, 320.8K saves, 18.6K shares (TikTok does not show view counts to logged-out web visitors)",
+          "metricSource": "Read live on the TikTok video page in browser, 17 Jul 2026",
+          "postedWhen": "27 Mar 2024 (date shown on the TikTok page)"
+        }
+      ],
+      "fitForWaleed": "Unusually strong fit and specifically precedented: the biggest sourced performer on this exact hook is Med School Insiders, a doctor-founder study channel, so doctor-answers-the-motivation-problem is proven pairing, not hope. Calm, validating, zero hype, and it maps straight onto his discipline-over-motivation positioning with no grade claims needed. Two caveats: the phrase is saturated, so the doctor's answer in the body has to differentiate (a small TikTok on the same hook sat at 369 likes), and swap study for revise; skip the ALL-CAPS FORCE-yourself packaging.",
+      "adaptation": "Here's how to revise when you don't feel like revising. I'm an NHS doctor, and motivation didn't get me through A-levels or medical school. A system did. Set a ten minute timer, take a blank page, and write down everything you remember from one topic. Starting is the treatment. Motivation turns up after you've started, not before."
+    },
+    {
+      "id": "things-id-never-do-as-a-doctor",
+      "hook": "As a [credential], here are X things I'd NEVER do",
+      "source": "research",
+      "category": "authority",
+      "verdict": "proven",
+      "mechanism": "Negative framing plus insider authority. Telling people what an expert avoids creates a stronger curiosity gap than telling them what to do, because it implies private knowledge with personal stakes: the professional is protecting themselves, not selling advice. It also invites argument in the comments, which feeds the algorithm.",
+      "examples": [
+        {
+          "creator": "Dr Nicole Van Groningen (@dr.nicole.vangroningen)",
+          "title": "Things you'll never catch me doing as a doctor",
+          "platform": "TikTok",
+          "url": "https://www.dexerto.com/entertainment/doctor-goes-viral-on-tiktok-after-listing-things-shed-never-do-2377193/",
+          "metric": "1.4M+ views",
+          "metricSource": "Dexerto article (dexerto.com/entertainment/doctor-goes-viral-on-tiktok-after-listing-things-shed-never-do-2377193) states 1.4 million views and counting",
+          "postedWhen": "10 November 2023"
+        }
+      ],
+      "fitForWaleed": "Excellent fit. Calm, credential-led and observational rather than hype, so it sits naturally with a doctor brand, and the A-level version has real teeth because students expect study gurus to add tactics, not remove them. Works as a repeatable series: night before the exam, the morning of results day, the first week of Year 13. Each item must be concrete and slightly surprising or the comments call it obvious.",
+      "adaptation": "I'm an NHS doctor, and here are three things I'd never do the night before an A-level exam."
+    },
+    {
+      "id": "tips-from-the-frontline-series",
+      "hook": "Tips from the [frontline setting]: the credentialed series stamp",
+      "source": "research",
+      "category": "authority",
+      "verdict": "proven",
+      "mechanism": "The setting carries the credential so the hook never has to restate it: Tips from the ER says trained, seen everything, knows what goes wrong, in five words. The numbered series turns one video's viewers into subscribers who binge the back catalogue, and repeat viewers are an algorithm quality signal.",
+      "examples": [
+        {
+          "creator": "Steveioe (retired ER tech)",
+          "title": "Tips from the ER (long-running series)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@steveioe",
+          "metric": "11.7M followers, 532.9M likes; his top Tips from the ER video shows 12.1M likes",
+          "metricSource": "TikTok profile @steveioe and video pages as surfaced in web search results, July 2026",
+          "postedWhen": "2020 to present (still posting new entries in 2026)"
+        },
+        {
+          "creator": "Steveioe",
+          "title": "Tips from the ER, The Waiting Room",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@steveioe/video/7631657973433093390",
+          "metric": "703.9K likes",
+          "metricSource": "Like count shown on the TikTok video page as surfaced in web search results, July 2026",
+          "postedWhen": "2026"
+        }
+      ],
+      "fitForWaleed": "Very strong fit as his repeatable furniture. A named series lets him open calmly with no shouting because the stamp does the hooking, and it compounds: each entry advertises the rest. The doctor-to-student crossover setting is the unique bit no competitor has. Pick the stamp once and never change it; the consistency is the asset.",
+      "adaptation": "Revision tips from an NHS doctor. Part one: what medical school taught me about the night before an exam."
+    },
+    {
+      "id": "credential-reacts",
+      "hook": "[Credential] reacts: play the viral clip, then give the expert verdict",
+      "source": "research",
+      "category": "authority",
+      "verdict": "proven",
+      "mechanism": "Borrowed reach plus authority payoff. The stitched clip already proved it can hold attention, and the credential promises a ruling the original could not give; viewers stay for the verdict the way they stay for a jury decision. It positions the expert as the adult in the room without them claiming it.",
+      "examples": [
+        {
+          "creator": "Ugo Lord (@ugolord), attorney",
+          "title": "Lawyer reaction videos ruling on liability in viral clips",
+          "platform": "TikTok",
+          "url": "https://async.com/blog/ugo-lord/",
+          "metric": "6.9M TikTok followers; one reaction video reached 7M views in under 24 hours",
+          "metricSource": "async.com profile piece (async.com/blog/ugo-lord) and his TikTok profile @ugolord as surfaced in search results",
+          "postedWhen": "2021 to present"
+        },
+        {
+          "creator": "Doctor Mike (Dr Mikhail Varshavski)",
+          "title": "Real Doctor Reacts to GREY'S ANATOMY | Medical Drama Review",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=-FyRzgJFeLE",
+          "metric": "30M+ followers across social as the number one health influencer",
+          "metricSource": "Forbes interview, 29 October 2024 (forbes.com/sites/carminegallo/2024/10/29/youtubes-doctor-mike-reveals-his-top-social-media-tips-for-leaders-and-professionals)",
+          "postedWhen": "8 April 2018 (format still running in 2024 to 2026 compilations)"
+        }
+      ],
+      "fitForWaleed": "Strong fit and probably his fastest cold-start route, because the stitched clip supplies the audience before he has one. Reacting to bad revision hacks keeps him kind to students while being firm on methods. Rule on the technique, never mock the student in the clip, and land the verdict inside the first ten seconds after the clip or viewers drop.",
+      "adaptation": "Stitch a viral revision hack, then say: This is everywhere right now. I'm a doctor, and I'll be honest, this wouldn't survive contact with a real A-level paper. Here's what would."
+    },
+    {
+      "id": "only-1-percent-got-this-right",
+      "hook": "Only 1 percent of students got this [board] question right",
+      "source": "research",
+      "category": "challenge",
+      "verdict": "proven",
+      "mechanism": "A difficulty flex plus a percentage dare pulls in two audiences at once: strong students click to prove themselves, struggling ones out of fear of missing something. The comment section fills with answers and arguments, which the algorithm reads as engagement. It is the engine behind the biggest UK exam account on TikTok (about 2.8M followers) and has run at consistent five-figure likes for at least two years.",
+      "examples": [
+        {
+          "creator": "FreeGCSEMathsTeacher",
+          "title": "Hardest Exam Question Ever! Grade 9 / A* = 5 Marks",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@freegcsemathsteacher/video/7421618836648103200",
+          "metric": "58.1K likes, 1,855 comments (view count not publicly exposed)",
+          "metricSource": "Google-indexed TikTok snippet surfaced in web search 17 Jul 2026; matches the same-day observation recorded in content-hq/seed/outliers.json",
+          "postedWhen": "approx Oct 2024 (video ID timestamp)"
+        },
+        {
+          "creator": "FreeGCSEMathsTeacher",
+          "title": "This GCSE Maths question stumped 99% of students (difference of two squares walkthrough)",
+          "platform": "TikTok",
+          "url": null,
+          "metric": "30.7K likes, 1,090 comments",
+          "metricSource": "Web search result summary of Google-indexed TikTok snippet, 17 Jul 2026; could not pin the exact video URL so it stays null",
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Very strong fit and fully compatible with the calm doctor brand, because it is a teaching flex rather than rage bait. One hard constraint: he cannot invent the percentage. The honest A-level version sources the difficulty claim from the examiners' reports, which publish exactly this kind of fact, and putting the report on screen as the receipt strengthens his evidence-led positioning versus creators who make the number up.",
+      "adaptation": "This is the A level Chemistry question the examiners' report says most students threw marks away on. Let's see if you'd have got it. Then one clean walkthrough under 60 seconds with the report on screen as the receipt."
+    },
+    {
+      "id": "named-free-asset-is-up",
+      "hook": "[Named free asset] is up!",
+      "source": "research",
+      "category": "utility",
+      "verdict": "proven",
+      "mechanism": "A recurring named free asset announced as an event turns content into a product launch students wait for and search by name: TikTok auto-generated discover pages for the originator's asset, meaning it became its own search brand. The drop post did roughly 10x her typical numbers, and splitting one asset into two posts via a reply-to-comment twin doubled the reach for the same work.",
+      "examples": [
+        {
+          "creator": "Hannah Kettle (@hannahkettlemaths)",
+          "title": "GCSE Maths Predicted Paper for Foundation Edexcel is up! Enjoy!",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@hannahkettlemaths/video/7486232213630110998",
+          "metric": "33.4K likes, 406 comments, roughly 10x her typical post",
+          "metricSource": "Google-indexed TikTok snippet observed 17 Jul 2026 (content-hq/seed/outliers.json); URL confirmed live in web search today",
+          "postedWhen": "approx late Mar 2025 (video ID timestamp)"
+        },
+        {
+          "creator": "Hannah Kettle (@hannahkettlemaths)",
+          "title": "Replying to @Lester Higher GCSE Predicted Paper for Maths is up!",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@hannahkettlemaths/video/7487344707039694102",
+          "metric": "5,059 likes",
+          "metricSource": "Google-indexed snippet observed 17 Jul 2026, recorded in content-hq/seed/outliers.json",
+          "postedWhen": "approx late Mar 2025 (video ID timestamp)"
+        }
+      ],
+      "fitForWaleed": "Strong fit because he already owns named assets: the blurting template PDF, the revision diagnostic, the tracker. One hard line: the originator's named asset is a predicted paper, and predictions are off the table under his content rules, so his drops must be assets that work whatever comes up, which is also his differentiation. Timing play: a named Results Day Pack drop in early August 2026 rides the biggest search window of his year.",
+      "adaptation": "The Results Day Pack is up. Everything you need for the morning of 13 August in one free download, whatever your grades say. Comment PACK and I'll send it to you."
+    },
+    {
+      "id": "disgustingly-intelligent",
+      "hook": "Here's how to become disgustingly intelligent",
+      "source": "waleed",
+      "category": "curiosity",
+      "verdict": "proven",
+      "mechanism": "Semantic collision as a pattern interrupt: a repulsion word welded to an aspirational trait (the internet cousin of filthy rich) implies intelligence at an unfair, excessive level, and signals in-group fluency with studytok slang. Crucially, the sourced outliers never run the phrase alone: they weld it to ranked-list formats with escalation mechanics (progressively more niche, part numbers) that drive saves, rewatches and follows.",
+      "examples": [
+        {
+          "creator": "@catherinejuliasmith (46.5K followers)",
+          "title": "Part 5 | Becoming disgustingly educated (book list)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@catherinejuliasmith/video/7591886272117951766",
+          "metric": "3.1M views, 374.6K likes (a 46.5K-follower account, roughly 67x her follower count)",
+          "metricSource": "TikTok video page embedded stats, read in browser 17 Jul 2026",
+          "postedWhen": "5 Jan 2026"
+        },
+        {
+          "creator": "@yngjune (Jun, 66.2K followers)",
+          "title": "(Part 3) 10/10 hobbies that will make you disgustingly intelligent but they get progressively more niche",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@yngjune/video/7655929718188936469",
+          "metric": "1.8M views, 226.4K likes, 88.3K saves",
+          "metricSource": "TikTok video page embedded stats (playCount/diggCount/collectCount), read in browser 17 Jul 2026",
+          "postedWhen": "27 Jun 2026"
+        },
+        {
+          "creator": "@tillystudytips (UK study creator, 152.4K followers)",
+          "title": "follow these tips to become DISGUSTINGLY SMART (study tips list)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@tillystudytips/video/7546624624772254978",
+          "metric": "14.1K views, 1,567 likes: an UNDERperformer against her 152.4K followers",
+          "metricSource": "TikTok video page embedded stats, read in browser 17 Jul 2026",
+          "postedWhen": "5 Sep 2025"
+        }
+      ],
+      "fitForWaleed": "Strong fit, used knowingly and sparingly. UK students already speak this slang (Cherwell and Redbrick have covered the trend), and a calm NHS doctor saying disgustingly with a straight face is exactly the contrast his empty-lane positioning can cash in; it promises a vibe not a grade, so no outcome-claim problem. Two cautions: the trend has a documented performative-learning backlash (YPulse, Cherwell), so his version must deliver real method, and the phrase is not a cheat code: the one direct study-tips use verified underperformed its own follower base while the outliers all ran ranked lists with escalation and part numbers. Copy the structure, not just the adverb, and use it this summer rather than saving it.",
+      "adaptation": "Here's how to become disgustingly good at your A-levels. I'm an NHS doctor, I've taught over 1,000 students, and these five revision habits get progressively more niche. Then a ranked list that genuinely escalates, ending on his most distinctive method point, with a Part 2 loop. Keep the trend phrase verbatim in the on-screen text so search picks it up."
+    },
+    {
+      "id": "dangerously-smart",
+      "hook": "How to become dangerously smart",
+      "source": "waleed",
+      "category": "curiosity",
+      "verdict": "proven",
+      "mechanism": "Dangerously is an incongruity intensifier bolted onto a mundane aspiration: it reframes intelligence as power and mild threat, flatters the viewer's aspirational self-image, and opens a curiosity gap (what could make smart dangerous?). It inherits the genre aura of dark-psychology content, and the common wrapper (give me X minutes and I'll make you...) adds a time-bound transformation promise.",
+      "examples": [
+        {
+          "creator": "DesireDiaries",
+          "title": "Give me 7 minutes and I'll make you Dangerously Smart",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=kqqaS002eOw",
+          "metric": "1,462,620 views, 89,345 likes",
+          "metricSource": "Return YouTube Dislike API (returnyoutubedislikeapi.com/votes?videoId=kqqaS002eOw), fetched 17 Jul 2026",
+          "postedWhen": "14 Aug 2025 (Google-indexed upload date)"
+        },
+        {
+          "creator": "Psychology Coded",
+          "title": "This Video Will Make You Dangerously Smart (Machiavelli)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=3dzC2GeWQpw",
+          "metric": "211,975 views, 6,556 likes",
+          "metricSource": "Return YouTube Dislike API (returnyoutubedislikeapi.com/votes?videoId=3dzC2GeWQpw), fetched 17 Jul 2026",
+          "postedWhen": "23 Jul 2025 (Google-indexed upload date)"
+        },
+        {
+          "creator": "The Angry Explainer",
+          "title": "Give Me 6 Minutes and I'll Make You a Dangerously Smart Student",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=Jo-cM56POyg",
+          "metric": "168,718 views, 5,330 likes",
+          "metricSource": "Return YouTube Dislike API (returnyoutubedislikeapi.com/votes?videoId=Jo-cM56POyg), fetched 17 Jul 2026",
+          "postedWhen": "23 Mar 2026 (Google-indexed upload date)"
+        }
+      ],
+      "fitForWaleed": "Genuinely strong for his student-facing TikTok: proven in the study niche specifically (the student version did 168K in March 2026), still fresh in mid 2026, and it makes no claim needing evidence. The caveat is tonal: the phrase lives in the dark-psychology corner with moody hustle-bro energy, which clashes with calm NHS credibility if played straight. It works for him only delivered dry, with a touch of doctor irony (a doctor saying dangerously is inherently funny). Strictly student-facing: never reuse dangerous in parent-facing Facebook content.",
+      "adaptation": "As a doctor I don't usually recommend anything dangerous. This is the exception. Here's how you become dangerously smart at A-level before September, and the dangerous students were never the naturally clever ones. They're the ones with a system."
+    },
+    {
+      "id": "study-so-fast-it-feels-illegal",
+      "hook": "Here's how to study so quickly, it literally feels illegal",
+      "source": "waleed",
+      "category": "curiosity",
+      "verdict": "proven",
+      "mechanism": "Three scroll-stoppers stacked: a speed promise on the number one student pain (not enough time), a curiosity gap dressed as transgression (forbidden knowledge, an unfair advantage classmates lack), and hyperbole in native teen speech so it reads as a peer sharing a secret. The extreme claim also sets a challenge frame: viewers watch to judge whether the payoff earns it.",
+      "examples": [
+        {
+          "creator": "The Angry Explainer",
+          "title": "How to STUDY so FAST it feels like CHEATING (closest variant, biggest performer)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=9tDkkKDQWlg",
+          "metric": "7m views, 390k likes, channel 513k subscribers",
+          "metricSource": "Read directly off the YouTube watch page in browser, 17 Jul 2026; upload date 24 Sep 2024 per a search snippet",
+          "postedWhen": "24 Sep 2024 (search snippet); watch page shows '1 year ago'"
+        },
+        {
+          "creator": "Hugh Knows",
+          "title": "How to STUDY so FAST it feels like CHEATING (variant)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ayOar58a06A",
+          "metric": "3.8m views, 176k likes on a channel of only 61.2k subscribers (a massive outlier vs channel size)",
+          "metricSource": "Read directly off the YouTube watch page in browser, 17 Jul 2026",
+          "postedWhen": "'1 year ago' per watch page"
+        },
+        {
+          "creator": "jspark (UK study creator, superiorstudents.co.uk in description)",
+          "title": "How to STUDY so FAST that it feels ILLEGAL\ud83d\ude33",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=MaO1uCd-gLY",
+          "metric": "3.5m views, 224k likes, channel 511k subscribers",
+          "metricSource": "Read directly off the YouTube watch page in browser, 17 Jul 2026",
+          "postedWhen": "'1 year ago' per watch page (roughly mid 2025)"
+        }
+      ],
+      "fitForWaleed": "Good fit with two honest caveats. Proven in exactly his niche, teen-coded and obviously figurative, so no compliance problem; jspark shows it works for a UK study creator. But delivered as pure hype it clashes with the calm doctor brand (fix: let the doctor identity ground it, drop the filler word literally), and the exact wording is saturated after two years of copies while the one exact-match UK TikTok found flopped (98 likes, tiny account, weak signal either way). The two biggest performers used the cheating sibling rather than illegal, which arguably fits a doctor's wry delivery better. No grade-outcome claims attached, ever.",
+      "adaptation": "I'm a doctor, and the way I revised for A-levels felt like cheating. Here's the whole method in 40 seconds. Alternative: Here's how to revise so fast it honestly feels illegal. I'm an NHS doctor, I've taught over 1,000 students, and this is the method I wish someone had shown me in Year 12."
+    },
+    {
+      "id": "do-examiners-hate-me",
+      "hook": "Do [exam board] examiners hate me?",
+      "source": "research",
+      "category": "curiosity",
+      "verdict": "proven",
+      "mechanism": "It names the shadowy authority figure every student fears and personalises a conflict with it, phrased as an open-loop question you can only close by watching. Because TikTok ranks each video independently of account size, this shape massively outran its host account: roughly 23x the creator's baseline from a small, mostly dormant profile.",
+      "examples": [
+        {
+          "creator": "Mr Salles (Dominic Salles)",
+          "title": "Do AQA Examiners Hate Me?",
+          "platform": "TikTok",
+          "url": null,
+          "metric": "596.8K views on a 26.3K follower account, roughly 23x his baseline",
+          "metricSource": "Read off his live TikTok profile's Popular tab on 17 Jul 2026 during the Content HQ research pass, recorded in content-hq/seed/outliers.json; no direct video URL was captured and web search does not surface it",
+          "postedWhen": null
+        },
+        {
+          "creator": "GCSE Physics Online (supporting example of the adjacent shape)",
+          "title": "Examiners HATE when you do this! (GCSE Physics)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=PXrg-LJdocQ",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Good fit with one adjustment. He is not an examiner and must never imply he is, and sustained exam-board bashing would clash with his measured clinician brand. But the question form works when the answer is evidence: he reads examiners' reports so students don't have to, which turns a rage-bait shape into his diagnose-before-you-treat frame. Resolve the video in the student's favour: the examiner is not the enemy, the method is.",
+      "adaptation": "Do A level examiners actually want you to fail? I read the examiners' reports so you don't have to, and the answer surprised me. Here's what they actually punish."
+    },
+    {
+      "id": "what-med-school-taught-me",
+      "hook": "What [elite institution] taught me that school never will",
+      "source": "research",
+      "category": "authority",
+      "verdict": "works",
+      "mechanism": "Insider curriculum gap: the viewer is promised knowledge that exists behind a selection barrier they have not crossed, from someone who has. It flatters the audience (you're getting the med school version) rather than scolding them, which makes it the friendliest of the authority hooks.",
+      "examples": [
+        {
+          "creator": "@medschoolbro",
+          "title": "3 things med school won't teach you",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@medschoolbro/video/7460106493568781573",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "circa January 2025 (video id era)"
+        }
+      ],
+      "fitForWaleed": "Natural fit, possibly his most differentiating frame. Medical school is the one credential arena his A-level audience actively aspires to or respects, and it lets him teach method as a gift rather than a correction. Zero brand risk. Each video takes one med school method (spaced retrieval, teach-it-back, diagnose before you treat) and translates it to one A-level scenario. No sourced view count on the canonical example, hence works not proven.",
+      "adaptation": "Medical school taught me more about how to revise in one term than sixth form taught me in two years. Here's the bit I wish I'd known at 17."
+    },
+    {
+      "id": "dont-panic-countdown",
+      "hook": "Don't panic. Here's exactly what to do with [2 weeks] until [your exams]",
+      "source": "research",
+      "category": "urgency",
+      "verdict": "works",
+      "mechanism": "Countdown rescue: it names the viewer's exact calendar position and emotional state in the same breath, then promises a concrete plan. Deadline salience makes it near-unskippable for anyone actually in that window, and it doubles as search bait because students literally search the phrase.",
+      "examples": [
+        {
+          "creator": "Unidentified UK study YouTuber (channel name not retrievable, title and date verified)",
+          "title": "don't panic. here's exactly what to do with 2 weeks until GCSEs",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=KrM6414RgS4",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "19 April 2026 (per web search result)"
+        },
+        {
+          "creator": "Unidentified UK study YouTuber",
+          "title": "it's NOT over. how to cram for GCSEs in 2 weeks",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ue8X2rX1IR0",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "One of the best fits on the list. Don't panic in a doctor's calm register is literally his day job, and the A-level calendar hands him a hook a week: results day Thursday 13 August 2026, mocks in December and January, first exams in May. This is an entire genre in UK exam content (multiple near-identical countdown titles verified), which is strong evidence the pattern reliably pulls the UK exam audience; individual view counts were not retrievable.",
+      "adaptation": "Don't panic. Results day is Thursday. I'm an NHS doctor, and here's exactly what I'd do tonight."
+    },
+    {
+      "id": "the-way-youre-revising-is-wrong",
+      "hook": "The way you're [revising/studying] is completely wrong",
+      "source": "research",
+      "category": "contrarian",
+      "verdict": "works",
+      "mechanism": "Contrarian strike aimed at the viewer's current behaviour. It threatens self-image just enough to force a check (wait, what am I doing wrong?) and opens a loop only the video can close. Strongest when the speaker has the authority to make the accusation stick.",
+      "examples": [
+        {
+          "creator": "Chris, @rubix_learning (TikTok, mirrored on Instagram)",
+          "title": "The way you're studying is completely wrong",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@rubix_learning/video/7423293037981207826",
+          "metric": "1,056 likes (view count not exposed)",
+          "metricSource": "TikTok page snippet returned in web search, 17 Jul 2026",
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Very strong fit: it is his diagnose-before-you-treat framing in hook form. The accusation lands harder from a doctor, and he can immediately soften it with the specific symptom (rereading, highlighting). The one sourced example had modest numbers, so treat the wording as a proven archetype (the contrarian strike, documented in 2026 hook libraries) rather than a guaranteed banger; his authority is what should lift it.",
+      "adaptation": "If you're rereading your notes right now, the way you're revising is wrong. I'm a doctor. Let me diagnose it properly."
+    },
+    {
+      "id": "loved-method-more-harm-than-good",
+      "hook": "[Method everyone loves] is doing more harm than good",
+      "source": "research",
+      "category": "contrarian",
+      "verdict": "works",
+      "mechanism": "Sacred-cow takedown: it attacks something the viewer is actively doing and emotionally invested in (flashcards, highlighting, mindmaps), creating dissonance they can only resolve by watching. Justin Sung built his entire channel positioning on this pattern.",
+      "examples": [
+        {
+          "creator": "Justin Sung (@JustinSung, YouTube)",
+          "title": "Why flashcards do more HARM than good",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/eROCC97ESOU",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "9 October 2023 (per web search result)"
+        }
+      ],
+      "fitForWaleed": "Excellent fit with one guardrail. A doctor saying this popular method is hurting you is high-authority contrarianism, and the learning-science literature genuinely supports takedowns of rereading, highlighting and note-copying, so he can be contrarian without being dishonest. The guardrail: never take down a method he can't back with evidence, or the credibility that makes the hook work is spent. View count on the example could not be verified.",
+      "adaptation": "Highlighting your textbook is doing more harm than good. I'm an NHS doctor, and I'd never revise like that. Here's what actually sticks."
+    },
+    {
+      "id": "replying-to-a-real-student",
+      "hook": "Replying to @[student]: [their actual question]",
+      "source": "research",
+      "category": "utility",
+      "verdict": "works",
+      "mechanism": "Opening on a named student's real question manufactures social proof (people are asking this creator things) and hyper-specificity (the algorithm serves it to viewers with the same question). Every comment becomes a free, pre-validated video brief, making it the cheapest content engine in the niche; the flagship account built 77.4K followers and 3.5M likes largely on this format.",
+      "examples": [
+        {
+          "creator": "Sarah Teaches GCSE English (@sarahteachesgcseenglish)",
+          "title": "Replying to @Owen? GCSE English language and literature mock exams are coming very soon!",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@sarahteachesgcseenglish/video/7425646765157780769",
+          "metric": "Account level: 77.4K followers, 3.5M likes; per-video counts not sourced",
+          "metricSource": "Google-indexed TikTok profile snippet observed 17 Jul 2026 in two independent queries (content-hq/seed/creators.json); reply-video URLs confirmed in web search today",
+          "postedWhen": "approx Oct 2024 (video ID timestamp)"
+        },
+        {
+          "creator": "Hannah Kettle (@hannahkettlemaths)",
+          "title": "Replying to @Lester Higher GCSE Predicted Paper for Maths is up! (reply frame used to split one asset into a second post)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@hannahkettlemaths/video/7487344707039694102",
+          "metric": "5,059 likes",
+          "metricSource": "Google-indexed snippet observed 17 Jul 2026, recorded in content-hq/seed/outliers.json",
+          "postedWhen": "approx late Mar 2025 (video ID timestamp)"
+        }
+      ],
+      "fitForWaleed": "Excellent fit and the most on-brand format available: a doctor answering the patient in front of him. It is a week-two-onwards play since it needs comments to exist first, so pair it with the argument-provoking contrarian and challenge hooks that generate question volume. He must only ever reply to real comments; staging fake ones would breach his honesty rule and is detectable.",
+      "adaptation": "Replying to that comment: yes, you can still turn a D in Year 12 around. I'm not going to sugar coat it though, so here's the honest version."
+    },
+    {
+      "id": "i-tested-viral-study-hacks",
+      "hook": "I tested the viral [study hacks] so you don't have to",
+      "source": "research",
+      "category": "curiosity",
+      "verdict": "works",
+      "mechanism": "Guinea-pig experiment format: the creator absorbs the effort and risk on the viewer's behalf, and the implicit verdict structure (which hacks survive?) holds attention to the end. Viral StudyTok hacks like blurting and the candlelight challenge give a constant supply of test subjects.",
+      "examples": [
+        {
+          "creator": "Unidentified YouTube study creator (title and date verified, channel not retrievable)",
+          "title": "I Tested The Most VIRAL TikTok Study Hacks",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=INVj-n9pNsY",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "18 February 2024 (per web search result)"
+        }
+      ],
+      "fitForWaleed": "Excellent fit with a doctor twist available to no one else in the niche: he does not have to try the hacks, he can judge them against the learning evidence, like triaging patients. Viral study hacks reviewed by a doctor is differentiated, repeatable as a series, and lets him praise the good ones (blurting is genuinely close to his own Blurt and Fix method) rather than being purely negative. Supply is huge: nationalworld.com reported scribbling revision content at 294.1 million TikTok views and the candlelight challenge at over 280 million tag views (their figures, accessed 17 Jul 2026).",
+      "adaptation": "Viral study hacks, judged by an NHS doctor. Most of them waste your time. One of them is genuinely brilliant."
+    },
+    {
+      "id": "never-in-my-1000-students",
+      "hook": "Never in my [X years / N students] have I seen...",
+      "source": "research",
+      "category": "authority",
+      "verdict": "works",
+      "mechanism": "Statistical authority through exposure: years served or people seen turns one person's opinion into an implied dataset, and never or every single week signals an outlier observation worth hearing. The viewer wants to know if they are the exception or the rule.",
+      "examples": [
+        {
+          "creator": "Multiple teachers (recurring TikTok trend)",
+          "title": "Never in my 15 years of teaching (trend discover page)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/discover/never-in-my-15-years-of-teaching",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "trend visible 2023 to 2026"
+        }
+      ],
+      "fitForWaleed": "Fits with one honest adjustment: as a foundation-year doctor he cannot claim decades, so the tenure axis flips to the volume axis, which he genuinely owns with 1,000+ students taught. That is his strongest proprietary number and this hook is its natural home. The follow-through must be one specific, recognisable mistake; vague payoffs kill the format. No sourced view count could be pinned to a canonical video.",
+      "adaptation": "I've taught over 1,000 A-level students, and I still see the same mistake every single week."
+    },
+    {
+      "id": "there-are-only-six",
+      "hook": "There are only six [things on the spec]",
+      "source": "research",
+      "category": "utility",
+      "verdict": "works",
+      "mechanism": "A finite list promises completeness: only six means you can master the entire thing inside one 30 second video, which drives completion (TikTok's strongest ranking signal) and saves (students bookmark it as a revision asset). It is also a pure search play, matching what students type at revision time. The sourced example did roughly 50 to 90x the creator's per-video baseline.",
+      "examples": [
+        {
+          "creator": "Hazel Lindsey (Science with Hazel, @sciencewithhazel)",
+          "title": "Physics shorts: vectors vs scalars. There are only six vector quantities: weight, velocity, displacement, acceleration, force and momentum.",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@sciencewithhazel/video/7209324820499090693",
+          "metric": "92,200 plays, 776 likes, 32 shares",
+          "metricSource": "TikTok video-detail JSON observed 17 Jul 2026 during the Content HQ research pass (content-hq/seed/outliers.json); caption confirmed in web search today",
+          "postedWhen": "11 Mar 2023 (older than the preferred 2024 to 2026 window, noted honestly; the shape is evergreen and the observation is from 17 Jul 2026)"
+        }
+      ],
+      "fitForWaleed": "Strong fit and the safest hook here for a clinician: pure, checkable utility with zero drama. The constraint is his no-invented-numbers rule, so every only-N claim must be anchored to something real: a mark scheme's actual mark points, the spec's actual list, an examiners' report's repeated errors. High-yield framing is literally this hook. Works best as a series across subjects and topics.",
+      "adaptation": "There are only five marking points in this six mark A level Biology question. I'll show you all five in under a minute, straight off the mark scheme."
+    },
+    {
+      "id": "how-to-actually-revise-coming-from",
+      "hook": "Here's how to actually study, coming from a...",
+      "source": "waleed",
+      "category": "authority",
+      "verdict": "works",
+      "mechanism": "Two engines: actually is a quiet accusation that what the viewer has been doing is wrong, opening a curiosity gap and a flicker of self-doubt, while the trailing credential withholds the authority reveal for an extra beat and pre-empts the who-are-you objection. Nuance from the evidence: the biggest performers pair how-to-actually-study with a stakes clause rather than a credential; the credential version earns its keep only when the credential itself stops the scroll, which NHS doctor does.",
+      "examples": [
+        {
+          "creator": "Simply, easy (YouTube, 112k subscribers)",
+          "title": "Learn How To Actually Study Before It's Too Late (The Correct way to study)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=dYke_pjH-rA",
+          "metric": "3.9m views, 136k likes",
+          "metricSource": "Read on the YouTube watch page, 17 Jul 2026",
+          "postedWhen": "1 year ago per YouTube (roughly mid 2025)"
+        },
+        {
+          "creator": "jspark (YouTube, 511k subscribers)",
+          "title": "Learn how to actually study before it's too late...",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=7wUJlEnXNAk",
+          "metric": "2.7m views, 170k likes",
+          "metricSource": "Read on the YouTube watch page, 17 Jul 2026",
+          "postedWhen": "1 year ago per YouTube (roughly mid 2025)"
+        },
+        {
+          "creator": "Sarah Rav (Australian doctor creator; credential-led study tips, the closest live proof of the doctor-credential version)",
+          "title": "Don't blame me if you start getting Straight As in every subject",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@sarahrav/video/7478808117518650631",
+          "metric": "81.8K likes, 27.2K saves, 2,075 shares",
+          "metricSource": "Read on the TikTok video page, 17 Jul 2026",
+          "postedWhen": "6 Mar 2025 (date on the video page)"
+        }
+      ],
+      "fitForWaleed": "Strong fit, arguably one of the safest hooks on his list. It claims a method, not grades, so it clears his no-outcome-claims rule, and the credential half is simply true for him where most StudyTok users have to borrow authority. Two cautions: doctor alone invites why-does-a-doctor-know-about-A-levels, so the credential needs a second beat (taught 1,000+ students), and UK sixth formers say revise, not study. The core phrase is proven at scale; the full construction with the credential suffix is a sound composite rather than a verified verbatim performer.",
+      "adaptation": "Here's how to actually revise for your A-levels, coming from an NHS doctor who's taught over 1,000 students. Not the highlighting. Not the pretty notes. The method I'd prescribe. Stakes variant worth testing against it: Learn how to actually revise before Year 13 makes it too late."
+    },
+    {
+      "id": "c-on-my-mock-confession",
+      "hook": "I got a C on my mock before my A*",
+      "source": "research",
+      "category": "absolution",
+      "verdict": "works",
+      "mechanism": "Vulnerability plus authority is the trust format: the C-to-A* arc is exactly the story anxious A-level students want to believe about themselves, and it lands with no pitch attached, so it feels like a gift rather than an ad. Identity stories reliably beat technique content on short form: Dr Justin Sung's doctor-story post did 10x to 40x his study-clip baseline.",
+      "examples": [
+        {
+          "creator": "Biology with Olivia (@biologywitholivia)",
+          "title": "Just because I got an A* and now spend my life teaching biology, people assume I found it easy. I didn't - it was brutal! I actually got a C on one of my final mocks...",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@biologywitholivia/video/7488430473669004566",
+          "metric": "1,639 likes (no view count exposed)",
+          "metricSource": "TikTok video-page search snippet observed 17 Jul 2026 (content-hq/seed/outliers.json); full caption confirmed in web search today",
+          "postedWhen": "approx early Apr 2025 (video ID timestamp)"
+        },
+        {
+          "creator": "Dr Justin Sung (@drjustinsung)",
+          "title": "The harsh reality of being a doctor (why I left medicine)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@drjustinsung/video/7152785192418135297",
+          "metric": "41.9K likes, 447 comments, versus a 500 to 3K like baseline on his study clips",
+          "metricSource": "Google-indexed TikTok snippets observed 17 Jul 2026 (content-hq/seed/outliers.json)",
+          "postedWhen": "Oct 2022 upload, still his standout TikTok as of Jul 2026"
+        }
+      ],
+      "fitForWaleed": "Strong fit with one non-negotiable: the confession has to be true. He has no invented C to confess, so the content must come from whatever his real Year 13 low point was, told plainly. Done honestly it is his best parent-trust content too, and it doubles as the setup for the diagnostic: I did not need more hours, I needed a diagnosis. The doctor-identity angle (why I finish an NHS shift and then teach A-level students) is the same hook family and uniquely his.",
+      "adaptation": "Everyone assumes doctors found A levels easy. I didn't. There was a point in Year 13 where my revision was falling apart, and what fixed it wasn't working harder. Let me tell you what actually happened. Fill with his real story before filming; nothing invented."
+    },
+    {
+      "id": "exam-tomorrow-consider-yourself-saved",
+      "hook": "If you have an exam tomorrow and still haven't started studying yet, consider yourself saved",
+      "source": "waleed",
+      "category": "urgency",
+      "verdict": "works",
+      "mechanism": "Three tricks stacked: the conditional call-out makes the exact right viewer self-select and catches them in the act (they are literally on TikTok avoiding revision right now), the acknowledgement of shame keeps them watching instead of scrolling past in embarrassment, and consider yourself saved flips panic into relief while withholding the method. The scenario is a whole TikTok discover topic, so search demand is verified; the exact saved tail is unverified.",
+      "examples": [
+        {
+          "creator": "Gohar Khan (@goharsguide, MIT grad, flagship StudyTok/Shorts creator)",
+          "title": "how to CRAM for an exam (the right way)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=7U78HxyLpvU",
+          "metric": "610,505 views, 23,692 likes",
+          "metricSource": "Return YouTube Dislike API (returnyoutubedislikeapi.com/votes?videoId=7U78HxyLpvU), fetched 17 Jul 2026",
+          "postedWhen": null
+        },
+        {
+          "creator": "fayefilms (Faye Bate, UK study creator)",
+          "title": "Watch this if your exam is TOMORROW (no bs)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=z2kWXIFZcmg",
+          "metric": "112,118 views, 6,327 likes",
+          "metricSource": "Return YouTube Dislike API (returnyoutubedislikeapi.com/votes?videoId=z2kWXIFZcmg), fetched 17 Jul 2026",
+          "postedWhen": null
+        },
+        {
+          "creator": "Jed McDonald-Singh (@jedmcs)",
+          "title": "You have an exam tomorrow, but you haven't studied. Here's how to save your grade \ud83c\udfc6",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/q3lFElryQxo",
+          "metric": "77 views, 3 likes (counter-example: same hook, tiny reach)",
+          "metricSource": "Return YouTube Dislike API (returnyoutubedislikeapi.com/votes?videoId=q3lFElryQxo), fetched 17 Jul 2026; upload date 31 Dec 2025 per Google search result snippet, 17 Jul 2026",
+          "postedWhen": "31 Dec 2025 per Google snippet"
+        }
+      ],
+      "fitForWaleed": "Strong fit with one adjustment and one warning. Saved is a gift for a doctor brand (saving people is literally his job), and framed as triage the night-before video sits naturally inside his medical framing. The warning: his positioning is spaced revision, so it must be framed as triage, not the system, and close by routing to the real method. Seasonality: exam-tomorrow is off-season in July and August; bank it for mocks season and May. The 77-view counter-example shows the hook alone does not carry a small account; his credibility must land in the first two seconds.",
+      "adaptation": "If your exam's tomorrow and you still haven't started revising, consider yourself saved. I'm an NHS doctor, and in A and E we don't panic about how the patient got here. We triage. Grab the spec, mark every topic red, amber or green, and only touch the reds: one blurt per red topic, blank page, brain dump, check, fix the gaps. Then sleep. Tomorrow, come back and I'll show you the system that means you never need this video again."
+    },
+    {
+      "id": "things-i-wish-i-knew-before-sixth-form",
+      "hook": "Things I wish I knew before [starting sixth form / my A-levels]",
+      "source": "research",
+      "category": "curiosity",
+      "verdict": "works",
+      "mechanism": "Borrowed hindsight from someone one step ahead: the viewer gets to skip mistakes without living them, and the implied list keeps them watching to collect every item. Runs as a named UK trend (#thingsiwishiknewbeforesixthform) that peaks every September intake.",
+      "examples": [
+        {
+          "creator": "Multiple UK creators under #thingsiwishiknewbeforesixthform and #sixthform",
+          "title": "Things I wish I knew before sixth form (trend)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/tag/sixthform",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "recurring, peaks each September intake"
+        },
+        {
+          "creator": "Unidentified UK student YouTuber",
+          "title": "What I wish I knew before A-levels + Sixth Form/College",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=kLkYS9XdGGQ",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Strong fit. He has real hindsight at two levels: his own A-levels and then watching 1,000+ students repeat the same mistakes. Perfectly timed for the August results and September Year 12 intake window he is building toward. Low risk, warm register, on brand. The trade-off: a crowded format, so his edge has to be the specificity of the items, not the hook itself.",
+      "adaptation": "Three things I wish I knew before I started my A-levels. I'm a doctor now, and number two would've saved me about a hundred hours."
+    },
+    {
+      "id": "habits-you-need-to-change",
+      "hook": "Habits you need to change to...",
+      "source": "waleed",
+      "category": "utility",
+      "verdict": "works",
+      "mechanism": "A self-audit loop: habits you need to change implies the viewer is doing something wrong without saying what, so they hold on to check whether they are guilty, and the outcome clause attaches the list to an identity they want. Evidence pattern: the biggest in-niche performer uses the positive twin (habits that'll make you a better student, 1.65M) while scolding negative versions from small channels sit in the low thousands, so the outcome promise does more work than the you-need-to-change half.",
+      "examples": [
+        {
+          "creator": "Gohar Khan",
+          "title": "5 habits that'll make you a better student",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=upBKD20aZRE",
+          "metric": "1,649,783 views, 64,796 likes",
+          "metricSource": "Return YouTube Dislike API record for video upBKD20aZRE, fetched 17 Jul 2026",
+          "postedWhen": "November 2023 per a Google search snippet; Gohar also reposted the same script on X in March 2024"
+        },
+        {
+          "creator": "The Ramsey Show (Dave Ramsey)",
+          "title": "Money Habits You Need to Change Right Now (with Dave Ramsey)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=OEJz8Te4EEw",
+          "metric": "226,392 views, 5,457 likes",
+          "metricSource": "Return YouTube Dislike API record for video OEJz8Te4EEw, fetched 17 Jul 2026",
+          "postedWhen": "6 January 2025 per the Google search snippet"
+        },
+        {
+          "creator": "Kai Notebook",
+          "title": "5 study habits you need to QUIT NOW before it's TOO LATE | based on science",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=z1CBYqUlBQs",
+          "metric": "33,738 views, 1,616 likes",
+          "metricSource": "Return YouTube Dislike API record for video z1CBYqUlBQs, fetched 17 Jul 2026; channel name via noembed oEmbed",
+          "postedWhen": "May 2025 per the Google search snippet"
+        }
+      ],
+      "fitForWaleed": "Good fit with one framing correction. A habits listicle is the calm, structured, diagnostic register a doctor brand wants, mapping onto his language (each bad habit a symptom, each swap the treatment). Risks: saturation (the habits must be named A-level behaviours like rereading and highlighting, never wake-up-early filler) and tone (you-need-to-change at teenagers reads as lecturing; the confession frame or the outcome-promise frame test better on the evidence). He already half-owns this: Content HQ pipeline package 8 is a 5-revision-habits carousel whose list the talking-head version can reuse.",
+      "adaptation": "These are the revision habits I had to change in Year 13, because they nearly cost me my medicine offer. Alternative: There are three revision habits you need to change before September, and I watched every one of them wreck good students. I'm an NHS doctor. I've taught over 1,000 A-level students. Habit one: rereading your notes."
+    },
+    {
+      "id": "disgustingly-productive-neuroscience",
+      "hook": "How do you become disgustingly productive (using neuroscience)",
+      "source": "waleed",
+      "category": "curiosity",
+      "verdict": "works",
+      "mechanism": "Three stacked triggers: semantic shock (a disgust word on a desirable trait trips the brain for half a second), a question form opening a curiosity gap, and the post-Huberman neuroscience tag promising a mechanism rather than generic advice, which converts the video into save-worthy reference material (the 955K performer had an 8.3 percent save rate). The originator serialised it, adding a binge loop. The hook alone is not the engine: parts of the same series ranged from about 10K to 955K plays depending on list quality.",
+      "examples": [
+        {
+          "creator": "@neilcousins (GrowthWithNeil), 28,852 followers at time of reading",
+          "title": "How to become disgustingly productive using neuroscience pt. 5",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@neilcousins/video/7633816595088805122",
+          "metric": "955,295 plays, 134,961 likes, 79,261 saves, 7,079 shares, 263 comments; 148-second video",
+          "metricSource": "tikwm.com public TikTok data API (www.tikwm.com/api/?url=<video url>), read 17 July 2026",
+          "postedWhen": "28 April 2026 (decoded from create_time 1777386436 in API response)"
+        },
+        {
+          "creator": "@neilcousins (GrowthWithNeil)",
+          "title": "How to become disgustingly productive - part 6",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@neilcousins/video/7636392337899293974",
+          "metric": "239,581 plays, 28,934 likes, 1,275 shares",
+          "metricSource": "tikwm.com public TikTok data API, read 17 July 2026",
+          "postedWhen": "5 May 2026 (decoded from create_time 1777986150)"
+        },
+        {
+          "creator": "@neilcousins (GrowthWithNeil)",
+          "title": "Become disgustingly productive part 1",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@neilcousins/video/7628476971902651670",
+          "metric": "9,931 plays, 678 likes (included to show the series floor: same hook, modest result)",
+          "metricSource": "tikwm.com public TikTok data API keyword search for 'disgustingly productive', read 17 July 2026",
+          "postedWhen": "14 April 2026 (decoded from create_time 1776143222)"
+        }
+      ],
+      "fitForWaleed": "Good fit with two caveats. Exactly his lane, and he outranks the originator on authority: Cousins is a productivity creator citing neuroscience; Waleed is an actual NHS doctor with an MBBS who has taught 1,000+ students, and the calm clinician saying disgustingly is itself a pattern interrupt. Caveat one: as a real doctor he can only claim what the evidence supports (retrieval practice, spacing, sleep consolidation, interleaving), no pop-dopamine hand-waving, and saying that out loud is a differentiator. Caveat two: the hook is a doorway, not the engine; it needs a concrete numbered, save-worthy protocol underneath or it does the series-floor numbers. Proven for its originator, not yet as a portable multi-creator formula; copycats appearing July 2026 mean it is early in its spread.",
+      "adaptation": "How do you become disgustingly efficient at A-level revision? I'm an NHS doctor, and this is the actual neuroscience, not the TikTok version. Then a numbered protocol, three to five items, each with the mechanism in one line: your brain files what it retrieves, not what it rereads. Run it as a series, one technique per part."
+    },
+    {
+      "id": "how-i-killed-procrastination",
+      "hook": "This is how I killed procrastination forever",
+      "source": "waleed",
+      "category": "curiosity",
+      "verdict": "works",
+      "mechanism": "Three levers: a violent verb applied to an abstract enemy makes the viewer's vaguest problem feel beatable, forever promises a permanent fix rather than another tip, and the first-person past tense signals a completed transformation story, so the curiosity gap (what actually worked?) only closes by watching. Procrastination is the most self-identified study problem there is.",
+      "examples": [
+        {
+          "creator": "Rian Doris (FlowState / Flow Research Collective)",
+          "title": "Give Me 23 Minutes And I'll Destroy Your Procrastination Forever",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=EkDxsQRbIwo",
+          "metric": "1,438,074 views, 55,185 likes",
+          "metricSource": "Return YouTube Dislike public API (returnyoutubedislikeapi.com/votes?videoId=EkDxsQRbIwo), checked 17 Jul 2026; it mirrors YouTube's public counters",
+          "postedWhen": null
+        },
+        {
+          "creator": "SpoonFedStudy (study channel, same niche as Waleed)",
+          "title": "This odd mindset shift cured my procrastination forever.",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=FC4jcrB4RHc",
+          "metric": "294,155 views, 23,411 likes",
+          "metricSource": "Return YouTube Dislike public API (videoId=FC4jcrB4RHc), checked 17 Jul 2026; upload date 6 Mar 2024 per Google search snippet",
+          "postedWhen": "6 Mar 2024"
+        },
+        {
+          "creator": "JL Tutoring",
+          "title": "This odd mindset shift cured my procrastination forever. (identical title to SpoonFedStudy's 294K version, on a small tutoring channel)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=jDA90C8lu-A",
+          "metric": "1,239 views, 93 likes",
+          "metricSource": "Return YouTube Dislike public API (videoId=jDA90C8lu-A), checked 17 Jul 2026; upload date 27 Aug 2023 per Google search snippet",
+          "postedWhen": "27 Aug 2023"
+        }
+      ],
+      "fitForWaleed": "Strong topic, imperfect wording. Procrastination maps almost perfectly onto his diagnose-before-you-treat framing: a doctor saying procrastination is a symptom with a findable cause, not laziness, is on-brand and differentiated. Two caveats: killed-forever is self-improvement bravado and forever is a permanent-cure overclaim in a doctor's mouth (ground it in his own true past instead), and every sourced high performer is a YouTube long-form title, not a spoken TikTok first line; the identical-title twin at 1,239 views shows the line does not carry a weak video by itself.",
+      "adaptation": "I procrastinated my way through half of Year 12. This is how I killed it for good. It wasn't discipline, it was a diagnosis. On-screen text can carry the credential: NHS doctor, taught 1,000+ students."
+    },
+    {
+      "id": "brain-addicted-to-studying",
+      "hook": "In 60 seconds I'm gonna show you how to get your brain addicted to studying",
+      "source": "waleed",
+      "category": "curiosity",
+      "verdict": "works",
+      "mechanism": "Two triggers stacked: the paradox (a negative clinical word bolted onto the most virtuous student activity, inverting the viewer's real phone-guilt and promising a trick rather than effort) and the time-box (60 seconds prices the commitment at nothing). The evidence says the paradox half carries the weight; the countdown half is a taught formula that now also reads as ad language.",
+      "examples": [
+        {
+          "creator": "@de-fog",
+          "title": "Get Addicted to Studying With This Brain Hack",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/FHsLbZ7LIAY",
+          "metric": "3.3M views; 221K likes, 1,411 comments",
+          "metricSource": "3.3M views shown on the YouTube search results overlay; likes and comments read on the short's own page, both live in Chrome on 17 Jul 2026",
+          "postedWhen": "about Aug 2025 ('11 months ago' per YouTube search on 17 Jul 2026)"
+        },
+        {
+          "creator": "Blunt Motivation (73.9K subscribers)",
+          "title": "Getting ADDICTED to STUDYING is Easy, Actually",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=S39zoHnV-ok",
+          "metric": "2.8M views",
+          "metricSource": "YouTube search results page read live in Chrome, 17 Jul 2026 (vidIQ search companion showed the same 2.8M as the channel's highest); opening line per OpenTools transcript summary: 'let's get straight to the point You can literally hack your brain to crave studying the same way it craves endless social media scrolling'",
+          "postedWhen": "'1 year ago' per YouTube on 17 Jul 2026, so about mid 2025"
+        },
+        {
+          "creator": "@amelieniamh",
+          "title": "how to become addicted to studying (#aleveladvice #studytok), carried a 'Top liked' badge in search",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@amelieniamh/video/7632407617314344214",
+          "metric": "128.3K on the video page's top counter (the likes position), plus 200 comments, 38.5K saves, 5,003 shares",
+          "metricSource": "video page counters read live in Chrome, 17 Jul 2026; the search card showed the same 128.3K with a Top liked badge",
+          "postedWhen": "24 Apr 2026 ('4 to 24' on TikTok)"
+        }
+      ],
+      "fitForWaleed": "Strong fit on the topic, poor fit on the exact wording. The subject (rewiring craving toward revision) is exactly his lane and there is UK A-level proof of appetite (a Top liked six-figure #aleveladvice performer, April 2026). His unique advantage: addiction is clinical vocabulary he owns, and none of the comps can say that. But gonna plus the infomercial countdown is American and salesy, and the only verbatim TikTok instance is an AI-tool ad account that flopped (309 on a 66.2K-follower account), so UK teens may pattern-match it to an advert. A doctor should flag the word knowingly, not throw it around.",
+      "adaptation": "I'm a doctor, so I don't use the word addicted lightly. But your brain is already addicted to your phone. In the next minute I'll show you how to point that same wiring at your A-level revision. Body pays it off with his method (quiz first, blurt and fix, end on a win) and the CTA routes to the revision diagnostic."
+    },
+    {
+      "id": "stop-scrolling-if-youre",
+      "hook": "Stop scrolling if you're [exact identity: a Year 12 with mocks in January]",
+      "source": "research",
+      "category": "identity",
+      "verdict": "works",
+      "mechanism": "Pattern interrupt plus identity call: the command breaks the scroll reflex and the identity clause makes the target viewer self-select and stay, which concentrates watch-through among exactly the people the algorithm should show it to next. Documented as a core hook archetype in 2025 to 2026 hook libraries and visible all over StudyTok.",
+      "examples": [
+        {
+          "creator": "@studyv.tok (TikTok)",
+          "title": "stop scrolling, go study",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@studyv.tok/video/7491325666986626309",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        },
+        {
+          "creator": "Socialync viral hooks library (identity-call template: 'If you're a small business owner doing your own marketing, stop scrolling.')",
+          "title": "64+ Viral TikTok Hooks That Actually Work in 2026",
+          "platform": null,
+          "url": "https://www.socialync.io/viral-hooks-library",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "library current for 2026"
+        }
+      ],
+      "fitForWaleed": "Good fit. The command is mild and the identity clause does the work, so it survives a calm doctor delivery with no shouting. The precision is the whole trick: naming the exact UK moment (Year 12, mocks, results day) beats a generic stop scrolling. Slight risk of feeling like every other creator if overused; ration it to genuinely time-sensitive videos. No per-video metric was verifiable (TikTok blocks view-count scraping).",
+      "adaptation": "Stop scrolling if you start Year 13 in September. I'm an NHS doctor and I've taught over 1,000 students, and this is the one thing I'd sort before term starts."
+    },
+    {
+      "id": "your-school-taught-you-wrong",
+      "hook": "Your school taught you [X] wrong (the teacher-lied format, softened)",
+      "source": "research",
+      "category": "contrarian",
+      "verdict": "works",
+      "mechanism": "Betrayal framing: telling viewers a trusted authority gave them a faulty tool is polarising enough to stop the scroll and educational enough to hold it, because the promised payoff is the corrected method. The viewer's own past frustration (I did work hard, so why didn't it work?) does the emotional lifting.",
+      "examples": [
+        {
+          "creator": "Unnamed educational creator cited in ContentCreators viral hooks guide",
+          "title": "Your math teacher lied to you about PEMDAS, and it's causing you to get wrong answers right now",
+          "platform": "TikTok",
+          "url": "https://contentcreators.com/blog/how-to-create-irresistible-viral-hooks-that-generate-million-view-content-on-tiktok-and-instagram",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Good fit only in the softened form. The raw version attacks teachers, which would alienate the parents who pay him and clash with his measured brand. His honest angle: schools teach content brilliantly but nobody teaches revision method, so the accusation moves from people to a gap. Never name a school or teacher; the enemy is the missing lesson, not the profession. No verified metric attaches to the documented example.",
+      "adaptation": "Your school taught you what to revise. Nobody taught you how. I'm an NHS doctor, and the way we memorise at medical school is nothing like what most sixth formers do."
+    },
+    {
+      "id": "im-begging-you-stop",
+      "hook": "As a [credential], I'm begging you: stop doing [X]",
+      "source": "research",
+      "category": "authority",
+      "verdict": "works",
+      "mechanism": "Emotional inversion of the calm expert: when a normally measured professional resorts to pleading, the viewer infers the stakes must be real, and the named behaviour makes half the audience feel personally caught. Press coverage documents dermatologists using duet and stitch pleas to shut down harmful viral trends within hours.",
+      "examples": [
+        {
+          "creator": "Board-certified dermatologists including Dr Muneeb Shah, documented in HuffPost's coverage of dermatologists countering viral skincare trends",
+          "title": "Dermatologists warn about TikTok's dangerous skincare lies",
+          "platform": "TikTok",
+          "url": "https://www.huffpost.com/entry/tiktok-skin-care-lies-misinformation_l_62b46c93e4b0cf43c8611f69",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "pattern documented from 2022 onwards"
+        }
+      ],
+      "fitForWaleed": "Good fit used sparingly. One earnest plea from a calm doctor lands hard precisely because he does not usually talk like that; a weekly plea would read as melodrama and erode the brand. Reserve it for the two or three behaviours the evidence is clearest on, and deliver it deadpan and quiet: the contrast with the pleading words is the whole effect.",
+      "adaptation": "As a doctor, I'm begging you: put the highlighter down. It feels like revision. It isn't."
+    },
+    {
+      "id": "save-this-video",
+      "hook": "Save this video, it's the only one you need before [exam moment]",
+      "source": "research",
+      "category": "utility",
+      "verdict": "works",
+      "mechanism": "Frames the video itself as the intervention, not just advice. The oversized promise drives saves and shares (students bank it for later), and saves are a heavy ranking signal on TikTok in 2025 and 2026.",
+      "examples": [
+        {
+          "creator": "@erinmerylstudy (TikTok)",
+          "title": "this video will get you all 9s :) (EVERYTHING I did to get all 9s in my GCSEs)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@erinmerylstudy/video/7413194262814199073",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Usable but needs rewording. This video will get you an A* is a grade-outcome promise, and he has no results data until August 2026 plus a no-grade-claims rule. The honest version promises completeness of the plan, not the grade, which keeps the save-this mechanic intact without the claim. The GCSE original shows the pattern thrives with UK exam audiences specifically; no metric was verifiable.",
+      "adaptation": "Save this video. It's the whole Year 13 revision system in 60 seconds, from a doctor who's taught over 1,000 students."
+    },
+    {
+      "id": "blunt-aphorism-command",
+      "hook": "[Blunt aphorism]. [Two-word command]. (e.g. 0% motivation. 100% discipline.)",
+      "source": "research",
+      "category": "identity",
+      "verdict": "works",
+      "mechanism": "Staccato aphorism as text-on-screen hook over aesthetic study footage: zero cognitive load, instantly quotable, engineered for shares and reposts by students who want to feel the identity more than learn a method.",
+      "examples": [
+        {
+          "creator": "StudyTok accounts catalogued by Socialync",
+          "title": "0% motivation. 100% discipline.",
+          "platform": "TikTok",
+          "url": "https://www.socialync.io/viral-hooks-library",
+          "metric": "2.5M views",
+          "metricSource": "Socialync viral hooks library figure, as surfaced in web search snippet of socialync.io, 17 Jul 2026",
+          "postedWhen": null
+        },
+        {
+          "creator": "StudyTok accounts catalogued by Socialync",
+          "title": "Success is a decision. Go study.",
+          "platform": "TikTok",
+          "url": "https://www.socialync.io/viral-hooks-library",
+          "metric": "1.7M views",
+          "metricSource": "Socialync viral hooks library figure, as surfaced in web search snippet of socialync.io, 17 Jul 2026",
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Honest verdict: the weakest strategic fit among the working hooks despite the sourced numbers. These pull big views from a motivation-seeking audience, not from students who want a method or parents who buy tutoring, and pure hustle-aphorism content sits awkwardly next to calm clinical authority. Worth at most an occasional B-roll post where the aphorism is his own framing, never the staple. Both metrics come from a third-party hooks library snippet, not the videos themselves: treat as the pattern's ceiling, not verified per-video counts.",
+      "adaptation": "Top grades are a system, not a talent. Here's the system."
+    },
+    {
+      "id": "part-of-me-dies-high-potential",
+      "hook": "A part of me dies every single time I see a high potential student...",
+      "source": "waleed",
+      "category": "identity",
+      "verdict": "unverified",
+      "mechanism": "A pained expert confession: an authority admitting visceral pain implies repeated first-hand experience with many students (credibility without bragging), the sentence cuts off before revealing what the student does (open loop), nearly every struggling student privately believes they are the high-potential one underperforming (flattery identity call), and dies is a high-arousal negative word in the first two seconds. Not in any of the big 2026 hook libraries; likely from the Justin Sung orbit but no indexed transcript confirms the exact line.",
+      "examples": [
+        {
+          "creator": "Justin Sung (@JustinSung, 2.17m subscribers)",
+          "title": "Most students do not know their potential with learning.",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/sHGmKC2luMY",
+          "metric": "16,160 views, ~1k likes, 13 comments",
+          "metricSource": "Read off the live YouTube watch page and player response in the browser, 17 July 2026",
+          "postedWhen": "30/31 August 2023 (player data publishDate 2023-08-30; page shows 2 years ago)"
+        },
+        {
+          "creator": "hey_its_maryyy (TikTok)",
+          "title": "the wasted potential breaks my heart (caption; close thematic variant, not the exact hook)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@hey_its_maryyy/video/7622890542162087182",
+          "metric": "33 likes, 0 comments, 1 share",
+          "metricSource": "Read off the live TikTok video page, 17 July 2026",
+          "postedWhen": "30 March (page shows 3 to 30; year not displayed, surfaced as recent in 2026 search)"
+        }
+      ],
+      "fitForWaleed": "Structurally one of the best-fitting hooks on the list: a doctor visibly pained watching capable students fail is his diagnose-before-you-treat framing with emotion added, showing care rather than salesmanship. Two cautions: the phrase is American-creator melodrama, so the fix is delivery (flat, quiet, straight to camera, where the mismatch between the big phrase and the calm doctor is itself the pattern interrupt), and performance is unproven (the two closest verified same-register posts did 16k views on a 2.17m sub channel and 33 likes), so treat it as a test hook, not a banker. Strategic note: the biggest creator in this exact emotional lane (Justin Sung) converts it into a diagnostic-quiz funnel, precisely Waleed's /revision-diagnostic play, so the register is proven at brand level even though this line is not.",
+      "adaptation": "A part of me dies every single time I meet a bright A-level student who's revising all evening, every evening, and their grade won't move. I'm an NHS doctor, and I'll tell you exactly what this is. It's treatment before diagnosis. If that's you, stop adding hours. Find the fault first."
+    },
+    {
+      "id": "named-paper-tomorrow",
+      "hook": "[Named paper] is tomorrow. Here's what might come up",
+      "source": "research",
+      "category": "urgency",
+      "verdict": "risky",
+      "mechanism": "Exam-week urgency tied to a specific named paper and board is the single highest-demand format in UK exam short form: students treat it as a night-before ritual (1,400+ comments on the final 2025 predictions post) and mass-save it. It is also the documented trust trap: AQA publicly warned about reliance on these channels, Schools Week reported exam boards considering action, and students blamed missed predictions for their grades, making national news twice.",
+      "examples": [
+        {
+          "creator": "Mr Everything English (Waqar Malik)",
+          "title": "May 2025 GCSE English Literature predictions (YouTube) and Mr Everything English Predictions for GCSE 2025 (TikTok)",
+          "platform": "YouTube and TikTok",
+          "url": "https://www.tiktok.com/@mreverythingenglish/video/7503127048513162518",
+          "metric": "290,000+ YouTube views (AFP via Arab News, 15 Aug 2025); companion TikTok predictions post at 54.7K likes, 1,428 comments",
+          "metricSource": "AFP wire piece 15 Aug 2025 and Google-indexed TikTok snippet 17 Jul 2026, both recorded in content-hq/seed/outliers.json; backlash documented in Schools Week, exam-boards-consider-action article, confirmed in web search today",
+          "postedWhen": "May 2025 exam season"
+        },
+        {
+          "creator": "Miss Estruch (@miss.estruch.biology)",
+          "title": "What might be on paper 3 for AQA Biology",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@miss.estruch.biology/video/7381479784955579681",
+          "metric": "~11.6K likes, 179 comments",
+          "metricSource": "TikTok search snippet observed 17 Jul 2026 (content-hq/seed/outliers.json); URL confirmed in web search today",
+          "postedWhen": "approx Jun 2024 (video ID timestamp); she reran the format for 2025 and 2026 papers"
+        }
+      ],
+      "fitForWaleed": "The demand is real and calendar-locked, but predicting papers would torch the exact trust his brand is built on, and the 2025 backlash proves the downside is national and named. The honest play rides the identical night-before search window without predicting: what the spec allows them to ask, what the examiners' reports say students lose marks on, and the answer structure that scores whatever comes up. As the clinician whose frame is diagnose before you treat, he is the natural owner of the anti-prediction position, and nobody big has claimed it (flagged as an open positioning gap in content-hq/seed/playbook.json). Verdict is risky for the prediction form specifically; the counter-version is compliant.",
+      "adaptation": "AQA Biology Paper 2 is tomorrow. I'm not going to predict it, because nobody honestly can. Here's what the spec says they're allowed to ask you, and the structure that scores whatever turns up."
+    },
+    {
+      "id": "study-less-remember-more-neuroscience",
+      "hook": "Here's how to study less and remember more (based on neuroscience)",
+      "source": "waleed",
+      "category": "utility",
+      "verdict": "weak",
+      "mechanism": "An effort-reversal promise (removing work rather than adding it) plus a borrowed-authority tag to make it believable. The problem in 2026: the verbatim wording has been recycled for 15 years (a UCSD handout title, the Lobdell lecture premise, an Anki app tagline, an AI-tool ad caption), so on studytok the exact line pattern-matches to course seller or SaaS ad. The promise still works; the stock phrasing is what is worn out, and every 2024 to 2026 high performer makes the same promise with a more specific first line.",
+      "examples": [
+        {
+          "creator": "Justin Sung (@JustinSung, ex-doctor turned learning coach)",
+          "title": "The trick to remembering everything you study (close variant: same promise, more specific hook)",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/7obXUgx_hOM",
+          "metric": "1.7M views on the search listing; 63K likes shown on the short itself",
+          "metricSource": "YouTube Shorts search results page and the short's own page, both read in browser 17 July 2026",
+          "postedWhen": null
+        },
+        {
+          "creator": "Marty Lobdell (psychology professor, Pierce College)",
+          "title": "Study Less, Study Smart",
+          "platform": "YouTube (hour-long lecture, uploaded 2011)",
+          "url": "https://www.openculture.com/2020/12/study-less-study-smart.html",
+          "metric": "8.7M views as of Dec 2020; reported as 25M+ in an April 2026 blog post",
+          "metricSource": "openculture.com article 'Study Less, Study Smart' (Dec 2020) and rmichaelbrown.com post (9 April 2026); both found via web search 17 July 2026. I did not verify the count on YouTube itself",
+          "postedWhen": "2011"
+        },
+        {
+          "creator": "christiaanhenny (Christiaan Henny, founder of eFaqt, now marketing StudySmart.ai)",
+          "title": "How to study less and remember more (neuroscience edition) \ud83d\udd25 ... Try StudySmart.ai risk-free",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/discover/how-to-study-less-and-remember-more",
+          "metric": "24.6K (count displayed on the discover-page card; TikTok shows like counts there)",
+          "metricSource": "TikTok discover page 'how-to-study-less-and-remember-more', page text read in browser 17 July 2026",
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "The promise fits him almost perfectly (it is his actual product thesis), but the verbatim hook is wrong on three counts: it underperforms as-is (shorts using the literal line sat at 139 to 1.7K views while the specific variant did 1.7M), the phrase now smells of AI-tool ads and stat-inventing masterclass sellers (the exact crowd a calm NHS doctor should not sound like), and based-on-neuroscience is authority-borrowing he does not need: he IS the credential, and naming the actual evidence (retrieval practice, spacing) reads as the genuine article. Use the promise, ditch the stock phrasing and the parenthetical.",
+      "adaptation": "Revise less and remember more sounds like a scam. It isn't. I'm an NHS doctor, and it's just how memory works. Here's the 30 second version. Body: your brain keeps what it has to drag back out, not what it rereads; one concrete A-level example (close the textbook, blurt the topic, check what's missing); CTA to the free revision diagnostic."
+    },
+    {
+      "id": "ten-out-of-ten-skills-to",
+      "hook": "10/10 skills to...",
+      "source": "waleed",
+      "category": "utility",
+      "verdict": "unverified",
+      "mechanism": "Fuses two documented mechanics: the numbered listicle (specific numbers outperform vague claims because they feel measured) and the rating claim (10/10 says someone already sorted the good from the useless, adding a curation filter and a curiosity gap about what earns a perfect score). Practical flaw: spoken aloud, ten out of ten skills is ambiguous and can be misheard as a count, so the rating meaning needs on-screen text to carry it.",
+      "examples": [
+        {
+          "creator": "Xendio (@Xendioshorts)",
+          "title": "10/10 Skills In Football",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/r5I6pr40Sf4",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "4 July 2025, per Google search result listing (checked 17 July 2026)"
+        },
+        {
+          "creator": "Unknown TikTok creators (male self-improvement niche)",
+          "title": "10/10 male skills you need to have if you're a guy (niche edition)",
+          "platform": "TikTok",
+          "url": null,
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "The rating mechanic fits him unusually well; the exact phrasing does not. Rating revision techniques out of 10 is a diagnostic act that plugs straight into his high-yield/low-yield language, stays honest (a rating is openly an expert opinion, not an invented statistic), and a doctor grading things carries natural authority. The caution: the generic self-improvement wording is vague, unverified as a performer, and smells of hustle-TikTok; take the mechanic, make it revision-specific, and only ever rate techniques, never his own programme. Put 10/10 in on-screen text and speak it as rated out of ten.",
+      "adaptation": "Revision skills, rated out of 10 by an NHS doctor who's taught over 1,000 students. Highlighting gets a 2. The skill I'd give a 10? Almost nobody uses it."
+    },
+    {
+      "id": "ten-out-of-ten-ways-to",
+      "hook": "10/10 ways to...",
+      "source": "waleed",
+      "category": "utility",
+      "verdict": "unverified",
+      "mechanism": "As written it has no demonstrated mechanism because no real videos using it could be found: it reads as a garbled fusion of the numbered listicle (10 ways to..., bounded countable value) and the rating-out-of-10 format (open loop waiting for the score of the method you use, plus mild controversy that drives comment arguments). Spoken aloud, ten out of ten ways to parses as a mistake rather than a promise.",
+      "examples": [
+        {
+          "creator": "Gohar Khan (@goharsguide, 7.75m subscribers)",
+          "title": "Ranking Study Techniques",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/T8GkXOvhTlA",
+          "metric": "7m views, 368k likes",
+          "metricSource": "Read directly off the YouTube watch page in the browser on 17 July 2026 (page showed '7m views, 2 years ago', like button '368k')",
+          "postedWhen": "September 2023 ('2 years ago' per watch page; a search result dates it 6 September 2023)"
+        },
+        {
+          "creator": "Unidentified education channel",
+          "title": "Study Methods Tier List!!!",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/Uqp29NGgCew",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "10 February 2026 per the search result snippet; view count not sourceable without opening the video"
+        }
+      ],
+      "fitForWaleed": "As written, poor: it sounds like a typo when spoken, and a doctor brand built on precision cannot open with a line that makes viewers wonder if he misspoke. The plain listicle version is real but generic, and 10 items is too many for a 30 to 45 second short. The rating-out-of-10 rebuild, however, fits him unusually well: calm, structured, evidence-flavoured, provokes comment debate without him being loud, and Gohar Khan proves the ranking format at 7m views in the study niche. No UK doctor is doing it for A-levels. Rebuild as a rating format rather than using it as given.",
+      "adaptation": "I'm rating every A-level revision technique out of 10, and the one you use most is getting a 2. Body scores four or five techniques fast (rereading 2, highlighting 3, blurting 9, past papers 10) with one short doctor's reason each; CTA to the free revision diagnostic."
+    },
+    {
+      "id": "actually-smart-not-book-smart",
+      "hook": "How to become a smarter person, and I mean actually smart, not book smart",
+      "source": "waleed",
+      "category": "curiosity",
+      "verdict": "unverified",
+      "mechanism": "Three moves: a broad high-demand promise that qualifies almost every scroller, a self-interrupting qualifier that resets the curiosity gap (this one is different from the hundred get-smarter videos you scrolled past), and not-book-smart names an enemy, flattering the viewer as someone who sees through the standard version. The mid-sentence correction mimics unscripted speech, and the book-smart contrast rides a saturated cultural frame. The exact line returned zero indexed matches anywhere; treat it as a formula, not a sourced hook.",
+      "examples": [
+        {
+          "creator": "easy, actually",
+          "title": "becoming smart is easy, actually",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=C5OJJD3Eytk",
+          "metric": "9.4M views",
+          "metricSource": "YouTube search results page read live in browser, 17 Jul 2026 (title, channel, '9.4m views', '2 years ago' confirmed via the results page DOM)",
+          "postedWhen": "about 2 years ago per YouTube, so roughly 2024"
+        },
+        {
+          "creator": "Iman Gadzhi (@imangadzhiyt)",
+          "title": "Be street smart not just book smart",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@imangadzhiyt/video/7241742884045622555",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        },
+        {
+          "creator": "Chris Williamson (@ChrisWillx), clip featuring Vanessa Van Edwards",
+          "title": "Being Book Smart Will Only Get You So Far",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/tazy-AUmVRM",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "March 2025 per Google search result snippet, 17 Jul 2026"
+        }
+      ],
+      "fitForWaleed": "The formula fits him; the literal wording clashes twice. Not-book-smart saws off the branch he sits on (his credibility IS book smarts and his product sells exam results), inviting so-why-are-you-selling-tutoring comments, and smarter-person is broad self-improvement bait off his niche that pulls the wrong audience. The delivery style is fine: conversational and calm. The fix keeps the mechanism (promise plus qualifier dismissing the worn version) and swaps the contrast to the one his method genuinely attacks: harder working vs actually revising better. Adjacent evidence (9.4M views) shows the actually-get-smarter promise still pulls big numbers.",
+      "adaptation": "Here's how to become a smarter A-level student. And I mean actually smarter, not just harder working. I'm a doctor, and in medicine we diagnose before we treat. Most students never diagnose how they revise, they just do more hours of the same thing. I've taught over 1,000 students, and the difference at the top isn't effort. It's method."
+    },
+    {
+      "id": "double-the-content-half-the-time",
+      "hook": "If you wanna get through double the content in half the time you need to...",
+      "source": "waleed",
+      "category": "utility",
+      "verdict": "unverified",
+      "mechanism": "A conditional promise hook with an open loop: if-you-wanna self-selects the exact viewer (a student drowning in content), the quantified double-in-half promise creates a concrete before/after picture, and you-need-to withholds the method past the 3-second retention cliff while implying ONE thing, lowering the perceived cost of watching. Content volume versus time remaining is the core A-level anxiety from spring to results day.",
+      "examples": [
+        {
+          "creator": "Dr Justin Sung (@JustinSung on YouTube, @drjustinsung on Instagram), co-founder of iCanStudy",
+          "title": null,
+          "platform": "YouTube / Instagram",
+          "url": "https://www.youtube.com/@JustinSung",
+          "metric": "2.1M YouTube subscribers; 107K Instagram followers",
+          "metricSource": "Google search result snippets for youtube.com/@JustinSung and instagram.com/drjustinsung, read 17 Jul 2026 (channel pages themselves are behind YouTube/Instagram consent walls for unauthenticated fetches)",
+          "postedWhen": null
+        },
+        {
+          "creator": "Dr Justin Sung",
+          "title": "Give me 28 Minutes, And I'll Make You Learn Anything Dangerously Fast",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=ZLoBLGSX36c",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        },
+        {
+          "creator": "High Beam Marketing hook library (template list, not a video)",
+          "title": "TikTok Hooks Toolkit: Plus, 50 Viral Hook Ideas Inside",
+          "platform": null,
+          "url": "https://www.highbeammarketing.com/post/tiktok-hooks-toolkit-plus-50-viral-hook-ideas-inside",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": null
+        }
+      ],
+      "fitForWaleed": "Mixed, and fixable. The pain it targets (two years of content, not enough weeks) is exactly his market and peaks before mocks and results day. Three problems as worded: wanna is American-casual and off his register, double-in-half is a naked 4x efficiency claim that lands as a quantified promise in a doctor's mouth (bad under his no-invented-numbers rule), and the phrasing is the stock cadence of study-guru ads (iCanStudy territory), inviting another-study-guru dismissal. Fix: keep the volume-versus-time promise but ground it in his true medical story, since med school volume is real and his to claim.",
+      "adaptation": "If you want to get through double the A-level content in half the time, you need to revise the way medical students do. I'm an NHS doctor. At med school the volume is brutal, and rereading your notes doesn't survive it. Here's what does."
+    },
+    {
+      "id": "final-exams-soon-listen-up",
+      "hook": "If you have final exams soon, listen up",
+      "source": "waleed",
+      "category": "urgency",
+      "verdict": "unverified",
+      "mechanism": "A callout hook plus an attention command: the conditional half filters the feed so the right student feels personally addressed and everyone else scrolls on, concentrating retention among the target audience, with soon adding stakes. The weakness: listen up promises value without specifying any, and 2026 hook-library analysis found openings with a specific number had 37 percent higher completion than generic openings; studytok creators run the same callout with a concrete command instead.",
+      "examples": [
+        {
+          "creator": "Edward Sturm (hook template in his '25 Hooks for TikTok, Instagram Reels, and YouTube Shorts' library, not a video)",
+          "title": "Hook #24: 'If you're under (# of age) and you're not X, listen up!'",
+          "platform": null,
+          "url": "https://edwardsturm.com/articles/25-hooks-tiktok-instagram-reels-youtube-shorts/",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "Article dated 13 October 2024"
+        },
+        {
+          "creator": "Unnamed YouTube study channel (channel name unretrievable, page served only truncated markup)",
+          "title": "Watch this if your exam is TOMORROW (no bs)",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=z2kWXIFZcmg",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "April 2026 (date shown in search result snippet, 17 Jul 2026)"
+        },
+        {
+          "creator": "Unnamed YouTube Shorts creator (page behind YouTube consent redirect)",
+          "title": "Do you have a test tomorrow? (3 last-minute tips)",
+          "platform": "YouTube Shorts",
+          "url": "https://m.youtube.com/shorts/u7LyZfCimEA",
+          "metric": null,
+          "metricSource": null,
+          "postedWhen": "25 September 2023 (date shown in search result snippet, 17 Jul 2026)"
+        }
+      ],
+      "fitForWaleed": "Half fits, half fights the brand. The callout half is exactly his play: naming the viewer's exam situation in line one is how a new account gets the right students to stop. Two problems: listen up is a hype-creator register that from a calm NHS doctor can read bossy and promises nothing concrete (wasting his real advantage), and final exams is American vocabulary; UK A-level students say exams, mocks or resits. Also seasonal: in July the honest near-term versions are results day (13 August), then mocks. Use the structure, swap the command for something calmer and concrete.",
+      "adaptation": "If you've got A-level mocks coming up, give me thirty seconds. I'm a doctor, and I revise the way I diagnose: find the weakness first, then treat it. Results-season version: If you're getting A-level results soon, listen up. Whatever happens on Thursday, here's what actually matters next."
+    },
+    {
+      "id": "if-youre-not-using-x",
+      "hook": "If you're not using XXX I don't know what you're doing",
+      "source": "waleed",
+      "category": "challenge",
+      "verdict": "risky",
+      "mechanism": "A confrontational FOMO call-out: instant second-person address stops the scroll, an open loop makes the viewer stay to learn what X is, and mild social threat implies everyone competent already uses X, so watching becomes a status check. The sting only lands if the speaker has visible authority or charm, and because paid UGC creators lean on the line, many viewers pattern-match it to an ad within the first second.",
+      "examples": [
+        {
+          "creator": "@phoebegates (Phoebe Gates, Phia co-founder)",
+          "title": "If you're not using @Phia what are you even doing!!!",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@phoebegates/video/7559643832019701006",
+          "metric": "45.6K likes, 142 comments, 977 favourites, 324 shares",
+          "metricSource": "TikTok video page, read in browser 17 Jul 2026; shown as a Top liked result in TikTok search",
+          "postedWhen": "2025-10-10"
+        },
+        {
+          "creator": "@leanwithb (gymtok)",
+          "title": "If you're not using the sauna, idk what you are doing #gym #gymtok",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@leanwithb/video/7602765511654411551",
+          "metric": "1,853 likes, 12 comments, 147 favourites",
+          "metricSource": "TikTok video page, read in browser 17 Jul 2026",
+          "postedWhen": "2026-02-03"
+        },
+        {
+          "creator": "@zari.ugc2 (paid UGC creator)",
+          "title": "If your not using Higgsfield then idk what your doing #higgsfieldpartner #ad",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@zari.ugc2/video/7656977683435375894",
+          "metric": "29 likes, 0 comments",
+          "metricSource": "TikTok video page, read in browser 17 Jul 2026",
+          "postedWhen": "2026-06-30"
+        }
+      ],
+      "fitForWaleed": "Partial clash, two honest problems: the line is now ad-coded (its heaviest users are #ad UGC accounts, and the paid uses flopped at 29 and 138 likes while the one big performer was a celebrity founder), and the judgy edge is the opposite of his calm doctor register with stressed students and worried parents. Salvageable on two conditions: X must be a free method he genuinely teaches (past papers, blurting, spaced review), never a named product, and the sting must be softened and immediately earned with his credentials so it plays as an older-brother nudge. Nobody in studytok was found using this for A-level content, so a softened doctor version is still a pattern interrupt.",
+      "adaptation": "If you're not using past papers until you've finished the course, I honestly don't know what you're doing. I'm an NHS doctor, I've taught over 1,000 students, and moving past papers earlier is the first thing I fix with almost every single one. Here's how to start them when you only know half the spec."
+    },
+    {
+      "id": "i-might-get-cancelled",
+      "hook": "I might get cancelled for saying this",
+      "source": "waleed",
+      "category": "contrarian",
+      "verdict": "risky",
+      "mechanism": "A forbidden-knowledge frame: signalling a social risk on camera opens a curiosity gap (what is the take?), primes conflict (the viewer stays to judge whether the take really is cancellable), and recruits the viewer as jury, driving comment arguments the algorithm reads as engagement. It only pays off if the take is genuinely contrarian; a mild take after this setup reads as bait and trains the audience to skip the creator.",
+      "examples": [
+        {
+          "creator": "ShoPhoCho (YouTube Shorts, food niche)",
+          "title": "I might get CANCELLED",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/wEL3UJi-S6c",
+          "metric": "3,740,088 views, 180,470 likes",
+          "metricSource": "YouTube watch-page metadata fetched via curl, 17 Jul 2026",
+          "postedWhen": "28 May 2026"
+        },
+        {
+          "creator": "JackSucksAtStuff",
+          "title": "I'm definitely getting cancelled from this video...",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/izE79yT09DA",
+          "metric": "1,667,909 views, 84,533 likes",
+          "metricSource": "YouTube watch-page metadata fetched via curl, 17 Jul 2026",
+          "postedWhen": "2 May 2026"
+        },
+        {
+          "creator": "THEE Sama Sambit",
+          "title": "I MIGHT Get Cancelled For Saying This...",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=sgMqVuFJhc4",
+          "metric": "36,160 views, 2,231 likes",
+          "metricSource": "YouTube watch-page metadata fetched via curl, 17 Jul 2026",
+          "postedWhen": "4 Apr 2026"
+        }
+      ],
+      "fitForWaleed": "The raw hook clashes with his brand. The frame still pulls views (two multi-million Shorts in May 2026), but both big examples are large entertainment channels where channel size does part of the work, and the exact phrase is now heavily used by coaches and skincare marketers, exactly the internet-guru register he is positioned against. It also cannot be cashed: nothing he says about revision is genuinely cancellable, so the setup overpromises, and UK sixth formers clock it as bait. The underlying mechanism (a credible authority taking a named social risk) is worth keeping, pointed at teachers or study gurus rather than cancel culture. No education-niche example surfaced anywhere: unclaimed but untested in his lane. 2026 professional hook guides have dropped the cancelled framing entirely, suggesting it reads as dated marketer-speak.",
+      "adaptation": "Your teachers won't like me for this, but most of what you call revision is doing nothing for your grade. Delivered flat and certain, doctor diagnosing, not influencer stirring, and the payoff must be a genuinely contrarian, defensible take (highlighting, copying notes out, ten-hour study days)."
+    },
+    {
+      "id": "its-not-hard-its-just-new",
+      "hook": "It's not hard, it's just new!",
+      "source": "waleed",
+      "category": "absolution",
+      "verdict": "weak",
+      "mechanism": "A permission-slip reframe, not a curiosity hook: it names the viewer's private fear (I'm not clever enough) and swaps it for a kinder story (you're just early in the process). That earns saves, shares and quote-card reposts, but it does not stop a scroll: no loop, no specificity, no stakes, and it resolves itself the moment it is spoken. The sourced record matches: it thrives as a caption and Pinterest quote (in print since at least 2017) while every video built on it sits between 28 likes and roughly 15k views. It behaves like a payoff line or a closer, not a first line.",
+      "examples": [
+        {
+          "creator": "@Thebeautyboss77",
+          "title": "It's not hard, it's just new \ud83c\udf1f\ud83c\udf37\ud83c\udfa7 #new #success #youtube #shorts",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/XUyfC6PmoKY",
+          "metric": "15k views, 724 likes",
+          "metricSource": "Views from the YouTube search results page and likes from the Short's player page, both read in-browser 17 Jul 2026",
+          "postedWhen": null
+        },
+        {
+          "creator": "@goalhorizon-",
+          "title": "it's not hard it's just new #study #studymotivation #studytok #motivation",
+          "platform": "YouTube Shorts",
+          "url": "https://www.youtube.com/shorts/QXdq79KTKro",
+          "metric": "13k views, 7 likes",
+          "metricSource": "Views from the YouTube search results page and likes from the Short's player page, read in-browser 17 Jul 2026; the only studytok example found",
+          "postedWhen": null
+        },
+        {
+          "creator": "@sydneyowebb",
+          "title": "it's just new \ud83e\udd0d (spoken motivational piece)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@sydneyowebb/video/7440516873122254110",
+          "metric": "1,000 likes",
+          "metricSource": "Heart count on the TikTok search results card for the query 'it's not hard it's just new', read in-browser 17 Jul 2026 (view count not visible without login)",
+          "postedWhen": "2024-11-23 (date on TikTok search result card)"
+        }
+      ],
+      "fitForWaleed": "The sentiment is genuinely on-brand (it is grades-are-a-system-not-a-talent in one sentence, and a US nursing college uses it to calm healthcare students, which rhymes with his NHS identity), but as a cold open it is a worn platitude any faceless quote account could post: zero authority, zero specificity, and the sourced record shows it never breaks out. The exclamation-mark delivery grates against his calm register. Do not lead with it: use it as the mid-video reframe or the closing line after a specific A-level pain has opened the loop. The risk is blandness, not harm.",
+      "adaptation": "As a closer after a study-method video: So stop telling yourself it's too hard. It's not hard. It's just new. And new is fixable, I've watched over 1,000 students fix it. If used near the top, fuse the pain and the doctor angle first: You didn't get worse at maths in Year 12. A-level isn't hard, it's just new. And I'm an NHS doctor, so trust me, you never treat new the same way you treat hard."
+    },
+    {
+      "id": "fall-behind-skills",
+      "hook": "If you don't have these skills, you're gonna fall behind",
+      "source": "waleed",
+      "category": "urgency",
+      "verdict": "weak",
+      "mechanism": "Loss aversion plus a self-relevance check: the second-person conditional forces the viewer to audit themselves against an unnamed list (which skills? do I have them?) and the threat exploits negativity bias. It only pays off when the list is concrete and checkable; when the skills are vague, viewers have learned it signals a generic listicle and scroll on. By 2026 the falling-behind frame is saturated enough that mainstream press describes it as manufactured FOMO and anti-fearmongering pushback videos rank in its own search results.",
+      "examples": [
+        {
+          "creator": "kristagreener (TikTok)",
+          "title": "If you're not learning these AI skills, you're going to get left behind.",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@kristagreener/video/7504396914339630382",
+          "metric": "14.3K likes, 3,984 comments, 13.4K bookmarks, 4,922 shares",
+          "metricSource": "Counters on the TikTok video page, read 17 Jul 2026",
+          "postedWhen": "2025-05-14 (date on video page)"
+        },
+        {
+          "creator": "perzo62 (TikTok)",
+          "title": "If u don't know, then go revise (GCSE maths knowledge check)",
+          "platform": "TikTok",
+          "url": "https://www.tiktok.com/@perzo62/video/7626059982399638786",
+          "metric": "82.8K (count shown on TikTok search result card)",
+          "metricSource": "TikTok search results card, read 17 Jul 2026",
+          "postedWhen": "2026-04-07 (date on search card)"
+        },
+        {
+          "creator": "Prime State (YouTube, @primestateofficial)",
+          "title": "10 Skills You MUST Master Before 25 | Or You'll Fall Behind",
+          "platform": "YouTube",
+          "url": "https://www.youtube.com/watch?v=XBB_0AsVVq8",
+          "metric": "7.7K views",
+          "metricSource": "YouTube search results page, read 17 Jul 2026",
+          "postedWhen": "About 2 months before 17 Jul 2026 (YouTube search listing)"
+        }
+      ],
+      "fitForWaleed": "Poor fit as written, three ways: exact-phrase videos mostly underperform now (nothing above 8.2K views on the YouTube exact-phrase search, most under 400), fear-based FOMO from an NHS doctor at already-anxious Year 12/13 students undercuts his calm diagnostic credibility (a doctor scaring teenagers is exactly the wrong screenshot), and gonna plus vague these-skills is the weakest form of the pattern. What IS worth keeping: the conditional self-check demonstrably works in the study niche when concrete and testable (the GCSE if-u-don't-know-go-revise knowledge check at 82.8K on the search card), and it suits his screening-test medical framing. Use the check, drop the doom. TikTok card counts are unlabelled, so treat them as order-of-magnitude only.",
+      "adaptation": "Quick screening test. Three revision skills nobody teaches you at sixth form. If you can't do all three, that's your summer sorted. Alternative: If you can't do these three things with a past paper, Year 13 is going to hurt. I've taught over 1,000 students, and it's never about talent."
+    }
+  ]
+}

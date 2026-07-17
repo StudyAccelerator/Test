@@ -21,11 +21,12 @@ This is the CONTENT HQ's radar (`content-hq/`, port 4500, `npm run content-hq`).
 
 All stores live in `/Users/waleedahmad/Downloads/Claude Code/content-hq/data/` (if the folder is missing, run `node content-hq/server.js` once or copy `content-hq/seed/` to `content-hq/data/`).
 
-- `creators.json` — the roster. Sweep targets come from here.
-- `outliers.json` — previously flagged outliers (check before re-flagging; a post already flagged is not news).
-- `sweeps.json` — the log; also tells you which rotation slot this sweep is in.
-- `channels.json` — Waleed's own handles, if set. If a handle exists, sweep his profile too (followers + latest post views) and update it, same rules.
-- `pipeline.json` — the content pipeline; you may append at most ONE `"idea"` package per sweep (Step 5).
+- `creators.json`: the roster. Sweep targets come from here.
+- `outliers.json`: previously flagged outliers (check before re-flagging; a post already flagged is not news).
+- `sweeps.json`: the log; also tells you which rotation slot this sweep is in.
+- `channels.json`: Waleed's own handles, if set. If a handle exists, sweep his profile too (followers + latest post views) and update it, same rules.
+- `pipeline.json`: the content pipeline; you may append at most ONE `"idea"` package per sweep (Step 5).
+- `hooks.json`: the hook library (opener lines with evidence, mechanism and Waleed's adaptation). When a NEW outlier's opening line is a repeatable pattern that is not already in the library, append ONE entry shaped like the existing ones (verdict from the evidence you actually have, sourced example, `source: "research"`); if the pattern is already there, add the sighting to that entry's `examples` (cap 3, keep the best-sourced). Never edit entries with `source: "waleed"` beyond appending examples.
 
 ## Step 2: sweep
 

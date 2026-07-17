@@ -51,7 +51,7 @@ function isLoopback(req) {
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['creators', 'outliers', 'playbook', 'pipeline', 'sweeps', 'channels']
+const STORES = ['creators', 'outliers', 'playbook', 'pipeline', 'sweeps', 'channels', 'hooks']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })

@@ -7,7 +7,7 @@ const esc = (s) =>
   String(s == null ? '' : s).replace(/[&<>"']/g, (c) =>
     ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c])
 
-const state = { creators: null, outliers: null, playbook: null, pipeline: null, sweeps: null, channels: null, meta: null }
+const state = { creators: null, outliers: null, playbook: null, pipeline: null, sweeps: null, channels: null, hooks: null, meta: null }
 
 async function getStore(name) {
   const res = await fetch(`/api/store/${name}`)
@@ -251,6 +251,57 @@ window.markOutlierSeen = async (id) => {
   renderOutliers(); renderNow()
 }
 
+/* ----------------------------------------------------------------- hooks */
+
+let hookFilter = 'all'
+
+function renderHooks() {
+  const h = state.hooks
+  $('hooks-updated').textContent = h && h.updatedAt ? `updated ${fmtDate(h.updatedAt)}` : ''
+  const all = (h && h.hooks) || []
+
+  $('hook-rules').innerHTML = h && (h.howToUse || []).length
+    ? `<div class="hook-rules"><b>Using them well:</b><ul>${h.howToUse.map((r) => `<li>${esc(r)}</li>`).join('')}</ul></div>`
+    : ''
+
+  const cats = ['all', ...new Set(all.map((x) => x.category).filter(Boolean))]
+  $('hook-filters').innerHTML = cats.map((c) =>
+    `<button class="chip ${hookFilter === c ? 'active' : ''}" onclick="setHookFilter('${esc(c)}')">${esc(c)}${c === 'all' ? ` (${all.length})` : ''}</button>`).join('')
+
+  const order = { proven: 0, works: 1, risky: 2, unverified: 3, weak: 4 }
+  const list = all
+    .filter((x) => hookFilter === 'all' || x.category === hookFilter)
+    .sort((a, b) => (order[a.verdict] ?? 9) - (order[b.verdict] ?? 9))
+
+  $('hook-list').innerHTML = list.length
+    ? list.map((x) => {
+        const best = (x.examples || []).filter((e) => e.url || e.metric).slice(0, 2)
+        const exHtml = best.length
+          ? `<div class="h-ex">${best.map((e) => {
+              const label = `${e.creator}${e.title ? `: "${e.title}"` : ''}`
+              return `${e.url ? `<a href="${esc(e.url)}" target="_blank" rel="noreferrer">${esc(label)}</a>` : esc(label)}${e.metric ? ` · ${esc(e.metric)}` : ''}`
+            }).join('<br>')}</div>`
+          : '<div class="h-ex">No sourced sighting yet; pattern carried on judgement.</div>'
+        return `
+      <div class="hook" id="hook-${esc(x.id)}">
+        <div class="h-top">
+          <span class="badge badge-${esc(x.verdict)}">${esc(x.verdict)}</span>
+          ${x.source === 'waleed' ? '<span class="badge badge-yours">yours</span>' : ''}
+          <span class="badge badge-soft">${esc(x.category || '')}</span>
+        </div>
+        <div class="h-line">"${esc(x.hook)}"</div>
+        ${x.mechanism ? `<div class="h-mech">${esc(x.mechanism)}</div>` : ''}
+        ${exHtml}
+        ${x.adaptation ? `<div class="h-adapt"><b>Your version:</b> <span id="hadapt-${esc(x.id)}">${esc(x.adaptation)}</span></div>` : ''}
+        ${x.fitForWaleed ? `<div class="h-fit">${esc(x.fitForWaleed)}</div>` : ''}
+        <div class="h-foot">${x.adaptation ? `<button class="small" onclick="copyText('hadapt-${esc(x.id)}')">Copy your version</button>` : ''}</div>
+      </div>`
+      }).join('')
+    : '<div class="empty">Nothing in this category yet.</div>'
+}
+
+window.setHookFilter = (c) => { hookFilter = c; renderHooks() }
+
 /* ---------------------------------------------------------------- radar */
 
 function renderCreators() {
@@ -339,13 +390,13 @@ function renderSweeps() {
 /* ------------------------------------------------------------------ boot */
 
 async function boot() {
-  const [creators, outliers, playbook, pipeline, sweeps, channels, meta] = await Promise.all([
+  const [creators, outliers, playbook, pipeline, sweeps, channels, hooks, meta] = await Promise.all([
     getStore('creators'), getStore('outliers'), getStore('playbook'),
-    getStore('pipeline'), getStore('sweeps'), getStore('channels'),
+    getStore('pipeline'), getStore('sweeps'), getStore('channels'), getStore('hooks'),
     fetch('/api/meta').then((r) => r.json()).catch(() => null),
   ])
-  Object.assign(state, { creators, outliers, playbook, pipeline, sweeps, channels, meta })
-  renderTopbar(); renderNow(); renderPipeline(); renderOutliers(); renderCreators(); renderPlaybook(); renderChannels(); renderSweeps()
+  Object.assign(state, { creators, outliers, playbook, pipeline, sweeps, channels, hooks, meta })
+  renderTopbar(); renderNow(); renderPipeline(); renderOutliers(); renderHooks(); renderCreators(); renderPlaybook(); renderChannels(); renderSweeps()
 }
 
 boot()
