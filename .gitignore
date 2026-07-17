@@ -37,3 +37,7 @@ lerna-debug.log*
 # HQ dashboard: personal data and keys stay local, never in the repo
 /dashboard/data/
 /dashboard/.env
+
+# Content HQ: live sweep data and keys stay local, never in the repo
+/content-hq/data/
+/content-hq/.env

@@ -1,0 +1,812 @@
+{
+  "updatedAt": "2026-07-17T12:00:00Z",
+  "note": "Initial roster from the 17 July 2026 deep research (38-agent sweep, every creator verified against live pages or Google-indexed profile snapshots that day; source detail per creator in sourceNote). The three-times-daily radar keeps it fresh from here.",
+  "creators": [
+    {
+      "id": "gohar-khan",
+      "name": "Gohar Khan",
+      "niche": "Study tips + college admissions (the biggest study-advice short-form creator in the world)",
+      "country": "United States",
+      "relevance": 5,
+      "tiktok": {
+        "handle": "goharsguide",
+        "followers": 3800000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "goharsguide",
+        "followers": 1400000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "30 to 40 second single-tip videos for academically ambitious school students: do homework faster, memorise better, hack multiple-choice tests, write essays, find motivation for school. Also taxes/life-skills explainers. MIT grad credibility is baked into every video. Roughly 10M followers across platforms by age 25 (Forbes, Apr 2025).",
+      "signatureFormats": "Visual storytelling with colour, movement and simplicity: he opens on a relatable scenario or a physical prop (often food) as the hook, then delivers one tip in one take. His breakout 2020 to 21 era format was narrated tabletop videos with DIY paper cut-outs (grew him 30K to 100K in a week, per Fortune). Every second is scripted; no assumption the viewer knows anything. Shorts are his largest revenue driver (Forbes, Apr 2025).",
+      "cadence": null,
+      "stealNotes": "The closest model for Waleed: a credentialed insider (MIT vs NHS doctor + top A-level grades) giving one concrete tip per video with a physical prop hook. His revenue mix (50% sponsors, 25% AdSense, 25% his admissions consultancy Next Admit) shows short-form feeding a paid education service, exactly",
+      "sourceNote": "TikTok 3.8M: triple-sourced. (1) Wikipedia infobox states 3.80M as of 30 May 2026; (2) the Google-indexed TikTok profile snippet for tiktok.com/@goharsguide showed \"3.8M followers, 135.2M likes\" when searched on 17 July 2026; (3) Motion's creator ads page (motionapp.com, page dated 2026) lists \"3.8M TikTok followers\". Famous Birthdays also says \"more than 3.8 million\". One conflicting figure exists: his own Threads bio still says \"TikTok: goharsguide (2.9M+)\", which is a stale self-written bio, not evidence of a drop. Instagram 1.4M: Wikipedia (1.40M as of 30 May 2026) and Motion (\"1.4M Meta f",
+      "notes": "Everything in the original brief checks out and the numbers are current. As of mid-2026 he is still the biggest study-advice short-form creator: 3.8M TikTok + 1.4M Instagram + 7.65M YouTube (5.38B views) + 191K Threads, roughly 12.85M total, matching the ~12.84M \"total audience\" figure on hafi.pro (June 2026). His flywheel has matured since the 2025 Forbes piece in ways directly relevant to Waleed: (1) the one-tip video now feeds THREE paid products, not one: Next Admit (admissions consulting), a weekly newsletter \"The Studious Student\" (thestudiousstudent.beehiiv.com), and a productivity app ",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "olivia-biology-with-olivia",
+      "name": "Olivia (Biology with Olivia)",
+      "niche": "GCSE and A-level Biology",
+      "country": "UK",
+      "relevance": 5,
+      "tiktok": {
+        "handle": "biologywitholivia",
+        "followers": 340200,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "biologywitholivia",
+        "followers": 150000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Exam question walkthroughs, memory tricks, common mistakes, mark-scheme pattern-spotting, revision strategy for biology. 339.4K followers, 9M likes per TikTok profile snippet observed 17 Jul 2026. Former classroom teacher who left after 3 years to teach online full time; sells \u00a315 group masterclasses (with \u00a35 free-school-meals rate) and notes via biologywitholivia.co.uk.",
+      "signatureFormats": "Talking-head 'do this to get full marks' mark-scheme breakdowns; personal confession posts ('I got a C on my final mocks before my A*'); comment-a-keyword lead capture ('comment FREE SAMPLE')",
+      "cadence": "Daily posting (her own claim: 'Every single day I post')",
+      "stealNotes": "The closest full business model to Waleed's: free daily exam-technique clips feeding paid group classes, with comment-keyword funnels. Her 'diagnose the mark scheme' framing is nearly identical to his 'diagnose before you treat' voice. She covers GCSE AND A-level; he can own the A-level-only lane.",
+      "sourceNote": "All counts observed 17 Jul 2026. TIKTOK (@biologywitholivia): confirmed live, verified through the profile URL plus multiple video pages. Follower count comes from Google/Bing search-result snippets of the TikTok profile, which returned two closely-spaced readings on the same day: \"340.2K followers, 9M likes\" and \"339.4K / 9M likes.\" I recorded 340,200 as the freshest snippet; treat it as roughly 340K with a ~1K margin. I could NOT reach a third-party stat site to pin it exactly: Social Blade (socialblade.com/tiktok/user/biologywitholivia) returned 403, urlebird 403, exolyt 404/redirect, tokco",
+      "notes": "CLOSEST FULL BUSINESS MODEL to Waleed's, hence relevance 5. Model to study, not a head-on competitor (she is biology-only, GCSE + A-level; he is A-level across subjects, so the A-level-only lane is still open to own). Verified funnel: free daily exam-technique clips feeding paid \u00a315 90-minute Zoom masterclasses (confirmed on video 7361035192238099744: '\u00a315 - includes the zoom webinar, notes, checklist & recording', with a \u00a35 free-school-meals rate on emailed evidence), plus model-answer notes/courses sold via biologywitholivia.co.uk and stan.store/biologywitholivia. Authority stack mirrors Wal",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "dr-justin-sung",
+      "name": "Dr Justin Sung",
+      "niche": "Learning science / evidence-based study skills",
+      "country": "New Zealand",
+      "relevance": 5,
+      "tiktok": {
+        "handle": "drjustinsung",
+        "followers": 269600,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "drjustinsung",
+        "followers": 107000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Former medical doctor turned learning coach (co-founder of iCanStudy). Evidence-based learning strategy: encoding before review, schema-building, mind-mapping (his GRINDE method), myth-busting popular techniques like flashcards and rereading. Long-form YouTube first, with Shorts cutdowns.",
+      "signatureFormats": "Whiteboard/talking-head explainer with a contrarian, myth-busting hook (\"stop doing X, it's low-efficiency\"), then the cognitive-science reason, then the replacement technique. Ranks techniques by efficiency the way Waleed ranks by yield. His TEDx talk \"Stop Studying. Start Learning\" is the thesis statement of the whole channel.",
+      "cadence": null,
+      "stealNotes": "The strongest philosophical match to A-Level Accelerators' \"top grades are a system, not a talent\". Steal the myth-bust structure: name a technique students trust (highlighting, rereading, even flashcards), explain with doctor's authority why it is low-yield, prescribe the high-yield replacement (bl",
+      "sourceNote": "TikTok 269.6K: from Google-indexed snapshots of tiktok.com/@drjustinsung (\"Cognitive performance coach Ex-Doctor\", 4.4M likes), observed 17 Jul 2026 across three separate search results; one slightly older snapshot read 268.9K, so the figure is consistent to within a rounding error. Instagram 107K: from Google-indexed snapshots of instagram.com/@drjustinsung (bio: \"Co-Founder of @icanstudy, Ex-Doctor, 2.1M on YouTube\", 165 following, 885 posts), observed 17 Jul 2026 in two independent search results. Direct fetches of TikTok and Instagram are JS-blocked and Socialblade/HypeAuditor returned 403",
+      "notes": "Both handles verified against his official Linktree. The strategic finding for Waleed: Sung's 2.17M-subscriber YouTube authority has NOT translated proportionally to short-form (269.6K TikTok, 107K Instagram, roughly 8x and 20x smaller), because his TikTok is mostly Shorts cutdowns ending in \"check my bio\" CTAs that earn only hundreds to ~3K likes; the account reads as a funnel appendage, not a native TikTok play. His only true TikTok breakout was personal doctor-identity content, not study technique. Lesson: lead short-form with the doctor story and the contrarian myth-bust hook, and make vid",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "kate-study-with-kate",
+      "name": "Kate (Study With Kate)",
+      "niche": "GCSE-to-A-level student creator: 11 grade 9s at GCSE, now doing A-levels aiming for medicine at Cambridge; inventor of the viral 'revision roulette' spreadsheet method",
+      "country": "UK",
+      "relevance": 5,
+      "tiktok": {
+        "handle": "study_with_kate",
+        "followers": 182400,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": null,
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Revision roulette walkthroughs (a Google Sheets randomiser covering every GCSE subject, so widely copied that Tes hosts teacher templates of it), study organisation, GCSE science '9s' technique videos, study vlogs and motivation. 6.6M TikTok likes. Sells revision materials via Buy Me a Coffee. No verified Instagram found; follower count therefore null.",
+      "signatureFormats": "Spreadsheet-on-screen method explainers; study-with-me; tips talking to camera",
+      "cadence": null,
+      "stealNotes": "Closest stylistic match to Waleed's 'top grades are a system' positioning, from the student side. A named method (revision roulette) became her brand; Waleed's Blurt and Fix / diagnostic system deserves the same named-method treatment in reels.",
+      "sourceNote": "TikTok: 182,400 followers (with 10.2M likes, 60 following) observed FIRST-HAND on the live profile https://www.tiktok.com/@study_with_kate on 17 Jul 2026 via browser. Corroborated by Famous Birthdays which says \"more than 180,000 followers\" (accessed 17 Jul 2026; the site does not date its figure). The 157.1K in the input dossier is stale; she has added roughly 25K followers since that observation. Instagram: null because no verified account exists. Her TikTok bio links only an email and Buy Me a Coffee (no Instagram), her Buy Me a Coffee page lists no socials, and the Instagram handles surfac",
+      "notes": "Account fully verified first-hand. Live profile (17 Jul 2026): @study_with_kate, 182.4K followers, 10.2M likes, bio \"GCSEs, A levels, study tips and motivation\" with contact email and Buy Me a Coffee shop link. Playlists: \"Study roulette\" (36 posts) and \"Day in the life\" (28 posts). Timeline: started TikTok March 2024 (Famous Birthdays); the study roulette spreadsheet video around July 2024 made the account; achieved eleven grade 9s at GCSE (results reaction with her mum, Aug 2025; thank-you follow-up 25 Aug 2025 got 12.4K likes); now doing A-levels including biology and chemistry, publicly ai",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "miss-estruch-katharine-estruch",
+      "name": "Miss Estruch (Katharine Estruch)",
+      "niche": "A-level Biology (the most A-level-focused big creator found)",
+      "country": "UK",
+      "relevance": 5,
+      "tiktok": {
+        "handle": "miss.estruch.biology",
+        "followers": 100200,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "missestruchbiology",
+        "followers": 20000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "A-level biology exam technique: 'do this to get full marks' mark-point breakdowns, common exam mistakes, AQA essay planning, required-practical prep, examiner tips. Biology teacher with 15+ years experience, MA in Education, also a YouTuber and author; sells A-level notes with examiner tips via missestruch.co.uk. 100.2K followers per TikTok snippet observed 17 Jul 2026.",
+      "signatureFormats": "Mark-scheme anatomy videos ('here are the key marking points for this gas exchange question'); comment-keyword funnels ('comment FREE SAMPLE', 'comment ESSAY for my free webinar'); long-form on YouTube, technique clips on TikTok",
+      "cadence": null,
+      "stealNotes": "The best direct benchmark for Waleed: A-level-only, technique-led, funnels TikTok comments into free webinars then paid resources. At 100K she proves an A-level-specific (not GCSE) audience of this size exists on TikTok. Waleed can differentiate on multi-subject systems + doctor credibility vs her s",
+      "sourceNote": "TikTok @miss.estruch.biology: 100.2K followers and 3.2M likes, from Google search-result snippets of the live TikTok profile, observed 17 Jul 2026 (consistent across three separate searches). The TikTok video and profile pages do not render for direct fetch (server returns only the generic \"TikTok - Make Your Day\" shell), so these come from search snippets, not a directly loaded page; I could not source them from a third-party stat site (Social Blade profile 403'd). Instagram @missestruchbiology: real name \"Katharine Estruch | A-level & GCSE Biology Teacher\", ~20K followers and 1,989 posts, fr",
+      "notes": "Real name Katharine Estruch; UK secondary Biology teacher of 15 to 16+ years, MA in Education, contracted author for Cambridge University Press (AS/A-level Biology workbook and flashcards). Single-subject: A-level (and some GCSE) Biology, AQA and OCR. Sells via missestruch.co.uk: A-level notes with examiner tips, The Biology Study Club membership, online courses, Pick 'N' Mix live tutoring from \u00a318, and 2026 practice papers. Runs regular TikTok/Instagram LIVEs (weekdays 12:30pm, Thursdays 8pm) and an Easter/exam-season \"Bootcamp\". Funnel is clear and repeatable: technique/prediction clip on TikTo",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "hazel-lindsey-science-with-hazel",
+      "name": "Hazel Lindsey (Science with Hazel)",
+      "niche": "Tutor-creator: Cambridge graduate and qualified teacher covering GCSE, IGCSE and A-level Biology, Chemistry and Physics; MD of SwH Learning",
+      "country": "UK",
+      "relevance": 5,
+      "tiktok": {
+        "handle": "sciencewithhazel",
+        "followers": 25700,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "sciencewithhazel",
+        "followers": 20925,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Fast-paced science recaps, top exam tips, last-minute cramming content, promotion of her revision courses and 'The Perfect Answer' guides. Recommended in MidKent College's 2025 revision-accounts list.",
+      "signatureFormats": "Quick-fire exam-tip reels, topic recaps, exam-season countdown content",
+      "cadence": null,
+      "stealNotes": "The closest business-model twin to A-Level Accelerators: credentialed expert using social content to sell her own courses and guides rather than chasing creator revenue. Her Instagram is small, which suggests the tutor-to-Instagram playbook is still unclaimed at scale.",
+      "sourceNote": "All figures observed 17 Jul 2026. TikTok 25,700 followers (also 449,400 total likes, 501 videos) read live from the TikTok profile page's embedded __UNIVERSAL_DATA_FOR_REHYDRATION__ JSON via direct fetch. TikTok nickname \"Science with Hazel\", bio \"Science Youtuber 82k subs, Cambridge grad, qualified science teacher\", bioLink www.swhlearning.co.uk. The brief's 25.4K was slightly stale; live is 25.7K. Instagram 20,925 followers (1,162 posts, following 1,155) read live from Instagram's web_profile_info API (app-id 936619743392459); full name \"Hazel Lindsey\", verified as a business/professional ac",
+      "notes": "CLOSEST BUSINESS-MODEL TWIN to A-Level Accelerators and the reason relevance is 5: a credentialed UK expert (Cambridge grad, qualified/PGCE science teacher, MD of SwH Learning) using short-form social to sell her OWN courses, private tuition and 'The Perfect Answer' revision guides, not to chase creator ad revenue. Same playbook Waleed is starting: teacher-founder -> free syllabus recaps -> owned products. Differences: she is science (Bio/Chem/Physics) across GCSE/IGCSE/A-level/IB, Waleed is broad A-level; she leans YouTube-first (her biggest asset), with TikTok/IG as secondary. KEY STEAL/CAUT",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "neildoesmaths",
+      "name": "Neil Trivedi (NeilDoesMaths)",
+      "niche": "GCSE and A-level maths; MyEdSpace lead teacher",
+      "country": "UK",
+      "relevance": 5,
+      "tiktok": {
+        "handle": "neildoesmaths",
+        "followers": 216700,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": null,
+        "followers": null,
+        "asOf": null
+      },
+      "whatTheyPost": "Maths walkthroughs and exam content as the face of MyEdSpace, the direct competitor with the biggest teacher-brand machine.",
+      "signatureFormats": "Teacher-named account fronting a company funnel",
+      "cadence": null,
+      "stealNotes": "The named-face-over-brand-account proof: MyEdSpace corporate account sits near 6.4K while the teacher accounts carry the reach. Watch how they route short-form into paid classes.",
+      "sourceNote": "TikTok 216.7K observed 17 Jul 2026 in the niche research (playbook evidence); full verification pending first sweep.",
+      "notes": "Added from the research watchlist; sweep should verify handle and numbers first-hand.",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "dr-karan-rajan-karan-rangarajan",
+      "name": "Dr Karan Rajan (Karan Rangarajan)",
+      "niche": "Medical myth-busting and health education (NHS surgeon)",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "dr.karanr",
+        "followers": 5400000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "drkaranrajan",
+        "followers": 2000000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "60-second myth-busts and 'weird medical facts': sleep, gut health, viral wellness trends, NHS life. TikTok 5.4M followers and about 364M likes (observed on his TikTok profile via search, July 2026); Instagram 2M (observed on his IG profile via search, July 2026); his own site claims 12M+ across all platforms. Started TikTok Nov 2019, first viral 'weird medical facts' video Feb 2020, filmed before a shift and blew up while he was in a 3-hour surgery.",
+      "signatureFormats": "(1) Green-screen explainer: him in scrubs in front of a source article or diagram. (2) Stitch/duet debunk: reacts to a viral health claim, then corrects it with the science and dry British humour. (3) Series content ('weird medical facts', 'school with Dr Karan'). Credential is worn, not spoken: NHS scrubs on screen, 'Dr' in the handle, MRCS MBBS BSc listed in the Instagram display name. His stated hook philosophy (Async interview): when the content is genuinely useful 'it doesn't need a hook or a gimmick', lead with the surprising fact itself.",
+      "cadence": null,
+      "stealNotes": "The direct model for Waleed: NHS clothing as the visual credential, qualifications in the display name, and a repeatable named series. Swap health myths for revision myths: stitch bad study-hack videos and correct them with 'diagnose before you treat' framing.",
+      "sourceNote": "TikTok 5,400,000: observed via Google search snippets of the live TikTok profile (tiktok.com/@dr.karanr) on 17 July 2026, which read \"5.4M Followers, 364.1M Likes\" (one fresher snippet showed 364.7M likes); independently corroborated by third-party estimator hafi.pro, whose June 2026 data lists exactly 5,400,000. Instagram 2,000,000: the rounded figure shown in the Google snippet of the live Instagram profile (instagram.com/drkaranrajan) observed 17 July 2026; hafi.pro (June 2026) lists a more precise 2,163,467. Direct WebFetch of both profiles is blocked (JS-rendered), and Socialblade returne",
+      "notes": "Both handles verified as the same person: the TikTok bio and TikTok's own newsroom creator spotlight name him as NHS general surgeon and University of Sunderland honorary lecturer, his May 2025 TikTok caption cross-promotes '@drkaranrajan' (his IG handle), and his own site drkaranrajan.com links both. Still highly active through 2026 (videos observed from Dec 2025 and media pickups from June 2026). Business evolution worth noting for Waleed: #1 Sunday Times bestseller ('This Book May Save Your Life'), the 'Dr Karan Explores' podcast, founder of @loamscience and Chief of Science at Throne Scien",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "freegcsemathsteacher-anonymous-uk-maths-",
+      "name": "FreeGCSEMathsTeacher (anonymous UK maths teacher)",
+      "niche": "GCSE maths revision",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "freegcsemathsteacher",
+        "followers": 2800000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "freegcsemathsteacher",
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Free bite-size GCSE maths lessons: past-paper walkthroughs, hardest-question breakdowns, calculator hacks, statistics topics like estimate of the mean, forming and solving equations. Biggest single GCSE/A-level education account found on TikTok (2.8M followers, 29M likes per TikTok profile snippet observed 17 Jul 2026). The teacher stays anonymous; identity could not be sourced.",
+      "signatureFormats": "One question, one whiteboard/screen, one clean walkthrough in under 60 seconds; recurring 'hardest GCSE question' and 'calculator trick' hooks",
+      "cadence": "Very frequent, multiple short videos per week",
+      "stealNotes": "Proof that pure utility with zero personal brand can hit millions: the account is anonymous. For Waleed the lesson is the format, not the anonymity: single exam question, timed walkthrough, no fluff. Caution: the other mega maths account, Think Maths GCSE (625.7K), is a Think Academy brand account (",
+      "sourceNote": "TikTok 2.8M followers / 29M likes / 2 following: from the Google-indexed TikTok profile snippet for tiktok.com/@freegcsemathsteacher, observed 17 Jul 2026 via two independent search queries in this session (matches the prior researcher's 17 Jul 2026 observation). Cross-check: an Irish Star (Reach plc) article dated December 2024 cited 2.5 million followers, consistent with growth to 2.8M by mid-2026. Every third-party stat site was inaccessible for direct confirmation (Socialblade 403, Exolyt 404, Countik loaded zeroes, Urlebird 403), so the 2.8M figure ultimately traces to TikTok's own profil",
+      "notes": "Account confirmed real and genuinely anonymous (no name found anywhere, including a Dec 2024 Irish Star press mention). Multi-platform: YouTube channel youtube.com/@freegcsemathsteacher ('FREE GCSE Maths Teacher', offers free live GCSE revision) and a Facebook page also exist; no subscriber numbers retrievable for either. Recency caveat: the newest Google-indexed video dates to ~11 Jun 2025 (ID timestamp), so current mid-2026 posting cadence could not be confirmed from indexed data; this is likely index lag, but worth a manual profile check before citing cadence. Relevance 4/5 for Waleed: GCSE",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "matt-green-the-rapping-science-teacher",
+      "name": "Matt Green (The Rapping Science Teacher)",
+      "niche": "GCSE science (biology, chemistry, physics) via rap",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "mattgreen.jgm",
+        "followers": 1500000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "mattgreen.jgm",
+        "followers": 687000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "GCSE science raps over UK rap/drill soundtracks (Central Cee, Stormzy, Skepta, Dave beats) covering respiration, electrolysis and other spec topics. Owner/Director of JGM Science Tutors. 1.5M followers and 25.5M likes per TikTok profile snippet observed 17 Jul 2026 (an earlier Rutgers teacher-TikTok roundup had him at 790K, and a My South London feature at 200K, showing the growth curve). Won the TikTok Educator Award at the #1Billion Summit (reported Feb 2026) and signed a GCSE 'Rapping Up' revision guide series with DK Learning.",
+      "signatureFormats": "Full-production rap videos mapped to exam spec topics; term-time weekly release schedule that students anticipate like a series",
+      "cadence": "Weekly raps during term time (historically 'new raps every Friday at 4pm until Christmas')",
+      "stealNotes": "The strongest personal-brand example in UK EdTok: one unmistakable gimmick, industrial consistency, then monetised off-platform (books, tutoring). Waleed shouldn't rap, but the 'one recognisable format, same slot every week' mechanic transfers directly.",
+      "sourceNote": "TikTok 1,500,000: from the TikTok profile snippet indexed in search results (\"1.5M Followers, 25.1M Likes\" on tiktok.com/@mattgreen.jgm), observed 17 Jul 2026 across three separate searches; corroborated by Khaleej Times (event 10 to 11 Jan 2026) which reported 1.4M followers when he won the Educator Award, consistent with growth to 1.5M by July. Handle ownership confirmed directly via TikTok's oEmbed API, which returned author_name \"Matt Green\" and author_url tiktok.com/@mattgreen.jgm for his video 7513520992401116438. Instagram 687,000: from the Instagram profile snippet indexed in search resul",
+      "notes": "All core facts in the brief check out, with small updates. TikTok profile snippet now reads 25.1M likes (brief said 25.5M; both are Google-index snapshots of the same profile, minor variance between crawls). Award confirmed with full detail: Educator Award at the 1 Billion Followers Summit (4th edition), Dubai, 10 to 11 Jan 2026, $100,000 prize. DK Learning deal confirmed (The Bookseller, 9 Jun 2025, headline visible outside paywall); the three Rapping Up books (Biology, Chemistry, Physics) published 22 Jan 2026 and are on Amazon UK. Business behind the content, per his own site jgmtutors.com/mat",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "ali-abdaal",
+      "name": "Ali Abdaal",
+      "niche": "Evidence-based productivity and study techniques (doctor-creator archetype)",
+      "country": "United Kingdom",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "aliabdaal",
+        "followers": 392600,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "aliabdaal",
+        "followers": 1000000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Cambridge-trained doctor turned the world's biggest productivity creator. Study foundations: active recall, spaced repetition, Feynman technique, note-taking systems; now broader productivity and \"feel-good productivity\". Short-form repurposes the same evidence-based tips.",
+      "signatureFormats": "Calm, specific, research-backed explainers: \"here's a thing that works, here's the evidence\". No shouting, no drama. His growth model is consistency over virality (400+ videos compounding), which is a realistic model for a busy NHS doctor. Study-tips TikToks are direct-to-camera with text overlays citing the evidence.",
+      "cadence": null,
+      "stealNotes": "The proof that a UK doctor talking about evidence-based revision can become the category leader. Waleed's medical framing (high-yield/low-yield, diagnose before you treat) is the same move. Steal: cite the evidence on screen, keep delivery calm and credible, publish on a sustainable schedule rather ",
+      "sourceNote": "TikTok 392.6K followers (plus 3.4M total likes): from Google-indexed TikTok profile data for tiktok.com/@aliabdaal, observed 17 July 2026; the handle's existence was independently confirmed via a tiktok.com domain-restricted search and TikTok's oEmbed API (author_unique_id \"aliabdaal\"). Instagram 1,000,000: Google-indexed Instagram profile data (\"1M followers, 2,077 posts\"), observed 17 July 2026; the South China Morning Post (published 28 Nov 2025) reported 1.1 million Instagram followers, so the true current figure is likely 1.0 to 1.1M+; the 1M milestone itself was announced ~22 April 2025 ",
+      "notes": "Both handles verified as belonging to the real Ali Abdaal (Cambridge-trained doctor turned productivity creator). Relevance 4 not 5: he is the archetype proof that a UK doctor doing evidence-based study content becomes category leader, and his 2018 to 2023 study-content era (active recall, spaced repetition, evidence-on-screen, credential-as-hook) is the exact playbook for Waleed. But his 2025 to 2026 short-form output has pivoted to business/entrepreneurship (Lifestyle Business Academy, pricing advice, calendar habits), so he is no longer a direct competitor in the A-level revision niche and his cu",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "daisy-jackson-vent-with-daisy",
+      "name": "Daisy Jackson (vent with daisy)",
+      "niche": "A-level student vlogger: sixth-form life, revision and results-day content; achieved 3 A*s (Business, Psychology, Geography)",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "ventwithdaisy2",
+        "followers": 554800,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "daisybethjackson",
+        "followers": 73000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Study vlogs, revision technique videos ('how I got 3 A*s'), mock and real results-day reactions, GRWM school vlogs, gym and horse content mixed in; recommends resources like Save My Exams in revision videos. Posting since November 2022; aged 19 (born Sep 2006).",
+      "signatureFormats": "Raw phone-shot vlogs; results-reaction videos; revision rants; day-in-the-life of a sixth former",
+      "cadence": null,
+      "stealNotes": "The single most relevant creator for Waleed's ICP: an actual A-level student with 3 A*s whose journey-format content dominates. Waleed can't be the student, but he can be the doctor who shows HOW the 3 A* students do it, and results day (13 Aug 2026) is her biggest moment; his too.",
+      "sourceNote": "TikTok 554,800: from the Google-indexed tiktok.com/@ventwithdaisy2 profile snippet (\"281 Following, 554.8K Followers, 69.1M Likes\"), observed via two independent search queries on 17 Jul 2026; one older cached snippet showed 547.3K, and Famous Birthdays says \"more than 550,000\", so 554.8K is the most recent sourceable figure (Google cache may lag by days). Instagram 73,000: from the Google-indexed instagram.com/daisybethjackson profile snippet (\"73K followers, 663 following, 184 posts\"), observed via two independent search queries on 17 Jul 2026. Direct fetches of TikTok/Instagram pages return",
+      "notes": "Identity is solidly cross-verified: her Instagram bio explicitly lists TikTok ventwithdaisy2, and Famous Birthdays matches the handle, birth date (23 Sep 2006, age 19) and content description. Two things the input got right and I confirmed: handles and both follower counts (554.8K TikTok, 73K Instagram). Important 2026 context the input undersells: she sat her A-levels in summer 2025 (results-day video Aug 2025) and has now PIVOTED to university life content ('crazy someone else will move in next September', uni day-in-the-life vlogs) plus lifestyle brand deals (White Fox discount code TIKTOKD",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "jade-bowler-unjaded-jade",
+      "name": "Jade Bowler (UnJaded Jade)",
+      "niche": "Study skills, revision motivation and mindset; the original UK GCSE/A-level StudyTuber, now broadened into productivity and post-uni life",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "unjadedjade",
+        "followers": 229200,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "unjadedjade",
+        "followers": 392000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Reels and carousels on study routines, revision technique (blurting is a technique she popularised), burnout prevention, consistency, plus life/travel content since graduating. Recommended by MidKent College's 2025 revision-accounts list for 'Study Motivation & Mindset'.",
+      "signatureFormats": "Talking-to-camera reels with energetic jump cuts; aesthetic study b-roll with voiceover; carousel 'how I revise' breakdowns; vlogs cross-posted from YouTube",
+      "cadence": null,
+      "stealNotes": "The biggest UK study-content Instagram account. She proves technique-led content (blurting, active recall) scales; Waleed teaches the same systems with a doctor's authority. Note she has drifted away from A-level specifics, leaving that lane open.",
+      "sourceNote": "Instagram 392K: shown on the Google-indexed instagram.com/unjadedjade profile snippet (\"392K followers, 1,199 posts\"), observed 17 Jul 2026, and independently corroborated by Socialveins showing 391.9K (fetched 17 Jul 2026, page undated). TikTok 229.2K (with 6.6M likes): shown in Google-indexed tiktok.com/@unjadedjade profile snippets in two separate searches, observed 17 Jul 2026; consistent with Grokipedia's \"219,000 followers, 6.4M likes by late 2025\" and a third snippet saying \"230K\", so the account is real and the number is current. Direct WebFetch of tiktok.com and instagram.com returns ",
+      "notes": "Both handles confirmed real and hers. The dossier's numbers held up: Instagram 392K confirmed on two sources; TikTok, previously null, is now sourced at 229.2K. Her TikTok bio still frames her around transforming education and her book content (spaced repetition, blurting, association technique) still circulates on StudyTok, but her 2025 to 2026 output is post-uni life, identity and productivity content, not GCSE/A-level revision. Wikipedia confirms she graduated Minerva University in 2023; a Sept 2025 Theos talk covered creator burnout, and TEDxWarwick (Mar 2025) was about evolving beyond her re",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "ruby-granger",
+      "name": "Ruby Granger",
+      "niche": "Deep-focus study aesthetic and long study-day culture; studygram + StudyTube crossover",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "rubygranger8",
+        "followers": 217000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "_rubygranger",
+        "followers": 258000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Day-in-the-life study reels with soothing voiceover, exquisitely tidy notes, reading and library content, 12-hour study day vlogs cross-promoted from YouTube, book recommendations. Runs Pumpkin Productivity as a spin-off brand.",
+      "signatureFormats": "Calm voiceover reels over cosy study b-roll; 'day in the life' reels; photo carousels of handwritten notes; study-with-me style content",
+      "cadence": null,
+      "stealNotes": "Proof that pure study-atmosphere content builds huge loyal audiences. Waleed should not copy the aesthetic angle, but her day-structure format maps directly onto his revision-timetable and study-systems content.",
+      "sourceNote": "Instagram 258K: shown on the Google-indexed instagram.com/_rubygranger profile (observed 17 Jul 2026) and independently matched by Socialveins, whose page fetched 17 Jul 2026 now shows 258.1K (its cached search-result title still says 217.3K from an older snapshot); Media Clicks profile (20 Nov 2025) said 256K, consistent with slow growth to 258K. TikTok 217K: from the Google-indexed tiktok.com/@rubygranger8 profile snippet with 8.7M likes (observed 17 Jul 2026, Google index date unknown); a second indexed snapshot the same day showed 215.2K and 8.6M likes, so treat it as roughly 215K to 217K.",
+      "notes": "Both handles verified as hers: the TikTok bio matter matches her identity exactly (Oxford English Masters, 'Study Queen' study tips, Pluviophile Papers launch announcement, business email rubygranger@sixteenth.com, Pumpkin Productivity planner promos), and the Instagram bio cross-references her YouTube ('YouTuber with 980k followers'). Current status matters for modelling her: she finished her Oxford Masters and is now writing a debut novel, so her 2025 to 2026 short-form output has drifted toward books, outfits, Substack (The Pluviophile Papers) and Pumpkin Productivity planner promotion rather ",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "ishaan-bhimjiyani-revishaan",
+      "name": "Ishaan Bhimjiyani (Revishaan)",
+      "niche": "GCSE and A-level revision tips, study motivation, exam predictions ecosystem",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "revishaan",
+        "followers": 406300,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "revishaan",
+        "followers": 21000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Started posting while revising for his own Year 10 mocks, GCSEs and A-levels; peer-voice revision strategies and exam content. 405.9K followers per TikTok search snippet observed 17 Jul 2026 (AFP reported 'over 400,000' Aug 2025, consistent). Skipped university after a KCL rejection and founded Tap Lab, an agency representing 100+ educational influencers (\u00a3170K+ first-year revenue); has promoted paid predicted papers (\u00a31.99), which AFP and exam boards flagged in the Aug 2025 predictions controversy.",
+      "signatureFormats": "Peer-to-peer 'I'm revising with you' talking-head videos; personal milestone storytelling (results, rejection, business)",
+      "cadence": null,
+      "stealNotes": "Shows the scale of the student-voice side of EdTok and that the money is in the ecosystem (agency, predicted papers), some of it controversial. Waleed's doctor-credibility is the exact counter-position: same emotional moments (results day, rejections) but with verifiable authority and no prediction-",
+      "sourceNote": "TikTok 406.3K: from Google's indexed snippet of tiktok.com/@revishaan (\"Revishaan :) (@revishaan) | TikTok ... 23.1M Likes, 406.3K Followers\"), observed 17 Jul 2026; an earlier snippet the same day showed 405.9K, and press corroborates the scale (AFP 15 Aug 2025 \"over 400,000\", The Tab 4 Feb 2026 \"over 400,000\", Famous Birthdays \"more than 400,000\"). Direct WebFetch of the TikTok profile returns only the generic shell, so the count is snippet-sourced, not read off the live page. Instagram 21K (approx): from Google's indexed snippet of instagram.com/revishaan (\"21K followers, 467 following, 498",
+      "notes": "Account and identity fully verified across TikTok (via Google snippets of the live profile), Instagram (direct fetch of profile title), and four independent press/bio sources. Current status as of the Feb 2026 Tab profile: 21 years old (born 28 Oct 2004 per Famous Birthdays), based in Dubai, has pivoted from pure student content to entrepreneurship (Tap Lab agency with 100+ educational creators; Crunchbase describes him as a serial entrepreneur who scaled School Hack and OnDemand and is now MD of Renowned Agency), though he still posts exam-season and results-day content to the @revishaan acco",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "hannah-kettle",
+      "name": "Hannah Kettle",
+      "niche": "GCSE maths",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "hannahkettlemaths",
+        "followers": 304400,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "hannahkettlemaths",
+        "followers": 12000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "GCSE maths revision: solving equations, 'how I would revise to boost my maths grade' strategy videos, and structured weekly live revision classes. QTS maths teacher, Head of Maths and GCSE examiner with 14+ years in the classroom. 301.2K followers, 3.5M likes per TikTok snippet observed 17 Jul 2026 (a second snippet the same day read 304.4K, same ballpark); 60K+ YouTube subscribers. Monetises via hannahkettlemaths.co.uk membership and Ko-fi.",
+      "signatureFormats": "Scheduled TikTok LIVE revision lessons split by tier; examiner-credibility framing ('as a GCSE examiner, here's what we look for')",
+      "cadence": "Weekly TikTok LIVE revision every Thursday (7 to 7:45pm Foundation, 7:45 to 8:30pm Higher) plus regular clips",
+      "stealNotes": "Her examiner badge does the heavy lifting in every hook. Waleed's equivalent credibility line is 'NHS doctor who got top A-level grades'. Her fixed weekly live schedule converts casual viewers into an appointment audience; that maps to a weekly A-level live slot before exams.",
+      "sourceNote": "TikTok: two Google-indexed snippets of tiktok.com/@hannahkettlemaths observed 17 Jul 2026 read 301.2K followers / 3.5M likes and 304.4K followers / 3.6M likes (snippet cache lag; same ballpark). Reported the higher 304.4K figure; treat as 301K to 305K. Instagram: 12K followers per Google-indexed snippet of instagram.com/hannahkettlemaths observed 17 Jul 2026 (profile existence separately confirmed by direct fetch showing the HannahKettleMaths @hannahkettlemaths header); 12,000 is the rounded snippet figure, not an exact count. YouTube: her own site hannahkettlemaths.co.uk claims 60,000 subscri",
+      "notes": "Everything in the original record checks out. Confirmed 17 Jul 2026: TikTok @hannahkettlemaths exists (QTS maths teacher, Secondary Head of Maths, GCSE examiner, 14+ years); weekly TikTok LIVE revision on Thursdays, 7 to 7:45pm Foundation and 7:45 to 8:30pm Higher, working through half a past paper shared in advance via her site's Half Past Papers page; monetises via hannahkettlemaths.co.uk membership (live lessons, best guess papers, past papers, referral programme) and Ko-fi. New finding worth stealing: her predicted papers have become a searchable brand in their own right. TikTok auto-gener",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "waqar-malik-mr-everything-english",
+      "name": "Waqar Malik (Mr Everything English)",
+      "niche": "GCSE English Language and Literature, exam predictions",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "mreverythingenglish",
+        "followers": 187800,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "mr.everything.english",
+        "followers": 35000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "GCSE English exam predictions ('I predicted the entire paper'), Paper 1/Paper 2 walkthroughs, mark-scheme explainers, live revision streams. Former assistant headteacher, now full-time educator and founder of Everything Education. Follower count: 189,000 per Schools Week (May 2025 predictions-storm coverage) and 187.8K per TikTok profile snippet surfaced 17 Jul 2026; no newer sourced figure found, so treat ~188 to 189K as the last verified number. His prediction videos triggered an AQA warning about 'increasing reliance on certain online revision channels' and exam boards 'considering action' (Schools Week), plus student backlash when May 2025 predictions missed.",
+      "signatureFormats": "Exam predictions with countdown urgency; long TikTok LIVE revision sessions; direct-to-camera teacher authority",
+      "cadence": "Ramps hard around exam season: predictions, live revision sessions, paper walkthroughs",
+      "stealNotes": "The most-press-covered creator in the niche, and the clearest what-not-to-do: predictions build reach fast and burn trust faster. Waleed should take the exam-season urgency calendar (content intensity mapped to exam dates) but anchor on technique and evidence, never predictions; that is also the com",
+      "sourceNote": "TikTok 187.8K followers (3.8M likes): from the Google-indexed TikTok profile snippet for tiktok.com/@mreverythingenglish, surfaced in two independent web searches observed 17 Jul 2026; TikTok blocks direct page fetches so this may be a cached figure. Cross-check: Schools Week (article dated 20 Jun 2025) reported \"189,000-strong TikTok followers\", so ~188 to 189K is consistent across two sources roughly a year apart. Third-party stat sites were unusable today (Social Blade returned 403, Exolyt 404, Countik rendered zeros via JS), so no fresher independent number exists; 187.8K is the last sourced ",
+      "notes": "Both accounts confirmed as belonging to Waqar Malik, former assistant headteacher from Luton, now full-time educator and founder of Everything Education (everythingeducation.co.uk, English/Maths/Science tuition; sister Instagram @everythingeducation_). The AFP wire piece (Arab News, 15 Aug 2025) confirms his real name and the 290K-view prediction video; Schools Week (20 Jun 2025) confirms the 189K follower figure and the AQA warning that social media revision advice 'is misleading'; ITV News (21 Nov 2025) made him the centrepiece of a 'wild west of education' investigation (survey: 26% of pupi",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "tilly-taylor",
+      "name": "Tilly Taylor",
+      "niche": "GCSE/A-level revision advice and past-paper-based predictions (student voice)",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "tillystudytips",
+        "followers": 150000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "tillystudytips",
+        "followers": 37000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "University student posting candid revision advice and clearly-labelled predictions built from past papers and examiners' reports; positions herself against paid predicted papers ('I don't think it's right') and frames her content as help for students who can't afford private school or tuition. 100,000 TikTok followers per AFP (15 Aug 2025). Her exact TikTok handle could not be confirmed from any reliable source, so it is returned as null rather than guessed.",
+      "signatureFormats": "Candid direct-to-camera revision talk; 'examiners' report says' evidence-based predictions with explicit disclaimers",
+      "cadence": null,
+      "stealNotes": "Represents the ethical wing of prediction content: transparent methodology (past papers + examiner reports) and an access/fairness mission. That fairness framing ('help for students who can't afford tutoring') is powerful and something Waleed's free diagnostic already embodies.",
+      "sourceNote": "TikTok 150,000: self-reported in her own Instagram bio (\"150k on TikTok\"), as indexed by Google and observed 17 Jul 2026; treat as approximate. Independent cross-check: AFP reported 100,000 TikTok followers on 15 Aug 2025 (arabnews.com/node/2611892/offbeat), so 150k in mid-2026 is consistent growth. No independent live TikTok count could be obtained (SocialBlade and urlebird returned 403, Exolyt 404, Countik and Livecounts render counts via JavaScript only). Instagram 37,000: Google-indexed meta snippet of instagram.com/tillystudytips (\"37K followers, 1,770 following\"), observed 17 Jul 2026. Y",
+      "notes": "Identity chain fully verified: AFP's \"Tilly Taylor, university student, 100,000 TikTok followers\" (15 Aug 2025) = @tillystudytips. Proof: YouTube channel youtube.com/@tillystudytips is titled \"Tilly Taylor\"; Instagram bio lists business email tillytaylorbusiness@gmail.com and tags @lse.economics (she is an LSE economics student, near-straight 9s at GCSE and straight A*s at A-level per indexed bios); a collab video is titled \"How to Get Straight A*s in A-LEVELS (With Tilly Taylor!)\". The account was RENAMED: old handle @sustainablebusinesswoman resolves to @tillystudytips (TikTok oEmbed for a J",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "sarah-sarah-teaches-gcse-english",
+      "name": "Sarah (Sarah Teaches GCSE English)",
+      "niche": "GCSE English (examiner-led)",
+      "country": "UK",
+      "relevance": 4,
+      "tiktok": {
+        "handle": "sarahteachesgcseenglish",
+        "followers": 77400,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "sarahteachesgcseenglish",
+        "followers": 3769,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "GCSE English Language and Literature exam structure videos (Paper 2 Q2 structure, transactional writing frames), examiner-report insights on AO3/context, creative writing improvement, and behind-the-curtain examiner content (e.g. AQA examiner pay). GCSE English examiner, teacher and dyslexia specialist; 'Grade 4 to Grade 9' positioning; funnels to her tutoring business in bio. 77.4K followers, 3.5M likes per TikTok snippet observed 17 Jul 2026.",
+      "signatureFormats": "Reply-to-comment teaching (large share of her videos answer a named student's question); examiner-insider reveals",
+      "cadence": null,
+      "stealNotes": "Her reply-to-comment format is the cheapest content engine in the niche: every student question becomes a video, which trains the algorithm on exactly the right audience. Note the 3.5M likes on 77K followers: small-but-hot account with very high engagement per follower.",
+      "sourceNote": "TikTok 77.4K followers and 3.5M likes: from Google search snippets of the live TikTok profile page (title \"GCSE English Tutor (@sarahteachesgcseenglish)\"), observed 17 Jul 2026 in two independent queries; direct TikTok fetch returns the JS shell and third-party stat sites (Countik showed zeros, Exolyt 404) had no data, so the snippet is the only sourced figure and could lag by days. Instagram 3,769 followers (645 posts, 308 following): from Google snippets of instagram.com/sarahteachesgcseenglish, observed 17 Jul 2026 in two separate queries; a direct WebFetch confirmed the profile exists (\"En",
+      "notes": "Account is active and current: verified 2026 uploads (Lit predictions ~Mar 2026, reply videos ~Feb 2026 by video-ID timestamps). Business model is the part worth studying: TikTok top-of-funnel to a waiting-list tutoring business plus a paid \"GCSE Masterclass Membership\" (video 7315475758170901793) and hybrid 1-2-1/small-group tuition; she also runs a Facebook page (facebook.com/SarahTeachesGCSEEnglish) posting examiner-training insights, i.e. the parent channel. Relevance 4 not 5 because her audience is GCSE English, not A-level, so she is a model rather than a competitor: her examiner-insider",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "a-student-tips-studyw-tok",
+      "name": "A+ Student Tips (studyw.tok)",
+      "niche": "Faceless study-hacks aggregator on TikTok",
+      "country": null,
+      "relevance": 3,
+      "tiktok": {
+        "handle": "studyw.tok",
+        "followers": 1100000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "studyw.gram",
+        "followers": 208000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Study hacks and \"academic validation\" tips: Leitner system, active recall, spaced repetition, Feynman technique, Pomodoro, focus playlists (a playlist it claims 260K+ students use). 33.6M total likes. Engagement-bait prompts like \"what are your most unhinged study methods?\".",
+      "signatureFormats": "Faceless, text-on-screen listicles over aesthetic study b-roll and lo-fi audio; question hooks that farm comments; recurring named techniques so followers collect them. Zero personality risk, entirely format-driven.",
+      "cadence": null,
+      "stealNotes": "Proof there is a 1M+ audience for pure technique content with no face at all. Waleed has a stronger version of every asset here (a real doctor, a real diagnostic, a real blurting template), so the play is to out-credential the faceless hacks: same punchy text-on-screen format, but with \"an NHS docto",
+      "sourceNote": "TikTok 1.1M followers and 33.6M likes: from the TikTok profile page's own metadata as surfaced in Google search results, observed 17 Jul 2026, and independently corroborated by the creator's Instagram bio which says \"over 1.1M followers on TikTok under the handle studyw.tok\". Instagram 208K followers (119 following, 880 posts): from Instagram page metadata via Google search, observed 17 Jul 2026; a direct fetch of instagram.com/studyw.gram confirmed the account name and handle. No socialblade/hypeauditor entry found for this account. Correction: the input's claimed cross-check against Favikon'",
+      "notes": "Account is real and still active: newest posts found date to 8 and 28 Jan 2026 (dates decoded from TikTok video IDs; posting cadence beyond that unverifiable from search). It also runs a matching Instagram (@studyw.gram, 208K) the original dossier missed, reposting the same faceless tips, which is direct evidence the exact TikTok format transfers to Reels. Bio claims a focus playlist used by 280k+ students (Instagram bio; an older TikTok bio cache says 260k+). Monetisation is app-promo ads (CapCut ad Nov 2024, another AD Jan 2026), not tutoring, so it is not a competitor for Waleed's parents o",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "domi-domi-studygram",
+      "name": "Domi (domi | studygram)",
+      "niche": "Biology-focused studygram: study tips, techniques and motivation with an aesthetic student-life wrapper",
+      "country": "UK (listed in HypeAuditor's UK education ranking)",
+      "relevance": 3,
+      "tiktok": {
+        "handle": "domiistudy",
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "domiistudy",
+        "followers": 117000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Biology notes and diagrams, study technique tips, desk/stationery aesthetic, motivation posts documenting student life",
+      "signatureFormats": "Aesthetic note carousels, study-space reels, tip lists",
+      "cadence": null,
+      "stealNotes": "The only exam-study account that cracks HypeAuditor's UK education top ranking, and it is subject-specific (biology). Single-subject depth clearly beats generic study content on Instagram; Waleed's subject-specific reels (chemistry/biology/maths) should follow that pattern.",
+      "sourceNote": "Instagram 117K: from the Google-indexed profile snippet for instagram.com/domiistudy (\"117K followers, 92 following, 276 posts\"), observed 17 Jul 2026; HypeAuditor's UK education Instagram ranking shows the same account at rank 42 with 118.7K followers and ~1.1K average engagement, also observed 17 Jul 2026 (the two figures are consistent, HypeAuditor's being slightly fresher/rounded differently). TikTok followers: NULL, could not be sourced. The TikTok profile page and the video page are login-walled to WebFetch, Social Blade returned 403, Exolyt 404, and Countik/Livecounts only rendered Java",
+      "notes": "Verified as a real multi-platform studygram creator: Instagram @domiistudy (\"domi | studygram\", bio: studying biology, study tips/techniques/motivation, aesthetic student life), TikTok @domiistudy (confirmed live via oEmbed), YouTube @domiistudy (shorts, listed on her Linktree; subscriber count not sourceable), Threads @domiistudy, photography side account @wanderingdomi, and a 4.4K-member Discord study community (DaisyDormitory). No individual post metrics could be sourced from outside Instagram/TikTok login walls, so recentOutliers is empty rather than guessed; the only externally indexed Ti",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "elizabeth-filips",
+      "name": "Elizabeth Filips",
+      "niche": "Learning science and anti-procrastination for students (long-form-first; short-form presence is small)",
+      "country": "United Kingdom",
+      "relevance": 3,
+      "tiktok": {
+        "handle": "elisabeth.filips",
+        "followers": 1040,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "elizabeth.filips",
+        "followers": 56000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "London medical student (King's College) turned doctor-creator: how to learn difficult things, memory, note-taking, motivation without discipline, procrastination science, delivered over her own sketchbook-style visuals and art.",
+      "signatureFormats": "Contrarian self-worth hooks (\"You're Not Stupid\", \"Forget Discipline\") + learning-science payoff; hand-drawn aesthetic that makes cognitive science feel personal; confessional framing from inside medical school.",
+      "cadence": null,
+      "stealNotes": "Include for hook-writing, not platform strategy: her TikTok is negligible and Instagram modest, so she is not a short-form growth model. But her \"you're not stupid, your method is\" framing is exactly the A-Level Accelerators thesis and converts anxious parents and students alike. Her titles are a sw",
+      "sourceNote": "YouTube: 980,431 subscribers, 46,905,710 total views, 135 videos, from socialcounts.org live counter observed 17 Jul 2026 (corroborates famousbirthdays.com's \"more than 950,000\"); trend is slightly negative (about -1,050 subs/month) because the channel is dormant (last upload 7 Sep 2024, confirmed via the channel's own YouTube RSS feed fetched 17 Jul 2026). Instagram: 56K followers (71 following, 54 posts) from Google-indexed metadata of instagram.com/elizabeth.filips observed 17 Jul 2026; the handle is confirmed hers because elizabethfilips.com links it; direct fetches of Instagram, imginn an",
+      "notes": "Corrections to the brief: (1) \"Forget Discipline\" is NOT an outlier - the live RSS feed shows it at 157,198 views (20 Sep 2023), below her channel average; drop it from the swipe file's proof list and replace it with \"You're Not Forgetful\" (3.98M). (2) YouTube count is now precisely dated: 980,431 (17 Jul 2026), so use \"roughly 980K\" not \"950K+ or 564 to 650K\". (3) She is now a qualified doctor per her Instagram bio (\"doctor ~ YouTuber ~ podcaster ~ painter\"), no longer a medical student. Strategic read for Waleed: she is confirmation that the \"you're not stupid/forgetful/lazy, your method is\" ab",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "mike-and-matty-formerly-cajun-koi-academ",
+      "name": "Mike and Matty (formerly Cajun Koi Academy)",
+      "niche": "Science-backed study techniques from two doctor brothers (study era 2019 to 2024; pivoted to creator-business content in 2025)",
+      "country": "United States",
+      "relevance": 3,
+      "tiktok": {
+        "handle": "mikeandmatty",
+        "followers": 27000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "mikeandmatty",
+        "followers": 17400,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Two brothers, both medical doctors, who built ~1.25M subscribers on animated, science-backed study technique videos: how to study fast, memory, habits, plus their trademark \"brain types\" (Kuma, Kitsune, Tora) that matched students to an ideal study style. In 2025 they publicly pivoted the channel to creator-economy/AI content because they were no longer students.",
+      "signatureFormats": "Anime-styled animation and hand-drawn visuals over learning-science explainers; personality-quiz framing (\"which brain type are you?\") that made technique content shareable and self-identifying; weekly videos plus daily short-form cutdowns (per media kit).",
+      "cadence": "Study era: weekly YouTube videos + daily short-form (per Passionfroot media kit)",
+      "stealNotes": "Two lessons: (1) the quiz/archetype mechanic is the single most stealable idea for Waleed, because the revision diagnostic already produces seven archetypes; short videos per archetype (\"are you the Ghost Reviser?\") mirror what made these two blow up, with the diagnostic as the CTA. (2) Their 2025 p",
+      "sourceNote": "All numbers read live from the public profile pages in a browser on 17 July 2026. TikTok: the handle in the previous record, @cajunkoiacademy, NO LONGER EXISTS (TikTok returns \"Couldn't find this account\"); the account was renamed @mikeandmatty and showed 27K followers, 390K likes, 36 following, bio \"1.3M+ on YouTube @mikeandmatty, Building founder led brands\" (tiktok.com/@mikeandmatty, 17 Jul 2026). Their undated Passionfroot media kit still lists TikTok 30K under the old handle, consistent with modest decay since the rebrand. Instagram: @mikeandmatty showed 17.4k followers, 594 posts, 92 fol",
+      "notes": "Everything in the prior record's steal-notes still holds, with three updates from live verification (17 Jul 2026). (1) The rebrand is total: Cajun Koi handles are dead on TikTok and Instagram, the channel/site/bios are all creator-business now (\"Building founder led brands\", \"Become a top 1% educator\"), so they have fully vacated the science-backed study-technique animation lane; their study-era brain-types quiz mechanic (mirrors Waleed's seven diagnostic archetypes) remains the single most stealable idea. (2) Their short-form is small and off-topic for Waleed's niche: 27K TikTok and 17.4k Ins",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "mr-salles-dominic-salles",
+      "name": "Mr Salles (Dominic Salles)",
+      "niche": "GCSE English Language and Literature exam technique (YouTube-first; TikTok secondary)",
+      "country": "UK",
+      "relevance": 3,
+      "tiktok": {
+        "handle": "mrsallesteachesenglish",
+        "followers": 26300,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": null,
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Top-grade English technique on TikTok: 'Macbeth's Hamartia is NOT Ambition!', 'Why You NEED a Thesis Statement', '10 FATAL Mistakes in LIT Essays', unseen poetry confidence. YouTube channel described in search results as hosting 900+ videos and 'the second largest English teaching channel in the country' with 151K+ subscribers and a 9,000-student Substack; sells Grade 9 essay packs and masterclasses. His TikTok follower count could not be sourced anywhere reliable, so it is returned as null rather than guessed.",
+      "signatureFormats": "Contrarian literary hot takes as hooks (arguing against the standard classroom reading); grade-9-specific promises",
+      "cadence": null,
+      "stealNotes": "His titles are a masterclass in hooks: every one contradicts received classroom wisdom ('X is NOT Y', 'FATAL mistakes', 'If only you knew this before'). Waleed's revision-method equivalents write themselves: 'Highlighting is NOT revision', 'Mocks do NOT predict your grade'.",
+      "sourceNote": "TikTok 26.3K followers (plus 261.1K likes, 22 following) read directly off the live tiktok.com profile header for @mrsallesteachesenglish in a browser session on 17 Jul 2026; account identity confirmed via TikTok's own oEmbed API (author_name MrSallesTeachesEnglish, author_url matching) and by the bio ('Check me out on YouTube!') and captions linking mrsallesteachesenglish.com. Instagram: no account exists as far as any source shows; his own website (homepage and contact page, checked 17 Jul 2026) links only YouTube, Substack, TikTok and LinkedIn, and three targeted searches found no Instagram",
+      "notes": "Key finding the radar seed missed: his TikTok is DORMANT. Newest video is from ~mid-May 2025 (14 months ago as of 17 Jul 2026) and the one before from ~May 2024, so he posts roughly once a year on TikTok, always into exam season. He is YouTube-first (208K subs, 1.4K videos, observed live 17 Jul 2026) and Substack-second (his site claims 10,000+ subscribers), with TikTok as an abandoned satellite; do not study him for short-form cadence. What IS worth studying: (1) his hook system travels perfectly to A-level revision content ('Do AQA Examiners Hate Me?', 'If Only You Knew This Before...', 'X i",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "zach-highley",
+      "name": "Zach Highley",
+      "niche": "Evidence-based study systems (Anki, active recall) from an ex-physician",
+      "country": "United States",
+      "relevance": 3,
+      "tiktok": {
+        "handle": null,
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "zachhighley",
+        "followers": 15000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "MD who left medicine for content: exactly how he studied 70+ hour weeks without burning out, complete Anki flashcard systems, \"How I take 0 notes in medical school\", 9-day exam plans, and self-experiments with detailed results.",
+      "signatureFormats": "System walkthroughs rather than tips: screen-recorded setups (Anki settings, Notion workflows) plus \"here's my exact exam plan\" numbered protocols. The credibility engine is radical specificity: real settings, real schedules, real numbers.",
+      "cadence": null,
+      "stealNotes": "Smallest channel on this list but the best model for turning a method into content: Waleed's tracker session types (Blurt and Fix 90min, Active Recall 45, Spaced Review 30, Timed Paper 60) can be published as exact protocols the way Highley publishes Anki settings. \"Here is the exact 9-day A-level m",
+      "sourceNote": "TikTok: NO account exists. His own site (zhighley.com homepage and /about, both fetched 17 July 2026) links only YouTube, Instagram, X and his newsletter; no TikTok anywhere. The TikTok handles that surface in search (@zackhighley, 109 followers, a Morehead State alum; @zackarychighley) are different people named Zack, so both TikTok fields are null. Instagram: @zachhighley confirmed as his (linked from zhighley.com/about). The 15,000 is the rounded \"15K followers\" from Instagram's own profile metadata surfaced twice via Google search snippets, observed 17 July 2026 (profile also shows 143 fol",
+      "notes": "Identity fully verified: MD (Sidney Kimmel Medical College), left Internal Medicine residency at Tufts in 2024 after one year, now full-time creator branding himself \"The Learning Guy\". Key correction to the brief for a SHORT-FORM research task: Highley is not a short-form creator at all. He has zero TikTok presence and a near-dormant Instagram (27 posts total, 15K followers) against ~510K to 521K YouTube subscribers. He is also past his growth peak: his own 2025 year-in-review reports monthly views halving from ~500K to ~200K after he moved to NYC, took a consulting job and slowed to one vide",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "katie-fang",
+      "name": "Katie Fang",
+      "niche": "School-life GRWM / study-adjacent lifestyle (the format UK sixth formers actually watch)",
+      "country": null,
+      "relevance": 2,
+      "tiktok": {
+        "handle": "katiefanggg",
+        "followers": 6660000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "katiefang",
+        "followers": 1013752,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Get Ready With Me videos and vlog-style accounts of daily student life (school, NYU, exams), narrating what's going through her head while she gets ready. Study sessions at the NYU library before midterms. Not an advice channel; an ambient \"study life\" channel.",
+      "signatureFormats": "GRWM + stream-of-consciousness voiceover: the routine is the visual, the talking is the content. Study content arrives as \"GRWM for finals\" or library vlogs rather than tips. Emotional honesty on camera is the engine.",
+      "cadence": null,
+      "stealNotes": "Not a competitor, but the packaging lesson: students watch people live the studying, not just explain it. For A-Level Accelerators, the adaptation is \"revise with me\" / \"GRWM for a mock exam\" formats fronted by a student or by Waleed's own NHS-shift-plus-tutoring day. TikTok count cross-checked: Tik",
+      "sourceNote": "TikTok 6.66M from Socialpruf (socialpruf.com/tiktok/katiefanggg), stated as of July 2026 with a tracking window ending 17 Jul 2026; cross-checks: a June 2026 third-party snapshot showed 6.62M, and her Forbes profile (Top Creators 2026, data as of 23 June 2026) says \"over 7 million\" TikTok followers, so the true figure sits between 6.6M and 7M+. Instagram 1,013,752 from HypeAuditor for @katiefang, observed 27 April 2026 (grew from 1,004,480 on 30 Mar 2026). TikTok.com and Instagram.com pages themselves blocked direct fetching, so all counts are third-party stat sites plus Forbes. Handle correct",
+      "notes": "Status has risen since the original research: Forbes Top Creators 2026 list (reported as #43) and Forbes 30 Under 30 Social Media 2026, with $5.4M estimated 2026 earnings (Forbes profile, June 2026). She is a 20-year-old Canadian (Vancouver, Taiwanese heritage) now studying at NYU and living in Manhattan; brand deals include Dior, Cetaphil (face of the Gentle Exfoliating line), Kosas, Glow Recipe, Mugler and a Wildflower phone case. YouTube channel exists at youtube.com/@katiefanggg (no sourced subscriber count found; did not fetch). Relevance rated 2 for A-Level Accelerators: she is not an ed",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "miss-chang-maths-with-miss-chang",
+      "name": "Miss Chang (Maths with Miss Chang)",
+      "niche": "GCSE maths and core A-level maths",
+      "country": "UK",
+      "relevance": 2,
+      "tiktok": {
+        "handle": "mathswithmisschang",
+        "followers": 271300,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "mathswithmisschang",
+        "followers": 56000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Maths tricks and step-by-step solutions: Japanese multiplication, parallel vs perpendicular lines, trigonometry, exam-style questions. London maths teacher who started the account in the March 2020 lockdown. 271.3K followers, 4.3M likes per snippet observed 17 Jul 2026. Featured in an official TikTok UK Newsroom Creator Spotlight, and recommended in Tutography's Jan 2026 'Top TikTok Accounts for GCSE and A-Level Revision' list.",
+      "signatureFormats": "Visually satisfying maths-trick demonstrations that work for non-students too; clean board work, one trick per video",
+      "cadence": null,
+      "stealNotes": "Her single 25M-view video shows the ceiling: one debate-provoking, visually surprising method video can outperform years of output. Waleed's equivalents are contrarian study-method takes ('rereading notes is a waste of 100 hours') that invite argument in comments.",
+      "sourceNote": "TikTok 271,300 followers and 4.3M likes: Google-indexed snippet of tiktok.com/@mathswithmisschang, observed 17 Jul 2026 (a second indexed snippet the same day showed 272.7K, so treat as roughly 271K to 273K). Instagram 56,000 followers, 191 following, 215 posts: Google-indexed snippet of instagram.com/mathswithmisschang, observed 17 Jul 2026. No third-party stat site was reachable to double-check (Socialblade and Urlebird returned 403, Exolyt 404, Tokcounter returned zeros), so both numbers rest on same-day indexed profile snippets rather than a live profile read. Historical anchor: TikTok's o",
+      "notes": "Verified as real and once-major, but effectively dormant: viral era was 2020 to 2021, latest indexed TikToks are April 2024, and followers have decayed from 307K+ (Feb 2021, TikTok UK Newsroom) to ~271.3K (Jul 2026). Two corrections to the incoming record: (1) the 25M+ views figure comes from Yahoo Lifestyle (9 Nov 2020), not the TikTok Newsroom spotlight, which contains no view counts (it was published 8 Feb 2021 and its contribution is the 307K follower figure and the March 2020 lockdown origin story); (2) her own Instagram bio offers online tuition for Primary, KS3 and KS4 only, so the core A-",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "sophie-my-honest-studyblr",
+      "name": "Sophie (my honest studyblr)",
+      "niche": "Studygram: handwritten revision notes, honest study advice, studygram how-tos; started as an A-level student account",
+      "country": "UK",
+      "relevance": 2,
+      "tiktok": {
+        "handle": "myhoneststudyblr",
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "myhoneststudyblr",
+        "followers": 167000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Neat handwritten notes photos, revision-technique carousels, 'how to start a studygram' guides, honest takes on study culture. Started August 2020 as an A-level student; now studies International Relations and Social Anthropology at St Andrews, so A-level output has slowed (profile showed only 22 visible posts when observed).",
+      "signatureFormats": "Note-photo carousels; text-heavy advice carousels; Q&A prompts in captions to drive comments",
+      "cadence": null,
+      "stealNotes": "Shows carousel-first (not reel-first) growth is possible in this niche. Follower count appears to have declined from ~193K to 167K as she left the A-level lane, evidence that the A-level audience churns every two years and rewards whoever stays.",
+      "sourceNote": "Instagram 167K: from the Google-indexed instagram.com/myhoneststudyblr profile snippet (\"167K followers, 178 following, 22 posts\"), observed 17 Jul 2026 and consistent across three separate search queries. TikTok: the handle @myhoneststudyblr exists (listed on her Linktree, fetched 17 Jul 2026, and a live video URL at tiktok.com/@myhoneststudyblr/video/7093463381121813766), but NO follower count could be sourced: TikTok's own page returned no profile data to an unauthenticated fetch, and Social Blade, HypeAuditor, Exolyt, Countik, Urlebird and Tikleap were all 403/404/placeholder, so null rath",
+      "notes": "Account confirmed real and current: display name \"sophie studies\", 22 years old, UK, now studying International Relations and Social Anthropology at St Andrews. Only 22 visible posts (most archived or deleted), which matches the earlier observation that her A-level-era output has slowed. Monetises via affiliate codes: her Linktree (fetched 17 Jul 2026) lists Amazon UK/US storefronts and discount codes for Tombow, Stationery Pal, Perlego, xTiles and roughly a dozen other study brands, plus YouTube, Pinterest, Threads and Tumblr all under the same handle. No 2025 or 2026 post with a sourced metr",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "emily-emily-studies",
+      "name": "Emily (Emily Studies)",
+      "niche": "Studygram veteran: started for GCSE revision motivation in 2016, grew through A-levels into one of the best-known UK study accounts",
+      "country": "UK",
+      "relevance": 2,
+      "tiktok": {
+        "handle": null,
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "emily_studies",
+        "followers": 161000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Study tips, pretty revision notes, printables, university application advice; runs the companion blog emilystudies.co.uk including a widely-referenced 'Guide to starting a studygram'. Bio has evolved with her (medical studies, then teacher training), so exam-season content is now less central.",
+      "signatureFormats": "Notes photography, tip carousels, free printable lead magnets driving to her blog",
+      "cadence": null,
+      "stealNotes": "Her printables-to-blog funnel is exactly Waleed's lead-magnet model (diagnostic, tracker, blurting template) executed on Instagram. Follower figure is single-source; verify on the profile before quoting it anywhere.",
+      "sourceNote": "Instagram 161K: from Google-indexed metadata of instagram.com/emily_studies itself, observed 17 Jul 2026 consistently across three separate search queries; still effectively SINGLE-ORIGIN because no independent tracker covers her (Social Blade returned 403/untracked for emily_studies, HypeAuditor has no report; socialveins.com tracks the different @emilystudying account at 36K). TikTok: no account exists under her handle and none is linked from her blog or profiles, so both TikTok fields are null, not unknown-but-existing.",
+      "notes": "Account confirmed real and belongs to the right person (direct fetch returned profile page \"Emily \u2728 (@emily_studies)\"; her blog emilystudies.co.uk links the handle). Her Instagram bio as indexed in Jul 2026 now reads \"22, England, starting primary PGCE in September\": she has pivoted from medical studies to primary teacher training, so GCSE/A-level exam content is receding, matching the brief's expectation. Her blog is essentially dormant (last substantive post 13 Oct 2020; a stray \"test\" post 26 Jun 2025 suggests minimal maintenance), though the studygram guide remains indexed. No recent posts",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "eve-bennett-revision-with-eve",
+      "name": "Eve Bennett (Revision With Eve)",
+      "niche": "Legacy GCSE/A-level revision creator: built Revision With Eve (120K+ YouTube subs) alongside a lifestyle main channel, then pivoted to journalism",
+      "country": "UK",
+      "relevance": 2,
+      "tiktok": {
+        "handle": "evebennettxxx",
+        "followers": 24000,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": "evebennettxx",
+        "followers": 92000,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "Now mostly life and career content (Oxford grad, Sky News planning producer). Historically: subject-by-subject GCSE/A-level revision videos, exam-season study-with-me content, collaborations with BBC, Childline and Quizlet.",
+      "signatureFormats": "Talking-head revision explainers (YouTube era); now lifestyle reels",
+      "cadence": null,
+      "stealNotes": "Included as a market-gap signal, not a model to copy: the dedicated 'revision channel by a top student' slot she vacated has no dominant Instagram successor. Her old Revision With Eve format (one exam board, one paper, one video) is directly reusable as Reels.",
+      "sourceNote": "Instagram 92K: from the Google-indexed instagram.com/evebennettxx profile snippet (observed 17 Jul 2026), which also showed 919 posts and bio \"26 | London | News Editor @skynews\". Cross-checks: Socialveins showed 94.8K (page fetched 17 Jul 2026, no update date stated) and newsdip.co.uk's bio says 95.8K (undated but written after her Feb 2026 Sky News promotion). True figure is 92K to 96K; 92K is the most direct source. TikTok 24K: from IDCrawl's aggregator profile for her (fetched 17 Jul 2026, underlying capture date unknown); newsdip.co.uk says 26K. Direct TikTok fetch was blocked and one sea",
+      "notes": "Confirmed fully pivoted out of the revision niche: News Editor at Sky News since February 2026 (promoted from planning producer; NCTJ Student of the Year 2023, 2026 John Schofield Trust Fellow, per elevatenew.co.uk and her X bio @_evebennett). Revision With Eve (YouTube, ~230K subs) is dormant; her TikTok appears inactive or private; her Instagram is now life/career/marathon content for an audience that followed her Oxford-to-Sky-News arc. Relevance 2: she is not a competitor and her current channels are not a model, but the brief's core point stands and strengthened with better data, the 'de",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    },
+    {
+      "id": "andrew-bruff-mr-bruff",
+      "name": "Andrew Bruff (Mr Bruff)",
+      "niche": "GCSE and A-level English (YouTube-first; small on TikTok)",
+      "country": "UK",
+      "relevance": 2,
+      "tiktok": {
+        "handle": "mrbruff",
+        "followers": 28100,
+        "asOf": "2026-07-17"
+      },
+      "instagram": {
+        "handle": null,
+        "followers": null,
+        "asOf": "2026-07-17"
+      },
+      "whatTheyPost": "AQA GCSE English Language and Literature: set-text analysis (Macbeth, Jekyll and Hyde, A Christmas Carol), question-by-question exam guides. 453,000 YouTube subscribers but only 28.1K TikTok followers (both per search snippets observed 17 Jul 2026). Sells eBooks, revision guides and predictions-free practice papers via mrbruff.com. Recommended in both the MidKent College and Tutography 2025/2026 revision-account roundups.",
+      "signatureFormats": "Long-form structured YouTube lessons; TikTok used only as a clip channel",
+      "cadence": null,
+      "stealNotes": "The key strategic insight in this list: the legacy YouTube giants (Mr Bruff 453K YT / 28K TikTok; Mr Salles similar pattern) never converted to TikTok, and the TikTok winners (FreeGCSEMathsTeacher, Matt Green, Olivia) are different, newer people. Short-form is an open lane where incumbency hasn't tr",
+      "sourceNote": "TikTok 28,100: from two independent Google search snippets of tiktok.com/@mrbruff observed 17 Jul 2026 (\"Mr Bruff (@mrbruff), 28.1K followers, English teacher\"); the handle is confirmed as his because mrbruff.com (fetched 17 Jul 2026) links directly to it. Direct TikTok fetch and third-party trackers (Social Blade 403, Exolyt 404, Urlebird 403) were all blocked, so no fresher third-party number exists. Instagram: null because mrbruff.com lists no Instagram; an account @_mr_bruff exists but a search snippet (17 Jul 2026) shows 0 followers / 0 following / 1 post and ownership is unconfirmed, so ",
+      "notes": "Verified: the TikTok account exists and is his (linked from mrbruff.com). The input record's numbers held up: 28.1K TikTok (search snippets, 17 Jul 2026) vs ~456K YouTube (youtubers.me, ~Apr 2026; vidIQ 451K on 22 Feb 2026), confirming the strategic insight that his YouTube incumbency never transferred to short-form; TikTok is a clip channel for him. He has effectively NO Instagram (a dormant @_mr_bruff with 0 followers / 1 post exists but is unlinked and unconfirmed as his). Relevance to Waleed is 2: wrong subject (GCSE English, not A-level sciences), wrong platform mix (YouTube-first, weak s",
+      "lastSwept": null,
+      "recentPosts": [],
+      "addedBy": "research-2026-07-17"
+    }
+  ]
+}

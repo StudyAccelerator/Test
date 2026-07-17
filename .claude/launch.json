@@ -4,15 +4,28 @@
     {
       "name": "next-dev",
       "runtimeExecutable": "npm",
-      "runtimeArgs": ["run", "dev"],
+      "runtimeArgs": [
+        "run",
+        "dev"
+      ],
       "port": 3000,
       "autoPort": true
     },
     {
       "name": "hq-dashboard",
       "runtimeExecutable": "node",
-      "runtimeArgs": ["dashboard/server.js"],
+      "runtimeArgs": [
+        "dashboard/server.js"
+      ],
       "port": 4400
+    },
+    {
+      "name": "content-hq",
+      "runtimeExecutable": "node",
+      "runtimeArgs": [
+        "content-hq/server.js"
+      ],
+      "port": 4500
     }
   ]
 }

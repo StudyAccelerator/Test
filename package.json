@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "hq": "node dashboard/server.js"
+    "hq": "node dashboard/server.js",
+    "content-hq": "node content-hq/server.js"
   },
   "dependencies": {
     "@vercel/analytics": "^2.0.1",

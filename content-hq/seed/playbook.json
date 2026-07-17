@@ -1,0 +1,91 @@
+{
+  "updatedAt": "2026-07-17T12:00:00Z",
+  "rules": [
+    {
+      "title": "One promise per video is the base unit",
+      "detail": "Every winner in the roster delivers a single payoff per clip: one exam question (FreeGCSEMathsTeacher), one tip (Gohar Khan), one prediction (Mr Everything English), one method (Study With Kate). Script each video as one claim, one payoff, 15 to 90 seconds. Quick exam-technique clips at 15 to 35 seconds, method explainers at 45 to 90 seconds; earn the 2 to 3 minute deep-dives later once hooks are proven.",
+      "evidence": "FreeGCSEMathsTeacher at roughly 2.8M followers on single-question walkthroughs and Gohar Khan at 3.8M TikTok on single-tip monologues (both from profile snippets observed 17 Jul 2026). Completion is the strongest TikTok ranking signal and education already completes best at about 67.2 percent vs a 58.3 percent average (TTS Vibes, 2026); sub-15-second videos hit 72 percent completion (SocialPilot, single source). Socialinsider (6M videos, Jan to Jun 2026): 15 to 30 seconds tops engagement rate, 2 to 3 minutes tops median views."
+    },
+    {
+      "title": "Win the first 3 seconds on three layers at once",
+      "detail": "Open on the claim, never on who he is. Layer one: a visual pattern interrupt in frame one (whiteboard already mid-working, a prop, a mark scheme on screen). Layer two: a bold text overlay stating the payoff. Layer three: the first spoken words land within half a second and contain the topic keyword. The doctor credential goes in the overlay and the display name, not the opening sentence. No greetings, no context-setting, no logo.",
+      "evidence": "TikTok for Business data: 63 percent of highest click-through videos hook within 3 seconds (via Hansen Insights). Captions.ai and OpusClip hook research: first spoken word within about 0.5 seconds, roughly 10 to 14 words fit in 3 seconds. Dr Karan Rajan's stated philosophy: genuinely useful content leads with the surprising fact itself."
+    },
+    {
+      "title": "A named face with a worn credential beats a brand account",
+      "detail": "Post as Dr Waleed, one face, one handle, credential visible rather than spoken: NHS-adjacent visual cues where appropriate, Dr in the display name, qualifications in the bio. Do not build an A-Level Accelerators corporate account as the primary channel. Keep the account 100 percent A-level and study content; no NHS-life side content on the same handle, because both platforms enforce niche consistency.",
+      "evidence": "MyEdSpace's own PR claims 4M+ combined followers across teacher-named accounts (NeilDoesMaths at 216.7K TikTok) while the corporate @myedspace account showed about 6.4K (observed 17 Jul 2026). Dr Karan Rajan (5.4M TikTok, snippets 17 Jul 2026) wears scrubs on screen and carries Dr in the handle. Hannah Kettle's examiner badge fronts every hook. Multi-topic reach penalty is a single-source claim but consistent with Instagram's topic-based Your Algorithm feature (TechCrunch, 10 Dec 2025)."
+    },
+    {
+      "title": "The UK exam calendar is the distribution engine; timing beats polish",
+      "detail": "The highest-reach UK education moments of 2025 to 2026 were all calendar-locked: same-day paper reactions in May and June, night-before content, the June 2026 Edexcel maths petition wave, and results day. Results day Thursday 13 August 2026 is the single biggest moment of the launch window: post the service content (Clearing, what time results open, what a bad result actually means) BEFORE the day, because search picks up in the 48 hours around it. Same-day 'what that question actually wanted' videos within 2 to 3 hours of each big A-level paper are a repeatable May/June play.",
+      "evidence": "The Tab (14 Aug 2025): university searches spiked 900 to 1,150 percent on results day 2025. Edexcel A-level Maths Paper 1 2026 petition passed a reported 20,000 signatures with dedicated TikTok discover pages (observed 17 Jul 2026, check live count before quoting). Small accounts win this window: @isabelthearcher (~30K followers) with pure results-day service content; #alevelresults tag showed 76.7M cumulative views."
+    },
+    {
+      "title": "Named, copyable systems spread; generic advice does not",
+      "detail": "The technique needs a name and a visible artefact. Blurting became StudyTok canon because it is named, demonstrable and copyable; Study With Kate's revision roulette spreadsheet built her whole account. Waleed already owns named assets: Blurt and Fix, the blurting template PDF, the seven diagnostic archetypes, the revision tracker's session types. Put the artefact on screen and let saves do the ranking work.",
+      "evidence": "Study With Kate's roulette anniversary post: 97.3K likes with 53.1K saves (roughly 55 percent save-to-like ratio) read off the live video page 17 Jul 2026, plus fan-made rebuild tutorials and a paid Tes teacher template crediting her. Blurting coined by Jade Bowler; #Blurting at 39.9M TikTok views (via press, order-of-magnitude only); Birmingham City University publishes an explainer because demand is that mainstream."
+    },
+    {
+      "title": "Contrarian myth-busts can 20x an account's size, so a new account is not handicapped",
+      "detail": "Follower count is not a TikTok ranking factor; each video is evaluated independently, so the contrarian exam-technique hook is the fastest reach lever for a day-one account. The proven shapes: 'X is NOT Y', 'the technique you trust is failing you', and absolution framing ('you're not stupid, your method is'). Waleed's versions write themselves from the diagnostic: rereading is not revision, highlighting is not revision, a mock is a diagnostic test not a prognosis.",
+      "evidence": "Mr Salles pulled 596.8K views on a 26.3K-follower account with 'Do AQA Examiners Hate Me?' (read off the live profile 17 Jul 2026). Elizabeth Filips' 'You're Not Forgetful' sits at 3.98M views (channel RSS, 17 Jul 2026). Dr Justin Sung's entire engine is the myth-bust plus replacement structure. Hootsuite 2026: interactions weigh heaviest, follower count absent from ranking factors."
+    },
+    {
+      "title": "Comments are the engine: farm questions, answer them as videos, gate assets on keywords",
+      "detail": "The cheapest content engine in the niche is reply-to-comment teaching: every student question becomes a video, which trains the algorithm on exactly the right audience. The conversion mechanic on top is the comment keyword ('comment DIAGNOSTIC and I'll send it'), which the closest business-model comps use to route free clips into email capture and paid products. Argument-provoking content (difficulty dares, contrarian takes) multiplies comment volume, which feeds distribution.",
+      "evidence": "Sarah Teaches GCSE English built a 77.4K account with 3.5M likes largely on reply-to-comment videos (snippets 17 Jul 2026). Biology with Olivia ('comment FREE SAMPLE') and Miss Estruch ('comment FREE SAMPLE', 'comment TBSC') both run keyword funnels into webinars and paid notes. Mr Everything English's final 2025 predictions post drew 1,428 comments; FreeGCSEMathsTeacher's hardest-question post drew 1,855 (snippets 17 Jul 2026)."
+    },
+    {
+      "title": "Volume decides TikTok: near-daily posting, minimum 2 to 5 a week",
+      "detail": "Each upload is an independent lottery ticket tested on a small interest-matched pool in its first hours, so more tickets means more chances, and the gains hold for brand-new accounts. Target one post a day on TikTok (Olivia's stated cadence at 340K is daily), floor of 2 to 5 a week, posted into UK student windows: after school 4 to 6pm and evenings 8 to 10pm. Instagram: 3 to 5 Reels a week, spaced out.",
+      "evidence": "Buffer study of 11.4M TikTok posts (8 Oct 2025): 2 to 5 posts a week lifts views per post about 17 percent, 6 to 10 a week about 29 percent, 11+ about 34 percent, across all account sizes. Cold-start pool mechanics (100 to 500 users, first ~3 hours) consistent across 2026 guides, none official. Hopper HQ and Sprout: UK engagement peaks 7 to 10pm."
+    },
+    {
+      "title": "Treat TikTok and Instagram as search engines and align all three text layers",
+      "detail": "Say the target phrase out loud in the first 3 seconds, show it as on-screen text, and front-load it in the caption; when audio, overlay and caption agree, relevance confidence rises and the video ranks for searches like 'how to revise for a level chemistry'. Check demand in TikTok's Creator Search Insights before scripting. Since 10 July 2025 Google indexes public professional Instagram accounts, so Reels captions written as real search phrases also feed the same parent searches the blog targets. Students search creators by name plus asset, so a named recurring free asset becomes its own search brand.",
+      "evidence": "Sprout and Hootsuite 2026 TikTok SEO guidance; Creator Search Insights (TikTok newsroom). PPC Land and SEOZoom on the 10 Jul 2025 Google indexing change. TikTok auto-generates discover pages for 'Hannah Kettle Maths Predictions 2025' and 'Mr Everything English Predictions 2026 Macbeth', proof that name-plus-asset search behaviour is real (observed 17 Jul 2026)."
+    },
+    {
+      "title": "Predictions are the niche's biggest hook and its documented trust trap: ride the demand, never predict",
+      "detail": "Exam predictions are the highest-urgency, most-shared format in UK exam short form, and they earned a national press backlash in 2025 with exam boards warning against them. The compliant, differentiated play is to answer the identical exam-week searches with spec-and-technique content: what the specification says CAN come up, what the examiners' report says students lose marks on, and the technique that scores whatever appears. This also matches the project's no-invented-claims content rules.",
+      "evidence": "Mr Everything English's May 2025 prediction video: 290,000+ YouTube views (AFP, 15 Aug 2025), AQA warning and 'exam boards consider action' (Schools Week, 20 Jun 2025), national re-coverage with his own 30 to 100 percent accuracy admission (ITV, Nov 2025). Tes (17 May 2025) documented prediction videos at 125.7K likes and fake 'leak' accounts with astronomical exposure; The Observer (25 May 2025) ran the misleading-predictions story."
+    },
+    {
+      "title": "Identity stories outperform technique content, and they are the parent-trust layer",
+      "detail": "On short form, the personal-stakes story reliably beats the tip: the doctor who left medicine, the C-on-my-final-mock confession, the public Cambridge medicine goal. Waleed's origin story (NHS doctor, top A-level grades, teaching in the evenings) is a repeatable content category, not a one-off: tell it in the underdog-receipts structure, the confession structure, and the why-I-do-this structure. This is also what converts parents, who buy credibility rather than hacks.",
+      "evidence": "Dr Justin Sung's 'harsh reality of being a doctor' at 41.9K likes vs his 500 to 3K study-clip baseline (snippets 17 Jul 2026). Biology with Olivia's C-to-A* confession is her flagged outlier. Study With Kate's Cambridge medicine video: 40.8K likes (live page 17 Jul 2026). Revishaan's KCL-rejection arc earned national press (The Tab, 4 Feb 2026)."
+    },
+    {
+      "title": "Run a second lane of carousels and keep every export clean and original",
+      "detail": "TikTok photo-mode carousels and Instagram carousels are algorithm-favoured, cheap, and native to this niche: mark-scheme breakdowns, five-mistakes slides, method steps, checklists. On Instagram, Reels earn the reach and carousels earn saves and the this-account-is-useful signal; DM sends are the heaviest-weighted Reels signal, so frame Reels as sendable ('send this to someone doing Year 13'). Shoot once, edit in Meta's free Edits app (teleprompter, auto-captions, watermark-free 4K), export separately per platform: both platforms down-rank cross-platform watermarks and reposts.",
+      "evidence": "StackInfluence (698K posts, Jan to May 2025): TikTok photo posts +81 percent engagement, +82 percent likes, though -33 percent shares. Buffer 52M-post analysis: carousels 6.90 percent vs 3.31 percent engagement per reach; Reels roughly double the reach rate. Mosseri-confirmed Reels signals: watch time, sends per reach, likes per reach (Buffer, 2026). Edits app features per Instagram Creators official pages (teleprompter added Jun 2025)."
+    }
+  ],
+  "opportunities": [
+    {
+      "title": "The A-level-only lane at scale is empty",
+      "detail": "Every mega account in UK exam short form is GCSE: FreeGCSEMathsTeacher (~2.8M), Matt Green (1.5M), Hannah Kettle (~304K), Mr Everything English (~188K). The most A-level-focused sizeable creator is Miss Estruch at ~100K, and she is single-subject Biology. Nobody big owns cross-subject A-level revision systems for UK sixth formers, the exact thing A-Level Accelerators sells. Miss Estruch's 100K proves the A-level-specific audience exists on TikTok; the multi-subject systems version of it is unclaimed."
+    },
+    {
+      "title": "No UK doctor does A-level revision content",
+      "detail": "The doctor-credential short-form template is proven at every scale and in every adjacent lane except this one: Dr Karan Rajan (5.4M TikTok) does general health, Dr Sarah Rav (1.5M+, Australia) does generic study hacks, Dr Justin Sung (ex-doctor, 2.17M YouTube) does global learning science, Ali Abdaal built the category then left it for business content. The intersection of NHS doctor, top A-level grades, and UK A-level exam technique is a genuinely empty position, and the credential does double duty: authority for students, trust for the parents who pay."
+    },
+    {
+      "title": "The honest counter-position to the predictions economy",
+      "detail": "National press (AFP, ITV, The Observer, Schools Week) spent 2025 documenting that the biggest UK exam creators built reach on predictions and burned trust when they missed, with AQA publicly warning against reliance on these channels. A clinician whose whole frame is diagnose before you treat can ride the identical exam-week search demand with examiner-report evidence and technique that works whatever comes up. The trust gap is documented; nobody big has claimed the evidence-based side of it."
+    },
+    {
+      "title": "The niche churns every two years and rewards the one who stays",
+      "detail": "The student-voice creators age out with their cohort: Jade Bowler and Eve Bennett left the revision lane, Daisy Jackson pivoted to university content the moment she finished A-levels, my honest studyblr shed followers after moving on, Miss Chang and Mr Salles went dormant. A doctor-founder never ages out of the subject, so consistency alone compounds into category leadership while each student-creator generation exits. Matt Green and FreeGCSEMathsTeacher show what multi-year persistence in one format earns."
+    },
+    {
+      "title": "Instagram Reels is under-contested by the UK exam winners",
+      "detail": "The UK TikTok winners barely converted their audiences to Instagram: Hannah Kettle 304K TikTok vs 12K Instagram, Sarah Teaches GCSE English 77.4K vs 3.8K, FreeGCSEMathsTeacher unmeasurable on IG. Running both platforms from day one with platform-native exports (not watermarked reuploads) contests a lane the incumbents ignored, and since July 2025 Instagram captions are Google-indexed, feeding the same parent searches the blog already targets. Instagram is also where parent reach lives, which TikTok does not offer."
+    },
+    {
+      "title": "Protocol-grade specificity and archetype content have no UK short-form owner",
+      "detail": "Zach Highley proved radical specificity (exact settings, numbered exam plans) builds authority, but only in long-form for US med students; nobody does it in short form for A-levels. Waleed can publish his tracker's session types as exact named protocols (Blurt and Fix 90 minutes, Active Recall 45, Spaced Review 30, Timed Paper 60) and turn the diagnostic's seven archetypes into a self-identifying series, the same quiz mechanic that made Mike and Matty's brain types shareable, with the free diagnostic as the built-in CTA. The assets already exist; they only need the named-method treatment on camera."
+    }
+  ]
+}

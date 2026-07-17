@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Content HQ | A-Level Accelerators</title>
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<div class="shell">
+
+  <div class="topbar">
+    <div class="brand">
+      <span class="brand-name">A-Level Accelerators</span>
+      <span class="brand-tag">CONTENT HQ</span>
+    </div>
+    <div class="topbar-right">
+      <span class="top-date" id="top-date"></span>
+      <span class="pill" id="pill-countdown"></span>
+      <span class="pill" id="pill-sweep"></span>
+    </div>
+  </div>
+
+  <!-- NOW: the dark statement section -->
+  <section class="section section-dark">
+    <div class="section-head"><span>Now</span></div>
+    <div class="now-grid">
+      <div class="panel">
+        <h3>What to film next</h3>
+        <div id="now-stats" class="now-stats"></div>
+        <div id="film-next"></div>
+      </div>
+      <div class="panel">
+        <h3>Fresh from the radar</h3>
+        <p class="sub" id="radar-status-line"></p>
+        <div id="now-outliers"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PIPELINE: ready-to-shoot packages -->
+  <section class="section sec-pipeline">
+    <div class="section-head"><span>Content pipeline</span> <small id="pipeline-count"></small></div>
+    <div class="panel">
+      <h3>Ready-to-shoot packages</h3>
+      <p class="sub">Each package is a full shoot kit: scripted hook, body and CTA, the visual snapshot, caption, and finished graphics for carousels. Click one to open it. Nothing posts itself; you film, review and post.</p>
+      <div id="pkg-list" class="pkg-list"></div>
+    </div>
+  </section>
+
+  <!-- OUTLIERS -->
+  <section class="section sec-outliers">
+    <div class="section-head"><span>Outliers</span> <small>posts that massively overperformed, and how to rework them</small></div>
+    <div class="panel">
+      <h3>Overperformers spotted by the radar</h3>
+      <p class="sub" id="outlier-method"></p>
+      <div id="outlier-list" class="outlier-list"></div>
+    </div>
+  </section>
+
+  <!-- RADAR: creator leaderboard -->
+  <section class="section sec-radar">
+    <div class="section-head"><span>Creator radar</span> <small id="creators-updated"></small></div>
+    <div class="panel">
+      <h3>Who is winning in education short-form</h3>
+      <p class="sub" id="creators-note"></p>
+      <div style="overflow-x:auto"><table id="creator-table"></table></div>
+    </div>
+  </section>
+
+  <!-- PLAYBOOK -->
+  <section class="section sec-playbook">
+    <div class="section-head"><span>Playbook</span> <small>what is working right now, from the research</small></div>
+    <div class="grid grid-2">
+      <div class="panel">
+        <h3>The rules of the game</h3>
+        <p class="sub" id="playbook-updated"></p>
+        <div id="rule-list" class="rule-list"></div>
+      </div>
+      <div class="panel">
+        <h3>Gaps you can own</h3>
+        <p class="sub">Angles the research says nobody big is doing, where the doctor credential lands hardest.</p>
+        <div id="opp-list"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPS: my channels + sweep log -->
+  <section class="section sec-ops">
+    <div class="section-head"><span>Your channels &amp; sweeps</span></div>
+    <div class="grid grid-2">
+      <div class="panel">
+        <h3>Your accounts</h3>
+        <p class="sub">Add your handles once the accounts exist and the radar starts tracking your own numbers on every sweep, same honesty rules.</p>
+        <div id="channels"></div>
+      </div>
+      <div class="panel">
+        <h3>Sweep log</h3>
+        <p class="sub">The radar runs three times a day while the Claude desktop app is open. Failures are logged as failures, never papered over.</p>
+        <div style="overflow-x:auto"><table id="sweep-table"></table></div>
+      </div>
+    </div>
+  </section>
+
+  <p class="foot-note">Private and local. Separate from the business HQ (port 4400) on purpose. No number on this page is invented; unswept sources say so.</p>
+</div>
+
+<div class="lightbox" id="lightbox"><img id="lightbox-img" alt=""></div>
+<script src="/app.js"></script>
+</body>
+</html>

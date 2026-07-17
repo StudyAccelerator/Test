@@ -1,0 +1,324 @@
+{
+  "updatedAt": "2026-07-17T12:00:00Z",
+  "note": "First batch, built 17 July 2026 from the niche research. Every package is a full shoot kit. Nothing posts itself: Waleed films, reviews and posts everything himself.",
+  "packages": [
+    {
+      "id": "rereading-not-revision",
+      "title": "Rereading is NOT revision",
+      "type": "reel",
+      "audience": "students",
+      "platforms": ["tiktok", "instagram"],
+      "status": "ready",
+      "whyNow": "Best first post. Contrarian technique hooks outrun account size (TikTok ranks the video, not the account), so this works on day one with zero followers.",
+      "hook": "Rereading your notes is not revision. I'm sorry, but it isn't.",
+      "hookOnScreen": "Rereading is NOT revision",
+      "script": [
+        { "beat": "Problem", "spoken": "It feels like it works. The page looks familiar, your brain whispers 'I know this', and you move on to the next one.", "onScreen": "Familiar is not learned" },
+        { "beat": "Diagnosis", "spoken": "I'm a doctor, so here's the diagnosis. That feeling is recognition. Exams test recall. They're completely different skills, and only one of them earns marks.", "onScreen": "Recognition vs recall" },
+        { "beat": "Proof", "spoken": "I've taught over 1,000 A-level students. The hardest workers are usually the biggest rereaders. That's exactly why the marks don't match the hours.", "onScreen": "Hard worker, stuck grades? This is why" },
+        { "beat": "Treatment", "spoken": "So try this today. Close the book. Blank page. Write down everything you remember about the topic. Whatever's missing is your actual revision list.", "onScreen": "Close the book. Blank page. Write." }
+      ],
+      "cta": "I built a free 3-minute diagnostic that finds exactly where your revision leaks hours. It's linked in my bio. Or comment SYSTEM and I'll send it to you.",
+      "ctaOnScreen": "Free revision diagnostic. Link in bio",
+      "visual": {
+        "duration": "35 to 45 seconds",
+        "setting": "Direct to camera, chest up, phone at eye level, vertical 9:16. Plain wall or bookshelf behind, window light from the front. No greeting, first word lands within half a second.",
+        "wardrobeProps": "If filming after a shift, keep the NHS lanyard or scrubs visible: the credential is worn, never announced. Prop: a heavily highlighted textbook page you hold up on the Problem beat, then drop out of frame on the Treatment beat.",
+        "onScreenTextStyle": "Bold white text with a black outline, top third of frame, six words per line maximum. The word 'revision' appears in the very first overlay so the search engines hear, see and read the keyword.",
+        "footage": "One take with two punch-in cuts (on Diagnosis and Treatment). Flash the highlighted page as a half-second insert on 'the page looks familiar'.",
+        "feel": "Calm, certain, slightly amused. The older brother who became a doctor and tells you the truth. No shouting, no pointing at floating text."
+      },
+      "caption": "Rereading your notes is not revision. An NHS doctor's honest diagnosis of the most common A-level revision method, and the one-page fix you can run today. Send this to someone who highlights everything.",
+      "hashtags": "#alevels #revision #studytok #sixthform #alevelrevision",
+      "funnel": { "target": "Revision Diagnostic", "url": "https://alevelaccelerators.com/revision-diagnostic", "why": "Absolution content pre-frames the diagnostic: your method is broken, not you, so diagnose it before you add hours." },
+      "modelledOn": "Mr Salles' contrarian technique hooks (596.8K views on a 26.3K-follower account, roughly 23x his baseline, read live 17 Jul 2026) plus the absolution framing the research found across StudyTok."
+    },
+    {
+      "id": "blurt-and-fix-demo",
+      "title": "Watch me blurt an entire A-level topic",
+      "type": "reel",
+      "audience": "students",
+      "platforms": ["tiktok", "instagram"],
+      "status": "ready",
+      "hook": "Watch me blurt an entire A-level topic in ten minutes. This is the method I wish someone had shown me at 17.",
+      "hookOnScreen": "Blurt and Fix: full demo",
+      "script": [
+        { "beat": "Setup", "spoken": "One topic, one blank page, ten minutes. I'm using the blurting template from my site, and the rule is simple: nothing goes on this page unless it comes out of my head.", "onScreen": "1 topic. 1 blank page. 10 minutes." },
+        { "beat": "Blurt", "spoken": "Everything I can remember. Facts, diagrams, links between ideas. No notes, no peeking. Peeking turns it back into recognition and wastes the whole exercise.", "onScreen": "No notes. No peeking." },
+        { "beat": "The red pen", "spoken": "Now the bit that actually matters. Notes open, red pen out. Everything I missed goes on in red. That red is not failure. That red is my revision list, found in ten minutes instead of found in the exam.", "onScreen": "The red = your real revision list" },
+        { "beat": "The fix", "spoken": "Then you fix it: learn the red, and blurt the same topic again in two days. Watch the red shrink. That's the needle actually moving.", "onScreen": "Blurt again in 2 days. Watch the red shrink." }
+      ],
+      "cta": "The template is free on my site, linked in my bio. Print it, pick your weakest topic, and go.",
+      "ctaOnScreen": "Free blurting template. Link in bio",
+      "visual": {
+        "duration": "60 to 90 seconds",
+        "setting": "Top-down desk shot for the blurting (phone on a stand or propped on books, page filling the frame), cut to face for the hook and CTA. Daylight, plain desk.",
+        "wardrobeProps": "The printed blurting template, a black pen, a red pen, the notes you check against. The named artefact ON SCREEN is the point: named, copyable systems are what students save and rebuild.",
+        "onScreenTextStyle": "Bold white with black outline. Keep 'blurting' in the first overlay and say it out loud in the first sentence.",
+        "footage": "Timelapse the blurt (10 minutes compressed to about 15 seconds), real time for the red pen moment, punch in on the red list. Face to camera for hook and CTA only.",
+        "feel": "Quietly confident demonstration. Let the page do the talking. The red pen beat is the emotional peak: shoot it close."
+      },
+      "caption": "Blurting, demonstrated start to finish by an NHS doctor who teaches A-level students. One topic, one blank page, ten minutes, and your real revision list in red. Save this for your next session.",
+      "hashtags": "#blurting #alevels #revision #studytok #activerecall",
+      "funnel": { "target": "Blurting template PDF, then the diagnostic", "url": "https://alevelaccelerators.com", "why": "A named method with a printable artefact is the strongest save-magnet in the niche, and the template already exists as a lead magnet." },
+      "modelledOn": "Study With Kate's named-system play: her study roulette anniversary post carries 97.3K likes and 53.1K saves (a 55 percent save-to-like ratio, read off the live page 17 Jul 2026). Named, demonstrable, copyable."
+    },
+    {
+      "id": "nhs-shift-identity",
+      "title": "Why I teach after my NHS shifts",
+      "type": "reel",
+      "audience": "students",
+      "platforms": ["tiktok", "instagram"],
+      "status": "ready",
+      "hook": "I finish my NHS shift and then teach A-level students in the evening. People keep asking me why.",
+      "hookOnScreen": "NHS doctor by day. A-level teacher by night.",
+      "script": [
+        { "beat": "Six years ago", "spoken": "Six years ago I sat exactly where you're sitting. Year 13, predicted grades, UCAS, the lot. I got into medicine, so people assume I had it figured out.", "onScreen": "I was Year 13 six years ago" },
+        { "beat": "Confession", "spoken": "Honestly? My revision method was terrible. I succeeded on brute force hours, and I only learned how to work properly much later. Nobody teaches you HOW to revise. They just tell you to do it.", "onScreen": "My method was genuinely bad" },
+        { "beat": "The why", "spoken": "That's the gap I teach in. Schools teach you what to learn. Almost nobody teaches you how to perform in an exam. So after my shifts, that's what I do. Over 1,000 students so far.", "onScreen": "Schools teach WHAT. Nobody teaches HOW." },
+        { "beat": "What you get", "spoken": "On this account I'll share the system: how to find your weak topics, how to actually remember things, and how exams pay out marks.", "onScreen": "Follow for the system" }
+      ],
+      "cta": "Follow along. I share everything I wish someone had told me at 17.",
+      "ctaOnScreen": "Everything I wish I knew at 17",
+      "visual": {
+        "duration": "30 to 45 seconds",
+        "setting": "Two locations if possible: first line filmed leaving the hospital or in the car after a shift (lanyard visible), the rest at the teaching desk at home. The location change IS the story.",
+        "wardrobeProps": "Scrubs or lanyard in shot one, normal clothes plus a marked-up student paper or laptop in shot two.",
+        "onScreenTextStyle": "Bold white with black outline, top third. 'NHS doctor' and 'A-level' both appear in the first overlay.",
+        "footage": "Two setups, four cuts total. Keep it native and slightly raw: identity content underperforms when it looks produced.",
+        "feel": "Warm, honest, zero brag. The confession beat is the trust moment: slow down on it."
+      },
+      "caption": "NHS doctor by day, A-level teacher by night. Six years ago I sat those exams with a revision method that was genuinely bad. This account is everything I learned since, for the students sitting there now.",
+      "hashtags": "#nhsdoctor #alevels #studytok #sixthform #medstudent",
+      "funnel": { "target": "Follow (audience building)", "url": "https://alevelaccelerators.com", "why": "Identity stories are the trust layer that makes every later technique post land. No hard CTA on this one." },
+      "modelledOn": "Dr Justin Sung's doctor-identity post (41.9K likes against a 500 to 3K baseline on his study clips, snapshots 17 Jul 2026): on short form the identity story outperforms technique content by an order of magnitude."
+    },
+    {
+      "id": "exam-hall-blank",
+      "title": "You knew it yesterday. Where's it gone?",
+      "type": "reel",
+      "audience": "students",
+      "platforms": ["tiktok", "instagram"],
+      "status": "ready",
+      "hook": "That moment in the exam hall. You knew this yesterday. Where has it gone?",
+      "hookOnScreen": "You knew it yesterday. It's gone.",
+      "script": [
+        { "beat": "Name the feeling", "spoken": "Every student knows that feeling. You revised the topic. You could see the page. And in the exam, nothing.", "onScreen": "Every student knows this feeling" },
+        { "beat": "Diagnosis", "spoken": "Here's what it actually is: a retrieval failure, not a knowledge failure. The knowledge went in. You just never practised getting it out under pressure.", "onScreen": "Retrieval failure, NOT knowledge failure" },
+        { "beat": "Medical framing", "spoken": "I'm a doctor. I can't treat a patient until I know what's wrong, and 'I forgot it' is not a diagnosis. 'I never trained recall' is.", "onScreen": "Diagnose before you treat" },
+        { "beat": "Treatment", "spoken": "The fix takes fifteen minutes a day. Blank page, book closed, write everything you remember, mark the gaps in red. Train the exact skill the exam tests.", "onScreen": "15 minutes. Blank page. Book closed." }
+      ],
+      "cta": "I've put a free 3-minute diagnostic on my site that finds which part of your system is failing. Link in bio.",
+      "ctaOnScreen": "Free 3-minute diagnostic. Link in bio",
+      "visual": {
+        "duration": "40 to 55 seconds",
+        "setting": "Direct to camera at a desk. Open with a half-second insert of a blank exam answer sheet and a ticking hand on a watch if available.",
+        "wardrobeProps": "A closed textbook pushed away on the Treatment beat. Optional: stethoscope on the desk, never touched.",
+        "onScreenTextStyle": "Bold white, black outline. First overlay carries 'exam' so search picks it up.",
+        "footage": "Single setup, punch-ins on Diagnosis and Treatment. The pace is slower than the myth-bust reels: this one is empathy first.",
+        "feel": "Understanding, not lecturing. You are describing their exact Tuesday morning. The relief is the payoff."
+      },
+      "caption": "You knew it yesterday and it vanished in the exam. That's a retrieval failure, not a knowledge failure, and it has a 15-minute fix. From an NHS doctor who's taught over 1,000 A-level students. Send this to someone mid-revision.",
+      "hashtags": "#alevels #exams #revision #studytok #activerecall",
+      "funnel": { "target": "Revision Diagnostic", "url": "https://alevelaccelerators.com/revision-diagnostic", "why": "The felt moment plus the named mechanism is the strongest bridge into 'find YOUR failure point', which is the diagnostic's whole pitch." },
+      "modelledOn": "Elizabeth Filips' 'You're Not Forgetful' (3.98M views, channel data 17 Jul 2026): the absolution structure, you are not broken, your method is, applied to the sharpest felt moment at A-level."
+    },
+    {
+      "id": "same-hours-different-grades",
+      "title": "Same six hours. A vs C.",
+      "type": "reel",
+      "audience": "students",
+      "platforms": ["tiktok", "instagram"],
+      "status": "ready",
+      "hook": "Two students revise six hours a day. One's heading for an A, one's heading for a C. The difference isn't talent.",
+      "hookOnScreen": "Same 6 hours. A vs C.",
+      "script": [
+        { "beat": "Student one", "spoken": "Student one: reads the textbook, highlights it, writes the notes out again neatly, watches a recap video. Six full hours. Feels amazing.", "onScreen": "Reread. Highlight. Rewrite. Rewatch." },
+        { "beat": "Student two", "spoken": "Student two: blurts the topic from memory, does past paper questions on it, marks them against the real mark scheme, logs every dropped mark. Six hours. Feels horrible.", "onScreen": "Blurt. Past papers. Mark scheme. Error log." },
+        { "beat": "The point", "spoken": "In medicine we talk about high-yield and low-yield. Same idea here. The comfortable column is low-yield. The uncomfortable column is where the marks are made.", "onScreen": "High-yield vs low-yield" },
+        { "beat": "Turn", "spoken": "So stop asking 'how many hours should I revise?' and start asking 'where are my hours going?'", "onScreen": "Not how many hours. WHERE do they go?" }
+      ],
+      "cta": "My free diagnostic works out where your hours are leaking and what to move them to. Three minutes, link in bio.",
+      "ctaOnScreen": "Find your hours leak. Link in bio",
+      "visual": {
+        "duration": "40 to 55 seconds",
+        "setting": "Direct to camera, or split-screen gesture left and right for the two students. A whiteboard behind with two columns written up works well.",
+        "wardrobeProps": "Whiteboard with LOW-YIELD and HIGH-YIELD columns, revealed as you talk. Or two stacks: pretty notes vs a scruffy error log.",
+        "onScreenTextStyle": "Bold white, black outline. The two four-word lists are the key overlays: hold each for a full beat so they screenshot well.",
+        "footage": "One setup, cut on each beat. Point left and right consistently for student one and two.",
+        "feel": "Punchy and a little wry. This is the one that starts arguments in the comments; let it."
+      },
+      "caption": "Six hours of revision that moves the grade and six hours that doesn't look almost identical from the outside. Here's the difference, from an NHS doctor who's taught 1,000+ A-level students. Which column are you in, honestly?",
+      "hashtags": "#alevels #revision #studytok #studytips #sixthform",
+      "funnel": { "target": "Revision Diagnostic", "url": "https://alevelaccelerators.com/revision-diagnostic", "why": "The 'where do my hours go' question is literally what the diagnostic's hours-leak result answers." },
+      "modelledOn": "The one-promise rule plus comment-bait contrast formats: difficulty and argument-provoking contrasts fill comment sections, which feeds distribution (research playbook, 17 Jul 2026)."
+    },
+    {
+      "id": "year-13-summer",
+      "title": "The Year 12 summer advantage",
+      "type": "reel",
+      "audience": "students",
+      "platforms": ["tiktok", "instagram"],
+      "status": "ready",
+      "hook": "If you're going into Year 13, the next six weeks are the biggest free gain you will ever get.",
+      "hookOnScreen": "Going into Year 13? Read this.",
+      "script": [
+        { "beat": "The moment", "spoken": "Results day for the year above is Thursday the 13th of August. A year from now, that's you. What you do between now and September decides how that morning feels.", "onScreen": "13 August. A year from now, that's you." },
+        { "beat": "The trap", "spoken": "Most of Year 12 will do nothing all summer, then try to fix a year of shaky topics during exam season. You've seen how that ends.", "onScreen": "The September panic is optional" },
+        { "beat": "The move", "spoken": "The move is boring and it works: list your Year 12 topics, rate each one honestly, and spend an hour a day rebuilding the weak ones from memory. Not rereading. Retrieval.", "onScreen": "1 hour a day. Weakest topics. From memory." },
+        { "beat": "Honest offer", "spoken": "Everything I just said is free and it works. If you want it done live, with structure and a doctor on the whiteboard, I run a summer programme too. But start with the free hour.", "onScreen": "Free plan first. Programme if you want structure." }
+      ],
+      "cta": "My free revision tracker builds that topic list and the weekly plan for you. Link in bio.",
+      "ctaOnScreen": "Free revision tracker. Link in bio",
+      "visual": {
+        "duration": "45 to 60 seconds",
+        "setting": "Direct to camera. Calendar on the wall or phone calendar insert showing August 13 circled.",
+        "wardrobeProps": "A printed topic list with Struggling/Shaky/Solid ratings visible on the third beat (the tracker's actual output makes perfect b-roll).",
+        "onScreenTextStyle": "Bold white, black outline. '13 August' held on screen for the full first beat.",
+        "footage": "Single setup plus two inserts (calendar, topic list). Keep the honest-offer beat casual, almost thrown away: the softness is what makes it credible.",
+        "feel": "Urgent but kind. Big brother telling you the thing nobody else will bother to."
+      },
+      "caption": "Year 12: results day for the year above is 13 August. A year from now that's you, and the next six weeks are the cheapest grade gain you'll ever get. One hour a day, weakest topics, from memory. Free tracker on my site builds the plan.",
+      "hashtags": "#alevels #year12 #year13 #summerrevision #sixthform",
+      "funnel": { "target": "Revision Tracker, Summer Accelerator awareness", "url": "https://alevelaccelerators.com/revision-tracker", "why": "Calendar-locked content rides the results-day wave; the tracker is the natural free next step and the Summer Accelerator (starts 8 August) gets a soft, honest mention." },
+      "modelledOn": "The calendar-engine rule: the UK exam calendar is the niche's distribution engine, and results day 13 August 2026 is the single biggest moment of the launch window (research playbook, 17 Jul 2026)."
+    },
+    {
+      "id": "doctor-diagnoses-revision",
+      "title": "A doctor diagnoses your revision",
+      "type": "reel",
+      "audience": "students",
+      "platforms": ["tiktok", "instagram"],
+      "status": "ready",
+      "hook": "You're not lazy. Your revision method has symptoms. Let me diagnose them in 60 seconds.",
+      "hookOnScreen": "Your revision has symptoms",
+      "script": [
+        { "beat": "Symptom one", "spoken": "Symptom one: your notes are immaculate and your marks are average. That's effort going into presentation instead of retrieval.", "onScreen": "Beautiful notes, average marks" },
+        { "beat": "Symptom two", "spoken": "Symptom two: everything makes sense in class and falls apart in the paper. You've built understanding but never trained application.", "onScreen": "Fine in class, lost in the paper" },
+        { "beat": "Symptom three", "spoken": "Symptom three: you revise for hours and can't say what you actually finished. No targets, no feedback, no idea what moved.", "onScreen": "Busy all day, finished nothing" },
+        { "beat": "Diagnosis", "spoken": "I'm a doctor. I'd never treat a patient without a diagnosis, and you shouldn't add revision hours without one either. There are patterns here, and every one of them has a specific fix.", "onScreen": "Diagnose before you treat" }
+      ],
+      "cta": "I turned this into a free 3-minute diagnostic: 20 questions, and it tells you your pattern and exactly what to change. Link in bio, or comment DIAGNOSIS and I'll send it over.",
+      "ctaOnScreen": "Free 3-minute revision diagnostic",
+      "visual": {
+        "duration": "50 to 65 seconds",
+        "setting": "Direct to camera, seated, slightly closer framing than usual: this is a consult, not a lecture.",
+        "wardrobeProps": "Lanyard or scrubs if natural. A pen you click between symptoms works as a beat marker.",
+        "onScreenTextStyle": "Bold white, black outline. Number the symptoms on screen (1, 2, 3) so viewers self-identify and comment their number.",
+        "footage": "Single take, punch-in on each symptom. End on a slower, warmer diagnosis beat.",
+        "feel": "A consult with someone who's seen your case a thousand times. Reassuring, specific, zero judgement."
+      },
+      "caption": "Three revision symptoms I see constantly after teaching 1,000+ A-level students, and what each one actually means. Which number are you? The free diagnostic on my site gives you the full workup in 3 minutes.",
+      "hashtags": "#alevels #revision #studytok #studytips #sixthform",
+      "funnel": { "target": "Revision Diagnostic", "url": "https://alevelaccelerators.com/revision-diagnostic", "why": "This IS the diagnostic in content form; the comment-your-number mechanic doubles as comment fuel and the keyword reply routes straight to it." },
+      "modelledOn": "Dr Justin Sung's diagnostic-quiz funnel (his study content routes to a learning-style quiz) crossed with the reply-to-comment engine Sarah Teaches GCSE English built her account on (research, 17 Jul 2026)."
+    },
+    {
+      "id": "carousel-5-habits",
+      "title": "Carousel: 5 habits that nearly cost me medicine",
+      "type": "carousel",
+      "audience": "students",
+      "platforms": ["instagram", "tiktok"],
+      "status": "ready",
+      "hook": "5 revision habits that nearly cost me my medicine offer.",
+      "hookOnScreen": "Slide 1 carries the hook",
+      "script": [
+        { "beat": "Format", "spoken": "Post as an Instagram carousel and a TikTok photo-mode post. Slides are finished and attached: hook, five habits each with a fix, CTA.", "onScreen": null }
+      ],
+      "cta": "Slide 7 sends them to the free diagnostic (link in bio).",
+      "ctaOnScreen": null,
+      "visual": {
+        "duration": "7 slides, 1080x1350",
+        "setting": "Finished graphics attached below. Brand system: purple and cream, Georgia serif, gold rules.",
+        "wardrobeProps": "None needed. Ready to post.",
+        "onScreenTextStyle": "Set in the graphics.",
+        "footage": "None. Carousel.",
+        "feel": "Confession plus fix. The uncomfortable-truth format in save-friendly form."
+      },
+      "caption": "I got into medicine with a revision method that was genuinely terrible. These are the five habits I had to unlearn, and what actually replaced them. Save this for your next session, and be honest about slide 3.",
+      "hashtags": "#alevels #revision #studygram #studytips #sixthform",
+      "funnel": { "target": "Revision Diagnostic", "url": "https://alevelaccelerators.com/revision-diagnostic", "why": "Carousels earn saves and the this-account-is-useful signal; the confession framing carries the doctor origin story." },
+      "modelledOn": "Buffer's 52M-post analysis: carousels out-engage Reels per reach on Instagram, and TikTok photo posts run +81 percent engagement (research, 17 Jul 2026). Confession angle from Biology with Olivia's C-to-A* post.",
+      "slides": [
+        { "src": "/assets/5-habits/slide-1.png", "alt": "Hook: 5 revision habits that nearly cost me my medicine offer" },
+        { "src": "/assets/5-habits/slide-2.png", "alt": "Habit 1: rereading your notes" },
+        { "src": "/assets/5-habits/slide-3.png", "alt": "Habit 2: highlighting everything" },
+        { "src": "/assets/5-habits/slide-4.png", "alt": "Habit 3: building the perfect timetable" },
+        { "src": "/assets/5-habits/slide-5.png", "alt": "Habit 4: rewriting notes neatly" },
+        { "src": "/assets/5-habits/slide-6.png", "alt": "Habit 5: speedrun videos at 1am" },
+        { "src": "/assets/5-habits/slide-7.png", "alt": "CTA: free revision diagnostic" }
+      ]
+    },
+    {
+      "id": "carousel-four-tiers",
+      "title": "Carousel: why hard workers get Bs",
+      "type": "carousel",
+      "audience": "students",
+      "platforms": ["instagram", "tiktok"],
+      "status": "ready",
+      "hook": "Hard-working students get Bs for a reason. It's not intelligence.",
+      "hookOnScreen": "Slide 1 carries the hook",
+      "script": [
+        { "beat": "Format", "spoken": "Instagram carousel plus TikTok photo mode. Six slides: hook, the four-tier ladder, one slide each for recall, application and exam mastery, CTA.", "onScreen": null }
+      ],
+      "cta": "Slide 6 asks 'which tier are you stuck at?' and routes to the diagnostic.",
+      "ctaOnScreen": null,
+      "visual": {
+        "duration": "6 slides, 1080x1350",
+        "setting": "Finished graphics attached below.",
+        "wardrobeProps": "None needed. Ready to post.",
+        "onScreenTextStyle": "Set in the graphics.",
+        "footage": "None. Carousel.",
+        "feel": "The framework post: the one people save and send to a friend who works hard and stays stuck."
+      },
+      "caption": "A grade is built in four tiers: knowledge, recall, application, exam mastery. School teaches the first one and most students grind there forever. Find the tier you're stuck at and the marks start moving. Free 3-minute diagnostic on my site.",
+      "hashtags": "#alevels #studygram #revision #studytips #sixthform",
+      "funnel": { "target": "Revision Diagnostic", "url": "https://alevelaccelerators.com/revision-diagnostic", "why": "The four tiers are the brand's core mental model; every later post can reference this one." },
+      "modelledOn": "The named-framework save pattern (Study With Kate's roulette, 53.1K saves) in carousel form, where saves are the currency.",
+      "slides": [
+        { "src": "/assets/four-tiers/slide-1.png", "alt": "Hook: hard-working students get Bs for a reason" },
+        { "src": "/assets/four-tiers/slide-2.png", "alt": "The four-tier ladder" },
+        { "src": "/assets/four-tiers/slide-3.png", "alt": "Tier 2: recall" },
+        { "src": "/assets/four-tiers/slide-4.png", "alt": "Tier 3: application" },
+        { "src": "/assets/four-tiers/slide-5.png", "alt": "Tier 4: exam mastery" },
+        { "src": "/assets/four-tiers/slide-6.png", "alt": "CTA: which tier are you stuck at?" }
+      ]
+    },
+    {
+      "id": "carousel-blurting",
+      "title": "Carousel: the exam hall blank, fixed",
+      "type": "carousel",
+      "audience": "students",
+      "platforms": ["instagram", "tiktok"],
+      "status": "ready",
+      "hook": "You knew it yesterday. In the exam it's gone.",
+      "hookOnScreen": "Slide 1 carries the hook",
+      "script": [
+        { "beat": "Format", "spoken": "Instagram carousel plus TikTok photo mode. Seven slides: the felt moment, the diagnosis, the four blurting steps, CTA.", "onScreen": null }
+      ],
+      "cta": "Slide 7 offers the free printable template and the diagnostic.",
+      "ctaOnScreen": null,
+      "visual": {
+        "duration": "7 slides, 1080x1350",
+        "setting": "Finished graphics attached below, including a mocked-up blurt page with the red gaps on slide 5.",
+        "wardrobeProps": "None needed. Ready to post.",
+        "onScreenTextStyle": "Set in the graphics.",
+        "footage": "None. Carousel.",
+        "feel": "Empathy first, then a method they can run tonight."
+      },
+      "caption": "That exam hall moment where the answer vanishes has a name: retrieval failure. It also has a 15-minute fix called blurting. Four steps, from an NHS doctor who teaches A-level students. Save it, try it tonight, free template on my site.",
+      "hashtags": "#blurting #alevels #revision #studygram #activerecall",
+      "funnel": { "target": "Blurting template PDF and the diagnostic", "url": "https://alevelaccelerators.com", "why": "Pairs with the blurt demo reel; the printable template converts saves into email signups." },
+      "modelledOn": "The absolution structure (Elizabeth Filips' 'You're Not Forgetful', 3.98M views) delivered as a save-first carousel.",
+      "slides": [
+        { "src": "/assets/blurting/slide-1.png", "alt": "Hook: you knew it yesterday" },
+        { "src": "/assets/blurting/slide-2.png", "alt": "Diagnosis: retrieval failure" },
+        { "src": "/assets/blurting/slide-3.png", "alt": "Step 1: study the topic once" },
+        { "src": "/assets/blurting/slide-4.png", "alt": "Step 2: blank page, write everything" },
+        { "src": "/assets/blurting/slide-5.png", "alt": "Step 3: mark the gaps in red" },
+        { "src": "/assets/blurting/slide-6.png", "alt": "Step 4: blurt again in two days" },
+        { "src": "/assets/blurting/slide-7.png", "alt": "CTA: free template and diagnostic" }
+      ]
+    }
+  ]
+}
