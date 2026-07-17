@@ -51,10 +51,11 @@
   .brandline svg { display: block; }
 
   .card { background: #fff; border-radius: 16px; box-shadow: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05), 0 12px 24px rgba(46,37,87,.06); }
-  .card.gold-ring { border: 2px solid rgba(201,169,110,.6); box-shadow: 0 4px 8px rgba(46,37,87,.06), 0 18px 36px rgba(46,37,87,.12); }
+  .ring-wrap { background: rgba(201,169,110,.65); border-radius: 18px; padding: 2px; display: flex; box-shadow: 0 4px 8px rgba(46,37,87,.06), 0 18px 36px rgba(46,37,87,.12); }
+  .ring-wrap > .card { flex: 1; min-width: 0; box-shadow: none; }
   .dark-card { background: rgba(255,255,255,.055); box-shadow: 0 0 0 1px rgba(255,255,255,.13); border-radius: 16px; }
-  .chip { display: inline-flex; align-items: center; gap: 9px; border: 1px solid rgba(251,248,243,.28); border-radius: 999px; padding: 9px 18px; font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: rgba(251,248,243,.92); white-space: nowrap; }
-  .chip::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); flex-shrink: 0; }
+  .chip { display: inline-block; height: 36px; line-height: 36px; padding: 0 18px; border-radius: 999px; background: rgba(255,255,255,.09); font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 600; letter-spacing: .08em; color: rgba(251,248,243,.92); white-space: nowrap; }
+  .chip::before { content: ""; display: inline-block; width: 6px; height: 6px; border-radius: 50%; background: var(--gold); margin-right: 9px; vertical-align: middle; }
   .pill { display: inline-block; background: var(--gold); color: var(--purple); border-radius: 999px; padding: 6px 14px; font-size: 11.5px; font-weight: 800; letter-spacing: .04em; }
 
   .tiles { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; margin-top: 34px; }
@@ -285,10 +286,12 @@
       <p class="name">Study Series</p><p class="save"></p><p class="amt">£119</p><p class="per">learn the system</p>
       <div class="plist"><div class="tickrow"><span class="t">✓</span><span>4 live sessions</span></div><div class="tickrow"><span class="t">✓</span><span>Fortnightly group Q&amp;A</span></div></div>
     </div>
-    <div class="card price gold-ring">
-      <span class="flag pill">Most chosen</span>
-      <p class="name">Study Accelerator</p><p class="save">12 weeks</p><p class="amt">£499</p><p class="per">implement the system</p>
-      <div class="plist"><div class="tickrow"><span class="t">✓</span><span>12 sessions plus weekly accountability</span></div><div class="tickrow"><span class="t">✓</span><span>1:1 guidance, templates and feedback</span></div></div>
+    <div class="ring-wrap">
+    <div class="card price">
+        <span class="flag pill">Most chosen</span>
+        <p class="name">Study Accelerator</p><p class="save">12 weeks</p><p class="amt">£499</p><p class="per">implement the system</p>
+        <div class="plist"><div class="tickrow"><span class="t">✓</span><span>12 sessions plus weekly accountability</span></div><div class="tickrow"><span class="t">✓</span><span>1:1 guidance, templates and feedback</span></div></div>
+      </div>
     </div>
     <div class="card price">
       <p class="name">Top 1% Mentorship</p><p class="save">Year round</p><p class="amt">£2,000</p><p class="per">per year · optimise and accelerate</p>
