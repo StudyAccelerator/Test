@@ -1242,6 +1242,157 @@ function renderInbox() {
     <p class="small" style="margin-bottom:0"><a href="https://mail.google.com" target="_blank" rel="noreferrer">Open Gmail</a> · Refreshes itself every morning at 7am while the Claude app is open.</p>`
 }
 
+/* ----------------------------------------------------------- playbooks */
+
+/* Small markdown renderer for the working documents: headings, lists,
+   tables, quotes, code, bold, links. Input is escaped before any markup
+   is applied, so document content cannot inject HTML. */
+function mdToHtml(md) {
+  const inline = (s) =>
+    s
+      .replace(/`([^`]+)`/g, '<code>$1</code>')
+      .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+      .replace(/(^|[^*])\*([^*\n]+)\*(?!\*)/g, '$1<em>$2</em>')
+      .replace(/\[([^\]]+)\]\((https?:[^)\s]+)\)/g, '<a href="$2" target="_blank" rel="noreferrer">$1</a>')
+
+  const lines = esc(md).replace(/\r\n/g, '\n').split('\n')
+  const out = []
+  let list = null
+  let para = []
+  let code = false
+
+  const flushPara = () => {
+    if (para.length) out.push(`<p>${inline(para.join(' '))}</p>`)
+    para = []
+  }
+  const flushList = () => {
+    if (list) out.push(`</${list}>`)
+    list = null
+  }
+
+  for (let i = 0; i < lines.length; i++) {
+    const line = lines[i]
+
+    if (/^```/.test(line)) {
+      flushPara()
+      flushList()
+      out.push(code ? '</pre>' : '<pre>')
+      code = !code
+      continue
+    }
+    if (code) {
+      out.push(line)
+      continue
+    }
+
+    /* table: a | row whose next line is the |---| separator */
+    if (line.includes('|') && /^\s*\|?[\s:|-]+\|?\s*$/.test(lines[i + 1] || '')) {
+      flushPara()
+      flushList()
+      const cells = (row) => row.split('|').map((c) => c.trim()).filter((c, j, arr) => !(c === '' && (j === 0 || j === arr.length - 1)))
+      out.push('<table><thead><tr>' + cells(line).map((c) => `<th>${inline(c)}</th>`).join('') + '</tr></thead><tbody>')
+      i += 1
+      while (lines[i + 1] && lines[i + 1].includes('|')) {
+        i += 1
+        out.push('<tr>' + cells(lines[i]).map((c) => `<td>${inline(c)}</td>`).join('') + '</tr>')
+      }
+      out.push('</tbody></table>')
+      continue
+    }
+
+    const h = line.match(/^(#{1,4})\s+(.*)/)
+    if (h) {
+      flushPara()
+      flushList()
+      out.push(`<h${h[1].length}>${inline(h[2])}</h${h[1].length}>`)
+      continue
+    }
+    if (/^\s*(---+|\*\*\*+)\s*$/.test(line)) {
+      flushPara()
+      flushList()
+      out.push('<hr />')
+      continue
+    }
+    const q = line.match(/^>\s?(.*)/)
+    if (q) {
+      flushPara()
+      flushList()
+      out.push(`<blockquote>${inline(q[1])}</blockquote>`)
+      continue
+    }
+    const ul = line.match(/^\s*[-*]\s+(.*)/)
+    const ol = line.match(/^\s*\d+[.)]\s+(.*)/)
+    if (ul || ol) {
+      flushPara()
+      const want = ul ? 'ul' : 'ol'
+      if (list !== want) {
+        flushList()
+        out.push(`<${want}>`)
+        list = want
+      }
+      out.push(`<li>${inline((ul || ol)[1])}</li>`)
+      continue
+    }
+    if (!line.trim()) {
+      flushPara()
+      flushList()
+      continue
+    }
+    para.push(line.trim())
+  }
+  flushPara()
+  flushList()
+  if (code) out.push('</pre>')
+  return out.join('\n')
+}
+
+const docCache = new Map()
+let activeDocId = null
+
+function renderDocs() {
+  const body = $('#docs-body')
+  const docs = state.docs
+  if (!docs || !docs.length) {
+    body.innerHTML = '<p class="empty-state">No documents listed yet. Sessions add them to dashboard/seed/docs.json.</p>'
+    return
+  }
+
+  body.innerHTML = `
+    <div class="doc-tabs">${docs
+      .map((d) => `<button class="doc-tab" data-id="${esc(d.id)}" type="button">${esc(d.label)}</button>`)
+      .join('')}</div>
+    <div id="doc-meta" class="doc-meta"></div>
+    <div id="doc-reader" class="doc-reader"><p class="loading">Pick a document above.</p></div>`
+
+  const open = async (id) => {
+    activeDocId = id
+    body.querySelectorAll('.doc-tab').forEach((t) => t.classList.toggle('active', t.dataset.id === id))
+    const meta = $('#doc-meta')
+    const reader = $('#doc-reader')
+    if (!docCache.has(id)) {
+      reader.innerHTML = '<p class="loading">Loading&hellip;</p>'
+      try {
+        docCache.set(id, await getJSON(`/api/docs/${id}`))
+      } catch {
+        reader.innerHTML = '<p class="empty-state">Could not load this document.</p>'
+        return
+      }
+    }
+    const d = docCache.get(id)
+    if (d.error) {
+      meta.textContent = ''
+      reader.innerHTML = `<p class="empty-state">${esc(d.error)}</p>`
+      return
+    }
+    meta.textContent = `Updated ${new Date(d.updated).toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })} · ${d.path}`
+    reader.innerHTML = mdToHtml(d.content)
+    reader.scrollTop = 0
+  }
+
+  body.querySelectorAll('.doc-tab').forEach((t) => t.addEventListener('click', () => open(t.dataset.id)))
+  open(activeDocId && docs.some((d) => d.id === activeDocId) ? activeDocId : docs[0].id)
+}
+
 /* ---------------------------------------------------------- connections */
 
 function renderConnections() {
@@ -1473,6 +1624,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/store/linkedin-competitors'),
     getJSON('/api/monzo'),
     getJSON('/api/store/leads'),
+    getJSON('/api/docs'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -1494,6 +1646,9 @@ async function loadAll(fresh = false) {
   state.monzo = val(14, null)
   const leadStore = val(15, null)
   state.leads = leadStore && leadStore.lastSweep ? leadStore : null
+  state.docs = val(16, [])
+  /* fresh reload: drop cached document bodies so edits show up */
+  if (fresh) docCache.clear()
 }
 
 function renderAll() {
@@ -1512,6 +1667,7 @@ function renderAll() {
   renderInbox()
   renderConnections()
   renderLeads()
+  renderDocs()
   renderTriage()
 }
 

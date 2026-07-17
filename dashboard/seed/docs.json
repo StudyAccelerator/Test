@@ -1,0 +1,40 @@
+{
+  "note": "The working documents surfaced on the HQ Playbooks panel. Paths are relative to the repo root; the panel always renders the live file with its real last-updated date, so keeping these documents current keeps the HQ current. Sessions add or retire entries here when Waleed's working set changes.",
+  "docs": [
+    {
+      "id": "audit",
+      "label": "Business audit and growth plan",
+      "path": "content/business-audit/2026-07-13-business-audit-and-growth-plan.md"
+    },
+    {
+      "id": "fb-playbook",
+      "label": "Facebook groups and parent conversion",
+      "path": "content/facebook-groups/2026-07-15-facebook-groups-and-parent-competitors.md"
+    },
+    {
+      "id": "fb-personal",
+      "label": "Personal Facebook plan",
+      "path": "content/facebook-groups/2026-07-15-personal-facebook-strategy.md"
+    },
+    {
+      "id": "own-group",
+      "label": "Parents group decision and roadmap",
+      "path": "content/facebook-groups/2026-07-16-own-group-roadmap.md"
+    },
+    {
+      "id": "lead-radar",
+      "label": "Lead radar: where parents ask",
+      "path": "content/facebook-groups/2026-07-16-lead-radar-and-where-parents-actually-ask.md"
+    },
+    {
+      "id": "reddit",
+      "label": "Reddit verdict and plan",
+      "path": "content/reddit/2026-07-15-reddit-verdict-and-plan.md"
+    },
+    {
+      "id": "lead-magnets",
+      "label": "Lead magnet roadmap",
+      "path": "content/lead-magnet-roadmap.md"
+    }
+  ]
+}

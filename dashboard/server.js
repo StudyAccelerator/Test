@@ -77,7 +77,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -672,6 +672,48 @@ async function handleApi(req, res, url) {
       daysToResultsDay: resultsDay,
       newLeads,
     })
+  }
+
+  /* The working playbooks, rendered on the HQ. Only paths listed in the docs
+     store are ever read, always from inside the repo, so this cannot become
+     a generic file reader. */
+  if (seg[1] === 'docs') {
+    const cfg = readStore('docs', { docs: [] })
+    const list = cfg.docs || []
+
+    if (seg[2]) {
+      const d = list.find((x) => x.id === seg[2])
+      if (!d) return sendJson(res, 404, { error: 'Unknown document' })
+      const filePath = path.normalize(path.join(REPO_ROOT, d.path))
+      if (!filePath.startsWith(path.normalize(REPO_ROOT) + path.sep)) {
+        return sendJson(res, 403, { error: 'Path out of bounds' })
+      }
+      try {
+        const stat = fs.statSync(filePath)
+        return sendJson(res, 200, {
+          id: d.id,
+          label: d.label,
+          path: d.path,
+          updated: stat.mtime.toISOString(),
+          content: fs.readFileSync(filePath, 'utf8'),
+        })
+      } catch {
+        return sendJson(res, 200, { id: d.id, label: d.label, error: `File not found: ${d.path}` })
+      }
+    }
+
+    return sendJson(
+      res,
+      200,
+      list.map((d) => {
+        try {
+          const stat = fs.statSync(path.join(REPO_ROOT, d.path))
+          return { id: d.id, label: d.label, updated: stat.mtime.toISOString() }
+        } catch {
+          return { id: d.id, label: d.label, updated: null }
+        }
+      })
+    )
   }
 
   if (seg[1] === 'connections') {
