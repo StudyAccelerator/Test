@@ -13,6 +13,7 @@ const PROGRAMME_LINKS = [
 const FREE_TOOL_LINKS = [
   ['/revision-diagnostic', 'Revision Diagnostic'],
   ['/revision-tracker', 'Revision Tracker'],
+  ['/error-log', 'Error Log'],
   ['/A-Level-Accelerators-Blurting-Template.pdf', 'Blurting Template'],
   ['/newsletter', 'Sunday Session Newsletter'],
   ['/parents', "Free Parents' Guide"],

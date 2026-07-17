@@ -23,11 +23,17 @@ The rule for everything below: a new tool earns its place only if it either (a) 
 - **Effort:** medium. One to two sessions. No new engine needed, it is a decision tree plus the report shell we already have. The report visual style is already built.
 - **Also:** have the content-studio posts pre-written (the seasonal calendar already says this).
 
-### 2. Parent Diagnostic — SHIPPED EARLY, 15 July 2026, as the fork inside the Revision Diagnostic
+### 2. Parent Diagnostic: SHIPPED EARLY, 15 July 2026, as the fork inside the Revision Diagnostic
 
 - **What shipped:** rather than a separate tool, the Revision Diagnostic itself now forks at the start: "I'm the student" / "I'm a parent". The parent path asks every question about the child in observational wording (same engine, same scoring), adds a tutoring/support question and a free-text box for both paths, and renders the whole report in the parent's voice with the child's name. `?for=parents` preselects the path for Facebook ads.
 - **Why the change:** one URL to advertise, one engine to maintain, and parents get the full 21-question diagnosis rather than a 12-question lite version.
 - **Follow-up:** parents land in their own MailerLite groups feeding a dedicated 13-email buyer sequence (`content/email-sequences/revision-diagnostic-parents/`), built as four automations, awaiting Waleed's review and switch-on.
+
+### 2b. Error Log: BUILT 17 July 2026 (commissioned by Waleed outside the original order), live on his approval
+
+- **What shipped:** `/error-log`, the tool version of the error log the method already prescribes everywhere (the diagnostic's "start an error log" prescription, the blog's past-paper protocol, the tracker's "every dropped mark goes on a list"). Log a mistake, tag the cause against the four A* Performance Pyramid tiers (the taxonomy in `lib/error-log/taxonomy.ts` mirrors the lesson plans exactly), and it comes back for from-memory retests at 3 days, 1 week, 2 weeks and 1 month; a fail restarts the ladder, four straight passes retire it as mastered. Pattern insights diagnose the leaking tier and route honestly (blurting template, tracker, exam prep article, diagnostic). Printable retest sheet, JSON backup, built-in guide with worked example.
+- **Deliberately no email gate in v1.** It is localStorage-only and says so; that privacy line is part of the pitch. When Waleed wants it as a gated lead magnet, the step is: create a MailerLite group + optional capture (mirroring the tracker's), and decide what fields earn the gate. Rule (a) coverage today: it captures the daily-habit segment the one-shot diagnostic misses; rule (b) arrives with the gate.
+- **Cross-links:** tracker page card both ways, diagnostic and tracker links inside the tool, header/footer/FAQ. The diagnostic's "Start an error log" prescription card does NOT link the tool yet; do that (small `lib/diagnostic.ts` edit) once the tool is live.
 
 ### 3. Topic Audit (ship September to early October, Biology and Chemistry first)
 

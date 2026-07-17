@@ -117,7 +117,7 @@ const groups: Group[] = [
       },
       {
         q: 'Do you offer free resources?',
-        a: "Yes. The free Revision Diagnostic scores how you actually study and tells you what to fix first. The free Revision Tracker builds you a weekly plan around your weakest topics. Add the revision blog, a printable blurting template, The Sunday Session, our weekly newsletter for students, and a free guide written for parents, and you can get a long way before paying us anything. All of it is linked in the footer of every page.",
+        a: "Yes. The free Revision Diagnostic scores how you actually study and tells you what to fix first. The free Revision Tracker builds you a weekly plan around your weakest topics. The free Error Log records every mark you drop and retests you on it until it stays fixed. Add the revision blog, a printable blurting template, The Sunday Session, our weekly newsletter for students, and a free guide written for parents, and you can get a long way before paying us anything. All of it is linked in the footer of every page.",
       },
     ],
   },

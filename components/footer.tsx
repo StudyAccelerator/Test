@@ -33,6 +33,7 @@ export default function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><a href="/revision-diagnostic" className="text-brand-gold hover:text-white transition">Revision Diagnostic</a></li>
                 <li><a href="/revision-tracker" className="text-brand-gold hover:text-white transition">Revision Tracker</a></li>
+                <li><a href="/error-log" className="text-brand-gold hover:text-white transition">Error Log</a></li>
                 <li><a href="/blog/" className="text-brand-gold hover:text-white transition">Revision Blog</a></li>
                 <li><a href="/A-Level-Accelerators-Blurting-Template.pdf" className="text-brand-gold hover:text-white transition">Blurting Template</a></li>
                 <li><a href="/newsletter" className="text-brand-gold hover:text-white transition">The Sunday Session</a></li>

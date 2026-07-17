@@ -1,11 +1,12 @@
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { HeroFade, HeroHeadline, HeroWord } from '@/components/home/hero-reveal'
-import TrackerApp from '@/components/tracker/tracker-app'
+import ErrorLogApp from '@/components/error-log/error-log-app'
+import Guide from '@/components/error-log/guide'
 
 const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/60'
 
-export default function RevisionTrackerPage() {
+export default function ErrorLogPage() {
   return (
     <>
       <div className="print:hidden">
@@ -20,26 +21,28 @@ export default function RevisionTrackerPage() {
           />
           <div className="relative mx-auto max-w-3xl">
             <h1
-              aria-label="Free A-level revision timetable maker and topic audit. Stop revising in the dark."
+              aria-label="Free A-level error log and mistake tracker. Never lose the same mark twice."
               className="font-serif text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl"
             >
               <span className={`${EYEBROW} mb-3 block font-normal`}>
-                Free A-level revision timetable maker and topic audit
+                Free A-level error log and mistake tracker
               </span>
               <HeroHeadline>
-                <HeroWord>Stop</HeroWord> <HeroWord>revising</HeroWord> <HeroWord>in</HeroWord>{' '}
-                <HeroWord>the</HeroWord> <HeroWord className="italic text-brand-gold">dark.</HeroWord>
+                <HeroWord>Never</HeroWord> <HeroWord>lose</HeroWord> <HeroWord>the</HeroWord>{' '}
+                <HeroWord>same</HeroWord> <HeroWord>mark</HeroWord>{' '}
+                <HeroWord className="italic text-brand-gold">twice.</HeroWord>
               </HeroHeadline>
             </h1>
             <HeroFade delay={0.35}>
               <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-text/70">
-                Find your weakest topics first, then get a week built around fixing them, inside the hours you actually
-                have. Free, and it takes about three minutes.
+                Log every dropped mark, tag what actually caused it, and get each one back in front of you at 3 days,
+                1 week, 2 weeks and 1 month, until you&apos;ve beaten it four times from memory. Free, and nothing you
+                write leaves your browser.
               </p>
             </HeroFade>
             <HeroFade delay={0.5}>
               <ul className="mt-5 flex flex-wrap items-center justify-center gap-2">
-                {['Topic audit', 'Your real hours, respected', 'A method for every session'].map((chip) => (
+                {['The four causes, tagged', 'Retests on a schedule', 'Printable retest sheets'].map((chip) => (
                   <li
                     key={chip}
                     className="rounded-full bg-white px-4 py-1.5 text-[13px] font-semibold text-brand-purple ring-1 ring-brand-purple/10"
@@ -52,53 +55,47 @@ export default function RevisionTrackerPage() {
             <HeroFade delay={0.6}>
               <div className="mt-8 rounded-2xl bg-brand-purple px-6 py-5 text-left sm:px-8">
                 <p className="text-[15px] leading-relaxed text-brand-cream/90">
-                  <strong className="text-brand-gold">How this works.</strong>{' '}I&apos;m a doctor. I can&apos;t treat a
-                  patient until I&apos;ve found what&apos;s wrong, and revision works exactly the same way. Most
-                  timetables just schedule your time. This one audits your topics first, finds where you&apos;re leaking
-                  marks, then builds the week around fixing them. I&apos;ve worked with over 1,000 A-level
-                  students; diagnose before you treat is the whole method.
+                  <strong className="text-brand-gold">How this works.</strong>{' '}I&apos;m a doctor. When something goes
+                  wrong on a ward, we don&apos;t feel bad about it and move on: we write it up, find the cause, and
+                  change the system so it can&apos;t happen the same way again. Your lost marks deserve the same
+                  treatment. Most students glance at the right answer and turn the page, which is why the same
+                  mistakes resurface in the real exam. This log records each one, tags the cause using the four tiers
+                  I teach my own students, then retests you on a schedule built around how memory actually fades.
                 </p>
               </div>
             </HeroFade>
           </div>
         </section>
 
-        <TrackerApp />
+        <ErrorLogApp />
+
+        <Guide />
 
         <section className="px-5 pb-16 pt-4 print:hidden">
           <div className="mx-auto max-w-3xl space-y-5">
             <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 sm:p-8">
               <p className={EYEBROW}>Go one level deeper</p>
               <h2 className="mt-2 font-serif text-2xl font-bold text-brand-purple">
-                A timetable fixes when you revise. Not how.
+                The log fixes your mistakes. Not your method.
               </h2>
               <p className="mt-3 leading-relaxed text-brand-text/75">
-                If you work hard and the grades still are not moving, the leak is usually the method itself. The free{' '}
+                If the same tier keeps filling up week after week, that&apos;s not bad luck, it&apos;s a diagnosis. The
+                free{' '}
                 <a
                   href="/revision-diagnostic"
                   className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 transition hover:text-brand-gold"
                 >
                   Revision Diagnostic
                 </a>{' '}
-                scores how you actually study and tells you what to fix first. 20 questions, about 4 minutes.
-              </p>
-            </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 sm:p-8">
-              <p className={EYEBROW}>Then close the loop</p>
-              <h2 className="mt-2 font-serif text-2xl font-bold text-brand-purple">
-                Your sessions will produce dropped marks. Good.
-              </h2>
-              <p className="mt-3 leading-relaxed text-brand-text/75">
-                Every Active Recall and Timed Paper session above ends the same way: a list of marks you lost. That
-                list now has a home. The free{' '}
+                scores how you actually study across five systems and tells you what to fix first. 20 questions, about
+                4 minutes. And when a topic keeps appearing in your log, the free{' '}
                 <a
-                  href="/error-log"
+                  href="/revision-tracker"
                   className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 transition hover:text-brand-gold"
                 >
-                  Error Log
+                  Revision Tracker
                 </a>{' '}
-                records each mistake, tags what caused it, and brings it back for a retest at 3 days, 1 week, 2 weeks
-                and 1 month, until you stop dropping it.
+                will build it a proper week of blurting, recall and spaced review.
               </p>
             </div>
           </div>
