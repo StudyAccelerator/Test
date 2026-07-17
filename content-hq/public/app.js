@@ -141,6 +141,7 @@ function pkgBody(p) {
         </div>
         ${caption}
         ${p.funnel ? `<div class="funnel-line"><b>Funnel:</b> ${esc(p.funnel.target)}${p.funnel.why ? ' · ' + esc(p.funnel.why) : ''}</div>` : ''}
+        ${builtOnBlock(p)}
         ${p.modelledOn ? `<div class="modelled">Modelled on: ${esc(p.modelledOn)}</div>` : ''}
       </div>
       <div>
@@ -156,6 +157,28 @@ function pkgBody(p) {
       <button onclick="copyScript('${esc(p.id)}')">Copy script</button>
       ${p.caption ? `<button onclick="copyText('cap-${esc(p.id)}')">Copy caption</button>` : ''}
     </div>`
+}
+
+/* The receipts: which proven hook patterns and which actual videos a package
+   is built on. Hooks resolve live from the hook library store so the links
+   and metrics stay one source of truth. */
+function builtOnBlock(p) {
+  const lib = (state.hooks && state.hooks.hooks) || []
+  const rows = []
+  for (const hid of p.basedOnHooks || []) {
+    const h = lib.find((x) => x.id === hid)
+    if (!h) continue
+    const ex = (h.examples || []).find((e) => e.url && e.metric) || (h.examples || []).find((e) => e.url) || (h.examples || [])[0]
+    const exBit = ex
+      ? ` · ${ex.url ? `<a href="${esc(ex.url)}" target="_blank" rel="noreferrer">${esc(ex.creator)}</a>` : esc(ex.creator)}${ex.metric ? `, ${esc(ex.metric)}` : ''}`
+      : ''
+    rows.push(`<li><b>"${esc(h.hook)}"</b> <span class="badge badge-${esc(h.verdict)}">${esc(h.verdict)}</span>${exBit}</li>`)
+  }
+  for (const s of p.sources || []) {
+    rows.push(`<li>${s.url ? `<a href="${esc(s.url)}" target="_blank" rel="noreferrer">${esc(s.label)}</a>` : esc(s.label)}${s.metric ? ` · ${esc(s.metric)}` : ''}</li>`)
+  }
+  if (!rows.length) return ''
+  return `<div class="built-on"><div class="s-label" style="color:var(--teal)">Built on these hooks and videos</div><ul>${rows.join('')}</ul></div>`
 }
 
 function renderPipeline() {

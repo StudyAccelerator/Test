@@ -14,7 +14,7 @@ Zero npm dependencies, binds to 127.0.0.1 only, never deployed, never linked fro
 ## What it shows
 
 - **Now** (dark section): what to film next, fresh outliers, sweep status.
-- **Content pipeline**: ready-to-shoot packages. Each is a full shoot kit: scripted hook, body beats and CTA with on-screen text, a visual snapshot (setting, props, cuts, feel), caption and hashtags, the funnel target, and finished 1080x1350 graphics for carousels. Waleed marks them Filmed / Posted as he works through them. Nothing ever posts itself.
+- **Content pipeline**: ready-to-shoot packages. Each is a full shoot kit: scripted hook, body beats and CTA with on-screen text, a visual snapshot (setting, props, cuts, feel), caption and hashtags, the funnel target, and finished 1080x1350 graphics for carousels. Every package carries its receipts (Waleed's standing rule): `basedOnHooks` names the hook-library patterns the opener borrows, and `sources` links the actual Reels/TikToks it reworks with their sourced metrics; the UI renders both under "Built on these hooks and videos". Waleed marks packages Filmed / Posted as he works through them. Nothing ever posts itself.
 - **Outliers**: posts that massively overperformed (3x+ the creator's median of their last 10, or 1M+ views in-niche), each with why it worked and a rework idea.
 - **Hook library**: opener lines that actually perform, each with real example videos (linked, metrics sourced and dated), the mechanism, a verdict (proven / works / risky / unverified / weak) and an A-level adaptation in Waleed's voice. Waleed's own finds are marked `yours`; sweeps append new patterns they spot.
 - **Creator radar**: the tracked education creators, followers per platform (dated, sourced), relevance stars, and what to steal from each.

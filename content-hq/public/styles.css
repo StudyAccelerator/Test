@@ -247,6 +247,13 @@ tr:last-child td { border-bottom: none; }
 .funnel-line b { color: var(--ok); }
 .modelled { font-size: 12px; color: var(--ink-muted); margin-top: 8px; }
 
+.built-on { margin-top: 10px; padding: 9px 12px; background: var(--teal-soft); border-radius: 8px; font-size: 12.5px; }
+.built-on ul { margin: 4px 0 0; padding-left: 16px; }
+.built-on li { margin: 4px 0; }
+.built-on a { color: var(--blue); text-decoration: none; }
+.built-on a:hover { text-decoration: underline; }
+.built-on .badge { transform: translateY(-1px); }
+
 /* ----------------------------------------------------------------- hooks */
 
 .hook-rules { background: var(--teal-soft); border-radius: 10px; padding: 10px 14px; font-size: 12.5px; }
