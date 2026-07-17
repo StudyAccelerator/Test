@@ -443,7 +443,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               <p className="mt-1 text-[15px] text-brand-text/70 leading-relaxed max-w-xl">{item.detail}</p>
               {item.task === 'Build next week properly' && (
                 <a
-                  href="/revision-tracker"
+                  href="/revision-tracker/"
                   className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
                 >
                   Open the free Revision Tracker

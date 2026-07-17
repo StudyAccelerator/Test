@@ -7,6 +7,11 @@
       "path": "content/business-audit/2026-07-13-business-audit-and-growth-plan.md"
     },
     {
+      "id": "lead-map",
+      "label": "Lead generation and conversion map",
+      "path": "content/business-audit/2026-07-17-lead-generation-and-conversion-map.md"
+    },
+    {
       "id": "fb-playbook",
       "label": "Facebook groups and parent conversion",
       "path": "content/facebook-groups/2026-07-15-facebook-groups-and-parent-competitors.md"
@@ -35,6 +40,11 @@
       "id": "lead-magnets",
       "label": "Lead magnet roadmap",
       "path": "content/lead-magnet-roadmap.md"
+    },
+    {
+      "id": "seo",
+      "label": "SEO and AEO plan",
+      "path": "content/seo/2026-07-17-seo-aeo-assessment-and-roadmap.md"
     }
   ]
 }

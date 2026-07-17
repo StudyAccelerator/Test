@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     type: 'article',
+    images: ['/og-default.png'],
     url: `${SITE_URL}/blog/${post.slug}/`,
   },
 }
@@ -190,7 +191,7 @@ export default function Page() {
       </UL>
 
       <CourseCTA
-        href="/subject-accelerators"
+        href="/subject-accelerators/"
         heading="If the answer turns out to be a resit year"
         body="Our live 12-week Subject Accelerators in Biology, Chemistry and Maths give resit students what independent study can't: specialist teaching, weekly structure, exam-question-first sessions and someone checking the work got done. Led by Dr Waleed Ahmad, MBBS. First session risk-free."
         label="See the Subject Accelerators"

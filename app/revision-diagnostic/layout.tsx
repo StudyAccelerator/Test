@@ -6,6 +6,15 @@ export const metadata: Metadata = {
   description:
     'A free 4 minute diagnostic quiz for A-level students. Get your revision profile, scores for the five systems behind every top grade, an honest estimate of your wasted study hours, and a personalised 7 day plan. Built by Dr Waleed Ahmad MBBS.',
   alternates: { canonical: 'https://alevelaccelerators.com/revision-diagnostic/' },
+  openGraph: {
+    siteName: 'A-Level Accelerators',
+    type: 'website',
+    url: 'https://alevelaccelerators.com/revision-diagnostic/',
+    title: 'Free A-Level Revision Diagnostic | Find Where Your Marks Are Leaking',
+    description:
+      'A free 4 minute diagnostic quiz for A-level students. Get your revision profile, an honest estimate of your wasted study hours, and a personalised 7 day plan.',
+    images: ['/og-default.png'],
+  },
 }
 
 const webAppSchema = {

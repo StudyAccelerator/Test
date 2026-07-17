@@ -86,7 +86,7 @@ export const TrackerCTA = () => (
       with a proven technique attached to every session. It even refuses to let you overload the week.
     </p>
     <a
-      href="/revision-tracker"
+      href="/revision-tracker/"
       className="inline-block px-8 py-3 bg-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold-light transition"
     >
       Build My Free Timetable
@@ -119,7 +119,7 @@ export const CourseCTA = ({
   heading = 'Want expert help, not just advice?',
   body = 'A-Level Accelerators runs live online classes in Biology, Chemistry, Maths and Physics, taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. Small groups, real exam technique, first session risk-free.',
   label = 'See Our A-Level Courses',
-  href = '/subject-accelerators',
+  href = '/subject-accelerators/',
 }: {
   heading?: string
   body?: string
@@ -162,7 +162,7 @@ const AuthorBio = () => (
   <div className="bg-white rounded-xl shadow-md p-6 md:p-8 mt-14 flex flex-col md:flex-row gap-6 items-center md:items-start">
     <div className="w-24 h-24 rounded-full overflow-hidden flex-shrink-0">
       <Image
-        src="/graduation.jpg"
+        src="/graduation-320.jpg"
         alt="Dr Waleed Ahmad, founder of A-Level Accelerators"
         width={96}
         height={96}
@@ -210,8 +210,8 @@ const BlogFooter = () => (
       <div className="flex gap-8 justify-center text-sm">
         <a href="/" className="text-brand-gold hover:text-white transition">Courses</a>
         <a href="/blog/" className="text-brand-gold hover:text-white transition">Blog</a>
-        <a href="/revision-diagnostic" className="text-brand-gold hover:text-white transition">Free Revision Diagnostic</a>
-        <a href="/revision-tracker" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+        <a href="/revision-diagnostic/" className="text-brand-gold hover:text-white transition">Free Revision Diagnostic</a>
+        <a href="/revision-tracker/" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
         <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
       </div>
       <p className="text-xs opacity-60">
@@ -237,13 +237,16 @@ export function ArticleLayout({
     description: post.description,
     datePublished: post.datePublished,
     dateModified: post.dateModified,
+    image: `${SITE_URL}/og-default.png`,
     author: {
       '@type': 'Person',
+      '@id': `${SITE_URL}/#founder`,
       name: 'Dr Waleed Ahmad',
       honorificSuffix: 'MBBS',
       jobTitle: 'Founder, A-Level Accelerators',
       description: 'UK doctor and former top-performing A-level student; has worked with over 1,000 A-level students.',
       url: `${SITE_URL}/#founder`,
+      sameAs: ['https://www.linkedin.com/in/dr-waleed-ahmad-068134237'],
     },
     publisher: {
       '@type': 'Organization',

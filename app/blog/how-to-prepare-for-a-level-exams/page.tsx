@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     type: 'article',
+    images: ['/og-default.png'],
     url: `${SITE_URL}/blog/${post.slug}/`,
   },
 }
@@ -125,7 +126,7 @@ export default function Page() {
         this week, rebuilt every Sunday based on what your testing showed. Fill at most 80% of your available
         time so bad days have somewhere to go. The full method is in my guide
         to <A href="/blog/how-to-make-a-revision-timetable/">building a revision timetable that actually
-        works</A>, or our free <A href="/revision-tracker">Revision Tracker</A>{' '}will generate one for you in
+        works</A>, or our free <A href="/revision-tracker/">Revision Tracker</A>{' '}will generate one for you in
         about three minutes.
       </P>
 

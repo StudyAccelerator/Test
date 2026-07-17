@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     type: 'article',
+    images: ['/og-default.png'],
     url: `${SITE_URL}/blog/${post.slug}/`,
   },
 }
@@ -192,7 +193,7 @@ export default function Page() {
       </P>
 
       <CourseCTA
-        href="/subject-accelerators"
+        href="/subject-accelerators/"
         heading="Running a resit year? Don't do it alone"
         body="Our live A-Level programmes in Biology, Chemistry, Maths and Physics give resit students the structure that independent study lacks: specialist teaching, exam-question-first sessions, homework and progress tracking. Led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
         label="See Our A-Level Courses"

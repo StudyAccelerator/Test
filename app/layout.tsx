@@ -31,8 +31,11 @@ const educationalOrgSchema = {
   logo: `${SITE_URL}/logo-header-new.png`,
   founder: {
     "@type": "Person",
+    "@id": `${SITE_URL}/#founder`,
     name: "Dr Waleed Ahmad",
     honorificSuffix: "MBBS",
+    jobTitle: "Founder, A-Level Accelerators",
+    sameAs: ["https://www.linkedin.com/in/dr-waleed-ahmad-068134237"],
   },
   sameAs: [
     "https://www.linkedin.com/in/dr-waleed-ahmad-068134237",

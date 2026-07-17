@@ -45,7 +45,7 @@ export default function NewsletterSignup() {
         <p className="font-serif text-2xl font-bold text-brand-gold">You&apos;re in.</p>
         <p className="mx-auto mt-3 max-w-md leading-relaxed text-brand-cream/90">
           The next issue lands on Sunday at 5pm. Until then, the{' '}
-          <a href="/revision-diagnostic" className="font-semibold text-brand-gold underline underline-offset-4">
+          <a href="/revision-diagnostic/" className="font-semibold text-brand-gold underline underline-offset-4">
             Revision Diagnostic
           </a>{' '}
           will tell you what your revision needs first.

@@ -580,7 +580,7 @@ export default function PlanView({
             This plan tells you what to fix. The Summer Accelerator is where we fix it, live.
           </p>
           <a
-            href="/summer-accelerators"
+            href="/summer-accelerators/"
             className="mt-4 inline-block rounded-xl bg-brand-purple px-6 py-3 font-semibold text-brand-cream transition hover:bg-brand-purple-light"
           >
             See the Summer Accelerator
