@@ -82,7 +82,7 @@ export default function ErrorLogPage() {
                 If the same tier keeps filling up week after week, that&apos;s not bad luck, it&apos;s a diagnosis. The
                 free{' '}
                 <a
-                  href="/revision-diagnostic"
+                  href="/revision-diagnostic/"
                   className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 transition hover:text-brand-gold"
                 >
                   Revision Diagnostic
@@ -90,7 +90,7 @@ export default function ErrorLogPage() {
                 scores how you actually study across five systems and tells you what to fix first. 20 questions, about
                 4 minutes. And when a topic keeps appearing in your log, the free{' '}
                 <a
-                  href="/revision-tracker"
+                  href="/revision-tracker/"
                   className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 transition hover:text-brand-gold"
                 >
                   Revision Tracker

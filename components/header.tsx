@@ -5,23 +5,23 @@ import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const PROGRAMME_LINKS = [
-  ['/summer-accelerators', 'Summer Accelerator'],
-  ['/study-systems', 'Study System'],
-  ['/subject-accelerators', 'Subject Accelerators'],
+  ['/summer-accelerators/', 'Summer Accelerator'],
+  ['/study-systems/', 'Study System'],
+  ['/subject-accelerators/', 'Subject Accelerators'],
 ]
 
 const FREE_TOOL_LINKS = [
-  ['/revision-diagnostic', 'Revision Diagnostic'],
-  ['/revision-tracker', 'Revision Tracker'],
-  ['/error-log', 'Error Log'],
+  ['/revision-diagnostic/', 'Revision Diagnostic'],
+  ['/revision-tracker/', 'Revision Tracker'],
+  ['/error-log/', 'Error Log'],
   ['/A-Level-Accelerators-Blurting-Template.pdf', 'Blurting Template'],
-  ['/newsletter', 'Sunday Session Newsletter'],
-  ['/parents', "Free Parents' Guide"],
+  ['/newsletter/', 'Sunday Session Newsletter'],
+  ['/parents/', "Free Parents' Guide"],
 ]
 
 const MORE_LINKS = [
   ['/blog/', 'Blog'],
-  ['/faqs', 'FAQs'],
+  ['/faqs/', 'FAQs'],
 ]
 
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'

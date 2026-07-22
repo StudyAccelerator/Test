@@ -49,6 +49,7 @@ The foundation is genuinely strong, which the audit confirmed from outside and i
 - Article schema had no image and the author Person pointed at a non-existent anchor; both fixed, with the founder entity now one linked identity (author, org founder, homepage #founder section, LinkedIn sameAs).
 - AuthorBio image was a 762 KB original rendered at 96px; now a 35 KB derivative.
 - IndexNow key file added (public/88b3db4a3bda12ba58be7c939b415877.txt) so Bing gets pinged on every approved deploy from now on.
+- Late on 17 July, once the error-log session had committed its files: the remaining 22 slashless links in the header, footer, error-log and tracker pages fixed too (the built site now has zero slashless internal links anywhere), and llms.txt gained the Error Log line. Backlog items 2 and 16 folded into this same batch.
 
 **Known and queued (see backlog):** header and footer trailing slashes (those files were mid-edit by another session on 17 July), Course schema on programme pages, "revision planner" wording on /revision-tracker/, og blocks on the remaining inner pages, page-specific Twitter cards, title-length trims, sitemap lastmod for static pages, /study-systems/ and /subject-accelerators/ description rewrites, /subject-accelerators/ thin content (673 words on the page every blog CTA points at), and the subjects inconsistency (site-wide copy says Biology, Chemistry, Maths and Physics; the Subject Accelerators page sells three of the four: needs Waleed's answer, see section 10).
 
@@ -143,7 +144,7 @@ Statuses: **queued**, **in batch (awaiting approval)**, **live**, **blocked**, *
 | # | Item | Why | Status |
 |---|------|-----|--------|
 | 1 | Trailing slashes + FAQ HTML + og fixes + schema entity + IndexNow key (the 17 July batch) | Removes crawl drag and makes FAQ answers visible to AI crawlers | in batch (awaiting approval) |
-| 2 | Header + footer trailing slashes (blocked 17 Jul by the error-log session's open edits) | The two site-wide offenders left | queued |
+| 2 | Header + footer trailing slashes (unblocked once the error-log session committed) | The two site-wide offenders | in batch (awaiting approval) |
 | 3 | Freshness and answer pass on /blog/resitting-a-levels/ (dates table for 2026 and 2027, cost table, direct answers to the near-miss cost and date queries) | 357 impressions at position 21; the single biggest near-term traffic win | queued |
 | 4 | "Revision planner" wording into /revision-tracker/ title, description and body | 88 impressions at position 32 for a query the page never says | queued |
 | 5 | Freshness pass on predicted-grades and year-12-summer posts (already page 1; push to top 5) | Positions 6 to 7 with real impressions | queued |
@@ -157,7 +158,7 @@ Statuses: **queued**, **in batch (awaiting approval)**, **live**, **blocked**, *
 | 13 | /about/ founder page (the entity page for Dr Waleed: credentials, method, press-ready bio) | E-E-A-T anchor for every author byline; AI engines resolve the person | queued (new page, needs his approval of the copy) |
 | 14 | Title-length trims on the five over-60-char titles (not the homepage) | Truncated titles in results | queued |
 | 15 | Sitemap lastmod for static pages, honest dates only | Minor crawl signal | queued |
-| 16 | llms.txt upkeep line for the error-log tool once that branch merges | Keep the AI map current | blocked (waits on that merge) |
+| 16 | llms.txt upkeep line for the error-log tool | Keep the AI map current | in batch (awaiting approval) |
 | 17 | dateModified discipline plus a visible "Last reviewed" line on posts | Save My Exams' freshness pattern; every post currently shows dateModified = datePublished | standing rule from batch 3 on |
 | 18 | Retrofit the extractable-answer pattern across all 17 posts (question-form titles where honest, direct first-40-words answers) | Verified as what gets pages lifted into AI search groundings | queued |
 | 19 | "How much does A-level tutoring cost in 2026?" post with an honest rates table | Tutorful and MyTutor rank with pricing pages; half the near-miss resit queries are cost queries; feeds the same buyers | queued (needs his price sign-off) |

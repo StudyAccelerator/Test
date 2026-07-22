@@ -75,7 +75,7 @@ export default function RevisionTrackerPage() {
               <p className="mt-3 leading-relaxed text-brand-text/75">
                 If you work hard and the grades still are not moving, the leak is usually the method itself. The free{' '}
                 <a
-                  href="/revision-diagnostic"
+                  href="/revision-diagnostic/"
                   className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 transition hover:text-brand-gold"
                 >
                   Revision Diagnostic
@@ -92,7 +92,7 @@ export default function RevisionTrackerPage() {
                 Every Active Recall and Timed Paper session above ends the same way: a list of marks you lost. That
                 list now has a home. The free{' '}
                 <a
-                  href="/error-log"
+                  href="/error-log/"
                   className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 transition hover:text-brand-gold"
                 >
                   Error Log

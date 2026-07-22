@@ -23,27 +23,27 @@ export default function Footer() {
             <div>
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Programmes</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="/summer-accelerators" className="text-brand-gold hover:text-white transition">Summer Accelerator</a></li>
-                <li><a href="/subject-accelerators" className="text-brand-gold hover:text-white transition">Subject Accelerators</a></li>
-                <li><a href="/study-systems" className="text-brand-gold hover:text-white transition">Study System</a></li>
+                <li><a href="/summer-accelerators/" className="text-brand-gold hover:text-white transition">Summer Accelerator</a></li>
+                <li><a href="/subject-accelerators/" className="text-brand-gold hover:text-white transition">Subject Accelerators</a></li>
+                <li><a href="/study-systems/" className="text-brand-gold hover:text-white transition">Study System</a></li>
               </ul>
             </div>
             <div>
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Free Resources</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="/revision-diagnostic" className="text-brand-gold hover:text-white transition">Revision Diagnostic</a></li>
-                <li><a href="/revision-tracker" className="text-brand-gold hover:text-white transition">Revision Tracker</a></li>
-                <li><a href="/error-log" className="text-brand-gold hover:text-white transition">Error Log</a></li>
+                <li><a href="/revision-diagnostic/" className="text-brand-gold hover:text-white transition">Revision Diagnostic</a></li>
+                <li><a href="/revision-tracker/" className="text-brand-gold hover:text-white transition">Revision Tracker</a></li>
+                <li><a href="/error-log/" className="text-brand-gold hover:text-white transition">Error Log</a></li>
                 <li><a href="/blog/" className="text-brand-gold hover:text-white transition">Revision Blog</a></li>
                 <li><a href="/A-Level-Accelerators-Blurting-Template.pdf" className="text-brand-gold hover:text-white transition">Blurting Template</a></li>
-                <li><a href="/newsletter" className="text-brand-gold hover:text-white transition">The Sunday Session</a></li>
-                <li><a href="/parents" className="text-brand-gold hover:text-white transition">Free Parents&apos; Guide</a></li>
+                <li><a href="/newsletter/" className="text-brand-gold hover:text-white transition">The Sunday Session</a></li>
+                <li><a href="/parents/" className="text-brand-gold hover:text-white transition">Free Parents&apos; Guide</a></li>
               </ul>
             </div>
             <div>
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Company</h3>
               <ul className="space-y-2 text-sm">
-                <li><a href="/faqs" className="text-brand-gold hover:text-white transition">FAQs</a></li>
+                <li><a href="/faqs/" className="text-brand-gold hover:text-white transition">FAQs</a></li>
                 <li><a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a></li>
                 <li><a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition">Book a Free Call</a></li>
               </ul>

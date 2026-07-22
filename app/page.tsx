@@ -105,7 +105,7 @@ const PROGRAMMES = [
     outcome:
       'Six weeks, live. Cover the high-yield Year 13 topics over summer, and walk into September already ahead.',
     points: ['Biology, Chemistry, Maths and Physics', 'Two live sessions a week per subject', 'Every session recorded'],
-    href: '/summer-accelerators',
+    href: '/summer-accelerators/',
     cta: 'Explore the Summer Accelerator',
   },
   {
@@ -119,7 +119,7 @@ const PROGRAMMES = [
     outcome:
       'Twelve-week live exam programmes in Biology, Chemistry and Maths. Small groups, specialist tutors, taught to the mark scheme.',
     points: ['Pick one subject or bundle three', 'Weekend sessions, no clashes', 'Exam technique in every session'],
-    href: '/subject-accelerators',
+    href: '/subject-accelerators/',
     cta: 'Explore Subject Accelerators',
   },
   {
@@ -133,7 +133,7 @@ const PROGRAMMES = [
     outcome:
       'High-yield revision, time management and exam performance. The system behind everything we teach, so you stay ahead without burning out.',
     points: ['Active recall and spaced repetition', 'Workload and burnout control', 'Exam performance under pressure'],
-    href: '/study-systems',
+    href: '/study-systems/',
     cta: 'Explore the Study System',
   },
 ]
