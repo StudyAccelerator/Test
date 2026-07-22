@@ -55,12 +55,22 @@ The free window is a WEB APP feature, not an API one. Waleed's account confirmed
 
 | Unlimited model | Max duration | Resolution | Aspect ratios | Best used for |
 |---|---|---|---|---|
-| **Kling 3.0** | 8s | 720p | 16:9, 9:16, 1:1 | People, emotion, image-to-video on real assets, camera moves |
+| **Kling 3.0** | 8s | 720p (pick "pro/std", not 4K) | 16:9, 9:16, 1:1 | People, emotion, image-to-video on real assets, camera moves |
 | **Seedance 2.0** | 8s | 720p | 16:9, 9:16, 1:1, 3:4, 4:3, 21:9 | Volume b-roll, objects, macro, anything needing 3:4 for Meta feed |
-| **Wan 2.7** | 8s | 720p | 16:9, 9:16, 1:1, 3:4, 4:3 | Texture loops, stylised abstract shots, audio-synced clips |
-| **Gemini Omni Flash** | 8s | 720p | 16:9, 9:16 | Reference-driven shots and native-audio clips |
+| **Wan 2.7** | 5s | 720p | no ratio control (16:9 default; a start frame sets the ratio) | Texture loops, stylised abstract shots, audio-synced clips |
+| **Gemini Omni Flash** | 7s | 720p | 16:9, 9:16 | Reference-driven shots and native-audio clips |
 
-Practical notes:
+What the warm-up run on 22 July actually confirmed (all nine video samples generated at zero cost, balance never moved):
+
+- The workflow per clip: pick the model, click the "Change to ... for Unlimited" link if the settings row shows 4K/1080p, switch **Unlimited mode** ON, and only press Generate when the button itself reads "Generate Unlimited" with no credit number. If a number is showing, something reset; fix it first.
+- The Unlimited toggle silently resets OFF after some page re-renders and model switches. Check it every single time.
+- **One unlimited generation runs at a time** (the toast says so) and a Generate press while another job is rendering is DROPPED silently, no error. Wait for the current clip to finish, then submit the next. A clip takes roughly one to three minutes on the relaxed trial queue.
+- Real caps differ per model (table above): Wan tops out at 5s and has no aspect ratio control, Gemini Omni Flash at 7s. Kling and Seedance do the full 8s.
+- Soul stills are NOT free on this account: the image Generate button prices at 2 credits, so the warm-up's sample 8 was skipped. Stills wait for a decision (pay the ~2 credits each, or skip Soul until a plan covers it).
+
+### Waleed's verdict on the warm-up (22 July): personalised beats generic
+
+The text-to-video warm-up proved the pipeline but Waleed's review call stands as the standing rule: generic b-roll (rooftops, mugs, dominoes) is replaceable by stock footage and shows AI physics tells, so the free window belongs to **image-to-video on real photos**: Waleed himself (scrubs on the ward, graduation portraits, theatre cap) and later real students and real site screenshots. Four personalised Kling 3.0 clips were generated that day from his own photos at zero cost (in `~/Downloads/higgsfield-warmup/personalised/`), with subtle-motion prompts that keep his face true to the photo. With a start image, Kling locks the clip to the photo's aspect ratio and ignores the ratio control. One web-app gotcha: injecting a new start frame does not replace the old one; remove the existing frame (X on the thumbnail) and visually confirm the new photo is in the tile before generating, or the previous image silently gets reused.
 - The bank's 4:5 ad prompts: generate at **3:4 on Seedance or Wan** and crop the sliver to 4:5 in post, or run 9:16 and crop. Kling has no 3:4, so route 4:5 work to Seedance first.
 - Every prompt in this bank fits inside 8 seconds already, so nothing needs rewriting. Ignore any "10 seconds" format note while in the free window; run it at 8.
 - 720p is fine for social and ads. For website hero loops, upscale the best takes afterwards (the web app's upscaler) rather than generating at high resolution.
