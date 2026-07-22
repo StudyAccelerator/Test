@@ -49,6 +49,40 @@ Confirmed against Higgsfield's July 2026 lineup:
 5. Generation only. Nothing in this bank deploys, posts, schedules or publishes anything. Everything generated lands in a folder for Waleed to review and use.
 6. All overlay and script copy follows the content rules (British English, Waleed's voice, no em dashes, no AI-tell vocabulary, no invented numbers).
 
+## Unlimited mode: the settings that make it free (checked 22 July 2026)
+
+The free window is a WEB APP feature, not an API one. Waleed's account confirmed it live: generation through the Higgsfield MCP connection bills credits no matter what, so all volume generation happens in the browser with the **Unlimited mode toggle switched ON** before every run. Only four video models qualify, and only inside these caps:
+
+| Unlimited model | Max duration | Resolution | Aspect ratios | Best used for |
+|---|---|---|---|---|
+| **Kling 3.0** | 8s | 720p | 16:9, 9:16, 1:1 | People, emotion, image-to-video on real assets, camera moves |
+| **Seedance 2.0** | 8s | 720p | 16:9, 9:16, 1:1, 3:4, 4:3, 21:9 | Volume b-roll, objects, macro, anything needing 3:4 for Meta feed |
+| **Wan 2.7** | 8s | 720p | 16:9, 9:16, 1:1, 3:4, 4:3 | Texture loops, stylised abstract shots, audio-synced clips |
+| **Gemini Omni Flash** | 8s | 720p | 16:9, 9:16 | Reference-driven shots and native-audio clips |
+
+Practical notes:
+- The bank's 4:5 ad prompts: generate at **3:4 on Seedance or Wan** and crop the sliver to 4:5 in post, or run 9:16 and crop. Kling has no 3:4, so route 4:5 work to Seedance first.
+- Every prompt in this bank fits inside 8 seconds already, so nothing needs rewriting. Ignore any "10 seconds" format note while in the free window; run it at 8.
+- 720p is fine for social and ads. For website hero loops, upscale the best takes afterwards (the web app's upscaler) rather than generating at high resolution.
+- Stills: Soul runs in the web app under the plan's image allowance; the video-only unlimited list above does not apply to images.
+- Model-per-file quick route: files 01 to 03 people shots on Kling 3.0, object and abstract shots on Seedance; file 04 loops on Wan 2.7 (Kling for the camera glides); file 05 real-asset animations on Kling 3.0 with the screenshot as start image; file 06 volume on Seedance, movement-heavy shots on Kling; file 07 inserts on Seedance; file 09 tracking-shot metaphors on Kling or Gemini Omni Flash, textures on Wan.
+
+### The nine-sample warm-up (one per file, paste these first)
+
+| # | Prompt | Model | Settings (Unlimited ON) |
+|---|---|---|---|
+| 1 | 01 file, A1 kitchen light at 11pm | Seedance 2.0 | 8s, 3:4, 720p, audio off |
+| 2 | 02 file, D1 sand timer | Wan 2.7 | 8s, 3:4, 720p |
+| 3 | 03 file, F1 sunrise over rooftops | Kling 3.0 | 8s, 16:9, 720p, sound off |
+| 4 | 04 file, A1 staircase of light | Kling 3.0 | 8s, 16:9, 720p, sound off |
+| 5 | 05 file, B2 Active Recall flashcards | Seedance 2.0 | 8s, 9:16, 720p, audio off |
+| 6 | 06 file, E1 flashcard shuffle | Kling 3.0 | 8s, 9:16, 720p, sound off |
+| 7 | 07 file, A4 tea steam over notes | Seedance 2.0 | 4s, 1:1, 720p, audio off |
+| 8 | 08 file, B6 doctor's desk still | Soul 2.0 (image) | 3:4, then crop 4:5 |
+| 9 | 09 file, M2 dominoes with one gap | Gemini Omni Flash | 8s, 16:9, 720p |
+
+Run these nine first: they prove each file's style works, one per use case, before you commit hours to volume.
+
 ## Suggested order for the 24 hours
 
 Ads decay fastest and matter most, so generate in this order:
