@@ -24,7 +24,7 @@ The numbers behind that (Search Console, 7 to 15 July 2026):
 - **Indexation is healthy:** 25 pages indexed; the 18 "not indexed" are canonicalised www variants, redirects, and Google's normal new-site crawl queue. Nothing is blocked.
 - **Authority is zero, measured three ways:** Google's Links report has no data; a nine-search mention sweep found no third-party links, no directory listings, no forum threads, no press, nothing beyond the site's own LinkedIn and Facebook profiles; and the site never appears in any of the seven answer-engine probe groundings.
 - **Bing barely knows the site exists:** roughly 10 pages indexed (estimate), with stale titles. Bing feeds ChatGPT and Copilot, so this directly caps AI visibility.
-- **Commercial queries are a different world:** for "a level tutor", "a level tutoring", "best a level tutoring uk" and every variant, the site is absent and the winners are marketplaces (MyTutor, Tutorful, Superprof, Preply) plus niche specialist sites. Verified by both the sweep and an adversarial re-check.
+- **Commercial queries are a different world:** for "a level tutor", "a level tutoring", "best a level tutoring uk" and every variant, the site is absent and the winners are marketplaces (MyTutor, Tutorful, Preply and peers; Superprof shows on subject and city variants) plus niche specialist sites. Verified by both the sweep and an adversarial re-check.
 
 ### What the uploaded reports said, and where they were wrong
 
@@ -54,11 +54,79 @@ The foundation is genuinely strong, which the audit confirmed from outside and i
 
 ## 4. What the winners do that we do not
 
-*(Being filled from the competitor teardown running today; the verified summary lands here.)*
+Eight teardowns on 17 July 2026 (PMT, Save My Exams, MyTutor, Kumon UK, Seneca, MyEdSpace, Up Learn, Tutorful with Superprof), each grounded in their live sitemaps, robots.txt, llms.txt and schema plus verified sample searches. Four adversarial re-checks all came back CONFIRMED. The full agent transcripts are in the 17 July workflow journal; this is the distilled read.
+
+**The shared engine: one intent, one URL, mirrored to the spec.** Every winner runs a strict, predictable URL hierarchy that matches how students phrase queries: Save My Exams runs tens of thousands of spec-mirrored note pages (291 leaves counted on a single subject and board hub), PMT roughly 5,400 pages plus a decade of PDFs, MyEdSpace 964 resource pages, Seneca board-and-tier hubs, Up Learn 148 per-topic lesson pages, MyTutor 768 programmatic money pages, Tutorful 56,315 subject-by-town pages. None of that raw scale is copyable and none of it should be chased. What IS copyable: MyEdSpace proves the small operator's version works. They build ONE exam board deep per subject instead of all boards shallow, and their AQA-only Biology hub outranked both Save My Exams and PMT in our verified check of "aqa a level biology revision notes". Depth in one lane beats breadth.
+
+**E-E-A-T is the giants' shared soft spot.** PMT's page-level author is literally "admin" and its blog is unbylined. Kumon's 448 blog posts are anonymous. MyTutor's blog author schema points at a Gravatar and, on Tutorful, at a dead author page. Seneca's notes are authored by "Seneca Learning". Up Learn has two author archives and names no founder on its about page. The only one doing it properly is Save My Exams: written-by plus reviewed-by named humans with Person schema and credentials on every note. A practising doctor with MBBS on every byline, a real author entity and an author page competes on the axis all of them except SME have ceded.
+
+**AEO plumbing: we are already ahead of seven of the eight.** Fetched on 17 July 2026: PMT, MyTutor, Kumon, Seneca, MyEdSpace, Up Learn and Tutorful ALL have no llms.txt (404s across the board) and no AI-crawler rules of any kind; they are visible to AI by default, not by design. Save My Exams is the exception and the model: a real, hand-curated llms.txt, explicit AI-crawler allowances, LearningResource schema, visible "last updated" dates. alevelaccelerators.com already has the llms.txt, the named AI-crawler robots policy, and the author schema. The plumbing gap to SME that remains: visible last-reviewed dates with honest dateModified, and their glossary-style question-shaped leaf pages.
+
+**Reviews are the citation currency of "best" queries.** MyTutor's roughly 3,900 Trustpilot reviews and MyEdSpace's four-figure count are what the "best A-level tutoring UK" listicles (Avalon, TutorChase and peers) and, through them, AI answers actually cite. We have zero review presence on any platform. The listicles themselves are a second route: being featured in them puts the brand on SERPs it cannot yet rank for directly.
+
+**The lanes the giants abandoned are our fastest lanes.** Verified: MyTutor's blog has had nothing modified since October 2025 and has no 2026 exam-dates content; Seneca runs almost no dated content; the marketplaces are entirely absent from the method, timetable and resit SERPs we checked. Meanwhile Up Learn takes two top-10 slots on resit queries with a dated-plus-evergreen page pair, which is precisely the shape our resitting post (357 impressions, position 21) should grow into. And the "is a level tutoring worth it" SERP is the weakest commercial-adjacent SERP we found anywhere: a solo tutor's blog, a Pakistani ed blog, a UGC piece and a 2017 forum thread. Fresh, honest, doctor-bylined answers walk into these SERPs.
+
+**Subject-level commercial queries are winnable by small specialists.** Verified: solo sites with exact-match domains hold the number one estimated positions for "a level biology tutor" (alevelbiologytutor.com) and "a level maths tutor" (thealevelmathstutor.co.uk), ahead of every marketplace. Generic "a level tutor" belongs to marketplaces and is not worth attacking head-on; "[subject] a level tutor" responds to dedicated subject landing pages, which we do not have.
+
+**What we deliberately do not copy:** resource-hosting at PMT scale, past-paper libraries, programmatic town pages, tutor-inventory marketplaces, Kumon's 750 physical-centre pages, paid-ads-driven volume. Wrong fights for a one-doctor brand.
 
 ## 5. Keyword opportunity map
 
-*(Being filled from today's synthesis; the map lives here.)*
+Current state sources: GSC = Search Console position (ground truth, 7 to 15 July); sweep = 17 July SERP estimate; absent = not found in either. Difficulty is judged from who verifiably holds the SERP today. Opportunity weighs demand signals, winnability and business value together.
+
+**Cluster P1: resits and retakes (fastest real traffic).** Winners today: Save My Exams, StudentCrowd, distance-learning colleges (ICS Learn, CloudLearn, Oxbridge Home Learning), Up Learn's dated pair. No marketplace presence. We already have impressions on 40+ variants.
+
+| Keyword | Intent | Difficulty | Opportunity | Current state | Action |
+|---|---|---|---|---|---|
+| resit a levels / a level resits | informational-commercial | moderate | high | GSC 20 to 31 | Backlog 3: grow the post into the dated resit hub |
+| how much does it cost to resit an a level | informational | easy | high | GSC 9.0 | Direct cost table + answer paragraph |
+| a level resit dates 2026 (and 2027) | informational | easy | high | absent | Dated section inside the hub |
+| when are a level resits | informational | easy | high | GSC 11.8 | Same dated section |
+| can you retake a levels at any age | informational | easy | medium | GSC 10.0 | FAQ entry with direct answer |
+| do you have to pay to resit a levels | informational | easy | medium | GSC 14.2 | Cost section |
+
+**Cluster P1: predicted grades (already page 1, push to top).** Winners: UCAS, Save My Exams, small edu blogs; our post is position 4 to 7.
+
+| Keyword | Intent | Difficulty | Opportunity | Current state | Action |
+|---|---|---|---|---|---|
+| how to improve predicted grades | informational | easy | high | GSC 7.4, sweep 4 | Backlog 5: freshness pass, tighten the quick answer |
+| can your predicted grades change in year 13 | informational | easy | high | GSC 9.0 | Direct answer block |
+| when are predicted grades finalised | informational | easy | high | GSC 11.0, sweep 7 | Direct answer block |
+| what to do if predicted grades are too low | informational | easy | medium | GSC 21.0 | Section + internal link from diagnostic |
+
+**Cluster P1: revision planning and the tracker.** Winners: CGP, Get Revising, timetable-maker tools, Canva. Tool pages rank here, and we have a better tool than any of them.
+
+| Keyword | Intent | Difficulty | Opportunity | Current state | Action |
+|---|---|---|---|---|---|
+| a level revision planner | informational-tool | moderate | high | GSC 32.5 (88 impressions) | Backlog 4: the page never says "planner" |
+| a level revision timetable | informational-tool | moderate | high | GSC 31.5 | Tracker page + timetable post pair |
+| revision timetable maker | tool | moderate | high | GSC 66 | Tracker page wording + named-asset play (backlog 21) |
+| how many hours a day should i revise for a levels | informational | easy | high | GSC 8.0 to 22 | Freshness pass on the hours post |
+| year 12 summer revision | informational | easy | high | GSC 6.3, sweep 2 | Hold and strengthen; internal links each August |
+
+**Cluster P2: methods (blurting is ours to take).** Winners: Birmingham City University, NCC, small tutor blogs. No giant owns method queries.
+
+| Keyword | Intent | Difficulty | Opportunity | Current state | Action |
+|---|---|---|---|---|---|
+| blurting / blurting method / what is blurting | informational | easy | high | GSC 10 to 58 | Freshness + the printable template as the linkable hook |
+| best way to revise for a levels | informational | moderate | high | GSC absent, sweep absent | Strengthen existing post; QuickAnswer rewrite |
+| a level revision techniques | informational | moderate | medium | absent | Same post family, internal links |
+| active recall revision a level | informational | easy | medium | absent | New post in a methods wave |
+| how to revise for a level biology / chemistry / maths / physics | informational | moderate | high | absent | Backlog 7: four subject guides; winners are small sites |
+
+**Cluster P2: tutoring decision (the buyer-adjacent lane).** Winners on "worth it": one-person blogs and a 2017 forum thread. Winners on "[subject] tutor": exact-match solo specialists ahead of marketplaces.
+
+| Keyword | Intent | Difficulty | Opportunity | Current state | Action |
+|---|---|---|---|---|---|
+| is a level tutoring worth it | commercial-informational | easy | high | absent (weakest SERP found) | Draft exists in the wave pipeline; ship in next wave |
+| one to one a level tutoring | commercial-informational | moderate | high | GSC 14.9 | Freshness pass on the existing post |
+| how much does a level tutoring cost | commercial-informational | easy | high | absent | Backlog 19: honest cost post |
+| a level biology tutor (and per subject) | commercial | moderate | medium-high | absent | Backlog 20: subject landing pages, needs Waleed |
+| best a level tutoring uk | commercial | hard directly | medium via listicles | absent | Backlog 22: get INTO the roundups |
+
+**Cluster P2: results season (13 August).** Winners: UCAS, universities, The Uni Guide; the wave 1 posts are indexed and ready to catch the surge. Action: backlog 12 freshness pass in early August; every hour of that week matters.
+
+**Cluster P3 (watch, do not chase yet):** "a level courses online" (verified intent mismatch: distance-learning qualification providers, not revision courses), generic "a level tutor" (marketplace wall), parent long-tails ("how to help my child revise for a levels": currently won by Save My Exams and school sites; our parent lane posts in the wave pipeline will be measured here before more is built).
 
 ## 6. The strategy
 
@@ -90,7 +158,17 @@ Statuses: **queued**, **in batch (awaiting approval)**, **live**, **blocked**, *
 | 14 | Title-length trims on the five over-60-char titles (not the homepage) | Truncated titles in results | queued |
 | 15 | Sitemap lastmod for static pages, honest dates only | Minor crawl signal | queued |
 | 16 | llms.txt upkeep line for the error-log tool once that branch merges | Keep the AI map current | blocked (waits on that merge) |
-| 17 | dateModified discipline: bump only when a post genuinely changes, which freshness passes do | Forfeited freshness signal today (every post shows dateModified = datePublished) | standing rule from batch 3 on |
+| 17 | dateModified discipline plus a visible "Last reviewed" line on posts | Save My Exams' freshness pattern; every post currently shows dateModified = datePublished | standing rule from batch 3 on |
+| 18 | Retrofit the extractable-answer pattern across all 17 posts (question-form titles where honest, direct first-40-words answers) | Verified as what gets pages lifted into AI search groundings | queued |
+| 19 | "How much does A-level tutoring cost in 2026?" post with an honest rates table | Tutorful and MyTutor rank with pricing pages; half the near-miss resit queries are cost queries; feeds the same buyers | queued (needs his price sign-off) |
+| 20 | Per-subject tutoring landing pages (Biology, Chemistry, Maths, Physics) | Verified: solo exact-match specialists outrank marketplaces on "[subject] a level tutor"; we route everything to one generic page | needs Waleed (new public pages) |
+| 21 | Name the tracker as a searchable product and title its page for "revision planner / timetable maker" | PMT proves named assets convert brand searches into rankings; pairs with backlog 4 | needs Waleed (naming decision) |
+| 22 | Get INTO the "best A-level tutoring UK" listicles (Avalon, TutorChase and peers): drafts via the partnership-outreach skill | The AI-answer groundings for "best" queries flow through those third-party roundups; drafts only, he sends | queued (draft-only) |
+| 23 | Honest comparison and alternatives posts (how we differ from Save My Exams, Seneca, MyEdSpace and tutoring marketplaces) | MyEdSpace ships vs-posts weekly; nobody has written ours yet; own the comparison before someone else frames it | queued (copy needs his sign-off) |
+| 24 | Glossary experiment: a small set of definition pages for A-level Biology and Chemistry terms with schema | Seneca's tiny definition pages rank and get AI-cited; cheap test of the question-shaped leaf pattern | queued (after wave 2) |
+| 25 | Single-board-deep notes hub experiment (one subject, one board, 20 to 30 real pages) | MyEdSpace's AQA-only Biology hub verifiably outranks Save My Exams and PMT; the one scale play that works small | strategic, gated on waves 2 to 4 shipping first |
+| 26 | Success-story page template, filled after results day with named, consented student outcomes | Kumon's 28 story pages rank for commercial queries; becomes possible the week real results exist | queued for August (needs consent process) |
+| 27 | GCSE-to-A-level transition hub with PDF for late August (GCSE results 20 August) | Up Learn verifiably owns this family with a guide-plus-download pair; fits the GCSE secondary-tier rule | queued (needs his nod on audience stretch) |
 
 ## 8. Tracked keyword basket (weekly spot checks)
 
@@ -123,4 +201,4 @@ Baseline 17 July 2026: the site appears in none of them. Winners per probe are r
 
 ## 11. Change log
 
-- 2026-07-17: document created from the first full audit (this session). First technical batch built and awaiting approval. Optimiser skill + weekly Monday scheduled task live. Sections 4 and 5 land the same day from the competitor teardown and synthesis.
+- 2026-07-17: document created from the first full audit (this session). First technical batch built and awaiting approval. Optimiser skill + weekly Monday scheduled task live. Sections 4 and 5 filled the same day from the verified competitor teardown; backlog extended to 27 items.
