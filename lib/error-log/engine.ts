@@ -242,6 +242,32 @@ export function loadLog(): Mistake[] | null {
   }
 }
 
+/* The signup record: set once when the gate is completed, so this device
+   goes straight to the tool on every later visit. */
+export const ACCESS_KEY = 'ala-error-log-access-v1'
+
+export type AccessRecord = { name: string; email: string; on: string }
+
+export function saveAccess(rec: AccessRecord) {
+  try {
+    window.localStorage.setItem(ACCESS_KEY, JSON.stringify(rec))
+  } catch {
+    /* blocked storage: the session still opens in memory */
+  }
+}
+
+export function loadAccess(): AccessRecord | null {
+  try {
+    const raw = window.localStorage.getItem(ACCESS_KEY)
+    if (!raw) return null
+    const parsed = JSON.parse(raw) as AccessRecord
+    if (!parsed || typeof parsed !== 'object' || typeof parsed.name !== 'string') return null
+    return parsed
+  } catch {
+    return null
+  }
+}
+
 /* Backup file: everything, human-readable JSON */
 export function exportLog(mistakes: Mistake[]): string {
   return JSON.stringify({ tool: 'A-Level Accelerators Error Log', version: 1, mistakes }, null, 2)

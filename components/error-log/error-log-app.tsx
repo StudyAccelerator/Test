@@ -5,9 +5,13 @@ import {
   dateKey,
   dueMistakes,
   loadLog,
+  loadAccess,
   saveLog,
   type Mistake,
+  type AccessRecord,
 } from '@/lib/error-log/engine'
+import { CARD } from './ui'
+import SignupGate from './signup-gate'
 import LogForm from './log-form'
 import ReviewQueue from './review-queue'
 import LogBook from './log-book'
@@ -19,12 +23,15 @@ export default function ErrorLogApp() {
   const [mistakes, setMistakes] = useState<Mistake[]>([])
   const [tab, setTab] = useState<Tab>('log')
   const [loaded, setLoaded] = useState(false)
+  const [access, setAccess] = useState<AccessRecord | null>(null)
+  const [justOpened, setJustOpened] = useState(false)
 
   const todayKey = dateKey(new Date())
 
-  /* Restore the log, and open on the retests if any are waiting: the queue is
-     the point of the tool, not the form. */
+  /* Restore the signup record and the log, and open on the retests if any
+     are waiting: the queue is the point of the tool, not the form. */
   useEffect(() => {
+    setAccess(loadAccess())
     const stored = loadLog()
     if (stored && stored.length > 0) {
       setMistakes(stored)
@@ -62,9 +69,46 @@ export default function ErrorLogApp() {
     </button>
   )
 
+  /* Deterministic first paint on server and client; the real state swaps in
+     once the load effect has read localStorage. */
+  if (!loaded) {
+    return (
+      <div className="mx-auto w-full max-w-3xl px-5 pb-20 print:hidden" id="error-log-app">
+        <div className={`${CARD} p-10 text-center`}>
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/50">Opening your log...</p>
+        </div>
+      </div>
+    )
+  }
+
+  if (!access) {
+    return (
+      <div className="mx-auto w-full max-w-3xl px-5 pb-20 print:hidden" id="error-log-app">
+        <SignupGate
+          onOpen={(rec) => {
+            setAccess(rec)
+            setJustOpened(true)
+            requestAnimationFrame(() => window.scrollTo({ top: 0, behavior: 'smooth' }))
+          }}
+        />
+      </div>
+    )
+  }
+
   return (
     <>
-      <div className="mx-auto w-full max-w-3xl px-5 pb-20 print:hidden">
+      <div className="mx-auto w-full max-w-3xl px-5 pb-20 print:hidden" id="error-log-app">
+        {justOpened && mistakes.length === 0 && (
+          <div role="status" className="mb-4 rounded-2xl border-l-4 border-emerald-600 bg-emerald-50 px-5 py-4">
+            <p className="font-semibold text-brand-purple">
+              You&apos;re in, {access.name.split(' ')[0]}. This is yours now, on this device, every visit.
+            </p>
+            <p className="mt-1 text-[14px] leading-relaxed text-brand-text/70">
+              Log the first mistake while it still stings. The guide further down this page shows you exactly how to
+              run the log properly.
+            </p>
+          </div>
+        )}
         <div
           aria-label="Error log sections"
           className="sticky top-16 z-30 mb-6 flex gap-1 rounded-2xl bg-white p-1.5 [box-shadow:0_0_0_1px_rgba(46,37,87,.06),0_6px_16px_rgba(46,37,87,.08)] lg:top-2"

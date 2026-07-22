@@ -36,13 +36,13 @@ export default function ErrorLogPage() {
             <HeroFade delay={0.35}>
               <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-text/70">
                 Log every dropped mark, tag what actually caused it, and get each one back in front of you at 3 days,
-                1 week, 2 weeks and 1 month, until you&apos;ve beaten it four times from memory. Free, and nothing you
-                write leaves your browser.
+                1 week, 2 weeks and 1 month, until you&apos;ve beaten it four times from memory. Free for students:
+                sign up once and this device remembers you. The log itself stays private in your browser.
               </p>
             </HeroFade>
             <HeroFade delay={0.5}>
               <ul className="mt-5 flex flex-wrap items-center justify-center gap-2">
-                {['The four causes, tagged', 'Retests on a schedule', 'Printable retest sheets'].map((chip) => (
+                {['The four causes, tagged', 'Retests on a schedule', 'Calendar and paper reminders'].map((chip) => (
                   <li
                     key={chip}
                     className="rounded-full bg-white px-4 py-1.5 text-[13px] font-semibold text-brand-purple ring-1 ring-brand-purple/10"

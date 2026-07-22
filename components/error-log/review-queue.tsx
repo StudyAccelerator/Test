@@ -11,6 +11,7 @@ import {
   type Mistake,
   type ReviewResult,
 } from '@/lib/error-log/engine'
+import { downloadRetestCalendar } from '@/lib/error-log/calendar'
 import { CARD, TierBadge } from './ui'
 
 /* One due mistake: the retest. The fix stays hidden until the student has
@@ -183,6 +184,15 @@ export default function ReviewQueue({
               <>Everything in your log is mastered. Go earn some new mistakes on a past paper.</>
             )}
           </p>
+          {next && (
+            <button
+              type="button"
+              onClick={() => downloadRetestCalendar(mistakes, todayKey)}
+              className="mt-5 rounded-lg border border-brand-purple/20 px-4 py-2.5 text-sm font-semibold text-brand-purple transition hover:bg-brand-purple hover:text-brand-cream"
+            >
+              Put the retest dates in my calendar
+            </button>
+          )}
         </section>
       </div>
     )
@@ -196,13 +206,22 @@ export default function ReviewQueue({
           <strong className="font-serif text-xl text-brand-purple">{due.length}</strong>{' '}
           retest{due.length === 1 ? '' : 's'} due. Cover the fix, answer from memory, then be honest.
         </p>
-        <button
-          type="button"
-          onClick={onPrint}
-          className="rounded-lg border border-brand-purple/20 px-3.5 py-2 text-sm font-semibold text-brand-purple transition hover:bg-brand-purple hover:text-brand-cream"
-        >
-          Print today&apos;s retest sheet
-        </button>
+        <span className="flex flex-wrap gap-2">
+          <button
+            type="button"
+            onClick={() => downloadRetestCalendar(mistakes, todayKey)}
+            className="rounded-lg border border-brand-purple/20 px-3.5 py-2 text-sm font-semibold text-brand-purple transition hover:bg-brand-purple hover:text-brand-cream"
+          >
+            Calendar reminders
+          </button>
+          <button
+            type="button"
+            onClick={onPrint}
+            className="rounded-lg border border-brand-purple/20 px-3.5 py-2 text-sm font-semibold text-brand-purple transition hover:bg-brand-purple hover:text-brand-cream"
+          >
+            Print today&apos;s retest sheet
+          </button>
+        </span>
       </div>
       <div className="space-y-4">
         {due.map((m) => (

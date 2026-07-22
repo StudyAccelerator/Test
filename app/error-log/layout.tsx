@@ -4,7 +4,7 @@ import { GUIDE_FAQS } from '@/components/error-log/guide'
 export const metadata: Metadata = {
   title: 'Free A-Level Error Log: Never Lose the Same Mark Twice',
   description:
-    'Log every mark you drop in past papers and tests, tag the real cause (knowledge, recall, application or exam craft), and retest each mistake at 3 days, 1 week, 2 weeks and 1 month until it stays fixed. Free, private, saves in your browser.',
+    'Log every mark you drop in past papers and tests, tag the real cause (knowledge, recall, application or exam craft), and retest each mistake at 3 days, 1 week, 2 weeks and 1 month until it stays fixed. Free for students after a thirty second signup, with calendar retest reminders.',
   alternates: { canonical: 'https://alevelaccelerators.com/error-log/' },
 }
 

@@ -367,8 +367,8 @@ export default function LogBook({
 
         <div className="mt-5 flex flex-wrap items-center justify-between gap-3 border-t border-brand-purple/10 pt-4">
           <p className="text-[12px] leading-relaxed text-brand-text/50">
-            Your log lives in this browser only. Nothing you write here is sent anywhere, so back it up if you clear
-            your history or switch devices.
+            Your log lives in this browser only. The signup told me who you are; the mistakes themselves are never
+            sent anywhere. Back it up before clearing your history or switching devices.
           </p>
           <div className="flex items-center gap-2">
             <button

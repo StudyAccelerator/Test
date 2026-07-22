@@ -11,6 +11,7 @@ import {
   type TierId,
 } from '@/lib/error-log/taxonomy'
 import { formatDue, newMistake, type Mistake } from '@/lib/error-log/engine'
+import { downloadRetestCalendar } from '@/lib/error-log/calendar'
 import { CARD, INPUT, LABEL, SUBJECT_SUGGESTIONS, TierBadge } from './ui'
 
 type Draft = {
@@ -176,6 +177,16 @@ export default function LogForm({
             See my log
           </button>
         </div>
+        <p className="mt-3 text-center text-[13px] text-brand-text/55">
+          Want the nudge without checking back?{' '}
+          <button
+            type="button"
+            onClick={() => downloadRetestCalendar(mistakes, todayKey)}
+            className="font-semibold text-brand-purple underline decoration-brand-gold/60 underline-offset-4 transition hover:text-brand-gold"
+          >
+            Put your retest dates in your calendar
+          </button>
+        </p>
       </section>
     )
   }

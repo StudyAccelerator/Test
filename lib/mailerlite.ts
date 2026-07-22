@@ -128,6 +128,59 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
   }
 }
 
+/* "Error Log" group, created 22 July 2026: students who open the error log
+   tool through its signup gate. The el_* custom fields exist in the account
+   (el_subjects 1393281, el_notes 1393282, el_date 1393283). */
+const ERROR_LOG_GROUP_ID = '193707705133696383'
+
+export interface ErrorLogSubscriber {
+  email: string
+  name: string
+  yearGroup: string
+  /* Packed per-subject line: "Biology (AQA) C to A; Maths (Edexcel) B to A*" */
+  subjectLines: string
+  /* Plain comma list for the shared subjects field: "Biology, Maths" */
+  subjectNames: string
+  /* Optional: '' when not given, and then never sent */
+  phone: string
+  notes: string
+}
+
+export async function subscribeErrorLog(sub: ErrorLogSubscriber): Promise<SubscribeResult> {
+  try {
+    const optional: Record<string, string> = {}
+    if (sub.phone) optional.phone = sub.phone
+    if (sub.notes) optional.el_notes = sub.notes
+
+    const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${ML_API_KEY}`,
+      },
+      body: JSON.stringify({
+        email: sub.email,
+        fields: {
+          ...optional,
+          name: sub.name,
+          year_group: sub.yearGroup,
+          subjects: sub.subjectNames,
+          el_subjects: sub.subjectLines,
+          el_date: new Date().toISOString().slice(0, 10),
+        },
+        groups: [ERROR_LOG_GROUP_ID],
+      }),
+    })
+    if (res.ok) return 'ok'
+    if (res.status === 422) return 'invalid-email'
+    console.error('[error-log] MailerLite error:', res.status, await res.text())
+    return 'network-error'
+  } catch (err) {
+    console.error('[error-log] MailerLite fetch failed:', err)
+    return 'network-error'
+  }
+}
+
 /* "Sunday Session" group, created 12 July 2026: the weekly newsletter send list */
 const NEWSLETTER_GROUP_ID = '192801700892903405'
 
