@@ -36,6 +36,12 @@ Learned the hard way, so future sessions do not re-derive it. Canva renders each
 - **It offsets a text box from its own background shape.** This is unfixable from CSS: padding, fixed height, `line-height` centring and pseudo-elements were all tried, and the label still floats above its pill. The cover and closing slides' fact chips are the one place this shows.
 - It does render `::before`/`::after`, but as independently positioned shapes, so pseudo-elements are not an escape hatch.
 
-Net: 7 of 9 slides import faithfully; the fact chips on the two dark slides are imperfect and are the known gap. Do not spend another session chasing them through CSS. If a pixel-clean Canva deck is ever needed, the honest fix is a design change (drop the pill treatment and set those facts as plain text), which is Waleed's call because it changes the PDF too.
+Net: the import gets 7 of 9 slides right on its own, and the rest is fixed IN CANVA after import with the connector's `read-design` and `edit-design` tools (this pass was done 24 July 2026; all three decks are corrected and committed). The importer's model is actually correct; its renderer top-anchors a label in its box and ignores centring, so the fix is arithmetic, not redesign. The recipe, for any future re-import:
+
+1. `read-design` with `open_transaction: true` on pages 1, 4 and 9 (plus thumbnails of the rest as an audit). Positions print as `pos: top,left`.
+2. Chips (cover and close): move each label to pill top + 11 and pill left + 32; move each gold dot to pill top + 14 (left stays pill left + 18). `position_element` does it.
+3. Founder caption (page 4): move it to top 461.5 so it clears the photo edge.
+4. Watch for font-substitution overflow: Canva's serif runs wider than Georgia, so a single-line title measured at the column edge can slide under a card (Study deck page 3). Fix with `resize_element` to the column width, which re-wraps it, then shift the elements below it down to match.
+5. Verify each edit against the returned thumbnail, then `finalize: "commit"`. Commits are irreversible; cancel instead if a thumbnail looks wrong.
 
 **PDF import is worse and is not an option:** it turns every card shadow into a solid block, flattens the dark slides' radial wash into a solid gold disc, and breaks word spacing. Tested 17 July 2026.
