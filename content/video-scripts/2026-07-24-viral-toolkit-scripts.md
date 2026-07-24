@@ -2,6 +2,8 @@
 
 Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (Viral Toolkit). Their structure is the skeleton for each one; the beat labels in [square brackets] are their words, so you can check every script against the format they gave. The writing, hooks and voice are ours.
 
+**Hook alignment (checked 24 July against the Personal Brand Hub in Notion):** the hooks below are built on the patterns proven in the hub's reference material: the "it's not a problem with YOU, it's a problem with your TECHNIQUE" reframe (Curtis and Tom's retention intro, and the revelation beat in the Failing-to-1st Cambridge video), the "hours of revising vs the mate who crammed" comparison (the Angry Explainer's opener), the exam-blank felt moment ("you knew it yesterday, where's it gone"), backwards-counted lists that build tension, X to X transformation framing, and their rule that section titles intrigue without giving the technique away. Where a script's hook matches a specific reference, its "why this should hold" note says which.
+
 **Audience:** students (Year 12 and 13). Parents will see them too; nothing here talks down to either.
 **Next step per Curtis and Tom:** film one of each, then book the review call before posting.
 
@@ -22,32 +24,32 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **[Beat: proven hook]**
 
-> I got into medicine with a revision method that was genuinely terrible. If I had to sit my A-levels again, here's exactly what I'd do instead, in five phases. And the fifth one is the one almost nobody does, so stay for that.
+> I got into medicine with a revision method that was genuinely terrible. It took me years to work out the problem was never me, it was my technique. So if I had to sit my A-levels again, here's exactly what I'd do instead, in five phases. And the fifth one is the one almost nobody does, so stay for that.
 
 *On-screen text: "If I sat my A-levels again: the 5 phases"*
 
-**[Beat: list of ~5 linked points, framed as phases. First couple quick, detail saved for the last couple.]**
+**[Beat: list of ~5 linked points, framed as phases. First couple quick, detail saved for the last couple. Phase names kept intriguing rather than descriptive, per Curtis and Tom's vague-title rule: the label pulls you in, the talking reveals the technique.]**
 
 > Phase one. Diagnose. I'm a doctor. I can't treat a patient until I know what's wrong, and you can't fix your revision until you know where it's broken. One hour with your spec: every topic gets a red, amber or green. Be honest. That list runs everything else.
 
 > Phase two. First contact. When you meet a topic for the first time, keep it quick. Understand it, rough summary, move on. Your first pass is not where the marks come from, so stop polishing your notes. Nobody's marking your notes.
 
-> Phase three. Retrieval. This is where I went wrong at 17. I read my notes over and over until they felt familiar, and familiar is a trap. What I'd do now: shut the notes, blank page, write out everything I can remember about the topic. Then open the notes and fix the gaps in a different colour. It feels harder because it is harder. That discomfort is where the marks are made.
+> Phase three. The blank page. This is where I went wrong at 17. I read my notes over and over until they felt familiar, and familiar is a trap. What I'd do now: shut the notes, blank page, write out everything I can remember about the topic. Then open the notes and fix the gaps in a different colour. It feels harder because it is harder. That discomfort is where the marks are made.
 
-> Phase four. Spacing. Come back to each topic before you feel ready. Three days, then a week, then two weeks. If you wait until going back feels comfortable, you've waited too long. Forgetting a bit and dragging it back is the exercise. That's the rep.
+> Phase four. Too soon. Come back to each topic before you feel ready. Three days, then a week, then two weeks. If you wait until going back feels comfortable, you've waited too long. Forgetting a bit and dragging it back is the exercise. That's the rep. And once a topic survives that, it's ready for the phase that actually decides your grade.
 
-> Phase five. Performance. Here's the one nobody does properly. Knowing a topic and scoring marks on it are two different skills. So from around halfway through the year: past papers, timed, no notes. Then mark your own answer with the mark scheme open next to it, line by line. You're not checking whether you were right. You're learning what the examiner actually pays for, because that's who decides your grade. Do that with every red topic on your phase one list and the exam stops being a surprise.
+> Phase five. The performance. Here's the one nobody does properly. Knowing a topic and scoring marks on it are two different skills. So from around halfway through the year: past papers, timed, no notes. Then mark your own answer with the mark scheme open next to it, line by line. You're not checking whether you were right. You're learning what the examiner actually pays for, because that's who decides your grade. Do that with every red topic on your phase one list and the exam stops being a surprise.
 
 **[Beat: close]**
 
 > That's the system. Save this for September, and follow for the stuff school never taught you.
 
-*On-screen text through the list: "PHASE 1: DIAGNOSE" / "PHASE 2: FIRST CONTACT" / "PHASE 3: RETRIEVAL" / "PHASE 4: SPACING" / "PHASE 5: PERFORMANCE", each appearing as you say it.*
+*On-screen text through the list: "PHASE 1: DIAGNOSE" / "PHASE 2: FIRST CONTACT" / "PHASE 3: THE BLANK PAGE" / "PHASE 4: TOO SOON" / "PHASE 5: THE PERFORMANCE", each appearing as you say it.*
 
 **Caption:** If I had to sit my A-levels again, this is the whole system. Phase 5 is the one nobody does.
 **Hashtags:** #alevels #alevelrevision #year12 #year13 #studytok
 
-**Why this should hold:** the hook is a confession with authority behind it, the open loop about phase five pulls people through the quick early phases, and the phases build on each other so skipping ahead costs the viewer context. The save line lands because the video is genuinely reusable as a checklist.
+**Why this should hold:** the hook stacks two proven patterns from the hub: the confession-with-authority opener and the "problem was never me, it was my technique" reframe that both Cambridge reference videos are built on. The open loop about phase five pulls people through the quick early phases, the phase names intrigue without giving the technique away (their vague-title rule), and the phases build on each other so skipping ahead costs the viewer context. The save line lands because the video is genuinely reusable as a checklist.
 
 ---
 
@@ -82,7 +84,7 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **Caption:** Number one hurt to film. #alevels #alevelrevision #year12 #year13 #gcse
 
-**Why this should hold:** the ranking promise creates a reason to reach number one, item one turns the camera on the viewer mid scroll (that's the shareable moment, tag a mate who does this), and the closing reframe gives the list a point instead of leaving it as a dunk.
+**Why this should hold:** counting backwards to number one is the exact tension device the Angry Explainer reference video uses (8 down to 1), and the ranking promise creates a reason to reach the end. Item one turns the camera on the viewer mid scroll (that's the shareable moment, tag a mate who does this), and the closing reframe echoes the hub's core message, the problem is the habit and not the student, so the list has a point instead of being a dunk.
 
 ---
 
@@ -111,15 +113,15 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **[Beat: the explanation, landing the quote with its real meaning.]**
 
-> That struggle is not a sign it's failing. It's the actual work. In medicine we'd call it the treatment working. That discomfort is where the marks are made.
+> That struggle is not a sign it's failing. It's the actual work. In medicine we'd call it the treatment working. That discomfort is where the marks are made. Psychologists have a name for the trap, by the way: the illusion of competence. Your notes felt easy because they were in front of you.
 
-> So next session, spend less time where it feels smooth and more time where it hurts a bit. If your revision feels good, it's probably not working. Now you know why.
+> So if this has been you, hear the important part. It was never a problem with you. It was a problem with your technique, and technique is fixable. Next session, spend less time where it feels smooth and more time where it hurts a bit. If your revision feels good, it's probably not working. Now you know why.
 
 *On-screen text at the end: the quote again, now underneath: "feels good = recognising. feels hard = learning."*
 
 **Caption:** The most useful sentence I know about revision. #alevels #alevelrevision #year13 #studytips
 
-**Why this should hold:** the quote is genuinely ambiguous for the first ten seconds, "so what's going on?" opens a loop that only closes at the reveal, and the quote repeating at the end with new meaning is the rewatch trigger. Comments will argue with the premise, which helps it.
+**Why this should hold:** the quote is genuinely ambiguous for the first ten seconds, "so what's going on?" opens a loop that only closes at the reveal, and the quote repeating at the end with new meaning is the rewatch trigger. The resolution lands on "not a problem with you, a problem with your technique", the exact reframe Curtis and Tom flagged as the best line in the niche, so the video ends on the emotional beat rather than the mechanism. Comments will argue with the premise, which helps it.
 
 ---
 
@@ -130,9 +132,9 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **[Beat: proven hook]** *(VO over broll: you dropping your bag, sitting down at the desk, opening a textbook)*
 
-> Most students finish a three hour study session with no idea whether any of it worked. You can know in five minutes.
+> You spend hours revising and still get the same grade as your mate who crammed the night before. That's not because they're smarter. It's because hours don't count. Sessions that stick count.
 
-*On-screen text: "how to know your revision worked"*
+*On-screen text: "why the crammer beats you"*
 
 **[Beat: establish credibility]** *(broll: you in scrubs, lanyard visible, walking in or making tea after a shift)*
 
@@ -144,7 +146,7 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **[Beat: introduce the list]** *(broll: clean shot of a blank page and a pen being picked up)*
 
-> Here are 3 simple habits that make every session count.
+> Here are 3 simple habits that make your hours actually count.
 
 **[Beat: broll of you doing each thing, VO matching what's on screen]**
 
@@ -166,7 +168,7 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **Caption:** The 5 minutes at each end of a session matter more than the 3 hours in the middle. #alevels #alevelrevision #year12 #year13 #studytok
 
-**Why this should hold:** every VO line has a literal picture attached, so the video works muted and rewards watching to the end (the corrected page is a satisfying payoff shot). The "I know how it feels" beat is doing the heavy lifting on trust; deliver it plainly, not sadly.
+**Why this should hold:** the hook is a direct adaptation of the Angry Explainer reference video's opener (hours of revising vs the mate who crammed), which is the proven pain point in this niche, and the promise resolves it without the insult angle he uses. Every VO line has a literal picture attached, so the video works muted and rewards watching to the end (the corrected page is a satisfying payoff shot). The "I know how it feels" beat is doing the heavy lifting on trust; deliver it plainly, not sadly.
 
 ---
 
@@ -177,9 +179,9 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **[Beat: proven hook]**
 
-> There's a five minute revision method that shows you exactly what you don't know. And most students have never once done it properly.
+> Have you ever revised something and felt like you genuinely knew it, then walked into the exam and your mind just went blank? There's a five minute method that fixes exactly that. And most students have never once done it properly.
 
-*On-screen text: "the 5 minute method most students skip"*
+*On-screen text: "knew it yesterday. blank in the exam."*
 
 **[Beat: hype up the method]**
 
@@ -197,7 +199,7 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **[Beat: how the method works as the solution]**
 
-> Blurting forces the recall. Notes shut, blank page, one topic, and you write down everything you can remember. No peeking. And whatever doesn't come out matters most, because if it's not on that page, it's not in your head either. Now you know exactly what's missing instead of guessing.
+> Blurting forces the recall, and it's brutally honest. No more "I think I sort of know it". You either remember it or you don't. Notes shut, blank page, one topic, and you write down everything you can remember. No peeking. And whatever doesn't come out matters most, because if it's not on that page, it's not in your head either. Now you know exactly what's missing instead of guessing.
 
 **[Beat: how to implement it]**
 
@@ -211,7 +213,7 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **Caption:** Blurt and Fix. The fix is the half everyone skips. #alevels #alevelrevision #blurting #year12 #year13
 
-**Why this should hold:** the hook promises a payoff with a time cost of five minutes, the problem section makes the viewer feel caught before the solution arrives, and the implementation is concrete enough to try tonight, which is what earns the saves and shares.
+**Why this should hold:** the hook is the exam-blank felt moment, the same opener Curtis and Tom used for the blurting section of the long-form script, paired with a five minute promise. The problem section makes the viewer feel caught before the solution arrives, the "you either remember it or you don't" line carries the brutal honesty they liked in the long-form draft, and the implementation is concrete enough to try tonight, which is what earns the saves and shares. It also seeds the same method the long-form video teaches, so the two reinforce each other.
 
 ---
 
