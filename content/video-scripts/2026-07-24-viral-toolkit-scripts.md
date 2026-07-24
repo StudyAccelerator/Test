@@ -20,6 +20,7 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 - Filmed on phone, low camera angle, static shot.
 - Pen or pencil in hand. Notes, textbook, calculator around you, as if you were mid session and decided to film.
 - Off the cuff energy: know the beats, not the exact words. If a line feels stiff out loud, say it your way. These scripts are written to be spoken, so read each one aloud once before filming and trim anything your mouth trips on.
+- How the lines are written: they flow like talking, not like bullet points. Commas and "..." mark where you'd naturally breathe or trail, and the rare short sentence is a deliberate punch, not the default rhythm. If you find yourself sounding clipped, you're pausing at marks that aren't there.
 - Scrubs: scripts 3, 4 and 5 lean on the doctor framing, so film those in scrubs. 1, 2 and 6 work best looking like a normal study session.
 - Captions on everything (most viewers watch muted). On-screen hook text must be visible within the first second.
 
@@ -32,25 +33,25 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 
 **[Beat: proven hook]**
 
-> I got into medicine with a revision method that was genuinely terrible. It took me years to work out the problem was never me, it was my technique. So if I had to sit my A-levels again, here's exactly what I'd do instead, in five phases. And the fifth one is the one almost nobody does, so stay for that.
+> I got into medicine with a revision method that was genuinely terrible, and it took me years to realise the problem was never me, it was my technique. So if I had to sit my A-levels again, this is exactly what I'd do instead, in five phases... and it's the fifth one that almost nobody does, so stay for that.
 
 *On-screen text: "If I sat my A-levels again: the 5 phases"*
 
 **[Beat: list of ~5 linked points, framed as phases. First couple quick, detail saved for the last couple. Phase names kept intriguing rather than descriptive, per Curtis and Tom's vague-title rule: the label pulls you in, the talking reveals the technique.]**
 
-> Phase one. Diagnose. I'm a doctor. I can't treat a patient until I know what's wrong, and you can't fix your revision until you know where it's broken. One hour with your spec: every topic gets a red, amber or green. Be honest. That list runs everything else.
+> Phase one is diagnose. I'm a doctor, so I can't treat a patient until I know what's actually wrong, and honestly, your revision works exactly the same way. So before anything else, spend one hour going through your spec and marking every single topic red, amber or green... and be honest with yourself here, because that list is going to run everything else you do.
 
-> Phase two. First contact. When you meet a topic for the first time, keep it quick. Understand it, rough summary, move on. Your first pass is not where the marks come from, so stop polishing your notes. Nobody's marking your notes.
+> Phase two, first contact. When you meet a topic for the first time, keep it quick... understand it, make a rough summary, and move on, because your first pass is not where the marks come from. And please stop polishing your notes, nobody is marking your notes.
 
-> Phase three. The blank page. This is where I went wrong at 17. I read my notes over and over until they felt familiar, and familiar is a trap. What I'd do now: shut the notes, blank page, write out everything I can remember about the topic. Then open the notes and fix the gaps in a different colour. It feels harder because it is harder. That discomfort is where the marks are made.
+> Phase three is the blank page, and this is where I went wrong at 17. I used to read my notes over and over until they felt familiar, but familiar is a trap. What I'd do now is shut the notes, take a blank page, and write out everything I can remember about the topic... then open the notes back up and fix the gaps in a different colour. And yes, it feels harder, because it is harder. That discomfort is where the marks are made.
 
-> Phase four. Too soon. Come back to each topic before you feel ready. Three days, then a week, then two weeks. If you wait until going back feels comfortable, you've waited too long. Forgetting a bit and dragging it back is the exercise. That's the rep. And once a topic survives that, it's ready for the phase that actually decides your grade.
+> Phase four, too soon. You want to come back to each topic before you feel ready, so three days later, then a week, then two weeks... because if you wait until going back feels comfortable, you've waited too long. That little bit of forgetting, and having to drag it back out, is the actual exercise. And once a topic survives that, it's ready for the phase that decides your grade.
 
-> Phase five. The performance. Here's the one nobody does properly. Knowing a topic and scoring marks on it are two different skills. So from around halfway through the year: past papers, timed, no notes. Then mark your own answer with the mark scheme open next to it, line by line. You're not checking whether you were right. You're learning what the examiner actually pays for, because that's who decides your grade. Do that with every red topic on your phase one list and the exam stops being a surprise.
+> Which is phase five, the performance. This is the one nobody does properly, because knowing a topic and scoring marks on it are two completely different skills. So from about halfway through the year, you do past papers, timed, no notes... and then you mark your own answers with the mark scheme open next to you, line by line. You're not checking whether you were right, you're learning what the examiner actually pays for, because they're the one deciding your grade. Do that with every red topic on your phase one list, and the exam stops being a surprise.
 
 **[Beat: close]**
 
-> That's the system. Save this for September, and follow for the stuff school never taught you.
+> So that's the system. Save this for September, and follow for the stuff school never taught you.
 
 *On-screen text through the list: "PHASE 1: DIAGNOSE" / "PHASE 2: FIRST CONTACT" / "PHASE 3: THE BLANK PAGE" / "PHASE 4: TOO SOON" / "PHASE 5: THE PERFORMANCE", each appearing as you say it.*
 
@@ -74,19 +75,19 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 
 **[Beat: fast list where each item builds tension. Escalation here: each habit feels MORE like real work than the last, which is exactly what makes it more dangerous. A couple of words each.]**
 
-> Number five. Making the perfect timetable. I lost whole evenings to mine.
+> Number five, making the perfect timetable... I lost whole evenings to mine.
 
-> Four. Rewriting your notes in neat. That's art, not revision.
+> Four, rewriting your notes in neat. That's art, not revision.
 
-> Three. Highlighting. The textbook looks amazing. Your brain wasn't there.
+> Three, highlighting, because the textbook ends up looking amazing and your brain wasn't even there.
 
-> Two. Rereading until it feels familiar. Familiar is not the same as knowing.
+> Two, rereading until it feels familiar... and familiar is not the same as knowing.
 
-> Number one. Watching study videos instead of studying. Yes. Including this one.
+> And number one, watching study videos instead of actually studying. Yes, including this one.
 
 **[Beat: close]**
 
-> And here's the scary bit. The higher up that list, the more it feels like real work. Test yourself instead. Follow and I'll show you how.
+> And here's the scary bit... the higher up that list you go, the more it feels like real work. So test yourself instead, and follow, because I'll show you how.
 
 *On-screen text: countdown numbers 5, 4, 3, 2, 1 punching in with each item.*
 
@@ -113,17 +114,17 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 
 **[Beat: unpack the statement, keeping loops open, revealing slowly.]**
 
-> Think about what most revision actually looks like. You read your notes. It flows. Everything makes sense. You close the book feeling calm and on top of it. Then you sit the paper, and the page might as well be in another language. I've been there. So what's going on?
+> Think about what most revision actually looks like. You read through your notes, it flows, everything makes sense, and you close the book feeling calm and on top of it... and then you sit the paper and the page might as well be in another language. I've been there. So what's actually going on?
 
-> Your brain has two settings. Recognising, and recalling. Reading your notes only ever uses the first one. The information is already in front of you, so your brain just nods along. Seen it before, seen it before. That nodding feels like knowing. It isn't.
+> Well, your brain has two settings, recognising and recalling, and reading your notes only ever uses the first one. The information's already sat in front of you, so your brain just nods along going yep, seen that before, seen that before... and that nodding feels exactly like knowing. It isn't.
 
-> The exam only tests the second setting. Blank page, a question, and whatever you can pull out of your own head with the clock running. And the uncomfortable part is that the only way to train recall is to practise recalling, and practising it feels bad. You blank. You get things wrong. You sit there straining for a word you swear you know.
+> The problem is the exam only tests the second setting. It's a blank page, a question, and whatever you can pull out of your own head with the clock running. And here's the uncomfortable part... the only way to train recall is to practise recalling, and practising it feels bad. You blank, you get things wrong, you sit there straining for a word you swear you know.
 
 **[Beat: the explanation, landing the quote with its real meaning.]**
 
-> That struggle is not a sign it's failing. It's the actual work. In medicine we'd call it the treatment working. That discomfort is where the marks are made. Psychologists have a name for the trap, by the way: the illusion of competence. Your notes felt easy because they were in front of you.
+> But that struggle isn't a sign it's failing, that's the actual work. In medicine we'd call that the treatment working... that discomfort is where the marks are made. Psychologists even have a name for the trap, by the way, it's called the illusion of competence. Your notes felt easy because they were in front of you.
 
-> So if this has been you, hear the important part. It was never a problem with you. It was a problem with your technique, and technique is fixable. Next session, spend less time where it feels smooth and more time where it hurts a bit. If your revision feels good, it's probably not working. Now you know why.
+> So if this has been you, hear the important part, because it was never a problem with you... it was a problem with your technique, and technique is fixable. So next session, spend less time where it feels smooth and more time where it hurts a bit. If your revision feels good, it's probably not working... and now you know why.
 
 *On-screen text at the end: the quote again, now underneath: "feels good = recognising. feels hard = learning."*
 
@@ -140,33 +141,33 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 
 **[Beat: proven hook]** *(VO over broll: you dropping your bag, sitting down at the desk, opening a textbook)*
 
-> You spend hours revising and still get the same grade as your mate who crammed the night before. That's not because they're smarter. It's because hours don't count. Sessions that stick count.
+> You spend hours revising and still get the same grade as your mate who crammed the night before... and it's not because they're smarter, it's because hours don't count. Sessions that stick count.
 
 *On-screen text: "why the crammer beats you"*
 
 **[Beat: establish credibility]** *(broll: you in scrubs, lanyard visible, walking in or making tea after a shift)*
 
-> I'm a doctor. Six years ago I was sitting exactly where you are, and I've worked with over 1,000 A-level students since.
+> I'm a doctor, and six years ago I was sitting exactly where you are... and since then I've worked with over 1,000 A-level students.
 
 **[Beat: level with the audience, "I know how it feels to..."]** *(broll: closing a textbook, rubbing your eyes, staring at a full page of notes)*
 
-> So I know exactly how it feels to close the books after a whole evening and realise you can't remember a single thing you covered.
+> So I know exactly how it feels to close the books after a whole evening of revision and realise you can't actually remember a single thing you covered.
 
 **[Beat: introduce the list]** *(broll: clean shot of a blank page and a pen being picked up)*
 
-> Here are 3 simple habits that make your hours actually count.
+> So here are three simple habits that make your hours actually count.
 
 **[Beat: broll of you doing each thing, VO matching what's on screen]**
 
-> One. Start with a blank page, not your notes. Two minutes writing whatever you remember from last session. It warms up your recall and tells you exactly where to begin.
+> One, start with a blank page instead of your notes. Just two minutes writing down whatever you remember from last session, because it warms up your recall and tells you exactly where to begin.
 
 *(Broll: hand writing fast on a blank sheet, notes pushed to the side, still closed.)*
 
-> Two. End with a closed book test. Books shut, five minutes, everything you just learned, out of your head and onto the page. This is the part that actually files it away.
+> Two, end with a closed book test. Books shut, five minutes, everything you've just learned out of your head and onto the page... because this is the part that actually files it away.
 
 *(Broll: textbook physically closing, phone timer being set to 5:00, more writing.)*
 
-> Three. Mark yourself in a different colour. The red bits are not failures. They're a written list of your easiest marks to gain, and that's where tomorrow's session starts.
+> And three, mark yourself in a different colour. Those red bits aren't failures, they're literally a written list of your easiest marks to gain... and that's exactly where tomorrow's session starts.
 
 *(Broll: red pen ticking and correcting the page, then a close-up of the corrected page with red gaps filled in.)*
 
@@ -187,31 +188,31 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 
 **[Beat: proven hook]**
 
-> Have you ever revised something and felt like you genuinely knew it, then walked into the exam and your mind just went blank? There's a five minute method that fixes exactly that. And most students have never once done it properly.
+> Have you ever revised something and genuinely felt like you knew it... and then you walk into the exam and your mind just goes blank? There's a five minute method that fixes exactly that, and most students have never once done it properly.
 
 *On-screen text: "knew it yesterday. blank in the exam."*
 
 **[Beat: hype up the method]**
 
-> I've worked with over 1,000 A-level students. If I could only keep one method from everything I teach, it's this one. It's in every single session for a reason.
+> I've worked with over 1,000 A-level students now, and if I could only keep one method from everything I teach, it would be this one... it's in every single session for a reason.
 
 **[Beat: introduce what the method is called]**
 
-> It's called blurting. In our programmes we call it Blurt and Fix, because the fix is the half everyone skips.
+> It's called blurting, although in our programmes we call it Blurt and Fix, because the fix is the half everyone skips.
 
 *On-screen text: "BLURT AND FIX"*
 
 **[Beat: the science explaining the problem, not the method]**
 
-> First, why you need it at all. When you reread your notes, your brain runs on recognition. The information is already on the page, so nothing ever has to be pulled out of memory. It feels smooth, and that smoothness fools you into thinking you know it. But exams don't test recognition. They test recall: blank page, time pressure, nothing in front of you. Completely different skill, and rereading never trains it.
+> But first, here's why you even need it. When you reread your notes, your brain runs on recognition... the information's already sat on the page, so nothing ever has to be pulled out of memory. It feels smooth, and that smoothness fools you into thinking you know it. The problem is exams don't test recognition, they test recall... blank page, time pressure, nothing in front of you. That's a completely different skill, and rereading never trains it.
 
 **[Beat: how the method works as the solution]**
 
-> Blurting forces the recall, and it's brutally honest. No more "I think I sort of know it". You either remember it or you don't. Notes shut, blank page, one topic, and you write down everything you can remember. No peeking. And whatever doesn't come out matters most, because if it's not on that page, it's not in your head either. Now you know exactly what's missing instead of guessing.
+> Blurting forces the recall, and it's brutally honest, because there's no more "I think I sort of know it"... you either remember it or you don't. So it's notes shut, blank page, one topic, and you write down everything you can remember, no peeking. And whatever doesn't come out is actually the most important part, because if it's not on that page, it's not in your head either... so now you know exactly what's missing instead of guessing.
 
 **[Beat: how to implement it]**
 
-> So here's the full method. Pick one topic. Notes closed. Blank page. Five minutes, write everything. Then open your notes and fix every gap in a different colour. That page is now a map of your weak spots. Blurt the same topic again in three or four days, and watch the second colour shrink.
+> So here's the full method. Pick one topic, close the notes, take a blank page, and give yourself five minutes to write down everything. Then open your notes and fix every gap in a different colour, and that page becomes a map of your weak spots. Come back and blurt the same topic again in three or four days... and watch that second colour shrink.
 
 **[Beat: close]**
 
@@ -235,19 +236,19 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 **[Beat: someone off camera says a statement. You put it into a category: A* student or D student.]**
 
 > **Off camera:** I reread my notes the night before the exam.
-> **You:** D student. Sorry. That's recognition, not recall. It feels safe and it does almost nothing.
+> **You:** D student, sorry... that's recognition, not recall, so it feels safe and it does almost nothing.
 
 > **Off camera:** I start past papers before I've finished learning the content.
-> **You:** A* student. Feels wrong, works brilliantly. The paper teaches you what to learn next.
+> **You:** A* student. It feels wrong but it works brilliantly, because the paper teaches you what to learn next.
 
 > **Off camera:** I highlight in four different colours.
-> **You:** D student. Gorgeous notes, though.
+> **You:** D student... gorgeous notes, though.
 
 > **Off camera:** I test myself and get loads of it wrong.
-> **You:** A* student. Every wrong answer in practice is a mark you don't lose in the real thing.
+> **You:** A* student, because every wrong answer in practice is a mark you don't lose in the real thing.
 
 > **Off camera:** I spent my whole Sunday making a revision timetable.
-> **You:** This one's painful, because it was me. If the timetable takes longer than 20 minutes, D student move. The timetable is not the work.
+> **You:** Oh, this one's painful, because that was me... if the timetable takes longer than 20 minutes, that's a D student move. The timetable is not the work.
 
 > **Off camera:** I finish every topic by writing it all out from memory on a blank page.
 > **You:** That's blurting, and that's the most A* student thing you've said all day.
@@ -340,25 +341,25 @@ Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script
 
 **[Open, straight in, no preamble]**
 
-> Study habits: red flag or green flag. From a doctor. Let's go.
+> Study habits, red flag or green flag... from a doctor. Let's go.
 
 *On-screen: the two-column scoreboard appears.*
 
-> Music with lyrics while you revise. Red flag. Your brain's language system can't process the song and the science at the same time, so both lose. Lyric free or silence.
+> Music with lyrics while you revise? Red flag, because your brain's language system can't process the song and the science at the same time, so both of them lose. Go lyric free, or just silence.
 
-> Revising in bed. Red flag. Your brain links places with jobs, and that place's job is sleep. You'll revise worse and then sleep worse. Desk for work, bed for rest.
+> Revising in bed? Red flag. Your brain links places with jobs, and that place's job is sleep... so you end up revising worse and then sleeping worse. Desk for work, bed for rest.
 
-> Testing yourself before you feel ready. Green flag. The strain of dragging something half-learned out of your head is what wires it in. Waiting until you're ready means waiting too long.
+> Testing yourself before you feel ready? Green flag, because the strain of dragging something half-learned out of your head is exactly what wires it in. If you wait until you feel ready, you've waited too long.
 
-> The all-nighter before the exam. Red flag, and this one's medical. Sleep is when your brain files the day into long term memory. Skip it and you sat up all night throwing away the filing.
+> The all-nighter before the exam? Red flag, and this one's genuinely medical... sleep is when your brain files the day into long term memory, so if you skip it, you've basically sat up all night throwing away the filing.
 
-> Explaining a topic out loud to nobody. Green flag. Weird, works. If you can't say it simply with the notes closed, you don't know it yet, and now you know exactly where it breaks.
+> Explaining a topic out loud to absolutely nobody? Green flag. I know it's weird, but it works, because if you can't say it simply with the notes closed, you don't actually know it yet... and now you know exactly where it breaks.
 
-> Coming back to a topic three days later instead of the same night. Green flag. A little forgetting makes the return trip harder, and harder is what makes it stick.
+> And coming back to a topic three days later instead of the same night? Green flag, because that little bit of forgetting makes the return trip harder... and harder is what makes it stick.
 
 **[Close, tally on screen]**
 
-> Three red, three green. Comment a habit and I'll flag it in part two.
+> So that's three red, three green. Comment a habit and I'll flag it in part two.
 
 *On-screen text: each habit gets a title card as it's named; verdict stamps RED FLAG or GREEN FLAG; thumbnail slides into its column. Final frame shows the full scoreboard.*
 
