@@ -4,6 +4,14 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 **Hook alignment (checked 24 July against the Personal Brand Hub in Notion):** the hooks below are built on the patterns proven in the hub's reference material: the "it's not a problem with YOU, it's a problem with your TECHNIQUE" reframe (Curtis and Tom's retention intro, and the revelation beat in the Failing-to-1st Cambridge video), the "hours of revising vs the mate who crammed" comparison (the Angry Explainer's opener), the exam-blank felt moment ("you knew it yesterday, where's it gone"), backwards-counted lists that build tension, X to X transformation framing, and their rule that section titles intrigue without giving the technique away. Where a script's hook matches a specific reference, its "why this should hold" note says which.
 
+**Short-form tracker references (watched 24 July, real numbers):** the three inspiration videos attached to the tracker's idea rows were pulled and watched frame by frame.
+
+1. **Caption reel** (bella, Instagram, 127,946 likes): 7 seconds of aesthetic desk b-roll on loop, one static title on screen ("how to become neurologically addicted to studying"), and every bit of value in a 10 point caption written in brain-science language (cues, dopamine, momentum). The video is just a shelf for the caption; saves and shares do the distribution.
+2. **Ratings carousel** (stharzzzz, TikTok photo post, 84,700 likes, 664,000 plays, 34,704 saves): "Rate all the study methods that I use as a straight A student". Eight aesthetic study photos, each naming one method with a score out of 10 and a blunt one or two line personal verdict. Identity in the hook, disagreement in the ratings. This creator scores blurting 1/10, which is exactly the kind of claim Waleed can answer.
+3. **Red flag, green flag** (Tom Vorselen, the study coach, Instagram, 18,856 likes, 1,849 comments, 1:44): talking head with a persistent RED FLAG / GREEN FLAG scoreboard on screen; each habit appears as a title card with a stock image, gets an instant verdict plus a one line science reason, and its thumbnail files into the red or green column so the scoreboard visibly builds. It is the Rankings shape executed solo, no off-camera voice needed.
+
+Scripts 7 to 9 below turn those three tracker ideas into filmable pieces. Script 6 borrows the scoreboard device.
+
 **Audience:** students (Year 12 and 13). Parents will see them too; nothing here talks down to either.
 **Next step per Curtis and Tom:** film one of each, then book the review call before posting.
 
@@ -248,14 +256,118 @@ Six filmable scripts, one per format supplied by Curtis Tilbury and Tom Natras (
 
 > Comment your revision habit and I'll rank it in the next one.
 
-*On-screen text: "A* STUDENT" in green or "D STUDENT" in red stamping on screen with each verdict.*
+*On-screen text: "A* STUDENT" in green or "D STUDENT" in red stamping on screen with each verdict. Edit device from the reference video (Tom Vorselen's red flag green flag reel, 18.9K likes and 1,849 comments): keep a persistent two-column scoreboard at the top of frame, A* side and D side, and file a small thumbnail of each habit into its column as you give the verdict, so the tally visibly builds through the video.*
 
 **Caption:** Be honest about number one. Comment a habit and I'll rank it. #alevels #alevelrevision #year12 #year13 #studytok
 
-**Why this should hold:** the format is a comment engine. Every verdict invites disagreement, the timetable confession keeps it warm rather than smug, and the closing CTA turns the comment section into next week's episode. This is the most repeatable format of the six.
+**Why this should hold:** the format is a comment engine. Every verdict invites disagreement, the timetable confession keeps it warm rather than smug, and the closing CTA turns the comment section into next week's episode. The running scoreboard is what the highest-comment reference in the tracker does, and it gives the viewer a reason to stay for the final tally. This is the most repeatable format of the six.
+
+---
+
+## Script 7: Caption reel (tracker idea: "How to become neurologically addicted to studying")
+
+**Format from the reference (bella, 127,946 likes):** the video is 6 to 8 seconds of quiet b-roll on loop with one static title. No talking. The caption is the content. Cheapest film of the batch.
+
+**Film:** one slow phone shot of your real desk mid session: open textbook, blurt sheet with two colours visible, pen down, mug. A second angle in scrubs with the stethoscope on the desk works as an alternate. No face needed.
+
+*On-screen text (static, centred, serif like the reference): "how to make your brain crave revision (from a doctor)"*
+
+**Caption (this is the actual content):**
+
+> Doctors learn more content in a year than A-level students see in two. Here's how I trained my brain to want the work, not fight it.
+>
+> 1. Give your brain a starting cue. Same desk, same drink, same playlist with no lyrics. After a week or two the cue alone tells your brain it's time to focus.
+>
+> 2. Make the first two minutes stupidly easy. Open the page and write one line from memory. Starting is the hard part, so shrink it.
+>
+> 3. Stop while you've still got something left. End on momentum and your brain files the session as rewarding, so it doesn't dread the next one.
+>
+> 4. Keep the score visible. Tick off topics, keep your fixed blurt sheets in a pile. Seeing the pile grow is a small reward every session.
+>
+> 5. Leave one question unfinished on purpose. Your brain hates an open loop and keeps working on it in the background.
+>
+> 6. Put the phone in another room for the first 30 minutes. Revision can't compete with an infinite scroll, so don't make it try.
+>
+> 7. End every session by testing yourself for five minutes, notes closed. The test is what tells your brain this matters, keep it.
+>
+> 8. Same time every day beats double the hours at random times. Your brain starts expecting focus at that hour instead of debating it.
+>
+> 9. Reward yourself straight after the session, not at the end of the day. Habits form when the reward follows the work quickly.
+>
+> 10. Stop waiting for motivation. Your brain gets attached to what you repeat, not what you feel inspired by.
+>
+> Follow for the stuff school never taught you.
+
+**Hashtags:** #alevels #alevelrevision #studytips #year12 #year13
+
+**Why this should hold:** the reference proves the format: an intriguing brain-science title over calm study b-roll, with the caption doing the teaching. The doctor angle is the differentiator nobody else in the tracker's references has, and every point is a thing the viewer can do tonight, which is what earns the saves this format lives on.
+
+---
+
+## Script 8: Ratings carousel (tracker idea: "Rate all the study methods I use as…")
+
+**Format from the reference (stharzzzz, 84,700 likes, 34,704 saves):** a photo carousel, not a video. Cover slide with the identity hook, then one slide per method: name, score out of 10, blunt two line verdict. Aesthetic study photos as backgrounds.
+
+**Photos:** use your own real phone photos, per our platform rules: your desk, a blurt sheet mid fix, a marked past paper, the tracker on screen, notes stacks, a scrubs shot for the cover. No stock images.
+
+**Slides:**
+
+> **Cover:** Rating the study methods I used to get into medicine (and the ones I tell my 1,000+ students to drop)
+
+> **1. Blurt and Fix. 10/10.** Notes closed, blank page, write everything you remember, then fix the gaps in a second colour. Brutally honest and five minutes long. The famous carousel that rated blurting 1 out of 10? They skipped the fix. That's writing, not revising.
+
+> **2. Rereading your notes. 2/10.** Feels calm, does almost nothing. It trains recognising, and exams test recall. The 2 points are for finding what you'd forgotten you covered.
+
+> **3. Highlighting. 2/10.** Your textbook ends up beautiful and your brain was never involved. Fine for marking what to blurt later. Useless as the revision itself.
+
+> **4. Flashcards. 8/10.** Done properly they're spaced retrieval, which is exactly what memory wants. Done badly they're rereading with extra steps. The card has to make you struggle before you flip it.
+
+> **5. Mind maps. 5/10.** Good for seeing how a topic connects the first time you meet it. Bad as a memory tool, because drawing pretty branches isn't recall.
+
+> **6. Past papers with the mark scheme open. 9/10.** Mark your own answer line by line and you learn what the examiner actually pays for. Only loses a point because most students start them months too late.
+
+> **Last slide:** The pattern: if it feels smooth, it's probably training the wrong skill. If it makes you pull things out of your head, it's working. Follow for the stuff school never taught you.
+
+**Caption:** Rated honestly, as someone who marks the papers you're revising for. Which one do you disagree with? #alevels #alevelrevision #studytok #year12 #year13
+
+**Why this should hold:** identity in the cover, disagreement in the scores, and a direct answer to the viral 1/10 blurting claim without naming or mocking anyone. Ratings carousels are save magnets (the reference has almost 35,000 saves), and the last slide gives the list one idea to remember instead of eight fragments.
+
+---
+
+## Script 9: Red flag, green flag (tracker idea, solo version of the Rankings shape)
+
+**Format from the reference (Tom Vorselen, 18,856 likes, 1,849 comments):** talking head, persistent RED FLAG / GREEN FLAG scoreboard top of frame, one habit per title card, instant verdict plus one line of science, thumbnail files into its column, final tally on screen. No second person needed, so this one films solo. **Length:** 60 to 90 seconds. **Wardrobe:** scrubs.
+
+**[Open, straight in, no preamble]**
+
+> Study habits: red flag or green flag. From a doctor. Let's go.
+
+*On-screen: the two-column scoreboard appears.*
+
+> Music with lyrics while you revise. Red flag. Your brain's language system can't process the song and the science at the same time, so both lose. Lyric free or silence.
+
+> Revising in bed. Red flag. Your brain links places with jobs, and that place's job is sleep. You'll revise worse and then sleep worse. Desk for work, bed for rest.
+
+> Testing yourself before you feel ready. Green flag. The strain of dragging something half-learned out of your head is what wires it in. Waiting until you're ready means waiting too long.
+
+> The all-nighter before the exam. Red flag, and this one's medical. Sleep is when your brain files the day into long term memory. Skip it and you sat up all night throwing away the filing.
+
+> Explaining a topic out loud to nobody. Green flag. Weird, works. If you can't say it simply with the notes closed, you don't know it yet, and now you know exactly where it breaks.
+
+> Coming back to a topic three days later instead of the same night. Green flag. A little forgetting makes the return trip harder, and harder is what makes it stick.
+
+**[Close, tally on screen]**
+
+> Three red, three green. Comment a habit and I'll flag it in part two.
+
+*On-screen text: each habit gets a title card as it's named; verdict stamps RED FLAG or GREEN FLAG; thumbnail slides into its column. Final frame shows the full scoreboard.*
+
+**Caption:** Doctor rates your study habits. Comment yours for part two. #alevels #alevelrevision #studytok #year12 #year13
+
+**Why this should hold:** it's the tracker reference's exact engine: fast verdicts, visible scoreboard, one science line each, and a part two CTA that farms the comments. It overlaps script 6 in shape but not in habits, so both can run weeks apart, one solo and one with the off-camera voice Curtis and Tom specified.
 
 ---
 
 ## Filming order suggestion
 
-Batch in one sitting: 2 and 6 first while energy is high (they need pace), then 1 and 5 (longest, most structured), then record the script 4 voice over and pick up its broll plus the scrubs shots for 3 last. Record every script twice; the second take is nearly always the looser, better one.
+Batch in one sitting: 2 and 6 first while energy is high (they need pace), then 9 (solo, same energy as 6), then 1 and 5 (longest, most structured), then record the script 4 voice over and pick up its broll plus the scrubs shots for 3 last. Script 7's b-roll and script 8's photos take ten minutes at the end of the session while the desk is still messy and real. Record every script twice; the second take is nearly always the looser, better one.
