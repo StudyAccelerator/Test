@@ -40,7 +40,9 @@ The fair reading: the reports were roughly right that the site was young and unk
 
 The foundation is genuinely strong, which the audit confirmed from outside and inside: clean single-308 www canonicalisation, correct 404 behaviour, complete and accurate sitemap with staggered lastmod, deliberate AI-crawler robots policy, WebSite + EducationalOrganization + founder Person schema, Article + BreadcrumbList + FAQPage on every post from one shared layout, QuickAnswer and KeyTakeaways blocks (the answer-engine shape), 1,600 to 1,900 word articles fully server-rendered, unique titles and descriptions, en-GB, one H1 per page, deliberate alt text.
 
-**Fixed in the 17 July batch (this session, awaiting Waleed's approval to go live):**
+**Status of the 17 July batch, checked 24 July 2026: still not live, still awaiting Waleed's approval.** Verified this run rather than assumed: `content/seo/` does not exist on `origin/main` at all, the IndexNow key file and the llms.txt Error Log line are absent from `main`, and `https://alevelaccelerators.com/error-log/` returns a 404. Everything below, plus the Error Log tool itself, sits on the unmerged branch `claude/error-log-tool`. One week of crawl benefit has been lost to the wait. See section 10, item 1.
+
+**Fixed in the 17 July batch (built 17 July, awaiting Waleed's approval to go live):**
 
 - 29 internal links missing trailing slashes across 20 files (each cost a 308 redirect hop on every click and crawl).
 - FAQ answers on /faqs/ and /summer-accelerators/ existed only in JSON-LD, not in the rendered HTML: AI crawlers and Google's no-JS view never saw them. The shared accordion now renders every answer in the HTML.
@@ -75,7 +77,9 @@ Eight teardowns on 17 July 2026 (PMT, Save My Exams, MyTutor, Kumon UK, Seneca, 
 
 Current state sources: GSC = Search Console position (ground truth, 7 to 15 July); sweep = 17 July SERP estimate; absent = not found in either. Difficulty is judged from who verifiably holds the SERP today. Opportunity weighs demand signals, winnability and business value together.
 
-**Cluster P1: resits and retakes (fastest real traffic).** Winners today: Save My Exams, StudentCrowd, distance-learning colleges (ICS Learn, CloudLearn, Oxbridge Home Learning), Up Learn's dated pair. No marketplace presence. We already have impressions on 40+ variants.
+**Cluster P1: resits and retakes (fastest real traffic).** Winners today: Save My Exams, StudentCrowd, distance-learning colleges (ICS Learn, CloudLearn, Oxbridge Home Learning), Up Learn's dated pair. We already have impressions on 40+ variants.
+
+*Updated 24 July 2026 (estimate):* the "no marketplace presence" reading no longer holds. Tutorful now takes the top estimated slot on both the resit cost query and the 2027 resit dates query, and Save My Exams has published a dedicated A-level resit dates page covering 2026 and 2027. The lane is still winnable (the incumbents are thin and generic) but it is filling up. Backlog 3 gets more urgent, not less.
 
 | Keyword | Intent | Difficulty | Opportunity | Current state | Action |
 |---|---|---|---|---|---|
@@ -105,7 +109,9 @@ Current state sources: GSC = Search Console position (ground truth, 7 to 15 July
 | how many hours a day should i revise for a levels | informational | easy | high | GSC 8.0 to 22 | Freshness pass on the hours post |
 | year 12 summer revision | informational | easy | high | GSC 6.3, sweep 2 | Hold and strengthen; internal links each August |
 
-**Cluster P2: methods (blurting is ours to take).** Winners: Birmingham City University, NCC, small tutor blogs. No giant owns method queries.
+**Cluster P2: methods (blurting is still ours to take, but a giant has arrived).** Winners: Birmingham City University, NCC, Online Learning College, small tutor blogs.
+
+*Updated 24 July 2026 (estimate):* Save My Exams now ranks a blurting page in this SERP, so "no giant owns method queries" is out of date. The rest of the cluster (active recall, revision techniques, per-subject method guides) is still held by small sites, and the printable blurting template remains a linkable asset none of the incumbents have.
 
 | Keyword | Intent | Difficulty | Opportunity | Current state | Action |
 |---|---|---|---|---|---|
@@ -143,9 +149,9 @@ Statuses: **queued**, **in batch (awaiting approval)**, **live**, **blocked**, *
 
 | # | Item | Why | Status |
 |---|------|-----|--------|
-| 1 | Trailing slashes + FAQ HTML + og fixes + schema entity + IndexNow key (the 17 July batch) | Removes crawl drag and makes FAQ answers visible to AI crawlers | in batch (awaiting approval) |
-| 2 | Header + footer trailing slashes (unblocked once the error-log session committed) | The two site-wide offenders | in batch (awaiting approval) |
-| 3 | Freshness and answer pass on /blog/resitting-a-levels/ (dates table for 2026 and 2027, cost table, direct answers to the near-miss cost and date queries) | 357 impressions at position 21; the single biggest near-term traffic win | queued |
+| 1 | Trailing slashes + FAQ HTML + og fixes + schema entity + IndexNow key (the 17 July batch) | Removes crawl drag and makes FAQ answers visible to AI crawlers | in batch (awaiting approval, **7 days and counting**, verified not on main 24 July) |
+| 2 | Header + footer trailing slashes (unblocked once the error-log session committed) | The two site-wide offenders | in batch (awaiting approval, same branch as item 1) |
+| 3 | Freshness and answer pass on /blog/resitting-a-levels/ (dates table for 2026 and 2027, cost table, direct answers to the near-miss cost and date queries) | 357 impressions at position 21; the single biggest near-term traffic win. **24 July: Tutorful and Save My Exams now hold the cost and dates queries (estimate), so the window is closing** | queued, top of the queue for the next batch |
 | 4 | "Revision planner" wording into /revision-tracker/ title, description and body | 88 impressions at position 32 for a query the page never says | queued |
 | 5 | Freshness pass on predicted-grades and year-12-summer posts (already page 1; push to top 5) | Positions 6 to 7 with real impressions | queued |
 | 6 | Course + CourseInstance schema on /summer-accelerators/ and /subject-accelerators/ | Live courses with zero Course markup; rich-result eligibility | queued |
@@ -158,7 +164,7 @@ Statuses: **queued**, **in batch (awaiting approval)**, **live**, **blocked**, *
 | 13 | /about/ founder page (the entity page for Dr Waleed: credentials, method, press-ready bio) | E-E-A-T anchor for every author byline; AI engines resolve the person | queued (new page, needs his approval of the copy) |
 | 14 | Title-length trims on the five over-60-char titles (not the homepage) | Truncated titles in results | queued |
 | 15 | Sitemap lastmod for static pages, honest dates only | Minor crawl signal | queued |
-| 16 | llms.txt upkeep line for the error-log tool | Keep the AI map current | in batch (awaiting approval) |
+| 16 | llms.txt upkeep line for the error-log tool | Keep the AI map current | in batch (awaiting approval, same branch as item 1) |
 | 17 | dateModified discipline plus a visible "Last reviewed" line on posts | Save My Exams' freshness pattern; every post currently shows dateModified = datePublished | standing rule from batch 3 on |
 | 18 | Retrofit the extractable-answer pattern across all 17 posts (question-form titles where honest, direct first-40-words answers) | Verified as what gets pages lifted into AI search groundings | queued |
 | 19 | "How much does A-level tutoring cost in 2026?" post with an honest rates table | Tutorful and MyTutor rank with pricing pages; half the near-miss resit queries are cost queries; feeds the same buyers | queued (needs his price sign-off) |
@@ -170,6 +176,8 @@ Statuses: **queued**, **in batch (awaiting approval)**, **live**, **blocked**, *
 | 25 | Single-board-deep notes hub experiment (one subject, one board, 20 to 30 real pages) | MyEdSpace's AQA-only Biology hub verifiably outranks Save My Exams and PMT; the one scale play that works small | strategic, gated on waves 2 to 4 shipping first |
 | 26 | Success-story page template, filled after results day with named, consented student outcomes | Kumon's 28 story pages rank for commercial queries; becomes possible the week real results exist | queued for August (needs consent process) |
 | 27 | GCSE-to-A-level transition hub with PDF for late August (GCSE results 20 August) | Up Learn verifiably owns this family with a guide-plus-download pair; fits the GCSE secondary-tier rule | queued (needs his nod on audience stretch) |
+| 28 | Get the three free tools into the "best revision websites" roundups (MasteryMind, TutorChase, Revision World, and Save My Exams' own list): drafts via the partnership-outreach skill | Verified 24 July: these roundups are what the "best a level revision websites 2026" answer groundings run on, they list free tools rather than tutors, and the diagnostic, tracker and error log are exactly that shape. A separate lane from item 22, which targets the tutoring roundups | queued (draft-only, he sends) |
+| 29 | After the merge: IndexNow ping for /error-log/ and the changed pages, then confirm the tool actually indexes | The page, its sitemap entry and its llms.txt line are all built and correct on the branch; they simply are not in production, so the tool earns nothing and 404s to anyone who finds it | blocked on item 1 merging |
 
 ## 8. Tracked keyword basket (weekly spot checks)
 
@@ -194,7 +202,7 @@ Baseline 17 July 2026: the site appears in none of them. Winners per probe are r
 
 ## 10. What needs Waleed personally
 
-1. **Approve the 17 July batch** (say the word and a session merges it; nothing deploys until then).
+1. **Approve the 17 July batch. This is now the one thing blocking everything else.** Verified 24 July: it is still unmerged, so none of it is live, and the optimiser cannot start a second batch while it waits. Merging it also takes the **Error Log tool** live, which is stacked on the same branch and currently 404s in production. Two decisions in one: say "merge the SEO branch" if you want both, or say which of the two you want held back and a session will split them.
 2. **Bing Webmaster Tools, about 10 minutes:** go to bing.com/webmasters, sign in (Google sign-in works), choose "Import from Google Search Console", approve, and the site plus sitemap import automatically. This is the single cheapest AI-visibility action available: ChatGPT and Copilot read Bing's index.
 3. **Reviews decision:** Trustpilot free profile, Google Business Profile, or neither. "Best tutoring" AI answers cite review platforms constantly; we currently have zero review presence anywhere. Recommendation: Trustpilot free, ask the March cohort parents for honest reviews after results day.
 4. **Subjects question:** the Subject Accelerators page sells Biology, Chemistry and Maths; the rest of the site says Biology, Chemistry, Maths and Physics. Which is right? One answer, then everything aligns in one batch.
@@ -203,3 +211,4 @@ Baseline 17 July 2026: the site appears in none of them. Winners per probe are r
 ## 11. Change log
 
 - 2026-07-17: document created from the first full audit (this session). First technical batch built and awaiting approval. Optimiser skill + weekly Monday scheduled task live. Sections 4 and 5 filled the same day from the verified competitor teardown; backlog extended to 27 items.
+- 2026-07-24: weekly run 2. Search Console unavailable (Chrome not connected), so no ground-truth numbers this week and none invented. Ten SERP spot checks and three answer-engine probes run as estimates; log entry in `visibility-log.md`. Confirmed by direct fetch that the 17 July batch is still not on main and that /error-log/ 404s in production. Two competitive changes recorded: Save My Exams has entered both the resit-dates and blurting SERPs, and Tutorful now leads the resit cost query. Backlog items 28 (revision-website roundups) and 29 (post-merge IndexNow for the error log) added; no site-changing batch built, per the one-batch-in-flight rule.

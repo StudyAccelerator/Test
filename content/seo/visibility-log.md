@@ -6,6 +6,48 @@ Format per entry: GSC totals, top movers, SERP spot checks, AEO probes, indexati
 
 ---
 
+## 2026-07-24 (weekly run 2)
+
+**Google Search Console: unavailable this run.** Claude in Chrome was not connected (extension not reachable, retried once), so no ground-truth numbers were pulled. Nothing in this entry is a substitute for them: there are no GSC figures for 16 to 24 July and this run cannot say whether clicks, impressions or positions moved. Next run should pull the 28-day window, which by then covers almost the whole property history.
+
+**Live site checks** (direct fetch, facts not estimates):
+
+- `https://alevelaccelerators.com/error-log/` returns **HTTP 404**. The Error Log tool is not live. It sits unmerged on `claude/error-log-tool` along with the whole 17 July SEO batch.
+- Sitemap serves 27 URLs: 10 static pages plus 17 blog posts. The 10 static pages still carry no lastmod (backlog 15 confirmed open). No `/error-log/` entry, consistent with the tool not being live.
+
+**SERP spot checks** (WebSearch, 24 July 2026, **estimates**, US-skewed index, ordering is indicative only):
+
+| Query | Site present? | Who holds the top results |
+|---|---|---|
+| how to improve predicted grades a level | yes, listed last of nine | UCL, Atom Learning, Avalon, A Level Revision UK, Student Room, PMT |
+| year 12 summer revision what to do | yes, listed eighth of nine | Student Room threads, InsideUni, Atomi, Ealing Independent College |
+| resit a levels how much does it cost | no | Tutorful, ICS Learn, Student Beans, TeachTutti, Superprof |
+| when are a level resits 2027 dates | no | Tutorful, GCSE Tutoring Academy, **Save My Exams (dedicated resit dates page)**, RS Remote Tutoring |
+| a level revision planner | no | Amazon, Revision Hub, Pinterest, timetablemaker.net, Get Revising |
+| blurting method revision | no | NCC, Birmingham City University, Online Learning College, **Save My Exams**, NetMock |
+| how many hours a day should i revise for a levels | no | Think Student, Manning's, Student Room, Seneca, Edumentors |
+| is a level tutoring worth it | no | a-levelmathstutor.co.uk, a 2017 Student Room thread, Vocal Media, sktutoring, Out-Class |
+| how much does a level tutoring cost per hour uk | no | Edumentors, FindTutors, Tutorful, TutorCruncher, Mumsnet, The Degree Gap |
+| one to one a level tutoring online | no | Bucksmore, MyTutor, LevelUp Tutors, Dukes Tutoring |
+
+**AEO probes** (WebSearch groundings, **estimates**, 3 of the 7 rotated):
+
+- "best a level tutoring uk": site absent. Groundings: TutorChase, Study Mind, Varsity Tutors, Tutorful, Avalon Education, The Profs, Keystone.
+- "best a level revision websites 2026": site absent. Groundings: MasteryMind, SimpleStudy, TutorChase, Save My Exams, Revision World, Thomas Keith School.
+- "how should i revise for my a levels effectively": site absent. Groundings: Nottingham Trent, WhatUni, learndirect, CloudLearn, U2 Tuition, Newcastle University.
+
+**Bing indexation: not measured.** `bing.com/search?q=site:alevelaccelerators.com` returned a bot challenge page instead of results. No attempt was made to work around it. Still outstanding, and still gated on backlog 9 (Waleed verifying Bing Webmaster Tools).
+
+**What this run changes in the picture:**
+
+1. **Save My Exams has entered two SERPs the audit recorded as giant-free.** It now holds a dedicated A-level resit dates page and a blurting method page. The 17 July read that "no giant owns method queries" and that resits have "no marketplace presence" is now weaker on both counts. This raises urgency on backlog 3 rather than changing its direction: the resit hub is still the biggest near-term win, but the window is narrowing.
+2. **A second listicle lane exists that the backlog did not name.** "Best revision websites" roundups (MasteryMind, TutorChase, Revision World, plus Save My Exams' own list) are a separate family from the "best tutoring" roundups in backlog 22, and they list free tools rather than tutors. The diagnostic, tracker and error log are exactly that shape. Added as backlog 28.
+3. **University domains dominate the generic revision-advice groundings** (Nottingham Trent, Newcastle, Birmingham City). That lane is an authority fight, not a content-quality fight, and is not worth attacking directly.
+
+**Notes:** no site-changing batch was built this run. The 17 July batch is still unmerged and awaiting Waleed's decision, so the skill's one-batch-in-flight rule applied: measure, groom the backlog, stop.
+
+---
+
 ## 2026-07-17 (baseline, first full audit)
 
 **Google Search Console** (property sc-domain:alevelaccelerators.com, data window 7 to 15 July 2026, the property's full history: verified about 7 July):
