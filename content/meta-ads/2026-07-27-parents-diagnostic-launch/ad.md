@@ -67,6 +67,20 @@ On-image copy: eyebrow "FOR PARENTS OF A-LEVEL STUDENTS", headline "Hours of rev
 
 Meta truncates primary text after roughly the first two lines, so the hook has to catch the priority reader before "See more". "The course they want asks for AAA. The predicted grades aren't there yet." is the exact sentence in a rising Year 13 parent's head in late July: predictions were just set at the end of Year 12, the UCAS application lands in the autumn, and the gap between the two is the single sharpest frustration named in the brief. Parents of rising Year 12s aren't excluded: the second paragraph onwards (hours in, grades not matching, system never taught) is their story too, and nothing in the ad names a year group as a requirement.
 
+## Creative 2: the diagnostic profiles graphic (added 27 July, same day)
+
+A second concept for the same ad set, in the site's own look (cream, white card, purple): headline "Which of the 7 revision profiles is your child?", the seven real archetype chips from `lib/diagnostic.ts` with The Grinder highlighted ("hours going in, marks not following. Sound familiar?"), the 20-questions subline, pill "Find your child's profile". Files: `parents-profiles-4x5.png`, `parents-profiles-1x1.png`, `parents-profiles-9x16.png` in `final/`, sources in `creative-src/`. It tests product curiosity against founder credibility, which is the most informative first contrast. Uses the same primary text, headline and URL as creative 1.
+
+## The £100 test plan (agreed structure, 27 July)
+
+Budget Waleed named: £100 through to the cohort start on Saturday 8 August (about £9 a day if started 28 or 29 July).
+
+- ONE campaign, ONE ad set, lifetime budget £100 with end date 7 August. Both concepts sit inside the same ad set as two ads; Meta's delivery shifts spend to whichever earns cheaper leads. No manual split: separate ad sets at this size halve the data per cell and double the learning problem.
+- The three sizes of each concept are one ad each (placement customisation), not separate ads. So the ad set contains exactly two ads.
+- No third text-only creative: the primary text already does the text-led job, and a third ad would thin £100 too far. The black-polo stills in `creative-src/` are the refresh material for after this test reads.
+- Honest expectations at benchmark CPLs (£16 to £28): roughly 4 to 6 leads from £100. This test buys information (first real CPL, quiz completion rate) and warms the pixel and retargeting audiences before results week; it will not fill the August cohort by itself, and leads landing 5 to 7 August have little runway before the 8th. Their value is the list and the September cohorts.
+- Judge nothing before about £50 has spent.
+
 ## Ads Manager setup (from the 17 July lead map, section 6)
 
 - One campaign, one ad set. UK, ages 38 to 55, Advantage+ audience with light parent-of-teens hints. The copy does the fine targeting.
