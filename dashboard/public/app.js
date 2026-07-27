@@ -1115,6 +1115,152 @@ function renderLeads() {
   )
 }
 
+/* ------------------------------------------------------ linkedin inbox */
+
+/* Every live student conversation in Waleed's LinkedIn messages, read by
+   the linkedin-inbox-agent sweep and placed on the diagnostic-first funnel
+   (content/linkedin-outreach/2026-07-16-cold-dm-playbook.md). Drafts only:
+   he sends every message himself, so there is no send button here either. */
+const LI_STEP_LABELS = {
+  opener_sent: 'opener sent',
+  they_replied: 'replied to opener',
+  bridge_sent: 'bridge sent',
+  link_sent: 'link sent',
+  diagnostic_done: 'took the diagnostic',
+  followup_sent: 'follow-up sent',
+  closed: 'closed',
+}
+
+function renderLiInbox() {
+  const body = $('#li-inbox-body')
+  const chip = $('#li-inbox-chip')
+  const store = state.liInbox
+
+  if (!store) {
+    chip.textContent = 'no sweep yet'
+    chip.className = 'chip chip-manual'
+    body.innerHTML =
+      '<p class="empty-state">No sweep has run yet. The inbox agent reads every live conversation in your LinkedIn messages morning and evening, works out where each student is in the funnel, and drafts the next message here for you to send.</p>'
+    return
+  }
+
+  if (store.lastSweepStatus === 'failed') {
+    chip.textContent = 'sweep failed'
+    chip.className = 'chip chip-error'
+  } else {
+    chip.textContent = `swept ${sweepAgo(store.lastSweep)}`
+    chip.className = 'chip chip-live'
+  }
+
+  const convs = store.conversations || []
+  const flags = convs.filter((c) => c.queue === 'flag')
+  const pending = convs.filter((c) => c.status === 'pending')
+  const replies = pending.filter((c) => c.queue === 'reply')
+  const followups = pending.filter((c) => c.queue === 'followup')
+  const waiting = convs.filter((c) => c.queue === 'wait')
+  const closed = convs.filter((c) => c.queue === 'closed')
+  const worked = convs.filter((c) => c.status === 'sent' || c.status === 'skipped')
+
+  const card = (c) => `
+    <div class="lead-card" data-id="${esc(c.id)}"${c.status !== 'pending' ? ' data-worked' : ''}>
+      <div class="lead-top">
+        <span class="lead-sub">${esc(c.name)}${
+    c.funnelStep ? ` <em class="lead-market">${esc(LI_STEP_LABELS[c.funnelStep] || c.funnelStep)}</em>` : ''
+  }</span>
+        <span class="lead-age">${esc(c.lastAt || '')}${c.lastFrom === 'them' ? ' &middot; their message last' : ''}</span>
+      </div>
+      ${c.theirLast ? `<div class="lead-quote">${esc(c.theirLast)}</div>` : ''}
+      ${c.profile ? `<div class="lead-meta">${esc(c.profile)}</div>` : ''}
+      ${c.read ? `<div class="lead-why">${esc(c.read)}${c.next ? ` Next: ${esc(c.next)}` : ''}</div>` : ''}
+      <div class="lead-draft" id="li-draft-${esc(c.id)}">${esc(c.draft || '')}</div>
+      <div class="lead-actions">
+        <a class="gold-btn" href="${esc(c.url)}" target="_blank" rel="noreferrer">Open conversation</a>
+        <button class="ghost-btn li-copy" type="button">Copy draft</button>
+        <button class="ghost-btn li-sent" type="button">Mark sent</button>
+        <button class="ghost-btn li-skip" type="button">Skip</button>
+      </div>
+    </div>`
+
+  const row = (c) => `
+    <div class="list-row">
+      <span class="row-name">${esc(c.name)}${
+    c.funnelStep ? ` <em class="lead-market">${esc(LI_STEP_LABELS[c.funnelStep] || c.funnelStep)}</em>` : ''
+  }</span>
+      <span class="row-meta">${esc(c.read || '')}</span>
+    </div>`
+
+  const flagCard = (c) => `
+    <div class="lead-card" data-id="${esc(c.id)}">
+      <div class="lead-top">
+        <span class="lead-sub">${esc(c.name)} <em class="lead-market">needs you personally</em></span>
+        <span class="lead-age">${esc(c.lastAt || '')}</span>
+      </div>
+      ${c.theirLast ? `<div class="lead-quote">${esc(c.theirLast)}</div>` : ''}
+      <div class="lead-why">${esc(c.read || '')}</div>
+      <div class="lead-actions">
+        <a class="gold-btn" href="${esc(c.url)}" target="_blank" rel="noreferrer">Open conversation</a>
+      </div>
+    </div>`
+
+  const skipped = store.skipped || {}
+  const skipBits = Object.entries(skipped)
+    .filter(([, n]) => n > 0)
+    .map(([k, n]) => `${nf.format(n)} ${k === 'recruiters' ? 'recruiters' : 'non-students'}`)
+    .join(', ')
+
+  body.innerHTML = `
+    ${flags.length ? `<div class="subhead">Flagged for you, no draft on purpose</div>${flags.map(flagCard).join('')}` : ''}
+    ${replies.length ? `<div class="subhead">Reply now, their message is waiting</div>${replies.map(card).join('')}` : ''}
+    ${followups.length ? `<div class="subhead">Follow-up due</div>${followups.map(card).join('')}` : ''}
+    ${
+      !flags.length && !replies.length && !followups.length
+        ? `<p class="empty-state">Nothing needs a message right now. ${esc(store.lastSweepNote || '')}</p>`
+        : ''
+    }
+    ${worked.length ? `<div class="subhead">Worked</div>${worked.map(card).join('')}` : ''}
+    ${waiting.length ? `<div class="subhead">Waiting on them, leave alone</div>${waiting.map(row).join('')}` : ''}
+    ${closed.length ? `<div class="subhead">Closed</div>${closed.map(row).join('')}` : ''}
+    <p class="small muted lead-foot">Drafts only. You send every message yourself.${
+      skipBits ? ` Last sweep also skipped ${skipBits}.` : ''
+    }</p>`
+
+  const setStatus = async (id, status) => {
+    const c = state.liInbox.conversations.find((x) => x.id === id)
+    if (!c) return
+    c.status = status
+    c.workedAt = new Date().toISOString()
+    await putStore('linkedin-inbox', state.liInbox)
+    renderLiInbox()
+    renderTriage()
+  }
+
+  body.querySelectorAll('.li-copy').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const id = btn.closest('.lead-card').dataset.id
+      const c = state.liInbox.conversations.find((x) => x.id === id)
+      try {
+        await navigator.clipboard.writeText(c.draft || '')
+        btn.textContent = 'Copied'
+        setTimeout(() => (btn.textContent = 'Copy draft'), 1400)
+      } catch {
+        const range = document.createRange()
+        range.selectNodeContents($('#li-draft-' + id))
+        const sel = window.getSelection()
+        sel.removeAllRanges()
+        sel.addRange(range)
+        btn.textContent = 'Selected, press Cmd C'
+        setTimeout(() => (btn.textContent = 'Copy draft'), 2200)
+      }
+    })
+  })
+  body.querySelectorAll('.li-sent').forEach((btn) =>
+    btn.addEventListener('click', () => setStatus(btn.closest('.lead-card').dataset.id, 'sent'))
+  )
+  body.querySelectorAll('.li-skip').forEach((btn) =>
+    btn.addEventListener('click', () => setStatus(btn.closest('.lead-card').dataset.id, 'skipped'))
+  )
+}
+
 function skipLabel(key) {
   const map = {
     gcse: 'GCSE (from before the 17 Jul widening)',
@@ -1445,6 +1591,36 @@ function renderTriage() {
     })
   }
 
+  /* LinkedIn conversations waiting on Waleed: a student who replied is warm
+     for hours, not days, so pending drafts get surfaced up here too */
+  if (state.liInbox && state.liInbox.conversations) {
+    const convs = state.liInbox.conversations
+    const flagged = convs.filter((c) => c.queue === 'flag')
+    if (flagged.length) {
+      items.push({
+        sev: 'high',
+        title: `${flagged.length} LinkedIn conversation${flagged.length > 1 ? 's' : ''} flagged for you personally`,
+        why: `${flagged.map((c) => c.name).join(', ')}. No draft on purpose: read the note in the LinkedIn inbox panel and handle it yourself.`,
+      })
+    }
+    const pending = convs.filter((c) => c.status === 'pending')
+    if (pending.length) {
+      const replies = pending.filter((c) => c.queue === 'reply').length
+      items.push({
+        sev: replies ? 'high' : 'med',
+        title: `${pending.length} LinkedIn draft${pending.length > 1 ? 's' : ''} ready to send`,
+        why: `${replies ? `${replies} student${replies > 1 ? 's are' : ' is'} waiting on your reply` : 'Follow-ups due'}. Copy each draft from the LinkedIn inbox panel below and send it yourself.`,
+      })
+    }
+  }
+  if (state.liInbox && state.liInbox.lastSweepStatus === 'failed') {
+    items.push({
+      sev: 'med',
+      title: 'The LinkedIn inbox sweep could not run',
+      why: `${state.liInbox.lastSweepNote || 'Unknown reason.'} Usually this means Chrome was closed or LinkedIn was logged out.`,
+    })
+  }
+
   if (state.site && !state.site.up) {
     items.push({
       sev: 'high',
@@ -1625,6 +1801,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/monzo'),
     getJSON('/api/store/leads'),
     getJSON('/api/docs'),
+    getJSON('/api/store/linkedin-inbox'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -1647,6 +1824,8 @@ async function loadAll(fresh = false) {
   const leadStore = val(15, null)
   state.leads = leadStore && leadStore.lastSweep ? leadStore : null
   state.docs = val(16, [])
+  const liInboxStore = val(17, null)
+  state.liInbox = liInboxStore && liInboxStore.lastSweep ? liInboxStore : null
   /* fresh reload: drop cached document bodies so edits show up */
   if (fresh) docCache.clear()
 }
@@ -1667,6 +1846,7 @@ function renderAll() {
   renderInbox()
   renderConnections()
   renderLeads()
+  renderLiInbox()
   renderDocs()
   renderTriage()
 }
