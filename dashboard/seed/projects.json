@@ -10,10 +10,10 @@
   {
     "id": "p2",
     "name": "Revision Diagnostic funnel",
-    "status": "attention",
-    "milestone": "Switch on the remaining follow-up automations",
-    "due": "2026-07-14",
-    "note": "Tool live, 16-email sequence built in MailerLite. Instant report and Summer route on, the rest await your review. Triage tracks the live count."
+    "status": "live",
+    "milestone": "All four follow-up automations on and capturing",
+    "due": null,
+    "note": "Tool live with the student/parent fork; all four student automations and all four parent automations are on (verified 14 and 27 July). Triage tracks the live count."
   },
   {
     "id": "p3",

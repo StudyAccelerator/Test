@@ -14,7 +14,7 @@ The rule for everything below: a new tool earns its place only if it either (a) 
 
 ## The suite, in build order
 
-### 1. Results Day Rescue (ship by Tuesday 12 August)
+### 1. Results Day Rescue (ship by Wednesday 12 August)
 
 - **What:** A calm, fast decision tool for the morning of results day (Thursday 13 August, then GCSE results the week after). The student enters what they got against what they needed, subject by subject, and it walks them to their actual options: firm choice confirmed, insurance, clearing, appeal or remark, resit, gap year. Output is a one-page action plan for the next 48 hours, in priority order, with the honest trade-offs of each route.
 - **Why:** Results day is the single biggest brand moment of the year and the one day students and parents search in a panic. Nobody sells anything that morning; the brand that helps calmly wins the autumn.

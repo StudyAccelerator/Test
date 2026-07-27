@@ -5,7 +5,9 @@ description: Sweep Facebook for UK parents actively asking for A-level or GCSE t
 
 # The Facebook lead radar
 
-Find UK parents who are asking for A-level or GCSE help RIGHT NOW, draft Waleed a reply for each, and put them where he will see them. He reads, edits if he wants, and sends every one himself. A-level is the core market; GCSE is the potential-future-client tier, included on his instruction from 17 July 2026.
+Find UK parents who are asking for A-level or GCSE help, draft Waleed a reply for each, and put them where he will see them. He reads, edits if he wants, and sends every one himself. A-level is the core market; GCSE is the potential-future-client tier, included on his instruction from 17 July 2026.
+
+**Standing rule from 18 July 2026: for A-level, surface every genuine request no matter how old it is or which group it sits in. Waleed would rather see a day-old, heavily-commented post than miss a client. The age gate and any group preference below apply to GCSE only. Age and group never remove an A-level lead; they only change how you describe it (say plainly when a post is old or saturated so he can judge).**
 
 Background on why this exists and how the channel behaves: `content/facebook-groups/2026-07-16-lead-radar-and-where-parents-actually-ask.md`. The conduct rules are Part 6 of `content/facebook-groups/2026-07-15-personal-facebook-strategy.md`. Read the first one if anything here is unclear.
 
@@ -35,6 +37,8 @@ Run these post searches, each as `https://www.facebook.com/search/posts?q=<url-e
 - `looking for a GCSE maths tutor`
 - `GCSE science tutor recommendations` (rotate science/maths each run)
 
+**Also scan the busy A-level groups directly, not just post search.** Facebook post search silently drops posts in the highest-volume groups because they sink under hundreds of others within the hour, which is exactly how a real A-level ask gets missed. So each sweep, open the feeds of `Online Tutoring UK`, `GCSE and A-Level UK tutoring` and `I am looking for a tutor or I want to tutor in the UK`, read the recent posts, and pull any genuine A-level request the phrase searches did not surface. Best-effort: if a feed will not load, note it and move on, do not fail the whole sweep over it.
+
 Results skew recent but are not strictly time-sorted, so read the whole page, not just the top. Facebook renders the timestamp as scrambled characters in the text extraction; the relative age ("23m", "3h", "1d") is usually readable next to comments, and the post's own age is visible in a screenshot if you need it. If you cannot establish a post's age, treat it as old and skip it.
 
 ## Step 2: filter (this is the part that decides whether he keeps using this)
@@ -44,7 +48,8 @@ A post is a **lead** only if ALL of these are true:
 - The author is **asking for help**: a parent, guardian or student seeking a tutor, recommendations, or support. Not offering it.
 - It is **A-level** (Year 12 / Year 13 / sixth form) **or GCSE** (Year 10 / Year 11). A-level is the core market. GCSE was widened in on 17 July 2026 on Waleed's instruction: GCSE parents are potential future clients, helpful advice builds standing, and the summer programme can stretch to a strong GCSE student. Mark which is which (see `market` below) so he can prioritise A-level at a glance.
 - It is **UK**: UK exam boards (AQA, Edexcel, OCR, WJEC). Not CAIE, not international O-level, not American.
-- It is **fresh**: posted within the last 3 hours. The whole point is replying while it is near the top. Anything older has already collected replies and sunk.
+- **Age. A-level: no age gate at all** (Waleed's instruction, 18 July 2026), surface a genuine A-level request however old it is. **GCSE: still fresh, posted within the last 3 hours**, because GCSE volume is what floods the panel. Whatever the age, always read and record it: a day-old post with 60 replies is a long shot and he should be told it is one, so put that in `why`. Sort A-level leads freshest first so the live ones sit on top of the older ones.
+- **Group is never a reason to skip an A-level post.** Surface a genuine A-level ask wherever it appears: the tutor-firehose groups (Online Tutoring UK, GCSE and A-Level UK tutoring, "I am looking for a tutor..."), local town groups, and groups he is not a member of. The old "these are worth sweeping, not living in" caution was about where he spends time, not about what reaches this panel.
 - **He has not already replied** to it, and it is not already in the store's `seen` list.
 - The subject is one he teaches (**maths, biology, chemistry, physics**, or double/triple science at GCSE) or it is general revision, study-system or "hard worker, bad grades" help.
 
@@ -123,7 +128,8 @@ Rules for the store:
 
 ## Step 5: surface it
 
-- If there is **at least one new lead**, send exactly one `PushNotification` (status `proactive`), under 200 characters, leading with what he would act on. Example: `2 new A-level leads: Year 12 maths (23m old), Year 13 biology (1h). Drafts ready in HQ.`
+- If there is **at least one new lead**, send exactly one `PushNotification` (status `proactive`), under 200 characters, leading with what he would act on. Always include each lead's age so a fresh one and a day-old one read differently. Example: `2 new A-level leads: Year 12 maths (23m old), Year 13 biology (1d, saturated). Drafts ready in HQ.`
+- **First sweep after the 18 July change:** dropping the A-level age gate can surface a backlog of older A-level posts in one go. That is expected once. Every one still goes into `seen`, so it is a single catch-up and no post is ever paged twice.
 - If there are **no new leads, send nothing.** Silence is the correct output for most hours. Do not notify to say you found nothing.
 - The dashboard panel (Today section, "Live leads") reads the store automatically. He opens `npm run hq` at http://127.0.0.1:4400, reads the draft, copies it, sends it himself, then marks it Sent or Skip.
 

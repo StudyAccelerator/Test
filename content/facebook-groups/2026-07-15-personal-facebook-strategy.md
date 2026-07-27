@@ -75,7 +75,7 @@ Two streams. Stream A is you showing up in other people's groups (the join list 
 
 - **The helpful answer.** When a parent posts a question (revision, stress, subject choices, "how do I help"), leave a genuinely useful two-paragraph reply as Dr Waleed. This is 80% of the work and it is what builds the Top Contributor badge (see Part 5). Best groups for this: GCSE resources UK, A-Level Tuition, the two home-ed support groups, Parents of Teenagers UK.
 - **The tutor-request reply.** When a parent posts "looking for an A-level tutor", reply fast (see Part 6). Best groups: A-Level Tuition, Home Education Looking For Tutors UK, GCSE resources UK.
-- **The occasional value post, only where allowed.** Where a group permits a genuinely useful post (11+ & GCSE & A Level Success UK invites "free sessions"; the home-ed groups allow one business day), post something the group cannot get elsewhere: a free workshop, or the diagnostic framed as a free tool. Never a link where links are banned; use the comment-to-DM trigger instead (Part 6).
+- **The occasional value post, only where allowed.** Where a group permits a genuinely useful post (11+ & GCSE & A Level Success UK invites "free sessions"; the home-ed groups allow one business day), post something the group cannot get elsewhere: the diagnostic framed as a free tool. Never a link where links are banned; use the comment-to-DM trigger instead (Part 6).
 
 **Stream B: on your own profile (and later your group).** These are the individual-winner formats, adapted to A-level and to you:
 
