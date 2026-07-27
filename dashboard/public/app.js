@@ -1214,7 +1214,11 @@ function renderLiInbox() {
     ${followups.length ? `<div class="subhead">Follow-up due</div>${followups.map(card).join('')}` : ''}
     ${
       !flags.length && !replies.length && !followups.length
-        ? `<p class="empty-state">Nothing needs a message right now. ${esc(store.lastSweepNote || '')}</p>`
+        ? `<p class="empty-state">${
+            store.lastSweepStatus === 'failed'
+              ? `The last sweep could not run. ${esc(store.lastSweepNote || '')}`
+              : `Nothing needs a message right now. ${esc(store.lastSweepNote || '')}`
+          }</p>`
         : ''
     }
     ${worked.length ? `<div class="subhead">Worked</div>${worked.map(card).join('')}` : ''}
