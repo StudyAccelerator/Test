@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1080px; height: 1350px; overflow: hidden; }
+  .ad {
+    width: 1080px; height: 1350px;
+    background: #2E2557;
+    display: flex; flex-direction: column;
+    position: relative;
+  }
+  .photo {
+    height: 800px; width: 100%;
+    background-image: url('waleed-scrubs-desk.jpg');
+    background-size: cover;
+    background-position: 50% 26%;
+    position: relative;
+  }
+  .photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(180deg, rgba(46,37,87,0) 62%, rgba(46,37,87,0.55) 88%, #2E2557 100%);
+  }
+  .badge {
+    position: absolute; top: 40px; left: 40px; z-index: 2;
+    background: rgba(26,21,53,0.72);
+    color: #F3EBD8;
+    font: 600 27px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    padding: 16px 26px; border-radius: 999px;
+    letter-spacing: 0.02em;
+  }
+  .panel {
+    flex: 1;
+    padding: 42px 64px 44px;
+    display: flex; flex-direction: column;
+    position: relative; z-index: 2;
+  }
+  .eyebrow {
+    color: #C9A96E;
+    font: 700 27px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.14em;
+    margin-bottom: 26px;
+  }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 77px; line-height: 1.12;
+    color: #F3EBD8;
+    margin-bottom: 28px;
+  }
+  .sub {
+    color: rgba(243,235,216,0.88);
+    font: 400 33px/1.42 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    max-width: 900px;
+    margin-bottom: 38px;
+  }
+  .sub strong { color: #F3EBD8; font-weight: 600; }
+  .cta-row { display: flex; align-items: center; gap: 30px; margin-top: auto; }
+  .pill {
+    background: #C9A96E; color: #1a1535;
+    font: 700 34px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    padding: 26px 48px; border-radius: 999px;
+  }
+  .free {
+    color: rgba(243,235,216,0.7);
+    font: 600 27px/1.3 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+  .foot {
+    display: flex; justify-content: space-between; align-items: baseline;
+    margin-top: 36px;
+    border-top: 1px solid rgba(243,235,216,0.18);
+    padding-top: 26px;
+  }
+  .wordmark {
+    color: rgba(243,235,216,0.6);
+    font: 700 24px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.18em;
+  }
+  .url {
+    color: rgba(201,169,110,0.85);
+    font: 600 24px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="photo">
+    <div class="badge">Dr Waleed Ahmad, NHS doctor</div>
+  </div>
+  <div class="panel">
+    <div class="eyebrow">FOR PARENTS OF A-LEVEL STUDENTS</div>
+    <h1>Hours of revision.<br>Grades that don't match.</h1>
+    <div class="sub">Answer 20 quick questions about how your child revises. Get an instant report showing <strong>why the hours aren't turning into marks</strong>, and what to change first.</div>
+    <div class="cta-row">
+      <div class="pill">Take the free diagnostic</div>
+      <div class="free">Free. No call,<br>nothing to book.</div>
+    </div>
+    <div class="foot">
+      <div class="wordmark">A-LEVEL ACCELERATORS</div>
+      <div class="url">alevelaccelerators.com</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
