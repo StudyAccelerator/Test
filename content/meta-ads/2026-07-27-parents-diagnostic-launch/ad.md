@@ -25,23 +25,20 @@ The studio still (scrubs, arms crossed, warm room, teaching screen behind) reads
 
 ### Primary text
 
-> The course they want asks for AAA. The predicted grades aren't there yet. And your child is already working hard.
+> The course they want asks for AAA. The predictions aren't there yet. And your child is already working hard.
 >
-> If that's your house right now, this is for you.
+> I'm an NHS doctor and I've worked with over 1,000 A-level students. When the hours go in and the marks don't come out, it's almost never effort. It's the revision system nobody taught them.
 >
-> I'm an NHS doctor. Before medicine I was a top-performing A-level student, and I've worked with over 1,000 A-level students since. I see the same pattern every week: a student putting in real hours with a revision system nobody ever taught them, then losing marks in exams they knew the content for.
+> The free Revision Diagnostic shows you what's actually going wrong:
 >
-> Effort is almost never the problem. The system is. And you can't fix a system you can't see.
+> • 20 quick questions about how your child revises, about 3 minutes
+> • An instant report: which of 7 revision profiles fits your child, where the study hours leak, and what to change first
 >
-> I can't treat a patient without a diagnosis first. Revision is the same. So I built the Revision Diagnostic for parents:
->
-> • You answer 20 quick questions about how your child revises. It takes about 3 minutes.
-> • You get an instant report showing which of 7 revision profiles your child fits.
-> • It shows where their study hours are leaking away, and what to change first.
->
-> It's free. No call and nothing to book. Just a clear picture of why the hours aren't turning into the grades, before results day on 13 August and the new school year.
+> Completely free. Take it before results day on 13 August.
 >
 > Tap Learn More and see which profile your child gets.
+
+Trimmed to about 110 words on 27 July at Waleed's instruction: the first draft ran about 200 words, longer than the competitor norm (MyEdSpace and the other parent-market winners run a hook, one credibility line, short bullets and a CTA). The ask is a free 3 minute quiz, so the copy matches the size of the ask. Deliberately no "no call, nothing to book" anywhere: the funnel's next step after the report IS the call, so the ads never promise its absence.
 
 ### Headline (below the image)
 
@@ -61,15 +58,15 @@ Learn More
 - `parents-diagnostic-1x1.png` (1080x1080): right column and any square placement
 - `parents-diagnostic-9x16.png` (1080x1920): Stories and Reels placements
 
-On-image copy: eyebrow "FOR PARENTS OF A-LEVEL STUDENTS", headline "Hours of revision. Grades that don't match.", subline naming the 20 questions and the instant report, gold pill "Take the free diagnostic", credibility badge "Dr Waleed Ahmad, NHS doctor". Editable sources in `creative-src/` (HTML, rendered with headless Chrome at exact pixel sizes).
+On-image copy: eyebrow "FOR PARENTS OF A-LEVEL STUDENTS", headline "Your child puts the hours in. So where are the marks?" (direct parent call-out, reworded 27 July at Waleed's instruction), subline naming the 20 questions and the instant report, gold pill "Take the free diagnostic" beside "Completely free. Takes about 3 minutes.", credibility badge "Dr Waleed Ahmad, NHS doctor". Editable sources in `creative-src/` (HTML, rendered with headless Chrome at exact pixel sizes).
 
 ### Why the opening line is the opening line
 
-Meta truncates primary text after roughly the first two lines, so the hook has to catch the priority reader before "See more". "The course they want asks for AAA. The predicted grades aren't there yet." is the exact sentence in a rising Year 13 parent's head in late July: predictions were just set at the end of Year 12, the UCAS application lands in the autumn, and the gap between the two is the single sharpest frustration named in the brief. Parents of rising Year 12s aren't excluded: the second paragraph onwards (hours in, grades not matching, system never taught) is their story too, and nothing in the ad names a year group as a requirement.
+Meta truncates primary text after roughly the first two lines, so the hook has to catch the priority reader before "See more". "The course they want asks for AAA. The predictions aren't there yet." is the exact sentence in a rising Year 13 parent's head in late July: predictions were just set at the end of Year 12, the UCAS application lands in the autumn, and the gap between the two is the single sharpest frustration named in the brief. Parents of rising Year 12s aren't excluded: the second paragraph onwards (hours in, grades not matching, system never taught) is their story too, and nothing in the ad names a year group as a requirement.
 
 ## Creative 2: the diagnostic profiles graphic (added 27 July, same day)
 
-A second concept for the same ad set, in the site's own look (cream, white card, purple): headline "Which of the 7 revision profiles is your child?", the seven real archetype chips from `lib/diagnostic.ts` with The Grinder highlighted ("hours going in, marks not following. Sound familiar?"), the 20-questions subline, pill "Find your child's profile". Files: `parents-profiles-4x5.png`, `parents-profiles-1x1.png`, `parents-profiles-9x16.png` in `final/`, sources in `creative-src/`. It tests product curiosity against founder credibility, which is the most informative first contrast. Uses the same primary text, headline and URL as creative 1.
+A second concept for the same ad set, in the site's own look (cream, white card, purple): headline "Which of the 7 revision profiles is your child?", the seven real archetype chips from `lib/diagnostic.ts` with The Grinder highlighted ("hours going in, marks not following. Sound familiar?"), a reason-why subline ("The instant report shows where their study hours are leaking, and what to change first"), pill "Find your child's profile" beside "Completely free." Files: `parents-profiles-4x5.png`, `parents-profiles-1x1.png`, `parents-profiles-9x16.png` in `final/`, sources in `creative-src/`. It tests product curiosity against founder credibility, which is the most informative first contrast. Uses the same primary text, headline and URL as creative 1.
 
 ## The £100 test plan (agreed structure, 27 July)
 
