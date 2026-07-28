@@ -28,6 +28,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     type: 'article',
+    images: ['/og-default.png'],
     url: `${SITE_URL}/blog/${post.slug}/`,
   },
 }
@@ -181,7 +182,7 @@ export default function Page() {
       </P>
 
       <CourseCTA
-        href="/summer-accelerators"
+        href="/summer-accelerators/"
         heading="Six weeks to repair Year 12, live"
         body="The Summer Accelerator takes Year 12 students going into Year 13 through exactly this repair: diagnose the leaks, rebuild the weak topics in Biology, Chemistry, Maths or Physics, and walk into September with evidence. Small live groups, led by Dr Waleed Ahmad, MBBS. First session risk-free."
         label="See the Summer Accelerator"

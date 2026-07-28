@@ -9,6 +9,15 @@ export const metadata = {
   title: 'A-Level Summer Accelerator | Get Ahead for Year 13',
   description: 'A 6-week live A-Level summer course for Year 12 students going into Year 13. Master the high-yield topics that decide your predicted grades. Biology, Chemistry, Maths and Physics. Starts 8th August.',
   alternates: { canonical: 'https://alevelaccelerators.com/summer-accelerators/' },
+  openGraph: {
+    siteName: 'A-Level Accelerators',
+    type: 'website',
+    url: 'https://alevelaccelerators.com/summer-accelerators/',
+    title: 'A-Level Summer Accelerator | Get Ahead for Year 13',
+    description:
+      'A 6-week live A-Level summer course for Year 12 students going into Year 13. Master the high-yield topics that decide your predicted grades. Starts 8th August.',
+    images: ['/og-default.png'],
+  },
 }
 
 const Divider = () => (
@@ -603,7 +612,7 @@ export default function SummerAccelerators() {
             Start with the free Revision Tracker instead. It builds you a personalised weekly revision timetable in about three minutes, using the same method we teach on the course.
           </p>
           <a
-            href="/revision-tracker"
+            href="/revision-tracker/"
             className="inline-block px-8 py-3 border-2 border-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold transition-all"
           >
             Build My Free Timetable

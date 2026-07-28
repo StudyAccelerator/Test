@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   description:
     'Download the free parent guide that explains why your child may be working hard but still not getting the grades they need, and the free plan to fix it.',
   alternates: { canonical: 'https://alevelaccelerators.com/parents/' },
+  openGraph: {
+    siteName: 'A-Level Accelerators',
+    type: 'website',
+    url: 'https://alevelaccelerators.com/parents/',
+    title: "Free Parents' Guide | A-Level Accelerators",
+    description:
+      'Download the free parent guide that explains why your child may be working hard but still not getting the grades they need, and the free plan to fix it.',
+    images: ['/og-default.png'],
+  },
 }
 
 const INSIDE: [string, string][] = [
@@ -201,7 +210,7 @@ export default function ParentsLanding() {
               </p>
               <div className="mt-8 grid gap-4 sm:grid-cols-3">
                 <a
-                  href="/revision-diagnostic"
+                  href="/revision-diagnostic/"
                   className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 transition hover:shadow-md"
                 >
                   <p className="font-serif text-lg font-bold text-brand-purple">
@@ -213,7 +222,7 @@ export default function ParentsLanding() {
                   </p>
                 </a>
                 <a
-                  href="/revision-tracker"
+                  href="/revision-tracker/"
                   className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 transition hover:shadow-md"
                 >
                   <p className="font-serif text-lg font-bold text-brand-purple">Revision Tracker</p>
@@ -223,7 +232,7 @@ export default function ParentsLanding() {
                   </p>
                 </a>
                 <a
-                  href="/newsletter"
+                  href="/newsletter/"
                   className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 transition hover:shadow-md"
                 >
                   <p className="font-serif text-lg font-bold text-brand-purple">

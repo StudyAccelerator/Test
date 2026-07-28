@@ -95,7 +95,7 @@ export default function NewsletterPage() {
             <p className="mx-auto mt-6 max-w-2xl text-center text-sm leading-relaxed text-brand-text/60">
               Written for Year 12 and Year 13 students. Parents: this one is for your teenager, but
               the{' '}
-              <a href="/parents" className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60">
+              <a href="/parents/" className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60">
                 free parents&apos; guide
               </a>{' '}
               was written for you.
@@ -113,7 +113,7 @@ export default function NewsletterPage() {
             </h2>
             <div className="mt-6 grid gap-4 sm:grid-cols-2">
               <a
-                href="/revision-diagnostic"
+                href="/revision-diagnostic/"
                 className="group rounded-xl bg-white/5 p-5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
                 <p className="font-serif text-lg font-bold text-brand-gold">Revision Diagnostic</p>
@@ -123,7 +123,7 @@ export default function NewsletterPage() {
                 </p>
               </a>
               <a
-                href="/revision-tracker"
+                href="/revision-tracker/"
                 className="group rounded-xl bg-white/5 p-5 ring-1 ring-white/10 transition hover:bg-white/10"
               >
                 <p className="font-serif text-lg font-bold text-brand-gold">Revision Tracker</p>

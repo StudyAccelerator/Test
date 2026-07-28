@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     type: 'article',
+    images: ['/og-default.png'],
     url: `${SITE_URL}/blog/${post.slug}/`,
   },
 }
@@ -163,7 +164,7 @@ export default function Page() {
       <TrackerCTA />
 
       <CourseCTA
-        href="/subject-accelerators"
+        href="/subject-accelerators/"
         heading="Teaching built around the exam, not just the content"
         body="A-Level Accelerators runs live small-group programmes in Biology, Chemistry, Maths and Physics. Brief content coverage, then straight into exam questions and mark schemes, with homework and progress tracking between sessions. Led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
         label="See Our A-Level Courses"

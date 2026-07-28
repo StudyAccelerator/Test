@@ -14,11 +14,11 @@ export default function FAQItem({ question, answer }) {
         <span>{question}</span>
         <span className={`text-xl transition-transform ${isOpen ? 'rotate-180' : ''}`}>▼</span>
       </button>
-      {isOpen && (
-        <div className="p-6 text-brand-text leading-relaxed">
-          {answer}
-        </div>
-      )}
+      {/* Always render the answer in the HTML (hidden until opened): AI answer
+          engines and search crawlers read static HTML and never click. */}
+      <div className={`p-6 text-brand-text leading-relaxed ${isOpen ? '' : 'hidden'}`}>
+        {answer}
+      </div>
     </div>
   )
 }

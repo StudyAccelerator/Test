@@ -10,6 +10,7 @@ Key facts: UK based, courses run live online in small groups, methods focus on a
 - [Summer Accelerator](https://alevelaccelerators.com/summer-accelerators/): six-week live summer course with pricing and enrolment, cohort starts 8 August 2026
 - [Revision Diagnostic](https://alevelaccelerators.com/revision-diagnostic/): free 20-question diagnostic that finds where a student's revision is leaking marks, then routes them to the right next step
 - [Revision Tracker](https://alevelaccelerators.com/revision-tracker/): free tool that builds a personalised weekly A-level revision timetable in about three minutes, using spaced repetition and active recall scheduling
+- [Error Log](https://alevelaccelerators.com/error-log/): free mistake tracker that logs every dropped mark, diagnoses which layer of revision caused it, and schedules spaced retests at 3, 7, 14 and 30 days
 - [Subject Accelerators](https://alevelaccelerators.com/subject-accelerators/): subject-specific A-level courses in Biology, Chemistry and Maths
 - [Study Systems](https://alevelaccelerators.com/study-systems/): the study method framework behind the courses
 - [For Parents](https://alevelaccelerators.com/parents/): information for parents of A-level students

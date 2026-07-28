@@ -699,7 +699,7 @@ function Landing({
             </button>
             <p className="mt-5 text-sm text-brand-cream/60">
               Prefer to plan first?{' '}
-              <a href="/revision-tracker" className="underline underline-offset-4 hover:text-brand-gold transition">
+              <a href="/revision-tracker/" className="underline underline-offset-4 hover:text-brand-gold transition">
                 Build a free timetable instead
               </a>
               .

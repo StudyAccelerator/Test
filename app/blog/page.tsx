@@ -14,6 +14,7 @@ export const metadata: Metadata = {
       'A-level revision advice that actually works: study techniques, revision timetables, predicted grades and UCAS strategy.',
     type: 'website',
     url: `${SITE_URL}/blog/`,
+    images: ['/og-default.png'],
   },
 }
 
@@ -103,7 +104,7 @@ export default function BlogIndex() {
             plan built on spaced repetition, the same methods this blog teaches.
           </p>
           <a
-            href="/revision-tracker"
+            href="/revision-tracker/"
             className="inline-block px-8 py-3 bg-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold-light transition"
           >
             Build My Free Timetable
@@ -117,7 +118,7 @@ export default function BlogIndex() {
           <div className="flex gap-8 justify-center text-sm">
             <a href="/" className="text-brand-gold hover:text-white transition">Courses</a>
             <a href="/blog/" className="text-brand-gold hover:text-white transition">Blog</a>
-            <a href="/revision-tracker" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+            <a href="/revision-tracker/" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
             <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
           </div>
           <p className="text-xs opacity-60">

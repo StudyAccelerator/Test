@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     type: 'article',
+    images: ['/og-default.png'],
     url: `${SITE_URL}/blog/${post.slug}/`,
   },
 }
@@ -167,7 +168,7 @@ export default function Page() {
         Audit your topics. Build a weekly plan weighted toward the weak ones, with each topic cycling through
         deep work, next-day recall, a light review and a test. Work in 45 to 60 minute blocks, phone in
         another room, and protect your sleep, because that&apos;s when the day&apos;s work gets written into long-term
-        memory. If you want the schedule built for you, our free <A href="/revision-tracker">Revision
+        memory. If you want the schedule built for you, our free <A href="/revision-tracker/">Revision
         Tracker</A>{' '}generates the whole structure in about three minutes.
       </P>
 

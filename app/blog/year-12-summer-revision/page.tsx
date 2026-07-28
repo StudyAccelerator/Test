@@ -30,6 +30,7 @@ export const metadata: Metadata = {
     title: post.title,
     description: post.description,
     type: 'article',
+    images: ['/og-default.png'],
     url: `${SITE_URL}/blog/${post.slug}/`,
   },
 }
@@ -207,7 +208,7 @@ export default function Page() {
       </P>
 
       <CourseCTA
-        href="/summer-accelerators"
+        href="/summer-accelerators/"
         heading="Start September ahead of your class"
         body="The Summer Accelerator is a six-week live online programme covering the high-yield topics that decide Year 13 predicted grades. Small groups, taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. Two sessions a week per subject, recordings included, first session risk-free."
         label="Explore the Summer Accelerator"

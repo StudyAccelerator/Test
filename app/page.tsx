@@ -105,7 +105,7 @@ const PROGRAMMES = [
     outcome:
       'Six weeks, live. Cover the high-yield Year 13 topics over summer, and walk into September already ahead.',
     points: ['Biology, Chemistry, Maths and Physics', 'Two live sessions a week per subject', 'Every session recorded'],
-    href: '/summer-accelerators',
+    href: '/summer-accelerators/',
     cta: 'Explore the Summer Accelerator',
   },
   {
@@ -119,7 +119,7 @@ const PROGRAMMES = [
     outcome:
       'Twelve-week live exam programmes in Biology, Chemistry and Maths. Small groups, specialist tutors, taught to the mark scheme.',
     points: ['Pick one subject or bundle three', 'Weekend sessions, no clashes', 'Exam technique in every session'],
-    href: '/subject-accelerators',
+    href: '/subject-accelerators/',
     cta: 'Explore Subject Accelerators',
   },
   {
@@ -133,7 +133,7 @@ const PROGRAMMES = [
     outcome:
       'High-yield revision, time management and exam performance. The system behind everything we teach, so you stay ahead without burning out.',
     points: ['Active recall and spaced repetition', 'Workload and burnout control', 'Exam performance under pressure'],
-    href: '/study-systems',
+    href: '/study-systems/',
     cta: 'Explore the Study System',
   },
 ]
@@ -370,7 +370,7 @@ export default function Home() {
                   Every student starts with an honest audit: every topic, rated for real confidence, not familiarity. The topics you avoid are usually where your grade is hiding.
                 </p>
                 <a
-                  href="/revision-diagnostic"
+                  href="/revision-diagnostic/"
                   className="mt-5 inline-flex items-center gap-1.5 font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
                 >
                   Run the free Revision Diagnostic
@@ -507,7 +507,7 @@ export default function Home() {
 
       {/* ── 6 · Meet Dr Waleed ───────────────────────────────────────────── */}
       <ScrollFade>
-        <section className="px-6 pb-24 md:pb-32">
+        <section id="founder" className="px-6 pb-24 md:pb-32 scroll-mt-28">
           <div className="max-w-6xl mx-auto grid md:grid-cols-[1fr_1.1fr] gap-10 md:gap-12 items-center">
             <div className="max-w-md mx-auto md:mx-0 w-full">
               <div className="relative">
@@ -597,7 +597,7 @@ export default function Home() {
               </div>
             </div>
             <a
-              href="/revision-tracker"
+              href="/revision-tracker/"
               className="mt-10 inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
             >
               Build My Free Timetable
@@ -639,7 +639,7 @@ export default function Home() {
             </div>
             <p className="mt-5 text-sm text-brand-cream/60">
               Free call, no obligation. Not ready to talk?{' '}
-              <a href="/revision-tracker" className="underline underline-offset-4 hover:text-brand-gold transition">
+              <a href="/revision-tracker/" className="underline underline-offset-4 hover:text-brand-gold transition">
                 Start with the free tracker
               </a>
               .

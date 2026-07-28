@@ -61,7 +61,7 @@ def scan(path: str) -> list[str]:
         # ISO strings, code identifiers, CSS classes by only flagging digit-digit
         # with surrounding spaces-word context
         if re.search(r"(?<![\w/:-])\d+\s?-\s?\d+(?![\w%-])", line) and not re.search(
-            r"(datePublished|dateModified|\d{4}-\d{2}-\d{2}|#|px|rgb|w-\d|h-\d)", line
+            r"(datePublished|dateModified|\d{4}-\d{2}-\d{2}|#|px|rgb|w-\d|h-\d|\bd=\")", line
         ):
             issues.append(f"{path}:{i}: HYPHEN RANGE (write 'X to Y'): {line.strip()[:90]}")
     return issues
