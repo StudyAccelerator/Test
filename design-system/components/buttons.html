@@ -1,0 +1,45 @@
+<!-- @dsCard group="Components" name="Buttons" subtitle="Primary pill, gold pill, outline, bordered CTA, block buttons, text links" viewport="900x620" -->
+<title>Buttons · A-Level Accelerators</title>
+<style>
+  body{margin:0;background:#FBF8F3;color:#1a1535;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:40px}
+  h2{font-family:ui-monospace,Menlo,monospace;font-size:11px;text-transform:uppercase;letter-spacing:.2em;color:rgba(46,37,87,.6);margin:0 0 14px;font-weight:600}
+  .row{display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:32px}
+  a{text-decoration:none;transition:all .2s}
+  .primary{display:inline-flex;align-items:center;border-radius:999px;background:#2E2557;color:#FBF8F3;padding:16px 36px;font-size:18px;font-weight:600;box-shadow:inset 0 -8px 10px rgba(255,255,255,.12),0 10px 24px rgba(46,37,87,.25)}
+  .primary:hover{background:#3d3370;transform:translateY(-2px)}
+  .goldpill{display:inline-flex;align-items:center;border-radius:999px;background:#C9A96E;color:#2E2557;padding:16px 36px;font-size:18px;font-weight:700;box-shadow:0 10px 15px rgba(0,0,0,.1)}
+  .goldpill:hover{background:#e0b577;transform:translateY(-2px)}
+  .outline{display:inline-flex;align-items:center;border-radius:999px;border:1px solid rgba(251,248,243,.3);color:#FBF8F3;padding:16px 36px;font-size:18px;font-weight:600}
+  .outline:hover{border-color:#C9A96E;color:#C9A96E}
+  .bordered{display:inline-block;border:2px solid #C9A96E;border-radius:8px;padding:6px 16px;font-weight:600;color:#2E2557;white-space:nowrap}
+  .bordered:hover{background:#C9A96E}
+  .goldblock{display:block;text-align:center;padding:16px 24px;font-weight:600;border-radius:8px;background:#C9A96E;color:#2E2557;box-shadow:0 10px 15px rgba(0,0,0,.1);width:240px}
+  .goldblock:hover{background:#e0b577;transform:translateY(-4px)}
+  .purpleblock{display:inline-block;padding:12px 32px;background:#2E2557;color:#FBF8F3;font-weight:600;border-radius:6px}
+  .purpleblock:hover{background:#3d3370}
+  .textlink{color:#2E2557;font-weight:600;text-decoration:underline;text-underline-offset:4px;text-decoration-color:rgba(201,169,110,.6);text-decoration-thickness:2px}
+  .textlink:hover{color:#C9A96E}
+  .arrow{display:inline-flex;align-items:center;gap:6px;font-weight:600;color:#2E2557}
+  .arrow:hover{color:#C9A96E}
+  .dark{background:#2E2557;border-radius:16px;padding:24px;display:flex;gap:16px;flex-wrap:wrap;align-items:center;margin-bottom:32px}
+  .cap{font-size:12px;color:#777;margin:-24px 0 32px}
+</style>
+<h2>On cream · primary actions</h2>
+<div class="row">
+  <a class="primary" href="#">Explore Our Programmes</a>
+  <a class="bordered" href="#">Book a Free Call</a>
+  <a class="purpleblock" href="#">See Our A-Level Courses</a>
+</div>
+<p class="cap">Primary pill carries the signature inset top-light shadow. The bordered rectangle is the header CTA. Purple block lives inside white CTA boxes.</p>
+<h2>On purple · dark sections</h2>
+<div class="dark">
+  <a class="goldpill" href="#">Book a Free Call</a>
+  <a class="outline" href="#">See the Programmes</a>
+  <a class="goldblock" href="#">Join Study Accelerator</a>
+</div>
+<h2>Inline</h2>
+<div class="row">
+  <a class="textlink" href="#">Book a free call</a>
+  <a class="arrow" href="#">Explore the Summer Accelerator <span>&rarr;</span></a>
+</div>
+<p class="cap">Text links underline in gold with 4px offset. Card CTAs are the arrow pattern; the arrow nudges right 6px on hover and the label turns gold.</p>
