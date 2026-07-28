@@ -14,6 +14,8 @@ Before writing anything, load the reference file(s) relevant to the task:
 - `references/audience-and-offers.md` | who we're talking to (students vs parents), the products, prices, links, and the seasonal calendar (results day, clearing, summer launch).
 - `references/visual-guide.md` | when a post needs a graphic, what kind, and how to spec or generate it. Brand colours and templates live here.
 
+For filmable short-form video scripts (TikTok/Reels/Shorts) written from a video idea, hand over to the dedicated **video-script** skill (`.claude/skills/video-script/`): it holds Waleed's transcript-derived spoken fingerprint, the Viral Toolkit format skeletons and the retention evidence. Content-studio still owns posts, captions, outlines and everything that is not a camera script.
+
 ## The one rule that matters most
 
 Every piece of content serves **one of two audiences**, never both at once:
@@ -52,4 +54,4 @@ Every blog article is produced twice: the website version (published to the repo
 - Do not invent statistics, student results, or grade outcomes. Approved proof points are in `references/audience-and-offers.md`. If asked for a claim we can't back, say so.
 - Do not use the marketplace framing "we match you with a tutor." We teach, in small groups.
 - Do not put external links in the body of LinkedIn or Facebook posts.
-- Do not reuse the same hook structure ("Be honest, which one is you?") repeatedly | vary the openings; see the playbook's hook library.
+- Do not reuse the same hook structure ("Be honest, which one is you?") repeatedly | vary the openings. The real hook library with sourced metrics is `content-hq/data/hooks.json` (fallback: `content-hq/seed/hooks.json`).
