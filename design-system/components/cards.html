@@ -1,0 +1,61 @@
+<!-- @dsCard group="Components" name="Programme card" subtitle="Art header, badge, mono audience, serif title, gold hook, tick list, arrow CTA" viewport="760x720" -->
+<title>Cards · A-Level Accelerators</title>
+<style>
+  body{margin:0;background:#FBF8F3;color:#1a1535;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:40px;display:flex;gap:24px;flex-wrap:wrap}
+  .pcard{width:320px;border-radius:24px;background:#fff;overflow:hidden;display:flex;flex-direction:column;transition:all .3s;text-decoration:none;color:inherit}
+  .pcard.featured{box-shadow:0 0 0 2px rgba(201,169,110,.55),0 2px 4px rgba(46,37,87,.06),0 16px 32px rgba(46,37,87,.12)}
+  .pcard.std{box-shadow:0 0 0 1px rgba(46,37,87,.06),0 2px 4px rgba(46,37,87,.05),0 12px 24px rgba(46,37,87,.06)}
+  .pcard:hover{transform:translateY(-8px)}
+  .art{position:relative;height:176px;background:linear-gradient(to bottom right,rgba(201,169,110,.15),#FBF8F3,#F3EBD8);display:flex;align-items:flex-end;justify-content:center;gap:14px;padding-bottom:12px}
+  .badge{position:absolute;top:16px;left:16px;border-radius:999px;font-size:12px;font-weight:700;padding:6px 12px;background:#C9A96E;color:#2E2557}
+  .badge.quiet{background:#fff;color:#2E2557;box-shadow:inset 0 0 0 1px rgba(46,37,87,.1)}
+  .grade{display:flex;align-items:center;justify-content:center;border-radius:16px;font-family:Georgia,serif;font-weight:700}
+  .body{padding:28px;display:flex;flex-direction:column;flex:1}
+  .aud{font-family:ui-monospace,Menlo,monospace;font-size:11px;text-transform:uppercase;letter-spacing:.15em;color:rgba(46,37,87,.55);margin:0}
+  .body h3{font-family:Georgia,serif;font-weight:700;font-size:26px;color:#2E2557;margin:8px 0 0}
+  .hook{font-family:Georgia,serif;font-style:italic;font-size:18px;color:#C9A96E;margin:8px 0 0;line-height:1.35}
+  .out{margin:12px 0 0;color:rgba(26,21,53,.75);line-height:1.55;font-size:15px}
+  ul{list-style:none;margin:20px 0 0;padding:0;font-size:14px;color:rgba(26,21,53,.7)}
+  li{display:flex;gap:10px;margin-bottom:8px}
+  li::before{content:"\2713";color:#C9A96E;font-weight:700}
+  .cta{margin-top:auto;padding-top:28px;font-weight:600;color:#2E2557;display:inline-flex;gap:6px}
+</style>
+<a class="pcard featured" href="#">
+  <div class="art">
+    <span class="badge">Enrolling now · starts 8th August</span>
+    <span class="grade" style="height:56px;width:56px;background:#fff;color:rgba(46,37,87,.6);box-shadow:inset 0 0 0 1px rgba(46,37,87,.1);font-size:20px">B</span>
+    <span class="grade" style="height:80px;width:80px;background:rgba(201,169,110,.25);color:#2E2557;box-shadow:inset 0 0 0 1px rgba(201,169,110,.4);font-size:24px">A</span>
+    <span class="grade" style="height:96px;width:96px;background:#2E2557;color:#C9A96E;font-size:30px;box-shadow:0 10px 15px rgba(46,37,87,.3)">A*</span>
+  </div>
+  <div class="body">
+    <p class="aud">For Year 12 going into Year 13</p>
+    <h3>Summer Accelerator</h3>
+    <p class="hook">Master the topics that decide your predicted grades.</p>
+    <p class="out">Six weeks, live. Cover the high-yield Year 13 topics over summer, and walk into September already ahead.</p>
+    <ul>
+      <li>Biology, Chemistry, Maths and Physics</li>
+      <li>Two live sessions a week per subject</li>
+      <li>Every session recorded</li>
+    </ul>
+    <span class="cta">Explore the Summer Accelerator <span>&rarr;</span></span>
+  </div>
+</a>
+<a class="pcard std" href="#">
+  <div class="art" style="background:linear-gradient(to bottom right,rgba(46,37,87,.07),#FBF8F3,#F3EBD8)">
+    <span class="badge quiet">The method itself</span>
+    <span class="grade" style="height:64px;width:36px;background:rgba(46,37,87,.15);border-radius:8px 8px 0 0"></span>
+    <span class="grade" style="height:88px;width:36px;background:rgba(46,37,87,.15);border-radius:8px 8px 0 0"></span>
+    <span class="grade" style="height:116px;width:36px;background:#2E2557;border-radius:8px 8px 0 0;box-shadow:0 10px 15px rgba(46,37,87,.3)"></span>
+  </div>
+  <div class="body">
+    <p class="aud">For students whose problem is how they study</p>
+    <h3>Top 1% Study System</h3>
+    <p class="hook">Study like the top 1%.</p>
+    <p class="out">High-yield revision, time management and exam performance, so you stay ahead without burning out.</p>
+    <ul>
+      <li>Active recall and spaced repetition</li>
+      <li>Workload and burnout control</li>
+    </ul>
+    <span class="cta">Explore the Study System <span>&rarr;</span></span>
+  </div>
+</a>

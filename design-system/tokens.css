@@ -1,0 +1,52 @@
+/* A-Level Accelerators design tokens
+   Extracted 27 July 2026 from app/globals.css and tailwind.config.ts.
+   Tailwind names in brackets. The site code is the source of truth. */
+
+:root {
+  /* Colour */
+  --purple: #2E2557;        /* brand-purple: headings, primary buttons, dark sections */
+  --purple-light: #3d3370;  /* brand-purple-light: hover state of purple */
+  --cream: #FBF8F3;         /* brand-cream: the page background, light text on purple */
+  --cream-dark: #F3EBD8;    /* brand-cream-dark: scrolled header, soft panels */
+  --gold: #C9A96E;          /* brand-gold: the accent; italic emphasis, CTAs, ticks */
+  --gold-light: #e0b577;    /* brand-gold-light: hover state of gold */
+  --text: #1a1535;          /* brand-text: body copy */
+  --muted: #777;            /* brand-muted: metadata, breadcrumbs */
+  --light-gray: #FAF8F4;    /* brand-light-gray */
+  --footer: #241d47;        /* footer background (footer.tsx) */
+
+  /* Status colours (Tailwind pairs used for confidence pills and subject tags) */
+  --ok-bg: #d1fae5;    --ok-fg: #047857;   /* emerald-100 / emerald-700: solid */
+  --warn-bg: #fef3c7;  --warn-fg: #b45309; /* amber-100 / amber-700: shaky */
+  --bad-bg: #fee2e2;   --bad-fg: #b91c1c;  /* red-100 / red-700: avoiding it */
+
+  /* Type */
+  --font-serif: Georgia, "Times New Roman", serif;             /* all headings */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, "Helvetica Neue", sans-serif;           /* body */
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace; /* eyebrows, labels */
+
+  /* Shadows */
+  --shadow-card: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05),
+                 0 12px 24px rgba(46,37,87,.06);               /* the CARD stack, app/page.tsx */
+  --shadow-card-hover: 0 0 0 1px rgba(46,37,87,.08), 0 8px 16px rgba(46,37,87,.08),
+                 0 24px 48px rgba(46,37,87,.12);
+  --shadow-featured: 0 0 0 2px rgba(201,169,110,.55), 0 2px 4px rgba(46,37,87,.06),
+                 0 16px 32px rgba(46,37,87,.12);               /* gold-ring featured card */
+  --shadow-panel: 0 0 0 1px rgba(46,37,87,.08), 0 8px 16px rgba(46,37,87,.08),
+                 0 24px 48px rgba(46,37,87,.16);               /* dropdown panel */
+  --shadow-btn: inset 0 -8px 10px rgba(255,255,255,.12), 0 10px 24px rgba(46,37,87,.25);
+                                                               /* primary pill inset highlight */
+
+  /* Radii */
+  --r-pill: 9999px;  /* buttons, badges, status pills */
+  --r-card: 16px;    /* rounded-2xl: standard cards */
+  --r-card-lg: 24px; /* rounded-3xl: programme cards */
+  --r-block: 12px;   /* rounded-xl: inner blocks, schedule rows */
+  --r-sm: 8px;       /* rounded-lg: small buttons, FAQ */
+
+  /* Motion */
+  --ease: cubic-bezier(0.22, 1, 0.36, 1); /* header EASE constant */
+  /* Hover grammar: cards lift (-translate-y-2) and sometimes rotate 1 to 2deg;
+     buttons lift -translate-y-0.5; arrows nudge translate-x. */
+}

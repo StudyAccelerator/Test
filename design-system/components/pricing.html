@@ -1,0 +1,49 @@
+<!-- @dsCard group="Components" name="Pricing tiers" subtitle="Cream cards on purple, gold highlight border, Most Popular badge" viewport="900x700" -->
+<title>Pricing · A-Level Accelerators</title>
+<style>
+  body{margin:0;background:#2E2557;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;padding:56px 32px 40px;display:flex;gap:16px;align-items:flex-end;justify-content:center;flex-wrap:wrap}
+  .tier{position:relative;background:#FBF8F3;border-radius:12px;padding:36px 32px;width:270px;display:flex;flex-direction:column;transition:all .3s}
+  .tier:hover{transform:translateY(-8px);box-shadow:0 25px 50px rgba(0,0,0,.25)}
+  .tier.std{border:2px solid #F3EBD8;box-shadow:0 10px 15px rgba(0,0,0,.1)}
+  .tier.hl{border:4px solid #C9A96E;box-shadow:0 25px 50px rgba(0,0,0,.25)}
+  .tier.pop{transform:scale(1.05);margin-top:-24px}
+  .tier.pop:hover{transform:scale(1.05) translateY(-8px)}
+  .badge{position:absolute;top:-16px;left:50%;transform:translateX(-50%);background:#C9A96E;color:#2E2557;padding:8px 24px;border-radius:999px;font-size:14px;font-weight:700;white-space:nowrap;box-shadow:0 4px 6px rgba(0,0,0,.1)}
+  h3{font-family:Georgia,serif;font-weight:700;font-size:26px;color:#2E2557;margin:0;text-align:center}
+  .tag{font-size:13px;color:#C9A96E;font-weight:600;text-transform:uppercase;letter-spacing:.05em;text-align:center;margin:4px 0 12px}
+  .price{font-size:34px;font-weight:700;color:#C9A96E;text-align:center;margin:16px 0}
+  .desc{font-size:13px;font-weight:700;text-align:center;margin:0 0 16px;opacity:.9;color:#1a1535}
+  ul{list-style:none;margin:0 0 24px;padding:0;flex:1}
+  li{display:flex;gap:10px;font-size:14px;color:#1a1535;margin-bottom:10px;line-height:1.4}
+  li::before{content:"\2713";color:#C9A96E;font-weight:700;font-size:16px}
+  .note{font-size:13px;color:#C9A96E;font-style:italic;font-weight:600;text-align:center;margin:0 0 20px}
+  a{display:block;text-align:center;padding:16px 24px;font-weight:600;border-radius:8px;background:#C9A96E;color:#2E2557;text-decoration:none;box-shadow:0 10px 15px rgba(0,0,0,.1)}
+  a.soft{background:rgba(201,169,110,.7)}
+  a:hover{background:#e0b577;transform:translateY(-3px)}
+</style>
+<div class="tier std">
+  <h3>Study Series</h3>
+  <p class="tag">Learn the System</p>
+  <p class="price">£119</p>
+  <p class="desc">Best for: Students who want clarity and structure</p>
+  <ul><li>4 live sessions (2 hours each)</li><li>Full Top 1% Study System</li><li>Fortnightly group Q&amp;A</li></ul>
+  <a class="soft" href="#">Join Study Series</a>
+</div>
+<div class="tier hl pop">
+  <span class="badge">Most Popular</span>
+  <h3>Study Accelerator</h3>
+  <p class="tag">Implement the System</p>
+  <p class="price">£499</p>
+  <p class="desc">Best for: Students who want results</p>
+  <ul><li>12 weekly live sessions</li><li>Personalised guidance</li><li>Direct feedback on your progress</li></ul>
+  <a href="#">Join Study Accelerator</a>
+</div>
+<div class="tier hl">
+  <h3>Top 1% Mentorship</h3>
+  <p class="tag">Optimise and Accelerate</p>
+  <p class="price">£2,000/year</p>
+  <p class="desc">Best for: Serious students aiming top</p>
+  <ul><li>Personalised performance plan</li><li>Fortnightly calls, year-round</li></ul>
+  <p class="note">Invite only · limited to 5 spaces</p>
+  <a href="#">Book Free Consultation</a>
+</div>
