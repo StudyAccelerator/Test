@@ -189,47 +189,47 @@ The flow still has to sound like Waleed talking (that was the last note), so lin
 
 ## Script 5: Method breakdown
 
-**Title for your own tracking:** "Pre-reading / priming breakdown"
-**Length target:** 45 to 55 seconds. **Wardrobe:** scrubs, at the desk, a textbook in front of you to gesture at.
-**Note:** deliberately NOT a recall or blurting tip. Every other script leans on active recall, so this one covers a different moment entirely: before and during the lesson, not the revision desk. It's Waleed's Tip 1 from the long-form, so this short also seeds that video.
+**Title for your own tracking:** "The error log breakdown"
+**Length target:** 45 to 55 seconds. **Wardrobe:** scrubs, at the desk, a marked past paper and a red pen in front of you to gesture at.
+**Note:** deliberately NOT a recall or blurting tip. This is the practice-question half of the system: what you do with a wrong answer after you've marked it. The K, R, W letters are already how Waleed teaches this in the subject email sequence and the diagnostic, so the short matches the site.
 
 **[Beat: proven hook]**
 
-> Ever sat in a lesson and five minutes in you're already completely lost? Everyone else is nodding along and you're just copying stuff down hoping it clicks later. That's not you being slow. It's one missing habit, and it takes ten minutes.
+> You've done ten past papers and your grade hasn't moved. It's not the number of papers. It's what you do in the ten minutes after them.
 
-*On-screen text: "why you're lost 5 minutes into every lesson"*
+*On-screen text: "10 past papers, same grade"*
 
 **[Beat: hype up the method]**
 
-> This is the closest thing to a cheat code I found at school. Those students who just seem to get it in class? Most of them are quietly doing this before they even walk in.
+> This is the highest-yield thing I teach, and it's one page per subject. Your wrong answers are the most valuable material you own, and almost everyone bins them.
 
 **[Beat: introduce what the method is called]**
 
-> It's called pre-reading. Or priming. You prime your brain before the lesson starts.
+> It's called an error log.
 
-*On-screen text: "PRE-READING"*
+*On-screen text: "THE ERROR LOG"*
 
 **[Beat: the science explaining the problem, not the method]**
 
-> Here's why you get lost. Your working memory can only juggle so much new information at once, and if every single thing in the lesson is brand new, it maxes out in minutes. That's why you spend the rest of the lesson just surviving it. It's like being dropped into the middle of a conversation, you're always a step behind.
+> Here's the problem. You mark the paper, you see the red, you feel a bit rubbish, you move on. Nothing gets fixed, so next paper you drop the exact same marks. Because "I got it wrong" isn't a diagnosis. In hospital, when something goes wrong, we sit down and work out precisely why, so it can't happen twice.
 
 **[Beat: how the method works as the solution]**
 
-> Pre-reading clears that overload before you walk in. If your brain's seen the topic even once, it stops decoding from scratch and starts going, oh, I recognise this. Same lesson, half the panic, and you actually follow it.
+> So every dropped mark gets one line, and a letter. K, you didn't know it, that's a content gap. R, you knew it but couldn't get it out under pressure, that's retrieval. W, you knew it and wrote it, just not in the mark scheme's language. Three different problems with three different fixes, and now you know which one you've actually got.
 
 **[Beat: how to implement it]**
 
-> So the night before, or even ten minutes before, skim the topic. Don't memorise it, just get familiar. Read the headings, look at the diagrams, and jot down the one or two things that don't make sense. Then ask those at the start of the lesson, not the end.
+> One page per subject. Mark it meanly with the real mark scheme, log every lost mark with its letter and what the scheme actually wanted, then read that log before your next paper. Retest it weekly. That's the bit everyone skips.
 
 **[Beat: close]**
 
 > Follow for the stuff school never taught you.
 
-*On-screen text during implementation: "1. skim the topic, night before or 10 min before" / "2. don't memorise, just get familiar" / "3. note what doesn't make sense" / "4. ask it at the START of the lesson".*
+*On-screen text during the letters: "K: didn't know it" / "R: knew it, couldn't produce it" / "W: knew it, wrong wording". Then for implementation: "1. mark it meanly" / "2. one line + letter per lost mark" / "3. read it before the next paper" / "4. retest weekly".*
 
-**Caption:** The 10 minutes before a lesson matter more than the hour in it. #alevels #alevelrevision #year12 #year13 #studytok
+**Caption:** Ten past papers without an error log is just the same mistake ten times. #alevels #alevelrevision #year12 #year13 #studytok
 
-**Why this should hold:** the hook is the in-class lost felt-moment (Waleed's own long-form Tip 1 opener), which is a completely different pain point from the exam-blank hook used elsewhere, so the batch stops repeating itself. It covers a part of the student's day nothing else touches, and cognitive load plus priming is real, citable science. Concrete enough to do before tomorrow's first lesson.
+**Why this should hold:** the hook is a different felt moment from the rest of the batch (effort going in, grade not moving) and it names a frustration every serious student has had. The method is genuinely new material here: nothing else in the batch covers what to do with a wrong answer, so it pairs with the past-paper habit instead of repeating the recall lesson. The K, R, W letters are the memorable, screenshot-able payload, they are already Waleed's own framing on the site, and the hospital line is credibility only he can use.
 
 ---
 
