@@ -11,6 +11,26 @@ export const metadata: Metadata = {
   description:
     'One thing school never taught you, every Sunday at 5pm. A free weekly email for A-level students from Dr Waleed Ahmad: one revision method per issue, usable that evening.',
   alternates: { canonical: 'https://alevelaccelerators.com/newsletter/' },
+  openGraph: {
+    siteName: 'A-Level Accelerators',
+    type: 'website',
+    url: 'https://alevelaccelerators.com/newsletter/',
+    title: 'The Sunday Session: free weekly A-level newsletter',
+    description:
+      'One thing school never taught you, every Sunday at 5pm. A free weekly email for A-level students from Dr Waleed Ahmad.',
+    images: ['/og-default.png'],
+  },
+}
+
+const newsletterWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://alevelaccelerators.com/newsletter/#webpage',
+  url: 'https://alevelaccelerators.com/newsletter/',
+  name: 'The Sunday Session: free weekly A-level newsletter',
+  description:
+    'A free weekly email for A-level students from Dr Waleed Ahmad: one revision method per issue, usable that evening.',
+  isPartOf: { '@type': 'WebSite', '@id': 'https://alevelaccelerators.com/#website' },
 }
 
 const SECTIONS: [string, string][] = [
@@ -35,6 +55,10 @@ const SECTIONS: [string, string][] = [
 export default function NewsletterPage() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(newsletterWebPageSchema) }}
+      />
       <Header />
       <main>
         <section className="relative overflow-hidden px-5 pb-12 pt-12 text-center sm:pt-16">

@@ -24,6 +24,46 @@ export const metadata: Metadata = {
   },
 }
 
+const PARENT_FAQS: { q: string; a: string }[] = [
+  {
+    q: "What is in the free A-level parents' guide?",
+    a: "The real reason hard-working students get stuck, the four tiers of exam performance so you can see which one your child is on, three questions to ask them this week that reveal more than 'how's revision going?', and a free plan you can start tonight. It's a short, honest read, not a padded ebook.",
+  },
+  {
+    q: "How can I tell if my child's revision is actually working?",
+    a: "Compare marks against hours. If the hours are high and the results aren't moving, the method is leaking, and more of the same hours won't fix it. The clearest way to see the leak is the free Revision Diagnostic: 20 questions, answered by your child or by you from what you see at home, and the report names the exact pattern.",
+  },
+  {
+    q: 'How many hours a day should my child be revising?',
+    a: "In study leave, 3 to 5 focused hours beats 8 distracted ones. Alongside school, 2 to 3 is realistic. The hours matter far less than what fills them: testing yourself from memory moves grades, re-reading notes doesn't. If your child does long evenings with the notes out and the grades stay flat, that's the pattern to break.",
+  },
+  {
+    q: 'Is the guide for parents of Year 12 or Year 13 students?',
+    a: "Both, and for parents of students resitting. The method problems it deals with are the same in both years; what changes is the urgency. If your child is going into Year 13, the summer and early autumn are when predicted grades get decided, so sooner genuinely beats later.",
+  },
+]
+
+const parentsFaqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: PARENT_FAQS.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+}
+
+const parentsWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://alevelaccelerators.com/parents/#webpage',
+  url: 'https://alevelaccelerators.com/parents/',
+  name: "Free Parents' Guide | A-Level Accelerators",
+  description:
+    'The free guide for parents of A-level students: why hard-working students get stuck, the four tiers of exam performance, and a plan you can start tonight.',
+  isPartOf: { '@type': 'WebSite', '@id': 'https://alevelaccelerators.com/#website' },
+}
+
 const INSIDE: [string, string][] = [
   [
     'The real reason grades stall',
@@ -247,7 +287,35 @@ export default function ParentsLanding() {
             </div>
           </section>
         </ScrollFade>
+
+        {/* ── Parent FAQs ───────────────────────────────────────────────── */}
+        <ScrollFade>
+          <section className="px-5 pb-16">
+            <div className="mx-auto max-w-3xl">
+              <p className={`${EYEBROW} text-center`}>Quick answers</p>
+              <h2 className="mt-2 text-center font-serif text-3xl font-bold text-brand-purple">
+                Questions parents ask us
+              </h2>
+              <div className="mt-8 space-y-4">
+                {PARENT_FAQS.map((f) => (
+                  <div key={f.q} className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 sm:p-7">
+                    <h3 className="font-serif text-lg font-bold text-brand-purple">{f.q}</h3>
+                    <p className="mt-2 leading-relaxed text-brand-text/75">{f.a}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </section>
+        </ScrollFade>
       </main>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(parentsFaqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(parentsWebPageSchema) }}
+      />
       <Footer />
     </>
   )

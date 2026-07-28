@@ -117,7 +117,7 @@ export const DiagnosticCTA = ({ audience = 'student' }: { audience?: 'student' |
 
 export const CourseCTA = ({
   heading = 'Want expert help, not just advice?',
-  body = 'A-Level Accelerators runs live online classes in Biology, Chemistry, Maths and Physics, taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. Small groups, real exam technique, first session risk-free.',
+  body = 'A-Level Accelerators runs live online classes in Biology, Chemistry and Maths, taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. Small groups, real exam technique, first session risk-free.',
   label = 'See Our A-Level Courses',
   href = '/subject-accelerators/',
 }: {
@@ -186,7 +186,14 @@ const AuthorBio = () => (
 )
 
 const RelatedPosts = ({ currentSlug }: { currentSlug: string }) => {
-  const related = posts.filter((p) => p.slug !== currentSlug).slice(0, 3)
+  // Same-category posts first (real topical siblings), newest fill the rest.
+  // This also spreads internal links to older posts instead of always the
+  // newest three, which is what left several posts with a single inlink.
+  const current = posts.find((p) => p.slug === currentSlug)
+  const others = posts.filter((p) => p.slug !== currentSlug)
+  const sameCategory = current ? others.filter((p) => p.category === current.category) : []
+  const rest = others.filter((p) => !sameCategory.includes(p))
+  const related = [...sameCategory, ...rest].slice(0, 3)
   if (related.length === 0) return null
   return (
     <section className="mt-14">
@@ -212,6 +219,7 @@ const BlogFooter = () => (
         <a href="/blog/" className="text-brand-gold hover:text-white transition">Blog</a>
         <a href="/revision-diagnostic/" className="text-brand-gold hover:text-white transition">Free Revision Diagnostic</a>
         <a href="/revision-tracker/" className="text-brand-gold hover:text-white transition">Free Revision Tracker</a>
+        <a href="/parents/" className="text-brand-gold hover:text-white transition">Parents&apos; Guide</a>
         <a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a>
       </div>
       <p className="text-xs opacity-60">

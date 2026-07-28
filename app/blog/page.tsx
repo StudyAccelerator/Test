@@ -6,7 +6,7 @@ import { HeroHeadline, HeroWord } from '@/components/home/hero-reveal'
 export const metadata: Metadata = {
   title: 'A-Level Revision Blog: Advice From a Doctor & Former Top Student',
   description:
-    'A-level revision advice that actually works: study techniques, revision timetables, predicted grades and UCAS strategy. Written by Dr Waleed Ahmad, MBBS, a doctor, former top A-level student and founder of A-Level Accelerators.',
+    'A-level revision advice that actually works: study techniques, revision timetables, predicted grades and UCAS strategy, from Dr Waleed Ahmad, MBBS.',
   alternates: { canonical: `${SITE_URL}/blog/` },
   openGraph: {
     title: 'A-Level Revision Blog | A-Level Accelerators',

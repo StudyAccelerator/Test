@@ -1245,4 +1245,12 @@ export const LANDING_FAQS = [
     q: 'Will you tell me my revision is fine?',
     a: 'If it is, yes. One of the seven profiles is The Optimiser, and if you land there the report says so and shows you how to sharpen rather than fix. Honesty is the whole point of a diagnostic.',
   },
+  {
+    q: 'How does it work out where my marks are leaking?',
+    a: "The 20 questions score the five systems behind every top grade: how you plan, how you learn, how you check what stuck, how you practise for exams, and how you manage the workload. Your scores get matched against the patterns I've seen across more than 1,000 students, and the report names your profile, your weakest system, and an estimate of the hours you're spending on revision that isn't earning marks.",
+  },
+  {
+    q: 'What should I do once I have my report?',
+    a: "Start the 7 day plan the same evening: it tells you exactly what to change first, and the first change is always the biggest leak. Then use the free Revision Tracker to build the new method into your week. The report also routes you to the right next step for your profile, and if that's one of my courses, it says so and explains why. If it isn't, it says that too.",
+  },
 ]
