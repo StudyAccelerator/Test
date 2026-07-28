@@ -1,5 +1,7 @@
 # Meta ad: parents into the Revision Diagnostic (first paid push)
 
+**LIVE since 28 July 2026** (campaign "Parents Diagnostic | Aug 2026 test", ad account 980086329528962, now inside the Waleed Ahmad business portfolio 460782272865732 together with the pixel and the Dr Waleed Ahmad page). Waleed published it himself. Final as-published shape: campaign budget £10/day ending 7 August 23:59 (about £105 total), Facebook-only placements, age suggestion 38 to 55 plus parents-of-teenagers/adult-children hints, Lead event optimisation, and a fourth creative size (1.91:1, `final/parents-diagnostic-191.png`) for right-column and search. Waleed's published primary text differs slightly from the draft below (his opener "Your child's dream university wants A/A* grades", "I'm Dr Waleed", closing "help your child achieve their potential"); a proposed guarantee line was removed pre-launch as an unsubstantiated outcome claim. The scheduled task `meta-ad-daily-check` (08:27 daily) reads the numbers read-only, logs to gitignored `dashboard/data/meta-ads-log.jsonl`, and alerts only on the agreed decision rules (nothing judged before about £50 spent; under £20/lead good, £30+ bad; final wrap-up after 7 August).
+
 Built 27 July 2026. Nothing here runs until Waleed launches it himself in Ads Manager. The two gates from the 17 July lead generation map still apply before a pound is spent: legal pages live (drafts in `content/legal-drafts/`) and Waleed's explicit budget approval.
 
 ## The creative direction, and why this one

@@ -68,7 +68,7 @@ The current audit is `content/business-audit/2026-07-16-reaudit-and-road-to-1m.m
 
 ## Meta ads (27 July 2026)
 
-The first Meta ad (parents into the revision diagnostic, doctor-face creative per the lead map's recommendation) is built and awaiting Waleed's launch: full copy, rendered creatives (4:5, 1:1, 9:16) and Ads Manager setup in `content/meta-ads/2026-07-27-parents-diagnostic-launch/`. Sessions never touch his ad account; he launches everything himself, and the lead map's two gates (legal pages live, his budget approval) apply before any spend. The studio stills of Waleed in `creative-src/` there (scrubs at desk, black polo) are the approved photo set for future ad creatives.
+The first Meta ad (parents into the revision diagnostic, doctor-face creative) went LIVE 28 July 2026: campaign "Parents Diagnostic | Aug 2026 test", £10/day to 7 August, Facebook-only, Lead-event optimised. Full record, copy and creatives (4:5, 1:1, 9:16, 1.91:1) in `content/meta-ads/2026-07-27-parents-diagnostic-launch/ad.md`. His ad account, page and pixel now all live inside the Waleed Ahmad business portfolio (the empty-portfolio/personal split was resolved 28 July). The scheduled task `meta-ad-daily-check` (08:27 daily) monitors it read-only and logs to gitignored `dashboard/data/meta-ads-log.jsonl`. Sessions may READ Ads Manager via Claude in Chrome but never edit, pause or publish anything in it without Waleed's explicit instruction; he presses every Publish himself. The legal-pages gate remains open (privacy/terms drafts still unpublished; Waleed chose to launch ahead of it). The studio stills of Waleed in `creative-src/` there (scrubs at desk, black polo) are the approved photo set for future ad creatives.
 
 ## Facebook groups channel (15 July 2026)
 
