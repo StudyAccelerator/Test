@@ -1,0 +1,7 @@
+{
+  "projectId": "019e0e54-624a-741c-8090-d4e81a4d4d21",
+  "projectName": "A-Level Accelerators Design System",
+  "layout": "hand-authored-html",
+  "localDir": "design-system",
+  "notes": "Off-script layout: design-system/ holds self-contained HTML preview cards with @dsCard first-line markers, no converter build. Sync per design-system/README.md: list_files, diff, finalize_plan, write from design-system/. Remote assets/ and decks/ are NOT owned by this sync and must be kept."
+}

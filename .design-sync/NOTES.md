@@ -1,0 +1,5 @@
+# design-sync notes
+
+- 28 Jul 2026: first sync of the hand-authored design-system/ folder into the existing "A-Level Accelerators Design System" project (re-adopted on Waleed's instruction). Replaced the old rough auto-generated system: deleted preview/ (16 cards), colors_and_type.css, the old README.md and SKILL.md, ui_kits/ (recreations of the pre-July-2026 homepage, old pricing and the retired workshop era), _ds_bundle.js and _adherence.oxlintrc.json. Kept assets/ (real logos, favicon, founder photos) and decks/ (sales decks, separate work) untouched.
+- This repo's layout is off-script for the converter: no React build, no Storybook. Each preview is self-contained HTML with a `<!-- @dsCard ... -->` first line the Design pane indexes directly. No _ds_sync.json anchor is produced (honest omission); each re-sync diffs by hand against list_files.
+- Standing rule (design-system/README.md): sessions that change the site's visual language update design-system/ in the same pass and note that a re-sync is due.
