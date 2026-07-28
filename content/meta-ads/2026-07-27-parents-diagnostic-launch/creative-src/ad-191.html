@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 628px; overflow: hidden; }
+  .ad {
+    width: 1200px; height: 628px;
+    background: #2E2557;
+    display: flex;
+  }
+  .photo {
+    width: 520px; height: 628px; flex: none;
+    background-image: url('waleed-scrubs-desk.jpg');
+    background-size: cover;
+    background-position: 46% 20%;
+    position: relative;
+  }
+  .photo::after {
+    content: ''; position: absolute; inset: 0;
+    background: linear-gradient(90deg, rgba(46,37,87,0) 70%, #2E2557 100%);
+  }
+  .badge {
+    position: absolute; bottom: 28px; left: 28px; z-index: 2;
+    background: rgba(26,21,53,0.72);
+    color: #F3EBD8;
+    font: 600 20px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    padding: 12px 20px; border-radius: 999px;
+  }
+  .panel {
+    flex: 1;
+    padding: 56px 56px 44px 40px;
+    display: flex; flex-direction: column;
+  }
+  .eyebrow {
+    color: #C9A96E;
+    font: 700 20px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    letter-spacing: 0.14em;
+    margin-bottom: 22px;
+  }
+  h1 {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-weight: 400;
+    font-size: 42px; line-height: 1.14;
+    color: #F3EBD8;
+    margin-bottom: 22px;
+  }
+  .sub {
+    color: rgba(243,235,216,0.88);
+    font: 400 24px/1.42 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    margin-bottom: 32px;
+  }
+  .sub strong { color: #F3EBD8; font-weight: 600; }
+  .cta-row { display: flex; align-items: center; gap: 24px; margin-top: auto; }
+  .pill {
+    background: #C9A96E; color: #1a1535;
+    font: 700 25px/1 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    padding: 20px 36px; border-radius: 999px;
+  }
+  .free {
+    color: rgba(243,235,216,0.7);
+    font: 600 20px/1.3 -apple-system, 'Helvetica Neue', Arial, sans-serif;
+  }
+</style>
+</head>
+<body>
+<div class="ad">
+  <div class="photo">
+    <div class="badge">Dr Waleed Ahmad, NHS doctor</div>
+  </div>
+  <div class="panel">
+    <div class="eyebrow">FOR PARENTS OF A-LEVEL STUDENTS</div>
+    <h1>Your child puts the hours in.<br>So where are the marks?</h1>
+    <div class="sub">20 quick questions. An instant report showing <strong>why the hours aren't turning into marks</strong>, and what to change first.</div>
+    <div class="cta-row">
+      <div class="pill">Take the free diagnostic</div>
+      <div class="free">Completely free.<br>About 3 minutes.</div>
+    </div>
+  </div>
+</div>
+</body>
+</html>
