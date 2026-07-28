@@ -189,46 +189,47 @@ The flow still has to sound like Waleed talking (that was the last note), so lin
 
 ## Script 5: Method breakdown
 
-**Title for your own tracking:** "Blurt and Fix breakdown"
-**Length target:** 45 to 55 seconds. **Wardrobe:** scrubs, at the desk, blank page in front of you to gesture at.
+**Title for your own tracking:** "Pre-reading / priming breakdown"
+**Length target:** 45 to 55 seconds. **Wardrobe:** scrubs, at the desk, a textbook in front of you to gesture at.
+**Note:** deliberately NOT a recall or blurting tip. Every other script leans on active recall, so this one covers a different moment entirely: before and during the lesson, not the revision desk. It's Waleed's Tip 1 from the long-form, so this short also seeds that video.
 
 **[Beat: proven hook]**
 
-> Ever revised something, felt like you knew it, then walked into the exam and blanked? There's a five minute method that fixes exactly that, and most students have never done it properly.
+> Ever sat in a lesson and five minutes in you're already completely lost? Everyone else is nodding along and you're just copying stuff down hoping it clicks later. That's not you being slow. It's one missing habit, and it takes ten minutes.
 
-*On-screen text: "knew it yesterday. blank in the exam."*
+*On-screen text: "why you're lost 5 minutes into every lesson"*
 
 **[Beat: hype up the method]**
 
-> I've taught over 1,000 A-level students, and if I could keep one method, it's this. It's in every session for a reason.
+> This is the closest thing to a cheat code I found at school. Those students who just seem to get it in class? Most of them are quietly doing this before they even walk in.
 
 **[Beat: introduce what the method is called]**
 
-> It's called blurting. We call it Blurt and Fix, because the fix is the half everyone skips.
+> It's called pre-reading. Or priming. You prime your brain before the lesson starts.
 
-*On-screen text: "BLURT AND FIX"*
+*On-screen text: "PRE-READING"*
 
 **[Beat: the science explaining the problem, not the method]**
 
-> Here's why you need it. Rereading your notes runs on recognition, the info's already on the page, so nothing gets pulled from memory. Feels smooth, fools you into thinking you know it. But exams test recall, not recognition. Different skill, and rereading never trains it.
+> Here's why you get lost. Your working memory can only juggle so much new information at once, and if every single thing in the lesson is brand new, it maxes out in minutes. That's why you spend the rest of the lesson just surviving it. It's like being dropped into the middle of a conversation, you're always a step behind.
 
 **[Beat: how the method works as the solution]**
 
-> Blurting forces the recall, and it's brutally honest. No more "I sort of know it", you either remember it or you don't. Notes shut, blank page, one topic, write everything. Whatever doesn't come out is the point, because if it's not on the page it's not in your head.
+> Pre-reading clears that overload before you walk in. If your brain's seen the topic even once, it stops decoding from scratch and starts going, oh, I recognise this. Same lesson, half the panic, and you actually follow it.
 
 **[Beat: how to implement it]**
 
-> So: one topic, notes closed, blank page, five minutes, write everything. Then open your notes and fix the gaps in a different colour. Blurt it again in three or four days, and watch that second colour shrink.
+> So the night before, or even ten minutes before, skim the topic. Don't memorise it, just get familiar. Read the headings, look at the diagrams, and jot down the one or two things that don't make sense. Then ask those at the start of the lesson, not the end.
 
 **[Beat: close]**
 
 > Follow for the stuff school never taught you.
 
-*On-screen text during implementation: "1. one topic, notes closed" / "2. blank page, 5 mins, everything" / "3. fix gaps in a new colour" / "4. repeat in 3 to 4 days".*
+*On-screen text during implementation: "1. skim the topic, night before or 10 min before" / "2. don't memorise, just get familiar" / "3. note what doesn't make sense" / "4. ask it at the START of the lesson".*
 
-**Caption:** Blurt and Fix. The fix is the half everyone skips. #alevels #alevelrevision #blurting #year12 #year13
+**Caption:** The 10 minutes before a lesson matter more than the hour in it. #alevels #alevelrevision #year12 #year13 #studytok
 
-**Why this should hold:** the hook is the exam-blank felt moment, the same opener Curtis and Tom used for the blurting section of the long-form script. The problem section makes the viewer feel caught before the fix arrives, and the implementation is concrete enough to try tonight. Trimmed the science and solution beats so it lands under a minute.
+**Why this should hold:** the hook is the in-class lost felt-moment (Waleed's own long-form Tip 1 opener), which is a completely different pain point from the exam-blank hook used elsewhere, so the batch stops repeating itself. It covers a part of the student's day nothing else touches, and cognitive load plus priming is real, citable science. Concrete enough to do before tomorrow's first lesson.
 
 ---
 
