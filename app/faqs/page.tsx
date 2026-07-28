@@ -32,6 +32,10 @@ const groups: Group[] = [
         a: "A typical tutor mostly re-explains content, which usually lifts a student to a B and then stalls. We focus on the things that actually move grades from B to A and A*: recall under pressure, applying knowledge to unfamiliar questions, and exam technique. That's why our sessions go straight into exam questions after covering the key content briefly.",
       },
       {
+        q: 'Who founded A-Level Accelerators?',
+        a: "Dr Waleed Ahmad, MBBS. He's an NHS doctor and a former top-performing A-level student who has worked with over 1,000 A-level students. He built the study system the courses teach, leads the exam technique sessions himself, and writes everything on the revision blog.",
+      },
+      {
         q: 'How do I know if it works?',
         a: "Students rate their confidence in each topic before and after every session, and it climbs consistently across our 12-week programmes. You can also read real student feedback on our homepage. And because the first session is risk-free, you can judge the teaching yourself before committing.",
       },
@@ -42,7 +46,11 @@ const groups: Group[] = [
     items: [
       {
         q: 'Which subjects can I take?',
-        a: "Biology, Chemistry, Maths and Physics. You can take one subject or several, and on the Summer Accelerator the more you take, the more you save.",
+        a: "The Summer Accelerator covers Biology, Chemistry, Maths and Physics: take one subject or several, and the more you take, the more you save. The 12-week Subject Accelerators currently run in Biology, Chemistry and Maths, with Physics planned to join them.",
+      },
+      {
+        q: 'Can I join from anywhere in the UK?',
+        a: "Yes. Everything runs live online, so it works the same whether you're in London, a village in Wales or anywhere in between. All you need is a laptop and an internet connection. We teach UK exam boards (AQA, OCR and Edexcel), so the content matches what you'll sit in the summer.",
       },
       {
         q: 'What is the difference between your programmes?',
@@ -99,6 +107,10 @@ const groups: Group[] = [
         a: "Start with our free parents' guide: it explains why hard-working students get stuck and gives you a plan for the week. Beyond that, the most useful things are practical: help them protect their sleep, keep a calm home environment during exam season, and encourage a steady weekly routine rather than last-minute cramming. Our revision blog has detailed guides written for exactly this, and our free Revision Tracker builds them a personalised weekly plan.",
       },
       {
+        q: 'How many hours a day should my child be revising?',
+        a: "Fewer than you probably think: 3 to 5 focused hours a day in study leave, and around 2 to 3 alongside school, beats 8 distracted ones. What matters is what fills the hours. Testing themselves from memory moves grades; re-reading notes doesn't. If the hours are high and the marks aren't moving, that mismatch is the thing to fix, and the free Revision Diagnostic will show you exactly where the effort is leaking.",
+      },
+      {
         q: 'How do I get in touch?',
         a: "Email Waleed@alevelaccelerators.com or book a free call. We're happy to answer any questions before you commit.",
       },
@@ -135,12 +147,27 @@ const faqJsonLd = {
   })),
 }
 
+const faqsWebPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  '@id': 'https://alevelaccelerators.com/faqs/#webpage',
+  url: 'https://alevelaccelerators.com/faqs/',
+  name: 'FAQs | A-Level Accelerators',
+  description:
+    'Answers to the questions students and parents ask about A-Level Accelerators: courses, pricing, how sessions work, and the free revision tools.',
+  isPartOf: { '@type': 'WebSite', '@id': 'https://alevelaccelerators.com/#website' },
+}
+
 export default function FAQsPage() {
   return (
     <main className="bg-brand-cream min-h-screen">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqsWebPageSchema) }}
       />
       <Header />
 

@@ -1,16 +1,25 @@
 import type { Metadata } from 'next'
 
 export const metadata: Metadata = {
-  title: 'Free A-Level Revision Timetable Maker and Topic Audit',
+  title: 'Free A-Level Revision Planner and Timetable Maker',
   description:
-    'Audit your weakest A-level topics, keep the week inside the hours you genuinely have, and get a printable revision timetable where every session uses a real technique: blurting, active recall and spaced review. Free, in about three minutes.',
+    'A free A-level revision planner: audit your weakest topics, keep the week inside the hours you genuinely have, and get a printable revision timetable where every session uses a real technique: blurting, active recall and spaced review.',
   alternates: { canonical: 'https://alevelaccelerators.com/revision-tracker/' },
+  openGraph: {
+    siteName: 'A-Level Accelerators',
+    type: 'website',
+    url: 'https://alevelaccelerators.com/revision-tracker/',
+    title: 'Free A-Level Revision Planner and Timetable Maker',
+    description:
+      'A free A-level revision planner: audit your weakest topics and get a printable weekly revision timetable built on blurting, active recall and spaced review.',
+    images: ['/og-default.png'],
+  },
 }
 
 const webAppSchema = {
   '@context': 'https://schema.org',
   '@type': 'WebApplication',
-  name: 'A-Level Revision Timetable Maker and Topic Audit',
+  name: 'A-Level Revision Planner, Timetable Maker and Topic Audit',
   url: 'https://alevelaccelerators.com/revision-tracker/',
   applicationCategory: 'EducationalApplication',
   operatingSystem: 'Web browser',
