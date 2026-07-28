@@ -91,6 +91,32 @@ export default function SummerAccelerators() {
     },
   ]
 
+  const courseJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name: 'A-Level Summer Accelerator',
+    description:
+      'Six-week live online A-level summer course for Year 12 students going into Year 13, covering the high-yield Year 13 topics in Biology, Chemistry, Maths and Physics. Small groups, specialist teaching, every session recorded.',
+    provider: {
+      '@type': 'Organization',
+      '@id': 'https://alevelaccelerators.com/#organization',
+      name: 'A-Level Accelerators',
+    },
+    offers: {
+      '@type': 'Offer',
+      price: '289',
+      priceCurrency: 'GBP',
+      category: 'Paid',
+      url: 'https://alevelaccelerators.com/summer-accelerators/',
+    },
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      courseMode: 'Online',
+      startDate: '2026-08-08',
+      location: { '@type': 'VirtualLocation', url: 'https://alevelaccelerators.com/summer-accelerators/' },
+    },
+  }
+
   const faqJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'FAQPage',
@@ -110,6 +136,10 @@ export default function SummerAccelerators() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
       />
 
       <Header />
