@@ -1,6 +1,8 @@
 {
   "redirects": [
     { "source": "/workshop", "destination": "/", "permanent": true },
-    { "source": "/workshop/", "destination": "/", "permanent": true }
+    { "source": "/workshop/", "destination": "/", "permanent": true },
+    { "source": "/error-log", "destination": "/revision-tracker/", "permanent": false },
+    { "source": "/error-log/", "destination": "/revision-tracker/", "permanent": false }
   ]
 }

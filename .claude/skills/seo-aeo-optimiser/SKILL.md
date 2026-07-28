@@ -65,6 +65,8 @@ End with a plain-language summary for Waleed: what moved since last week (or "qu
 
 When Waleed approves: `git fetch origin`, merge the optimiser branch into `main` (fold in any newer main first), push, confirm the Vercel deploy went green, spot-check the live pages, then mark the items done in the roadmap doc and delete the merged branch. That follows the repo's standing session-branch rule: approved work never stays stranded on a branch.
 
+**Stale-branch check first (mandatory, added 28 July 2026 after the Error Log incident):** if the batch branch is more than a few days old, or rides on another session's branch, list everything it adds or resurrects (pages, nav items, sitemap entries, llms.txt lines) and check each against the current CLAUDE.md before merging. A batch merge must never bring back a feature Waleed has retired or repriced since the branch was cut. When in doubt, ask him first.
+
 After a confirmed deploy, ping IndexNow so Bing (which feeds ChatGPT and Copilot) picks the changes up fast. The key is the hex filename of the key file in `public/` (currently `88b3db4a3bda12ba58be7c939b415877`). One POST covers all changed URLs:
 
 ```

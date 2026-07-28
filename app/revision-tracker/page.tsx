@@ -83,24 +83,6 @@ export default function RevisionTrackerPage() {
                 scores how you actually study and tells you what to fix first. 20 questions, about 4 minutes.
               </p>
             </div>
-            <div className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10 sm:p-8">
-              <p className={EYEBROW}>Then close the loop</p>
-              <h2 className="mt-2 font-serif text-2xl font-bold text-brand-purple">
-                Your sessions will produce dropped marks. Good.
-              </h2>
-              <p className="mt-3 leading-relaxed text-brand-text/75">
-                Every Active Recall and Timed Paper session above ends the same way: a list of marks you lost. That
-                list now has a home. The free{' '}
-                <a
-                  href="/error-log/"
-                  className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 transition hover:text-brand-gold"
-                >
-                  Error Log
-                </a>{' '}
-                records each mistake, tags what caused it, and brings it back for a retest at 3 days, 1 week, 2 weeks
-                and 1 month, until you stop dropping it.
-              </p>
-            </div>
           </div>
         </section>
       </main>
