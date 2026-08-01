@@ -442,7 +442,7 @@ export default function Home() {
         </section>
       </ScrollFade>
 
-      {/* Cohort Start Date — seamlessly continues the gradient section above */}
+      {/* Cohort Start Date: continues the gradient section above */}
       <ScrollFade delay={0.2}>
         <section className="pt-6 pb-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
           <div className="max-w-2xl mx-auto">

@@ -112,7 +112,7 @@ const groups: Group[] = [
       },
       {
         q: 'How do I get in touch?',
-        a: "Email Waleed@alevelaccelerators.com or book a free call. We're happy to answer any questions before you commit.",
+        a: "Everything is on the contact page: book a free 30 minute call with Dr Waleed, or email Waleed@alevelaccelerators.com and you'll get a reply within one working day. We're happy to answer any questions before you commit.",
       },
     ],
   },

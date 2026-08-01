@@ -4,10 +4,28 @@ import { useState } from 'react'
 
 const faqs = [
   {
+    question: "What is the Top 1% Study System?",
+    answer: (
+      <>
+        <p className="mb-4">It&apos;s the method behind everything we teach: how to find where your marks are leaking, put your hours into high-yield work like <strong>active recall and past papers</strong> instead of re-reading, and hold it all together under exam pressure.</p>
+        <p>The 12-week Study Accelerator teaches it live. And if you want to know which part of your own system needs it most, the free Revision Diagnostic will tell you in about 4 minutes.</p>
+      </>
+    ),
+  },
+  {
+    question: "How is this different from a revision timetable?",
+    answer: (
+      <>
+        <p className="mb-4">A timetable decides <strong>when</strong> you study. The Study System fixes <strong>what you do inside the hours</strong>, which is where grades are actually won.</p>
+        <p>If scheduling is your only problem, the free Revision Tracker builds you a timetable tonight and costs nothing. Most students who come to us have a method problem wearing a timetable costume.</p>
+      </>
+    ),
+  },
+  {
     question: "I'm already swamped with schoolwork. Will this take up even more time?",
     answer: (
       <>
-        <p className="mb-4">The programmes require just <strong>2-3 hours per week of your time</strong>. Yes, that&apos;s an investment upfront. But here&apos;s the reality: those 2-3 hours will save you <strong>weeks and months</strong> over your study journey.</p>
+        <p className="mb-4">The programmes require just <strong>2 to 3 hours per week of your time</strong>. Yes, that&apos;s an investment upfront. But here&apos;s the reality: those 2 to 3 hours will save you <strong>weeks and months</strong> over your study journey.</p>
         <p className="mb-4">Why? Because you&apos;ll stop wasting time on ineffective study methods. You&apos;ll revise smarter, not harder. Students who use proper systems complete the same work in half the time and retain it better. It&apos;s not about adding more work, it&apos;s about working strategically.</p>
         <p className="text-brand-gold font-semibold">👉 This replaces wasted study time, it doesn&apos;t add more.</p>
       </>
@@ -27,7 +45,7 @@ const faqs = [
           <li>Revision that actually sticks (active recall, spaced repetition)</li>
           <li>Overcome procrastination and burnout</li>
         </ul>
-        <p>Combined, these systems elevate your performance across all A-Levels.</p>
+        <p>Together, these systems lift your performance across every A-level you take.</p>
       </>
     ),
   },
@@ -54,8 +72,8 @@ const faqs = [
         <p className="mb-4">You&apos;ll see immediate improvements:</p>
         <ul className="list-disc ml-8 mb-4 space-y-1">
           <li><strong>Week 1:</strong> Clarity on what to prioritise. Less overwhelm.</li>
-          <li><strong>Weeks 2-4:</strong> Better time management. More efficient study sessions.</li>
-          <li><strong>Months 2-3:</strong> Noticeable grade improvements as systems compound.</li>
+          <li><strong>Weeks 2 to 4:</strong> Better time management. More efficient study sessions.</li>
+          <li><strong>Months 2 to 3:</strong> Noticeable grade improvements as systems compound.</li>
           <li><strong>By exam season:</strong> Noticeable improvements in how you study, prioritise, and manage your workload.</li>
         </ul>
         <p>The key is consistency. Apply the systems from day one, and you&apos;ll outpace peers who don&apos;t.</p>
@@ -85,7 +103,7 @@ const faqs = [
     question: "When does the next cohort start?",
     answer: (
       <>
-        <p className="mb-4 text-brand-gold font-semibold">👉 Next cohort starts Wednesday May 6th.</p>
+        <p className="mb-4 text-brand-gold font-semibold">👉 Next cohort starts Wednesday 9 September.</p>
         <p>The Top 1% Mentorship is by appointment, we schedule 1:1s based on your availability.</p>
       </>
     ),
@@ -135,11 +153,11 @@ export default function FaqSection() {
                   <span>{faq.question}</span>
                   <span className={`text-xl transition-transform ${isOpen ? 'rotate-180' : ''}`}>▼</span>
                 </button>
-                {isOpen && (
-                  <div className="p-6 text-brand-text leading-relaxed">
-                    {faq.answer}
-                  </div>
-                )}
+                {/* Always render the answer in the HTML (hidden until opened):
+                    AI answer engines and search crawlers read static HTML. */}
+                <div className={`p-6 text-brand-text leading-relaxed ${isOpen ? '' : 'hidden'}`}>
+                  {faq.answer}
+                </div>
               </div>
             )
           })}

@@ -1,7 +1,7 @@
 'use client'
 
 /* Auto-scrolling testimonial columns. Each column loops vertically on its own
-   timing; hovering pauses the column. Content is duplicated for the seamless
+   timing; hovering pauses the column. Content is duplicated for the continuous
    loop, with the duplicate hidden from assistive tech and crawlers. */
 
 type Quote = { quote: string; name: string; role: string }
