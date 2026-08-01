@@ -4,12 +4,9 @@ import Footer from '@/components/footer'
 export const metadata = {
   title: 'Terms and Conditions',
   description:
-    'The terms for booking and taking part in A-Level Accelerators programmes, including payment, your right to cancel, refunds and how sessions are delivered.',
+    'The terms and conditions for booking and taking part in A-Level Accelerators programmes, including payment, cancellation, refunds and delivery of sessions.',
   alternates: { canonical: 'https://alevelaccelerators.com/terms/' },
 }
-
-/* Effective date shown on the page. Update when the terms change. */
-const UPDATED = '1 August 2026'
 
 const H2 = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-2xl text-brand-purple font-serif mt-12 mb-4">{children}</h2>
@@ -26,76 +23,122 @@ export default function Terms() {
     <main className="bg-brand-cream min-h-screen">
       <Header />
       <article className="max-w-3xl mx-auto px-6 py-14">
-        <h1 className="text-4xl md:text-5xl text-brand-purple font-serif font-bold leading-tight mb-4">
+        <h1 className="text-4xl md:text-5xl text-brand-purple font-serif font-bold leading-tight mb-10">
           Terms and Conditions
         </h1>
-        <p className="text-sm text-brand-muted mb-10">Last updated {UPDATED}</p>
 
+        <H2>1. Introduction</H2>
         <P>
-          These terms apply when you book a place on any A-Level Accelerators paid programme. Please read them before
-          you pay. Our free tools and resources are covered by our privacy policy rather than by these terms.
-        </P>
-
-        <H2>Who we are</H2>
-        <P>
-          A-Level Accelerators (&quot;we&quot;, &quot;us&quot;) provides live online A-level courses, run by Dr Waleed
-          Ahmad. You can reach us at <a className="text-brand-purple underline decoration-brand-gold" href="mailto:Waleed@alevelaccelerators.com">Waleed@alevelaccelerators.com</a>.
-        </P>
-
-        <H2>The programmes</H2>
-        <P>
-          We run live online programmes, including the Summer Accelerator, the Subject Accelerators and the Study
-          System. The current content, dates, session times and prices for each are shown on its page on this website
-          at the time you book. Sessions are taught live and are also recorded, so you can catch up if you miss one.
-        </P>
-
-        <H2>Booking and payment</H2>
-        <P>
-          You book by paying through the checkout link on the programme page. Payment is handled securely by Stripe.
-          Your place is confirmed once payment has gone through and you have received our confirmation email. Prices
-          are in pounds sterling and include any tax that applies.
-        </P>
-
-        <H2>Your right to cancel and our refund promise</H2>
-        <P>
-          Every programme starts with a first session that is risk-free: if it is not right for you, tell us within 48
-          hours of that first session and we will refund you in full.
+          1.1 These terms and conditions (&quot;these Terms&quot;) govern the booking of, payment for and
+          participation in the paid programmes (&quot;Programmes&quot;) provided by A-Level Accelerators
+          (&quot;we&quot;, &quot;us&quot;, &quot;our&quot;) through our website at alevelaccelerators.com
+          (&quot;the Site&quot;).
         </P>
         <P>
-          Separately, under the Consumer Contracts Regulations you have 14 days from booking to change your mind and
-          cancel for a full refund. If a programme begins within that 14-day window and you have asked us to start it,
-          your refund may be reduced in proportion to the sessions already delivered. Once you have taken part in more
-          than the first session, the risk-free promise above no longer applies. To cancel, email us.
+          1.2 By booking a place on a Programme you agree to these Terms. Please read them before you pay.
+          Our free tools and resources are governed by our Privacy Policy rather than by these Terms.
         </P>
 
-        <H2>How sessions are delivered</H2>
-        <UL>
-          <li>Sessions run live on Zoom at the times shown on the programme page. You will get the joining details by email.</li>
-          <li>We record sessions and share the recordings with the group, so a missed session is not a lost one.</li>
-          <li>
-            If we ever have to move or cancel a session, we will give you as much notice as we can and offer a
-            replacement or, where that is not possible, a fair refund for that session.
-          </li>
-        </UL>
-
-        <H2>What we ask of you</H2>
+        <H2>2. About us and how to contact us</H2>
         <P>
-          A place is for one named student. Please do not share your joining links, recordings or materials outside the
-          programme. Everything we teach and provide stays our intellectual property and is licensed to you for your own
-          study only.
+          2.1 A-Level Accelerators provides live online A-level courses, run by Dr Waleed Ahmad. You can
+          contact us at{' '}
+          <a
+            className="text-brand-purple underline decoration-brand-gold"
+            href="mailto:Waleed@alevelaccelerators.com"
+          >
+            Waleed@alevelaccelerators.com
+          </a>
+          .
         </P>
 
-        <H2>Our responsibility to you</H2>
+        <H2>3. The Programmes</H2>
         <P>
-          We teach the method and give you our best work. We cannot guarantee a particular grade, because your result
-          depends on your own effort as well as our teaching. Nothing in these terms limits our liability where the law
-          does not allow it to be limited.
+          3.1 The content, dates, session times and prices of each Programme are as shown on its page on the
+          Site at the time you book.
+        </P>
+        <P>
+          3.2 Sessions are taught live and are also recorded. Recordings are made available to enrolled
+          students for the duration of the Programme, so a missed session can be caught up.
         </P>
 
-        <H2>Changes and governing law</H2>
+        <H2>4. Booking and payment</H2>
         <P>
-          We may update these terms from time to time; the version that applies to you is the one published when you
-          book. These terms are governed by the law of England and Wales.
+          4.1 You book a place by completing payment through the checkout link on the relevant Programme
+          page. Payment is processed securely by a third party payment provider; we do not see or store your
+          full card details.
+        </P>
+        <P>
+          4.2 Your place is confirmed when payment has been received and we have sent you a confirmation
+          email.
+        </P>
+        <P>4.3 All prices are stated in pounds sterling and include any applicable tax.</P>
+
+        <H2>5. Cancellation and refunds</H2>
+        <P>
+          5.1 Every Programme begins with a risk-free first session. If, within 48 hours of that first
+          session, you tell us the Programme is not right for you, we will refund your payment in full.
+        </P>
+        <P>
+          5.2 In addition, under the Consumer Contracts Regulations 2013 you have 14 days from booking in
+          which to cancel for a full refund. If the Programme begins within that period and you have asked us
+          to start providing it, any refund may be reduced in proportion to the sessions already delivered.
+        </P>
+        <P>
+          5.3 Once you have taken part in more than the first session, the promise in clause 5.1 no longer
+          applies. To cancel at any time, contact us by email.
+        </P>
+
+        <H2>6. Delivery of sessions</H2>
+        <P>
+          6.1 Sessions are delivered live online at the times shown on the relevant Programme page. Joining
+          details are provided by email.
+        </P>
+        <P>
+          6.2 If we need to reschedule or cancel a session, we will give you as much notice as reasonably
+          possible and will offer a replacement session or, where that is not possible, a proportionate
+          refund for the affected session.
+        </P>
+
+        <H2>7. Your obligations</H2>
+        <P>
+          7.1 A place on a Programme is for one named student. You agree not to share joining links,
+          recordings or materials with anyone outside the Programme.
+        </P>
+        <P>
+          7.2 You agree to behave respectfully towards teaching staff and other students in live sessions. We
+          reserve the right to remove, without refund, any student whose conduct seriously or repeatedly
+          disrupts sessions for others; we will always raise concerns with you before it comes to that.
+        </P>
+
+        <H2>8. Intellectual property</H2>
+        <P>
+          8.1 All teaching materials, recordings, worksheets and other content we provide remain our
+          intellectual property. They are licensed to the enrolled student for personal study only and may
+          not be copied, shared or republished.
+        </P>
+
+        <H2>9. Our responsibility to you</H2>
+        <P>
+          9.1 We will provide the Programmes with reasonable care and skill. We cannot and do not guarantee
+          any particular grade or result, as outcomes depend on each student&apos;s own work as well as our
+          teaching.
+        </P>
+        <P>
+          9.2 Nothing in these Terms excludes or limits our liability where it would be unlawful to do so,
+          including liability for death or personal injury caused by negligence.
+        </P>
+
+        <H2>10. Changes to these Terms</H2>
+        <P>
+          10.1 We may update these Terms from time to time. The version that applies to your booking is the
+          version published on the Site at the time you book.
+        </P>
+
+        <H2>11. Governing law</H2>
+        <P>
+          11.1 These Terms are governed by the law of England and Wales, and the courts of England and Wales
+          have jurisdiction over any dispute arising from them.
         </P>
       </article>
       <Footer />
