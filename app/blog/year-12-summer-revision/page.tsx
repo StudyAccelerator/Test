@@ -53,6 +53,10 @@ const faqs: FAQ[] = [
     a: "Yes. Take two full weeks off with zero guilt. Rest is part of the plan, not a betrayal of it. The mistake isn't the break. The mistake is letting two weeks quietly become seven and arriving in September having forgotten a term of content.",
   },
   {
+    q: 'Is August too late to start summer revision?',
+    a: "No. Even three focused weeks before September moves you: prioritise the two or three weakest Year 12 topics, test yourself from memory rather than re-reading, and preview the first Year 13 topics your teachers will start with. The students you're competing with mostly did nothing all summer, so a late start still puts you ahead of the September average.",
+  },
+  {
     q: 'What about my personal statement and UCAS preparation?',
     a: 'The summer is the right time for those too. Draft your personal statement, research courses, book any admissions tests. But treat them as a separate, smaller job. Students who spend the whole summer polishing a personal statement while their subject knowledge fades have got it backwards. Grades open doors. Statements decorate them.',
   },

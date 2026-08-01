@@ -49,6 +49,14 @@ const faqs: FAQ[] = [
     a: 'If you resit through your own school or college, exam entry fees are typically around £100 to £200 per subject. As a private candidate at an external exam centre, expect £150 to £400 or more per subject once admin fees are included, with sciences sometimes costing extra if practical endorsements are involved. Tuition or resit courses cost more on top, so total budgets range from a few hundred pounds to a few thousand.',
   },
   {
+    q: 'When are A-level resits in 2026 and 2027?',
+    a: 'The next A-level resit exams run in the May to June 2027 summer series, with results in August 2027. Entries close in late February 2027 (schools and exam centres set earlier internal deadlines), so the organising happens in autumn 2026: choose your route, book a centre if you are a private candidate, and sort practical endorsements for sciences.',
+  },
+  {
+    q: 'Can you resit A-levels in November?',
+    a: 'No. There is no autumn or November resit series for A-levels; the November exam series only covers GCSE English language and maths. A-level resits happen once a year, in the May to June summer series.',
+  },
+  {
     q: 'Can you retake just one A-level subject?',
     a: 'Yes. You can resit a single subject and keep your other grades. Because A-levels are linear, you retake all the exam papers for that subject, but only that subject. Many students resit one subject to meet a specific university requirement.',
   },
@@ -64,9 +72,10 @@ export default function Page() {
       <QuickAnswer>
         Yes, you can resit A-levels, as many times as you like and at any age. Because A-levels are linear, you
         retake all the exam papers for a subject in the following May and June series, either through a school
-        or college or as a private candidate at an exam centre. Entry fees run from roughly £100 to £200 per
-        subject through a school, or £150 to £400 or more privately. Register early, around six months before
-        the exams, and declare resits and previous grades on your UCAS application.
+        or college or as a private candidate at an exam centre. There is no November resit series for
+        A-levels. Entry fees run from roughly £100 to £200 per subject through a school, or £150 to £400 or
+        more privately. Register early, around six months before the exams, and declare resits and previous
+        grades on your UCAS application.
       </QuickAnswer>
 
       <Lead>
@@ -113,6 +122,47 @@ export default function Page() {
         the exams, which in practice means getting organised in the autumn. Centres can and do turn away late
         applicants.
       </Callout>
+
+      <H2 id="resit-dates">When are A-level resits? The 2026 to 2027 calendar</H2>
+      <P>
+        The single most important date fact: <Strong>there is no autumn resit series for A-levels</Strong>.
+        The November exam series only exists for GCSE English language and maths. If you didn&apos;t get the
+        grades in August 2026, your next chance to sit A-level papers is the summer 2027 series. That sounds
+        brutal, but it also means you have a full year to fix what went wrong, and the calendar below is how
+        that year actually runs.
+      </P>
+      <div className="overflow-x-auto my-8 rounded-lg shadow-sm">
+        <table className="w-full bg-white text-left text-brand-text">
+          <thead>
+            <tr className="bg-brand-purple text-brand-cream">
+              <th className="p-4 font-semibold">When</th>
+              <th className="p-4 font-semibold">What happens</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr className="border-t border-brand-cream-dark">
+              <td className="p-4 font-semibold whitespace-nowrap">September to October 2026</td>
+              <td className="p-4">Decide whether to resit, do the post-mortem on your papers, and choose your route: through a school or college, or as a private candidate.</td>
+            </tr>
+            <tr className="border-t border-brand-cream-dark">
+              <td className="p-4 font-semibold whitespace-nowrap">Autumn 2026</td>
+              <td className="p-4">Private candidates: find and book your exam centre now, and sort science practical endorsement arrangements early. Centres fill up and turn away late applicants.</td>
+            </tr>
+            <tr className="border-t border-brand-cream-dark">
+              <td className="p-4 font-semibold whitespace-nowrap">By late February 2027</td>
+              <td className="p-4">Exam entries close for the summer series. Schools and centres set their own internal deadlines before this, and late entries cost significantly more.</td>
+            </tr>
+            <tr className="border-t border-brand-cream-dark">
+              <td className="p-4 font-semibold whitespace-nowrap">May to June 2027</td>
+              <td className="p-4">The exam series. You sit all the papers for each subject you are resitting.</td>
+            </tr>
+            <tr className="border-t border-brand-cream-dark">
+              <td className="p-4 font-semibold whitespace-nowrap">August 2027</td>
+              <td className="p-4">Results day. Your new grades replace the old ones in practice: universities look at what you achieved this time, alongside a declared resit history on UCAS.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <H2 id="should-you-resit">Should you actually resit? The honest questions</H2>
       <OL>
@@ -195,7 +245,7 @@ export default function Page() {
       <CourseCTA
         href="/subject-accelerators/"
         heading="Running a resit year? Don't do it alone"
-        body="Our live A-Level programmes in Biology, Chemistry, Maths and Physics give resit students the structure that independent study lacks: specialist teaching, exam-question-first sessions, homework and progress tracking. Led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
+        body="Our live A-Level programmes in Biology, Chemistry and Maths give resit students the structure that independent study lacks: specialist teaching, exam-question-first sessions, homework and progress tracking. Led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
         label="See Our A-Level Courses"
       />
     </ArticleLayout>

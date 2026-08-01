@@ -7,6 +7,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages: MetadataRoute.Sitemap = [
     { url: `${SITE_URL}/`, changeFrequency: 'weekly', priority: 1 },
     { url: `${SITE_URL}/subject-accelerators/`, changeFrequency: 'monthly', priority: 0.9 },
+    { url: `${SITE_URL}/a-level-biology-tutoring/`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/a-level-chemistry-tutoring/`, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${SITE_URL}/a-level-maths-tutoring/`, changeFrequency: 'monthly', priority: 0.8 },
     { url: `${SITE_URL}/study-systems/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/revision-diagnostic/`, changeFrequency: 'monthly', priority: 0.9 },
     { url: `${SITE_URL}/revision-tracker/`, changeFrequency: 'monthly', priority: 0.9 },

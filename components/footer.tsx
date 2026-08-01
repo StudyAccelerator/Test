@@ -25,6 +25,9 @@ export default function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><a href="/summer-accelerators/" className="text-brand-gold hover:text-white transition">Summer Accelerator</a></li>
                 <li><a href="/subject-accelerators/" className="text-brand-gold hover:text-white transition">Subject Accelerators</a></li>
+                <li><a href="/a-level-biology-tutoring/" className="text-brand-gold hover:text-white transition">Biology Tutoring</a></li>
+                <li><a href="/a-level-chemistry-tutoring/" className="text-brand-gold hover:text-white transition">Chemistry Tutoring</a></li>
+                <li><a href="/a-level-maths-tutoring/" className="text-brand-gold hover:text-white transition">Maths Tutoring</a></li>
                 <li><a href="/study-systems/" className="text-brand-gold hover:text-white transition">Study System</a></li>
               </ul>
             </div>

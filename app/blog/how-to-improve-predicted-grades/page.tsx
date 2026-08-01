@@ -41,6 +41,10 @@ const faqs: FAQ[] = [
     a: "Yes. Right up until your school submits your UCAS application, your teachers can revise your predicted grades. Once the application goes off to UCAS, they're locked for that cycle. So the window between September and your submission date really matters. It's your last chance to show new evidence.",
   },
   {
+    q: 'Can your predicted grades change in Year 13?',
+    a: "Yes, right up until your school submits your UCAS application. Predictions aren't locked when Year 13 starts: teachers can and do revise them in the first weeks of the autumn term when they see new evidence, which usually means September assessments, early mocks and visibly stronger classwork. After your application goes to UCAS, they're fixed, which is why the window is the start of Year 13, not the middle of it.",
+  },
+  {
     q: 'Do universities ever accept students who miss their predicted grades?',
     a: "Often, yes. Universities make offers based on predictions but confirm places based on your actual results, and plenty of them show flexibility if you narrowly miss, especially if you did well in the subjects that matter for the course. But relying on that's a gamble. You're in a much stronger position with a prediction that reflects what you can actually do.",
   },
