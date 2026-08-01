@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 /* Effective date shown on the page. Update when the policy changes. */
-const UPDATED = '13 July 2026'
+const UPDATED = '1 August 2026'
 
 const H2 = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-2xl text-brand-purple font-serif mt-12 mb-4">{children}</h2>
@@ -34,8 +34,7 @@ export default function PrivacyPolicy() {
         <P>
           This policy explains what personal data A-Level Accelerators collects, why we collect it, who we share it
           with and the rights you have over it. It covers our website, our free tools (the Revision Diagnostic, the
-          Revision Tracker, the parents guide, the Sunday Session newsletter and the free workshop) and our paid
-          programmes.
+          Revision Tracker, the parents guide and the Sunday Session newsletter) and our paid programmes.
         </P>
 
         <H2>Who we are</H2>
@@ -44,15 +43,11 @@ export default function PrivacyPolicy() {
           tools, and is run by Dr Waleed Ahmad. For any privacy question, or to exercise any of the rights below,
           email <a className="text-brand-purple underline decoration-brand-gold" href="mailto:Waleed@alevelaccelerators.com">Waleed@alevelaccelerators.com</a>.
         </P>
-        <P>
-          [To confirm before publishing: the legal trading entity (sole trader or limited company, with company
-          number if applicable), the registered or business address, and our ICO registration number.]
-        </P>
 
         <H2>What we collect and when</H2>
         <P>We only collect what you give us through a form or a purchase. Depending on what you use, that includes:</P>
         <UL>
-          <li>Your name and email address, whenever you sign up to any free tool, the newsletter or a workshop.</li>
+          <li>Your name and email address, whenever you sign up to any free tool or the newsletter.</li>
           <li>Your year group, subjects and exam boards, when a tool asks for them.</li>
           <li>
             Your answers to the Revision Diagnostic and Revision Tracker: current and target grades, study hours, the
@@ -67,7 +62,7 @@ export default function PrivacyPolicy() {
 
         <H2>How we use it, and our legal basis</H2>
         <UL>
-          <li>To deliver the free tool, report or workshop you asked for (consent, and our agreement with you).</li>
+          <li>To deliver the free tool or report you asked for (consent, and our agreement with you).</li>
           <li>
             To send you the follow-up emails and newsletter you signed up for, which you can leave at any time using
             the unsubscribe link in every email (consent).
@@ -89,15 +84,22 @@ export default function PrivacyPolicy() {
           <li>Stripe, which processes card payments.</li>
           <li>Zoom, which hosts the live sessions and the booking scheduler.</li>
           <li>Vercel, which hosts this website and provides its analytics.</li>
-          <li>Meta (Facebook), if and when advertising measurement is switched on. See cookies below.</li>
+          <li>Google, whose Analytics service measures how the site is used. See cookies below.</li>
+          <li>Meta (Facebook), whose pixel measures whether our adverts led to a sign-up. See cookies below.</li>
         </UL>
 
         <H2>Cookies and analytics</H2>
         <P>
-          The site uses Vercel Web Analytics, which counts visits without cookies and without identifying you. If we
-          later run advertising, we may use the Meta pixel, which does set a cookie to measure whether an advert led to
-          a sign-up. Where that applies, we will make it clear and, where the law requires it, ask for your consent
-          first.
+          Three measurement tools run on the site. Vercel Web Analytics counts visits without cookies and without
+          identifying you. Google Analytics uses cookies to show us how the site is used: which pages people visit
+          and where they arrived from, reported to us in aggregate. The Meta (Facebook) pixel uses a cookie to
+          measure whether one of our adverts led to a visit or a sign-up. We use these to understand what is working;
+          none of them is used to build a profile of you, and we do not sell the data.
+        </P>
+        <P>
+          The free tools also save your progress (your topic ratings, tracker plan and diagnostic answers) in your
+          own browser&apos;s local storage, so your work is still there when you come back. That data stays on your
+          device unless you submit a form that sends it to us.
         </P>
 
         <H2>Students under 18</H2>

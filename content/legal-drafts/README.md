@@ -1,12 +1,5 @@
-# Legal page drafts (NOT live)
+# Legal pages (now routed)
 
-`privacy-page.tsx` and `terms-page.tsx` are complete draft pages for /privacy and /terms. Waleed parked them on 15 July 2026 while he finalises the details: they are deliberately NOT routed, NOT linked and NOT in the sitemap, and no session should publish them without his explicit instruction.
+The privacy and terms drafts that lived here were updated and moved to `app/privacy/page.tsx` and `app/terms/page.tsx` on 1 August 2026, on Waleed's explicit instruction, as part of the batch 4 draft (branch claude/seo-batch4-2026-08-01). They are linked from the footer bottom bar and listed in the sitemap, and go live when Waleed deploys that batch.
 
-Each draft still carries bracketed placeholders (legal trading entity, business address, ICO registration number) that only Waleed can fill.
-
-## To publish them later
-
-1. Fill the bracketed placeholders in both files.
-2. Move the files back: `content/legal-drafts/privacy-page.tsx` to `app/privacy/page.tsx` and `content/legal-drafts/terms-page.tsx` to `app/terms/page.tsx`.
-3. Re-add the two footer links (Company column in `components/footer.tsx`) and the two sitemap entries (`app/sitemap.ts`).
-4. Build, check /privacy/ and /terms/ render, then deploy.
+Still outstanding, only Waleed can supply: the legal trading entity (sole trader or limited company, with company number if applicable) and the ICO registration number, for the "Who we are" sections of both pages. The bracketed placeholders were removed from the rendered pages; add a one-line entity statement to each page when he provides the details.

@@ -58,6 +58,11 @@ export default function Footer() {
         <p className="text-center text-xs opacity-60">
           &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
         </p>
+        <p className="mt-2 text-center text-xs">
+          <a href="/privacy/" className="text-brand-gold opacity-80 hover:opacity-100 hover:text-white transition">Privacy Policy</a>
+          <span className="mx-2 opacity-40">·</span>
+          <a href="/terms/" className="text-brand-gold opacity-80 hover:opacity-100 hover:text-white transition">Terms and Conditions</a>
+        </p>
       </div>
     </footer>
   )

@@ -9,7 +9,7 @@ export const metadata = {
 }
 
 /* Effective date shown on the page. Update when the terms change. */
-const UPDATED = '13 July 2026'
+const UPDATED = '1 August 2026'
 
 const H2 = ({ children }: { children: React.ReactNode }) => (
   <h2 className="text-2xl text-brand-purple font-serif mt-12 mb-4">{children}</h2>
@@ -40,10 +40,6 @@ export default function Terms() {
         <P>
           A-Level Accelerators (&quot;we&quot;, &quot;us&quot;) provides live online A-level courses, run by Dr Waleed
           Ahmad. You can reach us at <a className="text-brand-purple underline decoration-brand-gold" href="mailto:Waleed@alevelaccelerators.com">Waleed@alevelaccelerators.com</a>.
-        </P>
-        <P>
-          [To confirm before publishing: the legal trading entity (sole trader or limited company, with company number
-          if applicable) and the business address.]
         </P>
 
         <H2>The programmes</H2>
