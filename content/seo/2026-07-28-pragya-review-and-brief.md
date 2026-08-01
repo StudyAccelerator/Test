@@ -48,3 +48,22 @@ Waleed
 3. On-site changes never come from her files directly; they go through the optimiser and the voice rules.
 4. Her FAQ and content-topic suggestions are the valuable part; her schema and meta rewrites mostly are not.
 5. Never hand over Search Console, GA or repo access; she works from public crawls and reports.
+
+## Round 2: the 1 August delivery (14 files)
+
+Her reply to the brief was constructive: non-www links from now on (verified: the 1 August work report points links at the non-www domain, several deep-linking to /subject-accelerators/ and the predicted-grades post), dofollow/nofollow column promised, on-site items now understood as suggestions.
+
+**Resends, byte-identical to 20 July (no new information):** both Schema Suggestion docs, the Ahrefs Overview PDF, Non Target Pages Optimization, Meta Suggestion for non-target pages. Their "pending" items are pending because they were evaluated and declined, with reasons, in round 1 above.
+
+**Resends with trivial changes (same stale 17 July crawl underneath):** the target-pages Meta Suggestion (still lists the pre-redesign homepage as "existing", still pushes the protected homepage title/H1 change: declined again), the AI SEO Audit (still 10/100, still claims WebSite and EducationalOrganization schema are missing: false since 10 July), the Ahrefs detail xlsx. None of her crawls postdate the 28 July deploys.
+
+**New documents and verdicts:**
+
+| Document | Verdict |
+|---|---|
+| Weekly work report 1 Aug (31 links) | Behaviour genuinely improved: non-www targets, deep links, and the predicted-grades backlink twin syndicated across Medium, Blogspot, WordPress, Notion and similar (exactly what the twins exist for). Quality still mixed (driving-schools.com and a nurses forum profile are noise). PRIVACY FLAG: at least one directory listing (bizify) publishes the SM7 1NQ home postcode Waleed asked to keep private; ask her to remove or genericise any listing carrying the full address or postcode |
+| New Pages Suggestion (10 pages) | Her best document. Converges with our own backlog: About (our backlog 13), success stories and reviews pages (our backlog 26 and the Trustpilot plan, post results day), privacy and terms (drafts exist in content/legal-drafts, Waleed's gate, now more pressing with Meta ads live). Contact page and pricing page are genuine new candidates for Waleed's yes/no. Declined: "Our Teaching Method" page (duplicates /study-systems) and "Our Results" before real results data exists (honesty rule). "Meet Our Team" waits for the Physics hire and tutor consent |
+| Home Page Optimization | Declined: same protected title/H1 push (and a GCSE FAQ for a product that does not exist). Notably her own heading-structure analysis of the homepage found nothing to change |
+| Heading Structure Optimization | Declined in substance: proposes replacing strong in-voice H1s with generic SEO strings. One trivial point (cohort-date heading level on /study-systems) noted |
+| FAQ Suggestion for Pages | Partly adopt: usable new FAQ topics for /subject-accelerators (time commitment, materials, multi-subject enrolment) and /study-systems (personalisation, vs a normal timetable, time management). Queue for batch 4, written in Waleed's voice, truthful answers only |
+| Competitor Analysis (SEMrush) | Confirms direction, adds little: StudyMind 203K organic visits, PMT 84K, Tutorful 55K vs our ~0 in SEMrush's index. Their "0 traffic, 0 keywords" for us contradicts GSC ground truth (32 clicks, 1,550 impressions, 93 queries to 26 July): third-party indexes lag tiny sites badly. DA 1 and 14 backlinks recorded; the strategic picture stays the one in the verified 17 July teardown |
