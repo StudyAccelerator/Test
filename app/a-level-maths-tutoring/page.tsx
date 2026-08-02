@@ -6,7 +6,8 @@ const c: SubjectPageConfig = {
   metaTitle: 'A-Level Maths Tutoring Online | A-Level Accelerators',
   metaDescription:
     'Live online A-level Maths tutoring in small groups: 12 weekly specialist-led sessions on problem-solving and exam technique, led by Dr Waleed Ahmad, MBBS. First session risk-free.',
-  h1: 'A-level Maths tutoring for students who understand it in class and lose it in the exam',
+  h1: 'A-level Maths tutoring for students who understand it in class',
+  h1Gold: 'but lose marks in the exam',
   heroSub:
     "The classic Maths story: everything makes sense when the teacher does it, then the paper asks a question that doesn't announce which method it wants and the marks disappear. Our live 12-week programme trains problem-solving on real exam questions, every week, until unfamiliar stops meaning impossible.",
   leaksHeading: 'Where Maths marks actually leak',
@@ -17,7 +18,7 @@ const c: SubjectPageConfig = {
     },
     {
       title: 'Algebraic slips under time pressure',
-      body: 'Most lost Maths marks are not conceptual. They are sign errors, dropped terms and rushed rearrangements in minute 80 of a 120-minute paper. We build the layout habits and checking discipline that stop the bleed, and drill them under timed conditions.',
+      body: 'Most lost Maths marks are not due to poor understanding. They are sign errors, dropped terms and rushed rearrangements in minute 80 of a 120-minute paper. We build the layout habits and checking discipline that stop the bleed, and drill them under timed conditions.',
     },
     {
       title: 'The applied papers: mechanics and statistics',

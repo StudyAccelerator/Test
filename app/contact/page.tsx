@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const CONTACT_FAQS = [
   {
     q: 'Is the free call a sales call?',
-    a: "No. It's 30 minutes of honest advice on what's actually going wrong and what to do about it. If the right answer is one of our programmes, I'll say so and explain why. If the right answer is the free tools, or something else entirely, I'll say that instead. Nobody gets talked into anything.",
+    a: "No. It's 30 minutes of honest advice on what's actually going wrong and what to do about it. If the right answer is one of our programmes, I'll say so and explain why. If the right answer is the free tools, or something else entirely, I'll say that instead.",
   },
   {
     q: 'Can parents book the call?',

@@ -6,7 +6,8 @@ const c: SubjectPageConfig = {
   metaTitle: 'A-Level Biology Tutoring Online | A-Level Accelerators',
   metaDescription:
     'Live online A-level Biology tutoring in small groups: 12 weekly specialist-led sessions built around exam questions and mark schemes, led by Dr Waleed Ahmad, MBBS. First session risk-free.',
-  h1: 'A-level Biology tutoring built around the exam, not the textbook',
+  h1: 'A-level Biology tutoring built around the exam,',
+  h1Gold: 'not the textbook',
   heroSub:
     "Most Biology students don't fail on knowledge. They fail on applying it to questions they've never seen. Our live 12-week programme teaches the subject the way the paper tests it: exam questions first, mark schemes open, every week.",
   leaksHeading: 'Where Biology marks actually leak',

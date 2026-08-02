@@ -36,23 +36,23 @@ export const metadata: Metadata = {
 const faqs: FAQ[] = [
   {
     q: 'How much does an A-level tutor cost per hour?',
-    a: "One-to-one A-level tutoring averages around £50 an hour in the UK, with marketplace listings commonly running from roughly £20 to £70 an hour depending on the subject, the tutor's experience and qualifications, and demand. Small-group live courses work out far cheaper per hour, typically £10 to £15, because the teaching cost is shared.",
+    a: "One-to-one A-level tutoring averages around £50 an hour in the UK, with marketplace listings commonly running from roughly £20 to £70 an hour depending on the subject, the tutor's experience and qualifications, and demand. Our live small-group programmes work out at £12 to £14 an hour, far cheaper than one-to-one, because the teaching cost is shared across the group.",
   },
   {
     q: 'How much does A-level tutoring cost per year?',
-    a: 'At around £50 an hour, weekly one-to-one tutoring in a single subject costs roughly £200 a month, which adds up to £1,500 or more across a school year, per subject. A structured group programme covering the same weekly hour count usually comes in at a fraction of that, which is why families with more than one weak subject often go the group route.',
+    a: 'At around £50 an hour, weekly one-to-one tutoring in a single subject costs roughly £200 a month, which adds up to £1,500 or more across a school year, per subject. Our structured group programmes cover the same weekly hour count at a fraction of that, which is why families with more than one weak subject often go the group route.',
   },
   {
     q: 'Is more expensive tutoring better?',
-    a: 'Not reliably. Price mostly tracks experience, qualifications and demand, not results. What actually predicts progress is whether sessions are built around exam questions and mark schemes, whether the tutor diagnoses why marks are being lost before teaching, and whether your child does retrieval work between sessions. A £70 an hour tutor re-explaining the textbook loses to a £15 an hour group session built on past-paper technique.',
+    a: 'Not reliably. Price mostly tracks experience, qualifications and demand, not results. What actually predicts progress is whether sessions are built around exam questions and mark schemes, whether the tutor diagnoses why marks are being lost before teaching, and whether your child does retrieval work between sessions. A £70 an hour tutor re-explaining the textbook loses to a £14 an hour group session built on past-paper technique.',
   },
   {
     q: 'Why is group tutoring so much cheaper than one-to-one?',
-    a: "Simple maths: the cost of the teacher's hour is split across the group. A specialist teaching eight students at once can charge each family a fraction of a private rate and still be better paid than a solo tutor, which is why well-run group courses can afford stronger, more specialist teachers per pound. What you give up is having the full hour steered around one student, which matters most when a student has unusual, specific gaps.",
+    a: "Simple maths: the cost of the teacher's hour is split across the group. A specialist teaching eight students at once can charge each family a fraction of a private rate and still be better paid than a solo tutor, which is how our programmes can afford stronger, more specialist teachers per pound than a £50 an hour private rate buys. What you give up is having the full hour steered around one student, which matters most when a student has unusual, specific gaps.",
   },
   {
     q: 'When is one-to-one tutoring worth the money?',
-    a: 'When the problem is narrow and specific: one topic that has collapsed, a particular paper, or a student who will not ask questions in any group setting. For broad problems, working hard but underperforming across a subject, weak exam technique, no revision system, structured group teaching gives you far more hours of expert input for the same budget.',
+    a: 'When the problem is narrow and specific: one topic that has collapsed, a particular paper, or a student who will not ask questions in any group setting. For broad problems, working hard but underperforming across a subject, weak exam technique, no revision system, our structured group programmes give you far more hours of expert input for the same budget.',
   },
 ]
 
@@ -62,8 +62,8 @@ export default function Page() {
       <QuickAnswer>
         One-to-one A-level tutoring averages around £50 an hour in the UK, with listed rates commonly
         between £20 and £70 depending on subject, experience and demand. Weekly private tutoring in one
-        subject runs to roughly £1,500 or more over a school year. Live small-group courses typically work
-        out at £10 to £15 per teaching hour for the same weekly structure. Price is not the number that
+        subject runs to roughly £1,500 or more over a school year. Our live small-group programmes work
+        out at £12 to £14 an hour for the same weekly structure. Price is not the number that
         matters most, though: what predicts results is whether the teaching is built on exam questions,
         not re-explained content.
       </QuickAnswer>
@@ -79,9 +79,9 @@ export default function Page() {
         points={[
           'UK one-to-one A-level tutoring averages around £50 an hour; marketplace listings commonly run from roughly £20 to £70.',
           'Weekly one-to-one tutoring in a single subject costs in the region of £200 a month, or £1,500 plus across a school year.',
-          "Live small-group courses typically cost £10 to £15 per teaching hour because the specialist's time is shared.",
+          "Our live small-group programmes cost £12 to £14 an hour, a fraction of one-to-one, because the specialist's time is shared.",
           'Price tracks experience and demand, not results. Exam-question-first teaching predicts progress far better than the rate.',
-          'Match the format to the problem: one-to-one for narrow, specific gaps; structured group teaching for broad underperformance.',
+          'Match the format to the problem: one-to-one for narrow, specific gaps; our structured group programmes for broad underperformance.',
         ]}
       />
 
@@ -107,9 +107,9 @@ export default function Page() {
               <td className="p-4">£2,000 plus per subject per year, before exam-season top-ups</td>
             </tr>
             <tr className="border-t border-brand-cream-dark">
-              <td className="p-4 font-semibold">Live small-group course</td>
-              <td className="p-4">Typically £10 to £15 per teaching hour</td>
-              <td className="p-4">A structured 12-week programme usually costs less than two months of weekly one-to-one</td>
+              <td className="p-4 font-semibold">Our live small-group programmes</td>
+              <td className="p-4">£12 to £14 an hour (£289 to £339 per subject)</td>
+              <td className="p-4">A full 12-week programme costs less than two months of weekly one-to-one</td>
             </tr>
           </tbody>
         </table>
@@ -174,8 +174,7 @@ export default function Page() {
         all three. The six-week{' '}
         <A href="/summer-accelerators/">Summer Accelerator</A>{' '}starts at £289 per subject, around £12 per
         live teaching hour, with discounts as you add subjects. Small groups, specialist teachers, sessions
-        built around exam questions and mark schemes, first session risk-free. That is the group-format maths
-        from the table above, applied.
+        built around exam questions and mark schemes, first session risk-free. That is how the one-to-one maths above gets beaten.
       </P>
 
       <DiagnosticCTA audience="parent" />

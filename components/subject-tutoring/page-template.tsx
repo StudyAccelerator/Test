@@ -14,6 +14,8 @@ export type SubjectPageConfig = {
   metaTitle: string
   metaDescription: string
   h1: string
+  /* Trailing part of the H1 rendered in italic gold, matching the house hero style. */
+  h1Gold?: string
   heroSub: string
   leaksHeading: string
   leaks: { title: string; body: string }[]
@@ -101,6 +103,7 @@ export default function SubjectTutoringPage({ c }: { c: SubjectPageConfig }) {
             <p className={EYEBROW}>Live online · small groups · exam-question-first</p>
             <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-brand-purple md:text-5xl">
               {c.h1}
+              {c.h1Gold ? <>{' '}<span className="italic text-brand-gold">{c.h1Gold}</span></> : null}
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-text/75">{c.heroSub}</p>
             <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
@@ -118,7 +121,7 @@ export default function SubjectTutoringPage({ c }: { c: SubjectPageConfig }) {
               </a>
             </div>
             <p className="mt-4 text-sm text-brand-text/60">
-              £339 for 12 weeks (about £14 per teaching hour) · first session risk-free
+              £339 for 12 weeks (works out to ~£14/hr) · first session risk-free
             </p>
           </div>
         </section>
@@ -170,8 +173,8 @@ export default function SubjectTutoringPage({ c }: { c: SubjectPageConfig }) {
                 Specialists teach the subject. A doctor teaches the exam.
               </h2>
               <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-brand-cream/90">
-                Your {c.subject} sessions are taught live by subject specialists who know the spec inside out
-                and achieved top grades themselves. Dr Waleed Ahmad, MBBS, an NHS doctor and former
+                Your {c.subject} sessions are taught live by subject specialists who know the spec inside out,
+                achieved top grades themselves and helped their students do the same. Dr Waleed Ahmad, MBBS, an NHS doctor and former
                 top-performing A-level student who has worked with over 1,000 students, built the method and
                 leads the exam technique and study strategy sessions himself. We teach AQA, OCR and Edexcel.
               </p>

@@ -84,7 +84,7 @@ const ROWS: {
     name: 'Summer Accelerator',
     href: '/summer-accelerators/',
     price: '£289 one subject · £539 two · £739 three · £849 all four',
-    format: 'Six weeks, live online, around 24 hours of teaching per subject. Works out near £12 per teaching hour.',
+    format: 'Six weeks, live online, around 24 hours of teaching per subject. Works out to ~£12/hr of live teaching.',
     builtFor: 'Year 12 students getting ahead of Year 13 before September',
     cta: 'See the Summer Accelerator',
   },
@@ -92,7 +92,7 @@ const ROWS: {
     name: 'Subject Accelerators',
     href: '/subject-accelerators/',
     price: '£339 per subject · £849 for all three',
-    format: 'Twelve weeks, live weekend sessions, in Biology, Chemistry and Maths. Works out near £14 per teaching hour.',
+    format: 'Twelve weeks, live weekend sessions, in Biology, Chemistry and Maths. Works out to ~£14/hr of live teaching.',
     builtFor: 'Fixing one weak subject properly through the school year',
     cta: 'See Subject Accelerators',
   },
@@ -125,12 +125,13 @@ export default function PricingPage() {
             className="pointer-events-none absolute -top-32 left-1/2 h-[22rem] w-[36rem] max-w-full -translate-x-1/2 rounded-full bg-brand-gold/10 blur-3xl"
           />
           <div className="relative mx-auto max-w-3xl">
-            <p className={EYEBROW}>Pricing</p>
+            <p className={EYEBROW}>Every price, on one page</p>
             <h1 className="mt-3 font-serif text-4xl font-bold leading-tight text-brand-purple md:text-5xl">
-              Every price, on one page.
+              Pricing: how much does it cost to{' '}
+              <span className="italic text-brand-gold">support your child?</span>
             </h1>
             <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-text/75">
-              Tutoring pricing is murky on purpose. Ours isn&apos;t. Here is everything we charge, what it
+              Other companies keep their tutoring pricing hidden. Ours isn&apos;t. Here is everything we charge, what it
               works out at per hour of live teaching, and what each programme is actually for. For how these
               numbers compare to the wider market,{' '}
               <a
@@ -161,7 +162,7 @@ export default function PricingPage() {
                   <div className="mt-4 md:mt-0">
                     <a
                       href={r.href}
-                      className="inline-block rounded-md bg-brand-purple px-6 py-3 font-semibold text-brand-cream transition hover:bg-brand-purple-light"
+                      className="block w-full text-center md:w-64 rounded-md bg-brand-purple px-6 py-3 font-semibold text-brand-cream transition hover:bg-brand-purple-light"
                     >
                       {r.cta}
                     </a>
@@ -183,10 +184,10 @@ export default function PricingPage() {
               </h2>
               <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-brand-cream/90">
                 One-to-one tutoring averages around £50 an hour in the UK, which is roughly £200 a month per
-                subject for a weekly hour, and £1,500 or more across a school year. Our small-group
-                programmes put a specialist in front of your child every week for £12 to £14 per teaching
-                hour, because the cost of the hour is shared. Same weekly structure, a fraction of the
-                price, and every session built on exam questions rather than re-taught content.
+                subject for a weekly hour, and £1,500 or more across a school year. Our live small-group
+                programmes put a specialist in front of your child every week for £12 to £14 an hour,
+                because the cost of the hour is shared across the group. Same weekly structure, a fraction
+                of the price, and every session built on exam questions rather than re-taught content.
               </p>
               <p className="mt-4 font-semibold text-brand-cream">
                 Every programme starts with a risk-free first session. Full refund if it&apos;s not right.

@@ -6,14 +6,15 @@ const c: SubjectPageConfig = {
   metaTitle: 'A-Level Chemistry Tutoring Online | A-Level Accelerators',
   metaDescription:
     'Live online A-level Chemistry tutoring in small groups: 12 weekly specialist-led sessions on calculations, mechanisms and exam technique, led by Dr Waleed Ahmad, MBBS. First session risk-free.',
-  h1: 'A-level Chemistry tutoring that fixes the marks you keep losing',
+  h1: 'A-level Chemistry tutoring for when',
+  h1Gold: 'you keep losing marks',
   heroSub:
     'Chemistry is the subject where hard workers stall hardest: the content makes sense in class, then the paper asks a five-step calculation or an unfamiliar mechanism and the marks vanish. Our live 12-week programme trains exactly those skills, on real exam questions, every week.',
   leaksHeading: 'Where Chemistry marks actually leak',
   leaks: [
     {
       title: 'Multi-step calculations that collapse in the middle',
-      body: 'Moles, titrations, equilibrium constants, energetics: Chemistry papers chain four or five steps together and one slip kills the lot. We teach a written method for setting out calculations so errors get caught early, then drill it under exam conditions until it holds.',
+      body: 'Moles, titrations, equilibrium constants, energetics: Chemistry papers chain four or five steps together and one slip costs the lot. We teach a written method for setting out calculations so errors get caught early, then drill it under exam conditions until it holds.',
     },
     {
       title: 'Organic mechanisms and synthesis routes',
