@@ -1,4 +1,4 @@
-# SS6 · The prediction window
+# SS4 · The prediction window
 
 Send: Sunday 23 August 2026, 5pm UK
 To: the Sunday Session send list (see README)
@@ -16,7 +16,7 @@ Clinic note: perennial September anxiety. Swap for a real reply if one fits bett
 
 Here's a sentence that would have changed my own Year 13 if someone had said it to me in August: predicted grades aren't predictions. They're conclusions. Teachers draw them from evidence, and the evidence window opens the day you walk back into school.
 
-Session six: how predictions actually get set, and how to move yours.
+Session four: how predictions actually get set, and how to move yours.
 
 Most schools settle UCAS predictions through late September and October, earlier if you're applying for medicine, dentistry, vet med or Oxbridge, because that deadline is 15 October. What goes into them: how you finished Year 12 (fixed, already banked), what your teachers see in the first weeks back (live), and the first proper tests of the autumn (live, and the heaviest lever for moving a prediction).
 

@@ -27,13 +27,13 @@ PHOTO_SIG = (
 )
 
 ISSUES = [
-    ('2026-07-19-the-four-tiers.md',        'SS1 · The four tiers (Sun 19 Jul, 5pm)'),
-    ('2026-07-26-learn-it-backwards.md',    'SS2 · Learn it backwards (Sun 26 Jul, 5pm)'),
-    ('2026-08-02-ugly-notes.md',            'SS3 · Ugly notes win (Sun 2 Aug, 5pm)'),
-    ('2026-08-09-the-results-day-playbook.md','SS4 · The results day playbook (Sun 9 Aug, 5pm)'),
+    ('2026-08-02-the-four-tiers.md',        'SS1 · The four tiers (Sun 2 Aug, 5pm) LAUNCH'),
+    ('2026-08-09-the-results-day-playbook.md','SS2 · The results day playbook (Sun 9 Aug, 5pm)'),
     ('2026-08-13-results-morning.md',       'SSX · Results morning special (Thu 13 Aug, 7am)'),
-    ('2026-08-16-read-it-like-a-doctor.md', 'SS5 · Read it like a doctor (Sun 16 Aug, 5pm)'),
-    ('2026-08-23-the-prediction-window.md', 'SS6 · The prediction window (Sun 23 Aug, 5pm)'),
+    ('2026-08-16-read-it-like-a-doctor.md', 'SS3 · Read it like a doctor (Sun 16 Aug, 5pm)'),
+    ('2026-08-23-the-prediction-window.md', 'SS4 · The prediction window (Sun 23 Aug, 5pm)'),
+    ('2026-08-30-learn-it-backwards.md',    'SS5 · Learn it backwards (Sun 30 Aug, 5pm)'),
+    ('2026-09-06-ugly-notes.md',            'SS6 · Ugly notes win (Sun 6 Sep, 5pm)'),
 ]
 
 def header_field(header, key):

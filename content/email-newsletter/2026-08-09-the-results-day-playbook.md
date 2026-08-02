@@ -1,4 +1,4 @@
-# SS4 · The results day playbook
+# SS2 · The results day playbook
 
 Send: Sunday 9 August 2026, 5pm UK
 To: the Sunday Session send list (see README)

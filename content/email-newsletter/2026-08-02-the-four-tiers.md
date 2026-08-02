@@ -1,6 +1,6 @@
 # SS1 · The four tiers
 
-Send: Sunday 19 July 2026, 5pm UK
+Send: Sunday 2 August 2026, 5pm UK (launch send, first issue to the whole student list)
 To: the Sunday Session send list (see README; diagnostic page must be live first)
 Subject A: Sunday Session: where the next grade lives
 Subject B: the four tiers, {$name}

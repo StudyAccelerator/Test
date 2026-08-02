@@ -1,4 +1,4 @@
-# SS5 · Read it like a doctor
+# SS3 · Read it like a doctor
 
 Send: Sunday 16 August 2026, 5pm UK
 To: the Sunday Session send list (see README)
@@ -16,7 +16,7 @@ Clinic note: remark/priority-review question; verify current JCQ wording ("revie
 
 Thursday happened. Some of you are sitting with numbers you're proud of. Some with numbers that sting. And a lot of you watched it happen to other people and quietly thought "that's me in a year". All three of you are in the right place today.
 
-Session five: how to read a result. In medicine you're trained never to treat the number; you treat what's behind it. A result isn't a verdict. It's a data point, and data points get read before anyone acts on them.
+Session three: how to read a result. In medicine you're trained never to treat the number; you treat what's behind it. A result isn't a verdict. It's a data point, and data points get read before anyone acts on them.
 
 The triage, for any result that stung (A-level, AS, or a mock you're still carrying):
 

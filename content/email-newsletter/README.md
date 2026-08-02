@@ -38,17 +38,19 @@ No `diag_*` merge fields in newsletter copy except `{$name}`: the send list incl
 
 ## The launch run (all drafted, awaiting Waleed's review)
 
+The launch slipped from 19 July; the real first send is Sunday 2 August 2026 (decided by Waleed that afternoon). The calendar was reshuffled so the results day arc still lands on the right real dates, and session numbers follow the actual send order:
+
 | # | File | Send | Teach | The door |
 |---|------|------|-------|----------|
-| SS1 | `2026-07-19-the-four-tiers.md` | Sun 19 Jul, 5pm | The four tiers and the ten minute audit | Revision Diagnostic (free) |
-| SS2 | `2026-07-26-learn-it-backwards.md` | Sun 26 Jul, 5pm | Question-first learning for new topics | Summer Accelerator |
-| SS3 | `2026-08-02-ugly-notes.md` | Sun 2 Aug, 5pm | What notes are for; blurting as the proof | Summer Accelerator + playbook trailer |
-| SS4 | `2026-08-09-the-results-day-playbook.md` | Sun 9 Aug, 5pm | The full results day playbook | None. Deliberately. |
+| SS1 | `2026-08-02-the-four-tiers.md` | **Sun 2 Aug, 5pm (launch)** | The four tiers and the ten minute audit | Revision Diagnostic (free) |
+| SS2 | `2026-08-09-the-results-day-playbook.md` | Sun 9 Aug, 5pm | The full results day playbook | None. Deliberately. |
 | SSX | `2026-08-13-results-morning.md` | **Thu 13 Aug, 7am** | Short, calm, condensed moves | None (Rescue tool link if live) |
-| SS5 | `2026-08-16-read-it-like-a-doctor.md` | Sun 16 Aug, 5pm | Result triage: classify before you fix | September Subject Accelerator |
-| SS6 | `2026-08-23-the-prediction-window.md` | Sun 23 Aug, 5pm | How predicted grades get set; the evidence plan | September Subject Accelerator |
+| SS3 | `2026-08-16-read-it-like-a-doctor.md` | Sun 16 Aug, 5pm | Result triage: classify before you fix | September Subject Accelerator |
+| SS4 | `2026-08-23-the-prediction-window.md` | Sun 23 Aug, 5pm | How predicted grades get set; the evidence plan | September Subject Accelerator |
+| SS5 | `2026-08-30-learn-it-backwards.md` | Sun 30 Aug, 5pm | Question-first learning for new topics | September cohort, one week out |
+| SS6 | `2026-09-06-ugly-notes.md` | Sun 6 Sep, 5pm | What notes are for; blurting as the proof | September cohort starts today |
 
-From 30 August onward, write weekly from `topic-bank.md` using the production checklist below.
+From 13 September onward, write weekly from `topic-bank.md` using the production checklist below.
 
 ## Building it in MailerLite (one-time setup)
 
@@ -110,12 +112,12 @@ Warmth evidence for launching to the full student list: the account's last blast
 
 **The weekly Routine.** A scheduled Claude Code Routine ("Sunday Session weekly producer") fires every Saturday morning: it loads or writes the next issue, re-verifies facts and links, runs the compliance scan, prepares the MailerLite draft campaign when write access exists (paste-ready copy when it doesn't), and messages Waleed for approval. His approval reply in that conversation is what schedules the Sunday 5pm send. No approval, no send. Pause or delete the Routine any time by asking a session, or from the Claude Code Routines list.
 
-### Loaded state (15 July 2026)
+### Loaded state (2 August 2026, launch day)
 
 - The MailerLite connector is authorised on Waleed's Claude account; sessions write to MailerLite through it. The plan upgrade unlocked HTML content via API.
 - Group **Sunday Session** exists: `192801700892903405`. The old empty "Newsletter Signups" group was deleted in Waleed's cleanup.
-- All seven launch-run issues are loaded as **complete draft campaigns**, body included, each ending in Waleed's **photo signature** (his real headshot on the MailerLite CDN, `account_image/2113061/3SoYgyuLfUdmX53Lnw82S2YV4c6PnZsQch9dP7T5.jpg`, restyled to the template) with name, founder line, site and email, matching the footer his other automations use. Current IDs: SS1 `193066850814264649`, SS2 `193067116947048168`, SS3 `193067221684061768`, SS4 `193067328187925746`, SSX `193067462770558621`, SS5 `193067554347943463`, SS6 `193067662207616504`. (IDs changed once already because campaigns must be deleted and recreated to alter content safely, see the gotcha below.) Each has subject, sender ("Dr Waleed | A-Level Accelerators", waleed@alevelaccelerators.com), preheader (hidden div in the HTML) and the ten-group send list (~423 recipients). None is scheduled: Waleed reviews and schedules each, which is the approval gate.
-- **Gotchas learned the hard way:** `update_campaign` with new content silently resets the recipient filter to "all active subscribers" (which would include parents), so never content-patch an existing campaign; delete and recreate with `create_campaign` passing groups and content together (this is why campaign IDs change when copy is edited). The MCP's `list_automations` without `enabled_only: true` returns only disabled automations, so always pass the flag when checking live state. And do not auto-widen `.claude/settings.json` to grant MailerLite write permissions: the harness classifier blocks self-modification of the approval gate, and touching it can freeze other MailerLite calls until reverted. Let Waleed grant permissions himself.
+- All seven issues are loaded as **complete draft campaigns** on the reshuffled calendar, body included, each ending in Waleed's **photo signature** (his real headshot on the MailerLite CDN, `account_image/2113061/3SoYgyuLfUdmX53Lnw82S2YV4c6PnZsQch9dP7T5.jpg`, restyled to the template) with name, founder line, site and email, matching the footer his other automations use. Current IDs (2 Aug rebuild): SS1 launch `194701311183161279`, SS2 playbook `194701575222985804`, SSX special `193067462770558621` (untouched since 15 July, dates were already right), SS3 doctor `194701390896956464`, SS4 prediction `194701434790347781`, SS5 backwards `194701630741939763`, SS6 ugly notes `194701670822708558`. (IDs change whenever copy changes because campaigns must be deleted and recreated, see the gotcha below.) Each has subject, sender ("Dr Waleed | A-Level Accelerators", waleed@alevelaccelerators.com), preheader (hidden div in the HTML) and the ten-group send list (~423 recipients). None is scheduled: Waleed reviews and schedules each, which is the approval gate.
+- **Gotchas learned the hard way:** `update_campaign` silently resets the recipient filter to "all active subscribers" (which would include parents) on ANY update, even a name-only rename (confirmed 2 Aug), so never update an existing campaign at all; delete and recreate with `create_campaign` passing groups and content together (this is why campaign IDs change when copy is edited). The MCP's `list_automations` without `enabled_only: true` returns only disabled automations, so always pass the flag when checking live state. And do not auto-widen `.claude/settings.json` to grant MailerLite write permissions: the harness classifier blocks self-modification of the approval gate, and touching it can freeze other MailerLite calls until reverted. Let Waleed grant permissions himself.
 - `build-email-html.py` converts every issue file to a final email HTML **body fragment** (masthead, template styles, preheader as hidden div, photo signature, footer with unsubscribe; no doctype/head wrapper, which MailerLite mangles). Output dir is its first argument.
 - The four diagnostic automations are live (built 12 July as E0 plus one linear automation per route group). Still pending: the "copy to group: Sunday Session" graduation action at the end of each of the three route automations (a UI-only step), after which the Revision Diagnostic group should be swapped out of the campaign send lists so mid-sequence students stop overlapping with the weekly.
 - A twice-daily Routine ("Diagnostic completions: personal follow-up alert", about 9am and 7pm UK) reads the Revision Diagnostic group and notifies Waleed of each new completion with the student's full diag_* answers, so he can send a personal message. Read-only by design.

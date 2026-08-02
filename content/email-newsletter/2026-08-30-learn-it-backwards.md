@@ -1,12 +1,12 @@
-# SS2 · Learn it backwards
+# SS5 · Learn it backwards
 
-Send: Sunday 26 July 2026, 5pm UK
+Send: Sunday 30 August 2026, 5pm UK
 To: the Sunday Session send list (see README)
 Subject A: Sunday Session: learn it backwards
 Subject B: the backwards method for new topics
 Preheader: Why exam questions come first, not last, plus the restart protocol for a collapsed summer plan.
-Goal: teach question-first learning for getting ahead; first paid door (Summer Accelerator, cohort started 25 July).
-Links: 2 (summer page, tracker in PS)
+Goal: teach question-first learning for the last stretch of summer; door is the September cohort, one week out.
+Links: 2 (subject page, tracker in PS)
 Clinic note: perennial late-July question. Swap for a real reply if one fits better.
 
 ---
@@ -15,7 +15,7 @@ Clinic note: perennial late-July question. Swap for a real reply if one fits bet
 
 Quick scene from medical school before we start. The students who cruised finals weren't the ones with the beautiful notes. They were the ones living inside question banks: thousands of exam questions, attempted before, during and after learning the content. Half of medicine is deliberately taught backwards like that. Nobody tells A-level students.
 
-So, Session two: the backwards method, for any topic you haven't learned yet. If you're using the summer to get ahead for September, this is built for you.
+So, Session five: the backwards method, for any topic you haven't learned yet. If you want the last stretch of summer to put you ahead for September, this is built for you.
 
 Here's how most students meet a new topic. Read it, make notes on it, feel ready, and then, right at the end, gently attempt some questions. It feels sensible. It's back to front, and it's why "getting ahead" so often produces notes that evaporate by October.
 
@@ -33,7 +33,7 @@ Tonight, thirty minutes: find the first topic your class meets in September (the
 
 **The clinic**
 
-A question that lands in my inbox every July: "My summer plan fell apart after four days. How do I restart without hating myself?"
+A question that lands in my inbox every summer: "My summer plan fell apart after four days. How do I restart without hating myself?"
 
 Plans don't usually fail from laziness. They fail from size. So the restart is the opposite of the plan that collapsed: shrink to one 90 minute block, anchor it to a fixed trigger (straight after breakfast, phone in another room), and earn a three day streak before you're allowed to add anything. One more rule: yesterday's missed hours don't roll over. They're gone, and that's fine. Revenge-revision days are how plans die twice. Start from today, small, and let the streak do the talking.
 
@@ -47,9 +47,9 @@ Low-yield: building a new, prettier timetable every Monday. You have a timetable
 
 **The door**
 
-The Summer Accelerator cohort kicked off this weekend: six weeks of live teaching in Biology, Chemistry, Maths and Physics for Year 12s who want September to feel easy. It is, honestly, the taught version of today's Session: content rebuilt live, then exam questions coached against the mark scheme. Joining now is joining on time, because the recordings catch you up on anything that's already run, and the first session is risk-free either way. If getting ahead is your summer plan, this is that plan with a teacher in it.
+One week today, the September Subject Accelerator cohort starts: Sunday 6th September. Twelve weeks, live, small groups, Biology, Chemistry and Maths, exam answers coached against the mark scheme from the first session. It is, honestly, the taught version of today's Session, and it runs straight through the window when predicted grades get set. Places are capped because the sessions only work small, so this is the week to decide calmly rather than scramble on the morning it starts. And if the honest answer for you is "keep your money and run the method solo", the whole method is in these emails, free, every Sunday.
 
-[BUTTON: See the Summer Accelerator -> https://alevelaccelerators.com/summer-accelerators/]
+[BUTTON: Book my place for September -> https://alevelaccelerators.com/subject-accelerators/]
 
 Keep going!
 

@@ -1,12 +1,12 @@
-# SS3 · Ugly notes win
+# SS6 · Ugly notes win
 
-Send: Sunday 2 August 2026, 5pm UK
+Send: Sunday 6 September 2026, 5pm UK
 To: the Sunday Session send list (see README)
 Subject A: Sunday Session: ugly notes win
 Subject B: your notes are lying to you
 Preheader: The beautiful notes trap, what notes are actually for, and one blank page to prove it tonight.
-Goal: teach the notes reframe (deliberately re-frames blurting and says so); door does two jobs: playbook trailer + last strong Summer Accelerator push.
-Links: 2 (summer page, blurting article in PS)
+Goal: teach the notes reframe (deliberately re-frames blurting and says so) as term starts and fresh-notes season begins; door is the cohort starting today.
+Links: 2 (subject page, blurting article in PS)
 Clinic note: perennial. Swap for a real reply if one fits better.
 
 ---
@@ -15,7 +15,7 @@ Clinic note: perennial. Swap for a real reply if one fits better.
 
 Confession first. At 17 I owned four highlighters and I knew how to use them. My folders were beautiful. Colour-coded, underlined, margins ruled. I re-read those beautiful notes until every page felt like a friend, then sat my mocks and watched marks fall through my hands, and I couldn't understand it, because I'd "done the work".
 
-Session three: what notes are actually for.
+Session six: what notes are actually for.
 
 A revision note has exactly one job: to be the thing you rebuild from memory, not the thing you admire. The moment note-making becomes note-decorating, the effort quietly moves from remembering to formatting. Formatting pays zero marks.
 
@@ -49,13 +49,9 @@ Low-yield: buying new stationery "for September". The pen doesn't remember. You 
 
 **The door**
 
-Two things, both dated.
+The September cohort starts today. Twelve weeks, live, small groups, Biology, Chemistry and Maths, running straight through the window when predicted grades get set. If you're reading this at 5pm, the first sessions have already run today, and that's fine: the recordings catch you up, and the first session is risk-free either way. If it's been sitting on your mind all summer, this is the day it stops being a decision and starts being a habit.
 
-Results day is a week on Thursday: the 13th. Next Sunday's Session is the full playbook, every outcome, exactly what to do and in what order, including the clearing call script. If someone you know collects results this year, forward next week's email to them. It'll be written to be forwarded.
-
-And for the Year 12s: the Summer Accelerator is one week in, with five weeks of live teaching still ahead, and the recordings cover what's run. If September's been sitting on your mind all summer, this is the honest moment to decide, while most of the value is still in front of you. First session risk-free.
-
-[BUTTON: Join the Summer Accelerator -> https://alevelaccelerators.com/summer-accelerators/]
+[BUTTON: Join the September cohort -> https://alevelaccelerators.com/subject-accelerators/]
 
 Keep going!
 
