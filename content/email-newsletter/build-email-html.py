@@ -9,21 +9,21 @@ FONT = "-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-
 P_STYLE = f"margin:0 0 18px 0;font-family:{FONT};font-size:17px;line-height:1.6;color:#1a1535;"
 LINK_STYLE = "color:#C9A96E;text-decoration:underline;"
 
-# Waleed's standard photo signature (his real headshot on the MailerLite CDN,
-# pulled from his sent campaigns), restyled to the Sunday Session template.
+# Waleed's standard email signature, copied verbatim from his sent MailerLite
+# campaigns (80px round photo, auto height so it never distorts, Kind regards block).
 PHOTO_SIG = (
-    '<table role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin:8px 0 4px 0;">'
+    '<table role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin:8px 0 4px 0;text-align:left;">'
     '<tr>'
-    '<td valign="top" style="padding-right:16px;">'
+    '<td align="center" width="80">'
     '<img src="https://storage.mlcdn.com/account_image/2113061/3SoYgyuLfUdmX53Lnw82S2YV4c6PnZsQch9dP7T5.jpg"'
-    ' width="64" height="64" alt="Dr Waleed Ahmad"'
-    ' style="display:block;width:64px;height:64px;border-radius:64px;"></td>'
-    f'<td valign="middle" style="font-family:{FONT};font-size:15px;line-height:1.55;color:#1a1535;">'
-    '<strong>Dr Waleed Ahmad, MBBS</strong><br>'
-    'Founder, A-Level Accelerators<br>'
-    f'<a href="https://alevelaccelerators.com" style="{LINK_STYLE}">alevelaccelerators.com</a>&nbsp;&middot;&nbsp;'
-    f'<a href="mailto:Waleed@alevelaccelerators.com" style="{LINK_STYLE}">Waleed@alevelaccelerators.com</a>'
-    '</td></tr></table>'
+    ' border="0" alt="" width="80"'
+    ' style="display:inline-block;max-width:80px;border-radius:80px;"></td>'
+    '<td width="30" style="line-height:30px;"></td>'
+    '<td><p style="font-family:\'Inter\', sans-serif;color:#515856;font-size:16px;line-height:165%;margin-top:0;margin-bottom:0;">'
+    'Kind regards,<br>Dr Waleed Ahmad<br>'
+    'Founder of A-Level Accelerators<br>'
+    'Waleed@alevelaccelerators.com<br></p></td>'
+    '</tr></table>'
 )
 
 ISSUES = [

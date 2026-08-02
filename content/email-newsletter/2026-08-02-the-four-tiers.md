@@ -13,6 +13,8 @@ Clinic note: placeholder drawn from the commonest summer question on calls and r
 
 {$name},
 
+First, a quick hello, because some of you met me at a workshop a while back and some of you finished my Revision Diagnostic this week: I'm Dr Waleed. I'm an NHS doctor, I got into medicine off the back of my own A-levels, and I've taught over 1,000 students how to revise properly and perform when it counts. That's what I do, and it's why you're getting this.
+
 This is the first Sunday Session. Here's the deal, so you know exactly what you've signed up for: every Sunday at 5pm, one thing school never taught you. Short enough to read with a cup of tea, useful enough to change what you do that evening. No fluff, no "just checking in". If a week's Session isn't worth your five minutes, I want to know, and the reply button is how you tell me. I read every one.
 
 Right. Session one. The map everything else hangs on.
