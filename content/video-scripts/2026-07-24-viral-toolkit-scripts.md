@@ -189,46 +189,47 @@ The flow still has to sound like Waleed talking (that was the last note), so lin
 
 ## Script 5: Method breakdown
 
-**Title for your own tracking:** "Blurt and Fix breakdown"
-**Length target:** 45 to 55 seconds. **Wardrobe:** scrubs, at the desk, blank page in front of you to gesture at.
+**Title for your own tracking:** "The error log breakdown"
+**Length target:** 45 to 55 seconds. **Wardrobe:** scrubs, at the desk, a marked past paper and a red pen in front of you to gesture at.
+**Note:** deliberately NOT a recall or blurting tip. This is the practice-question half of the system: what you do with a wrong answer after you've marked it. The K, R, W letters are already how Waleed teaches this in the subject email sequence and the diagnostic, so the short matches the site.
 
 **[Beat: proven hook]**
 
-> Ever revised something, felt like you knew it, then walked into the exam and blanked? There's a five minute method that fixes exactly that, and most students have never done it properly.
+> You've done ten past papers and your grade hasn't moved. It's not the number of papers. It's what you do in the ten minutes after them.
 
-*On-screen text: "knew it yesterday. blank in the exam."*
+*On-screen text: "10 past papers, same grade"*
 
 **[Beat: hype up the method]**
 
-> I've taught over 1,000 A-level students, and if I could keep one method, it's this. It's in every session for a reason.
+> This is the highest-yield thing I teach, and it's one page per subject. Your wrong answers are the most valuable material you own, and almost everyone bins them.
 
 **[Beat: introduce what the method is called]**
 
-> It's called blurting. We call it Blurt and Fix, because the fix is the half everyone skips.
+> It's called an error log.
 
-*On-screen text: "BLURT AND FIX"*
+*On-screen text: "THE ERROR LOG"*
 
 **[Beat: the science explaining the problem, not the method]**
 
-> Here's why you need it. Rereading your notes runs on recognition, the info's already on the page, so nothing gets pulled from memory. Feels smooth, fools you into thinking you know it. But exams test recall, not recognition. Different skill, and rereading never trains it.
+> Here's the problem. You mark the paper, you see the red, you feel a bit rubbish, you move on. Nothing gets fixed, so next paper you drop the exact same marks. Because "I got it wrong" isn't a diagnosis. In hospital, when something goes wrong, we sit down and work out precisely why, so it can't happen twice.
 
 **[Beat: how the method works as the solution]**
 
-> Blurting forces the recall, and it's brutally honest. No more "I sort of know it", you either remember it or you don't. Notes shut, blank page, one topic, write everything. Whatever doesn't come out is the point, because if it's not on the page it's not in your head.
+> So every dropped mark gets one line, and a letter. K, you didn't know it, that's a content gap. R, you knew it but couldn't get it out under pressure, that's retrieval. W, you knew it and wrote it, just not in the mark scheme's language. Three different problems with three different fixes, and now you know which one you've actually got.
 
 **[Beat: how to implement it]**
 
-> So: one topic, notes closed, blank page, five minutes, write everything. Then open your notes and fix the gaps in a different colour. Blurt it again in three or four days, and watch that second colour shrink.
+> One page per subject. Mark it meanly with the real mark scheme, log every lost mark with its letter and what the scheme actually wanted, then read that log before your next paper. Retest it weekly. That's the bit everyone skips.
 
 **[Beat: close]**
 
 > Follow for the stuff school never taught you.
 
-*On-screen text during implementation: "1. one topic, notes closed" / "2. blank page, 5 mins, everything" / "3. fix gaps in a new colour" / "4. repeat in 3 to 4 days".*
+*On-screen text during the letters: "K: didn't know it" / "R: knew it, couldn't produce it" / "W: knew it, wrong wording". Then for implementation: "1. mark it meanly" / "2. one line + letter per lost mark" / "3. read it before the next paper" / "4. retest weekly".*
 
-**Caption:** Blurt and Fix. The fix is the half everyone skips. #alevels #alevelrevision #blurting #year12 #year13
+**Caption:** Ten past papers without an error log is just the same mistake ten times. #alevels #alevelrevision #year12 #year13 #studytok
 
-**Why this should hold:** the hook is the exam-blank felt moment, the same opener Curtis and Tom used for the blurting section of the long-form script. The problem section makes the viewer feel caught before the fix arrives, and the implementation is concrete enough to try tonight. Trimmed the science and solution beats so it lands under a minute.
+**Why this should hold:** the hook is a different felt moment from the rest of the batch (effort going in, grade not moving) and it names a frustration every serious student has had. The method is genuinely new material here: nothing else in the batch covers what to do with a wrong answer, so it pairs with the past-paper habit instead of repeating the recall lesson. The K, R, W letters are the memorable, screenshot-able payload, they are already Waleed's own framing on the site, and the hospital line is credibility only he can use.
 
 ---
 

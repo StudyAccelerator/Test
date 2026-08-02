@@ -71,6 +71,15 @@ export default function SubjectAccelerators() {
       )
     },
     {
+      question: "Will I get materials and revision resources?",
+      answer: (
+        <>
+          <p className="mb-4"><strong>Yes.</strong> Each week comes with a worksheet and practice questions to work through between sessions, and every live session is recorded so you can revisit the teaching whenever you like.</p>
+          <p>The materials are built around exam questions, because that&apos;s what the whole programme trains. You won&apos;t get a pile of notes to re-read; you&apos;ll get questions that show you whether it stuck.</p>
+        </>
+      )
+    },
+    {
       question: "Are the sessions recorded?",
       answer: (
         <>
@@ -91,7 +100,7 @@ export default function SubjectAccelerators() {
       question: "What times do the sessions run?",
       answer: (
         <>
-          <p className="mb-4">Sessions are scheduled to minimize clashes with school and other commitments:</p>
+          <p className="mb-4">Sessions are scheduled to avoid clashes with school and other commitments:</p>
           <ul className="list-disc ml-8 mb-4 space-y-1">
             <li><strong>Maths:</strong> Saturdays, 1:00 PM to 3:00 PM (13:00 to 15:00)</li>
             <li><strong>Biology:</strong> Sundays, 10:00 AM to 12:00 PM (10:00 to 12:00)</li>
@@ -169,14 +178,14 @@ export default function SubjectAccelerators() {
       question: "What if I need more support than the weekly sessions offer?",
       answer: (
         <>
-          <p className="mb-4">This accelerator is designed to be comprehensive, but if you need additional 1:1 support:</p>
+          <p className="mb-4">The accelerator covers everything the exam demands, but if you need extra 1:1 support:</p>
           <ul className="list-disc ml-8 mb-4 space-y-1">
             <li>Use the weekly Q&A time to ask detailed questions</li>
             <li>Share specific practice questions you're stuck on</li>
             <li>Access the recordings and worksheets to reinforce learning at your own pace</li>
-            <li>Reach out directly for personalized coaching (available through our Study System tier)</li>
+            <li>Reach out directly for personalised coaching (available through our Study System tier)</li>
           </ul>
-          <p className="mb-4">For students needing comprehensive 1:1 support, weekly accountability, and a fully customised approach, our <strong>Study System</strong> programme is available separately and can complement these accelerators perfectly.</p>
+          <p className="mb-4">For students who want full 1:1 support, weekly accountability, and a plan built entirely around them, our <strong>Study System</strong> programme is available separately and works well alongside these accelerators.</p>
           <p>Book a free consultation to discuss which option suits your needs.</p>
         </>
       )
@@ -551,7 +560,7 @@ export default function SubjectAccelerators() {
                 </a>
               </div>
 
-              {/* Two Subjects — featured */}
+              {/* Two Subjects (featured) */}
               <div className="bg-brand-cream rounded-xl text-center shadow-2xl border-4 border-brand-gold transition-all duration-300 hover:-translate-y-3 hover:shadow-[0_25px_50px_rgba(46,37,87,0.25)] md:scale-105 md:-mt-4 overflow-hidden">
                 <div className="bg-brand-gold text-brand-purple py-2 px-4 text-sm font-bold text-center">
                   Best value for most students

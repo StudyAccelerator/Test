@@ -225,6 +225,11 @@ const BlogFooter = () => (
       <p className="text-xs opacity-60">
         &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
       </p>
+      <p className="text-xs">
+        <a href="/privacy/" className="text-brand-gold opacity-80 hover:opacity-100 transition">Privacy Policy</a>
+        <span className="mx-2 opacity-40">·</span>
+        <a href="/terms/" className="text-brand-gold opacity-80 hover:opacity-100 transition">Terms and Conditions</a>
+      </p>
     </div>
   </footer>
 )

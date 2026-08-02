@@ -14,6 +14,23 @@ export const SITE_URL = 'https://alevelaccelerators.com'
 // Newest first. Add new posts to the top; /blog and sitemap.xml pick them up automatically.
 export const posts: Post[] = [
   {
+    slug: 'how-much-does-a-level-tutoring-cost',
+    title: 'How Much Does A-Level Tutoring Cost in 2026? Honest Numbers',
+    description:
+      'What A-level tutoring actually costs in 2026: one-to-one hourly rates, what drives the price, when group teaching beats private tutoring on value, and the questions to ask before you pay anyone.',
+    datePublished: '2026-07-29',
+    dateModified: '2026-07-29',
+    readingMinutes: 8,
+    category: 'Tutoring & Support',
+    keywords: [
+      'how much does a level tutoring cost',
+      'a level tutor cost per hour',
+      'a level tutor prices uk',
+      'how much is a tutor uk',
+      'private tutor cost a level',
+    ],
+  },
+  {
     slug: 'how-to-prepare-for-year-13',
     title: 'How to Prepare for Year 13: The Complete Pre-September Checklist',
     description:
@@ -172,7 +189,7 @@ export const posts: Post[] = [
     description:
       'Everything you need to know about A-level resits: who can retake, when exams run, realistic costs, how resits affect UCAS and university offers, and how to make the retake year count.',
     datePublished: '2026-07-04',
-    dateModified: '2026-07-04',
+    dateModified: '2026-07-28',
     readingMinutes: 9,
     category: 'Results & Clearing',
     keywords: [
@@ -224,7 +241,7 @@ export const posts: Post[] = [
     description:
       'Predicted grades get set early in Year 13, and yes, you can change them. A doctor and former top A-level student explains exactly what evidence teachers need, and how long it takes to build.',
     datePublished: '2026-07-01',
-    dateModified: '2026-07-01',
+    dateModified: '2026-07-28',
     readingMinutes: 9,
     category: 'Predicted Grades & UCAS',
     keywords: [
@@ -241,7 +258,7 @@ export const posts: Post[] = [
     description:
       'The summer between Year 12 and Year 13 decides more than most students realise. Predicted grades get set within weeks of returning. Here is what to do, and what to skip.',
     datePublished: '2026-06-30',
-    dateModified: '2026-06-30',
+    dateModified: '2026-07-28',
     readingMinutes: 8,
     category: 'Study Planning',
     keywords: [

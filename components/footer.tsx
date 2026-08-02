@@ -25,6 +25,9 @@ export default function Footer() {
               <ul className="space-y-2 text-sm">
                 <li><a href="/summer-accelerators/" className="text-brand-gold hover:text-white transition">Summer Accelerator</a></li>
                 <li><a href="/subject-accelerators/" className="text-brand-gold hover:text-white transition">Subject Accelerators</a></li>
+                <li><a href="/a-level-biology-tutoring/" className="text-brand-gold hover:text-white transition">Biology Tutoring</a></li>
+                <li><a href="/a-level-chemistry-tutoring/" className="text-brand-gold hover:text-white transition">Chemistry Tutoring</a></li>
+                <li><a href="/a-level-maths-tutoring/" className="text-brand-gold hover:text-white transition">Maths Tutoring</a></li>
                 <li><a href="/study-systems/" className="text-brand-gold hover:text-white transition">Study System</a></li>
               </ul>
             </div>
@@ -42,6 +45,8 @@ export default function Footer() {
             <div>
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Company</h3>
               <ul className="space-y-2 text-sm">
+                <li><a href="/pricing/" className="text-brand-gold hover:text-white transition">Pricing</a></li>
+                <li><a href="/contact/" className="text-brand-gold hover:text-white transition">Contact</a></li>
                 <li><a href="/faqs/" className="text-brand-gold hover:text-white transition">FAQs</a></li>
                 <li><a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a></li>
                 <li><a href={BOOK_A_CALL_LINK} className="text-brand-gold hover:text-white transition">Book a Free Call</a></li>
@@ -52,6 +57,11 @@ export default function Footer() {
         <div className="h-px bg-brand-gold opacity-20 my-4"></div>
         <p className="text-center text-xs opacity-60">
           &copy; 2026 A-Level Accelerators. All rights reserved. | Helping A-Level students become the top of their class.
+        </p>
+        <p className="mt-2 text-center text-xs">
+          <a href="/privacy/" className="text-brand-gold opacity-80 hover:opacity-100 hover:text-white transition">Privacy Policy</a>
+          <span className="mx-2 opacity-40">·</span>
+          <a href="/terms/" className="text-brand-gold opacity-80 hover:opacity-100 hover:text-white transition">Terms and Conditions</a>
         </p>
       </div>
     </footer>
