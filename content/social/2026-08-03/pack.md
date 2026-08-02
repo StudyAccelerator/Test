@@ -57,6 +57,44 @@ GCSE results (Thu 20 August) belongs to the NEXT pack: the parent audience doubl
 - Boost only the proven winner: from Saturday 8 evening, boost whichever parent post performed best that week, £3 to £5 a day through to the 13th; the results-day guide post is the expected candidate.
 - After Saturday 8: no summer selling anywhere, at all. The page and profile must never sell a course that has started.
 
+## 4b. DAY ZERO: Sunday 2 August (added 3:15pm, posted same day)
+
+Waleed asked for a same-day start. Two posts, written to sit before the arc without colliding with Monday.
+
+### LinkedIn, post by 4:30pm today | image: li-sun02-rota.jpg (his real August rota screenshot)
+
+Six weeks of silence on here. This is my excuse.
+
+That's my August. A&E and the acute medical unit, day shifts and long days, teaching days wedged in between.
+
+Somewhere between the wards and building free revision tools, posting fell off a cliff. I'm not complaining. I chose both of these lives: doctor on the ward, revision teacher everywhere else.
+
+Here's what pulled me back today: A-level results day is eleven days away. Thursday the 13th, 8am.
+
+Look closely at that rota. I'm on the acute medical unit that morning. So while you're opening envelopes, I'll be on a ward round, checking my phone at every break. I'll still be here.
+
+Some of you are about to have the best morning of your year. Some of you are already lying awake about it. Most of you have no plan for either version. That's this week's job: starting tomorrow, how I'd diagnose your revision before September, and later this week, exactly what to do on the 13th, whatever the envelope says.
+
+For today, one question: eleven days out, how are you honestly feeling about it? One word is fine. I'm reading everything tonight.
+
+*First comment: none. Hashtags: none.*
+
+### Facebook page, post 5 to 7pm today | text only
+
+Eleven days until A-level results day.
+
+Here's something I notice in results-week families: by early August, most teenagers have stopped mentioning it. Not because they've forgotten. Because naming it makes it real.
+
+So the house goes quiet about the one thing everyone is thinking about.
+
+I'm an NHS doctor, I tutor A-level students, and this page is where I'll post the whole run-up: what to prepare before the 12th, what to say on the morning, how clearing actually works, and what nobody tells parents about any of it. All free, starting this week.
+
+Today, just one genuine question, because I only ever see the student half: is results day being talked about in your house, or carefully not talked about? And which do you think your teenager prefers?
+
+### Results-day plan adjustment (from the rota)
+
+Waleed works a 9am AMU day shift on Thursday 13 August. So: the 7:30am LinkedIn and 7am Facebook posts go out BEFORE leaving for work (they are drafted; adaptation takes ten minutes); the 1pm clearing posts should be finalised the night before so posting them takes one tap on a break; comment replies happen on breaks and properly from the evening. The evening reflective posts become the day's real conversation window. This is honest and it works; the morning posts even say he is on a ward that day, which is the most credible sentence in the whole arc.
+
 ## 5. LINKEDIN, day by day (3 to 9 August)
 
 ### Mon 3 | photos: li-thu16-then-teen.jpg + li-thu16-now-doctor.jpg (gallery, teen photo first; both in content/graphics/week-2026-07-20/photos/)
