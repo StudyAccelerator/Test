@@ -36,17 +36,12 @@ html,body {{ width:1080px; height:1080px; overflow:hidden; }}
 .strip {{ background:#c62828; color:#ffffff; text-align:center; font-weight:800;
       font-size:38px; letter-spacing:0.06em; padding:26px 0; }}
 .body {{ flex:1; display:flex; flex-direction:column; justify-content:center;
-      padding:0 90px; text-align:center; }}
+      padding:0 90px 90px; text-align:center; }}
 h1 {{ font-weight:900; font-size:{size}px; line-height:1.18; color:#111111; }}
 mark {{ background:#ffe872; padding:0 12px; }}
-.cta {{ padding:0 90px 70px; text-align:center; }}
-.cta .line {{ font-weight:700; font-size:40px; color:#111111; margin-bottom:14px; }}
-.cta .url {{ font-weight:600; font-size:30px; color:#777777; }}
 </style></head><body><div class="ad">
 <div class="strip">ATTENTION: UK PARENTS</div>
 <div class="body"><h1>{prefix}<br><mark>{key}</mark>{suffix}</h1></div>
-<div class="cta"><div class="line">Take the free 3 minute revision diagnostic &#8595;</div>
-<div class="url">alevelaccelerators.com</div></div>
 </div></body></html>"""
 
 UNDERLINE = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
@@ -60,15 +55,9 @@ html,body {{ width:1080px; height:1080px; overflow:hidden; }}
 .body {{ flex:1; display:flex; flex-direction:column; justify-content:center; text-align:left; }}
 h1 {{ font-weight:900; font-size:{size}px; line-height:1.22; color:#111111; }}
 .key {{ box-shadow: inset 0 -16px 0 0 rgba(46,37,87,0.25); }}
-.cta {{ display:flex; align-items:center; gap:28px; }}
-.pill {{ background:#2E2557; color:#F3EBD8; font-weight:700; font-size:36px;
-      padding:26px 44px; border-radius:14px; }}
-.url {{ font-weight:600; font-size:30px; color:#777777; }}
 </style></head><body><div class="ad">
 <div class="tag">FOR UK PARENTS</div>
 <div class="body"><h1>{prefix}<br><span class="key">{key}</span>{suffix}</h1></div>
-<div class="cta"><div class="pill">Free 3 minute check &#8594;</div>
-<div class="url">alevelaccelerators.com</div></div>
 </div></body></html>"""
 
 def font_size(prefix, key):

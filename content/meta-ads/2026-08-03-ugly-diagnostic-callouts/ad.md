@@ -17,9 +17,11 @@ headless Chrome). 13 questions x 2 styles:
   general variant (fine here because the diagnostic is method-level and subject-agnostic;
   Physics may NOT be used in Subject Accelerators copy).
 - Styles: `-marker` (red ATTENTION strip, yellow highlighter on the key phrase, the
-  full ugly-ads register) and `-underline` (brand-purple tag and pill, thick underline,
-  one notch less ugly). Both deliberately look like a notice, not an ad: that is the point.
-  Do not "improve" them with brand polish.
+  full ugly-ads register) and `-underline` (small brand-purple tag, thick underline).
+  On Waleed's instruction (3 Aug) the images carry NOTHING except the banner/tag and the
+  question itself: no CTA line, no URL, no buttons. They must not look like an ad at all;
+  the primary text and the Learn More button do the selling. Do not "improve" them with
+  brand polish or re-add a CTA.
 
 ## How to launch (Waleed presses everything)
 
