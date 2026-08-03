@@ -1,0 +1,48 @@
+# Ugly callout ad batch: the Suby-style creative matrix (3 August 2026)
+
+Built on Waleed's instruction after he studied Victor Alvarez's long-running GCSE application
+ads in the Meta Ad Library. The strategy: keep the AUDIENCE broad (the winning
+profiles campaign proved broad parents converts at under £8 a lead) and let the CREATIVE
+do the narrowing, with a matrix of deliberately plain text-card variants so Meta's delivery
+finds which call-out pulls the cheapest parents. Destination stays the revision diagnostic
+parent path.
+
+## The files
+
+26 images in `final/`, 1080x1080, generated from `src/gen.py` (one template, python loop,
+headless Chrome). 13 questions x 2 styles:
+
+- Questions: general A-levels, Year 12, Year 13, then subject and year-x-subject variants
+  for Maths, Biology and Chemistry (the subjects Waleed teaches), plus one Physics
+  general variant (fine here because the diagnostic is method-level and subject-agnostic;
+  Physics may NOT be used in Subject Accelerators copy).
+- Styles: `-marker` (red ATTENTION strip, yellow highlighter on the key phrase, the
+  full ugly-ads register) and `-underline` (brand-purple tag and pill, thick underline,
+  one notch less ugly). Both deliberately look like a notice, not an ad: that is the point.
+  Do not "improve" them with brand polish.
+
+## How to launch (Waleed presses everything)
+
+- NEW campaign ("Callout test | Aug 2026"), £10/day. Do NOT add these to the winning
+  profiles campaign: editing it resets its learning while it is delivering leads under £8.
+- Ad set: duplicate the broad-parents shape (UK, both Meta parent segments covering ages
+  13 to 17 and 18 to 26, age suggestion 38 to 55, Facebook-only placements, Lead event).
+  No interest narrowing: the creative is the targeting, that is the whole experiment.
+- Start with 6 to 8 ads, not all 26: at £10/day Meta cannot learn across 26. Suggested
+  starter batch: 01-general (both styles), 02-y12-marker, 03-y13-marker, 04-maths-marker,
+  05-biology-marker, 06-chemistry-marker. Rotate losers out for unused variants weekly.
+- Reuse the proven primary text, headline and destination URL from the live ad record
+  (`../2026-07-27-parents-diagnostic-launch/ad.md`); the generic revision-system copy fits
+  every variant, including the subject ones.
+- Same UTM campaign tag family; suggest `utm_campaign=parents-callouts-2026-08` so GA4
+  separates this test from the first one.
+
+## Honesty and policy notes
+
+- The question format asks about the CHILD'S course, which is standard education
+  targeting; nothing asserts anything about the reader or their child (Meta
+  personal-attributes policy).
+- "Free 3 minute revision diagnostic" is the real product, free, about 3 minutes.
+- No grade claims anywhere. The Victor-style long copy with named results is a separate,
+  LATER build gated on real results-day data (after 13 August) and student permission.
+- Compliance scan run on this file and the generator.
