@@ -41,3 +41,6 @@ lerna-debug.log*
 # Content HQ: live sweep data and keys stay local, never in the repo
 /content-hq/data/
 /content-hq/.env
+
+# Local review folders (creative packs copied out for Waleed to flick through)
+/AD\ REVIEW*/
