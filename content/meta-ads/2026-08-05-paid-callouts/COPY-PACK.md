@@ -9,7 +9,7 @@ TWO THINGS ONLY WALEED CAN CONFIRM BEFORE LAUNCH:
    Primary Text A. Check the arithmetic against the live programme prices and what UK
    families actually pay for weekly 1:1 tutoring before this runs. If the honest ratio
    is a quarter, the images are one script-edit and re-render away.
-2. The scarcity number. "5 new A-level students" appears on 4 images and in Primary
+2. The scarcity number. "We're taking on 5 new A-level students" appears on 4 images and in Primary
    Text B. Make it the real number of September places, whatever that is. Scarcity that
    is true is urgency; scarcity that is invented is a refund request waiting to happen.
 
@@ -50,7 +50,7 @@ swap the path for `/summer-accelerators/` and keep the UTMs.)
 
 ## PRIMARY TEXT B: the scarcity angle (pairs with images 05 to 08)
 
-> I'm taking on 5 new A-level students for September.
+> We're taking on 5 new A-level students for September.
 >
 > I'm Dr Waleed Ahmad, an NHS doctor, and I have worked with over 1,000 A-level students. I keep intakes small deliberately: the whole point of my programmes is that nobody gets lost in the crowd, so the group sizes stay honest.
 >
