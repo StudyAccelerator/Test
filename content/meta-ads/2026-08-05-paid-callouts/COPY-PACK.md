@@ -118,3 +118,48 @@ Suggested opening batch of 8: 01-price-general-marker, 05-five-general-marker,
 - Proof points used: NHS doctor, over 1,000 students, former top-performing A-level
   student. All approved.
 - The two claims only Waleed can verify are flagged at the top of this file.
+
+---
+
+## PRIMARY TEXT E: the long Edviro-structure sales version (added 5 August, Waleed's request)
+
+Same skeleton as the diagnostic long copy but selling Subject Accelerators directly.
+Claims Waleed must sanity-check against the live page before running: the small-group
+bullets, the fifth-of-the-cost ratio, and the 5-places number.
+
+> Parents of Year 12 and 13: if your child is aiming for As and A*s in Biology, Chemistry or Maths, this is for you.
+>
+> I'm Dr Waleed Ahmad. I'm an NHS doctor, I earned the A-level grades that got me into medicine, and I have worked with over 1,000 A-level students.
+>
+> Right now, if your child is:
+>
+> [X] Putting real hours in while the marks stand still
+> [X] Drowning in content with no system for covering it
+> [X] Losing marks on wordy application questions they swore they knew
+> [X] Paying a tutor who covers content but never fixes how they revise between sessions
+> [X] Bright, but running out of time in every exam
+>
+> Then here's what I want you to know: none of that is an ability problem. A-levels are built to spread students out, and nationally only around a quarter of entries come out at A or A*. The students who get there aren't smarter than yours. They're working on a system.
+>
+> That system is what my Subject Accelerator programmes teach.
+>
+> We're taking on 5 new A-level students for September. The intake is small on purpose: the whole point is that nobody gets lost in the crowd. The programmes cover A-level Biology, Chemistry and Maths, built around the exact revision and exam method I used to earn my place in medicine, for about a fifth of what families pay for 1:1 tutoring.
+>
+> What your child gets:
+>
+> [OK] Small group classes in Biology, Chemistry or Maths
+> [OK] The revision and exam method at the centre of everything, not just more content
+> [OK] A structured week, so the hours finally go where the marks are
+> [OK] Exam technique drilled the way examiners actually mark
+>
+> An A or A* opens doors: the top universities, medicine, engineering, law. The students who celebrate those grades in August started working for them in September. Not after mocks. Now.
+>
+> When the September places are gone, they're gone: the next intake is a term away.
+>
+> Tap Learn More to see the programmes, the prices, and whether it fits your child.
+>
+> Dr Waleed Ahmad
+> NHS Doctor
+> Founder, A-Level Accelerators
+
+(In Ads Manager use the real cross and check emoji, not the [X]/[OK] placeholders.)

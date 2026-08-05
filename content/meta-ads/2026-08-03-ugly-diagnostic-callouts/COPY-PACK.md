@@ -155,3 +155,52 @@ rotation stock for when a variant tires.
 4. Do NOT touch the running profiles campaign while it is delivering leads under £8.
 5. After 4 days: keep anything under £15 a lead, cut anything over £30, rotate fresh
    variants in from `final/`.
+
+---
+
+## PRIMARY TEXT 6: the long Edviro-structure version (added 5 August, Waleed's request)
+
+Modelled on the Edviro Academy ads Waleed supplied (callout, pain checklist, filter
+logic, what-you-get list, urgency, credentialed sign-off), rebuilt with honest claims:
+no guarantees, real national A-level statistics, no em dashes. Pairs with any image;
+strongest with 01-general and the face variants.
+
+> Parents of Year 12 and 13: if your child is aiming for As and A*s, read this.
+>
+> I'm Dr Waleed Ahmad. I'm an NHS doctor, and I have worked with over 1,000 A-level students.
+>
+> Right now, if you're finding your child is:
+>
+> [X] Overwhelmed by the sheer amount of A-level content
+> [X] Revising for hours while the marks stand still
+> [X] Running out of time in every paper they sit
+> [X] Rereading and highlighting notes because nobody ever taught them anything better
+> [X] Working hard all week with no actual plan behind it
+>
+> Then I built something for you, and it's completely free.
+>
+> Here's the truth about A-levels: they're designed to spread students out. Nationally, fewer than 1 in 10 entries come out with an A*. The difference between the students who get there and the ones who don't is almost never ability. It's method.
+>
+> But you can't fix a method until you know exactly where it's leaking.
+>
+> That's why I built the Revision Diagnostic. Doctors don't treat before they diagnose, and revision shouldn't work any differently.
+>
+> It takes about 3 minutes. You answer 20 questions about how your child actually revises, and you get an instant report showing:
+>
+> [OK] Which of 7 revision profiles fits your child
+> [OK] How many of their weekly study hours are going into low-yield work
+> [OK] Where the marks are leaking, and the first thing to change
+> [OK] The plan I'd start with, based on their answers
+>
+> Completely free, and the report is on your screen the second you finish.
+>
+> With results day on 13 August and the new school year weeks away, now is the cheapest possible time to find out what's actually going wrong.
+>
+> Tap Learn More and see which profile your child gets.
+>
+> Dr Waleed Ahmad
+> NHS Doctor
+> Founder, A-Level Accelerators
+
+(In Ads Manager use the real cross and check emoji, not the [X]/[OK] placeholders:
+this repo file avoids emoji so the compliance tooling stays quiet.)
