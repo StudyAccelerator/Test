@@ -45,6 +45,11 @@
       "id": "seo",
       "label": "SEO and AEO plan",
       "path": "content/seo/2026-07-17-seo-aeo-assessment-and-roadmap.md"
+    },
+    {
+      "id": "skool",
+      "label": "Skool community plan",
+      "path": "content/skool/01-strategy.md"
     }
   ]
 }
