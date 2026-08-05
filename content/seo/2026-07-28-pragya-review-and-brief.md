@@ -67,3 +67,12 @@ Her reply to the brief was constructive: non-www links from now on (verified: th
 | Heading Structure Optimization | Declined in substance: proposes replacing strong in-voice H1s with generic SEO strings. One trivial point (cohort-date heading level on /study-systems) noted |
 | FAQ Suggestion for Pages | Partly adopt: usable new FAQ topics for /subject-accelerators (time commitment, materials, multi-subject enrolment) and /study-systems (personalisation, vs a normal timetable, time management). Queue for batch 4, written in Waleed's voice, truthful answers only |
 | Competitor Analysis (SEMrush) | Confirms direction, adds little: StudyMind 203K organic visits, PMT 84K, Tutorful 55K vs our ~0 in SEMrush's index. Their "0 traffic, 0 keywords" for us contradicts GSC ground truth (32 clicks, 1,550 impressions, 93 queries to 26 July): third-party indexes lag tiny sites badly. DA 1 and 14 backlinks recorded; the strategic picture stays the one in the verified 17 July teardown |
+
+
+## Round 3: the 3 August weekly report (26 links)
+
+Both instructions from the brief landed this week: every link targets the non-www domain, and the promised dofollow/nofollow column is in the report (14 dofollow, 12 nofollow). Article and web 2.0 syndication (13 links) all push the year-12-summer backlink twin, which is the right page at the right time (our number 2 ranking page, in season). Volume fell from 31 to 26 with the paid-guest-post categories gone, consistent with her note that quality placements mostly cost money.
+
+Still unresolved, chase again: the bizify listing still publishes the home address and postcode in its structured data (verified live 3 August). This is the priority ask in the next message to her, above anything link-related.
+
+Quality gap unchanged: zero real placements yet (education blogs, listicle inclusions, school resource pages); the one audience-relevant domain this week is a UK parenting blog profile. Decision recorded: the high-value outreach lane (the "best A-level tutoring" and "best revision websites" roundups, backlog items 22 and 28) moves in-house via the partnership-outreach skill, drafts for Waleed to send; Pragya gets a concrete target list rather than another abstract steer, and next week's syndication should switch to the results-day twins ahead of 13 August.
