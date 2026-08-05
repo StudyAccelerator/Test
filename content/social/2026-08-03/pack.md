@@ -33,9 +33,9 @@ Three arcs share the fortnight, each with its own job:
 | Day | LinkedIn 4:30pm (students) | Facebook page 9:30am (parents) | Groups (evening, 15 min unless stated) |
 | --- | --- | --- | --- |
 | Mon 3 | Restart: then/now confession | Who am I + "revising all day" ask | Join all 9 groups, profile setup, first comments |
-| Tue 4 | Results day: three plans, not one | "A week on Thursday": night-before ask | AMA outreach to both admin teams |
-| Wed 5 | Five systems carousel | The parent check-up (mirrors the live ad) | Comments |
-| Thu 6 | The diagnostic, with receipts | Why a doctor teaches + hospital photo | A-Level Tuition: unpopular opinion post |
+| Tue 4 | (skipped; three-plans moved to Thu 6) | "A week on Thursday": night-before ask | AMA outreach to both admin teams |
+| Wed 5 | F1 to F2: the level-jump post (Waleed's dinner photo) | The parent check-up (mirrors the live ad) | Comments |
+| Thu 6 | Three plans, not one (moved from Tue 4, opener reworded) | Why a doctor teaches + hospital photo | A-Level Tuition: unpopular opinion post |
 | Fri 7 | Cohort last call (starts tomorrow) | Cohort last call, parent version | Comments |
 | Sat 8 | The Grinder (cohort starts, no sell) | THE parent results-day guide (5 days early, the proven window) | Home Ed Looking For Tutors: intro post (Sept + diagnostic) |
 | Sun 9 | Clearing, demystified | Three questions script (saveable) | Comments |
@@ -109,7 +109,7 @@ What does your revision actually look like: reading, or retrieving?
 
 *First comment: none. Restart posts ask for nothing.*
 
-### Tue 4 | photo: li-sun19-arms.jpg
+### Tue 4 | photo: li-sun19-arms.jpg | NOT POSTED (Waleed, 5 Aug): moved to Thu 6 with the opener reworded there; don't post this version
 
 Results day is a week on Thursday. You need three plans, not one.
 
@@ -129,7 +129,31 @@ Which of the three are you quietly expecting? Tell me below and I'll tell you wh
 
 *First comment: I wrote the full what-if guide here: https://alevelaccelerators.com/blog/didnt-get-the-grades-a-level-results/ and the appeals rules for 2026 here: https://alevelaccelerators.com/blog/a-level-appeals-2026/*
 
-### Wed 5 | document post: five-systems-carousel.pdf (de-branded, in content/graphics/week-2026-07-20/)
+### Wed 5 | photo: Waleed's F1 leaving-dinner photo (his phone, not in the repo) | written 5 Aug on his request
+
+That dinner was the other F1s and me marking the end of our first year as doctors.
+
+And this morning I started my second. New rotation, new team, more responsibility. Nobody eases you in. You finish one year and the next one expects more of you by Wednesday morning.
+
+Every student moving up a year in September is about to feel a version of this. Year 11 into 12. Year 12 into 13.
+
+So here's what the jump taught me, because I think it transfers:
+
+1. The step up is automatic. The readiness isn't. Nobody checks you're prepared for the next level. One morning you're just in it.
+
+2. What carried you last year won't automatically carry you this year. That's true on the wards and it's true in sixth form. The content jumps, the pace jumps, and for new Year 13s, predicted grades get written within weeks of term starting.
+
+3. Mark the finish. We went for dinner. It felt earned. Whatever your last year looked like, close it properly before you plan the next one.
+
+The students who find September hardest usually aren't the ones who struggled last year. They're the ones who assumed next year was more of the same.
+
+Which year are you moving into this September? And what's the one thing you're doing differently?
+
+*No hashtags, no first comment.*
+
+### BANKED (5 Aug reshuffle): the five-systems carousel post and the diagnostic-with-receipts post below are both evergreen and move to the next pack; results content owns the rest of this week.
+
+### Wed 5 ORIGINAL (now banked) | document post: five-systems-carousel.pdf (de-branded, in content/graphics/week-2026-07-20/)
 
 Your grade isn't one skill. It's five systems.
 
@@ -153,7 +177,13 @@ Which of the five would you honestly score lowest on?
 
 *First comment: If you'd rather not guess your weakest system, the free diagnostic on my profile scores all five in about 4 minutes: https://alevelaccelerators.com/revision-diagnostic*
 
-### Thu 6 | images: diagnostic-screen-1.png + diagnostic-screen-2.png (real screenshots)
+### Thu 6 | photo: li-sun19-arms.jpg | the three-plans post, moved from Tue 4 with the opener reworded for Thursday
+
+Results day is a week today. You need three plans, not one.
+
+*(Rest of the post exactly as written under Tue 4, from "Most students walk in with a single picture..." onward, plus the same first comment with the two guide links.)*
+
+### Thu 6 ORIGINAL (now banked) | images: diagnostic-screen-1.png + diagnostic-screen-2.png (real screenshots)
 
 I built a free tool that finds where your revision leaks hours. It takes about 4 minutes.
 
