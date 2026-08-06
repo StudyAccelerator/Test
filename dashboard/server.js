@@ -77,7 +77,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox', 'linkedin-outreach']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -663,6 +663,8 @@ async function handleApi(req, res, url) {
     const newLeads = leadStore && leadStore.leads ? leadStore.leads.filter((l) => l.status === 'new').length : 0
     const inboxStore = readStore('linkedin-inbox', null)
     const inboxDrafts = inboxStore && inboxStore.conversations ? inboxStore.conversations.filter((c) => c.status === 'pending').length : 0
+    const outreachStore = readStore('linkedin-outreach', null)
+    const outreachDrafts = outreachStore && outreachStore.prospects ? outreachStore.prospects.filter((p) => p.status === 'pending').length : 0
     return sendJson(res, 200, {
       updatedAt: new Date().toISOString(),
       openTasks: open.length,
@@ -674,6 +676,7 @@ async function handleApi(req, res, url) {
       daysToResultsDay: resultsDay,
       newLeads,
       inboxDrafts,
+      outreachDrafts,
     })
   }
 

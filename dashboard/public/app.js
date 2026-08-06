@@ -1265,6 +1265,147 @@ function renderLiInbox() {
   )
 }
 
+/* --------------------------------------------------- linkedin outreach */
+
+/* The prospecting side of the LinkedIn channel: students found and vetted
+   against the ICP by the linkedin-outreach-agent sweep, each with a
+   personalised connection note or next message drafted. Phase A is
+   draft-only: Waleed sends every request and message himself, so the
+   buttons here mirror the inbox panel (copy, mark sent, skip). Once a
+   student replies, the conversation belongs to the LinkedIn inbox panel
+   and shows here only as a handoff row. */
+const LO_STEP_LABELS = {
+  vetted: 'vetted, not yet invited',
+  invite_sent: 'invite sent',
+  accepted: 'accepted, opener due',
+  opener_sent: 'opener sent',
+  followup_sent: 'follow-up sent',
+  replied: 'replied, moved to inbox',
+  closed: 'closed',
+}
+
+function renderLiOutreach() {
+  const body = $('#li-outreach-body')
+  const chip = $('#li-outreach-chip')
+  const store = state.liOutreach
+
+  if (!store) {
+    chip.textContent = 'no sweep yet'
+    chip.className = 'chip chip-manual'
+    body.innerHTML =
+      '<p class="empty-state">No sweep has run yet. The outreach agent finds A-level students who fit the ICP, reads each profile before anything is drafted, and queues a personalised connection note here for you to send. Nothing connects or messages by itself.</p>'
+    return
+  }
+
+  if (store.lastSweepStatus === 'failed') {
+    chip.textContent = 'sweep failed'
+    chip.className = 'chip chip-error'
+  } else {
+    chip.textContent = `swept ${sweepAgo(store.lastSweep)}`
+    chip.className = 'chip chip-live'
+  }
+
+  const prospects = store.prospects || []
+  const pending = prospects.filter((p) => p.status === 'pending')
+  const connects = pending.filter((p) => p.queue === 'connect')
+  const openers = pending.filter((p) => p.queue === 'opener')
+  const followups = pending.filter((p) => p.queue === 'followup')
+  const waiting = prospects.filter((p) => p.queue === 'wait')
+  const handoffs = prospects.filter((p) => p.queue === 'handoff')
+  const closed = prospects.filter((p) => p.queue === 'closed')
+  const worked = prospects.filter((p) => p.status === 'sent' || p.status === 'skipped')
+
+  const card = (p) => `
+    <div class="lead-card" data-id="${esc(p.id)}"${p.status !== 'pending' ? ' data-worked' : ''}>
+      <div class="lead-top">
+        <span class="lead-sub">${esc(p.name)}${
+    p.funnelStep ? ` <em class="lead-market">${esc(LO_STEP_LABELS[p.funnelStep] || p.funnelStep)}</em>` : ''
+  }</span>
+        <span class="lead-age">${esc(p.sweptAt ? sweepAgo(p.sweptAt) : '')}</span>
+      </div>
+      ${p.profile ? `<div class="lead-meta">${esc(p.profile)}</div>` : ''}
+      ${p.why ? `<div class="lead-why">${esc(p.why)}${p.next ? ` Next: ${esc(p.next)}` : ''}</div>` : ''}
+      <div class="lead-draft" id="lo-draft-${esc(p.id)}">${esc(p.draft || '')}</div>
+      <div class="lead-actions">
+        <a class="gold-btn" href="${esc(p.url)}" target="_blank" rel="noreferrer">Open profile</a>
+        <button class="ghost-btn lo-copy" type="button">Copy draft</button>
+        <button class="ghost-btn lo-sent" type="button">Mark sent</button>
+        <button class="ghost-btn lo-skip" type="button">Skip</button>
+      </div>
+    </div>`
+
+  const row = (p) => `
+    <div class="list-row">
+      <span class="row-name">${esc(p.name)}${
+    p.funnelStep ? ` <em class="lead-market">${esc(LO_STEP_LABELS[p.funnelStep] || p.funnelStep)}</em>` : ''
+  }</span>
+      <span class="row-meta">${esc(p.why || '')}</span>
+    </div>`
+
+  const skipped = store.skipped || {}
+  const skipBits = Object.entries(skipped)
+    .filter(([, n]) => n > 0)
+    .map(([k, n]) => `${nf.format(n)} ${k}`)
+    .join(', ')
+
+  body.innerHTML = `
+    ${connects.length ? `<div class="subhead">Connection requests ready to send</div>${connects.map(card).join('')}` : ''}
+    ${openers.length ? `<div class="subhead">They accepted, opener ready</div>${openers.map(card).join('')}` : ''}
+    ${followups.length ? `<div class="subhead">Follow-up due</div>${followups.map(card).join('')}` : ''}
+    ${
+      !connects.length && !openers.length && !followups.length
+        ? `<p class="empty-state">${
+            store.lastSweepStatus === 'failed'
+              ? `The last sweep could not run. ${esc(store.lastSweepNote || '')}`
+              : `Nothing queued right now. ${esc(store.lastSweepNote || '')}`
+          }</p>`
+        : ''
+    }
+    ${worked.length ? `<div class="subhead">Worked</div>${worked.map(card).join('')}` : ''}
+    ${waiting.length ? `<div class="subhead">Waiting, leave alone</div>${waiting.map(row).join('')}` : ''}
+    ${handoffs.length ? `<div class="subhead">Replied, now in the LinkedIn inbox panel</div>${handoffs.map(row).join('')}` : ''}
+    ${closed.length ? `<div class="subhead">Closed</div>${closed.map(row).join('')}` : ''}
+    <p class="small muted lead-foot">Drafts only. You send every request and message yourself.${
+      skipBits ? ` Last sweep also passed on ${skipBits}.` : ''
+    }</p>`
+
+  const setStatus = async (id, status) => {
+    const p = state.liOutreach.prospects.find((x) => x.id === id)
+    if (!p) return
+    p.status = status
+    p.workedAt = new Date().toISOString()
+    await putStore('linkedin-outreach', state.liOutreach)
+    renderLiOutreach()
+    renderTriage()
+  }
+
+  body.querySelectorAll('.lo-copy').forEach((btn) => {
+    btn.addEventListener('click', async () => {
+      const id = btn.closest('.lead-card').dataset.id
+      const p = state.liOutreach.prospects.find((x) => x.id === id)
+      try {
+        await navigator.clipboard.writeText(p.draft || '')
+        btn.textContent = 'Copied'
+        setTimeout(() => (btn.textContent = 'Copy draft'), 1400)
+      } catch {
+        const range = document.createRange()
+        range.selectNodeContents($('#lo-draft-' + id))
+        const sel = window.getSelection()
+        sel.removeAllRanges()
+        sel.addRange(range)
+        btn.textContent = 'Selected, press Cmd C'
+        setTimeout(() => (btn.textContent = 'Copy draft'), 2200)
+      }
+    })
+  })
+  body.querySelectorAll('.lo-sent').forEach((btn) =>
+    btn.addEventListener('click', () => setStatus(btn.closest('.lead-card').dataset.id, 'sent'))
+  )
+  body.querySelectorAll('.lo-skip').forEach((btn) =>
+    btn.addEventListener('click', () => setStatus(btn.closest('.lead-card').dataset.id, 'skipped'))
+  )
+}
+
 function skipLabel(key) {
   const map = {
     gcse: 'GCSE (from before the 17 Jul widening)',
@@ -1625,6 +1766,31 @@ function renderTriage() {
     })
   }
 
+  /* Outreach queue: vetted prospects with a note or opener drafted. Lower
+     urgency than a live reply, but an accepted invite goes stale in days */
+  if (state.liOutreach && state.liOutreach.prospects) {
+    const pend = state.liOutreach.prospects.filter((p) => p.status === 'pending')
+    if (pend.length) {
+      const openers = pend.filter((p) => p.queue === 'opener').length
+      items.push({
+        sev: openers ? 'high' : 'med',
+        title: `${pend.length} LinkedIn outreach draft${pend.length > 1 ? 's' : ''} ready to send`,
+        why: `${
+          openers
+            ? `${openers} student${openers > 1 ? 's' : ''} accepted your invite and the opener is drafted; accepted invites go cold fast`
+            : 'Vetted ICP prospects with personalised connection notes queued'
+        }. Copy each from the LinkedIn outreach panel and send it yourself.`,
+      })
+    }
+  }
+  if (state.liOutreach && state.liOutreach.lastSweepStatus === 'failed') {
+    items.push({
+      sev: 'med',
+      title: 'The LinkedIn outreach sweep could not run',
+      why: `${state.liOutreach.lastSweepNote || 'Unknown reason.'} Usually this means Chrome was closed or LinkedIn was logged out.`,
+    })
+  }
+
   if (state.site && !state.site.up) {
     items.push({
       sev: 'high',
@@ -1806,6 +1972,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/store/leads'),
     getJSON('/api/docs'),
     getJSON('/api/store/linkedin-inbox'),
+    getJSON('/api/store/linkedin-outreach'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -1830,6 +1997,8 @@ async function loadAll(fresh = false) {
   state.docs = val(16, [])
   const liInboxStore = val(17, null)
   state.liInbox = liInboxStore && liInboxStore.lastSweep ? liInboxStore : null
+  const liOutreachStore = val(18, null)
+  state.liOutreach = liOutreachStore && liOutreachStore.lastSweep ? liOutreachStore : null
   /* fresh reload: drop cached document bodies so edits show up */
   if (fresh) docCache.clear()
 }
@@ -1851,6 +2020,7 @@ function renderAll() {
   renderConnections()
   renderLeads()
   renderLiInbox()
+  renderLiOutreach()
   renderDocs()
   renderTriage()
 }

@@ -99,3 +99,15 @@ Most students will open Waleed's profile before replying. Two upgrades that make
 ## Measurement (weekly tally, no guesses)
 
 Track: requests sent, accepts, M1 replies, links sent, completions (GA4 sessions and generate_lead conversions on utm_source=linkedin, plus MailerLite joins that day), profile-reply conversations, calls booked. If accepts are high but M1 replies are low, the opener is the problem. If links are sent but completions are low, the bridge oversold or the person was the wrong fit. If completions are high and calls are zero, that is fine: the email sequence is doing the rest of the job.
+
+## Addendum, 6 August 2026: the outreach agent
+
+On Waleed's instruction the prospecting side of this playbook now has a standing owner:
+the `linkedin-outreach-agent` skill (`.claude/skills/linkedin-outreach-agent/SKILL.md`).
+It finds and vets ICP students, drafts the personalised connection note and follow-ups
+per the skeletons above, and queues everything in the HQ "LinkedIn outreach" panel. The
+reply side stays with the `linkedin-inbox-agent`. Phase A is draft-only (Waleed still
+sends everything himself); the skill file records his 6 August request for automated
+sending, the risk note that goes with it, and exactly what has to happen before that
+phase switches on. The message skeletons in this playbook remain the base until his own
+example messages arrive and are written into the skill.
