@@ -46,6 +46,7 @@ export default function Footer() {
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Company</h3>
               <ul className="space-y-2 text-sm">
                 <li><a href="/pricing/" className="text-brand-gold hover:text-white transition">Pricing</a></li>
+                <li><a href="/tutors/" className="text-brand-gold hover:text-white transition">Meet the Tutors</a></li>
                 <li><a href="/contact/" className="text-brand-gold hover:text-white transition">Contact</a></li>
                 <li><a href="/faqs/" className="text-brand-gold hover:text-white transition">FAQs</a></li>
                 <li><a href="mailto:Waleed@alevelaccelerators.com" className="text-brand-gold hover:text-white transition">Email</a></li>
