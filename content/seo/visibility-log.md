@@ -6,6 +6,25 @@ Format per entry: GSC totals, top movers, SERP spot checks, AEO probes, indexati
 
 ---
 
+## 2026-08-08 (on-demand audit, requested by Waleed)
+
+**Google Search Console** (all time, 7 July to 7 August; ground truth):
+
+- Totals: **63 clicks, 3,150 impressions, average position 12.3**, across **140 queries** and 49 URLs. Against 26 July (32 clicks, 1,550, position 14.4, 93 queries): clicks and impressions both roughly doubled in twelve days, average position improved by 2.
+- **Four pages on page 1 now**: homepage 2.9 (22 clicks), year-12-summer 5.7 (20 clicks, 941 impressions), predicted-grades 7.7 (9 clicks), and new entrant missed-university-offer at 7.7 (5 clicks, 222 impressions) as results season begins.
+- Resits post: 540 impressions, position improved 20.9 to 18.5 (the hub upgrade went live only 2 August). "a level revision planner": 215 impressions at 23.4, improving from 32.5 since the tracker retitle. one-on-one tutoring cluster: 111 impressions at 20.3.
+- Indexation: 34 indexed (was 29). The not-indexed list is now dominated by "page with redirect" (17), which is the trailing-slash fix working: Google is recataloguing the old duplicate URLs as redirects. One robots-blocked URL is a query-string page, by design.
+- New pages (contact, pricing, legal, subject tutoring) too recent to register; watch next week.
+
+**GA4** (last 7 days, property 538386511): 194 active users this month. Channels: Paid Social 80 sessions (Meta ads), Direct 64, Organic Search 35 (google/organic users +25% week on week), Referral 18, Organic Social 19, and **"AI Assistant" 2 sessions, the first AI-referred visitors this property has ever recorded**. 12 generate_lead events in the week. One of Pragya's placements (video-bookmark.com) actually referred 4 sessions.
+
+**Bing Webmaster** (first data since the 28 July verification): 2 clicks, 43 impressions since 29 July. Small, real, measurable at last.
+
+**Bing AI Performance (Copilot citations), the headline:** **107 citations since 29 July**, up to 4 cited pages a day, trend rising (27 citations on 6 August alone). Named grounding queries: "best ways to revise for A Level" with **63.64% citation share** (7 citations) and "A Level exam tips" with 25% share (11 citations). The 17 July baseline was "AI engines never cite the site"; that is no longer true, and it is measured, not guessed.
+
+**Honest caveats:** the Copilot report itself says it samples activity; GSC all-time windows mix pre-fix and post-fix periods; the last day or two of every GSC window is incomplete; new-page verdicts need another two weeks.
+
+
 ## 2026-07-28 (weekly run 3)
 
 **Google Search Console: pulled successfully** (property sc-domain:alevelaccelerators.com, data window 7 to 26 July 2026, the property's full history). Chrome was connected this week, so this entry has ground truth. The 24 July gap is not recoverable and stays a gap.
