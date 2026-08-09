@@ -17,17 +17,17 @@ Quick scene from medical school before we start. The students who cruised finals
 
 So, Session five: the backwards method, for any topic you haven't learned yet. If you want the last stretch of summer to put you ahead for September, this is built for you.
 
-Here's how most students meet a new topic. Read it, make notes on it, feel ready, and then, right at the end, gently attempt some questions. It feels sensible. It's back to front, and it's why "getting ahead" so often produces notes that evaporate by October.
+Here's how most students meet a new topic. Read it, make notes on it, feel ready, and then, right at the end, gently attempt some questions. It feels sensible. It's back to front, and it's why "getting ahead" so often produces notes you've completely forgotten by October.
 
 The backwards method, three steps:
 
-1. **Questions first, cold.** Before you've learned a thing, pull up five exam questions on the topic and attempt them. You'll score almost nothing. That's the point. Your brain now knows what this topic is for: what gets asked, what shape the answers take, which words keep appearing. You've programmed the filter.
+1. **Questions first, cold.** Before you've learned a thing, pull up five exam questions on the topic and attempt them. You'll score almost nothing. That's the point. Your brain now knows what this topic is for: what gets asked, what the answers look like, which words keep coming up.
 
-2. **Now learn it.** Same textbook, same lesson notes, but you're reading with live questions in your head, so the sentences the exam cares about light up on the page. It stops being reading and starts being hunting.
+2. **Now learn it.** Same textbook, same lesson notes, but now you've got real questions in your head, so the bits the exam actually asks about jump out at you. You're not just reading any more. You're looking for answers.
 
-3. **Return to the same five questions, book closed.** Score yourself honestly. Then book the topic two short returns, a couple of days later and again at the end of the week. The gaps between visits are what turn it into memory that survives until the exam.
+3. **Return to the same five questions, book closed.** Score yourself honestly. Then come back to the topic twice, briefly: once a couple of days later, and once at the end of the week. Those gaps are what turn it into memory that lasts until the exam.
 
-Why it works is simple: attention is a filter, and a cold attempt sets the filter before the learning starts. You're doing recall from minute one instead of saving it for "later". And you meet the examiner's way of asking on day one, not in the exam hall.
+Why it works is simple. Once you've seen the questions, you know what you're looking for while you learn. You're practising remembering from minute one instead of saving it for "later". And you meet the examiner's way of asking on day one, not in the exam hall.
 
 Tonight, thirty minutes: find the first topic your class meets in September (the contents page of your textbook will tell you). Get five questions on it. Maths and physics: the exercise sections. Sciences: past paper questions by topic, free on the exam board sites. Attempt them cold, fail cheerfully, and write down what they kept asking for. That failure is a genuine head start.
 
@@ -35,13 +35,13 @@ Tonight, thirty minutes: find the first topic your class meets in September (the
 
 A question that lands in my inbox every summer: "My summer plan fell apart after four days. How do I restart without hating myself?"
 
-Plans don't usually fail from laziness. They fail from size. So the restart is the opposite of the plan that collapsed: shrink to one 90 minute block, anchor it to a fixed trigger (straight after breakfast, phone in another room), and earn a three day streak before you're allowed to add anything. One more rule: yesterday's missed hours don't roll over. They're gone, and that's fine. Revenge-revision days are how plans die twice. Start from today, small, and let the streak do the talking.
+Plans don't usually fail from laziness. They fail from size. So the restart is the opposite of the plan that collapsed: shrink it to one 90 minute block, tie it to the same moment every day (straight after breakfast, phone in another room), and earn a three day streak before you're allowed to add anything. One more rule: yesterday's missed hours don't roll over. They're gone, and that's fine. Trying to make up for them with one giant day is how plans collapse twice. Start small from today and let the streak build.
 
 Reply with yours. One line is fine, and I read every one.
 
 **High-yield / low-yield**
 
-High-yield: one timed exam section per subject this week, marked meanly, mistakes written down.
+High-yield: one timed exam section per subject this week, marked harshly, mistakes written down.
 
 Low-yield: building a new, prettier timetable every Monday. You have a timetable. Run it.
 
