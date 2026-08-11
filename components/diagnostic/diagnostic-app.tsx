@@ -406,6 +406,7 @@ function Landing({
   resumeCount: number
   taker: Taker | null
 }) {
+  const isParent = taker === 'parent'
   const archetypeNames = [
     'The Grinder',
     'The Perfectionist',
@@ -438,12 +439,30 @@ function Landing({
             </h1>
             <HeroFade delay={0.45}>
               <p className="mt-6 text-lg md:text-xl text-brand-text/80 leading-relaxed max-w-xl">
-                Even though you&apos;re putting the work in, or watching your teenager put it in night after
-                night? Effort was never the problem. Where it goes is.
+                {isParent ? (
+                  <>
+                    Even though you&apos;re watching them put the work in night after night? Effort was never
+                    the problem. Where it goes is.
+                  </>
+                ) : (
+                  <>
+                    Even though you&apos;re putting the work in, or watching your teenager put it in night after
+                    night? Effort was never the problem. Where it goes is.
+                  </>
+                )}
               </p>
               <p className="mt-4 text-base md:text-lg text-brand-text/65 leading-relaxed max-w-xl">
-                20 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
-                then hands you the revision profile behind it and a plan for what to fix first.
+                {isParent ? (
+                  <>
+                    20 honest questions about how your child actually revises. The diagnostic finds where their
+                    marks are leaking, names the revision profile behind it, and tells you what to fix first.
+                  </>
+                ) : (
+                  <>
+                    20 honest questions about how you actually revise. The diagnostic finds where your marks
+                    are leaking, names the revision profile behind it, and tells you what to fix first.
+                  </>
+                )}
               </p>
             </HeroFade>
             <HeroFade delay={0.55}>
@@ -461,9 +480,11 @@ function Landing({
                   <span aria-hidden="true" className="ml-2">→</span>
                 </button>
               </div>
-              <p className="mt-4 text-sm text-brand-text/55">
-                No right answers. Just honest ones. Students and parents each get their own version: you
-                choose at the start.
+              <p className="mt-4 text-sm font-semibold text-brand-purple/75 tracking-wide">
+                Free · 20 questions · about 4 minutes · instant report
+              </p>
+              <p className="mt-1.5 text-sm text-brand-text/55">
+                No right answers, just honest ones. Students and parents each get their own version.
               </p>
             </HeroFade>
           </div>
@@ -519,9 +540,19 @@ function Landing({
               ))}
             </div>
             <p className="mt-6 text-center text-[15px] md:text-base text-brand-text/75 leading-relaxed max-w-2xl mx-auto">
-              Don&apos;t be in the 90.6% who miss the A*. That gap, between the grade you have and the grade
-              your offer needs, closes with a system, not more hours. The diagnostic measures yours in 4
-              minutes and gives you the plan to close it.
+              {isParent ? (
+                <>
+                  Don&apos;t let them sit in the 90.6% who miss the A*. That gap, between the grade they have
+                  and the grade their offer needs, closes with a system, not more hours. The diagnostic
+                  measures your child&apos;s in 4 minutes and hands you both the plan to close it.
+                </>
+              ) : (
+                <>
+                  Don&apos;t be in the 90.6% who miss the A*. That gap, between the grade you have and the
+                  grade your offer needs, closes with a system, not more hours. The diagnostic measures yours
+                  in 4 minutes and gives you the plan to close it.
+                </>
+              )}
             </p>
           </div>
         </section>
@@ -541,7 +572,7 @@ function Landing({
               {
                 n: '01',
                 title: 'Your revision profile',
-                body: 'One of seven evidence-based profiles, from The Grinder to The Optimiser. Which one you are, why it happens, and what it costs you.',
+                body: "One of seven revision profiles, from The Grinder to The Optimiser: which one you are, why it happens, and what it's costing you.",
                 art: (
                   <div className="flex items-center justify-center h-full" aria-hidden="true">
                     <div className="rounded-xl bg-[#241d47] px-5 py-4 shadow-lg -rotate-2">
@@ -578,7 +609,7 @@ function Landing({
               {
                 n: '03',
                 title: 'Your route, with reasons',
-                body: 'A 7 day plan for the leak itself, and the programme that fits your diagnosis, whether that is the summer course, a subject programme, or the system.',
+                body: "A 7 day plan for the leak itself, and the programme that fits your diagnosis, whether that's the summer course, a subject programme, or the study system.",
                 art: (
                   <div className="flex items-center justify-center h-full" aria-hidden="true">
                     <div className="rounded-xl bg-white px-5 py-4 shadow-lg ring-1 ring-brand-purple/10 rotate-2">
@@ -642,7 +673,7 @@ function Landing({
             <div className="grid sm:grid-cols-3 gap-6">
               {[
                 ['01', 'Answer honestly', '20 questions about how the revision actually happens. About 4 minutes. No trick questions.'],
-                ['02', 'We score the system', 'Your answers score five systems and locate your single biggest leak.'],
+                ['02', 'It scores the system', 'Your answers score the five systems behind every top grade and find the single biggest leak.'],
                 ['03', 'Get the report', 'Profile, scores, wasted-hours estimate, 7 day plan, and your recommended route.'],
               ].map(([n, t, b]) => (
                 <div key={n} className="relative pl-5 border-l-2 border-brand-gold/40">
@@ -687,8 +718,7 @@ function Landing({
               You can&apos;t fix a leak <span className="italic text-brand-gold">you can&apos;t see.</span>
             </h2>
             <p className="mt-6 text-lg text-brand-cream/80 leading-relaxed max-w-xl mx-auto">
-              Four minutes of honesty now saves a whole summer of revision that feels productive and moves
-              nothing.
+              Four minutes of honesty now saves months of revision that feels productive and moves nothing.
             </p>
             <button
               type="button"
@@ -707,7 +737,55 @@ function Landing({
           </ScrollFade>
         </div>
       </section>
+
+      <StickyStartBar onStart={onStart} resumeCount={resumeCount} taker={taker} />
     </main>
+  )
+}
+
+/* Mobile-only sticky start bar: slides in once the hero CTA has scrolled away,
+   so the primary action stays one thumb-tap away for ad traffic. */
+function StickyStartBar({
+  onStart,
+  resumeCount,
+  taker,
+}: {
+  onStart: () => void
+  resumeCount: number
+  taker: Taker | null
+}) {
+  const [show, setShow] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 520)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    return () => window.removeEventListener('scroll', onScroll)
+  }, [])
+
+  return (
+    <div
+      className={`fixed bottom-0 inset-x-0 z-40 md:hidden transition-transform duration-300 ${
+        show ? 'translate-y-0' : 'translate-y-full'
+      }`}
+    >
+      <div className="bg-brand-cream/95 backdrop-blur border-t border-brand-purple/10 px-4 pt-3 pb-[calc(0.8rem+env(safe-area-inset-bottom))] shadow-[0_-10px_28px_rgba(46,37,87,.14)]">
+        <button
+          type="button"
+          onClick={onStart}
+          className="w-full inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-6 py-3.5 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] active:translate-y-0.5 transition-all"
+        >
+          {resumeCount > 0
+            ? `Resume my diagnostic (${resumeCount} of ${QUESTIONS.length} done)`
+            : taker === 'parent'
+              ? "Start the parents' diagnostic"
+              : 'Start the free diagnostic'}
+          <span aria-hidden="true" className="ml-2">→</span>
+        </button>
+        <p className="mt-1.5 text-center text-[11px] text-brand-text/55">
+          Free · 20 questions · about 4 minutes · instant report
+        </p>
+      </div>
+    </div>
   )
 }
 
@@ -718,7 +796,7 @@ function Landing({
 const ANALYSIS_STEPS = [
   `Reading your ${QUESTIONS.length} answers`,
   'Scoring your five systems',
-  'Locating the primary leak',
+  'Finding the biggest leak',
   'Writing your prescription',
 ]
 
@@ -829,7 +907,7 @@ function EmailGate({
       return
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      setError('That email does not look right. Check for typos.')
+      setError("That email doesn't look right. Check for typos.")
       return
     }
     /* Phone stays optional and never blocks the report: one gentle nudge on a
@@ -935,8 +1013,8 @@ function EmailGate({
           </h2>
           <p className="mt-3 text-brand-cream/70 leading-relaxed">
             {isParent
-              ? `${QUESTIONS.length} answers scored. One place to send it. Their profile, their five scores and the plan to fix it open the moment you do.`
-              : `${QUESTIONS.length} answers scored. One place to send it. Your profile, your five scores and your 7 day plan open the moment you do.`}
+              ? `All ${QUESTIONS.length} answers scored. Pop your details in and it opens right here: their profile, their five scores, and the plan to fix it.`
+              : `All ${QUESTIONS.length} answers scored. Pop your details in and it opens right here: your profile, your five scores, and your 7 day plan.`}
           </p>
 
           <form onSubmit={handleSubmit} className="mt-8 space-y-4">
@@ -1017,7 +1095,7 @@ function EmailGate({
                 maxLength={250}
                 placeholder={
                   isParent
-                    ? 'Anything my questions missed: exam boards, school situation, what you have already tried.'
+                    ? "Anything my questions missed: exam boards, school situation, what you've already tried."
                     : 'Anything my questions missed: exam boards, retakes, school situation, anything.'
                 }
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition resize-none"
@@ -1039,8 +1117,8 @@ function EmailGate({
             </button>
             <p className="text-xs text-brand-cream/50 leading-relaxed">
               {isParent
-                ? "Free, and stays free. You will also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."
-                : "Free, and stays free. You will also get Dr Waleed's revision emails: the fixes from your report, one at a time, then one a week. Unsubscribe any time."}
+                ? "Free, and stays free. You'll also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."
+                : "Free, and stays free. You'll also get Dr Waleed's revision emails: the fixes from your report, one at a time, then one a week. Unsubscribe any time."}
             </p>
           </form>
         </motion.div>

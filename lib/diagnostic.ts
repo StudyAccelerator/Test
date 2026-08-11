@@ -154,8 +154,8 @@ export const QUESTIONS: Question[] = [
     section: 0,
     title: 'Which one worries you most?',
     titleParent: 'Which subject worries you most for them?',
-    help: 'Be honest. The one you would least like an exam in tomorrow morning.',
-    helpParent: 'The one you would least like them to sit an exam in tomorrow morning.',
+    help: "Be honest. The one you'd least want to sit an exam in tomorrow morning.",
+    helpParent: "The one you'd least want them to sit an exam in tomorrow morning.",
     type: 'worry',
     layout: 'chips',
     options: [], // built at runtime from the subjects answer, plus "Not sure"
@@ -183,8 +183,8 @@ export const QUESTIONS: Question[] = [
     section: 0,
     title: 'And what grade do you actually want on results day?',
     titleParent: 'And what grade do they need on results day?',
-    help: 'The honest one. The grade your offer needs, or the one you would be proud of.',
-    helpParent: 'The grade their offer needs, or the one they are aiming for.',
+    help: "The honest one. The grade your offer needs, or the one you'd be proud of.",
+    helpParent: "The grade their offer needs, or the one they're aiming for.",
     type: 'single',
     layout: 'chips',
     options: [
@@ -205,7 +205,7 @@ export const QUESTIONS: Question[] = [
     layout: 'cards',
     /* Context, not scored: support tells us where they are, not how they revise */
     options: [
-      { id: 'none', label: 'No, it is all me', labelParent: 'No, nothing at the moment' },
+      { id: 'none', label: "No, it's all me", labelParent: 'No, nothing at the moment' },
       { id: 'tutor', label: 'Yes, a private tutor', labelParent: 'Yes, a private tutor' },
       { id: 'online', label: 'An online course or programme', labelParent: 'An online course or programme' },
       { id: 'past', label: 'I had a tutor, but stopped', labelParent: 'They had a tutor, but it stopped' },
@@ -259,7 +259,7 @@ export const QUESTIONS: Question[] = [
       { id: 'away', label: 'Another room, or switched off', scores: { consistency: 1 } },
       { id: 'desk', label: 'On the desk, face down', scores: { consistency: 0.55 } },
       { id: 'hand', label: 'In my hand every few minutes', labelParent: 'In their hand every few minutes', scores: { consistency: 0.1 } },
-      { id: 'using', label: 'I revise on it, so it is always there', labelParent: 'They revise on it, so it is always there', scores: { consistency: 0.35 } },
+      { id: 'using', label: "I revise on it, so it's always there", labelParent: "They revise on it, so it's always there", scores: { consistency: 0.35 } },
     ],
   },
 
@@ -267,10 +267,10 @@ export const QUESTIONS: Question[] = [
   {
     id: 'defaultActivity',
     section: 2,
-    title: 'It is 7pm and you sit down to revise. What do you actually do?',
-    titleParent: 'It is 7pm and they sit down to revise. What are they actually doing?',
+    title: "It's 7pm and you sit down to revise. What do you actually do?",
+    titleParent: "It's 7pm and they sit down to revise. What are they actually doing?",
     help: 'Your default, not your best day.',
-    helpParent: 'Their default, from what you see. If in doubt, glance at tonight.',
+    helpParent: 'Their default, from what you see, not their best day.',
     type: 'single',
     layout: 'cards',
     weights: { method: 3, retention: 1.5 },
@@ -286,9 +286,9 @@ export const QUESTIONS: Question[] = [
   {
     id: 'check',
     section: 2,
-    title: 'How do you know when you have learned something?',
-    titleParent: 'How do they decide something is learned?',
-    helpParent: 'Worth asking them directly. The answer is usually revealing.',
+    title: "How do you know when you've learned something?",
+    titleParent: "How do they decide they've learned something?",
+    helpParent: 'Worth asking them directly. The answer usually says a lot.',
     type: 'single',
     layout: 'cards',
     weights: { method: 3, retention: 1 },
@@ -327,7 +327,7 @@ export const QUESTIONS: Question[] = [
       { id: 'log', label: 'It goes in an error log and I retest it later', labelParent: 'It goes in an error log and gets retested later', scores: { method: 1, examCraft: 0.8 } },
       { id: 'scheme', label: 'I read the mark scheme answer and move on', labelParent: 'They read the mark scheme answer and move on', scores: { method: 0.5, examCraft: 0.5 } },
       { id: 'move', label: 'I feel bad about it and move on', labelParent: 'They feel bad about it and move on', scores: { method: 0.15, examCraft: 0.2 } },
-      { id: 'unmarked', label: 'I do not really mark my own work', labelParent: 'They do not really mark their own work', scores: { method: 0.05, examCraft: 0.05 } },
+      { id: 'unmarked', label: "I don't really mark my own work", labelParent: "They don't really mark their own work", scores: { method: 0.05, examCraft: 0.05 } },
     ],
   },
   {
@@ -339,9 +339,9 @@ export const QUESTIONS: Question[] = [
     layout: 'cards',
     weights: { retention: 3 },
     options: [
-      { id: 'spaced', label: 'It is scheduled. I come back on set days', labelParent: 'It is scheduled. They come back on set days', scores: { retention: 1 } },
-      { id: 'sometimes', label: 'Sometimes, if there is time left over', scores: { retention: 0.45 } },
-      { id: 'rarely', label: 'Rarely. There is always new content to cover', scores: { retention: 0.15 } },
+      { id: 'spaced', label: "It's scheduled. I come back on set days", labelParent: "It's scheduled. They come back on set days", scores: { retention: 1 } },
+      { id: 'sometimes', label: "Sometimes, if there's time left over", scores: { retention: 0.45 } },
+      { id: 'rarely', label: "Rarely. There's always new content to cover", scores: { retention: 0.15 } },
       { id: 'forced', label: 'Only when a test forces me to', labelParent: 'Only when a test forces them to', scores: { retention: 0.25 } },
     ],
   },
@@ -352,16 +352,16 @@ export const QUESTIONS: Question[] = [
     section: 3,
     title: 'A topic from three weeks ago comes up in class. How much is still there?',
     titleParent: 'A topic from three weeks ago comes up. How much has stuck?',
-    help: 'Be honest. Nobody is watching.',
+    help: "Be honest. Nobody's watching.",
     helpParent: 'Not sure? Ask them to explain one old topic to you tonight. Two minutes tells you everything.',
     type: 'single',
     layout: 'cards',
     weights: { retention: 2.5, method: 0.5 },
     options: [
       { id: 'most', label: 'Most of it. I could explain it', labelParent: 'Most of it. They could explain it to you', scores: { retention: 0.95, method: 0.8 } },
-      { id: 'recognise', label: 'I recognise it, but I could not write an answer', labelParent: 'They recognise it, but could not write an answer', scores: { retention: 0.35, method: 0.3 }, flags: ['recognition'] },
-      { id: 'gone', label: 'It is basically gone. I would be starting again', labelParent: 'It is basically gone. They would be starting again', scores: { retention: 0.1, method: 0.3 } },
-      { id: 'untested', label: 'No idea. I have never tested it', labelParent: 'No idea. It never gets tested', scores: { retention: 0.3, method: 0.15 } },
+      { id: 'recognise', label: "I recognise it, but I couldn't write an answer", labelParent: "They recognise it, but couldn't write an answer", scores: { retention: 0.35, method: 0.3 }, flags: ['recognition'] },
+      { id: 'gone', label: "It's basically gone. I'd be starting again", labelParent: "It's basically gone. They'd be starting again", scores: { retention: 0.1, method: 0.3 } },
+      { id: 'untested', label: "No idea. I've never tested it", labelParent: 'No idea. It never gets tested', scores: { retention: 0.3, method: 0.15 } },
     ],
   },
   {
@@ -374,8 +374,8 @@ export const QUESTIONS: Question[] = [
     weights: { prioritisation: 3 },
     options: [
       { id: 'weakest', label: 'I keep a list of weak topics and hit those first', labelParent: 'They keep a list of weak topics and hit those first', scores: { prioritisation: 1 } },
-      { id: 'folder', label: 'Whatever is next in the folder or the spec', scores: { prioritisation: 0.35 } },
-      { id: 'comfort', label: 'Whatever I feel like. Usually things I am ok at', labelParent: 'Whatever they feel like. Usually things they are ok at', scores: { prioritisation: 0.1 }, flags: ['comfort'] },
+      { id: 'folder', label: "Whatever's next in the folder or the spec", scores: { prioritisation: 0.35 } },
+      { id: 'comfort', label: "Whatever I feel like. Usually stuff I'm already ok at", labelParent: "Whatever they feel like. Usually things they're already ok at", scores: { prioritisation: 0.1 }, flags: ['comfort'] },
       { id: 'due', label: 'Whatever the next test or homework is', scores: { prioritisation: 0.4 } },
     ],
   },
@@ -399,16 +399,16 @@ export const QUESTIONS: Question[] = [
   {
     id: 'papers',
     section: 4,
-    title: 'What is your relationship with past papers?',
-    titleParent: 'What is their relationship with past papers?',
+    title: "What's your relationship with past papers?",
+    titleParent: "What's their relationship with past papers?",
     type: 'single',
     layout: 'cards',
     weights: { examCraft: 3 },
     options: [
       { id: 'timed', label: 'I do them timed, then mark against the mark scheme', labelParent: 'They do them timed, then mark against the mark scheme', scores: { examCraft: 1 } },
       { id: 'open', label: 'I do them untimed, with my notes nearby', labelParent: 'They do them untimed, with notes nearby', scores: { examCraft: 0.45 } },
-      { id: 'saving', label: 'I am saving them for closer to the exams', labelParent: 'They are saving them for closer to the exams', scores: { examCraft: 0.15 } },
-      { id: 'none', label: 'I have not really started them', labelParent: 'They have not really started them', scores: { examCraft: 0.05 } },
+      { id: 'saving', label: "I'm saving them for closer to the exams", labelParent: "They're saving them for closer to the exams", scores: { examCraft: 0.15 } },
+      { id: 'none', label: "I haven't really started them", labelParent: "They haven't really started them", scores: { examCraft: 0.05 } },
     ],
   },
   {
@@ -501,65 +501,65 @@ export function dimNote(dim: Dim, score: number, taker: Taker = 'student'): stri
   const level = score >= 75 ? 3 : score >= 55 ? 2 : score >= 35 ? 1 : 0
   const notes: Record<Dim, string[]> = {
     method: [
-      'Almost all consumption, almost no retrieval. This is the expensive one.',
-      'More recognising than retrieving. Feels learned, does not score.',
+      'Almost all reading and watching, almost no self-testing. This is the expensive one.',
+      "More recognising than remembering. It feels learned, but it doesn't score.",
       'Some real self-testing in there. Make it the default, not the extra.',
       'Retrieval first. This is what the top 1% do.',
     ],
     retention: [
       'Topics are fading before you ever see them twice.',
-      'You are re-learning old topics more than you are keeping them.',
-      'Decent spacing instincts. Scheduling them would lock it in.',
-      'You return to topics before they fade. Keep that system.',
+      "You're re-learning old topics more than you're keeping them.",
+      'Good instincts on coming back to topics. Scheduling the returns would lock it in.',
+      'You come back to topics before they fade. Keep that system.',
     ],
     examCraft: [
-      'Knowledge is not being converted into marks yet.',
+      "The knowledge isn't turning into marks yet.",
       'Papers and mark schemes are still strangers to you.',
       'Good habits forming. Add timing and examiner wording.',
       'You train the exam as its own skill. Rare and valuable.',
     ],
     prioritisation: [
-      'Your hours are going where it is comfortable, not where the marks are.',
+      "Your hours are going where it's comfortable, not where the marks are.",
       'You revise by routine, not by where you lose marks.',
       'You know roughly where the gaps are. Make it a written list.',
-      'Weakest topics first. That is exactly right.',
+      "Weakest topics first. That's exactly right.",
     ],
     consistency: [
       'Revision is running on guilt and deadlines right now.',
       'Effort arrives in bursts. The forgetting curve loves bursts.',
-      'A steady rhythm is there. Structure would compound it.',
+      "There's a steady rhythm there. A proper plan would make it count for more.",
       'A real system, run consistently. Protect it.',
     ],
   }
   const parentNotes: Record<Dim, string[]> = {
     method: [
-      'Almost all consumption, almost no retrieval. This is the expensive one.',
-      'More recognising than retrieving. It feels learned to them, but it does not score.',
+      'Almost all reading and watching, almost no self-testing. This is the expensive one.',
+      "More recognising than remembering. It feels learned to them, but it doesn't score.",
       'Some real self-testing in there. It needs to become the default, not the extra.',
       'Retrieval first. This is what the top 1% do.',
     ],
     retention: [
       'Topics are fading before they ever see them twice.',
-      'They are re-learning old topics more than they are keeping them.',
-      'Decent spacing instincts. Scheduling the returns would lock it in.',
-      'They return to topics before they fade. Protect that system.',
+      "They're re-learning old topics more than they're keeping them.",
+      'Good instincts on coming back to topics. Scheduling the returns would lock it in.',
+      'They come back to topics before they fade. Protect that system.',
     ],
     examCraft: [
-      'Knowledge is not being converted into marks yet.',
+      "The knowledge isn't turning into marks yet.",
       'Papers and mark schemes are still strangers to them.',
       'Good habits forming. Timing and examiner wording come next.',
       'They train the exam as its own skill. Rare and valuable.',
     ],
     prioritisation: [
-      'Their hours are going where it is comfortable, not where the marks are.',
+      "Their hours are going where it's comfortable, not where the marks are.",
       'They revise by routine, not by where the marks are being lost.',
       'They know roughly where the gaps are. It needs to become a written list.',
-      'Weakest topics first. That is exactly right.',
+      "Weakest topics first. That's exactly right.",
     ],
     consistency: [
       'Revision is running on guilt and deadlines right now.',
       'Effort arrives in bursts. The forgetting curve loves bursts.',
-      'A steady rhythm is there. Structure would compound it.',
+      "There's a steady rhythm there. A proper plan would make it count for more.",
       'A real system, run consistently. Protect it.',
     ],
   }
@@ -584,14 +584,14 @@ const ARCHETYPES: Record<string, Archetype> = {
     name: 'The Grinder',
     strapline: 'Hours in. Marks missing.',
     diagnosis: [
-      'You are not lazy. You might be one of the hardest workers in your year. The problem is where the hours go: reading, highlighting, going over notes. That work feels productive because the content starts to look familiar.',
-      'But exams do not test whether you recognise something. They test whether you can produce it, from memory, under time. Recognition is cheap. Retrieval is what scores, and almost none of your week is building it.',
-      'This was me at 17. I got into medicine on brute force hours, and I would never let a student of mine pay that price for the same grades.',
+      "You're not lazy. You might be one of the hardest workers in your year. The problem is where the hours go: reading, highlighting, going over notes. That work feels productive because the content starts to look familiar.",
+      "But exams don't test whether you recognise something. They test whether you can produce it, from memory, against the clock. Recognising is easy. Producing is what scores, and almost none of your week is training it.",
+      "This was me at 17. I got into medicine on brute force hours, and I'd never let a student of mine pay that price for the same grades.",
     ],
     diagnosisParent: [
-      'Your child is not lazy. From your answers, they may be one of the harder workers in their year. The problem is where the hours go: reading, highlighting, going over notes. That work looks like revision from the doorway, and it feels productive to them, because the content starts to look familiar.',
-      'But exams do not test whether you recognise something. They test whether you can produce it, from memory, under time. Recognition is cheap. Retrieval is what scores, and almost none of their week is building it. This is why the effort you are watching is not showing up in the grades.',
-      'This was me at 17. I got into medicine on brute force hours, and nobody should have to pay that price for the same grades. The fix is a method change, not a character change, and that matters: your child does not need to be told to work harder.',
+      "Your child isn't lazy. From your answers, they might be one of the hardest workers in their year. The problem is where the hours go: reading, highlighting, going over notes. From the doorway it looks like proper revision, and it feels productive to them, because the content starts to look familiar.",
+      "But exams don't test whether you recognise something. They test whether you can produce it, from memory, against the clock. Recognising is easy. Producing is what scores, and almost none of their week is training it. That's why the effort you're watching isn't showing up in the grades.",
+      "This was me at 17. I got into medicine on brute force hours, and nobody should have to pay that price for the same grades. The fix here is a method change, not a character change. That matters: your child doesn't need telling to work harder.",
     ],
     clinicalNote: 'Presenting complaint: high effort, flat grades. Finding: passive method masking as productivity.',
   },
@@ -600,14 +600,14 @@ const ARCHETYPES: Record<string, Archetype> = {
     name: 'The Perfectionist',
     strapline: 'Beautiful notes. Borrowed time.',
     diagnosis: [
-      'Your notes could probably be sold. That is the problem. Somewhere along the way, revision turned into production: making the resource instead of using it. Neat pages feel like progress because you can see them stacking up.',
-      'But the exam never asks to see your notes. It asks what you can produce with the book closed, in the wording the mark scheme rewards. Every hour spent perfecting a page is an hour not spent retrieving from it.',
+      "Your notes could probably be sold. That's the problem. Somewhere along the way, revision turned into production: making the resource instead of using it. Neat pages feel like progress because you can see them stacking up.",
+      'But the exam never asks to see your notes. It asks what you can produce with the book closed, in the wording the mark scheme rewards. Every hour spent making a page beautiful is an hour not spent testing yourself on it.',
       'I spent hours making the perfect set of notes and the perfect timetable. Such a waste of time. The students who beat me were testing themselves on ugly scraps of paper.',
     ],
     diagnosisParent: [
-      'Your child works, and the evidence is probably beautiful: colour coded notes, neat folders, pages that look like they could be sold. That is the problem. Somewhere along the way, revision turned into production: making the resource instead of using it. Finished pages feel like progress because you can both see them stacking up.',
-      'But the exam never asks to see the notes. It asks what they can produce with the book closed, in the wording the mark scheme rewards. Every hour spent perfecting a page is an hour not spent retrieving from it, and this profile is hard to spot from outside precisely because it looks so diligent.',
-      'I did exactly this. I spent hours making the perfect set of notes and the perfect timetable, and the students who beat me were testing themselves on ugly scraps of paper. The work ethic is there. It just needs pointing at retrieval instead of decoration.',
+      "Your child works, and the evidence is probably beautiful: colour coded notes, neat folders, pages that look like they could be sold. That's the problem. Somewhere along the way, revision turned into production: making the resource instead of using it. Finished pages feel like progress because you can both see them stacking up.",
+      'But the exam never asks to see the notes. It asks what they can produce with the book closed, in the wording the mark scheme rewards. Every hour spent making a page beautiful is an hour not spent testing themselves on it. This one is hard to spot from the outside, because it looks so hardworking.',
+      'I did exactly this. I spent hours making the perfect set of notes and the perfect timetable, and the students who beat me were testing themselves on ugly scraps of paper. The work ethic is there. It just needs pointing at the right work.',
     ],
     clinicalNote: 'Presenting complaint: heavy workload, beautiful materials. Finding: production substituting for retrieval.',
   },
@@ -617,13 +617,13 @@ const ARCHETYPES: Record<string, Archetype> = {
     strapline: 'Brilliant in a panic. Broken without one.',
     diagnosis: [
       'Your real revision system is deadline panic. And the frustrating part is that it sort of works: you can load a test into short-term memory overnight, so the habit keeps getting rewarded.',
-      'A-levels are where that stops working. Two years of content cannot live in short-term memory. What you cram this week is measurably fading within days, so by exam season you are paying for the same topics twice, sometimes three times.',
-      'You do not need more discipline than everyone else. You need a system that makes the next session obvious, so starting stops being a negotiation.',
+      "A-levels are where that stops working. Two years of content can't live in short-term memory. What you cram this week is already fading by next week, so by exam season you're paying for the same topics twice, sometimes three times.",
+      "You don't need more discipline than everyone else. You need a system that makes the next session obvious, so starting stops being a negotiation.",
     ],
     diagnosisParent: [
-      'Their real revision system is deadline panic, and you have probably watched it: quiet for a fortnight, then a frantic surge the week before a test. The frustrating part is that it sort of works. They can load a test into short-term memory overnight, so the habit keeps getting rewarded with passable results.',
-      'A-levels are where that stops working. Two years of content cannot live in short-term memory. What they cram this week is measurably fading within days, so by exam season they are paying for the same topics twice, sometimes three times. The panic cycles also get more expensive emotionally as the stakes rise.',
-      'Here is the reframe that matters at home: this is not a discipline problem, so more pressure will not fix it. What fixes it is a system that makes the next session obvious, so starting stops being a negotiation, with you or with themselves.',
+      "Their real revision system is deadline panic, and you've probably watched it happen: quiet for a fortnight, then a frantic surge the week before a test. The frustrating part is that it sort of works. They can load a test into short-term memory overnight, so the habit keeps getting rewarded with passable results.",
+      "A-levels are where that stops working. Two years of content can't live in short-term memory. What they cram this week is already fading by next week, so by exam season they're paying for the same topics twice, sometimes three times. And the panic gets more draining for everyone as the stakes go up.",
+      "Here's the reframe that matters at home: this isn't a discipline problem, so more pressure won't fix it. What fixes it is a system that makes the next session obvious, so starting stops being a negotiation, with you or with themselves.",
     ],
     clinicalNote: 'Presenting complaint: burst effort, unstable results. Finding: massed practice, no spacing, mood-led scheduling.',
   },
@@ -632,14 +632,14 @@ const ARCHETYPES: Record<string, Archetype> = {
     name: 'The Re-Learner',
     strapline: 'Learning it again. And again.',
     diagnosis: [
-      'Every time you open an old topic, it feels like the first time. So you re-learn it, which takes almost as long as it did originally, which leaves no time to return to anything else, which means everything fades. That loop is where your hours are going.',
-      'Here is the reframe: that is not a memory problem. It is a scheduling problem. Memory fades on a curve, and you are simply never there when it fades. Return to a topic the day after, then a few days later, and it stays. Miss both windows and it resets.',
-      'That is a retrieval failure, not a knowledge failure. And retrieval failures are fixable with a calendar, not with talent.',
+      'Every time you open an old topic, it feels like the first time. So you learn it again, which takes nearly as long as it did the first time, which leaves no time to go back to anything else, which means everything fades. That loop is where your hours are going.',
+      "Here's the reframe: it's not a memory problem. It's a scheduling problem. Memory fades on a curve, and you're simply never there when it fades. Come back to a topic the next day, then a few days later, and it stays. Miss both windows and it resets.",
+      "That's a retrieval failure, not a knowledge failure. And retrieval failures are fixed with a calendar, not with talent.",
     ],
     diagnosisParent: [
-      'Every time your child opens an old topic, it feels like the first time. So they re-learn it, which takes almost as long as it did originally, which leaves no time to return to anything else, which means everything fades. That loop is where their hours are going, and it is exhausting to live inside.',
-      'Here is the reframe: that is not a memory problem, and it is certainly not an intelligence problem. It is a scheduling problem. Memory fades on a curve, and they are simply never there when it fades. Return to a topic the day after, then a few days later, and it stays. Miss both windows and it resets.',
-      'In clinical terms, that is a retrieval failure, not a knowledge failure. Retrieval failures are fixed with a calendar, not with talent, which is genuinely good news: it is the most mechanical fix on this entire list.',
+      "Every time your child opens an old topic, it feels like the first time. So they learn it again, which takes nearly as long as it did the first time, which leaves no time to go back to anything else, which means everything fades. That loop is where their hours are going, and it's exhausting to live inside.",
+      "Here's the reframe: it's not a memory problem, and it's certainly not an intelligence problem. It's a scheduling problem. Memory fades on a curve, and they're simply never there when it fades. Come back to a topic the next day, then a few days later, and it stays. Miss both windows and it resets.",
+      "In clinical terms, that's a retrieval failure, not a knowledge failure. Retrieval failures are fixed with a calendar, not with talent. That's genuinely good news: it's the most mechanical fix on this whole list.",
     ],
     clinicalNote: 'Presenting complaint: topics do not stick. Finding: no spaced returns, forgetting curve running unopposed.',
   },
@@ -648,14 +648,14 @@ const ARCHETYPES: Record<string, Archetype> = {
     name: 'The Scholar',
     strapline: 'Knows it. Cannot score it.',
     diagnosis: [
-      'You might know more than anyone in your class. Your grades do not show it, because knowing something and performing with it are two different skills, and school only ever taught you the first one.',
-      'Marks live in specifics: the command word, the examiner phrase, the timing, the discipline of answering the question that was actually asked. Right now that layer is untrained, so the knowledge stays in your head instead of landing on the page.',
-      'This is the most fixable profile there is. The hard part, the knowledge, is already done. What is missing is a performance layer, and that is pure training.',
+      "You might know more than anyone in your class. Your grades don't show it, because knowing something and scoring with it are two different skills, and school only ever taught you the first one.",
+      'Marks live in the specifics: the command word, the examiner phrase, the timing, answering the question that was actually asked. Right now that layer is untrained, so the knowledge stays in your head instead of landing on the page.',
+      "This is the most fixable profile there is. The hard part, the knowledge, is already done. What's missing is the performance layer, and that's pure training.",
     ],
     diagnosisParent: [
-      'Your child may know more than anyone in their class. Their grades do not show it, because knowing something and performing with it are two different skills, and school only ever taught them the first one. If teachers keep saying "so capable" while the marks say otherwise, this is usually why.',
-      'Marks live in specifics: the command word, the examiner phrase, the timing, the discipline of answering the question that was actually asked. Right now that layer is untrained, so the knowledge stays in their head instead of landing on the page.',
-      'This is the most fixable profile there is. The hard part, the knowledge, is already done. What is missing is a performance layer, and that is pure training. Do not let anyone, including your child, read these grades as a ceiling.',
+      'Your child might know more than anyone in their class. Their grades don\'t show it, because knowing something and scoring with it are two different skills, and school only ever taught them the first one. If teachers keep saying "so capable" while the marks say otherwise, this is usually why.',
+      'Marks live in the specifics: the command word, the examiner phrase, the timing, answering the question that was actually asked. Right now that layer is untrained, so the knowledge stays in their head instead of landing on the page.',
+      "This is the most fixable profile there is. The hard part, the knowledge, is already done. What's missing is the performance layer, and that's pure training. Don't let anyone, including your child, read these grades as a ceiling.",
     ],
     clinicalNote: 'Presenting complaint: understands in class, underscores in exams. Finding: untrained exam craft on solid knowledge.',
   },
@@ -664,14 +664,14 @@ const ARCHETYPES: Record<string, Archetype> = {
     name: 'The Comfort Reviser',
     strapline: 'Polishing strengths. Avoiding the marks.',
     diagnosis: [
-      'Your revision drifts to the topics you are already good at. It is completely human: those sessions feel smooth, the questions go well, you close the book feeling capable.',
-      'But a topic you already score 80 percent on has almost no marks left to give you. The topics you avoid, and be honest, you can name them, are exactly where your next grade is hiding. Avoiding them does not make them smaller. It makes them due in August.',
-      'That discomfort you feel opening a weak topic? That discomfort is where the marks are made.',
+      "Your revision drifts to the topics you're already good at. It's completely human: those sessions feel smooth, the questions go well, you close the book feeling capable.",
+      "But a topic you already score 80 percent on has almost no marks left to give you. The topics you avoid, and be honest, you can name them, are exactly where your next grade is hiding. Avoiding them doesn't make them smaller. It just makes them due in exam season.",
+      "That discomfort you feel opening a weak topic? That's where the marks are made.",
     ],
     diagnosisParent: [
-      'Your child revises, but the revision drifts to the topics they are already good at. It is completely human: those sessions feel smooth, the questions go well, they close the book feeling capable. From the outside it looks like solid, regular work, which is what makes this one hard to spot.',
-      'But a topic they already score 80 percent on has almost no marks left to give. The topics they avoid, and they can name them, are exactly where the next grade is hiding. Avoiding them does not make them smaller. It makes them due in exam season.',
-      'The discomfort of opening a weak topic is where the marks are made. The most useful thing a parent can do with this profile is make the weak-topic list visible and celebrated, so facing it feels like progress rather than punishment.',
+      "Your child revises, but the revision drifts to the topics they're already good at. It's completely human: those sessions feel smooth, the questions go well, they close the book feeling capable. From the outside it looks like solid, regular work, which is exactly what makes it hard to spot.",
+      "But a topic they already score 80 percent on has almost no marks left to give. The topics they avoid, and they can name them, are exactly where the next grade is hiding. Avoiding them doesn't make them smaller. It just makes them due in exam season.",
+      'The discomfort of opening a weak topic is where the marks are made. The most useful thing you can do with this profile is make the weak-topic list visible and celebrated, so facing it feels like progress rather than punishment.',
     ],
     clinicalNote: 'Presenting complaint: solid effort, plateaued grades. Finding: effort routed to strengths, weak topics untouched.',
   },
@@ -680,14 +680,14 @@ const ARCHETYPES: Record<string, Archetype> = {
     name: 'The Optimiser',
     strapline: 'The system works. Now compound it.',
     diagnosis: [
-      'Rare profile. You test yourself, you space your returns, you go back to weak topics on purpose. Most students never get here, so first: credit where it is due.',
-      'Your next grade is not hiding in a broken habit. It is in sharpening: harder retrieval, tighter timing, mark scheme fluency, and getting ahead of content before it is taught so lessons become your second pass, not your first.',
-      'At this level the gains are in precision and pace. The right programme now is the one that stretches you, not the one that fixes you.',
+      "Rare profile. You test yourself, you space your returns, you go back to weak topics on purpose. Most students never get here, so first: credit where it's due.",
+      "Your next grade isn't hiding in a broken habit. It's in sharpening: harder self-testing, tighter timing, knowing the mark schemes inside out, and getting ahead of content before it's taught, so lessons become your second pass instead of your first.",
+      'At this level the gains are in precision and pace. The right programme now is one that stretches you, not one that fixes you.',
     ],
     diagnosisParent: [
-      'Rare profile, and worth saying plainly: your child revises the way top students do. They test themselves, they space their returns, they go back to weak topics on purpose. Most students never get here. Whatever mix of their effort and your support built this, it is working.',
-      'Their next grade is not hiding in a broken habit. It is in sharpening: harder retrieval, tighter timing, mark scheme fluency, and getting ahead of content before it is taught so lessons become their second pass, not their first.',
-      'At this level the gains are in precision and pace. The right programme now is one that stretches them, not one that fixes them, and honestly, no programme at all is a respectable choice here too.',
+      "Rare profile, and worth saying plainly: your child revises the way top students do. They test themselves, they space their returns, they go back to weak topics on purpose. Most students never get here. Whatever mix of their effort and your support built this, it's working.",
+      "Their next grade isn't hiding in a broken habit. It's in sharpening: harder self-testing, tighter timing, knowing the mark schemes inside out, and getting ahead of content before it's taught, so lessons become their second pass instead of their first.",
+      'At this level the gains are in precision and pace. The right programme now is one that stretches them, not one that fixes them. And honestly, no programme at all is a respectable choice here too.',
     ],
     clinicalNote: 'Presenting complaint: none acute. Finding: sound system, ready for sharpening and stretch.',
   },
@@ -801,11 +801,11 @@ export function buildPrescription(bottleneck: Dim, answers: Answers, isOptimiser
   if (isOptimiser) {
     return {
       headline: 'Compound what already works',
-      why: 'Nothing here needs rescuing, so the gains come from raising the difficulty of what you already do.',
+      why: 'Nothing here needs rescuing. The gains come from making what you already do harder.',
       steps: [
-        { title: 'Make retrieval harder on purpose', detail: `Blurt whole ${subjectPhrase} topics from a blank page instead of prompted cards, and explain them out loud as if teaching. If you can teach it cold, you own it.` },
+        { title: 'Make retrieval harder on purpose', detail: `Blurt whole ${subjectPhrase} topics from a blank page instead of prompted cards, and explain them out loud as if you're teaching them. If you can teach it cold, you own it.` },
         { title: 'Tighten the clock', detail: 'Do timed papers at 90 percent of the official time. Exam day pressure should feel like a relief, not a shock.' },
-        { title: 'Get ahead of the teaching', detail: 'Preview next term topics so lessons become your second exposure. First passes are expensive. Make school do your reviews.' },
+        { title: 'Get ahead of the teaching', detail: "Look at next term's topics before they're taught, so lessons become your second time seeing them instead of your first. That's the cheapest revision there is." },
       ],
       articleSlug: 'best-way-to-revise-for-a-levels',
       articleTitle: 'What actually works for A-level revision',
@@ -817,10 +817,10 @@ export function buildPrescription(bottleneck: Dim, answers: Answers, isOptimiser
     case 'method':
       return {
         headline: 'Swap consumption for retrieval',
-        why: 'Every hour you move from re-reading to self-testing scores more, because retrieval is the skill the exam actually measures.',
+        why: 'Every hour you move from re-reading to self-testing earns more marks, because remembering under pressure is the skill the exam actually measures.',
         steps: [
           { title: 'Blurt before you re-read', detail: `Open a blank page, pick a ${subjectPhrase} topic, and write everything you know from memory. Only then open the notes and fill the gaps in a different colour. The gaps are your revision list.` },
-          { title: 'End every session with the book closed', detail: 'Final 10 minutes: no notes, reproduce the core of what you covered. If you cannot produce it now, you could not produce it in an exam.' },
+          { title: 'End every session with the book closed', detail: "Final 10 minutes: no notes, write out the core of what you covered. If you can't produce it now, you couldn't produce it in an exam." },
           { title: 'Start an error log', detail: 'One page per subject. Every wrong answer goes on it with the corrected version. Retest the log weekly. Wrong answers are the highest-yield material you own.' },
         ],
         articleSlug: 'blurting-method-a-level-revision',
@@ -833,7 +833,7 @@ export function buildPrescription(bottleneck: Dim, answers: Answers, isOptimiser
         why: 'Memory fades on a predictable curve. Return the day after, then three days later, and topics stop resetting to zero.',
         steps: [
           { title: 'Day one, then day two, then day five', detail: 'After any new topic: active recall the next day (blurt it, closed book), then a short review three days after that. Two returns, under an hour total, and the topic stays.' },
-          { title: 'Retire the re-learning loop', detail: `Before re-learning any ${subjectPhrase} topic from scratch, test what is actually left first. You usually know more than it feels like, and testing tells you the real gap.` },
+          { title: 'Retire the re-learning loop', detail: `Before re-learning any ${subjectPhrase} topic from scratch, test what's actually still there. You usually know more than it feels like, and testing shows you the real gap.` },
           { title: 'Let a timetable do the remembering', detail: 'Spacing fails when it relies on willpower. Put the return days in a plan so the decision is already made.' },
         ],
         articleSlug: 'best-way-to-revise-for-a-levels',
@@ -843,11 +843,11 @@ export function buildPrescription(bottleneck: Dim, answers: Answers, isOptimiser
     case 'examCraft':
       return {
         headline: 'Train the exam as its own skill',
-        why: 'Marks are awarded for specific wording, under time. That is a trainable skill, separate from knowing the material.',
+        why: "Marks are awarded for specific wording, under time pressure. That's a skill you can train, separate from knowing the material.",
         steps: [
-          { title: 'One timed paper a week, minimum', detail: `Full exam conditions in ${subjectPhrase}: no notes, real timing, no pausing. The first few scores will sting. That is the point of doing them now and not in May.` },
-          { title: 'Mark like an examiner', detail: 'Mark your paper against the scheme, then rewrite every lost mark answer in the exact wording the scheme rewards. Say the phrases out loud. It is a language, learn it like one.' },
-          { title: 'Decode the command words', detail: 'Explain, evaluate, compare, outline: each one has a mark pattern. Before writing, name the command word and what it is asking you to produce.' },
+          { title: 'One timed paper a week, minimum', detail: `Full exam conditions in ${subjectPhrase}: no notes, real timing, no pausing. The first few scores will sting. That's the point of doing them now and not in May.` },
+          { title: 'Mark like an examiner', detail: "Mark your paper against the scheme, then rewrite every lost mark answer in the exact wording the scheme rewards. Say the phrases out loud. It's a language. Learn it like one." },
+          { title: 'Decode the command words', detail: "Explain, evaluate, compare, outline: each one wants something different. Before writing, name the command word and what it's asking you to produce." },
         ],
         articleSlug: 'how-to-prepare-for-a-level-exams',
         articleTitle: 'How to prepare for A-level exams',
@@ -858,9 +858,9 @@ export function buildPrescription(bottleneck: Dim, answers: Answers, isOptimiser
         headline: 'Send the hours where the marks are missing',
         why: 'A topic you already score well on has few marks left to give. Your next grade lives in the topics you avoid.',
         steps: [
-          { title: 'Write the avoid list', detail: `Tonight, 10 minutes: list every ${subjectPhrase} topic you would dread in an exam tomorrow. That list is your syllabus now. Everything else is maintenance.` },
-          { title: 'Worst topic first, every session', detail: 'Open with 25 minutes on the topic you least want to touch, while your energy is highest. Then the session can soften.' },
-          { title: 'Re-rate weekly', detail: 'Score each topic out of 5 for confidence every Sunday. Watch the avoided ones climb. That visible movement is what keeps the habit alive.' },
+          { title: 'Write the avoid list', detail: `Tonight, 10 minutes: list every ${subjectPhrase} topic you'd dread seeing in an exam tomorrow. That list is your syllabus now. Everything else is maintenance.` },
+          { title: 'Worst topic first, every session', detail: 'Open with 25 minutes on the topic you least want to touch, while your energy is highest. After that, the rest of the session feels easy.' },
+          { title: 'Re-rate weekly', detail: 'Score each topic out of 5 for confidence every Sunday. Watch the avoided ones climb. Seeing them move is what keeps the habit going.' },
         ],
         articleSlug: 'how-to-improve-predicted-grades',
         articleTitle: 'How to improve your predicted grades',
@@ -897,7 +897,7 @@ export function buildSevenDayPlan(bottleneck: Dim, answers: Answers): PlanDay[] 
   const audit: PlanDay = {
     day: 'Day 1',
     task: 'Run the topic audit',
-    detail: `List every ${subj} topic and rate each out of 5 for closed-book confidence. Anything at 3 or below goes on your priority list.`,
+    detail: `List every ${subj} topic and rate each out of 5: how well could you answer questions on it, book closed? Anything at 3 or below goes on the priority list.`,
   }
   const blurt: PlanDay = {
     day: 'Day 2',
@@ -917,7 +917,7 @@ export function buildSevenDayPlan(bottleneck: Dim, answers: Answers): PlanDay[] 
   const plan: PlanDay = {
     day: 'Day 6',
     task: 'Build next week properly',
-    detail: 'Use the free Revision Tracker to place deep work, next-day recall and spaced reviews around your real commitments.',
+    detail: 'Use the free Revision Tracker to build the week for you: deep sessions, next-day recall and reviews, placed around your real commitments.',
   }
   const rest: PlanDay = {
     day: 'Day 7',
@@ -1036,16 +1036,16 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
   })
 
   const callLine = p
-    ? 'Not sure which fits, or whether anything does yet? Book a free 30 minute call with Dr Waleed and talk it through, parent to doctor. He will tell you honestly, even if the answer is none of them.'
-    : 'Not sure which fits? Book a free 30 minute call with Dr Waleed and he will help you decide, even if the honest answer is none of them yet.'
+    ? "Not sure which fits, or whether anything does yet? Book a free 30 minute call with Dr Waleed and talk it through, parent to doctor. He'll tell you honestly, even if the answer is none of them."
+    : "Not sure which fits? Book a free 30 minute call with Dr Waleed and he'll help you decide, even if the honest answer is none of them yet."
 
   /* Starting A-levels soon: content programmes do not fit yet, the method does. */
   if (year === 'pre') {
     return {
       primary: system(
         p
-          ? 'Your child is about to start the two most content-heavy years of their education. Most students spend Year 12 discovering their GCSE method does not survive contact with A-levels. Installing the right system before the content piles up is the cheapest moment to do it, and the calmest.'
-          : 'You are about to start the two most content-heavy years of your education. Most students spend Year 12 discovering their GCSE method does not survive contact with A-levels. You have the chance to install the right system before the content piles up, which is the cheapest moment to do it.'
+          ? "Your child is about to start the two most content-heavy years of their education. Most students spend Year 12 discovering their GCSE method doesn't survive A-levels. Getting the right system in before the content piles up is the cheapest moment to do it, and the calmest."
+          : "You're about to start the two most content-heavy years of your education. Most students spend Year 12 discovering their GCSE method doesn't survive A-levels. You've got the chance to get the right system in before the content piles up, which is the cheapest moment to do it."
       ),
       secondaryLine: callLine,
     }
@@ -1058,8 +1058,8 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
       if (worryIsStem) {
         whyParts.push(
           p
-            ? `${worry} is the subject worrying you most for them, and it is one of the four the Summer Accelerator covers live.`
-            : `${worry} is the subject worrying you most, and it is one of the four the Summer Accelerator covers live.`
+            ? `${worry} is the subject worrying you most for them, and it's one of the four the Summer Accelerator covers live.`
+            : `${worry} is the subject worrying you most, and it's one of the four the Summer Accelerator covers live.`
         )
       } else {
         whyParts.push(
@@ -1071,8 +1071,8 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
       if (gradeGap !== null && gradeGap >= 2) {
         whyParts.push(
           p
-            ? 'The gap between their current grade and the grade they need is real, and it will not close during term time alone. Six structured weeks now does the heavy lifting.'
-            : 'The gap between your current grade and your target is real, and it will not close during term time alone. Six structured weeks now does the heavy lifting.'
+            ? "The gap between their current grade and the grade they need is real, and it won't close during term time alone. Six structured weeks now does the heavy lifting."
+            : "The gap between your current grade and your target is real, and it won't close during term time alone. Six structured weeks now does the heavy lifting."
         )
       } else if (systemSide) {
         whyParts.push(
@@ -1112,8 +1112,8 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     return {
       primary: subjectAccel(
         p
-          ? `${worry} is where their marks are leaking, and the diagnostic shows the gap is in converting knowledge into exam marks. That is precisely what the twelve weeks train: past paper questions, mark scheme wording, and feedback on their answers, every single session.`
-          : `${worry} is where your marks are leaking, and your diagnostic shows the gap is in converting knowledge into exam marks. That is precisely what the twelve weeks train: past paper questions, mark scheme wording, and feedback on your answers, every single session.`
+          ? `${worry} is where their marks are leaking, and the diagnostic shows the gap is in turning knowledge into exam marks. That's exactly what the twelve weeks train: past paper questions, mark scheme wording, and feedback on their answers, every single session.`
+          : `${worry} is where your marks are leaking, and your diagnostic shows the gap is in turning knowledge into exam marks. That's exactly what the twelve weeks train: past paper questions, mark scheme wording, and feedback on your answers, every single session.`
       ),
       secondaryLine: 'If the deeper habits need work too, the Top 1% Study System runs alongside it. ' + callLine,
     }
@@ -1138,8 +1138,8 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     const focus = worryIsAccel ? worry! : accelSubjects[0]
     const gapLine = gradeGap !== null && gradeGap >= 2
       ? p
-        ? ` With the grade jump they are chasing in ${focus}, specialist sessions every week is the honest route.`
-        : ` With the grade jump you are chasing in ${focus}, specialist sessions every week is the honest route.`
+        ? ` With the grade jump they're chasing in ${focus}, specialist sessions every week is the honest route.`
+        : ` With the grade jump you're chasing in ${focus}, specialist sessions every week is the honest route.`
       : ''
     return {
       primary: subjectAccel(
@@ -1235,11 +1235,11 @@ export const LANDING_FAQS = [
   },
   {
     q: 'Who is it for?',
-    a: 'A-level students: Year 12, Year 13, resitters, and anyone starting sixth form in September. And parents: there is a version written for you, asking about your child. You choose which at the start.',
+    a: "A-level students: Year 12, Year 13, resitters, and anyone starting sixth form in September. And parents: there's a version written just for you, asking about your child. You choose which at the start.",
   },
   {
     q: 'Can I take it for my son or daughter?',
-    a: 'Yes, and you get your own version: choose "I am a parent" at the start and every question asks about your child, from your side of the kitchen table. Best done with them next to you, but answering from what you see works too. The report comes back written for you, with the same honest diagnosis.',
+    a: 'Yes, and you get your own version: choose "I\'m a parent" at the start and every question asks about your child, from your side of the kitchen table. Best done with them next to you, but answering from what you see works too. The report comes back written for you, with the same honest diagnosis.',
   },
   {
     q: 'Will you tell me my revision is fine?',

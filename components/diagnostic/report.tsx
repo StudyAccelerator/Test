@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
+import Image from 'next/image'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
 import {
   Answers,
@@ -162,6 +163,102 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
     }
   }
 
+  /* Section numbering. Parents are the buyers, so their report shows the
+     recommended route straight after the finding (02), the way a treatment
+     plan follows a diagnosis; the evidence then continues below it. Students
+     keep the education-first order with the route at the end (06). */
+  const NUM = isParent
+    ? { systems: '03', hours: '04', prescription: '05', plan: '06' }
+    : { systems: '02', hours: '03', prescription: '04', plan: '05' }
+
+  const routeSection = (number: string) => (
+    <section className="px-5 sm:px-6 py-14 md:py-20 bg-[#241d47] relative overflow-hidden">
+      <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-[-8%] h-[22rem] w-[28rem] rounded-full bg-brand-gold/10 blur-3xl" />
+      <div className="relative max-w-3xl mx-auto">
+        <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">
+          {number} · {routing.primary.eyebrow}
+        </p>
+        <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl md:text-4xl leading-tight text-brand-cream">
+          {isParent ? (
+            <>
+              {firstName}, here&apos;s the route I&apos;d put {childName || 'them'} on
+            </>
+          ) : (
+            <>{firstName}, this is your fastest route</>
+          )}
+        </h2>
+        {isParent && (
+          <p className="mt-4 text-brand-cream/70 leading-relaxed max-w-2xl">
+            Diagnosis first, then treatment. Based on your answers about {child}, this is where I&apos;d
+            start. The full breakdown, the five scores, the hours and the 7 day plan, carries on below.
+          </p>
+        )}
+
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '0px 0px -80px 0px' }}
+          transition={{ duration: 0.6, ease: EASE }}
+          className="mt-8 rounded-3xl bg-white p-7 md:p-9 [box-shadow:0_0_0_2px_rgba(201,169,110,.55),0_24px_48px_rgba(0,0,0,.35)]"
+        >
+          <div className="flex flex-wrap items-center gap-3">
+            <span className="rounded-full bg-brand-gold text-brand-purple text-xs font-bold px-3 py-1.5">
+              {isParent ? 'Matched to their diagnosis' : 'Matched to your diagnosis'}
+            </span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/50">{routing.primary.meta}</span>
+          </div>
+          <h3 className="mt-4 font-serif font-bold text-3xl md:text-4xl text-brand-purple">{routing.primary.name}</h3>
+          <p className="mt-2 font-serif italic text-lg text-brand-gold leading-snug">{routing.primary.strap}</p>
+          <p className="mt-4 text-brand-text/80 leading-relaxed">{routing.primary.why}</p>
+          <ul className="mt-5 space-y-2.5 text-[15px] text-brand-text/75">
+            {routing.primary.points.map((pt) => (
+              <li key={pt} className="flex items-start gap-2.5">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true">
+                  <path d="M5 13l4 4L19 7" />
+                </svg>
+                {pt}
+              </li>
+            ))}
+          </ul>
+          <div className="mt-6 flex items-center gap-3 rounded-xl bg-brand-cream/70 border border-brand-purple/[0.08] px-4 py-3">
+            <Image
+              src="/photos/waleed-grad-portrait.jpg"
+              alt="Dr Waleed Ahmad"
+              width={80}
+              height={80}
+              unoptimized
+              className="h-10 w-10 rounded-full object-cover object-top ring-2 ring-brand-gold/50 shrink-0"
+            />
+            <p className="text-sm text-brand-text/70 leading-snug">
+              <span className="font-bold text-brand-purple">Recommended by Dr Waleed Ahmad</span> · NHS doctor
+              · worked with over 1,000 A-level students.{' '}
+              {isParent ? <>Picked from {child}&apos;s answers, not a default.</> : <>Picked from your answers, not a default.</>}
+            </p>
+          </div>
+          <div className="mt-7 flex flex-col sm:flex-row gap-3">
+            <a
+              href={routing.primary.href}
+              className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+            >
+              {routing.primary.cta}
+              <span aria-hidden="true" className="ml-2">→</span>
+            </a>
+            <a
+              href={BOOK_A_CALL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center rounded-full border-2 border-brand-purple/20 text-brand-purple px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
+            >
+              Book a Free Call Instead
+            </a>
+          </div>
+        </motion.div>
+
+        <p className="mt-6 text-sm text-brand-cream/65 leading-relaxed max-w-2xl">{routing.secondaryLine}</p>
+      </div>
+    </section>
+  )
+
   return (
     <div className="bg-brand-cream">
       {/* ══ Report cover ══ */}
@@ -237,7 +334,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
       </section>
 
       {/* ══ 01 · The finding ══ */}
-      <Section number="01" title="The finding" lead={isParent ? 'What your answers actually show' : 'What your answers actually show'}>
+      <Section number="01" title="The finding" lead="What your answers actually show">
         <div className="space-y-4 text-[1.05rem] text-brand-text/80 leading-relaxed">
           {(isParent ? archetype.diagnosisParent : archetype.diagnosis).map((para, i) => (
             <p key={i}>{para}</p>
@@ -251,17 +348,20 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         )}
       </Section>
 
-      {/* ══ 02 · System scores ══ */}
+      {/* ══ Parents: the recommendation, straight after the finding ══ */}
+      {isParent && routeSection('02')}
+
+      {/* ══ System scores ══ */}
       <section className="px-5 sm:px-6 py-12 md:py-16 bg-white/60 border-y border-brand-purple/[0.06]">
         <div className="max-w-3xl mx-auto">
-          <p className={EYEBROW}>02 · The five systems</p>
+          <p className={EYEBROW}>{NUM.systems} · The five systems</p>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-[2rem] leading-tight text-brand-purple">
             {isParent ? 'Their revision system, scored' : 'Your revision system, scored'}
           </h2>
           <p className="mt-3 text-brand-text/65 leading-relaxed max-w-xl">
             {isParent
-              ? 'Top grades run on five systems working together. Here is where each of theirs stands today.'
-              : 'Top grades run on five systems working together. Here is where each of yours stands today.'}
+              ? "Top grades run on five systems working together. Here's where each of theirs stands today."
+              : "Top grades run on five systems working together. Here's where each of yours stands today."}
           </p>
           <div className="mt-8 space-y-5">
             {DIMS.map((d, i) => {
@@ -304,16 +404,16 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         </div>
       </section>
 
-      {/* ══ 03 · The hours leak ══ */}
+      {/* ══ The hours leak ══ */}
       <Section
-        number="03"
+        number={NUM.hours}
         title="Where the hours go"
         lead={
           isOptimiser
             ? isParent
               ? 'Their hours are mostly landing where they should'
               : 'Your hours are mostly landing where they should'
-            : 'The expensive part is not the hours. It is where they go.'
+            : "The expensive part isn't the hours. It's where they go."
         }
       >
         <div className={`${CARD} p-6 md:p-8`}>
@@ -363,24 +463,24 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
           </p>
           <p className="mt-3 text-sm text-brand-text/55 leading-relaxed">
             {isParent
-              ? 'Based on what you told us about their default methods. The point is not more hours. It is making the same hours score.'
-              : 'Based on what you told us about your default methods. The point is not to study more hours. It is to make the same hours score.'}
+              ? "Based on what you told me about their default methods. The point isn't more hours. It's making the same hours score."
+              : "Based on what you told me about your default methods. The point isn't more hours. It's making the same hours score."}
           </p>
         </div>
       </Section>
 
-      {/* ══ 04 · Fix this first ══ */}
+      {/* ══ Fix this first ══ */}
       <section className="px-5 sm:px-6 py-12 md:py-16 bg-white/60 border-y border-brand-purple/[0.06]">
         <div className="max-w-3xl mx-auto">
-          <p className={EYEBROW}>04 · The prescription</p>
+          <p className={EYEBROW}>{NUM.prescription} · The prescription</p>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-[2rem] leading-tight text-brand-purple">
             {prescription.headline}
           </h2>
           <p className="mt-3 text-brand-text/70 leading-relaxed max-w-xl">{prescription.why}</p>
           {isParent && (
             <p className="mt-4 rounded-xl border border-brand-gold/30 bg-brand-gold/[0.08] px-4 py-3 text-sm text-brand-text/75 leading-relaxed max-w-xl">
-              These steps are written as instructions to {child}, on purpose: they are the handover. Show them
-              this page, or better, sit in on the first one.
+              These steps are written as instructions to {child}, on purpose: they&apos;re the handover. Show
+              them this page, or better, sit with them for the first one.
             </p>
           )}
           <div className="mt-8 space-y-4">
@@ -420,8 +520,8 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         </div>
       </section>
 
-      {/* ══ 05 · Next 7 days ══ */}
-      <Section number="05" title="The plan" lead={isParent ? `${childName ? `${childName}'s` : 'Their'} next 7 days` : 'Your next 7 days'}>
+      {/* ══ Next 7 days ══ */}
+      <Section number={NUM.plan} title="The plan" lead={isParent ? `${childName ? `${childName}'s` : 'Their'} next 7 days` : 'Your next 7 days'}>
         <p className="text-brand-text/65 leading-relaxed max-w-xl -mt-2 mb-8">
           {isParent
             ? 'Small, specific, and in order. Put it somewhere visible and let the ticking-off do the nagging for you.'
@@ -455,45 +555,25 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         </ol>
       </Section>
 
-      {/* ══ 06 · Your route ══ */}
-      <section className="px-5 sm:px-6 py-14 md:py-20 bg-[#241d47] relative overflow-hidden">
-        <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-[-8%] h-[22rem] w-[28rem] rounded-full bg-brand-gold/10 blur-3xl" />
-        <div className="relative max-w-3xl mx-auto">
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">06 · {routing.primary.eyebrow}</p>
-          <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl md:text-4xl leading-tight text-brand-cream">
-            {isParent ? `${firstName}, this is ${childName ? `${childName}'s` : 'their'} fastest route` : `${firstName}, this is your fastest route`}
-          </h2>
+      {/* ══ Students: the route, once the case has been made ══ */}
+      {!isParent && routeSection('06')}
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '0px 0px -80px 0px' }}
-            transition={{ duration: 0.6, ease: EASE }}
-            className="mt-8 rounded-3xl bg-white p-7 md:p-9 [box-shadow:0_0_0_2px_rgba(201,169,110,.55),0_24px_48px_rgba(0,0,0,.35)]"
-          >
-            <div className="flex flex-wrap items-center gap-3">
-              <span className="rounded-full bg-brand-gold text-brand-purple text-xs font-bold px-3 py-1.5">
-                {isParent ? 'Matched to their diagnosis' : 'Matched to your diagnosis'}
-              </span>
-              <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/50">{routing.primary.meta}</span>
-            </div>
-            <h3 className="mt-4 font-serif font-bold text-3xl md:text-4xl text-brand-purple">{routing.primary.name}</h3>
-            <p className="mt-2 font-serif italic text-lg text-brand-gold leading-snug">{routing.primary.strap}</p>
-            <p className="mt-4 text-brand-text/80 leading-relaxed">{routing.primary.why}</p>
-            <ul className="mt-5 space-y-2.5 text-[15px] text-brand-text/75">
-              {routing.primary.points.map((pt) => (
-                <li key={pt} className="flex items-start gap-2.5">
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true">
-                    <path d="M5 13l4 4L19 7" />
-                  </svg>
-                  {pt}
-                </li>
-              ))}
-            </ul>
-            <div className="mt-7 flex flex-col sm:flex-row gap-3">
+      {/* ══ Parents: closing reprise of the recommendation ══ */}
+      {isParent && (
+        <section className="px-5 sm:px-6 py-12 md:py-16 bg-[#241d47]">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">The next step</p>
+            <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-3xl text-brand-cream leading-tight">
+              Ready when you are
+            </h2>
+            <p className="mt-3 text-brand-cream/70 leading-relaxed max-w-xl mx-auto">
+              {routing.primary.name} is the route matched to {child}&apos;s diagnosis. If you&apos;d rather
+              talk it through first, the call is free and honest.
+            </p>
+            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
               <a
                 href={routing.primary.href}
-                className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+                className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
               >
                 {routing.primary.cta}
                 <span aria-hidden="true" className="ml-2">→</span>
@@ -502,16 +582,14 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 href={BOOK_A_CALL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center rounded-full border-2 border-brand-purple/20 text-brand-purple px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
+                className="inline-flex justify-center items-center rounded-full border-2 border-brand-cream/25 text-brand-cream px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
               >
-                Book a Free Call Instead
+                Book a Free Call
               </a>
             </div>
-          </motion.div>
-
-          <p className="mt-6 text-sm text-brand-cream/65 leading-relaxed max-w-2xl">{routing.secondaryLine}</p>
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* ══ Actions footer ══ */}
       <section className="px-5 sm:px-6 py-12 md:py-16 print:hidden">
