@@ -26,9 +26,9 @@ FACE = HERE / "waleed-scrubs-desk.jpg"
 
 # ratio -> (w, h, pad, text_width_pct, badge_px)
 RATIOS = {
-    "1x1":  (1080, 1080, 70, 100, 400),
-    "9x16": (1080, 1920, 80,  80, 560),
-    "191":  (1200,  628, 55, 100, 470),
+    "1x1":  (1080, 1080, 70,  94, 360),
+    "9x16": (1080, 1920, 80,  86, 400),
+    "191":  (1200,  628, 55,  94, 330),
 }
 
 TPL = """<!DOCTYPE html><html><head><meta charset="utf-8"><style>
@@ -39,9 +39,9 @@ html,body {{ width:{w}px; height:{h}px; overflow:hidden; }}
       font-family:-apple-system,'Helvetica Neue',Arial,sans-serif; }}
 #box {{ width:{bw}px; height:{bh}px; overflow:hidden;
       display:flex; align-items:center; justify-content:center; }}
-#t {{ font-weight:900; line-height:1.14; color:#111111; text-align:center;
-      max-width:{tw}%; }}
-mark {{ background:#ffe872; padding:0 12px; }}
+#t {{ font-weight:900; line-height:1.16; color:#111111; text-align:center;
+      text-wrap:balance; }}
+mark {{ background:#E7E0F4; color:#111111; padding:0.03em 0.16em; border-radius:0.16em; box-decoration-break:clone; -webkit-box-decoration-break:clone; }}
 .nb {{ white-space:nowrap; }}
 .badge {{ width:{bd}px; height:{bd}px; border-radius:50%; flex:none;
       border:10px solid #111111; background-image:url('{face}');
@@ -58,7 +58,7 @@ mark {{ background:#ffe872; padding:0 12px; }}
     t.style.fontSize=mid+'px';
     if(t.scrollHeight<=box.clientHeight && t.scrollWidth<=box.clientWidth) lo=mid; else hi=mid;
   }}
-  t.style.fontSize=lo+'px';
+  t.style.fontSize=(lo*0.92)+'px';
 }})();
 </script></body></html>"""
 
@@ -113,8 +113,8 @@ for slug, pre, key, suf, styles in ROWS:
             else:
                 dir_, bw, bh = "column", inner_w, inner_h - bd - gap
                 badge = '<div class="badge"></div>'
-            html = TPL.format(w=w, h=h, pad=pad, dir=dir_, gap=gap, bw=bw, bh=bh,
-                              tw=tw if not face else 100, bd=bd,
+            bw = int(bw * tw / 100)
+            html = TPL.format(w=w, h=h, pad=pad, dir=dir_, gap=gap, bw=bw, bh=bh, bd=bd,
                               bgs=235, bgp="53% 17%", face=FACE.as_uri(),
                               text=text, badge=badge)
             render(html, OUT / f"{slug}-{style}-{ratio}.png", w, h)
