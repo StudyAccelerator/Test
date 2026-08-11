@@ -21,7 +21,8 @@ over 1,000 A-level students, the diagnostic's real mechanics).
 - B. Find out where the study hours are going
 - C. Which revision profile is your child?
 
-**Description:** 20 questions, 3 minutes, instant report.
+**Description:** 20 questions, 4 minutes, instant report.
+(4 minutes, not 3: it matches the diagnostic page itself and Waleed's 5 Aug copy. Promising 3 and delivering 4 is a small trust leak at the exact moment of decision.)
 
 ---
 
@@ -204,3 +205,68 @@ strongest with 01-general and the face variants.
 
 (In Ads Manager use the real cross and check emoji, not the [X]/[OK] placeholders:
 this repo file avoids emoji so the compliance tooling stays quiet.)
+
+---
+
+## PRIMARY TEXT 7: WALEED'S OWN VERSION (5 August 2026) - USE THIS ONE
+
+His rewrite of Primary Text 6. This is the current approved long copy for the diagnostic
+funnel. Paste verbatim into the Primary text box. Headline, description, button and URL
+are unchanged from the top of this file.
+
+> Parents of Year 12 and 13: if your child is aiming for As and A*s, read this.
+>
+> I'm Dr Waleed Ahmad, an NHS doctor and founder of A-Level Accelerators. Over the past 6 years, I have worked with over 1,000 A-level students, helped them achieve top grades and get into their dream university.
+>
+> Right now, if you're finding your child is:
+>
+> [X] Overwhelmed by the sheer amount of A-level content
+> [X] Revising for hours but the grades haven't changed
+> [X] Running out of time in every paper they sit
+> [X] Rereading and highlighting notes because nobody ever taught them anything better
+> [X] Working hard all week with no actual plan behind it
+>
+> Then I built something for you, and it's completely free!
+>
+> Here's the truth about A-levels: they're designed to spread students out. Nationally, fewer than 10% of students come out with an A*. The difference between the students who get there and the ones who don't is almost never ability. It's method.
+>
+> But you can't fix a method until you know exactly where it's breaking down.
+>
+> That's why I built the Revision Diagnostic. Doctors don't finalise treatment before they diagnose, and revision shouldn't work any differently.
+>
+> It takes about 4 minutes. You answer 20 questions about how your child actually revises, and you get an instant report showing:
+>
+> [OK] Why your child isn't achieving A/A* grades
+> [OK] How many of their weekly study hours are going into wasted low-yield work
+> [OK] Where the marks are being lost, and the first thing to change
+> [OK] A personalised doctor's plan, based on their answers and focusing on how to maximise their grades
+>
+> It's completely free, and you'll receive the full report instantly
+>
+> Every delayed day is another day your child spends revising ineffectively. Don't wait for the next poor test result. Optimise their revision now.
+>
+> Tap Learn More and see how to help your child get A/A* grades.
+>
+> Dr Waleed Ahmad
+> NHS Doctor
+> Founder of A-Level Accelerators
+
+(Use the real cross and tick emoji in Ads Manager, not the [X]/[OK] placeholders.)
+
+### Flags raised with Waleed on 5 August, his call on each
+
+1. **The A* statistic is imprecise as written.** "Fewer than 10% of students come out with
+   an A*" is not what the national data says. Around 9% of A-level ENTRIES are graded A*,
+   but a student sits three or four entries, so the share of STUDENTS achieving at least
+   one A* is meaningfully higher than 10%. Accurate rewrites: "fewer than 1 in 10 A-level
+   entries are graded A*" or "only around 9% of A-level entries come out as an A*".
+   Invented or inaccurate statistics remain a hard rule; this one is a wording fix.
+2. **"Why your child isn't achieving A/A* grades" asserts a fact about the reader's child.**
+   Meta's personal-attributes policy is the usual reason education ads get rejected, and
+   assertions land worse than questions. Lower-risk phrasing with the same punch:
+   "What's stopping your child from hitting A/A* grades".
+3. **Results claim noted, not blocked** (per the 5 August rule change): "helped them
+   achieve top grades and get into their dream university" is an outcome claim made
+   before results data exists. Waleed's commercial decision, recorded here.
+4. Two small typos in the original: no full stop after "you'll receive the full report
+   instantly", and a trailing space after "Optimise their revision now."
