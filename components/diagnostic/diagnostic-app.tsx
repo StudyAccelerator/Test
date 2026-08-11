@@ -2,7 +2,8 @@
 
 import { useCallback, useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
-import { AnimatePresence, motion } from 'framer-motion'
+import { motion } from 'framer-motion'
+import { GraduationCap, Users } from 'lucide-react'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
@@ -33,7 +34,12 @@ declare global {
 const EASE = [0.22, 1, 0.36, 1] as const
 const CARD =
   'rounded-2xl bg-white [box-shadow:0_0_0_1px_rgba(46,37,87,.05),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)]'
-const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60'
+const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/70'
+/* Branded keyboard focus rings, offset-matched to the surface they sit on */
+const FOCUS_CREAM =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream'
+const FOCUS_DARK =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-[#241d47]'
 
 type Stage = 'intro' | 'fork' | 'quiz' | 'analysing' | 'gate' | 'report'
 
@@ -238,7 +244,7 @@ function Fork({ onChoose, onExit }: { onChoose: (t: Taker) => void; onExit: () =
         <button
           type="button"
           onClick={onExit}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple/60 hover:text-brand-purple transition -ml-1 px-1 py-1"
+          className={`inline-flex items-center gap-1.5 rounded-md text-sm font-semibold text-brand-purple/70 hover:text-brand-purple transition -ml-1 px-1 py-1 ${FOCUS_CREAM}`}
         >
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
             <path d="M15 18l-6-6 6-6" />
@@ -257,46 +263,46 @@ function Fork({ onChoose, onExit }: { onChoose: (t: Taker) => void; onExit: () =
           <h1 className="font-serif font-bold tracking-tight text-3xl sm:text-4xl text-brand-purple text-center leading-tight">
             Who&apos;s taking this?
           </h1>
-          <p className="mt-3 text-center text-brand-text/60 leading-relaxed max-w-md mx-auto">
+          <p className="mt-3 text-center text-brand-text/70 leading-relaxed max-w-md mx-auto">
             Same diagnosis either way. The questions are just written for whoever&apos;s answering.
           </p>
           <div className="mt-9 grid sm:grid-cols-2 gap-4">
             <button
               type="button"
               onClick={() => onChoose('student')}
-              className={`${CARD} group p-6 sm:p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.6),0_16px_32px_rgba(46,37,87,.14)]`}
+              className={`${CARD} group p-6 sm:p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.6),0_16px_32px_rgba(46,37,87,.14)] ${FOCUS_CREAM}`}
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-purple/[0.07] text-xl" aria-hidden="true">
-                🎓
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-purple/[0.07]" aria-hidden="true">
+                <GraduationCap className="h-6 w-6 text-brand-purple" strokeWidth={2} />
               </span>
-              <h2 className="mt-4 font-serif font-bold text-2xl text-brand-purple">I&apos;m the student</h2>
-              <p className="mt-2 text-[15px] text-brand-text/65 leading-relaxed">
+              <span className="mt-4 block font-serif font-bold text-2xl text-brand-purple">I&apos;m the student</span>
+              <p className="mt-2 text-[15px] text-brand-text/70 leading-relaxed">
                 Taking A-levels and want to know where your marks are leaking.
               </p>
-              <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand-gold">
+              <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 group-hover:decoration-brand-gold">
                 Start my diagnostic
-                <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                <span aria-hidden="true" className="text-brand-gold transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </span>
             </button>
             <button
               type="button"
               onClick={() => onChoose('parent')}
-              className={`${CARD} group p-6 sm:p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.6),0_16px_32px_rgba(46,37,87,.14)]`}
+              className={`${CARD} group p-6 sm:p-7 text-left transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.6),0_16px_32px_rgba(46,37,87,.14)] ${FOCUS_CREAM}`}
             >
-              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/15 text-xl" aria-hidden="true">
-                👨‍👧
+              <span className="inline-flex h-11 w-11 items-center justify-center rounded-xl bg-brand-gold/15" aria-hidden="true">
+                <Users className="h-6 w-6 text-brand-purple" strokeWidth={2} />
               </span>
-              <h2 className="mt-4 font-serif font-bold text-2xl text-brand-purple">I&apos;m a parent</h2>
-              <p className="mt-2 text-[15px] text-brand-text/65 leading-relaxed">
+              <span className="mt-4 block font-serif font-bold text-2xl text-brand-purple">I&apos;m a parent</span>
+              <p className="mt-2 text-[15px] text-brand-text/70 leading-relaxed">
                 Watching your child work hard for grades that don&apos;t show it.
               </p>
-              <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand-gold">
+              <span className="mt-4 inline-flex items-center gap-1.5 font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 group-hover:decoration-brand-gold">
                 Start the diagnostic
-                <span aria-hidden="true" className="transition-transform duration-200 group-hover:translate-x-0.5">→</span>
+                <span aria-hidden="true" className="text-brand-gold transition-transform duration-200 group-hover:translate-x-0.5">→</span>
               </span>
             </button>
           </div>
-          <p className="mt-6 text-center text-sm text-brand-text/50 leading-relaxed max-w-md mx-auto">
+          <p className="mt-6 text-center text-sm text-brand-text/65 leading-relaxed max-w-md mx-auto">
             Parents: it works best with your teenager next to you, but answering from what you see day to day works too.
           </p>
         </motion.div>
@@ -441,7 +447,7 @@ function Landing({
                 Even though you&apos;re putting the work in, or watching your teenager put it in night after
                 night? Effort was never the problem. Where it goes is.
               </p>
-              <p className="mt-4 text-base md:text-lg text-brand-text/65 leading-relaxed max-w-xl">
+              <p className="mt-4 text-base md:text-lg text-brand-text/75 leading-relaxed max-w-xl">
                 20 honest questions. About 4 minutes. The diagnostic finds exactly where the marks are leaking,
                 then hands you the revision profile behind it and a plan for what to fix first.
               </p>
@@ -451,7 +457,7 @@ function Landing({
                 <button
                   type="button"
                   onClick={onStart}
-                  className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+                  className={`inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-4 text-lg font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all ${FOCUS_CREAM}`}
                 >
                   {resumeCount > 0
                     ? `Resume my diagnostic (${resumeCount} of ${QUESTIONS.length} done)`
@@ -461,7 +467,7 @@ function Landing({
                   <span aria-hidden="true" className="ml-2">→</span>
                 </button>
               </div>
-              <p className="mt-4 text-sm text-brand-text/55">
+              <p className="mt-4 text-sm text-brand-text/70">
                 No right answers. Just honest ones. Students and parents each get their own version: you
                 choose at the start.
               </p>
@@ -487,7 +493,7 @@ function Landing({
                 />
                 <div className="leading-tight">
                   <p className="text-sm font-bold text-brand-purple">Dr Waleed Ahmad, MBBS</p>
-                  <p className="text-xs text-brand-text/60">NHS doctor · founder, A-Level Accelerators</p>
+                  <p className="text-xs text-brand-text/70">NHS doctor · founder, A-Level Accelerators</p>
                 </div>
               </div>
               <div aria-hidden="true" className="hidden sm:block h-10 w-px bg-brand-purple/10" />
@@ -514,7 +520,7 @@ function Landing({
                     {stat}
                   </p>
                   <p className="mt-2 font-bold text-brand-purple text-[15px] md:text-base leading-snug">{lead}</p>
-                  <p className="mt-1.5 text-sm text-brand-text/60 leading-relaxed">{caption}</p>
+                  <p className="mt-1.5 text-sm text-brand-text/70 leading-relaxed">{caption}</p>
                 </div>
               ))}
             </div>
@@ -627,7 +633,7 @@ function Landing({
                 </span>
               ))}
             </div>
-            <p className="mt-6 text-brand-text/60 max-w-xl mx-auto">
+            <p className="mt-6 text-brand-text/70 max-w-xl mx-auto">
               I was three of these at different points of Year 13. Each one leaks marks in a different place, and
               each one has a different fix.
             </p>
@@ -693,7 +699,7 @@ function Landing({
             <button
               type="button"
               onClick={onStart}
-              className="mt-8 inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-9 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
+              className="mt-8 inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-9 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-cream focus-visible:ring-offset-2 focus-visible:ring-offset-brand-purple"
             >
               Start the free diagnostic
             </button>
@@ -748,19 +754,21 @@ function Analysing({ onDone }: { onDone: () => void }) {
           </div>
         </motion.div>
         <h2 className="mt-8 font-serif font-bold text-2xl text-brand-cream">Running your diagnostic</h2>
-        <ul className="mt-7 space-y-3 text-left">
+        <ul className="mt-7 space-y-3 text-left" role="status" aria-live="polite">
           {ANALYSIS_STEPS.map((label, i) => {
             const done = step > i
             const active = step === i
             return (
               <li key={label} className="flex items-center gap-3">
                 <span
-                  className={`flex h-5 w-5 items-center justify-center rounded-full text-[10px] font-bold transition-all duration-300 ${
+                  className={`flex h-5 w-5 items-center justify-center rounded-full transition-all duration-300 ${
                     done ? 'bg-brand-gold text-brand-purple' : active ? 'border border-brand-gold/70 text-transparent' : 'border border-white/15 text-transparent'
                   }`}
                   aria-hidden="true"
                 >
-                  ✓
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" className="h-3 w-3">
+                    <path d="M5 13l4 4L19 7" />
+                  </svg>
                 </span>
                 <span className={`text-[15px] transition-colors duration-300 ${done ? 'text-brand-cream' : active ? 'text-brand-cream/85' : 'text-brand-cream/35'}`}>
                   {label}
@@ -930,6 +938,13 @@ function EmailGate({
           transition={{ duration: 0.7, ease: EASE, delay: 0.12 }}
         >
           <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">Diagnostic complete</p>
+          {/* On phones the sealed preview is hidden, so keep what is being unlocked visible */}
+          <div className="mt-4 flex md:hidden flex-wrap items-center gap-2" aria-hidden="true">
+            <span className="rounded-full border border-brand-gold/50 px-3 py-1 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-gold">
+              Sealed
+            </span>
+            <span className="text-sm text-brand-cream/75">Profile · five scores · 7 day plan</span>
+          </div>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl sm:text-4xl text-brand-cream leading-tight">
             {isParent ? 'Their report is ready.' : 'Your report is ready.'}
           </h2>
@@ -952,7 +967,7 @@ function EmailGate({
                 maxLength={30}
                 autoComplete="given-name"
                 placeholder={isParent ? 'e.g. Sarah' : 'e.g. Waleed'}
-                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
+                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:border-brand-gold transition"
               />
             </div>
             {isParent && (
@@ -967,7 +982,7 @@ function EmailGate({
                   required
                   maxLength={30}
                   placeholder="So the report and plan are about them by name"
-                  className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
+                  className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:border-brand-gold transition"
                 />
               </div>
             )}
@@ -983,7 +998,7 @@ function EmailGate({
                 maxLength={100}
                 autoComplete="email"
                 placeholder="your@email.com"
-                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
+                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:border-brand-gold transition"
               />
             </div>
             <div>
@@ -998,9 +1013,9 @@ function EmailGate({
                 maxLength={20}
                 autoComplete="tel"
                 placeholder="07..."
-                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
+                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:border-brand-gold transition"
               />
-              <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
+              <p className="mt-1.5 text-xs text-brand-cream/65 leading-relaxed">
                 {isParent
                   ? "Add it if you'd like to talk through where your child's grades are now and where they need to be."
                   : "Add one if you'd like to talk the report through. Used for that, nothing else."}
@@ -1020,7 +1035,7 @@ function EmailGate({
                     ? 'Anything my questions missed: exam boards, school situation, what you have already tried.'
                     : 'Anything my questions missed: exam boards, retakes, school situation, anything.'
                 }
-                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition resize-none"
+                className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3 text-brand-cream placeholder:text-brand-cream/50 focus:outline-none focus:border-brand-gold transition resize-none"
               />
             </div>
 
@@ -1033,11 +1048,11 @@ function EmailGate({
             <button
               type="submit"
               disabled={submitting}
-              className="w-full rounded-full bg-brand-gold text-brand-purple px-8 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-[0_12px_28px_rgba(201,169,110,.35)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+              className={`w-full rounded-full bg-brand-gold text-brand-purple px-8 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-[0_12px_28px_rgba(201,169,110,.35)] disabled:opacity-60 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${FOCUS_DARK}`}
             >
               {submitting ? 'Unsealing the report…' : isParent ? 'Show me the report' : 'Show my report'}
             </button>
-            <p className="text-xs text-brand-cream/50 leading-relaxed">
+            <p className="text-xs text-brand-cream/65 leading-relaxed">
               {isParent
                 ? "Free, and stays free. You will also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."
                 : "Free, and stays free. You will also get Dr Waleed's revision emails: the fixes from your report, one at a time, then one a week. Unsubscribe any time."}

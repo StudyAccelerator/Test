@@ -17,6 +17,23 @@ import {
 
 const EASE = [0.22, 1, 0.36, 1] as const
 const LETTERS = 'ABCDEFGHIJKL'
+/* Branded keyboard focus: visible gold ring instead of the browser default */
+const FOCUS_RING =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream'
+
+/* First question index of each section after the first: tick marks on the bar */
+const SECTION_STARTS = QUESTIONS.reduce<number[]>((acc, q, i) => {
+  if (i > 0 && q.section !== QUESTIONS[i - 1].section) acc.push(i)
+  return acc
+}, [])
+
+function CheckIcon({ className }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" className={className} aria-hidden="true">
+      <path d="M5 13l4 4L19 7" />
+    </svg>
+  )
+}
 
 interface QuizProps {
   answers: Answers
@@ -140,27 +157,43 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
             <button
               type="button"
               onClick={goBack}
-              className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple/60 hover:text-brand-purple transition -ml-1 px-1 py-1"
+              className={`inline-flex items-center gap-1.5 rounded-md text-sm font-semibold text-brand-purple/70 hover:text-brand-purple transition -ml-1 px-1 py-1 ${FOCUS_RING}`}
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
                 <path d="M15 18l-6-6 6-6" />
               </svg>
               Back
             </button>
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55">
+            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/65">
               {(taker === 'parent' ? SECTIONS_PARENT : SECTIONS)[question.section]}
             </p>
-            <p className="font-mono text-[11px] tracking-[0.08em] text-brand-purple/55 tabular-nums">
+            <p className="font-mono text-[11px] tracking-[0.08em] text-brand-purple/65 tabular-nums">
               {String(index + 1).padStart(2, '0')} / {total}
             </p>
           </div>
-          <div className="mt-3 h-1 rounded-full bg-brand-purple/10 overflow-hidden" role="progressbar" aria-valuenow={index + 1} aria-valuemin={1} aria-valuemax={total}>
+          <div
+            className="relative mt-3 h-1 rounded-full bg-brand-purple/10"
+            role="progressbar"
+            aria-label={`Question ${index + 1} of ${total}`}
+            aria-valuenow={index + 1}
+            aria-valuemin={1}
+            aria-valuemax={total}
+          >
             <motion.div
               className="h-full rounded-full bg-gradient-to-r from-brand-gold to-brand-gold-light"
               initial={false}
               animate={{ width: `${Math.max(3, progress * 100)}%` }}
               transition={{ duration: 0.45, ease: EASE }}
             />
+            {/* Section boundaries, so the 20 questions read as five short stretches */}
+            {SECTION_STARTS.map((start) => (
+              <span
+                key={start}
+                aria-hidden="true"
+                className="absolute top-1/2 -translate-y-1/2 h-2 w-px bg-brand-purple/25"
+                style={{ left: `${(start / total) * 100}%` }}
+              />
+            ))}
           </div>
         </div>
       </div>
@@ -191,12 +224,12 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                 {qTitle(question, taker)}
               </h2>
               {qHelp(question, taker) && (
-                <p className="mt-3 text-brand-text/60 leading-relaxed">{qHelp(question, taker)}</p>
+                <p className="mt-3 text-brand-text/70 leading-relaxed">{qHelp(question, taker)}</p>
               )}
 
               {/* Options */}
               {question.layout === 'chips' ? (
-                <div className="mt-8 flex flex-wrap gap-2.5">
+                <div className="mt-8 flex flex-wrap gap-2.5" role="group" aria-label={qTitle(question, taker)}>
                   {options.map((opt) => {
                     const selected =
                       question.type === 'multi'
@@ -208,7 +241,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                         type="button"
                         onClick={() => (question.type === 'multi' ? toggleMulti(opt.id) : pickSingle(opt.id))}
                         aria-pressed={selected}
-                        className={`group inline-flex items-center gap-2 rounded-full border-2 px-5 py-3 text-[15px] font-semibold transition-all duration-150 ${
+                        className={`group inline-flex items-center gap-2 rounded-full border-2 px-5 py-3 text-[15px] font-semibold transition-all duration-150 ${FOCUS_RING} ${
                           selected
                             ? 'border-brand-purple bg-brand-purple text-brand-cream shadow-[0_6px_16px_rgba(46,37,87,.25)]'
                             : 'border-brand-purple/15 bg-white text-brand-purple hover:border-brand-gold hover:-translate-y-0.5 hover:shadow-[0_6px_14px_rgba(46,37,87,.1)]'
@@ -217,11 +250,11 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                         {question.type === 'multi' && (
                           <span
                             aria-hidden="true"
-                            className={`flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 text-[10px] transition ${
+                            className={`flex h-[18px] w-[18px] items-center justify-center rounded-full border-2 transition ${
                               selected ? 'border-brand-gold bg-brand-gold text-brand-purple' : 'border-brand-purple/25 text-transparent'
                             }`}
                           >
-                            ✓
+                            <CheckIcon className="h-2.5 w-2.5" />
                           </span>
                         )}
                         {oLabel(opt, taker)}
@@ -239,7 +272,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                         type="button"
                         onClick={() => pickSingle(opt.id)}
                         aria-pressed={selected}
-                        className={`group flex w-full items-center gap-4 rounded-2xl border-2 px-5 py-4 text-left transition-all duration-150 ${
+                        className={`group flex w-full items-center gap-4 rounded-2xl border-2 px-5 py-4 text-left transition-all duration-150 ${FOCUS_RING} ${
                           selected
                             ? 'border-brand-purple bg-brand-purple shadow-[0_10px_24px_rgba(46,37,87,.3)]'
                             : 'border-transparent bg-white [box-shadow:0_0_0_1px_rgba(46,37,87,.07),0_2px_4px_rgba(46,37,87,.04),0_10px_20px_rgba(46,37,87,.05)] hover:-translate-y-0.5 hover:[box-shadow:0_0_0_2px_rgba(201,169,110,.6),0_8px_18px_rgba(46,37,87,.12)]'
@@ -260,7 +293,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                             {oLabel(opt, taker)}
                           </span>
                           {oDetail(opt, taker) && (
-                            <span className={`mt-0.5 block text-sm leading-snug ${selected ? 'text-brand-cream/70' : 'text-brand-text/55'}`}>
+                            <span className={`mt-0.5 block text-sm leading-snug ${selected ? 'text-brand-cream/80' : 'text-brand-text/70'}`}>
                               {oDetail(opt, taker)}
                             </span>
                           )}
@@ -278,12 +311,12 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                     type="button"
                     onClick={goNext}
                     disabled={!multiReady}
-                    className="inline-flex items-center gap-2 rounded-full bg-brand-purple text-brand-cream px-8 py-3.5 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0"
+                    className={`inline-flex items-center gap-2 rounded-full bg-brand-purple text-brand-cream px-8 py-3.5 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0 ${FOCUS_RING}`}
                   >
                     Continue
                     <span aria-hidden="true">→</span>
                   </button>
-                  <p className="mt-3 text-sm text-brand-text/50">
+                  <p className="mt-3 text-sm text-brand-text/70" aria-live="polite">
                     {multiSelection.length === 0
                       ? 'Pick at least one subject'
                       : `${multiSelection.length} selected`}
@@ -291,7 +324,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                 </div>
               )}
 
-              <p className="mt-10 hidden sm:block font-mono text-[11px] tracking-[0.08em] text-brand-purple/35">
+              <p className="mt-10 hidden sm:block font-mono text-[11px] tracking-[0.08em] text-brand-purple/60">
                 Keys 1 to {Math.min(options.length, 9)} to answer
                 {question.type === 'multi' ? ' · Enter to continue' : ''} · Esc to go back
               </p>

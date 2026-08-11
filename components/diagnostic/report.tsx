@@ -16,7 +16,12 @@ import {
 const EASE = [0.22, 1, 0.36, 1] as const
 const CARD =
   'rounded-2xl bg-white [box-shadow:0_0_0_1px_rgba(46,37,87,.05),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)]'
-const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60'
+const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/70'
+/* Branded keyboard focus rings */
+const FOCUS_WHITE =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-white'
+const FOCUS_CREAM =
+  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-brand-gold focus-visible:ring-offset-2 focus-visible:ring-offset-brand-cream'
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
 
 const TONE_CHIP: Record<string, string> = {
@@ -281,10 +286,10 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                     </div>
                     <p className="font-serif font-bold text-2xl text-brand-purple tabular-nums">
                       <CountUp value={scores[d]} />
-                      <span className="text-sm text-brand-purple/40 font-sans font-semibold"> /100</span>
+                      <span className="text-sm text-brand-purple/60 font-sans font-semibold"> /100</span>
                     </p>
                   </div>
-                  <p className="mt-1 text-sm text-brand-text/55 italic">
+                  <p className="mt-1 text-sm text-brand-text/70 italic">
                     {isParent ? DIM_META[d].questionParent : DIM_META[d].question}
                   </p>
                   <div className="mt-3 h-2 rounded-full bg-brand-purple/[0.08] overflow-hidden">
@@ -317,7 +322,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         }
       >
         <div className={`${CARD} p-6 md:p-8`}>
-          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/50">
+          <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/70">
             A typical week, based on your answers
           </p>
           <div className="mt-5 flex flex-wrap gap-1.5" aria-hidden="true">
@@ -361,7 +366,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               <span className="italic text-brand-gold">feels</span> productive but scores very little.</>
             )}
           </p>
-          <p className="mt-3 text-sm text-brand-text/55 leading-relaxed">
+          <p className="mt-3 text-sm text-brand-text/70 leading-relaxed">
             {isParent
               ? 'Based on what you told us about their default methods. The point is not more hours. It is making the same hours score.'
               : 'Based on what you told us about your default methods. The point is not to study more hours. It is to make the same hours score.'}
@@ -404,14 +409,14 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
           <div className="mt-6 flex flex-wrap gap-x-6 gap-y-2 text-sm">
             <a
               href={`/blog/${prescription.articleSlug}/`}
-              className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
+              className={`rounded-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:decoration-brand-gold transition ${FOCUS_CREAM}`}
             >
               Read: {prescription.articleTitle}
             </a>
             {prescription.blurtingTemplate && (
               <a
                 href="/A-Level-Accelerators-Blurting-Template.pdf"
-                className="font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
+                className={`rounded-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:decoration-brand-gold transition ${FOCUS_CREAM}`}
               >
                 Download the free blurting template
               </a>
@@ -438,13 +443,13 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               className="relative pl-8 pb-8 last:pb-0"
             >
               <span aria-hidden="true" className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-brand-gold ring-4 ring-brand-cream" />
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/50">{item.day}</p>
+              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/70">{item.day}</p>
               <h3 className="mt-1 font-serif font-bold text-lg text-brand-purple">{item.task}</h3>
               <p className="mt-1 text-[15px] text-brand-text/70 leading-relaxed max-w-xl">{item.detail}</p>
               {item.task === 'Build next week properly' && (
                 <a
                   href="/revision-tracker/"
-                  className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
+                  className={`mt-2 inline-flex items-center gap-1.5 rounded-sm text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:decoration-brand-gold transition ${FOCUS_CREAM}`}
                 >
                   Open the free Revision Tracker
                   <span aria-hidden="true">→</span>
@@ -475,7 +480,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               <span className="rounded-full bg-brand-gold text-brand-purple text-xs font-bold px-3 py-1.5">
                 {isParent ? 'Matched to their diagnosis' : 'Matched to your diagnosis'}
               </span>
-              <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/50">{routing.primary.meta}</span>
+              <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/70">{routing.primary.meta}</span>
             </div>
             <h3 className="mt-4 font-serif font-bold text-3xl md:text-4xl text-brand-purple">{routing.primary.name}</h3>
             <p className="mt-2 font-serif italic text-lg text-brand-gold leading-snug">{routing.primary.strap}</p>
@@ -493,7 +498,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
             <div className="mt-7 flex flex-col sm:flex-row gap-3">
               <a
                 href={routing.primary.href}
-                className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+                className={`inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all ${FOCUS_WHITE}`}
               >
                 {routing.primary.cta}
                 <span aria-hidden="true" className="ml-2">→</span>
@@ -502,14 +507,14 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 href={BOOK_A_CALL_LINK}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex justify-center items-center rounded-full border-2 border-brand-purple/20 text-brand-purple px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
+                className={`inline-flex justify-center items-center rounded-full border-2 border-brand-purple/30 text-brand-purple px-8 py-4 font-semibold hover:border-brand-gold transition-all ${FOCUS_WHITE}`}
               >
                 Book a Free Call Instead
               </a>
             </div>
           </motion.div>
 
-          <p className="mt-6 text-sm text-brand-cream/65 leading-relaxed max-w-2xl">{routing.secondaryLine}</p>
+          <p className="mt-6 text-sm text-brand-cream/75 leading-relaxed max-w-2xl">{routing.secondaryLine}</p>
         </div>
       </section>
 
@@ -520,7 +525,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
             <div className="flex flex-col sm:flex-row sm:items-center gap-5 sm:gap-8">
               <div className="flex-1">
                 <h3 className="font-serif font-bold text-xl text-brand-purple">Keep your report</h3>
-                <p className="mt-1 text-sm text-brand-text/60 leading-relaxed">
+                <p className="mt-1 text-sm text-brand-text/70 leading-relaxed">
                   Download your profile card, or come back any time: this page remembers your result on this device.
                 </p>
               </div>
@@ -529,21 +534,21 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                   type="button"
                   onClick={downloadCard}
                   disabled={downloading}
-                  className="inline-flex items-center gap-2 rounded-full bg-brand-gold text-brand-purple px-6 py-3 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all disabled:opacity-60"
+                  className={`inline-flex items-center gap-2 rounded-full bg-brand-gold text-brand-purple px-6 py-3 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all disabled:opacity-60 ${FOCUS_WHITE}`}
                 >
                   {downloading ? 'Preparing…' : 'Download my card'}
                 </button>
                 <button
                   type="button"
                   onClick={onRetake}
-                  className="inline-flex items-center rounded-full border-2 border-brand-purple/20 text-brand-purple px-6 py-3 font-semibold hover:border-brand-gold hover:text-brand-gold transition"
+                  className={`inline-flex items-center rounded-full border-2 border-brand-purple/30 text-brand-purple px-6 py-3 font-semibold hover:border-brand-gold transition ${FOCUS_WHITE}`}
                 >
                   Retake
                 </button>
               </div>
             </div>
           </div>
-          <p className="mt-6 text-center text-sm text-brand-text/55">
+          <p className="mt-6 text-center text-sm text-brand-text/70">
             {isParent
               ? "Read it with them. It starts a better conversation than asking whether they've revised."
               : 'Share it with whoever pays for things in your house.'}
