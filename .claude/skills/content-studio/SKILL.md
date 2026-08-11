@@ -51,7 +51,7 @@ Every blog article is produced twice: the website version (published to the repo
 
 ## Do not
 
-- Do not invent statistics, student results, or grade outcomes. Approved proof points are in `references/audience-and-offers.md`. If asked for a claim we can't back, say so.
+- Do not invent statistics or fabricate student results. Approved proof points are in `references/audience-and-offers.md`. Grade-outcome and guarantee claims in ADS are Waleed's commercial decision (ruled 5 August 2026): write what he asks, flag the risk once, then proceed rather than refusing.
 - Do not use the marketplace framing "we match you with a tutor." We teach, in small groups.
 - Do not put external links in the body of LinkedIn or Facebook posts.
 - Do not reuse the same hook structure ("Be honest, which one is you?") repeatedly | vary the openings. The real hook library with sourced metrics is `content-hq/data/hooks.json` (fallback: `content-hq/seed/hooks.json`).
