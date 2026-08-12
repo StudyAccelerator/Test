@@ -92,3 +92,17 @@ Volume jumped from 26 to 70 links, but the report is a regression on two standin
 **Quality mix unchanged:** "Local Work" and "Thematics" are generic profile pages on unrelated sites (a car show site, a therapy directory, a weather research forum, a design school), the pattern the 28 July brief asked her to stop. Zero real placements again.
 
 Reply drafted 11 August (supersedes the 8 August draft; the two were merged): address removal first and confirmed before any new listings, non-www restated with trailing-slash examples, double-counting flagged, quality-over-count restated, and next week's articles switch to the results-day pieces before Thursday 13 August.
+
+## Round 5: the Google Drive on-page folder (reviewed 12 August)
+
+Pragya consolidated her on-page suggestion documents into one Drive folder (13 files, same titles as the 20 July and 1 August deliveries) and asked whether the changes have been made. Full read of every suggestion document on 12 August. Verdict: **nothing in the folder requires a site change.** Everything valid was already shipped, everything else was declined with recorded reasons in rounds 1 and 2.
+
+**Partially refreshed:** the Home Page Optimization doc, Heading Structure doc, Non Target Pages doc and AI SEO Audit now describe the CURRENT site (post 2 August deploys: correct homepage meta, September 9 cohort date, current diagnostic copy), the first time her documents have worked from the real pages. Her own heading analysis now concludes the homepage and subject-accelerators H1s need no changes.
+
+**Still stale:** the target-pages Meta xlsx quotes the pre-redesign homepage; the New Pages doc still proposes contact, pricing, privacy and terms pages that have been live since 2 August; the tracker "missing H1" and "wrong meta description" findings and the /faqs/ doubled title were all checked against the live site on 12 August and are already correct (single H1, planner description, clean title). Standing rule 2 (her crawls lag; verify before acting) held again.
+
+**Still declined, same reasons:** homepage title/H1 replacement (protected brand copy); WebSite schema with SearchAction (no /search page exists; her suggested code even targets a nonexistent https://www.alevelaccelerators.com/search URL and mixes www @ids); downgrading EducationalOrganization to bare Organization; generic-SEO H1 rewrites on study-systems; trimming existing FAQ sections down to 6 to 8 questions (the 12-FAQ pages are deliberate); the GCSE FAQ (no GCSE product); her shorter diagnostic meta title (drops the hook).
+
+**Already implemented before this folder existed:** FAQ additions from her topic lists (batches 2 and 4), WebPage schema on /parents/, /faqs/ and /newsletter/ (batch 2), contact and pricing pages (live 2 August), privacy and terms (live 2 August), FAQ answers rendered in static HTML.
+
+Her AI audit still reports "10/100, never cited by AI platforms", which is contradicted by measured ground truth (107 Copilot citations, 63.64% citation share on "best ways to revise for A Level", GA4 AI Assistant channel recording sessions). Treat that scoring as her tool's sales template, not measurement.
