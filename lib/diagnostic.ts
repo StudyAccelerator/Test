@@ -1227,7 +1227,7 @@ export const LANDING_FAQS = [
   },
   {
     q: 'Is it actually free?',
-    a: 'Yes. The diagnostic, the report and the 7 day plan are free. You enter your email once, your report opens, and you also get my weekly revision email. Unsubscribe any time and the report stays yours.',
+    a: 'Yes. The diagnostic, the report and the 7 day plan are free. You enter your details once, your report opens, and you also get my weekly revision email. Unsubscribe any time and the report stays yours.',
   },
   {
     q: 'How long does it take?',

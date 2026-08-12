@@ -885,7 +885,6 @@ function EmailGate({
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
   const failCount = useRef(0)
-  const phoneWarned = useRef(false)
   const isParent = taker === 'parent'
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -910,15 +909,18 @@ function EmailGate({
       setError("That email doesn't look right. Check for typos.")
       return
     }
-    /* Phone stays optional and never blocks the report: one gentle nudge on a
-       number that looks mistyped, then the report opens regardless. */
+    /* Phone is required since 12 August 2026 (Waleed's call: he rings new
+       leads himself, and the number doubles as the bot check). */
     const phoneClean = phoneRaw.replace(/[\s().-]/g, '')
-    const phoneValid = phoneClean === '' || /^\+?\d{7,15}$/.test(phoneClean)
-    if (!phoneValid && !phoneWarned.current) {
-      phoneWarned.current = true
-      setError('That phone number looks incomplete. Fix it or clear the box. Your report opens either way.')
+    if (!phoneClean) {
+      setError("Add your phone number: it's how I know you're a real person and not a bot.")
       return
     }
+    if (!/^\+?\d{7,15}$/.test(phoneClean)) {
+      setError("That phone number doesn't look right. Check it and try again.")
+      return
+    }
+    const noContact = data.get('noContact') === 'on'
 
     setSubmitting(true)
     const d = diagnose(answers, taker)
@@ -926,7 +928,8 @@ function EmailGate({
     const result = await subscribeDiagnostic({
       email,
       name,
-      phone: phoneValid ? phoneClean : '',
+      phone: phoneClean,
+      noContact,
       taker,
       childName: isParent ? child : '',
       support: supportLabel(answers.support as string),
@@ -1066,23 +1069,34 @@ function EmailGate({
             </div>
             <div>
               <label htmlFor="diag-phone" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
-                Phone number <span className="font-normal text-brand-cream/50">(optional)</span>
+                Phone number
               </label>
               <input
                 id="diag-phone"
                 name="phone"
                 type="tel"
                 inputMode="tel"
+                required
                 maxLength={20}
                 autoComplete="tel"
                 placeholder="07..."
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
               <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
-                {isParent
-                  ? "Add it if you'd like to talk through where your child's grades are now and where they need to be."
-                  : "Add one if you'd like to talk the report through. Used for that, nothing else."}
+                Required: it confirms you&apos;re a real person, not a bot.
               </p>
+              <label
+                htmlFor="diag-nocontact"
+                className="mt-3 flex items-start gap-2.5 text-sm text-brand-cream/70 leading-snug cursor-pointer select-none"
+              >
+                <input
+                  id="diag-nocontact"
+                  name="noContact"
+                  type="checkbox"
+                  className="mt-0.5 h-4 w-4 shrink-0 rounded accent-brand-gold"
+                />
+                I&apos;d rather not be contacted to discuss the results of the report.
+              </label>
             </div>
             <div>
               <label htmlFor="diag-notes" className="block text-sm font-bold text-brand-cream/85 mb-1.5">

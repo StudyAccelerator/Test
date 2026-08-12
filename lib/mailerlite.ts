@@ -48,8 +48,12 @@ export function parentRouteGroupId(route: string): string {
 export interface DiagnosticSubscriber {
   email: string
   name: string
-  /* Optional at the gate: cleaned digits, or '' when not given */
+  /* Required at the gate since 12 August 2026 (Waleed's call: he rings new
+     leads). Cleaned digits. */
   phone: string
+  /* The gate's opt-out tick box: true means "do not contact me about the
+     report". Sent on every run as yes/no so the latest submission wins. */
+  noContact: boolean
   /* 'student' | 'parent': decided at the fork, drives which groups (and so
      which automations) the subscriber lands in */
   taker: string
@@ -102,6 +106,7 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
         fields: {
           ...optional,
           name: sub.name,
+          diag_no_contact: sub.noContact ? 'yes' : 'no',
           year_group: sub.yearGroup,
           subjects: sub.subjects,
           diag_worry_subject: sub.worrySubject,
