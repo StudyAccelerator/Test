@@ -28,6 +28,7 @@
 
 const { readFileSync } = require('fs')
 const { join } = require('path')
+const { waitUntil } = require('@vercel/functions')
 
 /* Shared-secret gate: MailerLite calls the URL with ?token=..., anyone without
    it gets a 401. Rotate by changing it here and re-registering the webhook. */
@@ -117,36 +118,46 @@ module.exports = async function handler(req, res) {
 
   const firstName = String(name).split(' ')[0]
   const stamp = new Date().toISOString().slice(0, 16).replace('T', ' ')
-  const auth = { Authorization: `Bearer ${mailerliteKey()}`, 'Content-Type': 'application/json' }
 
-  const create = await fetch('https://connect.mailerlite.com/api/campaigns', {
-    method: 'POST',
-    headers: auth,
-    body: JSON.stringify({
-      name: `Lead alert ${stamp}`,
-      type: 'regular',
-      groups: [ALERTS_GROUP],
-      emails: [
-        {
-          subject: `New lead: ${firstName}`,
-          from_name: 'A-Level Accelerators lead alerts',
-          from: 'waleed@alevelaccelerators.com',
-          content: `<html><body><p>${lines.join('</p><p>')}</p></body></html>`,
-        },
-      ],
-    }),
-  })
-  if (!create.ok) return res.status(500).json({ error: `campaign create ${create.status}` })
-  const created = await create.json()
-  const campaignId = created && created.data && created.data.id
+  /* Acknowledge BEFORE doing the slow work. A cold start plus two MailerLite
+     round trips overran their webhook timeout, they retried, and one signup
+     emailed Waleed twice (13 August 2026). The 200 goes back instantly and
+     waitUntil keeps the lambda alive to send the alert; a genuine send
+     failure is logged and caught by the daily digest failsafe Routine. */
+  res.status(200).json({ accepted: email })
 
-  const send = await fetch(`https://connect.mailerlite.com/api/campaigns/${campaignId}/schedule`, {
-    method: 'POST',
-    headers: auth,
-    body: JSON.stringify({ delivery: 'instant' }),
-  })
-  /* Non-2xx makes MailerLite retry the webhook, which retries the email */
-  if (!send.ok) return res.status(500).json({ error: `campaign schedule ${send.status}` })
-
-  return res.status(200).json({ alerted: email })
+  waitUntil(
+    (async () => {
+      const auth = { Authorization: `Bearer ${mailerliteKey()}`, 'Content-Type': 'application/json' }
+      const create = await fetch('https://connect.mailerlite.com/api/campaigns', {
+        method: 'POST',
+        headers: auth,
+        body: JSON.stringify({
+          name: `Lead alert ${stamp}`,
+          type: 'regular',
+          groups: [ALERTS_GROUP],
+          emails: [
+            {
+              subject: `New lead: ${firstName}`,
+              from_name: 'A-Level Accelerators lead alerts',
+              from: 'waleed@alevelaccelerators.com',
+              content: `<html><body><p>${lines.join('</p><p>')}</p></body></html>`,
+            },
+          ],
+        }),
+      })
+      if (!create.ok) throw new Error(`campaign create ${create.status}`)
+      const created = await create.json()
+      const campaignId = created && created.data && created.data.id
+      const send = await fetch(`https://connect.mailerlite.com/api/campaigns/${campaignId}/schedule`, {
+        method: 'POST',
+        headers: auth,
+        body: JSON.stringify({ delivery: 'instant' }),
+      })
+      if (!send.ok) throw new Error(`campaign schedule ${send.status}`)
+      console.log(`lead alert sent for ${email}`)
+    })().catch((err) => {
+      console.error(`lead alert FAILED for ${email}:`, err)
+    })
+  )
 }
