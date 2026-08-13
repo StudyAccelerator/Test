@@ -79,13 +79,18 @@ export default async function handler(req: any, res: any) {
   }
   if (f.subjects) lines.push(`Subjects: ${esc(String(f.subjects))}`)
   if (f.diag_worry_subject) lines.push(`Worry subject: ${esc(String(f.diag_worry_subject))}`)
-  if (f.diag_current_grade || f.diag_target_grade)
+  if (f.diag_grades) {
+    lines.push(`Grades: ${esc(String(f.diag_grades))}`)
+  } else if (f.diag_current_grade || f.diag_target_grade) {
     lines.push(`Grades: ${esc(String(f.diag_current_grade || '?'))} to ${esc(String(f.diag_target_grade || '?'))}`)
+  }
   if (f.diag_archetype) lines.push(`Profile: ${esc(String(f.diag_archetype))}`)
   if (f.diag_bottleneck) lines.push(`Biggest leak: ${esc(String(f.diag_bottleneck))}`)
   if (f.diag_route) lines.push(`Route: ${esc(String(f.diag_route))}`)
   if (f.diag_low_yield_hours) lines.push(`Wasted hours a week: ${esc(String(f.diag_low_yield_hours))}`)
   if (f.diag_support) lines.push(`Existing support: ${esc(String(f.diag_support))}`)
+  if (f.diag_support_detail) lines.push(`Support detail: ${esc(String(f.diag_support_detail))}`)
+  if (f.diag_support_needed) lines.push(`They want: ${esc(String(f.diag_support_needed))}`)
   if (f.diag_notes) lines.push(`Their note: ${esc(String(f.diag_notes))}`)
   lines.push(`Email: ${esc(email)}`)
 

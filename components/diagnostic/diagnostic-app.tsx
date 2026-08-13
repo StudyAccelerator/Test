@@ -16,9 +16,13 @@ import {
   QUESTIONS,
   Taker,
   diagnose,
-  gradeLabel,
+  gradesToString,
+  isAnswered,
   scoresToString,
+  supportDetailString,
   supportLabel,
+  supportNeededLabel,
+  worryGradeLabel,
   yearLabel,
 } from '@/lib/diagnostic'
 import { subscribeDiagnostic } from '@/lib/mailerlite'
@@ -69,7 +73,7 @@ function saveStored(s: Stored) {
   }
 }
 
-const allAnswered = (answers: Answers) => QUESTIONS.every((q) => answers[q.id] !== undefined)
+const allAnswered = (answers: Answers) => QUESTIONS.every((q) => isAnswered(q, answers))
 
 export default function DiagnosticApp() {
   const [stage, setStage] = useState<Stage>('intro')
@@ -126,12 +130,21 @@ export default function DiagnosticApp() {
     (id: string, value: string | string[]) => {
       setAnswers((prev) => {
         const next = { ...prev, [id]: value }
-        /* Changing subjects can invalidate the worry answer */
+        /* Changing subjects can invalidate the worry answer, per-subject
+           grades, and any tutored-subjects follow-up */
         if (id === 'subjects') {
-          const worry = next.worry as string | undefined
           const list = value as string[]
+          const worry = next.worry as string | undefined
           if (worry && worry !== 'unsure' && !list.includes(worry)) delete next.worry
+          for (const key of ['currentGrades', 'targetGrades'] as const) {
+            const pairs = next[key] as string[] | undefined
+            if (pairs) next[key] = pairs.filter((p) => list.includes(p.slice(0, p.lastIndexOf('|'))))
+          }
+          const detail = next.supportDetail
+          if (Array.isArray(detail)) next.supportDetail = detail.filter((s) => list.includes(s))
         }
+        /* A different support answer means the old follow-up no longer applies */
+        if (id === 'support') delete next.supportDetail
         persist({ answers: next, unlockedAt: null })
         return next
       })
@@ -933,13 +946,16 @@ function EmailGate({
       taker,
       childName: isParent ? child : '',
       support: supportLabel(answers.support as string),
+      supportDetail: supportDetailString(answers),
+      supportNeeded: supportNeededLabel(answers),
       notes,
       yearGroup: yearLabel(answers.year as string),
       subjects: ((answers.subjects as string[]) ?? []).join(', '),
       /* Empty when unsure so MailerLite merge defaults can fire ({$diag_worry_subject|default('...')}) */
       worrySubject: answers.worry === 'unsure' ? '' : ((answers.worry as string) ?? ''),
-      currentGrade: gradeLabel(answers.currentGrade as string),
-      targetGrade: gradeLabel(answers.targetGrade as string),
+      currentGrade: worryGradeLabel(answers, 'currentGrades'),
+      targetGrade: worryGradeLabel(answers, 'targetGrades'),
+      grades: gradesToString(answers),
       hoursPerWeek: d.hoursLeak.weeklyPhrase,
       lowYieldHours: `about ${d.hoursLeak.lowYieldHours} of ${d.hoursLeak.weeklyPhrase}`,
       archetype: d.archetype.name,

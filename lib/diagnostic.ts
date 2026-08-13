@@ -67,6 +67,15 @@ export interface Option {
   detailParent?: string
   scores?: Partial<Record<Dim, number>> // 0 to 1: how healthy this behaviour is
   flags?: string[]
+  /* Picking this option opens a small follow-up on the same card (which
+     subjects, which course, why it stopped). Detail is context for Waleed's
+     call, stored in diag_support_detail; it never blocks the quiz. */
+  followUp?: {
+    kind: 'subjects' | 'text'
+    prompt: string
+    promptParent?: string
+    placeholder?: string
+  }
 }
 
 export interface Question {
@@ -76,7 +85,9 @@ export interface Question {
   titleParent?: string
   help?: string
   helpParent?: string
-  type: 'single' | 'multi' | 'worry'
+  /* 'grades' renders one row of grade chips per chosen subject; the answer is
+     stored as "Subject|gradeId" pairs so Answers stays a flat string map. */
+  type: 'single' | 'multi' | 'worry' | 'grades'
   layout: 'cards' | 'chips'
   weights?: Partial<Record<Dim, number>>
   options: Option[]
@@ -94,6 +105,7 @@ export const SECTIONS = [
   'How you revise',
   'Memory and targeting',
   'Exam performance',
+  'What you need',
 ]
 
 export const SECTIONS_PARENT = [
@@ -102,6 +114,7 @@ export const SECTIONS_PARENT = [
   'How they revise',
   'Memory and targeting',
   'Exam performance',
+  'What they need',
 ]
 
 export const SUBJECT_CHOICES = [
@@ -121,6 +134,53 @@ export const SUBJECT_CHOICES = [
 
 const SUMMER_SUBJECTS = ['Biology', 'Chemistry', 'Maths', 'Physics']
 const SUBJECT_ACCEL_SUBJECTS = ['Biology', 'Chemistry', 'Maths']
+
+/* The needs question: the signal Waleed reads first on every lead. Unscored,
+   and the report's routing stays honest to the diagnosis; this is what THEY
+   think they need, which is exactly why it's asked last, after the honest
+   answers, and stored on the subscriber as diag_support_needed. */
+const SUPPORT_NEEDED_BASE: Option[] = [
+  {
+    id: 'oneToOne',
+    label: 'One-to-one subject tutoring',
+    detail: 'A specialist working through your weakest subject with you',
+    detailParent: 'A specialist working through their weakest subject with them',
+  },
+  {
+    id: 'method',
+    label: 'A better way to revise',
+    detail: 'Active recall, spaced repetition, a system that makes the hours count',
+  },
+  {
+    id: 'examTechnique',
+    label: 'Exam technique and mark scheme mastery',
+    detail: 'Turning what you already know into marks under time pressure',
+    detailParent: 'Turning what they already know into marks under time pressure',
+  },
+  {
+    id: 'plan',
+    label: 'A custom revision plan',
+    detail: 'Exactly what to revise and when, built around your real week',
+    detailParent: 'Exactly what to revise and when, built around their real week',
+  },
+  {
+    id: 'coach',
+    label: 'A personal A-level coach, all year round',
+    detail: 'One person watching your grades, your plan and your progress every week',
+    detailParent: 'One person watching their grades, their plan and their progress every week',
+  },
+  {
+    id: 'freeStuff',
+    label: 'Free advice and resources for now',
+    detail: 'Emails, guides and the free tools, while you decide',
+    detailParent: 'Emails, guides and the free tools, while you decide',
+  },
+  {
+    id: 'unsure',
+    label: 'Not sure yet',
+    detail: 'Show me what the report recommends',
+  },
+]
 
 export const QUESTIONS: Question[] = [
   /* ── Section 1: About you ── */
@@ -143,8 +203,8 @@ export const QUESTIONS: Question[] = [
     section: 0,
     title: 'Which subjects are you taking?',
     titleParent: 'Which subjects do they take?',
-    help: 'Pick all of them. This shapes your plan.',
-    helpParent: 'Pick all of them. This shapes the plan.',
+    help: 'Pick all of them.',
+    helpParent: 'Pick all of them.',
     type: 'multi',
     layout: 'chips',
     options: SUBJECT_CHOICES.map((s) => ({ id: s, label: s })),
@@ -161,13 +221,13 @@ export const QUESTIONS: Question[] = [
     options: [], // built at runtime from the subjects answer, plus "Not sure"
   },
   {
-    id: 'currentGrade',
+    id: 'currentGrades',
     section: 0,
-    title: 'What grade are you working at right now?',
-    titleParent: 'What grade are they working at right now?',
-    help: 'In the subject that worries you most. Your latest test or mock, not your best day.',
-    helpParent: 'In the subject that worries you most. Their latest test or mock, not their best day.',
-    type: 'single',
+    title: 'What grade are you working at right now, in each subject?',
+    titleParent: 'What grade are they working at right now, in each subject?',
+    help: 'Your latest test or mock in each one, not your best day.',
+    helpParent: 'Their latest test or mock in each one, not their best day.',
+    type: 'grades',
     layout: 'chips',
     options: [
       { id: 'astar', label: 'A*' },
@@ -175,17 +235,17 @@ export const QUESTIONS: Question[] = [
       { id: 'b', label: 'B' },
       { id: 'c', label: 'C' },
       { id: 'd', label: 'D or below' },
-      { id: 'unsure', label: 'Not sure yet' },
+      { id: 'unsure', label: 'Not sure' },
     ],
   },
   {
-    id: 'targetGrade',
+    id: 'targetGrades',
     section: 0,
-    title: 'And what grade do you actually want on results day?',
-    titleParent: 'And what grade do they need on results day?',
-    help: "The honest one. The grade your offer needs, or the one you'd be proud of.",
-    helpParent: "The grade their offer needs, or the one they're aiming for.",
-    type: 'single',
+    title: 'And what grades do you actually want on results day?',
+    titleParent: 'And what grades do they need on results day?',
+    help: "The honest ones. The grades your offers need, or the ones you'd be proud of.",
+    helpParent: "The grades their offers need, or the ones they're aiming for.",
+    type: 'grades',
     layout: 'chips',
     options: [
       { id: 'astar', label: 'A*' },
@@ -206,10 +266,48 @@ export const QUESTIONS: Question[] = [
     /* Context, not scored: support tells us where they are, not how they revise */
     options: [
       { id: 'none', label: "No, it's all me", labelParent: 'No, nothing at the moment' },
-      { id: 'tutor', label: 'Yes, a private tutor', labelParent: 'Yes, a private tutor' },
-      { id: 'online', label: 'An online course or programme', labelParent: 'An online course or programme' },
-      { id: 'past', label: 'I had a tutor, but stopped', labelParent: 'They had a tutor, but it stopped' },
-      { id: 'school', label: 'Extra sessions at school only', labelParent: 'Extra sessions at school only' },
+      {
+        id: 'tutor',
+        label: 'Yes, a private tutor',
+        labelParent: 'Yes, a private tutor',
+        followUp: {
+          kind: 'subjects',
+          prompt: 'Which subjects are you getting tutored in?',
+          promptParent: 'Which subjects do they get tutoring in?',
+        },
+      },
+      {
+        id: 'online',
+        label: 'An online course or programme',
+        labelParent: 'An online course or programme',
+        followUp: {
+          kind: 'text',
+          prompt: 'Which course are you enrolled on?',
+          promptParent: 'Which course are they enrolled on?',
+          placeholder: 'The name of the course',
+        },
+      },
+      {
+        id: 'past',
+        label: 'I had a tutor, but stopped',
+        labelParent: 'They had a tutor, but it stopped',
+        followUp: {
+          kind: 'text',
+          prompt: 'What made you stop?',
+          promptParent: 'What made it stop?',
+          placeholder: 'Cost, fit, results, timing, anything honest',
+        },
+      },
+      {
+        id: 'school',
+        label: 'Extra sessions at school only',
+        labelParent: 'Extra sessions at school only',
+        followUp: {
+          kind: 'subjects',
+          prompt: 'Which subjects?',
+          promptParent: 'Which subjects?',
+        },
+      },
     ],
   },
 
@@ -219,8 +317,8 @@ export const QUESTIONS: Question[] = [
     section: 1,
     title: 'In a normal week, how many hours of independent study do you really do?',
     titleParent: 'In a normal week, how many hours of independent study do they really do?',
-    help: 'Not the number you tell people. The real one.',
-    helpParent: 'Your honest estimate from what you see, not the number they report.',
+    help: 'A typical week, not the big one just before exams.',
+    helpParent: 'A typical week from what you see, not the run-up to exams.',
     type: 'single',
     layout: 'cards',
     weights: { consistency: 1 },
@@ -240,35 +338,21 @@ export const QUESTIONS: Question[] = [
     layout: 'cards',
     weights: { consistency: 2.5, retention: 1 },
     options: [
-      { id: 'plan', label: 'I follow a planned timetable', labelParent: 'They follow a planned timetable', scores: { consistency: 1, retention: 0.9 } },
+      { id: 'plan', label: 'Every day, I follow a planned timetable', labelParent: 'Every day, they follow a planned timetable', scores: { consistency: 1, retention: 0.9 } },
       { id: 'most', label: 'Most days, but with no real structure', labelParent: 'Most days, but with no real structure', scores: { consistency: 0.55, retention: 0.6 } },
-      { id: 'guilt', label: 'When the guilt gets loud enough', labelParent: 'After reminders, when the guilt gets loud enough', scores: { consistency: 0.25, retention: 0.3 } },
+      { id: 'guilt', label: 'When I start feeling guilty about my revision', labelParent: 'When they start feeling guilty, usually after reminders', scores: { consistency: 0.25, retention: 0.3 } },
       { id: 'panic', label: 'The week before a test, in a panic', labelParent: 'The week before a test, in a panic', scores: { consistency: 0.1, retention: 0.1 }, flags: ['cram'] },
     ],
   },
-  {
-    id: 'phone',
-    section: 1,
-    title: 'Where is your phone while you study?',
-    titleParent: 'Where is their phone while they study?',
-    helpParent: 'Answer with what you usually see.',
-    type: 'single',
-    layout: 'cards',
-    weights: { consistency: 2 },
-    options: [
-      { id: 'away', label: 'Another room, or switched off', scores: { consistency: 1 } },
-      { id: 'desk', label: 'On the desk, face down', scores: { consistency: 0.55 } },
-      { id: 'hand', label: 'In my hand every few minutes', labelParent: 'In their hand every few minutes', scores: { consistency: 0.1 } },
-      { id: 'using', label: "I revise on it, so it's always there", labelParent: "They revise on it, so it's always there", scores: { consistency: 0.35 } },
-    ],
-  },
+  /* The phone question lived here until 13 August 2026: Waleed swapped it out
+     to keep the bank at 20 when the support-needs question came in. */
 
   /* ── Section 3: How you revise ── */
   {
     id: 'defaultActivity',
     section: 2,
-    title: "It's 7pm and you sit down to revise. What do you actually do?",
-    titleParent: "It's 7pm and they sit down to revise. What are they actually doing?",
+    title: 'How do you revise?',
+    titleParent: 'How do they revise?',
     help: 'Your default, not your best day.',
     helpParent: 'Their default, from what you see, not their best day.',
     type: 'single',
@@ -286,8 +370,8 @@ export const QUESTIONS: Question[] = [
   {
     id: 'check',
     section: 2,
-    title: "How do you know when you've learned something?",
-    titleParent: "How do they decide they've learned something?",
+    title: "How do you know that you've understood a topic?",
+    titleParent: "How do they know they've understood a topic?",
     helpParent: 'Worth asking them directly. The answer usually says a lot.',
     type: 'single',
     layout: 'cards',
@@ -303,8 +387,8 @@ export const QUESTIONS: Question[] = [
   {
     id: 'notes',
     section: 2,
-    title: 'Which is closest to your notes?',
-    titleParent: 'Which is closest to their notes?',
+    title: 'What do your notes look like?',
+    titleParent: 'What do their notes look like?',
     type: 'single',
     layout: 'cards',
     weights: { method: 1.5 },
@@ -318,8 +402,8 @@ export const QUESTIONS: Question[] = [
   {
     id: 'wrong',
     section: 2,
-    title: 'You get a question wrong. What happens next?',
-    titleParent: 'They get a question wrong. What happens next?',
+    title: 'What do you do if you get a question wrong?',
+    titleParent: 'What do they do if they get a question wrong?',
     type: 'single',
     layout: 'cards',
     weights: { method: 2, examCraft: 1 },
@@ -333,8 +417,8 @@ export const QUESTIONS: Question[] = [
   {
     id: 'return',
     section: 2,
-    title: 'You revised a topic two weeks ago. When do you see it again?',
-    titleParent: 'They revised a topic two weeks ago. When do they see it again?',
+    title: 'If you revised a topic two weeks ago, when would you see it again?',
+    titleParent: 'If they revised a topic two weeks ago, when would they see it again?',
     type: 'single',
     layout: 'cards',
     weights: { retention: 3 },
@@ -342,7 +426,7 @@ export const QUESTIONS: Question[] = [
       { id: 'spaced', label: "It's scheduled. I come back on set days", labelParent: "It's scheduled. They come back on set days", scores: { retention: 1 } },
       { id: 'sometimes', label: "Sometimes, if there's time left over", scores: { retention: 0.45 } },
       { id: 'rarely', label: "Rarely. There's always new content to cover", scores: { retention: 0.15 } },
-      { id: 'forced', label: 'Only when a test forces me to', labelParent: 'Only when a test forces them to', scores: { retention: 0.25 } },
+      { id: 'forced', label: 'Only when an upcoming test contains that topic', scores: { retention: 0.25 } },
     ],
   },
 
@@ -350,9 +434,8 @@ export const QUESTIONS: Question[] = [
   {
     id: 'recall',
     section: 3,
-    title: 'A topic from three weeks ago comes up in class. How much is still there?',
-    titleParent: 'A topic from three weeks ago comes up. How much has stuck?',
-    help: "Be honest. Nobody's watching.",
+    title: 'How well would you remember a topic that you covered three weeks ago in class?',
+    titleParent: 'How well would they remember a topic covered three weeks ago in class?',
     helpParent: 'Not sure? Ask them to explain one old topic to you tonight. Two minutes tells you everything.',
     type: 'single',
     layout: 'cards',
@@ -361,7 +444,7 @@ export const QUESTIONS: Question[] = [
       { id: 'most', label: 'Most of it. I could explain it', labelParent: 'Most of it. They could explain it to you', scores: { retention: 0.95, method: 0.8 } },
       { id: 'recognise', label: "I recognise it, but I couldn't write an answer", labelParent: "They recognise it, but couldn't write an answer", scores: { retention: 0.35, method: 0.3 }, flags: ['recognition'] },
       { id: 'gone', label: "It's basically gone. I'd be starting again", labelParent: "It's basically gone. They'd be starting again", scores: { retention: 0.1, method: 0.3 } },
-      { id: 'untested', label: "No idea. I've never tested it", labelParent: 'No idea. It never gets tested', scores: { retention: 0.3, method: 0.15 } },
+      { id: 'untested', label: 'No idea', scores: { retention: 0.3, method: 0.15 } },
     ],
   },
   {
@@ -419,17 +502,17 @@ export const QUESTIONS: Question[] = [
     layout: 'cards',
     weights: { examCraft: 2.5 },
     options: [
-      { id: 'study', label: 'I study the exact wording they reward', labelParent: 'They study the exact wording examiners reward', scores: { examCraft: 1 } },
+      { id: 'study', label: "I study the exact wording of the examiner's mark scheme", labelParent: "They study the exact wording of the examiner's mark scheme", scores: { examCraft: 1 } },
       { id: 'glance', label: 'I glance at them to check answers', labelParent: 'They glance at them to check answers', scores: { examCraft: 0.5 } },
       { id: 'rarely', label: 'I rarely look at them', labelParent: 'They rarely look at them', scores: { examCraft: 0.15 } },
-      { id: 'never', label: 'Honestly? Never met one', labelParent: 'As far as you know, never', scores: { examCraft: 0.05 } },
+      { id: 'never', label: "I don't use mark schemes", labelParent: "They don't use mark schemes", scores: { examCraft: 0.05 } },
     ],
   },
   {
     id: 'examfail',
     section: 4,
-    title: 'In an actual exam, what hurts you most?',
-    titleParent: 'In an actual exam, what hurts them most?',
+    title: 'What do you struggle with the most in exams?',
+    titleParent: 'What do they struggle with the most in exams?',
     helpParent: 'From results, teacher comments, or what they tell you afterwards.',
     type: 'single',
     layout: 'cards',
@@ -442,6 +525,20 @@ export const QUESTIONS: Question[] = [
       { id: 'fine', label: 'Exams are mostly fine. Revision is my problem', labelParent: 'Exams go fine. Revision is the problem', scores: { examCraft: 0.8, retention: 0.7 } },
     ],
   },
+
+  /* ── Section 6: What you need ── */
+  {
+    id: 'supportNeeded',
+    section: 5,
+    title: 'Last one: what would you benefit from most right now?',
+    titleParent: 'Last one: what would your child benefit from most right now?',
+    help: "Pick as many as apply. Be honest about what you'd actually use.",
+    helpParent: "Pick as many as apply. It tells me what to point you towards, and what not to.",
+    type: 'multi',
+    layout: 'cards',
+    /* Context, not scored */
+    options: SUPPORT_NEEDED_BASE,
+  },
 ]
 
 export type Answers = Record<string, string | string[]>
@@ -450,6 +547,108 @@ export function getWorryOptions(answers: Answers): Option[] {
   const subjects = (answers.subjects as string[] | undefined) ?? []
   const named = subjects.filter((s) => s !== 'Other')
   return [...named.map((s) => ({ id: s, label: s })), { id: 'unsure', label: 'Not sure' }]
+}
+
+/* The coach option names the exam level: A-level for current students, the
+   neutral "academic" for those still finishing GCSEs. */
+export function getSupportNeededOptions(answers: Answers): Option[] {
+  const year = answers.year as string | undefined
+  if (year !== 'pre') return SUPPORT_NEEDED_BASE
+  return SUPPORT_NEEDED_BASE.map((o) =>
+    o.id === 'coach' ? { ...o, label: 'A personal academic coach, all year round' } : o
+  )
+}
+
+/* CRM labels for diag_support_needed, short and neutral */
+const SUPPORT_NEEDED_CRM: Record<string, string> = {
+  oneToOne: 'One-to-one subject tutoring',
+  method: 'Better revision method',
+  examTechnique: 'Exam technique',
+  plan: 'Custom revision plan',
+  coach: 'Personal coach, year round',
+  freeStuff: 'Free resources first',
+  unsure: 'Not sure',
+}
+
+export function supportNeededLabel(answers: Answers): string {
+  return ((answers.supportNeeded as string[] | undefined) ?? [])
+    .map((id) => SUPPORT_NEEDED_CRM[id] ?? id)
+    .join(', ')
+}
+
+/* The follow-up detail behind the support answer, one line for the CRM */
+export function supportDetailString(answers: Answers): string {
+  const v = answers.supportDetail
+  if (Array.isArray(v)) return v.join(', ')
+  return typeof v === 'string' ? v.trim() : ''
+}
+
+/* ── Per-subject grades ──────────────────────────────────────────────────
+   'grades' answers are stored as "Subject|gradeId" pairs so the Answers type
+   stays a flat map of strings and arrays (and old saves stay readable). */
+
+export function gradePairs(answers: Answers, id: string): Record<string, string> {
+  const raw = (answers[id] as string[] | undefined) ?? []
+  const map: Record<string, string> = {}
+  for (const pair of raw) {
+    const i = pair.lastIndexOf('|')
+    if (i > 0) map[pair.slice(0, i)] = pair.slice(i + 1)
+  }
+  return map
+}
+
+/* The subjects that get a grade row ("Other" can't be named, so can't be rated) */
+export function gradeRows(answers: Answers): string[] {
+  return ((answers.subjects as string[] | undefined) ?? []).filter((s) => s !== 'Other')
+}
+
+export function gradesComplete(answers: Answers, id: string): boolean {
+  const map = gradePairs(answers, id)
+  return gradeRows(answers).every((s) => map[s] !== undefined)
+}
+
+/* "Maths B, Chemistry C": one grade per subject */
+export function gradesSummary(answers: Answers, id: string): string {
+  const map = gradePairs(answers, id)
+  return gradeRows(answers)
+    .map((s) => (map[s] ? `${s} ${gradeLabel(map[s])}` : ''))
+    .filter(Boolean)
+    .join(', ')
+}
+
+/* "Maths B to A, Chemistry C to B": the whole journey in one CRM line */
+export function gradesToString(answers: Answers): string {
+  const current = gradePairs(answers, 'currentGrades')
+  const target = gradePairs(answers, 'targetGrades')
+  return gradeRows(answers)
+    .map((s) => {
+      const now = gradeLabel(current[s])
+      const want = gradeLabel(target[s])
+      if (now && want) return `${s} ${now} to ${want}`
+      if (now || want) return `${s} ${now || want}`
+      return ''
+    })
+    .filter(Boolean)
+    .join(', ')
+}
+
+/* The worry subject's single grade: diag_current_grade and diag_target_grade
+   keep this shape because the follow-up emails embed them mid-sentence
+   ("you're currently working at {$diag_current_grade}"). Empty when they were
+   not sure which subject worries them, so the emails' defaults fire. */
+export function worryGradeLabel(answers: Answers, id: string): string {
+  const worry = answers.worry as string | undefined
+  if (!worry || worry === 'unsure') return ''
+  return gradeLabel(gradePairs(answers, id)[worry])
+}
+
+/* One completeness rule shared by the quiz and the app shell */
+export function isAnswered(q: Question, answers: Answers): boolean {
+  if (q.type === 'grades') return gradesComplete(answers, q.id)
+  const v = answers[q.id]
+  if (v === undefined) return false
+  if (q.type === 'multi') return Array.isArray(v) && v.length > 0
+  return true
 }
 
 /* ── Scoring ───────────────────────────────────────────────────────────── */
@@ -501,7 +700,7 @@ export function dimNote(dim: Dim, score: number, taker: Taker = 'student'): stri
   const level = score >= 75 ? 3 : score >= 55 ? 2 : score >= 35 ? 1 : 0
   const notes: Record<Dim, string[]> = {
     method: [
-      'Almost all reading and watching, almost no self-testing. This is the expensive one.',
+      'Almost all reading and watching, almost no self-testing. This is where most of the marks are being lost.',
       "More recognising than remembering. It feels learned, but it doesn't score.",
       'Some real self-testing in there. Make it the default, not the extra.',
       'Retrieval first. This is what the top 1% do.',
@@ -533,7 +732,7 @@ export function dimNote(dim: Dim, score: number, taker: Taker = 'student'): stri
   }
   const parentNotes: Record<Dim, string[]> = {
     method: [
-      'Almost all reading and watching, almost no self-testing. This is the expensive one.',
+      'Almost all reading and watching, almost no self-testing. This is where most of the marks are being lost.',
       "More recognising than remembering. It feels learned to them, but it doesn't score.",
       'Some real self-testing in there. It needs to become the default, not the extra.',
       'Retrieval first. This is what the top 1% do.',
@@ -967,6 +1166,24 @@ function worrySubjectLabel(answers: Answers): string | null {
   return worry
 }
 
+/* The routing's grade gap: the worry subject's current-to-target jump, or the
+   biggest jump across subjects when they weren't sure which one worries them. */
+function gradeGapFrom(answers: Answers): number | null {
+  const current = gradePairs(answers, 'currentGrades')
+  const target = gradePairs(answers, 'targetGrades')
+  const gapFor = (s: string): number | null => {
+    const c = GRADE_ORDER[current[s] ?? ''] ?? null
+    const t = GRADE_ORDER[target[s] ?? ''] ?? null
+    return c !== null && t !== null ? t - c : null
+  }
+  const worry = worrySubjectLabel(answers)
+  if (worry) return gapFor(worry)
+  const gaps = gradeRows(answers)
+    .map(gapFor)
+    .filter((g): g is number => g !== null)
+  return gaps.length ? Math.max(...gaps) : null
+}
+
 export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, archetypeId: string, taker: Taker = 'student'): Routing {
   const year = (answers.year as string) ?? 'y12'
   const subjects = ((answers.subjects as string[]) ?? []).filter(Boolean)
@@ -977,9 +1194,7 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
   const accelSubjects = subjects.filter((s) => SUBJECT_ACCEL_SUBJECTS.includes(s))
   const p = taker === 'parent'
 
-  const current = GRADE_ORDER[(answers.currentGrade as string) ?? ''] ?? null
-  const target = GRADE_ORDER[(answers.targetGrade as string) ?? ''] ?? null
-  const gradeGap = current !== null && target !== null ? target - current : null
+  const gradeGap = gradeGapFrom(answers)
 
   const systemSide = bottleneck === 'method' || bottleneck === 'consistency' || bottleneck === 'retention' || bottleneck === 'prioritisation'
 
@@ -1231,7 +1446,7 @@ export const LANDING_FAQS = [
   },
   {
     q: 'How long does it take?',
-    a: 'About 4 minutes. 20 questions, one tap each. Your answers save as you go, so you can leave and pick up where you stopped.',
+    a: 'About 4 minutes. 20 quick questions, almost all one tap. Your answers save as you go, so you can leave and pick up where you stopped.',
   },
   {
     q: 'Who is it for?',

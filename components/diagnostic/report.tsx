@@ -11,6 +11,7 @@ import {
   Taker,
   dimNote,
   gradeLabel,
+  gradePairs,
   verdictFor,
 } from '@/lib/diagnostic'
 
@@ -32,6 +33,27 @@ const TONE_BAR: Record<string, string> = {
   leaking: 'bg-amber-500',
   critical: 'bg-red-500',
 }
+const TONE_BORDER: Record<string, string> = {
+  strong: 'border-l-emerald-500',
+  steady: 'border-l-brand-gold',
+  leaking: 'border-l-amber-500',
+  critical: 'border-l-red-500',
+}
+const TONE_HEX: Record<string, string> = {
+  strong: '#10b981',
+  steady: '#C9A96E',
+  leaking: '#f59e0b',
+  critical: '#ef4444',
+}
+
+/* The 7 day plan cycles through the brand's tones so the week reads as
+   distinct days, not one long list. */
+const PLAN_TONES = [
+  { dot: 'bg-brand-gold', chip: 'bg-brand-gold/20 text-brand-purple' },
+  { dot: 'bg-brand-purple', chip: 'bg-brand-purple/10 text-brand-purple' },
+  { dot: 'bg-emerald-500', chip: 'bg-emerald-100 text-emerald-700' },
+  { dot: 'bg-amber-500', chip: 'bg-amber-100 text-amber-700' },
+]
 
 /* ── Count-up number, starts when scrolled into view ── */
 function CountUp({ value, className }: { value: number; className?: string }) {
@@ -66,7 +88,8 @@ function CountUp({ value, className }: { value: number; className?: string }) {
   )
 }
 
-/* ── Overall score ring ── */
+/* ── Overall score ring: the headline number, big enough to read from a
+      phone held at arm's length ── */
 function ScoreRing({ value }: { value: number }) {
   const ref = useRef<HTMLDivElement>(null)
   const inView = useInView(ref, { once: true })
@@ -74,16 +97,16 @@ function ScoreRing({ value }: { value: number }) {
   const C = 2 * Math.PI * R
 
   return (
-    <div ref={ref} className="relative h-40 w-40">
+    <div ref={ref} className="relative h-48 w-48 sm:h-56 sm:w-56">
       <svg viewBox="0 0 140 140" className="h-full w-full -rotate-90">
-        <circle cx="70" cy="70" r={R} fill="none" stroke="rgba(251,248,243,.14)" strokeWidth="10" />
+        <circle cx="70" cy="70" r={R} fill="none" stroke="rgba(251,248,243,.14)" strokeWidth="9" />
         <motion.circle
           cx="70"
           cy="70"
           r={R}
           fill="none"
           stroke="#C9A96E"
-          strokeWidth="10"
+          strokeWidth="9"
           strokeLinecap="round"
           strokeDasharray={C}
           initial={{ strokeDashoffset: C }}
@@ -92,12 +115,34 @@ function ScoreRing({ value }: { value: number }) {
         />
       </svg>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <p className="font-serif font-bold text-[2.6rem] leading-none text-brand-cream tabular-nums">
+        <p className="font-serif font-bold text-[3.6rem] sm:text-[4.2rem] leading-none text-brand-cream tabular-nums">
           <CountUp value={value} />
         </p>
-        <p className="mt-1 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-cream/60">out of 100</p>
+        <p className="mt-1.5 font-mono text-[11px] uppercase tracking-[0.18em] text-brand-cream/60">out of 100</p>
       </div>
     </div>
+  )
+}
+
+/* ── Small per-system donut, coloured by verdict ── */
+function DimRing({ value, color }: { value: number; color: string }) {
+  const R = 18
+  const C = 2 * Math.PI * R
+  return (
+    <svg viewBox="0 0 44 44" className="h-11 w-11 -rotate-90 shrink-0" aria-hidden="true">
+      <circle cx="22" cy="22" r={R} fill="none" stroke="rgba(46,37,87,.08)" strokeWidth="5" />
+      <circle
+        cx="22"
+        cy="22"
+        r={R}
+        fill="none"
+        stroke={color}
+        strokeWidth="5"
+        strokeLinecap="round"
+        strokeDasharray={C}
+        strokeDashoffset={C * (1 - value / 100)}
+      />
+    </svg>
   )
 }
 
@@ -143,6 +188,8 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
   const { archetype, scores, overall, bottleneck, hoursLeak, prescription, plan, routing } = diagnosis
   const worry = (answers.worry as string) ?? ''
   const worryShown = worry && worry !== 'unsure' ? worry : ''
+  const currentGrades = gradePairs(answers, 'currentGrades')
+  const targetGrades = gradePairs(answers, 'targetGrades')
   const today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
   const blocks = Math.round(hoursLeak.weeklyMid)
@@ -151,6 +198,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
   const isParent = taker === 'parent'
   /* How the parent report refers to the student */
   const child = childName || 'your child'
+  const reduceMotion = useReducedMotion()
 
   const [downloading, setDownloading] = useState(false)
 
@@ -163,20 +211,22 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
     }
   }
 
-  /* Section numbering. Parents are the buyers, so their report shows the
-     recommended route straight after the finding (02), the way a treatment
-     plan follows a diagnosis; the evidence then continues below it. Students
-     keep the education-first order with the route at the end (06). */
-  const NUM = isParent
-    ? { systems: '03', hours: '04', prescription: '05', plan: '06' }
-    : { systems: '02', hours: '03', prescription: '04', plan: '05' }
+  const scrollToRoute = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault()
+    document.getElementById('route')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
+  }
 
-  const routeSection = (number: string) => (
-    <section className="px-5 sm:px-6 py-14 md:py-20 bg-[#241d47] relative overflow-hidden">
+  /* Both reports lead with the recommendation, the way a treatment plan
+     follows a diagnosis: finding (01), route (02), then the evidence. The
+     closing band links back to the route so nobody has to scroll up. */
+  const [firstDiagPara, ...restDiagParas] = isParent ? archetype.diagnosisParent : archetype.diagnosis
+
+  const routeSection = (
+    <section id="route" className="px-5 sm:px-6 py-14 md:py-20 bg-[#241d47] relative overflow-hidden scroll-mt-4">
       <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-[-8%] h-[22rem] w-[28rem] rounded-full bg-brand-gold/10 blur-3xl" />
       <div className="relative max-w-3xl mx-auto">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">
-          {number} · {routing.primary.eyebrow}
+          02 · {routing.primary.eyebrow}
         </p>
         <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl md:text-4xl leading-tight text-brand-cream">
           {isParent ? (
@@ -187,12 +237,19 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
             <>{firstName}, this is your fastest route</>
           )}
         </h2>
-        {isParent && (
-          <p className="mt-4 text-brand-cream/70 leading-relaxed max-w-2xl">
-            Diagnosis first, then treatment. Based on your answers about {child}, this is where I&apos;d
-            start. The full breakdown, the five scores, the hours and the 7 day plan, carries on below.
-          </p>
-        )}
+        <p className="mt-4 text-brand-cream/70 leading-relaxed max-w-2xl">
+          {isParent ? (
+            <>
+              Diagnosis first, then treatment. Based on your answers about {child}, this is where I&apos;d
+              start. The full breakdown, the five scores, the hours and the 7 day plan, carries on below.
+            </>
+          ) : (
+            <>
+              Diagnosis first, then treatment. Based on your answers, this is where I&apos;d start. The
+              evidence, your five scores, your hours and your 7 day plan, carries on below.
+            </>
+          )}
+        </p>
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -220,19 +277,22 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               </li>
             ))}
           </ul>
-          <div className="mt-6 flex items-center gap-3 rounded-xl bg-brand-cream/70 border border-brand-purple/[0.08] px-4 py-3">
+          {/* Who is recommending this: written for someone who has never seen
+              the site before this report */}
+          <div className="mt-6 flex items-start gap-3.5 rounded-xl bg-brand-cream/70 border border-brand-purple/[0.08] px-4 py-3.5">
             <Image
               src="/photos/waleed-grad-portrait.jpg"
               alt="Dr Waleed Ahmad"
-              width={80}
-              height={80}
+              width={96}
+              height={96}
               unoptimized
-              className="h-10 w-10 rounded-full object-cover object-top ring-2 ring-brand-gold/50 shrink-0"
+              className="h-12 w-12 rounded-full object-cover object-top ring-2 ring-brand-gold/50 shrink-0"
             />
-            <p className="text-sm text-brand-text/70 leading-snug">
-              <span className="font-bold text-brand-purple">Recommended by Dr Waleed Ahmad</span> · NHS doctor
-              · worked with over 1,000 A-level students.{' '}
-              {isParent ? <>Picked from {child}&apos;s answers, not a default.</> : <>Picked from your answers, not a default.</>}
+            <p className="text-sm text-brand-text/70 leading-relaxed">
+              <span className="font-bold text-brand-purple">Recommended by Dr Waleed Ahmad, MBBS.</span> NHS
+              doctor. He&apos;s worked with over 1,000 A-level students and helped them towards top grades and
+              the first-choice university offers they were chasing.{' '}
+              {isParent ? <>This route was picked from {child}&apos;s answers, not a default.</> : <>This route was picked from your answers, not a default.</>}
             </p>
           </div>
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
@@ -301,7 +361,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
 
               <div className="flex md:flex-col items-center justify-center gap-6">
                 <ScoreRing value={overall} />
-                <p className="max-w-[10rem] text-center text-sm text-brand-cream/60 leading-snug">
+                <p className="max-w-[11rem] text-center text-sm text-brand-cream/60 leading-snug">
                   {isParent ? 'Their revision system score, across five dimensions' : 'Your revision system score, across five dimensions'}
                 </p>
               </div>
@@ -310,7 +370,6 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
             {/* Dimension pills */}
             <div className="mt-10 flex flex-wrap gap-2">
               {DIMS.map((d) => {
-                const v = verdictFor(scores[d])
                 const isBottleneck = d === bottleneck && !isOptimiser
                 return (
                   <span
@@ -328,6 +387,23 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 )
               })}
             </div>
+
+            {/* The reason to keep going: the fix is one scroll away */}
+            <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
+              <a
+                href="#route"
+                onClick={scrollToRoute}
+                className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-[0_12px_28px_rgba(201,169,110,.35)]"
+              >
+                {isParent ? 'Show me what to do about it' : 'Show me how to fix it'}
+                <span aria-hidden="true" className="ml-2">↓</span>
+              </a>
+              <p className="text-sm text-brand-cream/60 leading-snug max-w-[16rem]">
+                {isParent
+                  ? 'The route, the evidence and their 7 day plan are all below.'
+                  : 'Your route, the evidence and your 7 day plan are all below.'}
+              </p>
+            </div>
           </motion.div>
         </div>
         <div aria-hidden="true" className="relative h-px bg-gradient-to-r from-transparent via-brand-gold/60 to-transparent" />
@@ -335,26 +411,44 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
 
       {/* ══ 01 · The finding ══ */}
       <Section number="01" title="The finding" lead="What your answers actually show">
-        <div className="space-y-4 text-[1.05rem] text-brand-text/80 leading-relaxed">
-          {(isParent ? archetype.diagnosisParent : archetype.diagnosis).map((para, i) => (
+        <div className="flex flex-wrap gap-2">
+          <span className="rounded-full bg-brand-gold text-brand-purple px-3.5 py-1.5 text-[13px] font-bold">
+            {isParent ? `Profile: ${archetype.name}` : `Your profile: ${archetype.name}`}
+          </span>
+          {!isOptimiser && (
+            <span className="rounded-full bg-brand-purple/[0.07] ring-1 ring-brand-purple/15 text-brand-purple px-3.5 py-1.5 text-[13px] font-bold">
+              The leak: {DIM_META[bottleneck].label}
+            </span>
+          )}
+          {worryShown && (
+            <span className="rounded-full bg-brand-purple/[0.07] ring-1 ring-brand-purple/15 text-brand-purple px-3.5 py-1.5 text-[13px] font-bold">
+              Watch list: {worryShown}
+              {currentGrades[worryShown] ? ` · ${gradeLabel(currentGrades[worryShown])} now` : ''}
+              {targetGrades[worryShown] ? ` · ${gradeLabel(targetGrades[worryShown])} wanted` : ''}
+            </span>
+          )}
+        </div>
+        <p className="mt-6 font-serif text-xl md:text-2xl text-brand-purple leading-snug">{firstDiagPara}</p>
+        <motion.div
+          initial={{ opacity: 0, y: 14 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '0px 0px -60px 0px' }}
+          transition={{ duration: 0.5, ease: EASE }}
+          className={`${CARD} mt-6 border-l-4 border-l-brand-gold p-6 md:p-7 space-y-4 text-[1.02rem] text-brand-text/80 leading-relaxed transition-transform duration-200 hover:-translate-y-1`}
+        >
+          {restDiagParas.map((para, i) => (
             <p key={i}>{para}</p>
           ))}
-        </div>
-        {worryShown && (
-          <p className="mt-6 inline-flex flex-wrap items-center gap-2 rounded-xl bg-brand-purple/[0.05] border border-brand-purple/10 px-4 py-3 text-sm text-brand-text/70">
-            <span className="font-bold text-brand-purple">Watch list:</span>
-            {worryShown} · working at {gradeLabel(answers.currentGrade as string)} · target {gradeLabel(answers.targetGrade as string)}
-          </p>
-        )}
+        </motion.div>
       </Section>
 
-      {/* ══ Parents: the recommendation, straight after the finding ══ */}
-      {isParent && routeSection('02')}
+      {/* ══ 02 · The route, for both reports: treatment straight after diagnosis ══ */}
+      {routeSection}
 
-      {/* ══ System scores ══ */}
+      {/* ══ 03 · System scores ══ */}
       <section className="px-5 sm:px-6 py-12 md:py-16 bg-white/60 border-y border-brand-purple/[0.06]">
         <div className="max-w-3xl mx-auto">
-          <p className={EYEBROW}>{NUM.systems} · The five systems</p>
+          <p className={EYEBROW}>03 · The five systems</p>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-[2rem] leading-tight text-brand-purple">
             {isParent ? 'Their revision system, scored' : 'Your revision system, scored'}
           </h2>
@@ -368,26 +462,34 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               const v = verdictFor(scores[d])
               const isB = d === bottleneck && !isOptimiser
               return (
-                <div key={d} className={`${CARD} p-5 ${isB ? 'ring-2 ring-brand-gold' : ''}`}>
-                  <div className="flex items-baseline justify-between gap-3 flex-wrap">
-                    <div className="flex items-center gap-3">
-                      <h3 className="font-serif font-bold text-lg text-brand-purple">{DIM_META[d].label}</h3>
-                      <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${TONE_CHIP[v.tone]}`}>{v.label}</span>
-                      {isB && (
-                        <span className="rounded-full bg-brand-gold text-brand-purple px-2.5 py-0.5 text-[11px] font-bold">
-                          Fix first
-                        </span>
-                      )}
+                <div
+                  key={d}
+                  className={`${CARD} border-l-4 ${TONE_BORDER[v.tone]} p-5 transition-all duration-200 hover:-translate-y-1 hover:[box-shadow:0_0_0_1px_rgba(46,37,87,.07),0_6px_12px_rgba(46,37,87,.08),0_18px_34px_rgba(46,37,87,.12)] ${
+                    isB ? 'ring-2 ring-brand-gold' : ''
+                  }`}
+                >
+                  <div className="flex items-center gap-4">
+                    <DimRing value={scores[d]} color={TONE_HEX[v.tone]} />
+                    <div className="min-w-0 flex-1">
+                      <div className="flex items-center gap-2.5 flex-wrap">
+                        <h3 className="font-serif font-bold text-lg text-brand-purple">{DIM_META[d].label}</h3>
+                        <span className={`rounded-full px-2.5 py-0.5 text-[11px] font-bold ${TONE_CHIP[v.tone]}`}>{v.label}</span>
+                        {isB && (
+                          <span className="rounded-full bg-brand-gold text-brand-purple px-2.5 py-0.5 text-[11px] font-bold">
+                            Fix first
+                          </span>
+                        )}
+                      </div>
+                      <p className="mt-0.5 text-sm text-brand-text/55 italic">
+                        {isParent ? DIM_META[d].questionParent : DIM_META[d].question}
+                      </p>
                     </div>
-                    <p className="font-serif font-bold text-2xl text-brand-purple tabular-nums">
+                    <p className="font-serif font-bold text-3xl md:text-4xl text-brand-purple tabular-nums shrink-0">
                       <CountUp value={scores[d]} />
                       <span className="text-sm text-brand-purple/40 font-sans font-semibold"> /100</span>
                     </p>
                   </div>
-                  <p className="mt-1 text-sm text-brand-text/55 italic">
-                    {isParent ? DIM_META[d].questionParent : DIM_META[d].question}
-                  </p>
-                  <div className="mt-3 h-2 rounded-full bg-brand-purple/[0.08] overflow-hidden">
+                  <div className="mt-4 h-2 rounded-full bg-brand-purple/[0.08] overflow-hidden">
                     <motion.div
                       className={`h-full rounded-full ${TONE_BAR[v.tone]}`}
                       initial={{ width: 0 }}
@@ -404,9 +506,9 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         </div>
       </section>
 
-      {/* ══ The hours leak ══ */}
+      {/* ══ 04 · The hours leak ══ */}
       <Section
-        number={NUM.hours}
+        number="04"
         title="Where the hours go"
         lead={
           isOptimiser
@@ -469,10 +571,10 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         </div>
       </Section>
 
-      {/* ══ Fix this first ══ */}
+      {/* ══ 05 · Fix this first ══ */}
       <section className="px-5 sm:px-6 py-12 md:py-16 bg-white/60 border-y border-brand-purple/[0.06]">
         <div className="max-w-3xl mx-auto">
-          <p className={EYEBROW}>{NUM.prescription} · The prescription</p>
+          <p className={EYEBROW}>05 · The prescription</p>
           <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-[2rem] leading-tight text-brand-purple">
             {prescription.headline}
           </h2>
@@ -491,7 +593,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: '0px 0px -60px 0px' }}
                 transition={{ duration: 0.5, ease: EASE, delay: i * 0.08 }}
-                className={`${CARD} border-l-4 border-l-brand-gold p-5 md:p-6 flex gap-4`}
+                className={`${CARD} border-l-4 border-l-brand-gold p-5 md:p-6 flex gap-4 transition-transform duration-200 hover:-translate-y-1`}
               >
                 <span className="font-mono text-sm font-bold text-brand-gold pt-0.5">0{i + 1}</span>
                 <div>
@@ -520,76 +622,90 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         </div>
       </section>
 
-      {/* ══ Next 7 days ══ */}
-      <Section number={NUM.plan} title="The plan" lead={isParent ? `${childName ? `${childName}'s` : 'Their'} next 7 days` : 'Your next 7 days'}>
+      {/* ══ 06 · Next 7 days ══ */}
+      <Section number="06" title="The plan" lead={isParent ? `${childName ? `${childName}'s` : 'Their'} next 7 days` : 'Your next 7 days'}>
         <p className="text-brand-text/65 leading-relaxed max-w-xl -mt-2 mb-8">
           {isParent
             ? 'Small, specific, and in order. Put it somewhere visible and let the ticking-off do the nagging for you.'
             : 'Small, specific, and in order. Do these and next week starts from a different place.'}
         </p>
-        <ol className="relative space-y-0 border-l-2 border-brand-gold/30 ml-3">
-          {plan.map((item, i) => (
-            <motion.li
-              key={item.day}
-              initial={{ opacity: 0, x: -12 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true, margin: '0px 0px -40px 0px' }}
-              transition={{ duration: 0.45, ease: EASE, delay: i * 0.05 }}
-              className="relative pl-8 pb-8 last:pb-0"
-            >
-              <span aria-hidden="true" className="absolute -left-[9px] top-1 h-4 w-4 rounded-full bg-brand-gold ring-4 ring-brand-cream" />
-              <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/50">{item.day}</p>
-              <h3 className="mt-1 font-serif font-bold text-lg text-brand-purple">{item.task}</h3>
-              <p className="mt-1 text-[15px] text-brand-text/70 leading-relaxed max-w-xl">{item.detail}</p>
-              {item.task === 'Build next week properly' && (
-                <a
-                  href="/revision-tracker/"
-                  className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
-                >
-                  Open the free Revision Tracker
-                  <span aria-hidden="true">→</span>
-                </a>
-              )}
-            </motion.li>
-          ))}
+        <ol className="relative space-y-0 border-l-2 border-brand-purple/15 ml-3">
+          {plan.map((item, i) => {
+            const tone = PLAN_TONES[i % PLAN_TONES.length]
+            return (
+              <motion.li
+                key={item.day}
+                initial={{ opacity: 0, x: -12 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true, margin: '0px 0px -40px 0px' }}
+                transition={{ duration: 0.45, ease: EASE, delay: i * 0.05 }}
+                className="relative pl-8 pb-8 last:pb-0"
+              >
+                <span aria-hidden="true" className={`absolute -left-[9px] top-1 h-4 w-4 rounded-full ${tone.dot} ring-4 ring-brand-cream`} />
+                <span className={`inline-block rounded-full px-2.5 py-0.5 font-mono text-[11px] font-bold uppercase tracking-[0.14em] ${tone.chip}`}>
+                  {item.day}
+                </span>
+                <h3 className="mt-2 font-serif font-bold text-lg text-brand-purple">{item.task}</h3>
+                <p className="mt-1 text-[15px] text-brand-text/70 leading-relaxed max-w-xl">{item.detail}</p>
+                {item.task === 'Build next week properly' && (
+                  <a
+                    href="/revision-tracker/"
+                    className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
+                  >
+                    Open the free Revision Tracker
+                    <span aria-hidden="true">→</span>
+                  </a>
+                )}
+              </motion.li>
+            )
+          })}
         </ol>
       </Section>
 
-      {/* ══ Students: the route, once the case has been made ══ */}
-      {!isParent && routeSection('06')}
-
-      {/* ══ Parents: closing reprise of the recommendation ══ */}
-      {isParent && (
-        <section className="px-5 sm:px-6 py-12 md:py-16 bg-[#241d47]">
-          <div className="max-w-3xl mx-auto text-center">
-            <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">The next step</p>
-            <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-3xl text-brand-cream leading-tight">
-              Ready when you are
-            </h2>
-            <p className="mt-3 text-brand-cream/70 leading-relaxed max-w-xl mx-auto">
-              {routing.primary.name} is the route matched to {child}&apos;s diagnosis. If you&apos;d rather
-              talk it through first, the call is free and honest.
-            </p>
-            <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
-              <a
-                href={routing.primary.href}
-                className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
-              >
-                {routing.primary.cta}
-                <span aria-hidden="true" className="ml-2">→</span>
-              </a>
-              <a
-                href={BOOK_A_CALL_LINK}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex justify-center items-center rounded-full border-2 border-brand-cream/25 text-brand-cream px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
-              >
-                Book a Free Call
-              </a>
-            </div>
+      {/* ══ Closing reprise: back to the route without scrolling up ══ */}
+      <section className="px-5 sm:px-6 py-12 md:py-16 bg-[#241d47]">
+        <div className="max-w-3xl mx-auto text-center">
+          <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">The next step</p>
+          <h2 className="mt-3 font-serif font-bold tracking-tight text-2xl md:text-3xl text-brand-cream leading-tight">
+            Ready when you are
+          </h2>
+          <p className="mt-3 text-brand-cream/70 leading-relaxed max-w-xl mx-auto">
+            {isParent ? (
+              <>
+                {routing.primary.name} is the route matched to {child}&apos;s diagnosis. If you&apos;d rather
+                talk it through first, the call is free and honest.
+              </>
+            ) : (
+              <>
+                {routing.primary.name} is the route matched to your diagnosis. If you&apos;d rather talk it
+                through first, the call is free and honest.
+              </>
+            )}
+          </p>
+          <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
+            <a
+              href={routing.primary.href}
+              className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
+            >
+              {routing.primary.cta}
+              <span aria-hidden="true" className="ml-2">→</span>
+            </a>
+            <a
+              href={BOOK_A_CALL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex justify-center items-center rounded-full border-2 border-brand-cream/25 text-brand-cream px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
+            >
+              Book a Free Call
+            </a>
           </div>
-        </section>
-      )}
+          <p className="mt-5 text-sm text-brand-cream/55">
+            <a href="#route" onClick={scrollToRoute} className="underline underline-offset-4 hover:text-brand-gold transition">
+              Read the full recommendation again
+            </a>
+          </p>
+        </div>
+      </section>
 
       {/* ══ Actions footer ══ */}
       <section className="px-5 sm:px-6 py-12 md:py-16 print:hidden">

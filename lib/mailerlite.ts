@@ -62,12 +62,21 @@ export interface DiagnosticSubscriber {
   /* Optional extras: '' when not given, and then never sent */
   childName: string
   support: string
+  /* Behind the support answer: which subjects they're tutored in, which
+     course they're on, or why the old tutor stopped */
+  supportDetail: string
+  /* What they said they'd benefit from most (the needs question) */
+  supportNeeded: string
   notes: string
   yearGroup: string
   subjects: string
   worrySubject: string
+  /* The worry subject's single grades: the follow-up emails embed these
+     mid-sentence, so they must stay one grade, not a list */
   currentGrade: string
   targetGrade: string
+  /* Every subject's journey in one line: "Maths B to A, Chemistry C to B" */
+  grades: string
   hoursPerWeek: string
   lowYieldHours: string
   archetype: string
@@ -87,6 +96,8 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
     if (sub.taker) optional.diag_taker = sub.taker
     if (sub.childName) optional.diag_child_name = sub.childName
     if (sub.support) optional.diag_support = sub.support
+    if (sub.supportDetail) optional.diag_support_detail = sub.supportDetail
+    if (sub.supportNeeded) optional.diag_support_needed = sub.supportNeeded
     if (sub.notes) optional.diag_notes = sub.notes
 
     /* Parents join the parent master group and a parent route group, never
@@ -114,6 +125,7 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
           diag_worry_subject: sub.worrySubject,
           diag_current_grade: sub.currentGrade,
           diag_target_grade: sub.targetGrade,
+          diag_grades: sub.grades,
           diag_hours_per_week: sub.hoursPerWeek,
           diag_low_yield_hours: sub.lowYieldHours,
           diag_archetype: sub.archetype,
