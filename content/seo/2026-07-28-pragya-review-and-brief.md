@@ -76,3 +76,33 @@ Both instructions from the brief landed this week: every link targets the non-ww
 Still unresolved, chase again: the bizify listing still publishes the home address and postcode in its structured data (verified live 3 August). This is the priority ask in the next message to her, above anything link-related.
 
 Quality gap unchanged: zero real placements yet (education blogs, listicle inclusions, school resource pages); the one audience-relevant domain this week is a UK parenting blog profile. Decision recorded: the high-value outreach lane (the "best A-level tutoring" and "best revision websites" roundups, backlog items 22 and 28) moves in-house via the partnership-outreach skill, drafts for Waleed to send; Pragya gets a concrete target list rather than another abstract steer, and next week's syndication should switch to the results-day twins ahead of 13 August.
+
+## Round 4: the 10 August weekly report (70 links, evaluated 11 August)
+
+Volume jumped from 26 to 70 links, but the report is a regression on two standing rules and repeats the privacy problem, so the reply to Pragya is firmer this round.
+
+**Kept from the brief:** the dofollow/nofollow column is present throughout (a rough count gives 38 dofollow, 32 nofollow). Article Submission (10 links) and Web 2.0 (8 links) target the non-www domain and push real content (the blurting post syndicated to Medium, Blogspot, WordPress, Notion, HackMD and similar, which is what the twins exist for). A branded Substack now exists (alevelaccelerators.substack.com) carrying the year-12-summer piece.
+
+**Problem 1, privacy (the priority):** instead of removing the address, this week ADDS listings carrying it. The ZeeMaps listing has the home postcode in the listing itself (SM7 1NQ, Banstead is visible in the URL), and the YPlocal listing files the business under Banstead. The bizify listing flagged on 1 and 3 August was still live at last check. The reply makes address removal a stop-work condition on new listings.
+
+**Problem 2, www regression:** five of the nine categories (Local Work, Social Profiles, Social Bookmarking, Business Listings, Thematics: 39 links) point at https://www.alevelaccelerators.com/ again, undoing the fix she held for two weeks. Deep links also drop the trailing slash (/study-systems, /subject-accelerators), adding a second redirect hop.
+
+**Problem 3, padding:** the webmastersun profile is counted in both Social Profiles (as nofollow) and Social Bookmarking (as dofollow); the same Diigo note pattern appears twice. The Web 2.0 sheet lists blurting-article posts but records the target as the year-12-summer URL, so the labelling cannot be trusted without opening the links. The Syndication sheet is mostly tier-2 links pointing at her own placements (Buzzbii posts linking to the Medium article), not at the site.
+
+**Quality mix unchanged:** "Local Work" and "Thematics" are generic profile pages on unrelated sites (a car show site, a therapy directory, a weather research forum, a design school), the pattern the 28 July brief asked her to stop. Zero real placements again.
+
+Reply drafted 11 August (supersedes the 8 August draft; the two were merged): address removal first and confirmed before any new listings, non-www restated with trailing-slash examples, double-counting flagged, quality-over-count restated, and next week's articles switch to the results-day pieces before Thursday 13 August.
+
+## Round 5: the Google Drive on-page folder (reviewed 12 August)
+
+Pragya consolidated her on-page suggestion documents into one Drive folder (13 files, same titles as the 20 July and 1 August deliveries) and asked whether the changes have been made. Full read of every suggestion document on 12 August. Verdict: **nothing in the folder requires a site change.** Everything valid was already shipped, everything else was declined with recorded reasons in rounds 1 and 2.
+
+**Partially refreshed:** the Home Page Optimization doc, Heading Structure doc, Non Target Pages doc and AI SEO Audit now describe the CURRENT site (post 2 August deploys: correct homepage meta, September 9 cohort date, current diagnostic copy), the first time her documents have worked from the real pages. Her own heading analysis now concludes the homepage and subject-accelerators H1s need no changes.
+
+**Still stale:** the target-pages Meta xlsx quotes the pre-redesign homepage; the New Pages doc still proposes contact, pricing, privacy and terms pages that have been live since 2 August; the tracker "missing H1" and "wrong meta description" findings and the /faqs/ doubled title were all checked against the live site on 12 August and are already correct (single H1, planner description, clean title). Standing rule 2 (her crawls lag; verify before acting) held again.
+
+**Still declined, same reasons:** homepage title/H1 replacement (protected brand copy); WebSite schema with SearchAction (no /search page exists; her suggested code even targets a nonexistent https://www.alevelaccelerators.com/search URL and mixes www @ids); downgrading EducationalOrganization to bare Organization; generic-SEO H1 rewrites on study-systems; trimming existing FAQ sections down to 6 to 8 questions (the 12-FAQ pages are deliberate); the GCSE FAQ (no GCSE product); her shorter diagnostic meta title (drops the hook).
+
+**Already implemented before this folder existed:** FAQ additions from her topic lists (batches 2 and 4), WebPage schema on /parents/, /faqs/ and /newsletter/ (batch 2), contact and pricing pages (live 2 August), privacy and terms (live 2 August), FAQ answers rendered in static HTML.
+
+Her AI audit still reports "10/100, never cited by AI platforms", which is contradicted by measured ground truth (107 Copilot citations, 63.64% citation share on "best ways to revise for A Level", GA4 AI Assistant channel recording sessions). Treat that scoring as her tool's sales template, not measurement.
