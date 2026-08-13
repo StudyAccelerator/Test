@@ -8,7 +8,7 @@
 
 ## The offers (real prices and links, do not change)
 
-- **Summer Accelerator** (sales page `/summer-accelerators`): 6-week live summer course, Year 12 going into Year 13. Biology, Chemistry, Maths, Physics. £289 one subject, £539 two, £739 three, £849 four. First session risk-free. **Cohort starts Saturday 8 August 2026** (moved from 25 July on 15 July); the launch push runs late July into early August.
+- **Summer Accelerator** (sales page `/summer-accelerators`): 6-week live summer course, Year 12 going into Year 13. Biology, Chemistry, Maths, Physics. £289 one subject, £539 two, £739 three, £849 four. First session risk-free. **Cohort starts Saturday 22 August 2026** (moved from 8 August on 13 August after that date passed unfilled; originally 25 July); content naming the start date must say 22 August.
 - **Subject Accelerators** (`/subject-accelerators`): live 12-week exam programmes through the year.
 - **Study System** (`/study-systems`): the exam-technique and revision-system layer.
 - **Free lead magnets:** the Revision Tracker (`/revision-tracker`), the blog (`/blog/`), the printable Blurting Template PDF, the Parent Guide (`/parents`).

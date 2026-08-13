@@ -289,9 +289,9 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               className="h-12 w-12 rounded-full object-cover object-top ring-2 ring-brand-gold/50 shrink-0"
             />
             <p className="text-sm text-brand-text/70 leading-relaxed">
-              <span className="font-bold text-brand-purple">Recommended by Dr Waleed Ahmad, MBBS.</span> NHS
-              doctor. He&apos;s worked with over 1,000 A-level students and helped them towards top grades and
-              the first-choice university offers they were chasing.{' '}
+              <span className="font-bold text-brand-purple">Recommended by Dr Waleed Ahmad, MBBS.</span>{' '}
+              NHS doctor. He&apos;s worked with over 1,000 A-level students and helped them towards top grades
+              and the first-choice university offers they were chasing.{' '}
               {isParent ? <>This route was picked from {child}&apos;s answers, not a default.</> : <>This route was picked from your answers, not a default.</>}
             </p>
           </div>
@@ -388,20 +388,21 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               })}
             </div>
 
-            {/* The reason to keep going: the fix is one scroll away */}
-            <div className="mt-10 flex flex-col sm:flex-row sm:items-center gap-4">
+            {/* The reason to keep going: the fix is one scroll away. Cream, not
+                gold, so it never blends into the gold leak pill above it. */}
+            <div className="mt-10 flex flex-col items-center text-center gap-3">
               <a
                 href="#route"
                 onClick={scrollToRoute}
-                className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-[0_12px_28px_rgba(201,169,110,.35)]"
+                className="inline-flex justify-center items-center rounded-full bg-brand-cream text-brand-purple px-9 py-4 text-lg font-bold hover:bg-white hover:-translate-y-0.5 transition-all shadow-[0_10px_24px_rgba(0,0,0,.28)]"
               >
                 {isParent ? 'Show me what to do about it' : 'Show me how to fix it'}
                 <span aria-hidden="true" className="ml-2">↓</span>
               </a>
-              <p className="text-sm text-brand-cream/60 leading-snug max-w-[16rem]">
+              <p className="text-sm text-brand-cream/60 leading-snug">
                 {isParent
-                  ? 'The route, the evidence and their 7 day plan are all below.'
-                  : 'Your route, the evidence and your 7 day plan are all below.'}
+                  ? 'The route, the evidence and their 7 day plan, all below'
+                  : 'Your route, the evidence and your 7 day plan, all below'}
               </p>
             </div>
           </motion.div>

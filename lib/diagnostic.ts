@@ -1213,7 +1213,7 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     ],
     href: '/summer-accelerators/',
     cta: 'Explore the Summer Accelerator',
-    meta: 'Cohort starts Saturday 8th August · from £289 per subject',
+    meta: 'Cohort starts Saturday 22nd August · from £9/hr',
   })
 
   const subjectAccel = (why: string): Route => ({
