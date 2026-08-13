@@ -92,10 +92,17 @@ module.exports = async function handler(req, res) {
   if (groupLabel) lines.push(`Joined: ${esc(groupLabel)}`)
   if (f.diag_child_name) lines.push(`Child: ${esc(f.diag_child_name)}`)
   if (f.year_group) lines.push(`Year group: ${esc(f.year_group)}`)
+  /* Spelled out both ways round: the stored field is a double negative
+     ("no" means they did NOT opt out, so calling is fine) and misreading it
+     either loses a call or breaks an opt-out. */
   if (String(f.diag_no_contact) === 'yes') {
-    lines.push('DO NOT CALL, they ticked the opt-out')
+    lines.push(
+      f.phone
+        ? `DO NOT CALL. They ticked the opt-out. (Number on file, ${esc(f.phone)}, for your records only.)`
+        : 'DO NOT CALL. They ticked the opt-out.'
+    )
   } else if (f.phone) {
-    lines.push(`Phone: ${esc(f.phone)}`)
+    lines.push(`OK TO CALL: ${esc(f.phone)}`)
   } else {
     lines.push('No phone left')
   }
