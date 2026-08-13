@@ -4,5 +4,8 @@
     { "source": "/workshop/", "destination": "/", "permanent": true },
     { "source": "/error-log", "destination": "/revision-tracker/", "permanent": false },
     { "source": "/error-log/", "destination": "/revision-tracker/", "permanent": false }
-  ]
+  ],
+  "functions": {
+    "api/lead-alert.ts": { "includeFiles": "lib/mailerlite.ts" }
+  }
 }

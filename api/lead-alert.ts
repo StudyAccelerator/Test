@@ -9,18 +9,43 @@
  * own two addresses. Replaces the latency of the polling Routines with a push.
  *
  * ACTIVATION (after this branch deploys to production):
- *   1. Register the webhook (key from lib/mailerlite.ts):
+ *   1. Register the webhook (key from lib/mailerlite.ts). The URL must keep
+ *      its trailing slash: the bare path 308-redirects (trailingSlash site)
+ *      and webhook senders cannot be trusted to follow redirects:
  *      curl -X POST https://connect.mailerlite.com/api/webhooks \
  *        -H "Authorization: Bearer <ML_API_KEY>" -H "Content-Type: application/json" \
- *        -d '{"name":"Lead alerts to Waleed","events":["subscriber.added_to_group"],"url":"https://alevelaccelerators.com/api/lead-alert?token=ala-lead-alert-2f9c81d64a0b"}'
+ *        -d '{"name":"Lead alerts to Waleed","events":["subscriber.added_to_group"],"url":"https://alevelaccelerators.com/api/lead-alert/?token=ala-lead-alert-2f9c81d64a0b"}'
  *   2. Prove it end to end: add a test subscriber to the Sunday Session group,
  *      check the email arrives, then delete the test subscriber.
  *   3. Retire the two polling Routines (diagnostic-lead-alerts-hourly and
  *      diagnostic-lead-alerts-halfhour) to a single daily failsafe, so leads
  *      are not double-alerted.
+ *
+ * The MailerLite key stays single-sourced in lib/mailerlite.ts: importing
+ * across the api/ boundary crashed the function bundle at load
+ * (FUNCTION_INVOCATION_FAILED, 13 August 2026), so the key is read from the
+ * file at runtime instead; vercel.json's functions.includeFiles ships the
+ * file with this function.
  */
 
-import { ML_API_KEY } from '../lib/mailerlite'
+import { readFileSync } from 'fs'
+import { join } from 'path'
+
+function mailerliteKey(): string {
+  const candidates = [
+    join(process.cwd(), 'lib', 'mailerlite.ts'),
+    '/var/task/lib/mailerlite.ts',
+  ]
+  for (const path of candidates) {
+    try {
+      const m = readFileSync(path, 'utf8').match(/ML_API_KEY =\s*'([^']+)'/)
+      if (m) return m[1]
+    } catch {
+      /* try the next location */
+    }
+  }
+  throw new Error('ML_API_KEY not found: lib/mailerlite.ts missing from the function bundle')
+}
 
 /* Shared-secret gate: MailerLite calls the URL with ?token=..., anyone without
    it gets a 401. Rotate by changing it here and re-registering the webhook. */
@@ -96,7 +121,7 @@ export default async function handler(req: any, res: any) {
 
   const firstName = name.split(' ')[0]
   const stamp = new Date().toISOString().slice(0, 16).replace('T', ' ')
-  const auth = { Authorization: `Bearer ${ML_API_KEY}`, 'Content-Type': 'application/json' }
+  const auth = { Authorization: `Bearer ${mailerliteKey()}`, 'Content-Type': 'application/json' }
 
   const create = await fetch('https://connect.mailerlite.com/api/campaigns', {
     method: 'POST',
