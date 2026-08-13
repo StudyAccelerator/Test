@@ -6,6 +6,6 @@
     { "source": "/error-log/", "destination": "/revision-tracker/", "permanent": false }
   ],
   "functions": {
-    "api/lead-alert.ts": { "includeFiles": "lib/mailerlite.ts" }
+    "api/lead-alert.js": { "includeFiles": "lib/mailerlite.ts" }
   }
 }
