@@ -48,6 +48,15 @@ const WATCHED = {
 
 const OWN_ADDRESSES = ['waleedahmad042.319@gmail.com', 'waleed@alevelaccelerators.com']
 
+/* Instant phone push via ntfy.sh, added 15 August 2026 on Waleed's instruction:
+   the email alert rides MailerLite's campaign pipeline (about 2 minutes door to
+   door), which is too slow for his call-while-they-read-the-report play. ntfy
+   delivers to his phone in about a second. He subscribes to this topic in the
+   free ntfy app; the topic name is the only secret, so keep it long and random
+   and rotate it here if it ever leaks. The email alert stays as the full record. */
+const NTFY_TOPIC = 'ala-leads-8f4c2e91b7d3a650'
+
+
 function mailerliteKey() {
   const candidates = [join(process.cwd(), 'lib', 'mailerlite.ts'), '/var/task/lib/mailerlite.ts']
   for (const path of candidates) {
@@ -132,6 +141,33 @@ module.exports = async function handler(req, res) {
      waitUntil keeps the lambda alive to send the alert; a genuine send
      failure is logged and caught by the daily digest failsafe Routine. */
   res.status(200).json({ accepted: email })
+
+  /* The push goes FIRST and never blocks the email: speed is its whole job. */
+  const callLine =
+    String(f.diag_no_contact) === 'yes'
+      ? 'DO NOT CALL (opted out)'
+      : f.phone
+        ? `OK TO CALL ${f.phone}`
+        : 'no phone left'
+  waitUntil(
+    fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
+      method: 'POST',
+      headers: {
+        Title: `New lead: ${firstName}${f.diag_taker ? ` (${f.diag_taker})` : ''}`,
+        Priority: 'high',
+        Tags: 'telephone',
+      },
+      body: [
+        callLine,
+        f.diag_child_name ? `Child: ${f.diag_child_name}` : '',
+        f.diag_archetype ? `Profile: ${f.diag_archetype}` : '',
+        f.diag_support_needed ? `Wants: ${f.diag_support_needed}` : '',
+        groupLabel || '',
+      ]
+        .filter(Boolean)
+        .join('\n'),
+    }).catch((err) => console.error(`ntfy push FAILED for ${email}:`, err))
+  )
 
   waitUntil(
     (async () => {
