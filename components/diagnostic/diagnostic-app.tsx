@@ -923,10 +923,10 @@ function EmailGate({
       return
     }
     /* Phone is required since 12 August 2026 (Waleed's call: he rings new
-       leads himself, and the number doubles as the bot check). */
+       leads himself; framed on the page as his same-day call, 15 Aug 2026). */
     const phoneClean = phoneRaw.replace(/[\s().-]/g, '')
     if (!phoneClean) {
-      setError("Add your phone number: it's how I know you're a real person and not a bot.")
+      setError("Add a phone number: it's where Dr Waleed rings you with his read on the report.")
       return
     }
     if (!/^\+?\d{7,15}$/.test(phoneClean)) {
@@ -1099,7 +1099,9 @@ function EmailGate({
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
               <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
-                Required: it confirms you&apos;re a real person, not a bot.
+                {isParent
+                  ? "Dr Waleed personally rings new results with his read on your child's report, usually the same day."
+                  : 'Dr Waleed personally rings new results with his read on your report, usually the same day.'}
               </p>
               <label
                 htmlFor="diag-nocontact"
@@ -1111,7 +1113,7 @@ function EmailGate({
                   type="checkbox"
                   className="mt-0.5 h-4 w-4 shrink-0 rounded accent-brand-gold"
                 />
-                I&apos;d rather not be contacted to discuss the results of the report.
+                Tick here if you&apos;d rather skip the call.
               </label>
             </div>
             <div>
