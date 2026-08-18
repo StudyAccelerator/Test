@@ -231,7 +231,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl md:text-4xl leading-tight text-brand-cream">
           {isParent ? (
             <>
-              {firstName}, here&apos;s the route I&apos;d put {childName || 'them'} on
+              {firstName}, here&apos;s the route I&apos;d recommend for {childName || 'your child'}
             </>
           ) : (
             <>{firstName}, this is your fastest route</>
@@ -364,42 +364,110 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 <p className="max-w-[11rem] text-center text-sm text-brand-cream/60 leading-snug">
                   {isParent ? 'Their revision system score, across five dimensions' : 'Your revision system score, across five dimensions'}
                 </p>
-                {!isOptimiser && (
-                  <div className="w-full max-w-[16rem] rounded-xl border border-brand-gold/30 bg-white/[0.05] px-4 py-3.5 text-center">
-                    <p className="text-sm leading-snug text-brand-cream/85">
-                      {isParent ? (
-                        <>
-                          {firstName}, {child} is being held back by{' '}
-                          <strong className="text-brand-gold">{DIM_META[bottleneck].label}</strong>. Dr Waleed&apos;s
-                          plan below shows how to fix it and push for top grades.
-                        </>
-                      ) : (
-                        <>
-                          {firstName}, you&apos;re being held back by{' '}
-                          <strong className="text-brand-gold">{DIM_META[bottleneck].label}</strong>. The plan below
-                          shows how to fix it and push for top grades.
-                        </>
-                      )}
-                    </p>
-                  </div>
-                )}
-                <div className="relative w-full max-w-[180px] rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(201,169,110,.35),0_16px_32px_rgba(0,0,0,.35)]">
-                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap rounded-full bg-brand-gold text-brand-purple text-[11px] font-bold px-3.5 py-1 shadow-lg">
-                    who wrote this plan
-                  </span>
-                  <Image
-                    src="/photos/waleed-grad-portrait.jpg"
-                    alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
-                    width={640}
-                    height={878}
-                    unoptimized
-                    className="w-full h-auto rounded-xl"
-                  />
-                  <div className="px-1 pt-2 pb-1.5 text-center">
-                    <p className="text-[13px] font-bold text-brand-purple leading-tight">Dr Waleed Ahmad, MBBS</p>
-                    <p className="mt-0.5 text-[11px] text-brand-purple/60 leading-tight">Founder, A-Level Accelerators</p>
+              </div>
+            </div>
+
+            {/* The story band, the same graphics as the homepage hero so the
+                report reads as part of one system: the goal first, then the
+                finding, then where fixing it leads. */}
+            <div className="mt-10 grid gap-4 sm:gap-5 md:grid-cols-3 items-stretch">
+              <div className="rounded-2xl bg-white p-5 [box-shadow:0_0_0_1px_rgba(201,169,110,.3),0_16px_32px_rgba(0,0,0,.3)]">
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55">
+                  {isParent ? `${child}'s route to results day` : 'Your route to results day'}
+                </p>
+                <div className="mt-9 flex items-end gap-2" aria-hidden="true">
+                  {[
+                    ['C/D', 'h-10 bg-brand-purple/5 text-brand-text/40 text-sm', isParent ? 'where they start' : 'where you start'],
+                    ['B', 'h-14 bg-brand-cream ring-1 ring-brand-purple/10 text-brand-purple/60 text-base', 'content rebuilt'],
+                    ['A', 'h-[4.5rem] bg-brand-gold/25 ring-1 ring-brand-gold/45 text-brand-purple text-lg', 'technique trained'],
+                  ].map(([g, cls, lbl]) => (
+                    <div key={g} className="flex-1 flex flex-col items-center gap-1.5">
+                      <span className={`w-full flex items-center justify-center rounded-lg font-serif font-bold ${cls}`}>{g}</span>
+                      <span className="text-[10px] font-semibold text-brand-text/55 text-center leading-tight">{lbl}</span>
+                    </div>
+                  ))}
+                  <div className="relative flex-1 flex flex-col items-center gap-1.5">
+                    <span className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full bg-brand-gold px-2.5 py-0.5 text-[10px] font-bold text-brand-purple whitespace-nowrap shadow">
+                      Results day
+                    </span>
+                    <span className="w-full h-24 flex items-center justify-center rounded-lg bg-brand-purple text-brand-gold font-serif font-bold text-xl shadow-lg shadow-brand-purple/30">
+                      A*
+                    </span>
+                    <span className="text-[10px] font-semibold text-brand-text/55 text-center leading-tight">
+                      <span className="text-brand-gold font-bold">{isParent ? 'their new' : 'your new'}</span>
+                      <br />
+                      grades
+                    </span>
                   </div>
                 </div>
+                <div className="mt-4 flex gap-1.5">
+                  {[['01', 'Diagnose'], ['02', 'Rebuild'], ['03', 'Coach']].map(([n, t]) => (
+                    <span key={t} className="flex-1 text-center rounded-full border border-brand-gold/35 bg-brand-gold/10 px-1 py-1.5 text-[10px] font-bold text-brand-purple">
+                      <span className="font-mono text-brand-gold mr-1">{n}</span>
+                      {t}
+                    </span>
+                  ))}
+                </div>
+              </div>
+
+              <div className="flex flex-col rounded-2xl bg-white p-5 [box-shadow:0_0_0_1px_rgba(201,169,110,.3),0_16px_32px_rgba(0,0,0,.3)]">
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55">The finding</p>
+                <p className="mt-3 text-[15px] leading-snug text-brand-text/85">
+                  {isOptimiser ? (
+                    isParent ? (
+                      <>
+                        {firstName}, no single system is holding {child} back. The plan below shows how to
+                        sharpen what already works.
+                      </>
+                    ) : (
+                      <>
+                        {firstName}, no single system is holding you back. The plan below shows how to
+                        sharpen what already works.
+                      </>
+                    )
+                  ) : isParent ? (
+                    <>
+                      {firstName}, {child} is currently being held back by{' '}
+                      <strong className="text-brand-purple">{DIM_META[bottleneck].label}</strong>. The plan
+                      below shows how to fix it and push for top grades.
+                    </>
+                  ) : (
+                    <>
+                      {firstName}, you&apos;re currently being held back by{' '}
+                      <strong className="text-brand-purple">{DIM_META[bottleneck].label}</strong>. The plan
+                      below shows how to fix it and push for top grades.
+                    </>
+                  )}
+                </p>
+                <div className="mt-auto pt-4 flex items-center gap-3 border-t border-brand-purple/10">
+                  <Image
+                    src="/photos/waleed-grad-portrait.jpg"
+                    alt="Dr Waleed Ahmad"
+                    width={96}
+                    height={96}
+                    unoptimized
+                    className="h-12 w-12 rounded-full object-cover object-top ring-2 ring-brand-gold/50 shrink-0"
+                  />
+                  <p className="text-xs leading-snug text-brand-text/70">
+                    <span className="font-bold text-brand-purple">Plan created by Dr Waleed Ahmad, MBBS</span>{' '}
+                    {isParent ? <>to support {child}.</> : <>to support you.</>}{' '}
+                    He&apos;s helped 1,000+ students towards top grades.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex flex-col rounded-2xl bg-white border-t-4 border-brand-gold p-5 [box-shadow:0_0_0_1px_rgba(201,169,110,.3),0_16px_32px_rgba(0,0,0,.3)]">
+                <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55">University offers</p>
+                <p className="mt-1.5 font-serif italic text-2xl text-brand-purple">Congratulations!</p>
+                <p className="mt-1.5 text-sm text-brand-text/65 leading-snug">
+                  {isParent ? <>{child}&apos;s firm choice has confirmed their place.</> : <>Your firm choice has confirmed your place.</>}
+                </p>
+                <span className="mt-3.5 inline-block self-start rounded-full bg-brand-gold/20 px-3.5 py-1 text-xs font-extrabold text-brand-purple">
+                  Offer confirmed ✓
+                </span>
+                <p className="mt-auto pt-4 text-xs text-brand-text/55 leading-snug">
+                  {isParent ? 'Where the plan below is pointed.' : 'Where your plan below is pointed.'}
+                </p>
               </div>
             </div>
 
