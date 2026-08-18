@@ -813,7 +813,7 @@ const ARCHETYPES: Record<string, Archetype> = {
   crammer: {
     id: 'crammer',
     name: 'The Crammer',
-    strapline: 'Brilliant in a panic. Broken without one.',
+    strapline: 'Brilliant in a panic. Inefficient without one.',
     diagnosis: [
       'Your real revision system is deadline panic. And the frustrating part is that it sort of works: you can load a test into short-term memory overnight, so the habit keeps getting rewarded.',
       "A-levels are where that stops working. Two years of content can't live in short-term memory. What you cram this week is already fading by next week, so by exam season you're paying for the same topics twice, sometimes three times.",
