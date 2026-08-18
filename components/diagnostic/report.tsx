@@ -190,7 +190,6 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
   const worryShown = worry && worry !== 'unsure' ? worry : ''
   const currentGrades = gradePairs(answers, 'currentGrades')
   const targetGrades = gradePairs(answers, 'targetGrades')
-  const today = new Date().toLocaleDateString('en-GB', { day: 'numeric', month: 'long', year: 'numeric' })
 
   const blocks = Math.round(hoursLeak.weeklyMid)
   const leakBlocks = Math.min(blocks - 1, hoursLeak.lowYieldHours)
@@ -200,9 +199,9 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
   const child = childName || 'your child'
   const reduceMotion = useReducedMotion()
 
-  /* Journey personalisation. The ladder always has four rungs so the method
-     steps (content rebuilt, technique trained) both show: real grade letters
-     when the span allows, High-grade rungs when it does not. */
+  /* Journey personalisation. Four rungs, climbing steeply to A star: real
+     grade letters when the span allows, grade ranges (B/A) when it is short,
+     so the method steps always both show. */
   const journeySubjects = (((answers.subjects as string[] | undefined) ?? []).filter(
     (s) => s !== 'Other' && (currentGrades[s] || targetGrades[s])
   )).slice(0, 4)
@@ -222,8 +221,8 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         ? LETTERS.slice(startIdx)
         : [LETTERS[startIdx], LETTERS[startIdx + 1], LETTERS[3], 'A*']
       : span === 2
-        ? [LETTERS[startIdx], LETTERS[startIdx + 1], `High ${LETTERS[startIdx + 1]}`, 'A*']
-        : ['A', 'High A', 'A*', 'A*']
+        ? [LETTERS[startIdx], `${LETTERS[startIdx]}/${LETTERS[startIdx + 1]}`, LETTERS[startIdx + 1], 'A*']
+        : ['A', 'A/A*', 'A*', 'A*']
 
   const [downloading, setDownloading] = useState(false)
 
@@ -351,31 +350,24 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         <div aria-hidden="true" className="pointer-events-none absolute -top-32 left-[-12%] h-[26rem] w-[34rem] rounded-full bg-brand-gold/10 blur-3xl" />
         <div aria-hidden="true" className="pointer-events-none absolute -bottom-40 right-[-10%] h-[24rem] w-[30rem] rounded-full bg-brand-purple-light/40 blur-3xl" />
 
-        <div className="relative max-w-5xl mx-auto px-5 sm:px-6 pt-8 pb-10 md:pt-10 md:pb-12">
+        <div className="relative max-w-6xl mx-auto px-5 sm:px-6 pt-6 pb-8 md:pt-8 md:pb-10">
           <motion.div
             initial={{ opacity: 0, y: 18 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, ease: EASE }}
           >
             <div className="grid md:grid-cols-[1.35fr_1fr] gap-4 items-stretch">
-              <div className="rounded-2xl bg-white/[0.04] border border-brand-gold/20 p-5 sm:p-6">
-                <p className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-cream/55">
-                  <span className="text-brand-gold">Revision Diagnostic</span> · Personal report
-                </p>
-                <p className="mt-1.5 font-mono text-[10px] uppercase tracking-[0.2em] text-brand-cream/60">
-                  Prepared for <span className="text-brand-cream">{firstName}</span>
-                  {isParent && <> · about <span className="text-brand-cream">{child}</span></>} · {today}
-                </p>
-                <p className="mt-4 font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold">
+              <div className="rounded-2xl bg-white/[0.04] border border-brand-gold/20 p-6 sm:p-7 flex flex-col justify-center">
+                <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">
                   {isParent ? (childName ? `${childName}'s revision profile` : "Your child's revision profile") : 'Your revision profile'}
                 </p>
-                <h1 className="mt-1.5 font-serif font-bold tracking-tight text-4xl sm:text-[2.6rem] leading-[1.02]">
+                <h1 className="mt-2 font-serif font-bold tracking-tight text-5xl sm:text-6xl leading-[1.0]">
                   <span className="italic text-brand-gold">{archetype.name}</span>
                 </h1>
-                <p className="mt-2 font-serif italic text-lg text-brand-cream/85 leading-snug">
+                <p className="mt-3 font-serif italic text-xl text-brand-cream/85 leading-snug">
                   {archetype.strapline}
                 </p>
-                <p className="mt-3 text-sm leading-relaxed text-brand-cream/85">
+                <p className="mt-4 text-[15px] leading-relaxed text-brand-cream/85">
                   {isOptimiser ? (
                     isParent ? (
                       <>{firstName}, no single system is holding {child} back. The plan below shows you how to sharpen what already works.</>
@@ -400,11 +392,9 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 </p>
               </div>
 
-              <div className="rounded-2xl bg-white/[0.04] border border-brand-gold/20 p-4 flex flex-col items-center justify-center">
-                <div className="scale-[0.85] -my-3">
-                  <ScoreRing value={overall} />
-                </div>
-                <div className="mt-2 flex flex-wrap gap-1.5 justify-center">
+              <div className="rounded-2xl bg-white/[0.04] border border-brand-gold/20 p-5 flex flex-col items-center justify-center">
+                <ScoreRing value={overall} />
+                <div className="mt-3 flex flex-wrap gap-1.5 justify-center">
                   {DIMS.map((d) => {
                     const isB = d === bottleneck && !isOptimiser
                     return (
@@ -426,32 +416,33 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               </div>
             </div>
 
-            <div className="mt-4 rounded-2xl bg-white p-5 [box-shadow:0_0_0_1px_rgba(201,169,110,.3),0_16px_32px_rgba(0,0,0,.3)]">
+            <div className="mt-3 rounded-2xl bg-white p-5 [box-shadow:0_0_0_1px_rgba(201,169,110,.3),0_16px_32px_rgba(0,0,0,.3)]">
                   <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/55 text-center md:text-left">
                     {isParent ? `${child}'s journey to top grades` : 'Your journey to top grades'}
                   </p>
-                  <div className="mt-4 flex flex-col md:flex-row items-center gap-5">
+                  <div className="mt-5 flex flex-col md:flex-row items-center gap-6">
                     <div className="w-full flex-1">
-                      <div className="mt-2 w-full flex items-end gap-2" aria-hidden="true">
+                      <div className="mt-2 w-full flex items-end gap-2.5" aria-hidden="true">
                         {ladderRungs.map((g, i) => {
                           const last = i === 3
-                          const H = ['h-8', 'h-12', 'h-16', 'h-20']
+                          const H = ['h-10', 'h-16', 'h-24', 'h-36']
+                          const T = ['text-sm', 'text-lg', 'text-xl', 'text-3xl']
                           const cls = last
-                            ? 'bg-brand-purple text-brand-gold text-lg shadow-lg shadow-brand-purple/30'
+                            ? 'bg-brand-purple text-brand-gold shadow-lg shadow-brand-purple/30'
                             : i === 0
-                              ? 'bg-brand-purple/5 text-brand-text/40 text-sm'
+                              ? 'bg-brand-purple/5 text-brand-text/40'
                               : i === 1
-                                ? 'bg-brand-cream ring-1 ring-brand-purple/10 text-brand-purple/60 text-sm'
-                                : 'bg-brand-gold/25 ring-1 ring-brand-gold/45 text-brand-purple text-base'
+                                ? 'bg-brand-cream ring-1 ring-brand-purple/10 text-brand-purple/60'
+                                : 'bg-brand-gold/25 ring-1 ring-brand-gold/45 text-brand-purple'
                           return (
-                            <div key={i} className="relative flex-1 flex flex-col items-center gap-1">
+                            <div key={i} className="relative flex-1 flex flex-col items-center gap-1.5">
                               {last && (
-                                <span className="absolute -top-6 left-1/2 -translate-x-1/2 rounded-full bg-brand-gold px-2.5 py-0.5 text-[9px] font-bold text-brand-purple whitespace-nowrap shadow">
+                                <span className="absolute -top-7 left-1/2 -translate-x-1/2 rounded-full bg-brand-gold px-3 py-1 text-[10px] font-bold text-brand-purple whitespace-nowrap shadow">
                                   Results day
                                 </span>
                               )}
-                              <span className={`w-full flex items-center justify-center rounded-lg font-serif font-bold whitespace-nowrap ${H[i]} ${cls}`}>{g}</span>
-                              <span className="text-[9px] font-semibold text-brand-text/55 text-center leading-tight">
+                              <span className={`w-full flex items-center justify-center rounded-xl font-serif font-bold whitespace-nowrap ${H[i]} ${T[i]} ${cls}`}>{g}</span>
+                              <span className="text-[10px] font-semibold text-brand-text/55 text-center leading-tight">
                                 {last ? (
                                   <>
                                     <span className="text-brand-gold font-bold">{isParent ? 'their new' : 'your new'}</span>
@@ -472,37 +463,37 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                       </div>
                     </div>
                     <div className="hidden md:block text-2xl text-brand-gold" aria-hidden="true">→</div>
-                    <div className="relative shrink-0 rounded-xl bg-brand-cream/70 border border-brand-purple/10 px-4 pb-3 pt-4 text-center transition-transform duration-300 hover:-translate-y-1.5 hover:rotate-1">
-                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap rounded-full bg-brand-purple text-brand-cream text-[10px] font-bold px-3 py-0.5 shadow-lg">
+                    <div className="relative shrink-0 rounded-xl bg-brand-purple px-5 pb-4 pt-5 text-center shadow-lg shadow-brand-purple/40 transition-transform duration-300 hover:-translate-y-1.5 hover:rotate-1">
+                      <span className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap rounded-full bg-brand-gold text-brand-purple text-[10px] font-bold px-3 py-0.5 shadow-lg">
                         where it leads
                       </span>
-                      <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-brand-purple/55">University offers</p>
-                      <p className="mt-0.5 font-serif italic text-lg text-brand-purple">Congratulations!</p>
-                      <p className="mt-0.5 max-w-[12rem] text-[11px] text-brand-text/65 leading-snug">
+                      <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-brand-cream/60">University offers</p>
+                      <p className="mt-0.5 font-serif italic text-xl text-brand-cream">Congratulations!</p>
+                      <p className="mt-1 max-w-[12rem] text-[11px] text-brand-cream/70 leading-snug">
                         {isParent ? <>{child}&apos;s firm choice has confirmed their place.</> : <>Your firm choice has confirmed your place.</>}
                       </p>
-                      <span className="mt-1.5 inline-block rounded-full bg-brand-gold/20 px-2.5 py-0.5 text-[10px] font-extrabold text-brand-purple">
+                      <span className="mt-2 inline-block rounded-full bg-brand-gold px-3 py-1 text-[10px] font-extrabold text-brand-purple shadow">
                         Offer confirmed ✓
                       </span>
                     </div>
                   </div>
-                  <div className="mt-4 border-t border-brand-purple/10 pt-4 flex flex-col md:flex-row items-center gap-5">
-                    <div className="relative shrink-0 w-[150px] rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(201,169,110,.35),0_12px_24px_rgba(46,37,87,.18)] transition-transform duration-300 hover:rotate-3 hover:-translate-y-2 hover:scale-[1.02]">
-                      <Image
-                        src="/photos/waleed-grad-portrait.jpg"
-                        alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
-                        width={640}
-                        height={878}
-                        unoptimized
-                        className="w-full h-auto rounded-xl"
-                      />
-                      <div className="px-1 pt-1.5 pb-1 text-center">
-                        <p className="text-[12px] font-bold text-brand-purple leading-tight">Dr Waleed Ahmad, MBBS</p>
-                        <p className="mt-0.5 text-[10px] text-brand-purple/60 leading-tight">Founder, A-Level Accelerators</p>
+                  <div className="mt-4 border-t border-brand-purple/10 pt-4">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-7">
+                      <div className="relative shrink-0 w-[130px] rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(201,169,110,.35),0_12px_24px_rgba(46,37,87,.18)] transition-transform duration-300 hover:rotate-3 hover:-translate-y-2 hover:scale-[1.02]">
+                        <Image
+                          src="/photos/waleed-grad-portrait.jpg"
+                          alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
+                          width={640}
+                          height={878}
+                          unoptimized
+                          className="w-full h-auto rounded-xl"
+                        />
+                        <div className="px-1 pt-1.5 pb-1 text-center">
+                          <p className="text-[11px] font-bold text-brand-purple leading-tight">Dr Waleed Ahmad, MBBS</p>
+                          <p className="mt-0.5 text-[9px] text-brand-purple/60 leading-tight">Founder, A-Level Accelerators</p>
+                        </div>
                       </div>
-                    </div>
-                    <div className="flex-1 flex flex-col items-center md:items-start gap-3.5">
-                      <p className="text-sm leading-relaxed text-brand-text/70 text-center md:text-left">
+                      <p className="max-w-xl text-sm leading-relaxed text-brand-text/70 text-center md:text-left">
                         <span className="font-bold text-brand-purple">
                           {isParent
                             ? <>Click the button to see {child}&apos;s personalised plan, created by Dr Waleed Ahmad, MBBS.</>
@@ -510,10 +501,12 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                         </span>{' '}
                         Over 6 years, we&apos;ve helped 1,000+ students towards top grades and first-choice university offers.
                       </p>
+                    </div>
+                    <div className="mt-4 flex justify-center">
                       <a
                         href="#route"
                         onClick={scrollToRoute}
-                        className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-9 py-3.5 text-base font-bold hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)]"
+                        className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-10 py-4 text-lg font-bold hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)]"
                       >
                         {isParent
                           ? <>Show me {childName ? `${childName}'s` : "my child's"} personalised plan</>
