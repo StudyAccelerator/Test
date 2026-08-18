@@ -23,26 +23,26 @@ const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
 
 const TONE_CHIP: Record<string, string> = {
   strong: 'bg-emerald-100 text-emerald-700',
-  steady: 'bg-brand-gold/25 text-brand-purple',
-  leaking: 'bg-amber-100 text-amber-700',
+  steady: 'bg-brand-purple/10 text-brand-purple',
+  leaking: 'bg-orange-100 text-orange-700',
   critical: 'bg-red-100 text-red-700',
 }
 const TONE_BAR: Record<string, string> = {
   strong: 'bg-emerald-500',
-  steady: 'bg-brand-gold',
-  leaking: 'bg-amber-500',
+  steady: 'bg-brand-purple',
+  leaking: 'bg-orange-500',
   critical: 'bg-red-500',
 }
 const TONE_BORDER: Record<string, string> = {
   strong: 'border-l-emerald-500',
-  steady: 'border-l-brand-gold',
-  leaking: 'border-l-amber-500',
+  steady: 'border-l-brand-purple',
+  leaking: 'border-l-orange-500',
   critical: 'border-l-red-500',
 }
 const TONE_HEX: Record<string, string> = {
   strong: '#10b981',
-  steady: '#C9A96E',
-  leaking: '#f59e0b',
+  steady: '#2E2557',
+  leaking: '#f97316',
   critical: '#ef4444',
 }
 
@@ -359,11 +359,47 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 </div>
               </div>
 
-              <div className="flex md:flex-col items-center justify-center gap-6">
+              <div className="flex flex-col items-center justify-center gap-5">
                 <ScoreRing value={overall} />
                 <p className="max-w-[11rem] text-center text-sm text-brand-cream/60 leading-snug">
                   {isParent ? 'Their revision system score, across five dimensions' : 'Your revision system score, across five dimensions'}
                 </p>
+                {!isOptimiser && (
+                  <div className="w-full max-w-[16rem] rounded-xl border border-brand-gold/30 bg-white/[0.05] px-4 py-3.5 text-center">
+                    <p className="text-sm leading-snug text-brand-cream/85">
+                      {isParent ? (
+                        <>
+                          {firstName}, {child} is being held back by{' '}
+                          <strong className="text-brand-gold">{DIM_META[bottleneck].label}</strong>. Dr Waleed&apos;s
+                          plan below shows how to fix it and push for top grades.
+                        </>
+                      ) : (
+                        <>
+                          {firstName}, you&apos;re being held back by{' '}
+                          <strong className="text-brand-gold">{DIM_META[bottleneck].label}</strong>. The plan below
+                          shows how to fix it and push for top grades.
+                        </>
+                      )}
+                    </p>
+                  </div>
+                )}
+                <div className="relative w-full max-w-[180px] rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(201,169,110,.35),0_16px_32px_rgba(0,0,0,.35)]">
+                  <span className="absolute -top-3 left-1/2 -translate-x-1/2 z-10 whitespace-nowrap rounded-full bg-brand-gold text-brand-purple text-[11px] font-bold px-3.5 py-1 shadow-lg">
+                    who wrote this plan
+                  </span>
+                  <Image
+                    src="/photos/waleed-grad-portrait.jpg"
+                    alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
+                    width={640}
+                    height={878}
+                    unoptimized
+                    className="w-full h-auto rounded-xl"
+                  />
+                  <div className="px-1 pt-2 pb-1.5 text-center">
+                    <p className="text-[13px] font-bold text-brand-purple leading-tight">Dr Waleed Ahmad, MBBS</p>
+                    <p className="mt-0.5 text-[11px] text-brand-purple/60 leading-tight">Founder, A-Level Accelerators</p>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -390,7 +426,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
 
             {/* The reason to keep going: the fix is one scroll away. Cream, not
                 gold, so it never blends into the gold leak pill above it. */}
-            <div className="mt-10 flex flex-col items-center text-center gap-3">
+            <div className="mt-10 flex flex-col items-start text-left gap-3">
               <a
                 href="#route"
                 onClick={scrollToRoute}
