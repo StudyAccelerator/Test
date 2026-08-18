@@ -160,8 +160,21 @@ module.exports = async function handler(req, res) {
       body: [
         callLine,
         f.diag_child_name ? `Child: ${f.diag_child_name}` : '',
+        f.subjects ? `Subjects: ${f.subjects}` : '',
+        /* diag_grades carries every subject ("Maths B to A, Chemistry C to B");
+           the single fields are the worry subject only, kept as the fallback. */
+        f.diag_grades
+          ? `Grades: ${f.diag_grades}`
+          : f.diag_current_grade || f.diag_target_grade
+            ? `Grades: ${f.diag_current_grade || '?'} to ${f.diag_target_grade || '?'}`
+            : '',
         f.diag_archetype ? `Profile: ${f.diag_archetype}` : '',
+        f.diag_bottleneck ? `Not working: ${f.diag_bottleneck}` : '',
+        f.diag_low_yield_hours ? `Low-yield: ${f.diag_low_yield_hours}` : '',
+        f.diag_support ? `Doing now: ${f.diag_support}` : '',
+        f.diag_support_detail ? `Detail: ${f.diag_support_detail}` : '',
         f.diag_support_needed ? `Wants: ${f.diag_support_needed}` : '',
+        f.diag_notes ? `Note: ${f.diag_notes}` : '',
         groupLabel || '',
       ]
         .filter(Boolean)
