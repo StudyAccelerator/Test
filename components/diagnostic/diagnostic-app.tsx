@@ -1100,8 +1100,8 @@ function EmailGate({
               />
               <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
                 {isParent
-                  ? "Dr Waleed personally rings new results with his read on your child's report, usually the same day."
-                  : 'Dr Waleed personally rings new results with his read on your report, usually the same day.'}
+                  ? "Dr Waleed will personally ring you with his review of your child's report and his advice on getting to top grades, usually the same day."
+                  : 'Dr Waleed will personally ring you with his review of your report and his advice on getting to top grades, usually the same day.'}
               </p>
               <label
                 htmlFor="diag-nocontact"
