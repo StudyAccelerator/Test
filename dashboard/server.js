@@ -77,7 +77,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox', 'leads-crm']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -125,6 +125,152 @@ async function ml(pathname) {
 }
 
 const rate = (r) => (r && typeof r.float === 'number' ? r.float : null)
+
+/* ------------------------------------------------------------ lead CRM
+   Every lead the site captures, one row each, with Waleed's own checklist
+   of what has happened to them (emailed, called, texted, Loom, booked,
+   enrolled). The MailerLite side (who they are, what the diagnostic found,
+   how many emails they have been sent and opened) refreshes itself on every
+   sync; the checklist, status and notes are his and are never overwritten.
+   Built 21 August 2026. */
+
+const CRM_GROUPS = {
+  '193102828818925394': 'diagnostic-parent',
+  '192687508025247162': 'diagnostic-student',
+  '196438369449805734': 'callback',
+  '187183128836573106': 'tracker',
+  '188021995515937985': 'parents-guide',
+  '192801700892903405': 'newsletter',
+}
+const OWN_ADDRESSES = ['waleedahmad042.319@gmail.com', 'waleed@alevelaccelerators.com']
+
+function emptyChecklist() {
+  return {
+    personalEmailSent: { done: false, at: null },
+    called: { done: false, at: null, outcome: '' },
+    texted: { done: false, at: null, outcome: '' },
+    loomSent: { done: false, at: null },
+    callBooked: { done: false, at: null },
+    callHeld: { done: false, at: null, outcome: '' },
+    enrolled: { done: false, at: null, programme: '' },
+  }
+}
+
+/* cursor pagination: MailerLite pages at 100, these groups are small */
+async function mlAll(pathname) {
+  const out = []
+  let cursor = null
+  for (let i = 0; i < 40; i++) {
+    const sep = pathname.includes('?') ? '&' : '?'
+    const page = await ml(`${pathname}${sep}limit=100${cursor ? `&cursor=${encodeURIComponent(cursor)}` : ''}`)
+    out.push(...(page.data || []))
+    cursor = page.meta && page.meta.next_cursor
+    if (!cursor) break
+  }
+  return out
+}
+
+let crmSyncing = null
+async function syncLeadsCrm() {
+  if (crmSyncing) return crmSyncing
+  crmSyncing = (async () => {
+    const store = readStore('leads-crm', null) || { syncedAt: null, syncNote: '', leads: [] }
+    if (!Array.isArray(store.leads)) store.leads = []
+    const byEmail = new Map(store.leads.map((l) => [String(l.email).toLowerCase(), l]))
+    const now = new Date().toISOString()
+    const problems = []
+    let seen = 0
+    for (const [gid, source] of Object.entries(CRM_GROUPS)) {
+      let subs
+      try {
+        subs = await mlAll(`/groups/${gid}/subscribers`)
+      } catch (err) {
+        problems.push(`${source}: ${err.message}`)
+        continue
+      }
+      for (const sub of subs) {
+        const email = String(sub.email || '').toLowerCase()
+        if (!email || OWN_ADDRESSES.includes(email)) continue
+        seen++
+        const f = sub.fields || {}
+        let l = byEmail.get(email)
+        if (!l) {
+          l = { email, firstSeenAt: now, sources: [], checklist: emptyChecklist(), status: 'new', myNotes: '', nextAction: '', nextDue: null }
+          store.leads.push(l)
+          byEmail.set(email, l)
+        }
+        if (!l.checklist) l.checklist = emptyChecklist()
+        if (!l.sources.includes(source)) l.sources.push(source)
+        Object.assign(l, {
+          mlId: sub.id,
+          mlStatus: sub.status,
+          name: f.name || l.name || '',
+          taker: f.diag_taker || '',
+          childName: f.diag_child_name || '',
+          yearGroup: f.year_group || '',
+          subjects: f.subjects || '',
+          grades: f.diag_grades || '',
+          worrySubject: f.diag_worry_subject || '',
+          currentGrade: f.diag_current_grade || '',
+          targetGrade: f.diag_target_grade || '',
+          archetype: f.diag_archetype || '',
+          bottleneck: f.diag_bottleneck || '',
+          route: f.diag_route || '',
+          phone: f.phone || '',
+          noContact: String(f.diag_no_contact) === 'yes',
+          callTime: f.diag_call_time || '',
+          support: f.diag_support || '',
+          supportNeeded: f.diag_support_needed || '',
+          theirNote: f.diag_notes || '',
+          subscribedAt: sub.subscribed_at || l.subscribedAt || null,
+          emails: { sent: sub.sent || 0, opened: sub.opens_count || 0, clicked: sub.clicks_count || 0 },
+          isDiagnostic: l.isDiagnostic || source.startsWith('diagnostic'),
+          callbackRequested: l.callbackRequested || source === 'callback',
+        })
+        if (source === 'callback' && !l.callbackAt) l.callbackAt = now
+      }
+    }
+    store.syncedAt = now
+    store.syncNote = problems.length ? `Partial sync: ${problems.join('; ')}` : `Synced ${seen} group memberships across ${Object.keys(CRM_GROUPS).length} MailerLite groups`
+    writeStore('leads-crm', store)
+    return store
+  })().finally(() => {
+    crmSyncing = null
+  })
+  return crmSyncing
+}
+
+const CRM_FRESH_MS = 20 * 60_000
+async function leadsCrmFresh() {
+  const store = readStore('leads-crm', null)
+  const stale = !store || !store.syncedAt || Date.now() - Date.parse(store.syncedAt) > CRM_FRESH_MS
+  if (ML_KEY && stale) {
+    try {
+      return await syncLeadsCrm()
+    } catch (err) {
+      if (store) {
+        store.syncNote = `Sync failed: ${err.message}`
+        return store
+      }
+      return { syncedAt: null, syncNote: `Sync failed: ${err.message}`, leads: [] }
+    }
+  }
+  return store || { syncedAt: null, syncNote: 'No MailerLite key', leads: [] }
+}
+
+/* calls Waleed can make right now: diagnostic or callback leads with a
+   number, no opt-out, not yet called, still open */
+function callsDue(store) {
+  return ((store && store.leads) || []).filter(
+    (l) =>
+      (l.isDiagnostic || l.callbackRequested) &&
+      l.phone &&
+      !l.noContact &&
+      !(l.checklist && l.checklist.called && l.checklist.called.done) &&
+      !['enrolled', 'not-now', 'lost'].includes(l.status)
+  )
+}
+
 
 async function fetchMailerlite() {
   const [groupsRes, totalRes, activeRes, automationsRes, campaignsRes] = await Promise.all([
@@ -626,6 +772,46 @@ async function handleApi(req, res, url) {
     }
   }
 
+  /* Lead CRM: GET serves the store (syncing from MailerLite when it is older
+     than 20 minutes), POST /sync forces a refresh, POST /update patches ONE
+     lead's manual fields so a sync landing mid-edit never loses anything. */
+  if (seg[1] === 'leads-crm') {
+    if (seg[2] === 'sync' && req.method === 'POST') {
+      if (!ML_KEY) return sendJson(res, 200, { syncedAt: null, syncNote: 'No MailerLite key', leads: [] })
+      try {
+        return sendJson(res, 200, await syncLeadsCrm())
+      } catch (err) {
+        return sendJson(res, 200, { error: err.message })
+      }
+    }
+    if (seg[2] === 'update' && req.method === 'POST') {
+      try {
+        const { email, patch } = JSON.parse(await readBody(req))
+        const store = readStore('leads-crm', { syncedAt: null, leads: [] })
+        const l = (store.leads || []).find((x) => String(x.email).toLowerCase() === String(email).toLowerCase())
+        if (!l) return sendJson(res, 404, { error: 'Unknown lead' })
+        const allowed = ['checklist', 'status', 'myNotes', 'nextAction', 'nextDue']
+        for (const k of Object.keys(patch || {})) {
+          if (!allowed.includes(k)) continue
+          if (k === 'checklist') {
+            l.checklist = l.checklist || emptyChecklist()
+            for (const [item, v] of Object.entries(patch.checklist || {})) {
+              l.checklist[item] = { ...(l.checklist[item] || {}), ...v }
+            }
+          } else {
+            l[k] = patch[k]
+          }
+        }
+        l.updatedAt = new Date().toISOString()
+        writeStore('leads-crm', store)
+        return sendJson(res, 200, { ok: true, lead: l })
+      } catch (err) {
+        return sendJson(res, 400, { error: err.message })
+      }
+    }
+    if (req.method === 'GET') return sendJson(res, 200, await leadsCrmFresh())
+  }
+
   if (seg[1] === 'store' && STORES.includes(seg[2])) {
     if (req.method === 'GET') {
       return sendJson(res, 200, readStore(seg[2], []))
@@ -663,6 +849,7 @@ async function handleApi(req, res, url) {
     const newLeads = leadStore && leadStore.leads ? leadStore.leads.filter((l) => l.status === 'new').length : 0
     const inboxStore = readStore('linkedin-inbox', null)
     const inboxDrafts = inboxStore && inboxStore.conversations ? inboxStore.conversations.filter((c) => c.status === 'pending').length : 0
+    const crmDue = callsDue(readStore('leads-crm', null))
     return sendJson(res, 200, {
       updatedAt: new Date().toISOString(),
       openTasks: open.length,
@@ -674,6 +861,8 @@ async function handleApi(req, res, url) {
       daysToResultsDay: resultsDay,
       newLeads,
       inboxDrafts,
+      callsDue: crmDue.length,
+      callsDueNames: crmDue.slice(0, 3).map((l) => l.name || l.email),
     })
   }
 
@@ -796,6 +985,7 @@ server.listen(PORT, HOST, () => {
   console.log(`  http://${HOST}:${PORT}`)
   console.log('')
   console.log(`  MailerLite: ${ML_KEY ? 'connected' : 'no key found'}`)
+  if (ML_KEY) leadsCrmFresh().then((st) => console.log(`  Lead CRM:   ${st.leads.length} leads (${st.syncNote})`)).catch(() => {})
   console.log(`  Stripe:     ${STRIPE_KEY ? 'connected' : 'snapshot (add STRIPE_KEY to dashboard/.env for always-on)'}`)
   console.log(
     `  Monzo:      ${

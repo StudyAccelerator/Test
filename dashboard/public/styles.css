@@ -925,3 +925,80 @@ code {
     line-height: 1;
   }
 }
+
+/* ------------------------------------------------------------- lead CRM
+   Every captured lead with Waleed's own checklist. Lives in the dark Today
+   section, so colours come from the re-skinned vars. */
+
+.crm-sync { margin-left: auto; font-size: 12px; padding: 4px 10px; }
+.crm-filters { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 12px; }
+.crm-filter {
+  border: 1px solid var(--line-strong); background: transparent; color: var(--ink-soft);
+  border-radius: 999px; padding: 4px 11px; font-size: 12px; cursor: pointer; font-family: inherit;
+}
+.crm-filter.active { background: var(--purple); border-color: var(--purple); color: #fbf8f3; }
+.section-dark .crm-filter.active { background: var(--gold); border-color: var(--gold); color: #1a1535; }
+.crm-filter b { font-variant-numeric: tabular-nums; margin-left: 4px; opacity: .8; }
+
+.crm-card {
+  border: 1px solid var(--line-strong);
+  border-left: 3px solid var(--gold);
+  border-radius: 10px;
+  padding: 12px 14px;
+  margin-bottom: 10px;
+  background: var(--wash);
+}
+.crm-card[data-call="now"] { border-left-color: var(--alert); }
+.crm-card[data-call="no"] { border-left-color: var(--line-strong); }
+.crm-card[data-closed] { opacity: .55; }
+.crm-head { display: flex; gap: 8px 12px; align-items: baseline; flex-wrap: wrap; }
+.crm-name { color: var(--ink); font-weight: 700; font-size: 14.5px; }
+.crm-tag {
+  font-size: 10.5px; font-weight: 700; letter-spacing: .08em; text-transform: uppercase;
+  padding: 2px 7px; border-radius: 999px; background: var(--gold-soft); color: var(--gold);
+}
+.crm-tag.student { background: var(--ok-soft); color: var(--ok); }
+.crm-tag.callback { background: var(--alert-soft); color: var(--alert); }
+.crm-tag.src { background: var(--wash); color: var(--ink-muted); border: 1px solid var(--line); }
+.crm-when { margin-left: auto; font-size: 12px; color: var(--ink-muted); font-variant-numeric: tabular-nums; }
+.crm-facts { font-size: 12.5px; color: var(--ink-soft); margin-top: 4px; line-height: 1.5; }
+.crm-facts b { color: var(--ink); font-weight: 600; }
+.crm-call { margin-top: 6px; font-size: 13px; display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+.crm-call a { color: var(--ink); font-weight: 700; text-decoration: none; font-variant-numeric: tabular-nums; }
+.crm-call a:hover { text-decoration: underline; }
+.crm-decision { font-size: 11.5px; font-weight: 700; padding: 2px 8px; border-radius: 999px; }
+.crm-decision.ok { background: var(--ok-soft); color: var(--ok); }
+.crm-decision.now { background: var(--alert-soft); color: var(--alert); }
+.crm-decision.no { background: var(--wash); color: var(--ink-muted); border: 1px solid var(--line); }
+.crm-auto { margin-top: 8px; font-size: 12px; color: var(--ink-muted); display: flex; gap: 12px; flex-wrap: wrap; }
+.crm-auto .ok { color: var(--ok); font-weight: 600; }
+.crm-auto .pending { color: var(--gold); font-weight: 600; }
+
+.crm-check {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 6px 14px;
+  margin-top: 10px; padding-top: 10px; border-top: 1px solid var(--line);
+}
+.crm-check label { display: flex; gap: 8px; align-items: center; font-size: 12.5px; color: var(--ink-soft); cursor: pointer; min-width: 0; }
+.crm-check label > span:first-of-type { white-space: nowrap; }
+.crm-check input[type="checkbox"] {
+  appearance: none; width: 16px; height: 16px; flex: none;
+  border: 1.5px solid var(--ink-muted); border-radius: 5px; cursor: pointer; position: relative; background: var(--panel);
+}
+.crm-check input[type="checkbox"]:checked { background: var(--purple); border-color: var(--purple); }
+.section-dark .crm-check input[type="checkbox"]:checked { background: var(--gold); border-color: var(--gold); }
+.crm-check input[type="checkbox"]:checked::after {
+  content: ""; position: absolute; inset: 2px 4px 5px 4px;
+  border: solid #fbf8f3; border-width: 0 2px 2px 0; transform: rotate(40deg);
+}
+.section-dark .crm-check input[type="checkbox"]:checked::after { border-color: #1a1535; }
+.crm-check .at { font-size: 11px; color: var(--ink-muted); white-space: nowrap; }
+.crm-select, .crm-input, .crm-notes {
+  font: inherit; font-size: 12px; color: var(--ink); background: var(--input-bg);
+  border: 1px solid var(--line-strong); border-radius: 6px; padding: 3px 6px; max-width: 100%;
+}
+.crm-select { min-width: 0; }
+.crm-foot { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; margin-top: 10px; }
+.crm-foot .lbl { font-size: 11.5px; color: var(--ink-muted); }
+.crm-notes { flex: 1 1 260px; min-height: 34px; resize: vertical; line-height: 1.45; }
+.crm-status { font-weight: 600; }
+.crm-more { margin-top: 6px; text-align: center; }

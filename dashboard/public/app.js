@@ -1131,6 +1131,246 @@ const LI_STEP_LABELS = {
   closed: 'closed',
 }
 
+/* ------------------------------------------------------------ lead CRM */
+
+/* Every lead the site captured, straight from the MailerLite groups, with
+   Waleed's checklist of what has happened to each one. The MailerLite half
+   (who they are, emails sent and opened) refreshes itself; the checklist,
+   status and notes are his, typed here, and a sync never touches them. */
+
+const CRM_CLOSED = ['enrolled', 'not-now', 'lost']
+const CRM_STATUS = [
+  ['new', 'New'],
+  ['in-progress', 'In progress'],
+  ['call-booked', 'Call booked'],
+  ['enrolled', 'Enrolled'],
+  ['not-now', 'Not now'],
+  ['lost', 'Lost'],
+]
+const CRM_OUTCOMES = {
+  called: ['', 'No answer', 'Voicemail left', 'Spoke: interested', 'Spoke: not now', 'Spoke: call booked', 'Wrong number'],
+  texted: ['', 'Sent', 'Replied', 'No reply'],
+  callHeld: ['', 'Wants a programme', 'Thinking about it', 'Not a fit', 'No show'],
+}
+const CRM_PROGRAMMES = ['', 'Subject Accelerator', 'Top 1% Study System', 'Summer Accelerator', 'Study Series', 'Other']
+
+function crmCallsDue(leads) {
+  return leads.filter(
+    (l) =>
+      (l.isDiagnostic || l.callbackRequested) &&
+      l.phone &&
+      !l.noContact &&
+      !(l.checklist && l.checklist.called && l.checklist.called.done) &&
+      !CRM_CLOSED.includes(l.status)
+  )
+}
+
+function crmNeedsAction(l) {
+  if (CRM_CLOSED.includes(l.status)) return false
+  if (!(l.isDiagnostic || l.callbackRequested)) return false
+  const c = l.checklist || {}
+  const contacted = (c.called && c.called.done) || (c.personalEmailSent && c.personalEmailSent.done) || (c.texted && c.texted.done)
+  return !contacted || l.callbackRequested && !(c.called && c.called.done)
+}
+
+let crmFilter = 'action'
+let crmShowAll = false
+
+function crmAgo(iso) {
+  if (!iso) return ''
+  const d = new Date(iso.replace(' ', 'T'))
+  if (Number.isNaN(d.getTime())) return ''
+  const days = Math.floor((Date.now() - d.getTime()) / 86400000)
+  if (days === 0) return 'today'
+  if (days === 1) return 'yesterday'
+  if (days < 14) return `${days} days ago`
+  return d.toLocaleDateString('en-GB', { day: 'numeric', month: 'short' })
+}
+
+function renderLeadCrm() {
+  const body = $('#crm-body')
+  const chip = $('#crm-chip')
+  const store = state.crm
+
+  if (!store) {
+    chip.textContent = 'not synced'
+    chip.className = 'chip chip-manual'
+    body.innerHTML = '<p class="empty-state">No lead data yet. Press Sync now to pull every lead from MailerLite.</p>'
+    return
+  }
+  if (store.syncNote && /fail|partial/i.test(store.syncNote)) {
+    chip.textContent = 'sync problem'
+    chip.className = 'chip chip-error'
+    chip.title = store.syncNote
+  } else {
+    chip.textContent = store.syncedAt ? `synced ${sweepAgo(store.syncedAt)}` : 'not synced'
+    chip.className = store.syncedAt ? 'chip chip-live' : 'chip chip-manual'
+    chip.title = store.syncNote || ''
+  }
+
+  const all = store.leads
+    .slice()
+    .sort((a, b) => String(b.subscribedAt || '').localeCompare(String(a.subscribedAt || '')))
+  const sets = {
+    action: all.filter(crmNeedsAction),
+    calls: crmCallsDue(all),
+    callback: all.filter((l) => l.callbackRequested),
+    open: all.filter((l) => (l.isDiagnostic || l.callbackRequested) && !CRM_CLOSED.includes(l.status)),
+    closed: all.filter((l) => CRM_CLOSED.includes(l.status)),
+    all,
+  }
+  const labels = { action: 'Needs action', calls: 'Ready to call', callback: 'Callback requests', open: 'Open', closed: 'Closed', all: 'Everyone' }
+  const list = sets[crmFilter] || sets.action
+  const shown = crmShowAll ? list : list.slice(0, 25)
+
+  const decision = (l) => {
+    if (l.noContact) return '<span class="crm-decision no">Do not call (they declined)</span>'
+    if (!l.phone) return '<span class="crm-decision no">No number</span>'
+    if (l.callbackRequested && !(l.checklist.called && l.checklist.called.done))
+      return `<span class="crm-decision now">Callback requested${l.callTime ? ` · ${esc(l.callTime)}` : ''}</span>`
+    if (l.callTime === 'Right now') return '<span class="crm-decision now">Asked for a call right now</span>'
+    return `<span class="crm-decision ok">OK to call${l.callTime ? ` · best ${esc(l.callTime.toLowerCase())}` : ''}</span>`
+  }
+  const callState = (l) => (l.noContact || !l.phone ? 'no' : l.callbackRequested || l.callTime === 'Right now' ? 'now' : 'ok')
+  const sel = (name, options, value, placeholder = 'outcome…') =>
+    `<select class="crm-select" data-field="${name}">${options
+      .map((o) => `<option value="${esc(o)}"${o === (value || '') ? ' selected' : ''}>${esc(o || placeholder)}</option>`)
+      .join('')}</select>`
+  const check = (l, key, label, extra = '') => {
+    const item = (l.checklist && l.checklist[key]) || { done: false }
+    return `<label><input type="checkbox" data-check="${key}" ${item.done ? 'checked' : ''}/> <span>${label}</span>${
+      item.done && item.at ? `<span class="at">${esc(crmAgo(item.at))}</span>` : ''
+    }${extra}</label>`
+  }
+
+  const card = (l) => {
+    const c = l.checklist || {}
+    const who = l.taker === 'parent' ? `<span class="crm-tag">Parent</span>` : l.taker === 'student' ? `<span class="crm-tag student">Student</span>` : ''
+    const srcs = (l.sources || []).filter((x) => !x.startsWith('diagnostic') && x !== 'callback')
+    const facts = [
+      l.childName ? `<b>${esc(l.childName)}</b>` : '',
+      l.yearGroup ? esc(l.yearGroup) : '',
+      l.subjects ? esc(l.subjects) : '',
+      l.grades ? `grades ${esc(l.grades)}` : '',
+    ].filter(Boolean)
+    const diag = [
+      l.archetype ? `<b>${esc(l.archetype)}</b>` : '',
+      l.bottleneck ? `leak: ${esc(l.bottleneck)}` : '',
+      l.route ? `recommended: <b>${esc(l.route)}</b>` : '',
+      l.supportNeeded ? `wants: ${esc(l.supportNeeded)}` : '',
+    ].filter(Boolean)
+    const em = l.emails || { sent: 0, opened: 0, clicked: 0 }
+    return `
+    <div class="crm-card" data-email="${esc(l.email)}" data-call="${callState(l)}"${CRM_CLOSED.includes(l.status) ? ' data-closed' : ''}>
+      <div class="crm-head">
+        <span class="crm-name">${esc(l.name || l.email)}</span>
+        ${who}
+        ${l.callbackRequested ? '<span class="crm-tag callback">Callback</span>' : ''}
+        ${srcs.map((x) => `<span class="crm-tag src">${esc(x.replace('-', ' '))}</span>`).join('')}
+        <span class="crm-when">${esc(crmAgo(l.subscribedAt))}</span>
+      </div>
+      ${facts.length ? `<div class="crm-facts">${facts.join(' · ')}</div>` : ''}
+      ${diag.length ? `<div class="crm-facts">${diag.join(' · ')}</div>` : ''}
+      ${l.theirNote ? `<div class="crm-facts">Their note: <i>${esc(l.theirNote)}</i></div>` : ''}
+      <div class="crm-call">
+        ${l.phone ? `<a href="tel:${esc(l.phone)}">${esc(l.phone)}</a>` : ''}
+        <a href="mailto:${esc(l.email)}" style="font-weight:500">${esc(l.email)}</a>
+        ${decision(l)}
+      </div>
+      <div class="crm-auto">
+        <span>${em.sent > 0 ? '<span class="ok">Report email sent</span>' : '<span class="pending">Report email pending</span>'}</span>
+        <span>${nf.format(em.sent)} email${em.sent === 1 ? '' : 's'} sent · ${nf.format(em.opened)} opened · ${nf.format(em.clicked)} clicked</span>
+        <span class="muted">auto from MailerLite</span>
+      </div>
+      <div class="crm-check">
+        ${check(l, 'personalEmailSent', 'Personal email sent')}
+        ${check(l, 'called', 'Called', ` ${sel('called', CRM_OUTCOMES.called, c.called && c.called.outcome)}`)}
+        ${check(l, 'texted', 'Text follow-up', ` ${sel('texted', CRM_OUTCOMES.texted, c.texted && c.texted.outcome)}`)}
+        ${check(l, 'loomSent', 'Loom sent')}
+        ${check(l, 'callBooked', 'Call booked')}
+        ${check(l, 'callHeld', 'Call held', ` ${sel('callHeld', CRM_OUTCOMES.callHeld, c.callHeld && c.callHeld.outcome)}`)}
+        ${check(l, 'enrolled', 'Enrolled', ` ${sel('enrolled', CRM_PROGRAMMES, c.enrolled && c.enrolled.programme, 'programme…')}`)}
+      </div>
+      <div class="crm-foot">
+        <span class="lbl">Status</span>
+        <select class="crm-select crm-status" data-field="status">${CRM_STATUS.map(
+          ([v, t]) => `<option value="${v}"${v === (l.status || 'new') ? ' selected' : ''}>${t}</option>`
+        ).join('')}</select>
+        <span class="lbl">Next</span>
+        <input class="crm-input" data-field="nextAction" type="text" placeholder="e.g. ring back Thursday" value="${esc(l.nextAction || '')}" />
+        <input class="crm-input" data-field="nextDue" type="date" value="${esc(l.nextDue || '')}" />
+        <textarea class="crm-notes" data-field="myNotes" placeholder="Your notes on this lead">${esc(l.myNotes || '')}</textarea>
+      </div>
+    </div>`
+  }
+
+  body.innerHTML = `
+    <div class="crm-filters">${Object.keys(labels)
+      .map((k) => `<button class="crm-filter${k === crmFilter ? ' active' : ''}" data-filter="${k}" type="button">${labels[k]}<b>${nf.format(sets[k].length)}</b></button>`)
+      .join('')}</div>
+    ${shown.length ? shown.map(card).join('') : `<p class="empty-state">Nothing in ${labels[crmFilter].toLowerCase()}.</p>`}
+    ${list.length > shown.length ? `<div class="crm-more"><button class="ghost-btn" id="crm-more" type="button">Show all ${nf.format(list.length)}</button></div>` : ''}
+    <p class="small muted lead-foot">Who they are and their email counts come from MailerLite on every sync. The checklist, status and notes are yours and are never overwritten.</p>`
+
+  body.querySelectorAll('.crm-filter').forEach((b) =>
+    b.addEventListener('click', () => {
+      crmFilter = b.dataset.filter
+      crmShowAll = false
+      renderLeadCrm()
+    })
+  )
+  const more = $('#crm-more')
+  if (more) more.addEventListener('click', () => { crmShowAll = true; renderLeadCrm() })
+
+  const patch = async (email, p) => {
+    const res = await fetch('/api/leads-crm/update', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ email, patch: p }),
+    })
+    const out = await res.json().catch(() => ({}))
+    if (out && out.lead) {
+      const i = state.crm.leads.findIndex((x) => x.email === email)
+      if (i >= 0) state.crm.leads[i] = out.lead
+    }
+  }
+
+  body.querySelectorAll('.crm-card').forEach((cardEl) => {
+    const email = cardEl.dataset.email
+    const lead = state.crm.leads.find((x) => x.email === email)
+    cardEl.querySelectorAll('input[data-check]').forEach((box) =>
+      box.addEventListener('change', async () => {
+        const key = box.dataset.check
+        const item = { done: box.checked, at: box.checked ? new Date().toISOString() : null }
+        await patch(email, { checklist: { [key]: item } })
+        renderLeadCrm()
+        renderTriage()
+      })
+    )
+    cardEl.querySelectorAll('select[data-field]').forEach((selEl) =>
+      selEl.addEventListener('change', async () => {
+        const f = selEl.dataset.field
+        if (f === 'status') {
+          await patch(email, { status: selEl.value })
+          renderLeadCrm()
+          renderTriage()
+          return
+        }
+        const key = f === 'enrolled' ? 'programme' : 'outcome'
+        const item = { [key]: selEl.value }
+        /* choosing an outcome implies the thing happened */
+        if (selEl.value && !(lead.checklist[f] && lead.checklist[f].done)) Object.assign(item, { done: true, at: new Date().toISOString() })
+        await patch(email, { checklist: { [f]: item } })
+        renderLeadCrm()
+        renderTriage()
+      })
+    )
+    cardEl.querySelectorAll('input[data-field], textarea[data-field]').forEach((el) =>
+      el.addEventListener('change', () => patch(email, { [el.dataset.field]: el.value }))
+    )
+  })
+}
+
 function renderLiInbox() {
   const body = $('#li-inbox-body')
   const chip = $('#li-inbox-chip')
@@ -1587,6 +1827,24 @@ function renderTriage() {
       })
     }
   }
+  /* diagnostic leads who left a number and did not decline: the whole
+     lead-capture design is built around ringing them while the report is
+     fresh, so an uncalled one outranks almost everything */
+  if (state.crm && state.crm.leads) {
+    const due = crmCallsDue(state.crm.leads)
+    const urgent = due.filter((l) => l.callbackRequested || l.callTime === 'Right now')
+    if (due.length) {
+      items.push({
+        sev: 'high',
+        title: `${due.length} lead${due.length > 1 ? 's are' : ' is'} waiting for your call`,
+        why: `${urgent.length ? `${urgent.map((l) => l.name || l.email).join(', ')} asked for a call right now. ` : ''}${due
+          .slice(0, 5)
+          .map((l) => `${l.name || l.email}${l.callTime && l.callTime !== 'Right now' ? ` (${l.callTime.toLowerCase()})` : ''}`)
+          .join(', ')}${due.length > 5 ? ` and ${due.length - 5} more` : ''}. Numbers and the checklist are in Lead CRM below.`,
+      })
+    }
+  }
+
   if (state.leads && state.leads.lastSweepStatus === 'failed') {
     items.push({
       sev: 'med',
@@ -1806,6 +2064,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/store/leads'),
     getJSON('/api/docs'),
     getJSON('/api/store/linkedin-inbox'),
+    getJSON('/api/leads-crm'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -1830,6 +2089,8 @@ async function loadAll(fresh = false) {
   state.docs = val(16, [])
   const liInboxStore = val(17, null)
   state.liInbox = liInboxStore && liInboxStore.lastSweep ? liInboxStore : null
+  const crmStore = val(18, null)
+  state.crm = crmStore && Array.isArray(crmStore.leads) ? crmStore : null
   /* fresh reload: drop cached document bodies so edits show up */
   if (fresh) docCache.clear()
 }
@@ -1850,6 +2111,7 @@ function renderAll() {
   renderInbox()
   renderConnections()
   renderLeads()
+  renderLeadCrm()
   renderLiInbox()
   renderDocs()
   renderTriage()
@@ -1864,6 +2126,21 @@ async function boot(fresh = false) {
 }
 
 $('#refresh-btn').addEventListener('click', () => boot(true))
+const crmSyncBtn = $('#crm-sync')
+if (crmSyncBtn)
+  crmSyncBtn.addEventListener('click', async () => {
+    crmSyncBtn.textContent = 'Syncing…'
+    crmSyncBtn.disabled = true
+    try {
+      const st = await (await fetch('/api/leads-crm/sync', { method: 'POST' })).json()
+      if (st && Array.isArray(st.leads)) state.crm = st
+      renderLeadCrm()
+      renderTriage()
+    } finally {
+      crmSyncBtn.textContent = 'Sync now'
+      crmSyncBtn.disabled = false
+    }
+  })
 
 let resizeTimer
 window.addEventListener('resize', () => {

@@ -1,0 +1,5 @@
+{
+  "syncedAt": null,
+  "syncNote": "Not synced yet. The dashboard pulls every lead from the MailerLite capture groups the first time it loads, then every 20 minutes.",
+  "leads": []
+}
