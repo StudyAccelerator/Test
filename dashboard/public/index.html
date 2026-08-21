@@ -74,6 +74,17 @@
         </div>
       </div>
 
+      <!-- Phone only: the Lead CRM gets its own swipe page and bottom chip so it is
+           one tap away. On desktop this section is hidden and the panel lives in
+           Today; app.js moves the panel between the two as the viewport changes. -->
+      <div class="section section-dark section-phone-only" id="sec-leads" style="--accent:#b3473f">
+        <div class="section-head">
+          <svg viewBox="0 0 16 16"><path d="M3 2h10v12H3z M6 6h4 M6 9h4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" stroke-linecap="round"/></svg>
+          <span>Leads</span><i></i>
+        </div>
+        <div class="grid"></div>
+      </div>
+
       <div class="section" id="sec-money" style="--accent:#2f7d57">
         <div class="section-head">
           <svg viewBox="0 0 16 16"><circle cx="8" cy="8" r="6" fill="none" stroke="currentColor" stroke-width="1.5"/><path d="M8 4.5v7M6 6.3c0-2 4-2 4 0 0 1.1-1 1.4-2 1.7-1 .3-2 .6-2 1.7 0 2 4 2 4 0" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round"/></svg>
@@ -223,6 +234,7 @@
 
     <nav class="mnav" id="mnav" aria-label="Sections">
       <a href="#sec-ops" style="--accent:#6355a8">Tasks</a>
+      <a href="#sec-leads" style="--accent:#b3473f">Leads</a>
       <a href="#sec-today" style="--accent:#b3473f">Today</a>
       <a href="#sec-money" style="--accent:#2f7d57">Money</a>
       <a href="#sec-audience" style="--accent:#96712c">Email</a>

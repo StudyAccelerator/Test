@@ -2142,10 +2142,30 @@ if (crmSyncBtn)
     }
   })
 
+/* On a phone the Lead CRM panel lives on its own swipe page; on a desktop it
+   sits in Today. The panel element is simply moved between the two homes,
+   so its state and listeners carry over untouched. */
+const phoneMode = window.matchMedia('(max-width: 740px)')
+function placeCrmPanel() {
+  const panel = document.getElementById('panel-crm')
+  if (!panel) return
+  const phoneHome = document.querySelector('#sec-leads .grid')
+  const deskAnchor = document.getElementById('panel-li-inbox')
+  if (phoneMode.matches) {
+    if (phoneHome && panel.parentElement !== phoneHome) phoneHome.appendChild(panel)
+  } else if (deskAnchor && panel.nextElementSibling !== deskAnchor) {
+    deskAnchor.parentElement.insertBefore(panel, deskAnchor)
+  }
+}
+placeCrmPanel()
+
 let resizeTimer
 window.addEventListener('resize', () => {
   clearTimeout(resizeTimer)
-  resizeTimer = setTimeout(renderAll, 250)
+  resizeTimer = setTimeout(() => {
+    placeCrmPanel()
+    renderAll()
+  }, 250)
 })
 
 /* live data refreshes itself every five minutes while the tab is open */
@@ -2177,12 +2197,34 @@ if (mnav) {
       for (const en of entries) {
         if (en.isIntersecting) {
           links.forEach((a) => a.classList.toggle('active', a.getAttribute('href') === `#${en.target.id}`))
+          /* remember the page so the app reopens where it was left */
+          try {
+            localStorage.setItem('hq-page', en.target.id)
+          } catch {}
         }
       }
     },
     { root: document.querySelector('main'), threshold: 0.6 }
   )
   document.querySelectorAll('main .section').forEach((s) => io.observe(s))
+
+  /* Open on a chosen page: ?page=leads (or any section id without the
+     sec- prefix) wins, then the last page used, then Tasks. Instant jump,
+     for the same snap-point reason as the chips. */
+  const openPage = () => {
+    const wanted = new URLSearchParams(location.search).get('page')
+    let id = wanted ? `sec-${wanted.replace(/^sec-/, '')}` : null
+    if (!id) {
+      try {
+        id = localStorage.getItem('hq-page')
+      } catch {}
+    }
+    const target = id && document.getElementById(id)
+    if (!target) return
+    const left = target.getBoundingClientRect().left - pager.getBoundingClientRect().left + pager.scrollLeft
+    pager.scrollTo({ left })
+  }
+  requestAnimationFrame(() => requestAnimationFrame(openPage))
   $('#mnav-refresh').addEventListener('click', () => boot(true))
 }
 

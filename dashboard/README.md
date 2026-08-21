@@ -38,7 +38,7 @@ No number on the dashboard is ever invented. A source is either live, manual (yo
 
 ## On your phone
 
-The dashboard is an installable app (a PWA): on a phone it becomes swipeable full-screen pages, Tasks first, with section chips along the bottom. Nothing is hosted publicly; the phone talks to the Mac directly, so the Mac must be awake with `npm run hq` running.
+The dashboard is an installable app (a PWA): on a phone it becomes swipeable full-screen pages, Tasks first, then **Leads** (the Lead CRM on its own page with its own chip, added 21 August 2026), then the rest, with section chips along the bottom. The app reopens on whichever page you last used, and `/?page=leads` opens straight onto the CRM (any section works: `?page=today`, `?page=money`). Nothing is hosted publicly; the phone talks to the Mac directly, so the Mac must be awake with `npm run hq` running.
 
 **Reaching the Mac (pick one):**
 
