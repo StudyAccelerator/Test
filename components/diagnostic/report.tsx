@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
+import { requestCallback } from '@/lib/mailerlite'
 import {
   Answers,
   DIMS,
@@ -146,6 +147,112 @@ function DimRing({ value, color }: { value: number; color: string }) {
   )
 }
 
+/* ── In-report callback request (21 August 2026) ──
+   The gate asks for the call before the report has earned any trust, and
+   most people decline there. This card asks again where they are warmest,
+   with a concrete offer. One click clears any opt-out, records the time
+   and joins the "Callback requested" group that the lead-alert webhook
+   watches, so Waleed's phone pings at once. The route into the programme
+   stays the hero CTA; this is deliberately the smaller side door. */
+const CALL_TIMES = ['Right now', 'Morning', 'Afternoon', 'Evening']
+
+function CallbackCard({
+  email,
+  child,
+  isParent,
+  dark,
+}: {
+  email: string
+  child: string
+  isParent: boolean
+  dark?: boolean
+}) {
+  const [time, setTime] = useState('Right now')
+  const [state, setState] = useState<'idle' | 'sending' | 'done' | 'error'>('idle')
+  if (!email) return null
+
+  const submit = async () => {
+    setState('sending')
+    const ok = await requestCallback({ email, callTime: time })
+    setState(ok ? 'done' : 'error')
+  }
+  const when =
+    time === 'Right now' ? 'as soon as he can today' : `in the ${time.toLowerCase()}`
+
+  const shell = dark
+    ? 'rounded-2xl border border-brand-gold/30 bg-white/[0.05] p-6 sm:p-7'
+    : `${CARD} rounded-3xl p-6 sm:p-8 [box-shadow:0_0_0_2px_rgba(201,169,110,.45),0_12px_24px_rgba(46,37,87,.08)]`
+  const eyebrow = dark ? 'text-brand-gold' : 'text-brand-purple/60'
+  const title = dark ? 'text-brand-cream' : 'text-brand-purple'
+  const body = dark ? 'text-brand-cream/75' : 'text-brand-text/75'
+  const chipOff = dark
+    ? 'border-white/15 bg-white/[0.06] text-brand-cream/80 hover:border-brand-gold/60'
+    : 'border-brand-purple/15 bg-brand-cream/70 text-brand-purple hover:border-brand-gold'
+
+  return (
+    <div className={shell}>
+      <p className={`font-mono text-xs uppercase tracking-[0.2em] ${eyebrow}`}>Not ready for a programme yet?</p>
+      <h3 className={`mt-2 font-serif font-bold text-2xl md:text-[1.7rem] leading-tight ${title}`}>
+        {isParent ? <>Want Dr Waleed to build {child}&apos;s plan with you?</> : <>Want Dr Waleed to build your plan with you?</>}
+      </h3>
+      {state === 'done' ? (
+        <p className={`mt-3 text-[15px] leading-relaxed ${body}`} role="status">
+          <strong className={title}>Done.</strong> Dr Waleed has your number and will ring you {when}.
+          {isParent ? <> Have {child}&apos;s timetable to hand if you can.</> : <> Have your timetable to hand if you can.</>}
+        </p>
+      ) : (
+        <>
+          <p className={`mt-3 text-[15px] leading-relaxed ${body}`}>
+            {isParent
+              ? <>He&apos;ll ring you, go through these results and build {child} a custom revision plan. Free, no pitch, no obligation. When works best?</>
+              : <>He&apos;ll ring you, go through these results and build you a custom revision plan. Free, no pitch, no obligation. When works best?</>}
+          </p>
+          <div className="mt-4 flex flex-wrap gap-2" role="radiogroup" aria-label="Best time for the call">
+            {CALL_TIMES.map((t) => (
+              <button
+                key={t}
+                type="button"
+                role="radio"
+                aria-checked={time === t}
+                onClick={() => setTime(t)}
+                className={`rounded-full border-2 px-4 py-2 text-sm font-semibold transition ${
+                  time === t ? 'border-brand-gold bg-brand-gold text-brand-purple' : chipOff
+                }`}
+              >
+                {t}
+              </button>
+            ))}
+          </div>
+          <div className="mt-5 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+            <button
+              type="button"
+              onClick={submit}
+              disabled={state === 'sending'}
+              className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-7 py-3.5 font-bold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all disabled:opacity-60"
+            >
+              {state === 'sending' ? 'Sending…' : 'Request a callback'}
+              <span aria-hidden="true" className="ml-2">→</span>
+            </button>
+            <a
+              href={BOOK_A_CALL_LINK}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`text-sm font-semibold underline underline-offset-4 ${dark ? 'text-brand-cream/70 hover:text-brand-gold' : 'text-brand-purple/70 hover:text-brand-gold'}`}
+            >
+              Prefer to pick a slot? Book directly
+            </a>
+          </div>
+          {state === 'error' && (
+            <p className="mt-3 text-sm text-red-400" role="alert">
+              That didn&apos;t go through. Give it one more go, or book a slot directly.
+            </p>
+          )}
+        </>
+      )}
+    </div>
+  )
+}
+
 /* ── Section shell ── */
 function Section({
   number,
@@ -181,10 +288,12 @@ interface ReportProps {
   firstName: string
   taker: Taker
   childName: string
+  /* The lead's email from the gate, for the in-report callback request */
+  email: string
   onRetake: () => void
 }
 
-export default function Report({ diagnosis, answers, firstName, taker, childName, onRetake }: ReportProps) {
+export default function Report({ diagnosis, answers, firstName, taker, childName, email, onRetake }: ReportProps) {
   const { archetype, scores, overall, bottleneck, hoursLeak, prescription, plan, routing } = diagnosis
   const worry = (answers.worry as string) ?? ''
   const worryShown = worry && worry !== 'unsure' ? worry : ''
@@ -618,6 +727,14 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         </div>
       </section>
 
+      {/* ══ Callback side door: asked again where they are warmest, after the
+          scores have shown them the leak ══ */}
+      <section className="px-5 sm:px-6 py-10 md:py-12">
+        <div className="max-w-3xl mx-auto">
+          <CallbackCard email={email} child={child} isParent={isParent} />
+        </div>
+      </section>
+
       {/* ══ 04 · The hours leak ══ */}
       <Section
         number="04"
@@ -816,6 +933,9 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               Read the full recommendation again
             </a>
           </p>
+          <div className="mt-10 text-left">
+            <CallbackCard email={email} child={child} isParent={isParent} dark />
+          </div>
         </div>
       </section>
 

@@ -51,6 +51,8 @@ interface Stored {
   /* Added with the parent path. Absent in older saves, which were all student runs. */
   taker?: Taker
   childName?: string
+  /* Added 21 August 2026 for the in-report callback request */
+  email?: string
 }
 
 function loadStored(): Stored | null {
@@ -80,6 +82,7 @@ export default function DiagnosticApp() {
   const [answers, setAnswers] = useState<Answers>({})
   const [firstName, setFirstName] = useState('')
   const [childName, setChildName] = useState('')
+  const [leadEmail, setLeadEmail] = useState('')
   const [taker, setTaker] = useState<Taker | null>(null)
   const [diagnosis, setDiagnosis] = useState<Diagnosis | null>(null)
   const [resumeCount, setResumeCount] = useState(0)
@@ -93,6 +96,7 @@ export default function DiagnosticApp() {
       setAnswers(stored.answers)
       setFirstName(stored.firstName)
       setChildName(stored.childName ?? '')
+      setLeadEmail(stored.email ?? '')
       const storedTaker = stored.taker ?? (Object.keys(stored.answers).length > 0 ? 'student' : null)
       if (storedTaker) setTaker(storedTaker)
       if (stored.unlockedAt && allAnswered(stored.answers)) {
@@ -120,6 +124,7 @@ export default function DiagnosticApp() {
         unlockedAt: current?.unlockedAt ?? null,
         taker: taker ?? current?.taker,
         childName: current?.childName ?? '',
+        email: current?.email ?? '',
         ...partial,
       })
     },
@@ -169,6 +174,7 @@ export default function DiagnosticApp() {
       unlockedAt: null,
       taker: t,
       childName: current?.childName ?? '',
+      email: current?.email ?? '',
     })
     setStage('quiz')
     window.scrollTo({ top: 0 })
@@ -181,9 +187,10 @@ export default function DiagnosticApp() {
 
   const handleAnalysed = useCallback(() => setStage('gate'), [])
 
-  const handleUnlock = (name: string, child: string) => {
+  const handleUnlock = (name: string, child: string, email: string) => {
     setFirstName(name)
     setChildName(child)
+    setLeadEmail(email)
     setDiagnosis(diagnose(answers, taker ?? 'student'))
     saveStored({
       v: 1,
@@ -192,6 +199,7 @@ export default function DiagnosticApp() {
       unlockedAt: new Date().toISOString(),
       taker: taker ?? 'student',
       childName: child,
+      email,
     })
     setStage('report')
     window.scrollTo({ top: 0 })
@@ -232,6 +240,7 @@ export default function DiagnosticApp() {
           firstName={firstName || 'you'}
           taker={taker ?? 'student'}
           childName={childName}
+          email={leadEmail}
           onRetake={handleRetake}
         />
       )}
@@ -893,7 +902,7 @@ function EmailGate({
 }: {
   answers: Answers
   taker: Taker
-  onUnlock: (name: string, childName: string) => void
+  onUnlock: (name: string, childName: string, email: string) => void
 }) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
@@ -926,7 +935,7 @@ function EmailGate({
        leads himself; framed on the page as his same-day call, 15 Aug 2026). */
     const phoneClean = phoneRaw.replace(/[\s().-]/g, '')
     if (!phoneClean) {
-      setError("Add a phone number: it's where Dr Waleed rings you with his read on the report.")
+      setError("Add a phone number: it's where Dr Waleed rings you to go through the plan.")
       return
     }
     if (!/^\+?\d{7,15}$/.test(phoneClean)) {
@@ -934,6 +943,10 @@ function EmailGate({
       return
     }
     const noContact = data.get('noContact') === 'on'
+    /* Preferred call slot (Morning/Afternoon/Evening), added 21 August 2026:
+       the opt-out became a positive choice of time, with the decline moved
+       below the button. Never sent for someone who declined the call. */
+    const callTime = noContact ? '' : ((data.get('callTime') as string) ?? '').trim()
 
     setSubmitting(true)
     const d = diagnose(answers, taker)
@@ -943,6 +956,7 @@ function EmailGate({
       name,
       phone: phoneClean,
       noContact,
+      callTime,
       taker,
       childName: isParent ? child : '',
       support: supportLabel(answers.support as string),
@@ -967,7 +981,7 @@ function EmailGate({
     if (result === 'ok') {
       window.fbq?.('track', 'Lead')
       window.gtag?.('event', 'generate_lead')
-      onUnlock(name, isParent ? child : '')
+      onUnlock(name, isParent ? child : '', email)
       return
     }
     if (result === 'invalid-email') {
@@ -978,7 +992,7 @@ function EmailGate({
     /* Network hiccup: one retry prompt, then never hold the report hostage. */
     failCount.current += 1
     if (failCount.current >= 2) {
-      onUnlock(name, isParent ? child : '')
+      onUnlock(name, isParent ? child : '', email)
       return
     }
     setSubmitting(false)
@@ -1100,21 +1114,26 @@ function EmailGate({
               />
               <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
                 {isParent
-                  ? "Dr Waleed will personally ring you with his review of your child's report and his advice on getting to top grades, usually the same day."
-                  : 'Dr Waleed will personally ring you with his review of your report and his advice on getting to top grades, usually the same day.'}
+                  ? "Dr Waleed will personally ring you and build your child's custom revision plan from these results, usually the same day."
+                  : 'Dr Waleed will personally ring you and build your custom revision plan from these results, usually the same day.'}
               </p>
-              <label
-                htmlFor="diag-nocontact"
-                className="mt-3 flex items-start gap-2.5 text-sm text-brand-cream/70 leading-snug cursor-pointer select-none"
-              >
-                <input
-                  id="diag-nocontact"
-                  name="noContact"
-                  type="checkbox"
-                  className="mt-0.5 h-4 w-4 shrink-0 rounded accent-brand-gold"
-                />
-                Tick here if you&apos;d rather skip the call.
-              </label>
+              {/* The call is the default: picking a time is the natural action,
+                  declining lives under the button in smaller text. */}
+              <fieldset className="mt-3">
+                <legend className="text-sm font-bold text-brand-cream/85 mb-1.5">
+                  When&apos;s best for his call? <span className="font-normal text-brand-cream/50">(optional)</span>
+                </legend>
+                <div className="flex flex-wrap gap-2">
+                  {['Right now', 'Morning', 'Afternoon', 'Evening'].map((t) => (
+                    <label key={t} className="cursor-pointer">
+                      <input type="radio" name="callTime" value={t} className="peer sr-only" />
+                      <span className="inline-block rounded-full border-2 border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-brand-cream/80 transition hover:border-brand-gold/60 peer-checked:border-brand-gold peer-checked:bg-brand-gold peer-checked:text-brand-purple peer-focus-visible:ring-2 peer-focus-visible:ring-brand-gold peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-brand-purple">
+                        {t}
+                      </span>
+                    </label>
+                  ))}
+                </div>
+              </fieldset>
             </div>
             <div>
               <label htmlFor="diag-notes" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
@@ -1147,6 +1166,18 @@ function EmailGate({
             >
               {submitting ? 'Unsealing the report…' : isParent ? 'Show me the report' : 'Show my report'}
             </button>
+            <label
+              htmlFor="diag-nocontact"
+              className="flex items-start justify-center gap-2 text-xs text-brand-cream/60 leading-snug cursor-pointer select-none"
+            >
+              <input
+                id="diag-nocontact"
+                name="noContact"
+                type="checkbox"
+                className="mt-0.5 h-3.5 w-3.5 shrink-0 rounded accent-brand-gold"
+              />
+              I&apos;d rather not get a call. Just the report and the emails.
+            </label>
             <p className="text-xs text-brand-cream/50 leading-relaxed">
               {isParent
                 ? "Free, and stays free. You'll also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."

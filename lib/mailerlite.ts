@@ -56,6 +56,9 @@ export interface DiagnosticSubscriber {
   /* The gate's opt-out tick box: true means "do not contact me about the
      report". Sent on every run as yes/no so the latest submission wins. */
   noContact: boolean
+  /* Preferred call slot from the gate (Morning / Afternoon / Evening), '' when
+     not chosen or when they declined the call. Added 21 August 2026. */
+  callTime: string
   /* 'student' | 'parent': decided at the fork, drives which groups (and so
      which automations) the subscriber lands in */
   taker: string
@@ -85,6 +88,30 @@ export interface DiagnosticSubscriber {
   route: string
 }
 
+/* "Callback requested": joined from the report's callback card (21 August
+   2026). Watched by api/lead-alert.js, so a join pings Waleed's phone at once. */
+const CALLBACK_GROUP_ID = '196438369449805734'
+
+/* The report's callback card: clears any opt-out made at the gate, records
+   the preferred time and joins the callback group. Upsert by email, so it
+   never disturbs the groups and fields the diagnostic already stored. */
+export async function requestCallback(req: { email: string; callTime: string }): Promise<boolean> {
+  try {
+    const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${ML_API_KEY}` },
+      body: JSON.stringify({
+        email: req.email,
+        fields: { diag_no_contact: 'no', diag_call_time: req.callTime },
+        groups: [CALLBACK_GROUP_ID],
+      }),
+    })
+    return res.ok
+  } catch {
+    return false
+  }
+}
+
 export type SubscribeResult = 'ok' | 'invalid-email' | 'network-error'
 
 export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<SubscribeResult> {
@@ -99,6 +126,7 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
     if (sub.supportDetail) optional.diag_support_detail = sub.supportDetail
     if (sub.supportNeeded) optional.diag_support_needed = sub.supportNeeded
     if (sub.notes) optional.diag_notes = sub.notes
+    if (sub.callTime) optional.diag_call_time = sub.callTime
 
     /* Parents join the parent master group and a parent route group, never
        the student groups: the follow-up automations hang off group joins,

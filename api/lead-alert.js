@@ -44,6 +44,7 @@ const WATCHED = {
   '187183128836573106': 'Revision Tracker',
   '188021995515937985': "Parents' Guide",
   '192801700892903405': 'Sunday Session newsletter',
+  '196438369449805734': 'CALLBACK REQUESTED from the report',
 }
 
 const OWN_ADDRESSES = ['waleedahmad042.319@gmail.com', 'waleed@alevelaccelerators.com']
@@ -111,7 +112,7 @@ module.exports = async function handler(req, res) {
         : 'DO NOT CALL. They ticked the opt-out.'
     )
   } else if (f.phone) {
-    lines.push(`OK TO CALL: ${esc(f.phone)}`)
+    lines.push(`OK TO CALL: ${esc(f.phone)}${f.diag_call_time ? ` (best time: ${esc(f.diag_call_time)})` : ''}`)
   } else {
     lines.push('No phone left')
   }
@@ -134,6 +135,11 @@ module.exports = async function handler(req, res) {
 
   const firstName = String(name).split(' ')[0]
   const stamp = new Date().toISOString().slice(0, 16).replace('T', ' ')
+  /* "Right now" at the gate (added 21 August 2026): they are sat at the
+     report waiting for the phone to ring, so the push shouts. */
+  const isCallback = String(group && group.id) === '196438369449805734'
+  const callNow =
+    String(f.diag_no_contact) !== 'yes' && f.phone && (String(f.diag_call_time) === 'Right now' || isCallback)
 
   /* Acknowledge BEFORE doing the slow work. A cold start plus two MailerLite
      round trips overran their webhook timeout, they retried, and one signup
@@ -147,15 +153,15 @@ module.exports = async function handler(req, res) {
     String(f.diag_no_contact) === 'yes'
       ? 'DO NOT CALL (opted out)'
       : f.phone
-        ? `OK TO CALL ${f.phone}`
+        ? `OK TO CALL ${f.phone}${f.diag_call_time ? ` (best: ${f.diag_call_time})` : ''}`
         : 'no phone left'
   waitUntil(
     fetch(`https://ntfy.sh/${NTFY_TOPIC}`, {
       method: 'POST',
       headers: {
-        Title: `New lead: ${firstName}${f.diag_taker ? ` (${f.diag_taker})` : ''}`,
-        Priority: 'high',
-        Tags: 'telephone',
+        Title: `${isCallback ? 'CALLBACK REQUESTED: ' : callNow ? 'CALL NOW: ' : 'New lead: '}${firstName}${f.diag_taker ? ` (${f.diag_taker})` : ''}`,
+        Priority: callNow ? 'urgent' : 'high',
+        Tags: callNow ? 'rotating_light,telephone' : 'telephone',
       },
       body: [
         callLine,
@@ -194,7 +200,7 @@ module.exports = async function handler(req, res) {
           groups: [ALERTS_GROUP],
           emails: [
             {
-              subject: `New lead: ${firstName}`,
+              subject: `${isCallback ? 'CALLBACK REQUESTED: ' : callNow ? 'CALL NOW: ' : 'New lead: '}${firstName}`,
               from_name: 'A-Level Accelerators lead alerts',
               from: 'waleed@alevelaccelerators.com',
               content: `<html><body><p>${lines.join('</p><p>')}</p></body></html>`,
