@@ -166,6 +166,7 @@ module.exports = async function handler(req, res) {
       body: [
         callLine,
         f.diag_child_name ? `Child: ${f.diag_child_name}` : '',
+        f.year_group ? `Year: ${f.year_group}` : '',
         f.subjects ? `Subjects: ${f.subjects}` : '',
         /* diag_grades carries every subject ("Maths B to A, Chemistry C to B");
            the single fields are the worry subject only, kept as the fallback. */
@@ -175,6 +176,7 @@ module.exports = async function handler(req, res) {
             ? `Grades: ${f.diag_current_grade || '?'} to ${f.diag_target_grade || '?'}`
             : '',
         f.diag_archetype ? `Profile: ${f.diag_archetype}` : '',
+        f.diag_route ? `Recommended: ${f.diag_route}` : '',
         f.diag_bottleneck ? `Not working: ${f.diag_bottleneck}` : '',
         f.diag_low_yield_hours ? `Low-yield: ${f.diag_low_yield_hours}` : '',
         f.diag_support ? `Doing now: ${f.diag_support}` : '',
