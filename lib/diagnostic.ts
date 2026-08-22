@@ -132,6 +132,14 @@ export const SUBJECT_CHOICES = [
   'Other',
 ]
 
+/* The Summer Accelerator only exists as a recommendation while its cohort is
+   still ahead: the 2026 cohort started Saturday 22 August, so from that date
+   the diagnostic stops routing anyone to it and sends Year 12 STEM students to
+   the September programmes instead. Change this date (or delete the guard)
+   when a new summer cohort is on sale. */
+const SUMMER_COHORT_START = '2026-08-22'
+const summerOnSale = () => new Date().toISOString().slice(0, 10) < SUMMER_COHORT_START
+
 const SUMMER_SUBJECTS = ['Biology', 'Chemistry', 'Maths', 'Physics']
 const SUBJECT_ACCEL_SUBJECTS = ['Biology', 'Chemistry', 'Maths']
 
@@ -1213,7 +1221,7 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     ],
     href: '/summer-accelerators/',
     cta: 'Explore the Summer Accelerator',
-    meta: 'Cohort starts Saturday 22nd August · from £9/hr',
+    meta: summerOnSale() ? 'Cohort starts Saturday 22nd August · from £9/hr' : 'Six weeks live · from £9/hr',
   })
 
   const subjectAccel = (why: string): Route => ({
@@ -1266,9 +1274,11 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     }
   }
 
-  /* Year 12: the summer window is the biggest available move if they take a summer subject. */
+  /* Year 12: the summer window is the biggest available move if they take a
+     summer subject, but only while that cohort is still ahead of them. Once it
+     has started, the honest next step is the September programmes. */
   if (year === 'y12') {
-    if (stemSubjects.length > 0) {
+    if (stemSubjects.length > 0 && summerOnSale()) {
       const whyParts: string[] = []
       if (worryIsStem) {
         whyParts.push(
@@ -1312,13 +1322,29 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
             : callLine,
       }
     }
+    /* Year 12 with a Subject Accelerator subject, summer gone: September is the
+       next live teaching they can join, and it starts the term that decides
+       their predicted grades. */
+    if (accelSubjects.length > 0 && !systemSide) {
+      const focus = worryIsAccel ? worry! : accelSubjects[0]
+      return {
+        primary: subjectAccel(
+          p
+            ? `${focus} is where the marks are leaking, and Year 13 starts the term that sets their predicted grades. The September cohort runs alongside school, working through real questions with a specialist every week, so the fix lands while it still counts.`
+            : `${focus} is where your marks are leaking, and Year 13 starts the term that sets your predicted grades. The September cohort runs alongside school, working through real questions with a specialist every week, so the fix lands while it still counts.`
+        ),
+        secondaryLine: 'If the underlying habits need work too, the Top 1% Study System runs alongside it. ' + callLine,
+      }
+    }
     return {
       primary: system(
         p
-          ? 'Their subjects sit outside our live summer courses, but the diagnostic points at the system itself, and that transfers to every subject they take. Fix the method this summer and September becomes a different experience.'
-          : 'Your subjects sit outside our live summer courses, but your diagnostic points at the system itself, and that transfers to every subject you take. Fix the method this summer and September becomes a different experience.'
+          ? 'The diagnostic points at how they study rather than at one subject, and that transfers to every subject they take. Going into Year 13 with the method already fixed is the difference between a calm year and a frantic one.'
+          : 'Your diagnostic points at how you study rather than at one subject, and that transfers to every subject you take. Going into Year 13 with the method already fixed is the difference between a calm year and a frantic one.'
       ),
-      secondaryLine: callLine,
+      secondaryLine: accelSubjects.length > 0
+        ? `And if ${accelSubjects[0]} stays stubborn once the system is in, the Subject Accelerators start in September. ` + callLine
+        : callLine,
     }
   }
 
