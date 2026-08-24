@@ -26,6 +26,7 @@ import {
   yearLabel,
 } from '@/lib/diagnostic'
 import { subscribeDiagnostic } from '@/lib/mailerlite'
+import { trackFunnel } from '@/lib/analytics'
 
 declare global {
   interface Window {
@@ -135,6 +136,21 @@ export default function DiagnosticApp() {
     (id: string, value: string | string[]) => {
       setAnswers((prev) => {
         const next = { ...prev, [id]: value }
+        /* Funnel: the first answer is the real start, and halfway is where a
+           long quiz usually loses people. Counted with the same isAnswered
+           rule the quiz itself uses, so follow-up keys like supportDetail
+           and the per-subject grade grids cannot make it fire early. Each
+           fires once per run, on the transition. */
+        const countAnswered = (a: Answers) => QUESTIONS.filter((q) => isAnswered(q, a)).length
+        const answeredBefore = countAnswered(prev)
+        const answeredNow = countAnswered(next)
+        if (answeredBefore === 0 && answeredNow > 0) {
+          trackFunnel('diagnostic_start', { taker: taker ?? 'unknown' })
+        }
+        const half = Math.ceil(QUESTIONS.length / 2)
+        if (answeredBefore < half && answeredNow >= half) {
+          trackFunnel('diagnostic_halfway', { taker: taker ?? 'unknown', answered: answeredNow })
+        }
         /* Changing subjects can invalidate the worry answer, per-subject
            grades, and any tutored-subjects follow-up */
         if (id === 'subjects') {
@@ -154,7 +170,7 @@ export default function DiagnosticApp() {
         return next
       })
     },
-    [persist]
+    [persist, taker]
   )
 
   /* Start: straight to the quiz when the path is already known (resume or
@@ -181,6 +197,10 @@ export default function DiagnosticApp() {
   }
 
   const handleQuizComplete = () => {
+    /* Every question answered. The gap between this and generate_lead is the
+       most valuable number on the funnel: people who did the whole diagnostic
+       and then would not hand over their details. */
+    trackFunnel('diagnostic_questions_done', { taker: taker ?? 'unknown' })
     setStage('analysing')
     window.scrollTo({ top: 0 })
   }
@@ -201,6 +221,7 @@ export default function DiagnosticApp() {
       childName: child,
       email,
     })
+    trackFunnel('diagnostic_report_viewed', { taker: taker ?? 'unknown' })
     setStage('report')
     window.scrollTo({ top: 0 })
   }

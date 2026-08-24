@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
 import { motion, useInView, useReducedMotion } from 'framer-motion'
 import { requestCallback } from '@/lib/mailerlite'
+import { trackFunnel } from '@/lib/analytics'
 import {
   Answers,
   DIMS,
@@ -174,6 +175,7 @@ function CallbackCard({
   const submit = async () => {
     setState('sending')
     const ok = await requestCallback({ email, callTime: time })
+    if (ok) trackFunnel('diagnostic_callback_request', { call_time: time, taker: isParent ? 'parent' : 'student' })
     setState(ok ? 'done' : 'error')
   }
   const when =
@@ -235,6 +237,7 @@ function CallbackCard({
             </button>
             <a
               href={BOOK_A_CALL_LINK}
+              onClick={() => trackFunnel('diagnostic_route_click', { placement: 'callback_card', target: 'book_a_call', taker: isParent ? 'parent' : 'student' })}
               target="_blank"
               rel="noopener noreferrer"
               className={`text-sm font-semibold underline underline-offset-4 ${dark ? 'text-brand-cream/70 hover:text-brand-gold' : 'text-brand-purple/70 hover:text-brand-gold'}`}
@@ -344,6 +347,17 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
     }
   }
 
+  /* Funnel: clicks out of the report, into a programme page or the booking
+     scheduler. Invisible to GA before, so a report that converts looked
+     identical to one that just gets read. */
+  const trackRoute = (placement: string, target: string) => () =>
+    trackFunnel('diagnostic_route_click', {
+      placement,
+      target,
+      route: routing.primary.name,
+      taker: isParent ? 'parent' : 'student',
+    })
+
   const scrollToRoute = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     document.getElementById('route')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
@@ -431,6 +445,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
           <div className="mt-7 flex flex-col sm:flex-row gap-3">
             <a
               href={routing.primary.href}
+              onClick={trackRoute('route_section', 'programme')}
               className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
             >
               {routing.primary.cta}
@@ -438,6 +453,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
             </a>
             <a
               href={BOOK_A_CALL_LINK}
+              onClick={trackRoute('route_section', 'book_a_call')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center items-center rounded-full border-2 border-brand-purple/20 text-brand-purple px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
@@ -914,6 +930,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
           <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
             <a
               href={routing.primary.href}
+              onClick={trackRoute('closing_band', 'programme')}
               className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
             >
               {routing.primary.cta}
@@ -921,6 +938,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
             </a>
             <a
               href={BOOK_A_CALL_LINK}
+              onClick={trackRoute('closing_band', 'book_a_call')}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex justify-center items-center rounded-full border-2 border-brand-cream/25 text-brand-cream px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
