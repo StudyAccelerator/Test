@@ -1,5 +1,7 @@
 # Revision Diagnostic follow-up sequence
 
+> **Cadence superseded, 27 August 2026.** The v2 build (near-daily for week one, taper to day 14, one CTA per email) is mapped in [`../README.md`](../README.md) and `scripts/email-engine/manifest.json`, and lives in the "V2 ·" automations in MailerLite. The day table below describes the 2026-07-12 v1 automations, which stay live only until Waleed flips the pairs. New files `01-shared-the-call.md` and the `d03/d05/d10/d14` emails per route joined the sequence in v2; the summer route stays paused and was not rebuilt.
+
 Written 11 July 2026. This folder is the complete post-diagnostic email sequence: the back half of the Revision Diagnostic. Waleed reviews every email before anything is switched on.
 
 ## The shape of it

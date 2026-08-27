@@ -1,0 +1,3 @@
+# Programme interest sequence
+
+Written 27 August 2026. Five emails over 7 days on the new group "Programme interest", fed manually by Waleed whenever someone asks about the programmes (DM, reply, call, CRM): the full picture with prices in plain sight, week one from inside, proof in students' words, the money done openly, and the decision email. Mixed student/parent audience, so the copy stays neutral. Prices and dates must match the live pages (£339/£629/£849, Study System £119/£499, cohort Sunday 13 September 2026); if the pages change, update these files and re-run the engine the same day. Cadence, build and switch-on: ../README.md.

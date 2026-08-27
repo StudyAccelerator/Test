@@ -1,6 +1,6 @@
 # B3 · Taught to the mark scheme (the pitch)
 
-Send: Day 6, around 11am UK
+Send: Day 6
 Segment: diag_route contains "Subject Accelerator"
 Subject A: {$diag_worry_subject|default('your subject')}, taught to the mark scheme
 Subject B: the September plan for your problem subject
@@ -28,7 +28,7 @@ Your report flagged {$diag_bottleneck|default('Exam Craft')} in {$diag_worry_sub
 
 **The honest evidence**
 
-I don't have grade outcomes to show you yet. First results arrive in August, and until then I won't dress anything up as one. What I can share: across our recent 12 week Biology and Chemistry Accelerators, students rated their confidence in each topic before and after every session. The average moved from 6.2 out of 10 before to 8.3 after, across 74 responses. Confidence isn't a grade, and I won't pretend it is, but session after session, that's the direction of travel students report.
+I don't have verified grade outcomes to show you yet, and until I do, I won't dress anything up as one. What I can share: across our recent 12 week Biology and Chemistry Accelerators, students rated their confidence in each topic before and after every session. The average moved from 6.2 out of 10 before to 8.3 after, across 74 responses. Confidence isn't a grade, and I won't pretend it is, but session after session, that's the direction of travel students report.
 
 And in their own words. Naysa, biology: "The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content." Ahreen, chemistry: "Well structured and informative walkthroughs, with lots of hard questions and worked solutions."
 

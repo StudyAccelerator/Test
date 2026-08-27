@@ -1,6 +1,6 @@
 # B1 · Marking like an examiner
 
-Send: Day 1, around 5pm UK
+Send: Day 2
 Segment: diag_route contains "Subject Accelerator"
 Subject A: you know more than your grades show, {$name}
 Subject B: the 80 minute drill that finds your missing marks
@@ -41,7 +41,7 @@ Part four, non-negotiable: rewrite every W answer, in full, in the exact languag
 
 One student's version of this stuck with me. Maahil, one of our chemistry students, described the approach as "we go straight into exam practice instead of spending ages on content, and it works". That's the entire philosophy in one sentence: at your stage, with your profile, the paper is the textbook.
 
-Do the drill once this week. One section, one honest marking, one letter-coded log. Next email I'll show you the layer under it: the examiner's dictionary, and how to learn mark scheme language the way you'd learn actual vocabulary, because that's what it is.
+Do the drill once this week. One section, one honest marking, one letter-coded log. In a couple of days I'll show you the layer under it: the examiner's dictionary, and how to learn mark scheme language the way you'd learn actual vocabulary, because that's what it is.
 
 Keep going!
 

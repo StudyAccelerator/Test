@@ -1,6 +1,6 @@
 # Y5 · The compounding window
 
-Send: Day 11, around 11am UK
+Send: Day 12
 Segment: diag_route contains "Study System"
 Subject A: the academic tax you're paying weekly, {$name}
 Subject B: fix the machine before September starts the engine
@@ -26,13 +26,11 @@ So, plainly, the two doors:
 
 **Door one, the install:** the Study System itself. £119 for the taught Series, £499 for the Accelerator with weekly accountability while the habits set. Everything I said about it two emails ago stands, including who should keep their money.
 
-[BUTTON: Click Here for All of the Information -> https://alevelaccelerators.com/study-systems/]
+[BUTTON: See the Study System levels -> https://alevelaccelerators.com/study-systems/]
 
 **Door two, free, solo:** run what you already have. Try your best to seriously blurt daily, ugly pages, second colour, second pass. Book every topic's day 2 and day 5 returns into a calendar the moment you finish it. Keep the error log, retest on Sundays. Forty-five minute sessions, phone in another room, decide tomorrow's topic tonight. That's the system. You've had it for free across three emails, and a student who runs it solo beats a student who bought it and didn't, every single time.
 
-If you're stuck between the two, thirty free minutes with me and I'll tell you which one fits, even when the answer is door two:
-
-[BUTTON: Click Here to Book a Call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+If you're stuck between the two, thirty free minutes with me and I'll tell you which one fits, even when the answer is door two: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
 
 From next week I'm in your inbox once a week: one thing school never taught you, usable that evening. When something from your report starts working, reply and tell me. Those replies are, honestly, the best part of this job.
 

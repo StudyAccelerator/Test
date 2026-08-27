@@ -1,6 +1,6 @@
 # PB4 · September is a decision
 
-Send: Day 11, around 11am UK
+Send: Day 12
 Segment: group "Diag Parents Subject Route"
 Subject A: there is no second autumn
 Subject B: the decision that sits under the predicted grades

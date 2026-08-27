@@ -12,6 +12,11 @@
       "path": "content/business-audit/2026-07-17-lead-generation-and-conversion-map.md"
     },
     {
+      "id": "email-engine",
+      "label": "Email engine: every entry point",
+      "path": "content/email-sequences/README.md"
+    },
+    {
       "id": "fb-playbook",
       "label": "Facebook groups and parent conversion",
       "path": "content/facebook-groups/2026-07-15-facebook-groups-and-parent-competitors.md"

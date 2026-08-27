@@ -1,6 +1,6 @@
 # PY1 · Effort was never the problem
 
-Send: Day 2, around 8pm UK
+Send: Day 2
 Segment: group "Diag Parents System Route"
 Subject A: why harder is not working
 Subject B: the machine under every subject
@@ -22,6 +22,6 @@ The reason is that revision has a machine under it: how you learn something, whe
 
 One free tool that helps this week: the Revision Tracker builds their week around the weakest topics with a method for every session, so the machine is decided in advance rather than negotiated nightly: https://alevelaccelerators.com/revision-tracker
 
-Thursday: what actually fixing the machine looks like, and the honest cost of each option, including free.
+Over the next few days: what actually fixing the machine looks like, and the honest cost of each option, including free.
 
 Waleed

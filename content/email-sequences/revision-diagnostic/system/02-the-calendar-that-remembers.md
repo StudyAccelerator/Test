@@ -1,6 +1,6 @@
 # Y2 · The calendar that remembers for you
 
-Send: Day 3, around 5pm UK
+Send: Day 4
 Segment: diag_route contains "Study System"
 Subject A: you don't have a memory problem
 Subject B: why you keep re-learning the same topics
@@ -38,7 +38,7 @@ If you want the returns and the sessions placed for you around your real life, s
 
 Tonight's homework is small: take the topic you blurted after my last email, and book its day 5 return into your plan right now. One line in a calendar. That single habit, repeated, is the difference between a memory that leaks and one that compounds.
 
-Next email, I'll show you what it looks like when the whole thing, the retrieval, the spacing, the decision-removal, gets installed as one system with other people holding you to it. There's a free way in, and I'll give it to you first.
+In a couple of days, I'll show you what it looks like when the whole thing, the retrieval, the spacing, the decision-removal, gets installed as one system with other people holding you to it. There's a free way in, and I'll give it to you first.
 
 Keep going!
 

@@ -4,8 +4,9 @@ Send: Instantly on joining group "Revision Diagnostic Parents"
 Subject A: {$diag_child_name|default('your child')}'s revision diagnosis, in plain English
 Subject B: what the diagnostic found, and one thing to do tonight
 Preheader: The profile, what it actually means, and the first move. No jargon.
-Goal: deliver value instantly, prime replies, set up the read-it-together conversation.
+Goal: deliver value instantly, hand over tonight's one move, set the near-daily cadence expectation, prime replies via the PS.
 Links: 1 (report page)
+Revised: 27 August 2026 (v2 cadence pass: one clear action, near-daily promise, reply ask moved to the PS)
 
 ---
 
@@ -25,10 +26,12 @@ Your report stays saved here:
 
 [BUTTON: Open the report again -> https://alevelaccelerators.com/revision-diagnostic/]
 
-One more thing. Reply to this email and tell me the one line from the report that surprised you most. I read every reply myself, and it helps me make the diagnostic better for the next parent.
+Over the next few days I'll send you the practical side, one email at a time: what to say to {$diag_child_name|default('your child')}, what the fix actually looks like, and what it costs at every budget, including free. A few emails in the first week while this is fresh, then I'll leave your inbox in peace.
 
-Any questions, just message me. I'm always happy to talk it through.
+Tonight, just ask the question.
 
 Waleed
 
 Dr Waleed Ahmad, MBBS · A-Level Accelerators
+
+PS: Once you've read the report together, reply and tell me the one line that surprised you most. I read every reply myself, and I'm always happy to talk it through.

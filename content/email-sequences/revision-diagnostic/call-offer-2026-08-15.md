@@ -1,5 +1,7 @@
 # Call-offer emails (added 15 August 2026, Waleed's instruction)
 
+> **Superseded, 27 August 2026:** both call-offer emails are now BUILT into the v2 route automations at day 1 (files `01-shared-the-call.md` in this folder and the parents' folder), and the Sunday welcome is built as its own v2 automation. This file remains as the historical record of the 15 August instruction, which the v2 build carried out.
+
 The nurture sequences never offered the free 30 minute call, which is Waleed's best
 converter. These two emails fix that. Placement: in the E0 (student) and P0 (parent)
 automations, ONE DAY after the instant report email, so every diagnostic taker gets it

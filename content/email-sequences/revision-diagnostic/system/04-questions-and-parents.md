@@ -1,6 +1,6 @@
 # Y4 · The questions (and the parent section)
 
-Send: Day 8, around 5pm UK
+Send: Day 8
 Segment: diag_route contains "Study System"
 Subject A: "I've tried flashcards before and it didn't stick"
 Subject B: the honest answers, before you decide anything
@@ -44,13 +44,13 @@ Your child took my free 20 question diagnostic. Their result points at the metho
 
 The honest structure of it: the Study Series is £119 for the taught system across four live sessions, and the Study Accelerator is £499 with twelve sessions plus weekly accountability while the habits take hold. For comparison, £499 is about ten hours of typical 1:1 tutoring, which would address one subject and leave the underlying method untouched. If you'd like to size me up first, a free 30 minute call with me costs nothing and you'll both get a straight answer.
 
-I don't publish grade claims, because our first cohort's results arrive in August and I won't invent numbers before then. If you're unsure whether this would genuinely help, what I can offer is my time and a straight answer about whether this fits your child: reply to this email or book a free 30 minute call with me at https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to talk it through.
+I don't publish grade claims, because I won't quote a number I haven't verified. If you're unsure whether this would genuinely help, what I can offer is my time and a straight answer about whether this fits your child: reply to this email or book a free 30 minute call with me at https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to talk it through.
 
 ---
 
 If any question of yours isn't here, {$name}, hit reply and ask. Otherwise, a quick call with me is the easiest next step, and it's the right one whether or not you ever spend a pound:
 
-[BUTTON: Right Here -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
 
 Keep going!
 

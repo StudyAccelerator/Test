@@ -1,6 +1,6 @@
 # PB1 · "So capable", and the marks say otherwise
 
-Send: Day 2, around 8pm UK
+Send: Day 2
 Segment: group "Diag Parents Subject Route"
 Subject A: knowing it and scoring it are different skills
 Subject B: why "so capable" keeps appearing next to disappointing marks
@@ -20,7 +20,7 @@ Here is what that means for you, practically. More revision of content will not 
 
 **The ten minute check you can run this week.** Ask them to do one past paper question in {$diag_worry_subject|default('that subject')}, timed. Then sit together with the official mark scheme, free on the exam board's website, and mark it. Count the marks lost on things they knew. Not things they did not know. Things they knew and did not convert. That number usually lands somewhere between surprising and infuriating, and it is the most useful number you will see all term.
 
-That number is the whole story of this profile. On Thursday I will show you what training it properly looks like, and what it costs against a tutor.
+That number is the whole story of this profile. Over the next few days I will show you what training it properly looks like, and what it costs against a tutor.
 
 Any questions, just message me. I'm always happy to talk it through.
 

@@ -45,3 +45,6 @@ lerna-debug.log*
 # Local review folders (creative packs copied out for Waleed to flick through)
 /AD\ REVIEW*/
 /Meta\ Ads*/
+
+# email engine rendered output (derived from content/email-sequences)
+scripts/email-engine/build/

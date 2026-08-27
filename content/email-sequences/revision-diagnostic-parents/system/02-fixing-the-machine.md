@@ -1,6 +1,6 @@
 # PY2 · Fixing the machine, at every budget
 
-Send: Day 5, around 11am UK
+Send: Day 5
 Segment: group "Diag Parents System Route"
 Subject A: the fix, priced honestly (including free)
 Subject B: what fixing the method actually looks like

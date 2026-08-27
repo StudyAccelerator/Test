@@ -1,6 +1,6 @@
 # B4 · The questions (and the parent section)
 
-Send: Day 8, around 5pm UK
+Send: Day 8
 Segment: diag_route contains "Subject Accelerator"
 Subject A: "my predicted grade is already decided though"
 Subject B: the questions worth asking before September
@@ -42,7 +42,7 @@ Your child took my free 20 question revision diagnostic. Their result is one I s
 
 The recommendation is our Subject Accelerator in their priority subject: twelve weeks of live weekend teaching in small groups, run by specialists who achieved top grades in that subject themselves, and helped hundreds do the same. Every session is built around real exam questions and the official mark schemes. The next cohort starts Sunday 13th September, timed so the training runs alongside the autumn term, when schools set the predicted grades that go on university applications.
 
-Cost is £339 for the twelve weeks in one subject, which for scale is less than seven hours of typical 1:1 tutoring at the national average of around £50 an hour. Sessions are recorded if a weekend is missed. On evidence: I publish no grade claims yet, our first cohort's results arrive in August, and I'd treat anyone in this industry who promises grades with suspicion. What we do measure is topic confidence before and after each session; across the recent Biology and Chemistry cohorts it averaged 6.2 out of 10 before and 8.3 after, over 74 responses.
+Cost is £339 for the twelve weeks in one subject, which for scale is less than seven hours of typical 1:1 tutoring at the national average of around £50 an hour. Sessions are recorded if a weekend is missed. On evidence: I publish no grade claims I haven't verified, and I'd treat anyone in this industry who promises grades with suspicion. What we do measure is topic confidence before and after each session; across the recent Biology and Chemistry cohorts it averaged 6.2 out of 10 before and 8.3 after, over 74 responses.
 
 If it would help to talk it through, reply to this email or book a free thirty minute call with me: https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions, just message me. I'm always happy to help, and if I don't think the programme fits your child, I'll say so on the call.
 

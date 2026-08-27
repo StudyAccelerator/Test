@@ -1,0 +1,3 @@
+# Sunday Session welcome
+
+Written 27 August 2026. Two emails on group "Sunday Session" (192801700892903405): the instant welcome (ritual promise, one high-yield/low-yield taste, reply-with-your-subjects ask) and the day 2 diagnostic bridge. Replaces the never-enabled SS1 welcome from July. The welcome promises "every Sunday at 5pm", so the weekly send needs to actually resume (nothing has gone out since 13 August 2026) or the promise softened before this is switched on. The weekly newsletter itself lives in content/email-newsletter/ and is NOT this folder's concern. Cadence, build and switch-on: ../README.md.

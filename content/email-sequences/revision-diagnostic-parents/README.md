@@ -1,5 +1,7 @@
 # Parent diagnostic follow-up sequence
 
+> **Cadence superseded, 27 August 2026.** The v2 build (near-daily for week one, taper to day 14, one CTA per email) is mapped in [`../README.md`](../README.md) and `scripts/email-engine/manifest.json`, and lives in the "V2 ·" automations in MailerLite. The day table below describes the 2026-07-15 v1 automations, which stay live only until Waleed flips the pairs. New files `01-shared-the-call.md` and the `d03/d04/d07/d10/d14` emails per route joined the sequence in v2; the summer route stays paused and was not rebuilt.
+
 Written 15 July 2026, alongside the student/parent fork of the Revision Diagnostic. This is the buyer-side sequence: it speaks to the parent who completed the parent diagnostic about their child, never to the student. Waleed reviews every email before anything is switched on.
 
 ## The shape of it

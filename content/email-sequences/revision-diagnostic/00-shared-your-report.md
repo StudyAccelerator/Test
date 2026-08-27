@@ -5,8 +5,9 @@ Segment: everyone (before the route branch)
 Subject A: your diagnostic report, {$name}
 Subject B: {$name}, your revision profile: {$diag_archetype|default('the results are in')}
 Preheader: The full result, saved to your inbox, plus one fix you can run tonight.
-Goal: deliver the report as a keepsake, earn a reply and a Primary-tab drag, set expectations. No pitch.
-Links: 1 (report page) + 1 in PS (tracker)
+Goal: deliver the report as a keepsake, hand over tonight's first move, set the near-daily cadence expectation, earn a reply via the PS. No pitch.
+Links: 1 (report page)
+Revised: 27 August 2026 (v2 cadence pass: one clear action, near-daily promise, favours folded into the PS)
 
 ---
 
@@ -35,15 +36,9 @@ You don't have that any more. You have one named leak. That's the whole point of
 
 Tonight, do the first ten minutes of your plan. One blank page. Write down every topic you'd dread seeing in an exam tomorrow. Don't fix anything yet. Don't open a textbook. Just get the avoid-list out of your head and onto paper, because a leak you can see is a leak you can fix.
 
-Two quick favours, both selfish on your part:
+Here's what's coming: I'll email you every day or so for the first week, because the first week is when fixing this is easiest to start, then I'll space out. Each email is one fix for your specific result, usable the evening it arrives. They're longer than normal marketing emails because they're not really marketing emails. After two weeks, it drops to one a week.
 
-1. Move this email to your Primary tab (on Gmail, drag it across and tap "yes" when it asks; on iPhone Mail, add me to VIP). The next emails contain the actual fixes, and they're no use to you in a folder you never open.
-
-2. Hit reply and tell me the one thing in your report that stung. One line is fine. I read every reply, and it tells me which fix to go deeper on.
-
-Here's what's coming: over the next two weeks I'll send you the fixes for your result, one at a time. They're longer than normal marketing emails because they're not really marketing emails. Each one is something you can use the evening it arrives. After that, it's one email a week.
-
-You did the honest part already. Twenty questions, no flattering answers. That's more than most students ever do.
+You did the honest part already. Twenty questions, no flattering answers. That's more than most students ever do. Tonight's ten minutes is the next move, and it's the smallest one on the whole plan.
 
 Keep going!
 
@@ -52,4 +47,4 @@ Waleed
 Dr Waleed Ahmad, MBBS
 Founder, A-Level Accelerators
 
-PS: If you want your avoid-list turned into an actual week, the free Revision Tracker builds the timetable around your real commitments: https://alevelaccelerators.com/revision-tracker/
+PS: Two small favours that pay you back. Drag this email to your Primary tab (Gmail asks "do this for future messages?", say yes) so the fixes don't land in a folder you never open. And once your avoid-list page is done, reply and tell me the one thing in your report that stung. One line is fine. I read every reply.

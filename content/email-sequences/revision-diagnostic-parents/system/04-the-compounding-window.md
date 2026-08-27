@@ -1,6 +1,6 @@
 # PY4 · The compounding window
 
-Send: Day 11, around 11am UK
+Send: Day 12
 Segment: group "Diag Parents System Route"
 Subject A: every week the machine leaks costs the same hours
 Subject B: the decision on how they study

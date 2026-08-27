@@ -1,0 +1,543 @@
+{
+  "comment": "The email engine's sequence map. Each automation lists its trigger group and ordered steps. Email paths are repo-relative markdown files (the source of truth for copy). Delays are whole days. automation_id is filled in once the skeleton exists in MailerLite. Replaces (where set) names the live v1 automation that must be switched OFF when this one is switched ON.",
+  "sender": {
+    "from": "waleed@alevelaccelerators.com",
+    "from_name": "Dr Waleed Ahmad"
+  },
+  "automations": [
+    {
+      "key": "diag-e0",
+      "name": "V2 · Diagnostic: instant report (E0)",
+      "automation_id": "196991182609319545",
+      "replaces": "Revision Diagnostic: instant report email (E0) · 192802303922669455",
+      "trigger_group_id": "192687508025247162",
+      "trigger_group_name": "Revision Diagnostic",
+      "footer": "You're getting this because you took the free Revision Diagnostic at alevelaccelerators.com.",
+      "steps": [
+        {
+          "email": "content/email-sequences/revision-diagnostic/00-shared-your-report.md"
+        }
+      ]
+    },
+    {
+      "key": "diag-subject",
+      "name": "V2 · Diagnostic: Subject route (14 days)",
+      "automation_id": "196991190026946012",
+      "replaces": "Revision Diagnostic: Subject Accelerator route · 192802636764808949",
+      "trigger_group_id": "192802207993693338",
+      "trigger_group_name": "Diagnostic Route: Subject Accelerator",
+      "footer": "You're getting this because you took the free Revision Diagnostic at alevelaccelerators.com.",
+      "steps": [
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/01-shared-the-call.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/01-marking-like-an-examiner.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/d03-the-25-minute-version.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/02-the-examiners-dictionary.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/d05-when-it-clicks.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/03-taught-to-the-mark-scheme.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/04-questions-and-parents.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/d10-what-the-call-looks-like.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/05-september-is-a-decision.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/d14-where-this-leaves-you.md"
+        }
+      ]
+    },
+    {
+      "key": "diag-system",
+      "name": "V2 · Diagnostic: Study System route (14 days)",
+      "automation_id": "196991200660555058",
+      "replaces": "Revision Diagnostic: Study System route · 192802538796352885",
+      "trigger_group_id": "192802211655321354",
+      "trigger_group_name": "Diagnostic Route: Study System",
+      "footer": "You're getting this because you took the free Revision Diagnostic at alevelaccelerators.com.",
+      "steps": [
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/01-shared-the-call.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/01-the-blurting-protocol.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/d03-ten-minutes-tonight.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/02-the-calendar-that-remembers.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/d05-when-it-clicks.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/03-fewer-decisions.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/04-questions-and-parents.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/d10-what-the-call-looks-like.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/05-the-compounding-window.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/d14-where-this-leaves-you.md"
+        }
+      ]
+    },
+    {
+      "key": "parent-p0",
+      "name": "V2 · Parent diagnostic: instant report (P0)",
+      "automation_id": "196991211076060417",
+      "replaces": "Parent diagnostic: instant report email (P0) · 193104426403103955",
+      "trigger_group_id": "193102828818925394",
+      "trigger_group_name": "Revision Diagnostic Parents",
+      "footer": "You're getting this because you completed the free Revision Diagnostic for your child at alevelaccelerators.com.",
+      "steps": [
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/00-parent-report.md"
+        }
+      ]
+    },
+    {
+      "key": "parent-subject",
+      "name": "V2 · Parent diagnostic: Subject route (14 days)",
+      "automation_id": "196991224512513281",
+      "replaces": "Parent diagnostic: Subject route (PB1 to PB4) · 193104582976472652",
+      "trigger_group_id": "193102829598016991",
+      "trigger_group_name": "Diag Parents Subject Route",
+      "footer": "You're getting this because you completed the free Revision Diagnostic for your child at alevelaccelerators.com.",
+      "steps": [
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/01-shared-the-call.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/01-the-capable-child-problem.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/d03-without-a-row.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/d04-the-evidence.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/02-the-september-window.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/d07-the-maths.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/03-the-questions-parents-ask.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/d10-if-it-doesnt-fit.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/04-september-is-a-decision.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/subject/d14-where-you-landed.md"
+        }
+      ]
+    },
+    {
+      "key": "parent-system",
+      "name": "V2 · Parent diagnostic: System route (14 days)",
+      "automation_id": "196991233763050510",
+      "replaces": "Parent diagnostic: System route (PY1 to PY4) · 193104665931417269",
+      "trigger_group_id": "193102829963970408",
+      "trigger_group_name": "Diag Parents System Route",
+      "footer": "You're getting this because you completed the free Revision Diagnostic for your child at alevelaccelerators.com.",
+      "steps": [
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/01-shared-the-call.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/01-effort-is-not-the-problem.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/d03-what-their-answer-told-you.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/d04-the-evidence.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/02-fixing-the-machine.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/d07-the-maths.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/03-the-questions-parents-ask.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/d10-if-it-doesnt-fit.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/04-the-compounding-window.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/system/d14-where-you-landed.md"
+        }
+      ]
+    },
+    {
+      "key": "tracker",
+      "name": "V2 · Revision Tracker (14 days)",
+      "automation_id": "196991241289729468",
+      "replaces": "Revision Tracker · 187923587532850846",
+      "trigger_group_id": "187183128836573106",
+      "trigger_group_name": "Revision Tracker Users",
+      "footer": "You're getting this because you built a revision week with the free Revision Tracker at alevelaccelerators.com.",
+      "steps": [
+        {
+          "email": "content/email-sequences/revision-tracker/00-your-week-on-paper.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/01-the-first-blurt.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/02-what-the-tracker-cant-see.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/03-rate-it-honestly.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/04-what-students-say.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/05-the-sunday-rebuild.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/06-fewer-decisions.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/07-show-your-parents.md"
+        },
+        {
+          "delay_days": 3
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/08-the-quiet-close.md"
+        }
+      ]
+    },
+    {
+      "key": "parent-guide",
+      "name": "V2 · Parents' Guide (14 days)",
+      "automation_id": "196991321554028288",
+      "replaces": "Parent Leads Nurture Sequence · 188201726456628307",
+      "trigger_group_id": "188021995515937985",
+      "trigger_group_name": "Parent Leads",
+      "footer": "You're getting this because you downloaded the free Parents' Guide at alevelaccelerators.com.",
+      "steps": [
+        {
+          "email": "content/email-sequences/parent-guide/00-the-guide-and-tonights-move.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/parent-guide/01-the-mistake-that-feels-like-helping.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/parent-guide/02-see-it-in-numbers.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/parent-guide/03-why-tutors-alone-rarely-fix-it.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/parent-guide/04-the-forgetting-curve.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/parent-guide/05-what-other-parents-hear.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/parent-guide/06-the-three-paths.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/parent-guide/07-september-money.md"
+        },
+        {
+          "delay_days": 3
+        },
+        {
+          "email": "content/email-sequences/parent-guide/08-door-open.md"
+        }
+      ]
+    },
+    {
+      "key": "sunday-welcome",
+      "name": "V2 · Sunday Session welcome",
+      "automation_id": "196991330637841812",
+      "replaces": "Sunday Session: welcome (SS1) · 193069572102817552 (disabled, never sent)",
+      "trigger_group_id": "192801700892903405",
+      "trigger_group_name": "Sunday Session",
+      "footer": "You're getting this because you signed up to The Sunday Session at alevelaccelerators.com.",
+      "steps": [
+        {
+          "email": "content/email-sequences/sunday-welcome/00-welcome.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/sunday-welcome/01-start-with-the-diagnosis.md"
+        }
+      ]
+    },
+    {
+      "key": "callback",
+      "name": "Callback requested: confirmation + safety net",
+      "automation_id": "196991339355703075",
+      "replaces": null,
+      "trigger_group_id": "196438369449805734",
+      "trigger_group_name": "Callback requested",
+      "footer": "You're getting this because you asked for a callback about your diagnostic report at alevelaccelerators.com.",
+      "steps": [
+        {
+          "email": "content/email-sequences/callback/00-got-your-request.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/callback/01-if-we-keep-missing.md"
+        }
+      ]
+    },
+    {
+      "key": "call-booked",
+      "name": "Call booked: prep + follow-through",
+      "automation_id": "196991342236141214",
+      "replaces": null,
+      "trigger_group_id": "196991165925426849",
+      "trigger_group_name": "Call booked",
+      "footer": "You're getting this because you booked a call with Dr Waleed at alevelaccelerators.com.",
+      "steps": [
+        {
+          "email": "content/email-sequences/call-booked/00-before-the-call.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/call-booked/01-after-or-instead.md"
+        }
+      ]
+    },
+    {
+      "key": "programme-interest",
+      "name": "Programme interest: the full picture (7 days)",
+      "automation_id": "196991345692247303",
+      "replaces": null,
+      "trigger_group_id": "196991167186863124",
+      "trigger_group_name": "Programme interest",
+      "footer": "You're getting this because you asked about the A-Level Accelerators programmes.",
+      "steps": [
+        {
+          "email": "content/email-sequences/programme-interest/00-how-it-works.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/programme-interest/01-week-one.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/programme-interest/02-in-their-words.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/programme-interest/03-the-maths.md"
+        },
+        {
+          "delay_days": 2
+        },
+        {
+          "email": "content/email-sequences/programme-interest/04-the-decision.md"
+        }
+      ]
+    }
+  ]
+}

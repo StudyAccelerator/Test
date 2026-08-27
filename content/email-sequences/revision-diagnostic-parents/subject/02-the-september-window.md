@@ -1,6 +1,6 @@
 # PB2 · The September window, and the honest pitch
 
-Send: Day 5, around 11am UK
+Send: Day 5
 Segment: group "Diag Parents Subject Route"
 Subject A: predicted grades get written in the autumn
 Subject B: the twelve weeks that sit under the UCAS form

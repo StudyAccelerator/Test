@@ -1,6 +1,6 @@
 # Y3 · Fewer decisions (the pitch)
 
-Send: Day 6, around 11am UK
+Send: Day 6
 Segment: diag_route contains "Study System"
 Subject A: you don't need more discipline, {$name}
 Subject B: the system, installed (start free)
@@ -38,7 +38,7 @@ The Study Accelerator, £499. Twelve live sessions and, more importantly, weekly
 
 What do students actually say from inside these sessions? Biju, who joined during a gap year: "All the information provided was clear and understandable. It was really helpful and improved my confidence!" And Delicia, Year 13: "The topics were really hard to approach while researching alone, so seeing it broken down into manageable points was useful."
 
-I won't show you grade statistics because I don't have any yet, and I'd rather tell you that plainly than imply otherwise. First results data arrives in August. Until then you're trusting the method, the teaching, and your own diagnostic, which is exactly the evidence I'd want you to use.
+I won't show you grade statistics because I don't quote numbers I haven't verified, and I'd rather tell you that plainly than imply otherwise. For now you're trusting the method, the teaching, and your own diagnostic, which is exactly the evidence I'd want you to use.
 
 **Who is this programme not for**
 
@@ -46,11 +46,7 @@ If your real problem is one science subject's content, a study system is the wro
 
 [BUTTON: Book a free call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
 
-If the diagnostic was right about you, though, and the leak is how you work, this is the treatment.
-
-Full details of both tiers, if you want them now:
-
-[BUTTON: Top 1% Study Systems -> https://alevelaccelerators.com/study-systems/]
+If the diagnostic was right about you, though, and the leak is how you work, this is the treatment. Full details of both tiers whenever you want them: https://alevelaccelerators.com/study-systems/
 
 Let me know if you have any questions :)
 

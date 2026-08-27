@@ -1,6 +1,6 @@
 # Y1 · The blurting protocol, done properly
 
-Send: Day 1, around 5pm UK
+Send: Day 2
 Segment: diag_route contains "Study System"
 Subject A: the ugliest page you'll write this week (it works)
 Subject B: stop re-reading. Do this instead, {$name}
@@ -30,7 +30,7 @@ Three: stop, open the notes, and mark your own page like an examiner. Everything
 
 Four: the part everyone skips. Close everything again and re-blurt just the second-colour material, from memory, right now. Not tomorrow. The gap between "I saw the correct version" and "I produced the correct version" closes in that second pass or it doesn't close.
 
-Five: keep the page. Date it. You'll re-blurt this topic tomorrow for ten minutes, and again in about four days. I'll show you how to place those returns without willpower in the next email, because there's a trick to it: your calendar does the remembering, not your discipline.
+Five: keep the page. Date it. You'll re-blurt this topic tomorrow for ten minutes, and again in about four days. I'll show you how to place those returns without willpower in a couple of days, because there's a trick to it: your calendar does the remembering, not your discipline.
 
 **The two rules that keep it honest**
 

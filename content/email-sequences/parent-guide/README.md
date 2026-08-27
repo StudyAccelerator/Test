@@ -1,0 +1,3 @@
+# Parents' Guide follow-up sequence
+
+Written 27 August 2026, replacing the May 2026 'Parent Leads Nurture Sequence' copy (which only ever lived inside MailerLite). Nine emails over 14 days on group "Parent Leads" (188021995515937985): instant guide delivery + tonight's question, the helping mistake, the parent diagnostic bridge, the honest tutoring read, the forgetting curve, evidence + free call, the three paths, the September window, and the quiet close. Merge fields: {$name} only (the /parents form captures name and email; there is no child name, so every email says "your child"). The PDF link must stay exactly https://alevelaccelerators.com/ALevel-Accelerators-Parent-Guide.pdf. Cadence, build and switch-on: ../README.md.

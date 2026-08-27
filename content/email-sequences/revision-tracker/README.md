@@ -1,0 +1,3 @@
+# Revision Tracker follow-up sequence
+
+Written 27 August 2026, replacing the May 2026 'Revision Tracker' automation copy (which only ever lived inside MailerLite). Nine emails over 14 days on group "Revision Tracker Users" (187183128836573106): instant delivery + tonight's first session, the Blurt and Fix how-to, the diagnostic bridge, honest ratings, proof + free call, the Sunday rebuild, the fewer-decisions teach, the parents' forward, and the quiet close into The Sunday Session. Merge fields: {$name} and year_group only (the tracker signup captures nothing else, so no diag_* fields in this folder). Cadence, build and switch-on: ../README.md.

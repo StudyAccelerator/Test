@@ -1,6 +1,6 @@
 # B5 · September is a decision
 
-Send: Day 11, around 11am UK
+Send: Day 12
 Segment: diag_route contains "Subject Accelerator"
 Subject A: two versions of your September
 Subject B: the summer bridge plan for {$diag_worry_subject|default('your subject')}

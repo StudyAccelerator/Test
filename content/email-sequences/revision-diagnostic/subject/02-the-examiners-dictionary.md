@@ -1,6 +1,6 @@
 # B2 · The examiner's dictionary
 
-Send: Day 3, around 5pm UK
+Send: Day 4
 Segment: diag_route contains "Subject Accelerator"
 Subject A: mark schemes are a language. Learn it like one
 Subject B: the exact words that earn the marks
