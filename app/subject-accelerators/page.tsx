@@ -4,6 +4,8 @@ import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
 import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
+import { TUTORS } from '@/lib/tutors'
+import { TutorAvatar } from '@/components/tutors/tutor-photo'
 
 export const metadata = {
   title: 'Live 12-Week A-Level Exam Programmes',
@@ -526,6 +528,54 @@ export default function SubjectAccelerators() {
                 </a>
               </div>
             </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Meet your tutors */}
+      <ScrollFade delay={0.2}>
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
+              Meet the people who&apos;ll teach you
+            </h2>
+            <p className="text-center text-brand-text/75 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Each accelerator is taught by a specialist who achieved top grades in the subject
+              themselves, using the method Dr Waleed Ahmad built and teaches across all three.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-6">
+              {TUTORS.map((tutor) => (
+                <a
+                  key={tutor.slug}
+                  href={`/tutors/#${tutor.slug}`}
+                  className="group flex flex-col items-center text-center rounded-2xl bg-brand-cream p-6 ring-1 ring-brand-purple/10 transition-all hover:-translate-y-1 hover:shadow-lg"
+                >
+                  <TutorAvatar tutor={tutor} />
+                  <h3 className="mt-4 font-serif text-xl font-bold text-brand-purple">
+                    {tutor.name}
+                  </h3>
+                  <span
+                    className={`mt-2 rounded-full ${tutor.color.chip} px-3 py-0.5 text-xs font-semibold text-white`}
+                  >
+                    {tutor.subject}
+                  </span>
+                  <p className={`mt-2 text-sm font-semibold ${tutor.color.accent}`}>
+                    {tutor.sessionTime}
+                  </p>
+                  <span className="mt-3 text-sm font-semibold text-brand-purple/70 group-hover:text-brand-purple transition">
+                    Read {tutor.name}&apos;s story →
+                  </span>
+                </a>
+              ))}
+            </div>
+            <p className="text-center mt-8">
+              <a
+                href="/tutors/"
+                className="inline-block px-8 py-3 border-2 border-brand-purple text-brand-purple font-semibold rounded-md hover:bg-brand-purple hover:text-brand-cream transition"
+              >
+                Meet the Full Team
+              </a>
+            </p>
           </div>
         </section>
       </ScrollFade>
