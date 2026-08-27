@@ -141,7 +141,12 @@ export default function DiagnosticApp() {
            rule the quiz itself uses, so follow-up keys like supportDetail
            and the per-subject grade grids cannot make it fire early. Each
            fires once per run, on the transition. */
-        const countAnswered = (a: Answers) => QUESTIONS.filter((q) => isAnswered(q, a)).length
+        /* `a[q.id] !== undefined` first, because isAnswered is vacuously true
+           for the two grade grids before any subject is chosen (an empty
+           list passes .every), which made this counter start at 2 and meant
+           diagnostic_start could never fire. */
+        const countAnswered = (a: Answers) =>
+          QUESTIONS.filter((q) => a[q.id] !== undefined && isAnswered(q, a)).length
         const answeredBefore = countAnswered(prev)
         const answeredNow = countAnswered(next)
         if (answeredBefore === 0 && answeredNow > 0) {
