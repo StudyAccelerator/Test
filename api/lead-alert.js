@@ -108,8 +108,8 @@ module.exports = async function handler(req, res) {
   if (String(f.diag_no_contact) === 'yes') {
     lines.push(
       f.phone
-        ? `DO NOT CALL. They ticked the opt-out. (Number on file, ${esc(f.phone)}, for your records only.)`
-        : 'DO NOT CALL. They ticked the opt-out.'
+        ? `DO NOT CALL. They ticked the opt-out. Text or WhatsApp instead: ${esc(f.phone)}`
+        : 'DO NOT CALL. They ticked the opt-out, and left no number.'
     )
   } else if (f.phone) {
     lines.push(`OK TO CALL: ${esc(f.phone)}${f.diag_call_time ? ` (best time: ${esc(f.diag_call_time)})` : ''}`)
@@ -149,9 +149,13 @@ module.exports = async function handler(req, res) {
   res.status(200).json({ accepted: email })
 
   /* The push goes FIRST and never blocks the email: speed is its whole job. */
+  /* Opt-outs still carry the number (Waleed, 5 September 2026): he texts or
+     WhatsApps those leads instead of ringing them. */
   const callLine =
     String(f.diag_no_contact) === 'yes'
-      ? 'DO NOT CALL (opted out)'
+      ? f.phone
+        ? `OPTED OUT of calls. Text/WhatsApp instead: ${f.phone}`
+        : 'OPTED OUT of calls, no number left'
       : f.phone
         ? `OK TO CALL ${f.phone}${f.diag_call_time ? ` (best: ${f.diag_call_time})` : ''}`
         : 'no phone left'

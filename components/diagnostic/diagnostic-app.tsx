@@ -934,6 +934,9 @@ function EmailGate({
   const [error, setError] = useState<string | null>(null)
   const failCount = useRef(0)
   const isParent = taker === 'parent'
+  /* Their own words from the final question: if they already asked for a
+     custom revision plan, the phone field's pitch quotes that back. */
+  const wantsPlan = (((answers.supportNeeded as string[] | undefined) ?? []).includes('plan'))
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault()
@@ -1138,11 +1141,25 @@ function EmailGate({
                 placeholder="07..."
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
-              <p className="mt-1.5 text-xs text-brand-cream/50 leading-relaxed">
-                {isParent
-                  ? "Dr Waleed will personally ring you and build your child's custom revision plan from these results, usually the same day."
-                  : 'Dr Waleed will personally ring you and build your custom revision plan from these results, usually the same day.'}
-              </p>
+              {/* The sell on the number, made prominent on Waleed's 5 September
+                  instruction: the call IS the free strategy plan, and when their
+                  final answer asked for a custom plan, it says so in their words. */}
+              <div className="mt-2 rounded-xl border-2 border-brand-gold/60 bg-brand-gold/10 px-4 py-3">
+                <p className="text-sm font-bold text-brand-gold leading-snug">
+                  {wantsPlan
+                    ? isParent
+                      ? 'You said your child would benefit from a custom revision plan. This call is where Dr Waleed builds it, free.'
+                      : "You said you'd benefit from a custom revision plan. This call is where Dr Waleed builds it, free."
+                    : isParent
+                      ? 'Dr Waleed will call you to create a free A-level strategy plan for your child.'
+                      : 'Dr Waleed will call you to create your free A-level strategy plan.'}
+                </p>
+                <p className="mt-1 text-xs text-brand-cream/70 leading-relaxed">
+                  {isParent
+                    ? 'Built from these results, usually the same day, to give them a head start in their A-levels.'
+                    : 'Built from these results, usually the same day, to give you a head start in your A-levels.'}
+                </p>
+              </div>
               {/* The call is the default: picking a time is the natural action,
                   declining lives under the button in smaller text. */}
               <fieldset className="mt-3">
