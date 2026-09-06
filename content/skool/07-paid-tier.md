@@ -16,7 +16,7 @@ Opens Monday 21 September, only if the free community passes the activity gate i
 | **Priority: Locked In questions answered first** | | ✓ |
 | Price | £0 | £29 a month founding (first 30, rate locked while subscribed), then £39 a month |
 
-**What Locked In never includes, at any price:** 1:1 calls, personal plan reviews, DM coaching, subject teaching. Those are the Study Accelerator (£499), the Mentorship (£2,000 a year) and the Subject Accelerators. The membership teaches and enforces the system at group scale; the programmes go deeper, and the membership is where members discover they want them.
+**What Locked In never includes, at any price:** 1:1 calls, personal plan reviews, DM coaching, subject teaching. Those are the Study Accelerator (£499), the Mentorship (£300 a month) and the Subject Accelerators. The membership teaches and enforces the system at group scale; the programmes go deeper, and the membership is where members discover they want them.
 
 **The delivery commitments, honestly costed:** one hour live on Wednesday evenings in term time, plus the accountability thread inside the daily 20 minutes you already spend. That is the whole marginal cost. If the rota breaks a Wednesday, the session moves or ships as a recorded teach; the promise is weekly rhythm in term time, not a specific unbreakable hour, and the copy below says so plainly.
 

@@ -403,7 +403,7 @@ export default function Home() {
                     <td className="p-4 font-semibold text-brand-purple w-1/5">Price</td>
                     <td className="p-4 w-1/5"><span className="text-xl font-bold text-brand-gold">£119</span></td>
                     <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-xl font-bold text-brand-gold">£499</span></td>
-                    <td className="p-4 w-3/10"><span className="text-xl font-bold text-brand-gold">£2,000/yr</span></td>
+                    <td className="p-4 w-3/10"><span className="text-xl font-bold text-brand-gold">£300/month</span></td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
                     <td className="p-4 font-semibold text-brand-purple w-1/5">Focus</td>

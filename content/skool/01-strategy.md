@@ -66,7 +66,7 @@ This was your hard requirement, so here is the whole ladder as it will exist, ch
 | Study Series | 4 live teaching sessions | £119 | You |
 | Study Accelerator | 12-week implementation with 1:1 support | £499 | You |
 | Summer / Subject Accelerators | Live subject teaching | £289 to £849 | Tutors |
-| Top 1% Mentorship | Year-round personal mentorship | £2,000 a year | You |
+| Top 1% Mentorship | Year-round personal mentorship | £300 a month | You |
 
 **The guardrails that stop the membership eating your programmes.** The membership never includes, at any price:
 

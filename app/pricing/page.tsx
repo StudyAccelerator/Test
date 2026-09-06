@@ -99,7 +99,7 @@ const ROWS: {
   {
     name: 'Top 1% Study System',
     href: '/study-systems/',
-    price: 'Study Series £119 · Study Accelerator £499 · Top 1% Mentorship £2,000 a year',
+    price: 'Study Series £119 · Study Accelerator £499 · Top 1% Mentorship £300 a month',
     format: 'The method itself: high-yield revision, time management and exam performance, taught live.',
     builtFor: 'Students whose problem is how they study, not one subject',
     cta: 'See the Study System',
