@@ -22,6 +22,16 @@ These are private sales materials. They are never published on the site, linked 
 
 All three decks gained a "The four tiers" slide (Waleed's diagnostic framework: Foundation, Recall, Application, Exam Mastery, with the grade band each tier caps you at), inserted after "The real challenge" in the study-system deck and after "The method" in the other two, so every deck now carries both the diagnosis component and the four tiers. Decks are 10 slides now. The study-system deck's mentorship price moved from £2,000 a year to £300 a month (Waleed's monthly retention pricing ruling, 6 September 2026, recorded in CLAUDE.md). PDFs re-rendered the same day.
 
+## The Canva mirror, current state (6 September 2026)
+
+The three CURRENT Canva decks live in the folder **Sales Call Decks** (https://www.canva.com/folder/FAHUcv7IxyM), re-imported from commit 3297df0 with the tier slide and monthly mentorship pricing, then corrected with the fix recipe below (chips on pages 1 and 10, founder caption, and the study deck's page 3 title re-wrap):
+
+- Top 1% Study System | Sales Call Deck: design DAHUcpeyNrU, edit https://www.canva.com/d/ViX2e-Ch9hhuz8v
+- Subject Accelerators | Sales Call Deck: design DAHUch3u4hs, edit https://www.canva.com/d/QF56sItPeNs1D80
+- Summer Accelerator | Sales Call Deck: design DAHUcsh4yj4, edit https://www.canva.com/d/6ZxgoKaQBkUkflx
+
+Every superseded import (the 24 July corrected trio plus the 17 July duplicates and the PDF test) was moved to the folder "Archive · old deck imports" (FAHUcpZxcZ4), since the connector cannot delete designs. The summer deck still carries the 8 August cohort date throughout; it is out of season and needs a full date-and-offer refresh before summer 2027.
+
 ## The Canva mirror (17 July 2026)
 
 Each deck is imported into Waleed's Canva as an editable presentation (one Canva page per slide) via the Canva connector's `import-design-from-url`, pointed at the deck's `raw.githubusercontent.com` URL on this branch. The repo is public, so those URLs are already reachable; never publish a deck to a file-sharing service to manufacture a URL.
