@@ -37,7 +37,7 @@ The study-system deck is now **11 slides** and is deliberately EVERGREEN: no coh
 
 The three CURRENT Canva decks live in the folder **Sales Call Decks** (https://www.canva.com/folder/FAHUcv7IxyM), re-imported from commit 3297df0 with the tier slide and monthly mentorship pricing, then corrected with the fix recipe below (chips on pages 1 and 10, founder caption, and the study deck's page 3 title re-wrap):
 
-- Top 1% Study System | Sales Call Deck: design DAHUcpeyNrU, edit https://www.canva.com/d/ViX2e-Ch9hhuz8v
+- Top 1% Study System | Sales Call Deck (11 slides, rebuilt): design DAHUcpaXSec, edit https://www.canva.com/d/dUluvmING10d2tv
 - Subject Accelerators | Sales Call Deck: design DAHUch3u4hs, edit https://www.canva.com/d/QF56sItPeNs1D80
 - Summer Accelerator | Sales Call Deck: design DAHUcsh4yj4, edit https://www.canva.com/d/6ZxgoKaQBkUkflx
 
