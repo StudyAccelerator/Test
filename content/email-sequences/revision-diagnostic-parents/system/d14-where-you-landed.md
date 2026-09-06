@@ -16,7 +16,7 @@ This is the last email in this series, so let me be a doctor about it and close 
 
 Two weeks ago the diagnostic named what you'd been sensing: {$diag_child_name|default('your child')}'s effort is real, and the way they revise wastes too much of it. Since then you've had the kitchen-table question and how to read its answer, the method explained, the evidence split into what I can and can't show you, the money done in plain numbers, and the what-ifs answered. Whatever you decide now, you're deciding with the full picture, which is all these emails were for.
 
-From here, I stop writing daily. No drip, no countdown, no "last chance" nonsense. If something genuinely matters to their year, I'll write once, plainly.
+From here, this series ends and you join my regular list: one short, useful email most days. If daily is more than you want, the unsubscribe is at the bottom, no hard feelings. And if something genuinely matters to their year, I'll say it plainly.
 
 One small ask before I go quiet. Reply and tell me where you landed, even in five words. "Going with the Series." "Running the free plan." "Still torn." "Not for us." I read every reply, I don't argue with anyone's decision, and it makes this better for the next family. And if you're still torn, say so. Sometimes one question is all it takes to get unstuck.
 

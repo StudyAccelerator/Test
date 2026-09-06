@@ -18,6 +18,8 @@ You're in. And I think you should know exactly what you've signed up for, so her
 
 There's also a clinic section where I answer one reader's question straight, a high-yield and low-yield pair (one thing worth your hours this week, one thing to stop doing), and occasionally a door to something of mine, always labelled honestly as exactly that.
 
+And on most weekdays there's the daily: one short, useful email, separate from the Session. The Sunday one is the flagship.
+
 And since you shouldn't have to wait until Sunday for the first taste, here's this week's pair now.
 
 **High-yield:** end every revision session with ten minutes of book-closed writing. Whatever you studied, close everything and write down what you remember. If you can't produce it three metres from your notes, you couldn't produce it in an exam hall, and it's better to find that out tonight.

@@ -35,7 +35,7 @@ You don't have that problem any more. You know exactly what your issue is. I'm a
 
 So here's what I want you to do tonight. Do the first ten minutes of your plan. Take a blank page and write down every topic you'd dread seeing in an exam tomorrow. Don't fix anything yet, and don't open a textbook. Just get the list out of your head and onto paper. Once you can actually see the problem, you can fix it.
 
-And here's what's coming. I'll email you every day or so for the first week, because that's when it's easiest to get started, and then I'll space the emails out. Each one is a fix for your specific result, and you can use it the same evening. After two weeks, it drops to one email a week.
+And here's what's coming. I'll email you every day or so for the first week, because that's when it's easiest to get started, and then I'll space the emails out. Each one is a fix for your specific result, and you can use it the same evening. After two weeks this sequence ends, and you'll keep hearing from me most days: one short, useful thing at a time, plus The Sunday Session every Sunday.
 
 You've already done the honest part. Twenty questions, no flattering answers. That's more than most students ever do. Tonight's ten minutes is the next step, and it's the easiest one on the whole plan.
 

@@ -13,7 +13,7 @@ Revised: 28 August 2026 (natural-voice pass; subject simplified)
 
 {$name},
 
-This is the last email in this run, and then I drop to one a week. So let me leave you with the one idea that should drive the timing of whatever you decide.
+This is the last email in this run, and then I settle into my regular rhythm: one short, useful email most days. So let me leave you with the one idea that should drive the timing of whatever you decide.
 
 Your revision method isn't something you fix once and forget. It's either working for you or against you, every single week you study. Your diagnostic estimated the cost at {$diag_low_yield_hours|default('a serious share of your')} hours a week: work that feels productive, and then quietly fades before it's ever worth marks. And that cost doesn't wait for exam season. It's happening now, this week, whichever week you're reading this.
 
@@ -31,7 +31,7 @@ So, plainly, the two doors:
 
 If you're stuck between the two, thirty free minutes with me and I'll tell you which one fits, even when the answer is door two: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
 
-From next week I'm in your inbox once a week: one thing school never taught you, usable that evening. When something from your report starts working, reply and tell me. Those replies are honestly the best part of this job.
+From here I'm in your inbox most days: one thing school never taught you, usable that evening, plus The Sunday Session on Sundays. When something from your report starts working, reply and tell me. Those replies are honestly the best part of this job.
 
 You took a proper look at your own habits weeks before most students will think about theirs at all. Whatever door you take, take it knowing that.
 

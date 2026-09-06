@@ -26,7 +26,7 @@ Your report stays saved here:
 
 [BUTTON: Open the report again -> https://alevelaccelerators.com/revision-diagnostic/]
 
-Over the next few days I'll send you the practical side, one email at a time: what to say to {$diag_child_name|default('your child')}, what the fix actually looks like, and what it costs at every budget, including free. A few emails in the first week while it's fresh, then I'll leave your inbox in peace.
+Over the next few days I'll send you the practical side, one email at a time: what to say to {$diag_child_name|default('your child')}, what the fix actually looks like, and what it costs at every budget, including free. A few emails in the first week while it's fresh, and after that I settle into one short, useful email most days. If it's ever too much, the unsubscribe is at the bottom of every email.
 
 Tonight, just ask the question.
 

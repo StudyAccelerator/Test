@@ -24,7 +24,7 @@ Now, because you're busy and the guide isn't short, let me tell you where to sta
 
 A quick word on who's writing to you. I'm Dr Waleed Ahmad, an NHS foundation doctor, and before medicine I was the A-level student who worked very hard with a method that wasted most of it. I've since worked with over 1,000 A-level students, and the pattern the guide is built on is the one I see constantly: the effort is almost never the problem. The way the effort is being used usually is.
 
-Over the next few days I'll send you the practical layer around the guide, one short email at a time: the mistake that feels like helping, how to see your child's revision in actual numbers, what fixes what. A few emails this first week while it's fresh, then I'll leave your inbox in peace.
+Over the next few days I'll send you the practical layer around the guide, one short email at a time: the mistake that feels like helping, how to see your child's revision in actual numbers, what fixes what. A few emails this first week while it's fresh, and after that I settle into one short, useful email most days. If it's ever too much, the unsubscribe is at the bottom of every email.
 
 Tonight: one question, asked casually.
 

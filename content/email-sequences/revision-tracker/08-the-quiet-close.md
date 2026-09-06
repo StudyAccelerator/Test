@@ -16,7 +16,7 @@ Two weeks ago you built a revision week. This is the last of my daily-ish emails
 
 Here's what you can do now. You've got a week where every hour has a job. You've got a session type for every situation: the Blurt and Fix for rebuilding, Active Recall for keeping things fresh, Spaced Review for the fading topics, the timed paper for exam skills. You've got an honest rating habit and a 15 minute Sunday rebuild that turns each week's evidence into the next week's plan. That's not a collection of tips, that's a system, and two weeks of actually running one is more than most students ever manage.
 
-From here, I'm in your inbox once a week: The Sunday Session, one thing school never taught you, usable that evening. It lands Sunday at 5pm, deliberately right next to your rebuild.
+From here, The Sunday Session lands every Sunday at 5pm, deliberately right next to your rebuild, and most weekdays I send one short, useful email too.
 
 If somewhere in the last two weeks you took my diagnostic too, you know your leak, and you know where the trained version of the fix lives. If you didn't, it stays free and it stays five minutes. And the free 30 minute call keeps existing either way. Nothing expires, and nobody's chasing you.
 

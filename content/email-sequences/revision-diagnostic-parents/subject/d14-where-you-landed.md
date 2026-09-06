@@ -16,7 +16,7 @@ This is the last email in this series, so let me be a doctor about it and close 
 
 Two weeks ago the diagnostic named the thing you'd been sensing: {$diag_child_name|default('your child')} isn't short of effort or ability, they're losing marks in the gap between knowing it and scoring it. Since then you've had the ten minute check, the conversation guide, the evidence laid out honestly, the money done in plain numbers, and the what-ifs answered. Whatever you decide, you're deciding with the full picture, and that's all I ever wanted these emails to do.
 
-From here, I stop writing daily. No drip, no countdown, no "final chance" nonsense. When something genuinely matters, a cohort date, something new and free that fits their profile, I'll write once, plainly.
+From here, this series ends and you join my regular list: one short, useful email most days. If daily is more than you want, the unsubscribe is at the bottom, no hard feelings. And when something genuinely matters to their year, like a cohort date, I'll say it plainly.
 
 One small ask before I go quiet. Reply and tell me where you landed, even in five words. "Enrolled." "Running the free version." "Still torn." "Decided against it." I read every reply, I don't argue with anyone's decision, and it genuinely helps me do this better for the next family. And if you're still torn, say so. Sometimes one question is all it takes to get unstuck.
 

@@ -13,7 +13,7 @@ Revised: 28 August 2026 (natural-voice pass; subject line simplified, season-pro
 
 {$name},
 
-This is the last email in this run, and then it's one a week from me. Since your programme starts on a fixed date rather than tomorrow, I want to leave you with two things: the plan for the time in between, and the honest case for deciding early rather than at the last minute.
+This is the last email in this run, and then I settle into my regular rhythm: one short, useful email most days. Since your programme starts on a fixed date rather than tomorrow, I want to leave you with two things: the plan for the time in between, and the honest case for deciding early rather than at the last minute.
 
 **The bridge plan for {$diag_worry_subject|default('your priority subject')}**
 
@@ -47,7 +47,7 @@ Or if you'd rather talk it through first, thirty free minutes: https://scheduler
 
 **Either way**
 
-From next week, one email a week: one thing school never taught you, usable that evening. Reply whenever something lands, or whenever your letters surprise you. I read every one.
+From here, most days bring one thing school never taught you, usable that evening, plus The Sunday Session on Sundays. Reply whenever something lands, or whenever your letters surprise you. I read every one.
 
 You came into this feeling that {$diag_worry_subject|default('one subject')} was costing you more than it should. Now you have a diagnosis, a drill, a dictionary, and a plan that runs to September. That's more exam skills training than most students get in two years. The next move is yours, and honestly, {$name}, you're in a much better position to make it than you were two weeks ago.
 

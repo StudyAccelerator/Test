@@ -13,7 +13,7 @@ Revised: 28 August 2026 (natural-voice pass; subject simplified)
 
 {$name},
 
-Last one on this from me, then back to the occasional email.
+Last one on this from me, then this series ends and you're back to my regular emails.
 
 The only time-bound fact: the cohort starts Sunday 13th September and runs across the exact weeks when {$diag_child_name|default('your child')}'s teachers form the impressions that become predicted grades. Year 13 only has one autumn, and that's the calendar talking, not me.
 

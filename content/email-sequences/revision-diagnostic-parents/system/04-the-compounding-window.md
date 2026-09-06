@@ -13,7 +13,7 @@ Revised: 28 August 2026 (natural-voice pass; subject simplified)
 
 {$name},
 
-Last email in this series, then just the occasional one.
+Last email in this series, then you're back to my regular emails.
 
 The reason to decide this now rather than at mocks is simple: a fixed method pays off every week it runs. Topics stick instead of fading, the returns get quicker, and confidence feeds effort. Fix it this month and {$diag_child_name|default('your child')} gets every remaining week of that. Wait for the mock results shock in November and the same fix has half the time left and twice the panic attached.
 

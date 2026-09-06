@@ -18,9 +18,9 @@ You can sit a timed section under real conditions and mark it the way an examine
 
 That's more exam skills training than most students get in two years. It's all free, it all works, and none of it needs me any more.
 
-From here, it's one email a week: one thing school never taught you, usable that evening. No daily emails, no countdown timers. If something genuinely time-bound comes up, like a cohort date, I'll tell you plainly, once.
+From here you'll keep hearing from me most days: one short, useful thing at a time, plus The Sunday Session on Sundays. No countdown timers, and if something genuinely time-bound comes up, like a cohort date, I'll tell you plainly.
 
-One last thing before the weekly rhythm starts. Reply to this email with your letters, even a rough version. "Mostly W, some T, two K" is plenty. I'll write back with what I'd do next, in one paragraph. Free, no strings, and honestly, those are my favourite replies to get, because it means you're actually running the drill.
+One last thing before this run ends. Reply to this email with your letters, even a rough version. "Mostly W, some T, two K" is plenty. I'll write back with what I'd do next, in one paragraph. Free, no strings, and honestly, those are my favourite replies to get, because it means you're actually running the drill.
 
 And if the W count stays stubborn and you want it trained properly, the September programme and the free call are both exactly where I said they'd be. No chasing from me. The door just stays open.
 

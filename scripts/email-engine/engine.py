@@ -110,7 +110,8 @@ def parse_email(path):
         sys.exit(f'{path}: no "Subject A" in header')
     if not preheader:
         sys.exit(f'{path}: no "Preheader" in header')
-    return {'path': path, 'subject': subject, 'preheader': preheader, 'body': body.strip()}
+    return {'path': path, 'subject': subject, 'preheader': preheader, 'body': body.strip(),
+            'no_signature': (field('Signature') or '').lower() == 'none'}
 
 
 # ---------------------------------------------------------------- rendering
@@ -173,9 +174,10 @@ def swap_signature(paras):
 def render_email(meta, footer):
     body = meta['body']
     paras = [para_html(b) for b in re.split(r'\n\s*\n', body) if b.strip()]
-    paras, swapped = swap_signature(paras)
-    if not swapped:
-        paras.append(PHOTO_SIG)
+    if not meta.get('no_signature'):
+        paras, swapped = swap_signature(paras)
+        if not swapped:
+            paras.append(PHOTO_SIG)
     pre = html.escape(meta['preheader'])
     return f"""<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">{pre}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;"><tr><td align="center">
@@ -352,6 +354,44 @@ def cmd_verify(target_key):
     sys.exit(1 if failures else 0)
 
 
+def cmd_campaigns(dirpath, live):
+    """Create the broadcast emails in a folder's manifest as DRAFT campaigns.
+    Nothing is scheduled or sent; each campaign waits in MailerLite as a draft."""
+    d = pathlib.Path(dirpath)
+    if not d.is_absolute():
+        d = ROOT / d
+    man = json.loads((d / 'manifest.json').read_text())
+    key = api_key()
+    created = []
+    for c in man['campaigns']:
+        meta = parse_email(str(d.relative_to(ROOT) / c['file']))
+        aud = c['audience']
+        footer = man['footers'][aud]
+        h = render_email(meta, footer)
+        p = render_plain(meta, footer)
+        print(f"{c['key']:>4}  {c['name'][:52]:<54} {meta['subject'][:44]}")
+        if not live:
+            continue
+        body = {
+            'name': c['name'],
+            'type': 'regular',
+            'groups': man['audiences'][aud],
+            'emails': [{
+                'subject': meta['subject'],
+                'from': 'waleed@alevelaccelerators.com',
+                'from_name': 'Dr Waleed Ahmad',
+                'content': h,
+            }],
+        }
+        out = api('campaigns', 'POST', body, key)
+        cid = out['data']['id']
+        created.append((c['key'], cid))
+        print(f"      -> draft campaign {cid}")
+        time.sleep(0.7)
+    if live:
+        print(f"\ncreated {len(created)} draft campaigns (send hints are in the manifest; schedule on approval)")
+
+
 if __name__ == '__main__':
     args = sys.argv[1:]
     if not args:
@@ -365,5 +405,7 @@ if __name__ == '__main__':
         cmd_load(args[1] if len(args) > 1 else 'all', '--live' in args)
     elif cmd == 'verify':
         cmd_verify(args[1] if len(args) > 1 and not args[1].startswith('-') else 'all')
+    elif cmd == 'campaigns':
+        cmd_campaigns(args[1], '--live' in args)
     else:
         sys.exit(__doc__)

@@ -1,0 +1,189 @@
+{
+  "comment": "September 2026 launch arc, RESCHEDULED 6 Sept (approval landed later than planned): re-engagement + parents catch-up go out Sunday 6 Sept; the promo week (d06 to d13, p1 to p3) runs 7 to 13 Sept exactly as dated; the four deposit dailies (d01 to d04) become the first post-cohort week, 14 to 17 Sept, and d05 is held. All 19 exist in MailerLite as DRAFT campaigns; nothing sends until each is scheduled. Campaign NAMES still carry the original planning dates; match by key/title, not name-date.",
+  "audiences": {
+    "students": [
+      "179596195547580232",
+      "185843873480705989",
+      "184392744125334599",
+      "179320609561380062",
+      "185844353497826496",
+      "186350189379847805",
+      "186744403779388652",
+      "192687508025247162",
+      "187183128836573106",
+      "192801700892903405",
+      "181017936836691101",
+      "181018180338058259"
+    ],
+    "parents": [
+      "193102828818925394",
+      "188021995515937985"
+    ],
+    "parents-guide-only": [
+      "188021995515937985"
+    ],
+    "parents-diagnostic-only": [
+      "193102828818925394"
+    ]
+  },
+  "footers": {
+    "students": "You're getting this because you signed up at alevelaccelerators.com (the diagnostic, the tracker, a workshop or the newsletter).",
+    "parents": "You're getting this because you signed up for the free parents' resources at alevelaccelerators.com.",
+    "parents-guide-only": "You're getting this because you downloaded the free Parents' Guide at alevelaccelerators.com.",
+    "parents-diagnostic-only": "You're getting this because you completed the free Revision Diagnostic for your child at alevelaccelerators.com."
+  },
+  "campaigns": [
+    {
+      "key": "r1",
+      "name": "Daily 2026-09-01 · R1 nine words (students)",
+      "file": "r1-nine-words-students.md",
+      "audience": "students",
+      "send_hint": "Sun 6 Sep 17:00 (TODAY: send first)",
+      "campaign_id": "197808137897510628"
+    },
+    {
+      "key": "r2",
+      "name": "Daily 2026-09-01 · R2 nine words (guide parents)",
+      "file": "r2-nine-words-parents.md",
+      "audience": "parents-guide-only",
+      "send_hint": "Sun 6 Sep 20:00 (TODAY)",
+      "campaign_id": "197808141014926438"
+    },
+    {
+      "key": "c1",
+      "name": "Daily 2026-09-01 · C1 parents catch-up",
+      "file": "c1-parents-catch-up.md",
+      "audience": "parents-diagnostic-only",
+      "send_hint": "Sun 6 Sep 20:00 (TODAY: the overdue parents email)",
+      "campaign_id": "197808144191063612"
+    },
+    {
+      "key": "d01",
+      "name": "Daily 2026-09-02 · never taught",
+      "file": "d01-never-taught.md",
+      "audience": "students",
+      "send_hint": "Mon 14 Sep 17:00 (post-arc daily)",
+      "campaign_id": "197808147373492222"
+    },
+    {
+      "key": "d02",
+      "name": "Daily 2026-09-03 · the perfect timetable",
+      "file": "d02-the-perfect-timetable.md",
+      "audience": "students",
+      "send_hint": "Tue 15 Sep 17:00 (post-arc daily)",
+      "campaign_id": "197808150509783033"
+    },
+    {
+      "key": "d03",
+      "name": "Daily 2026-09-04 · worst way to revise",
+      "file": "d03-worst-way.md",
+      "audience": "students",
+      "send_hint": "Wed 16 Sep 17:00 (post-arc daily)",
+      "campaign_id": "197808153768756881"
+    },
+    {
+      "key": "d04",
+      "name": "Daily 2026-09-05 · the 80/20 sort",
+      "file": "d04-eighty-twenty.md",
+      "audience": "students",
+      "send_hint": "Thu 17 Sep 17:00 (post-arc daily)",
+      "campaign_id": "197808156994176354"
+    },
+    {
+      "key": "d05",
+      "name": "Daily 2026-09-06 · Sunday: the September window",
+      "file": "d05-sunday-september-window.md",
+      "audience": "students",
+      "send_hint": "HOLD: written for Sun 6 pre-promo; superseded by compressed timing, reuse the teach later",
+      "campaign_id": "197808160105301990"
+    },
+    {
+      "key": "d06",
+      "name": "Promo 2026-09-07 · the programme, plainly",
+      "file": "d06-promo-open.md",
+      "audience": "students",
+      "send_hint": "Mon 7 Sep 17:00",
+      "campaign_id": "197808163316041194"
+    },
+    {
+      "key": "d07",
+      "name": "Promo 2026-09-08 · better marks without more hours",
+      "file": "d07-without.md",
+      "audience": "students",
+      "send_hint": "Tue 8 Sep 17:00",
+      "campaign_id": "197808166465963963"
+    },
+    {
+      "key": "p1",
+      "name": "Promo 2026-09-08 · parents: the programme, plainly",
+      "file": "p1-parent-promo-open.md",
+      "audience": "parents",
+      "send_hint": "Tue 8 Sep 20:00",
+      "campaign_id": "197808169751151870"
+    },
+    {
+      "key": "d08",
+      "name": "Promo 2026-09-09 · the evidence, honestly",
+      "file": "d08-results.md",
+      "audience": "students",
+      "send_hint": "Wed 9 Sep 17:00",
+      "campaign_id": "197808172966085758"
+    },
+    {
+      "key": "d09",
+      "name": "Promo 2026-09-10 · the examiner drill (Miyagi)",
+      "file": "d09-miyagi-drill.md",
+      "audience": "students",
+      "send_hint": "Thu 10 Sep 17:00",
+      "campaign_id": "197808176113911369"
+    },
+    {
+      "key": "d10",
+      "name": "Promo 2026-09-11 · questions?",
+      "file": "d10-questions.md",
+      "audience": "students",
+      "send_hint": "Fri 11 Sep 17:00",
+      "campaign_id": "197808179280611207"
+    },
+    {
+      "key": "d11",
+      "name": "Promo 2026-09-12 · FAQ (starts tomorrow)",
+      "file": "d11-faq.md",
+      "audience": "students",
+      "send_hint": "Sat 12 Sep 17:00",
+      "campaign_id": "197808182430533042"
+    },
+    {
+      "key": "p2",
+      "name": "Promo 2026-09-12 · parents: deciding by tomorrow",
+      "file": "p2-parent-decision-eve.md",
+      "audience": "parents",
+      "send_hint": "Sat 12 Sep 20:00",
+      "campaign_id": "197808185687409897"
+    },
+    {
+      "key": "d12",
+      "name": "Promo 2026-09-13 · starts this morning",
+      "file": "d12-starts-today.md",
+      "audience": "students",
+      "send_hint": "Sun 13 Sep 08:00",
+      "campaign_id": "197808188915975846"
+    },
+    {
+      "key": "p3",
+      "name": "Promo 2026-09-13 · parents: starts this morning",
+      "file": "p3-parent-final.md",
+      "audience": "parents",
+      "send_hint": "Sun 13 Sep 09:00",
+      "campaign_id": "197808192215843868"
+    },
+    {
+      "key": "d13",
+      "name": "Promo 2026-09-13 · the last word (evening)",
+      "file": "d13-final-evening.md",
+      "audience": "students",
+      "send_hint": "Sun 13 Sep 19:00",
+      "campaign_id": "197808195495790178"
+    }
+  ]
+}

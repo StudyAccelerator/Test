@@ -18,9 +18,9 @@ You can find out what's really in your head with one messy page. You know the tw
 
 That's the complete system. It's free, it works, and it doesn't need me any more. What it needs now is three honest weeks, because week three is where systems either stick or fall apart.
 
-From here, it's one email a week: one thing school never taught you, usable that evening. No daily emails, no guilt. If something genuinely time-bound comes up, I'll say it plainly, once.
+From here you'll keep hearing from me most days: one short, useful thing at a time, plus The Sunday Session on Sundays. No guilt, and if something genuinely time-bound comes up, I'll say it plainly.
 
-One last thing before the weekly rhythm starts. Reply to this email with one word: the part of the system that's working, or the part that's wobbling. "Returns" or "phone" or "started, then stopped" is plenty. I'll write back with the one change I'd make. Free, no strings, and those replies are honestly the best part of my week.
+One last thing before this run ends. Reply to this email with one word: the part of the system that's working, or the part that's wobbling. "Returns" or "phone" or "started, then stopped" is plenty. I'll write back with the one change I'd make. Free, no strings, and those replies are honestly the best part of my week.
 
 And if you already know that follow-through is the hard part for you, and you want the structure held in place while it becomes automatic, the Study System and the free call are both exactly where I said they'd be. No chasing from me. The door just stays open.
 
