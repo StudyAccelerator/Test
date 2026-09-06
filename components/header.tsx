@@ -19,10 +19,10 @@ const FREE_TOOL_LINKS = [
 ]
 
 const MORE_LINKS = [
+  ['/about/', 'About'],
   ['/results/', 'Results'],
   ['/blog/', 'Blog'],
   ['/faqs/', 'FAQs'],
-  ['/about/', 'About'],
 ]
 
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
@@ -85,7 +85,7 @@ export default function Header() {
       }}
       className="text-brand-purple py-0 sticky top-0 z-50 shadow-md border-b-4 border-brand-gold transition-colors duration-300"
     >
-      <div className="max-w-7xl mx-auto px-4 md:px-8 flex justify-between items-center h-16 lg:h-32">
+      <div className="max-w-[88rem] mx-auto px-4 md:px-6 flex justify-between items-center h-16 lg:h-32">
         <a href="/" className="flex items-center lg:h-80 lg:-my-32">
           <Image
             src="/logo-mark.png"
@@ -108,7 +108,7 @@ export default function Header() {
           />
         </a>
         {/* Desktop nav */}
-        <nav className="hidden lg:flex items-center gap-5 text-[15px] xl:gap-6 xl:text-base">
+        <nav className="hidden lg:flex items-center gap-4 text-[15px] whitespace-nowrap xl:gap-6 xl:text-base">
           {PROGRAMME_LINKS.map(([href, label]) => (
             <a key={href} href={href} className="text-brand-purple hover:text-brand-gold font-semibold transition">
               {label}

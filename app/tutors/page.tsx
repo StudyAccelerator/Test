@@ -2,8 +2,7 @@ import Image from 'next/image'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
-import { TUTORS } from '@/lib/tutors'
-import { TutorPortrait } from '@/components/tutors/tutor-photo'
+import { TUTORS, type Tutor } from '@/lib/tutors'
 import { WALL_QUOTES } from '@/lib/testimonials'
 
 export const metadata = {
@@ -19,20 +18,80 @@ export const metadata = {
 
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
 const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/50'
+const CARD =
+  'rounded-2xl bg-white shadow-[0_1px_2px_rgba(46,37,87,0.06),0_8px_24px_rgba(46,37,87,0.08)] ring-1 ring-brand-purple/5'
 
 /* One real feedback-form quote per teaching subject, pulled from the shared
-   testimonial list so the words stay identical everywhere they appear. */
-const TEAM_QUOTES = WALL_QUOTES.filter((q) =>
-  ['Maahil', 'Naysa', 'Rayanna'].includes(q.name)
-)
+   testimonial list so the words stay identical everywhere they appear.
+   Swap in tutor-specific quotes here when Waleed collects them. */
+const TEAM_QUOTES = WALL_QUOTES.filter((q) => ['Maahil', 'Naysa', 'Rayanna'].includes(q.name))
+
+/* The reveal panel: always visible on small screens (no hover on touch),
+   revealed on hover or keyboard focus from md up. */
+const REVEAL =
+  'overflow-hidden transition-all duration-300 md:max-h-0 md:opacity-0 md:group-hover:max-h-80 md:group-hover:opacity-100 md:group-focus-within:max-h-80 md:group-focus-within:opacity-100'
+
+function CircleAvatar({ tutor }: { tutor: Tutor }) {
+  if (tutor.photo) {
+    return (
+      <Image
+        src={tutor.photo}
+        alt={`${tutor.name}, A-Level ${tutor.subject} tutor`}
+        width={320}
+        height={320}
+        unoptimized
+        className="h-32 w-32 rounded-full object-cover shadow-lg ring-4 ring-white"
+      />
+    )
+  }
+  return (
+    <span
+      aria-hidden="true"
+      className={`flex h-32 w-32 items-center justify-center rounded-full ${tutor.color.chip} font-serif text-5xl font-bold text-white shadow-lg ring-4 ring-white`}
+    >
+      {tutor.name.charAt(0)}
+    </span>
+  )
+}
+
+function TutorCircleCard({ tutor }: { tutor: Tutor }) {
+  return (
+    <div
+      tabIndex={0}
+      className="group relative flex flex-col items-center rounded-3xl p-6 text-center outline-none transition duration-300 hover:bg-white hover:shadow-[0_1px_2px_rgba(46,37,87,0.06),0_8px_24px_rgba(46,37,87,0.10)] focus-visible:ring-2 focus-visible:ring-brand-gold"
+    >
+      <CircleAvatar tutor={tutor} />
+      <p className="mt-4 font-serif text-xl font-bold text-brand-purple">{tutor.name}</p>
+      <span
+        className={`mt-2 rounded-full ${tutor.color.chip} px-3 py-1 text-xs font-semibold text-white`}
+      >
+        {tutor.subject}
+      </span>
+      <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple/50">
+        {tutor.sessionTime}
+      </p>
+      <div className={REVEAL}>
+        <div className="mt-4 space-y-3 text-left text-sm leading-relaxed text-brand-text/80">
+          {tutor.about.map((p) => (
+            <p key={p.slice(0, 24)}>{p}</p>
+          ))}
+          <p className="text-brand-text/60">{tutor.studying}</p>
+          <p className={`border-l-2 pl-3 italic ${tutor.color.accent} border-current`}>
+            {tutor.waleedOn}
+          </p>
+        </div>
+      </div>
+    </div>
+  )
+}
 
 export default function MeetTheTeam() {
   return (
     <main>
       <Header />
 
-      {/* Hero */}
-      <section className="relative overflow-hidden bg-brand-cream px-6 pb-14 pt-16 text-center md:pb-16 md:pt-24">
+      {/* ── Hero ─────────────────────────────────────────────────────────── */}
+      <section className="relative overflow-hidden bg-brand-cream px-6 pb-10 pt-16 text-center md:pb-12 md:pt-24">
         <div
           aria-hidden="true"
           className="pointer-events-none absolute -top-40 left-1/2 h-[24rem] w-[40rem] max-w-full -translate-x-1/2 rounded-full bg-brand-gold/10 blur-3xl"
@@ -40,193 +99,89 @@ export default function MeetTheTeam() {
         <div className="relative mx-auto max-w-3xl">
           <p className={EYEBROW}>Meet the team</p>
           <h1 className="mt-4 font-serif text-4xl font-bold leading-[1.1] tracking-tight text-brand-purple sm:text-5xl md:text-6xl">
-            Taught by people who&apos;ve been top of the subject themselves
+            Taught by people who&apos;ve been{' '}
+            <span className="italic text-brand-gold">top of the subject</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-brand-text/75 md:text-xl">
-            Every A-Level Accelerators subject is taught by a specialist who achieved top grades in
-            it and now teaches it every week. And behind all of them sits one method, built by a
-            doctor who used it to get there first.
+            Every subject is taught by a specialist who achieved top grades in it themselves, all
+            teaching one method. Hover over anyone to read more about them.
           </p>
         </div>
       </section>
 
-      {/* Waleed: founder band */}
+      {/* ── The team ─────────────────────────────────────────────────────── */}
       <ScrollFade>
-        <section className="px-5 py-12">
-          <div className="mx-auto max-w-5xl overflow-hidden rounded-3xl bg-brand-purple">
-            <div className="grid items-stretch md:grid-cols-[2fr,3fr]">
-              <div className="relative min-h-[20rem] md:min-h-0">
-                <Image
-                  src="/photos/waleed-scrubs-portrait.jpg"
-                  alt="Dr Waleed Ahmad, founder of A-Level Accelerators"
-                  fill
-                  className="object-cover object-top"
-                  unoptimized
-                />
-              </div>
-              <div className="p-8 sm:p-10 md:p-12">
-                <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-cream/50">
-                  Founder · Teaches the Study System
-                </p>
-                <h2 className="mt-3 font-serif text-3xl font-bold text-brand-gold sm:text-4xl">
-                  Dr Waleed Ahmad, MBBS
-                </h2>
-                <p className="mt-5 leading-relaxed text-brand-cream/90">
-                  I&apos;m an NHS doctor and a former top-performing A-level student. Over 6 years
-                  I&apos;ve worked with more than 1,000 students, and everything we teach comes from
-                  one idea: top grades are a system, not a talent.
-                </p>
-                <p className="mt-4 leading-relaxed text-brand-cream/90">
-                  I built the method behind every programme, and I teach the Study System myself:
-                  the exam technique, revision strategy and 1:1 coaching side of the business. The
-                  subject teaching belongs to three specialists I trust completely, and you can meet
-                  them below.
-                </p>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  <span className="rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-1.5 text-sm font-semibold text-brand-gold">
-                    The Study System
-                  </span>
-                  <span className="rounded-full border border-brand-cream/20 px-4 py-1.5 text-sm text-brand-cream/80">
-                    Exam technique &amp; strategy
-                  </span>
-                  <span className="rounded-full border border-brand-cream/20 px-4 py-1.5 text-sm text-brand-cream/80">
-                    1,000+ students over 6 years
-                  </span>
+        <section className="px-6 pb-16 pt-6 md:pb-20">
+          <div className="mx-auto grid max-w-6xl items-start gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {/* Waleed */}
+            <div
+              tabIndex={0}
+              className="group relative flex flex-col items-center rounded-3xl p-6 text-center outline-none transition duration-300 hover:bg-white hover:shadow-[0_1px_2px_rgba(46,37,87,0.06),0_8px_24px_rgba(46,37,87,0.10)] focus-visible:ring-2 focus-visible:ring-brand-gold"
+            >
+              <Image
+                src="/photos/waleed-portrait-wide.jpg"
+                alt="Dr Waleed Ahmad, founder of A-Level Accelerators"
+                width={320}
+                height={320}
+                unoptimized
+                className="h-32 w-32 rounded-full object-cover object-top shadow-lg ring-4 ring-white"
+              />
+              <p className="mt-4 font-serif text-xl font-bold text-brand-purple">
+                Dr Waleed Ahmad
+              </p>
+              <span className="mt-2 rounded-full bg-brand-purple px-3 py-1 text-xs font-semibold text-white">
+                Founder
+              </span>
+              <p className="mt-2 font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple/50">
+                Teaches the Study System
+              </p>
+              <div className={REVEAL}>
+                <div className="mt-4 space-y-3 text-left text-sm leading-relaxed text-brand-text/80">
+                  <p>
+                    NHS doctor, former top-performing A-level student, and the person the method
+                    started with. I&apos;ve worked with over 1,000 students across 6 years, and I
+                    teach the Study System sessions myself.
+                  </p>
+                  <p className="text-brand-text/60">MBBS · NHS Foundation Doctor</p>
                 </div>
-                <a
-                  href="/study-systems/"
-                  className="mt-7 inline-block rounded-md bg-brand-gold px-6 py-3 font-semibold text-brand-purple transition hover:bg-brand-gold-light"
-                >
-                  See the Study System
-                </a>
               </div>
             </div>
+            {TUTORS.map((t) => (
+              <TutorCircleCard key={t.slug} tutor={t} />
+            ))}
           </div>
+          <p className="mt-8 text-center text-brand-text/70">
+            The story behind the method is on the{' '}
+            <a
+              href="/about/"
+              className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold"
+            >
+              About page
+            </a>
+            .
+          </p>
         </section>
       </ScrollFade>
 
-      {/* The three tutors */}
-      <section className="bg-white px-5 py-14">
-        <div className="mx-auto max-w-5xl">
-          <ScrollFade>
-            <div className="mx-auto max-w-2xl text-center">
-              <p className={EYEBROW}>The subject specialists</p>
-              <h2 className="mt-3 font-serif text-3xl font-bold text-brand-purple sm:text-4xl">
-                Specialists teach the subject. A doctor teaches the exam.
-              </h2>
-              <p className="mt-4 leading-relaxed text-brand-text/75">
-                Three tutors, three subjects, one method. Each of them knows their spec inside out,
-                achieved top grades themselves and teaches the same way every session: exam
-                questions first, mark schemes always.
-              </p>
-            </div>
-          </ScrollFade>
-
-          <div className="mt-12 space-y-12">
-            {TUTORS.map((tutor, idx) => (
-              <ScrollFade key={tutor.slug}>
-                <article
-                  id={tutor.slug}
-                  className="overflow-hidden rounded-3xl bg-brand-cream ring-1 ring-brand-purple/10"
-                >
-                  <div
-                    className={`grid items-stretch md:grid-cols-[2fr,3fr] ${
-                      idx % 2 === 1 ? 'md:[direction:rtl]' : ''
-                    }`}
-                  >
-                    <div className="p-6 md:p-8 [direction:ltr]">
-                      <div className="h-72 md:h-full md:min-h-[24rem]">
-                        <TutorPortrait tutor={tutor} />
-                      </div>
-                    </div>
-                    <div className="px-6 pb-8 md:py-8 md:pr-10 [direction:ltr]">
-                      <div className="flex flex-wrap items-center gap-3">
-                        <span
-                          className={`rounded-full ${tutor.color.chip} px-3 py-1 text-sm font-semibold text-white`}
-                        >
-                          {tutor.subject}
-                        </span>
-                        <span className={`text-sm font-semibold ${tutor.color.accent}`}>
-                          {tutor.sessionTime}
-                        </span>
-                      </div>
-                      <h3 className="mt-3 font-serif text-3xl font-bold text-brand-purple">
-                        {tutor.name}
-                      </h3>
-                      <p className="mt-1 font-semibold text-brand-text/60">{tutor.headline}</p>
-
-                      {tutor.about.map((para) => (
-                        <p key={para} className="mt-4 leading-relaxed text-brand-text/80">
-                          {para}
-                        </p>
-                      ))}
-
-                      <p className="mt-5 text-sm">
-                        <span className="font-mono text-[10px] uppercase tracking-[0.2em] text-brand-purple/50">
-                          Currently studying
-                        </span>
-                        <span className="mt-1 block font-semibold text-brand-purple">
-                          {tutor.studying}
-                        </span>
-                      </p>
-
-                      <h4 className="mt-6 font-serif text-lg font-bold text-brand-purple">
-                        How {tutor.name} gets students to A*s
-                      </h4>
-                      <ul className="mt-3 space-y-2 text-brand-text/80">
-                        {tutor.aStar.map((point) => (
-                          <li key={point} className="flex items-start gap-3">
-                            <span className={`font-bold ${tutor.color.accent}`}>✓</span>
-                            <span>{point}</span>
-                          </li>
-                        ))}
-                      </ul>
-
-                      <figure className="mt-6 rounded-xl border-l-4 border-brand-gold bg-white p-5 shadow-sm">
-                        <blockquote className="italic leading-relaxed text-brand-text/80">
-                          &ldquo;{tutor.waleedOn}&rdquo;
-                        </blockquote>
-                        <figcaption className="mt-3 text-sm font-semibold text-brand-purple">
-                          Dr Waleed Ahmad · Founder
-                        </figcaption>
-                      </figure>
-
-                      <a
-                        href="/subject-accelerators/#subjects"
-                        className={`mt-6 inline-block rounded-md ${tutor.color.chip} px-6 py-3 font-semibold text-white transition hover:opacity-90`}
-                      >
-                        Join the {tutor.subject} Accelerator
-                      </a>
-                    </div>
-                  </div>
-                </article>
-              </ScrollFade>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Real student quotes */}
+      {/* ── What students say ────────────────────────────────────────────── */}
       <ScrollFade>
-        <section className="bg-brand-light-gray px-5 py-14">
-          <div className="mx-auto max-w-4xl">
-            <h2 className="text-center font-serif text-3xl font-bold text-brand-purple">
-              Straight from the feedback forms
-            </h2>
-            <p className="mx-auto mt-3 max-w-xl text-center leading-relaxed text-brand-text/70">
-              Real, unedited feedback from students in the live sessions.
-            </p>
-            <div className="mt-8 grid gap-4 sm:grid-cols-3">
+        <section className="bg-brand-cream px-6 py-16 md:py-20">
+          <div className="mx-auto max-w-6xl">
+            <div className="text-center">
+              <p className={EYEBROW}>From the feedback forms</p>
+              <h2 className="mt-4 font-serif text-3xl leading-tight tracking-tight text-brand-purple md:text-4xl">
+                What our students <span className="italic text-brand-gold">say about the teaching</span>
+              </h2>
+            </div>
+            <div className="mt-10 grid gap-6 md:grid-cols-3">
               {TEAM_QUOTES.map((q) => (
-                <figure
-                  key={q.name}
-                  className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10"
-                >
+                <figure key={q.name} className={`${CARD} p-6`}>
                   <blockquote className="leading-relaxed text-brand-text/80">
                     &ldquo;{q.quote}&rdquo;
                   </blockquote>
-                  <figcaption className="mt-3 text-sm font-semibold text-brand-purple">
-                    {q.name} · {q.role}
+                  <figcaption className="mt-4 font-semibold text-brand-purple">
+                    {q.name}
+                    <span className="block text-sm font-normal text-brand-text/60">{q.role}</span>
                   </figcaption>
                 </figure>
               ))}
@@ -235,30 +190,29 @@ export default function MeetTheTeam() {
         </section>
       </ScrollFade>
 
-      {/* Final CTA */}
+      {/* ── CTA ──────────────────────────────────────────────────────────── */}
       <ScrollFade>
-        <section className="px-5 pb-20 pt-14 text-center">
+        <section className="px-6 py-16 text-center md:py-20">
           <div className="mx-auto max-w-2xl">
-            <h2 className="font-serif text-3xl font-bold text-brand-purple sm:text-4xl">
-              Want to know which of us you need?
+            <h2 className="font-serif text-3xl leading-tight tracking-tight text-brand-purple md:text-4xl">
+              Come and meet us properly
             </h2>
-            <p className="mx-auto mt-4 max-w-xl leading-relaxed text-brand-text/75">
-              Take the free Revision Diagnostic: 20 questions that show where your marks are
-              leaking and which programme fixes it. Or book a free call and talk it through with me
-              directly.
+            <p className="mt-4 leading-relaxed text-brand-text/75">
+              The quickest way to see how we teach is to experience it. Book a free 30 minute call
+              with Dr Waleed, or start with the free Revision Diagnostic.
             </p>
-            <div className="mt-7 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="/revision-diagnostic/"
-                className="inline-block rounded-md bg-brand-gold px-8 py-3 font-semibold text-brand-purple transition hover:bg-brand-gold-light"
-              >
-                Take the Free Diagnostic
-              </a>
+            <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href={BOOK_A_CALL_LINK}
-                className="inline-block rounded-md border-2 border-brand-purple px-8 py-3 font-semibold text-brand-purple transition hover:bg-brand-purple hover:text-brand-cream"
+                className="w-full rounded-full bg-brand-purple px-8 py-3 font-semibold text-white transition hover:opacity-90 sm:w-auto"
               >
-                Book a Free Call
+                Book a free call
+              </a>
+              <a
+                href="/revision-diagnostic/"
+                className="w-full rounded-full border-2 border-brand-purple px-8 py-3 font-semibold text-brand-purple transition hover:bg-brand-purple hover:text-white sm:w-auto"
+              >
+                Take the free diagnostic
               </a>
             </div>
           </div>

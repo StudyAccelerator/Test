@@ -58,20 +58,20 @@ const GRADE_JOURNEYS = [
 
 const RESULTS_FAQS = [
   {
-    q: 'Where does the 96% figure come from?',
-    a: "From 6 years of teaching A-level students, over 1,000 of them, from one-to-one tutoring through to today's live programmes. Of the students we followed through to university offers, 96% got into their first choice. I keep the records behind that number, and I'm happy to talk through how it's measured on a call.",
+    q: "How quickly will my child's grades improve?",
+    a: "Most students feel the difference within the first couple of weeks, because they stop wasting hours on revision that doesn't move the needle. On average, our students improve by 2 grades across about 3 months, and the ones who apply the system fully often go further.",
   },
   {
-    q: 'What does a 2-grade improvement actually mean?',
-    a: "It means a student who came in working at a D finishing at a B, or a C moving to an A, measured from their working grade when they joined to their result about 3 months later. It's the average across students, not a promise: some move one grade, some move three, and the ones who do the work move furthest.",
+    q: 'Do you offer a guarantee?',
+    a: "Yes. Every programme comes with a satisfaction guarantee: join a session, and if you're not completely satisfied, you get your money back. No questions asked.",
   },
   {
-    q: 'Do you guarantee grades?',
-    a: "No, and you should be careful with anyone who does. What I can show you is the method, the numbers above, and the students talking in their own words. The pattern is consistent: students who follow the system and do the work see their grades move.",
+    q: 'Which subjects do you cover?',
+    a: 'Our live programmes cover A-level Biology, Chemistry and Maths, taught by specialists in each subject. The Study System works across every A-level subject, because it trains how your child revises and performs in exams, not just what they know.',
   },
   {
-    q: 'Are these real students?',
-    a: 'Yes. Every quote on this page is from a real student, in their words, from our feedback forms and recorded calls. The video testimonials are from students in our 2026 cohort who gave permission for their videos to be used.',
+    q: 'How do we get started?',
+    a: "Start with the free Revision Diagnostic, which shows exactly where your child's marks are leaking, or book a free 30 minute call with Dr Waleed and he'll map out the right route for your child.",
   },
 ]
 
@@ -124,9 +124,9 @@ export default function ResultsPage() {
             <span className="italic text-brand-gold">first-choice university</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-brand-text/75 md:text-xl">
-            Measured across 6 years and more than 1,000 A-level students, from one-to-one tutoring
-            to today&apos;s live programmes. This page is the evidence: the numbers, the grade
-            journeys, and the students in their own words.
+            That&apos;s across 6 years and more than 1,000 A-level students, from one-to-one
+            tutoring to today&apos;s live programmes. Here are the numbers, the grade jumps, and
+            the students in their own words. Your child can be next.
           </p>
         </div>
       </section>
@@ -155,27 +155,22 @@ export default function ResultsPage() {
       <ScrollFade>
         <section className="px-6 py-16 md:py-20">
           <div className="mx-auto max-w-3xl text-center">
-            <p className={EYEBROW}>Straight answers</p>
+            <p className={EYEBROW}>What the numbers mean</p>
             <h2 className="mt-4 font-serif text-3xl leading-tight tracking-tight text-brand-purple md:text-4xl">
-              Where these numbers <span className="italic text-brand-gold">come from</span>
+              What a 2-grade jump <span className="italic text-brand-gold">actually looks like</span>
             </h2>
             <div className="mt-6 space-y-4 text-left leading-relaxed text-brand-text/80">
               <p>
-                I&apos;m a doctor, so I&apos;ll tell you exactly how these are measured, because a
-                number without its method is just marketing. The 96% covers the students I&apos;ve
-                taught across 6 years, one-to-one and through our programmes, whose university
-                outcomes we followed to results day: 96 in every 100 got their first choice.
+                So what does a 2-grade improvement mean in real life? It&apos;s the student who
+                joined us working at a D and sat their exam at a B. It&apos;s the C that became an
+                A. That&apos;s the average jump we see across about 3 months, and plenty of
+                students go further.
               </p>
               <p>
-                The 2-grade improvement is the average movement from a student&apos;s working grade
-                when they join to their grade about 3 months later. Some students move one grade.
-                Plenty move more. The 2026 cohort that finished this spring is measured in exactly
-                the same way, and their stories are below.
-              </p>
-              <p>
-                No cherry-picked screenshots, no invented reviews, and no guarantees, because
-                honest teaching doesn&apos;t come with one. If you want to see the workings, ask me
-                on a call and I&apos;ll walk you through them.
+                And those jumps are what the 96% is built on. Better working grades turn the
+                predicted grades around, the predicted grades bring the offers, and results day
+                confirms them. It&apos;s not luck, and it&apos;s not talent. It&apos;s a system,
+                applied properly, by students who&apos;d been told for years to just work harder.
               </p>
             </div>
           </div>
@@ -187,13 +182,13 @@ export default function ResultsPage() {
         <section className="bg-brand-cream px-6 py-16 md:py-20">
           <div className="mx-auto max-w-6xl">
             <div className="text-center">
-              <p className={EYEBROW}>The 2026 cohort</p>
+              <p className={EYEBROW}>Success stories</p>
               <h2 className="mt-4 font-serif text-3xl leading-tight tracking-tight text-brand-purple md:text-4xl">
-                Three students, <span className="italic text-brand-gold">three jumps</span>
+                Our students, <span className="italic text-brand-gold">in their own words</span>
               </h2>
               <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-brand-text/75">
-                These three students from our current cohort agreed to share their results and
-                their stories, on camera and in their own words.
+                Here are a few from our latest cohort, sharing what changed and where their grades
+                went, on camera and in their own words.
               </p>
             </div>
             <div className="mt-10 grid gap-6 md:grid-cols-3">
@@ -245,9 +240,9 @@ export default function ResultsPage() {
         <section className="px-6 py-16 md:py-20">
           <div className="mx-auto max-w-3xl">
             <div className="text-center">
-              <p className={EYEBROW}>Fair questions</p>
+              <p className={EYEBROW}>Questions</p>
               <h2 className="mt-4 font-serif text-3xl leading-tight tracking-tight text-brand-purple md:text-4xl">
-                Asked by every careful parent
+                What parents ask us
               </h2>
             </div>
             <div className="mt-10 space-y-4">

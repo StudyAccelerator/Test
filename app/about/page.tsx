@@ -74,9 +74,9 @@ export default function AboutPage() {
             <span className="italic text-brand-gold whitespace-nowrap">teaches A-levels</span>
           </h1>
           <p className="mx-auto mt-6 max-w-2xl text-lg leading-relaxed text-brand-text/75 md:text-xl">
-            A-Level Accelerators exists because of one near miss. Mine. This page is the honest
-            story of where the method came from, who teaches it, and what it has done for the
-            1,000+ students who came after me.
+            I started A-Level Accelerators because of what nearly happened to me during my own
+            A-levels. So this page is the story: where the method came from, who teaches it now,
+            and what it&apos;s done for the 1,000+ students since.
           </p>
         </div>
       </section>
@@ -130,11 +130,11 @@ export default function AboutPage() {
                   after mock, the marks didn&apos;t match the effort, and nobody could tell me why.
                 </p>
                 <p>
-                  I got into medicine, but only because I threw hundreds of extra hours at a method
-                  that wasted most of them. That&apos;s the near miss this company is built on. I
-                  was one bad exam week away from a different life, and I didn&apos;t find out what
-                  I&apos;d been doing wrong until medical school forced me to learn properly:
-                  active recall, spaced repetition, working backwards from the mark scheme.
+                  I got into medicine, but honestly, only because I threw hundreds of extra hours
+                  at a method that wasted most of them. I was one bad exam week away from a
+                  completely different life. And I didn&apos;t find out what I&apos;d been doing
+                  wrong until medical school, where I finally learned to study properly: active
+                  recall, spaced repetition, working backwards from the mark scheme.
                 </p>
                 <p>
                   So I started teaching A-level students in my spare time, first one to one, then
@@ -172,8 +172,8 @@ export default function AboutPage() {
               ))}
             </div>
             <p className="mx-auto mt-8 max-w-2xl text-sm leading-relaxed text-white/60">
-              Measured across 6 years of tutoring and programmes. The full picture, and the
-              students behind it, is on the results page.
+              These numbers come from 6 years of teaching, from one-to-one tutoring to
+              today&apos;s live programmes.
             </p>
             <a
               href="/results/"
@@ -194,9 +194,10 @@ export default function AboutPage() {
               Diagnose first. <span className="italic text-brand-gold">Then treat.</span>
             </h2>
             <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-brand-text/75">
-              It&apos;s the same rule I follow on the ward. You don&apos;t start treatment before
-              you know what&apos;s wrong, and you don&apos;t fix grades by piling on more hours of
-              the same revision.
+              I use this analogy all the time, because it applies really well. As a doctor,
+              before I can prescribe anything, I need to diagnose the patient first. You need to
+              figure out where the issue actually lies in order to fix it. And grades work exactly
+              the same way.
             </p>
             <div className="mt-10 grid gap-6 text-left md:grid-cols-3">
               {[
@@ -266,9 +267,9 @@ export default function AboutPage() {
               Start where every student starts
             </h2>
             <p className="mt-4 leading-relaxed text-brand-text/75">
-              Take the free Revision Diagnostic to see where the marks are leaking, or book a free
-              30 minute call and talk it through with me directly. No pitch, just an honest read of
-              what&apos;s going wrong and what to do about it.
+              Take the free Revision Diagnostic to see exactly where the marks are leaking, or
+              book a free 30 minute call and I&apos;ll tell you what I&apos;d do in your
+              child&apos;s position, step by step.
             </p>
             <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
