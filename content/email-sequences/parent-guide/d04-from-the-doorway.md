@@ -6,6 +6,7 @@ Subject B: the signs it's working (you can see them without hovering)
 Preheader: Five things you can spot from outside the room, without a single question asked.
 Goal: give the parent an observation checklist that needs no interrogation. Pure value. No links.
 Links: 0
+Revised: 6 September 2026 (Waleed's style pass: PS added)
 
 ---
 
@@ -30,3 +31,5 @@ Tonight: just look, and say nothing. Knowing what you're looking at changes the 
 Best wishes,
 
 Waleed
+
+PS: The Instagram-worthy notes one gets me every time. Mine at 17 were beautiful, and they taught me almost nothing! If that's your child too, reply and tell me, it's the most common thing I hear.

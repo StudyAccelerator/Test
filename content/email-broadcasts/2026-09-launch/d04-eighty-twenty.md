@@ -7,10 +7,11 @@ Subject B: high-yield and low-yield: sort your hours once
 Preheader: The 80/20 rule applied to your study week, and the three question sort that fixes it.
 Goal: 80/20 email. Teach the WHAT (which activities are high-yield), soft-gate the HOW. One CTA: the call.
 Links: 1 (call scheduler)
+Revised: 6 September 2026 (Waleed's style pass: "no cost, no pitch" replaced with reward framing and the ask in return)
 
 ---
 
-{$name},
+Hi {$name},
 
 There's a rule that shows up everywhere once you know to look for it: 80 percent of the results come from 20 percent of the effort. Economists found it in wealth, businesses find it in customers, and I see it every single week in revision.
 
@@ -22,7 +23,7 @@ So this week, do the sort. Take your last full week of revision and put every ho
 
 Top students don't do more. They do things better. They spend the same hours, usually fewer to be honest, on the small set of activities that actually move the needle.
 
-Now, sorting the hours is the WHAT, and you can do it yourself tonight with two columns on a page. Rebuilding your week around the high-yield 20 percent, for your subjects, your leak and your real timetable, is the part where a second pair of eyes helps. That's exactly what my free 30 minute calls are for: we look at your week together and you leave with a plan for the next fortnight. No cost, no pitch.
+Now, sorting the hours is the WHAT, and you can do it yourself tonight with two columns on a page. Rebuilding your week around the high-yield 20 percent, for your subjects, your leak and your real timetable, is the part where a second pair of eyes helps. So here's a reward for anyone who actually does the sort: I keep a few free 30 minute calls each week for students keen to improve their grades. We look at your two columns together and you leave with a strategy plan for the next fortnight. All I ask in return is that you keep me updated on how it goes :)
 
 [BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
 

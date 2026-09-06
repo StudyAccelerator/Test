@@ -11,7 +11,7 @@ The daily broadcast only works if it's actually daily, and the book's biggest wa
 4. The email-type rotation (paradigm shift, story, worst way, best way without, 80/20, Miyagi, results, value, lifestyle, FAQ), pick the type that fits the idea, and don't repeat a type two days running.
 5. Waleed's life: hospital shifts, teaching moments, his own A-level memories. Personal stories are deposits; the notes-app habit (jot anything mildly interesting) feeds this.
 
-**Rules per email:** one idea, one primary CTA at the end, a PS that may sell something else from the wheel, curiosity + benefit subject line, natural voice (28 Aug standard), compliance scan before load, no invented numbers, links to site pages or the call scheduler only (never Stripe).
+**Rules per email:** one idea, one primary CTA at the end, a PS on EVERY email that restates the action with some of Waleed's real life in it, curiosity + benefit subject line, Waleed's email style per `.claude/skills/content-studio/references/email-style-waleed.md` (the 6 Sept standard, built from his own edits: "Hi {$name}", joined sentences, rewards not offers, "keen to improve their grades", an ask in return instead of a disclaimer, zero defensive lines), proof in his order (two-grade average, testimonial, satisfaction guarantee; never the retired confidence stat, never "we don't promise grades"), compliance scan before load, no invented numbers, links to site pages or the call scheduler only (never Stripe).
 
 **Metrics that matter** (the book's set): opens above 30 percent, clicks, replies, sales. Unsubscribes are not a steering metric; a rising spam rate is. If opens sag, fix subject lines and Promotions-tab formatting before touching cadence.
 

@@ -354,15 +354,20 @@ def cmd_verify(target_key):
     sys.exit(1 if failures else 0)
 
 
-def cmd_campaigns(dirpath, live):
+def cmd_campaigns(dirpath, live, update=False):
     """Create the broadcast emails in a folder's manifest as DRAFT campaigns.
-    Nothing is scheduled or sent; each campaign waits in MailerLite as a draft."""
+    Nothing is scheduled or sent; each campaign waits in MailerLite as a draft.
+    With --update, entries that already carry a campaign_id are rewritten in
+    place (PUT /campaigns/{id}: same body as create), so copy edits in the repo
+    reach the existing drafts without duplicating them. Only drafts can be
+    updated; a campaign that has already been sent is skipped with a note."""
     d = pathlib.Path(dirpath)
     if not d.is_absolute():
         d = ROOT / d
-    man = json.loads((d / 'manifest.json').read_text())
+    man_path = d / 'manifest.json'
+    man = json.loads(man_path.read_text())
     key = api_key()
-    created = []
+    created, updated = [], []
     for c in man['campaigns']:
         meta = parse_email(str(d.relative_to(ROOT) / c['file']))
         aud = c['audience']
@@ -383,13 +388,30 @@ def cmd_campaigns(dirpath, live):
                 'content': h,
             }],
         }
-        out = api('campaigns', 'POST', body, key)
-        cid = out['data']['id']
-        created.append((c['key'], cid))
-        print(f"      -> draft campaign {cid}")
+        cid = c.get('campaign_id')
+        if cid:
+            if not update:
+                print(f"      = already exists as campaign {cid} (pass --update to rewrite it)")
+                continue
+            current = api(f'campaigns/{cid}', 'GET', None, key)['data']
+            if current.get('status') != 'draft':
+                print(f"      ! campaign {cid} is {current.get('status')}, not a draft; left alone")
+                continue
+            api(f'campaigns/{cid}', 'PUT', body, key)
+            updated.append((c['key'], cid))
+            print(f"      -> updated draft campaign {cid}")
+        else:
+            out = api('campaigns', 'POST', body, key)
+            cid = out['data']['id']
+            c['campaign_id'] = cid
+            created.append((c['key'], cid))
+            print(f"      -> draft campaign {cid}")
         time.sleep(0.7)
     if live:
-        print(f"\ncreated {len(created)} draft campaigns (send hints are in the manifest; schedule on approval)")
+        if created:
+            man_path.write_text(json.dumps(man, indent=1, ensure_ascii=False) + '\n')
+        print(f"\ncreated {len(created)}, updated {len(updated)} draft campaigns "
+              f"(send hints are in the manifest; schedule on approval)")
 
 
 if __name__ == '__main__':
@@ -406,6 +428,6 @@ if __name__ == '__main__':
     elif cmd == 'verify':
         cmd_verify(args[1] if len(args) > 1 and not args[1].startswith('-') else 'all')
     elif cmd == 'campaigns':
-        cmd_campaigns(args[1], '--live' in args)
+        cmd_campaigns(args[1], '--live' in args, '--update' in args)
     else:
         sys.exit(__doc__)

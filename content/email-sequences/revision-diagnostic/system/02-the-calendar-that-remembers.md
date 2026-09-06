@@ -7,11 +7,11 @@ Subject B: why you keep re-learning the same topics
 Preheader: The day 1, day 2, day 5 rhythm that stops topics fading, and the 45 minute session that beats your marathon.
 Goal: teach spacing, the re-learning loop cost, session design and the phone protocol. Value only, one soft seed.
 Links: 1 (tracker)
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 Quick test. Think of a topic you revised about three weeks ago. Not one you use all the time, one you covered once and moved on from. How much of it could you write down right now, book closed?
 
@@ -25,11 +25,11 @@ Day 1: learn or rebuild the topic properly. That's the blurting protocol from my
 
 Day 2: ten minutes. Re-blurt the topic from memory, check it, fill the gaps. Only ten minutes, because the memory is still fresh. Miss this window and the day 5 session becomes a rescue job instead of a top-up.
 
-Day 5 (day 4 to 6 all work): ten more minutes. Re-blurt again. By now it comes out faster and the page fills up more, and honestly, it's really satisfying when you notice that happening.
+Day 5 (day 4 to 6 all work): ten more minutes. Re-blurt again. By now it comes out faster and the page fills up more, and honestly it's really satisfying when you notice that happening.
 
 After that, the topic only needs the occasional Sunday retest through your error log. So the total extra cost per topic is about twenty minutes, and what you save is the entire re-learning loop.
 
-Now the important part, the part your diagnostic actually flagged. This rhythm dies if it lives in your head. "I'll come back to it in a few days" almost never happens, because new content always feels more urgent than old content. The fix is simple: the moment you finish a topic, write the two return dates into your plan, like appointments. Your calendar does the remembering. All you have to do is show up to appointments that already exist. Fewer decisions, not more willpower. That one principle is most of what separates top students from hard-working ones, and everything I teach is built on it.
+Now the important part, the part your diagnostic actually flagged. This rhythm dies if it lives in your head. "I'll come back to it in a few days" almost never happens, because new content always feels more urgent than old content. The fix is simple: the moment you finish a topic, write the two return dates into your plan, like appointments. Your calendar does the remembering, and all you have to do is show up to appointments that already exist. Fewer decisions, not more willpower. That one principle is most of what separates top students from hard-working ones, and everything I teach is built on it.
 
 **And while we're at it: the session itself**
 
@@ -39,8 +39,10 @@ If you want the returns and the sessions planned for you around your real week, 
 
 Tonight's homework is small: take the topic you blurted after my last email, and book its day 5 return into your plan right now. One line in a calendar. That single habit, repeated, is the difference between a memory that leaks and one that builds.
 
-In a couple of days, I'll show you what it looks like when the whole thing, the retrieval, the spacing, the decision-removal, gets set up as one system with other people keeping you to it. There's a free way in, and I'll give it to you first.
+In a couple of days I'll show you what it looks like when the whole thing, the retrieval, the spacing and the decision-removal, gets set up as one system with other people keeping you to it.
 
 Keep going!
 
 Waleed
+
+PS: Doctors sit exams for the rest of our careers, and this rhythm is still exactly how I'd revise for one haha. It doesn't stop working just because you've left school.

@@ -6,6 +6,7 @@ Subject B: what happens when, and what each moment needs
 Preheader: The five moments of the year that matter, so nothing ambushes your family.
 Goal: the calendar value email. Map the year's real decision points so the parent is never surprised. Deposit; no hard CTA.
 Links: 0 (reply in PS)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
@@ -23,7 +24,7 @@ Schools are oddly bad at telling parents the shape of the year in advance, so ev
 
 **April to June: exam season.** By now the work is mostly done or it isn't, and the marginal gains move to sleep, routine and exam technique. What it needs from you: food, calm and lifts. Truly, by this point, the parenting job is logistics and steadiness.
 
-The pattern worth noticing: every one of these moments goes better if the fix happened in the autumn, and gets harder to influence as the year runs on. That's not a sales line, it's just the calendar, and now you've seen the whole of it at once.
+The pattern worth noticing: every one of these moments goes better if the fix happened in the autumn, and gets harder to influence as the year runs on. That's just the calendar, and now you've seen the whole of it at once.
 
 Stick this email somewhere you can find it in November.
 
@@ -31,4 +32,4 @@ Best wishes,
 
 Waleed
 
-PS: If one of these five moments is already looming for your family and you're not sure the plan is ready for it, reply and tell me which one. I'll tell you what I'd do in the time you've got.
+PS: If one of these five moments is already looming for your family and you're not sure the plan is ready for it, reply and tell me which one. I'll tell you what I'd do in the time you've got!

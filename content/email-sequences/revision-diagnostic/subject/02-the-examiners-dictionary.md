@@ -7,17 +7,17 @@ Subject B: the exact words that earn the marks
 Preheader: How to build your examiner's dictionary, decode command words, and stop losing marks you deserved.
 Goal: teach mark scheme language study and command word decoding. Value only, one soft seed.
 Links: 0
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass: defensive limit paragraph replaced with a confident seed)
 
 ---
 
-{$name},
+Hi {$name},
 
 Did you run the drill? If so, you've now seen your letters: K, R, W, T. And if your log looks like most students with your diagnostic result, the biggest pile is W: you knew it, you wrote it, and you worded it wrong.
 
-So today, the fix for W. It starts with an idea that changed how I revised for every exam I've sat since:
+So today, the fix for W. It starts with an idea that changed how I revised for every exam I've sat since.
 
-A mark scheme isn't an answer sheet. It's more like a dictionary for a language you're being tested in. You think in your own words, but the examiner can only give marks for theirs. Every W in your log is a sentence you translated badly, and the fix is the same as any language: learn the vocabulary properly.
+A mark scheme isn't really an answer sheet. It's more like a dictionary for a language you're being tested in. You think in your own words, but the examiner can only give marks for theirs. So every W in your log is a sentence you translated badly, and the fix is the same as any language: learn the vocabulary properly.
 
 Here's how you do that in {$diag_worry_subject|default('your subject')}.
 
@@ -29,7 +29,7 @@ Write the phrases that keep appearing into the back pages of your error log, sor
 
 **Two: learn it actively, like vocab**
 
-Just reading the list does nothing. So treat it like language learning: cover the phrase, produce it from memory, say it out loud. Saying it out loud matters more than you'd think. Phrases you've actually said come back under pressure in a way phrases you've only read never do. Two minutes at the start of each session in that subject. That's the whole habit.
+Just reading the list does nothing, so treat it like language learning: cover the phrase, produce it from memory, say it out loud. Saying it out loud matters more than you'd think, because phrases you've actually said come back under pressure in a way phrases you've only read never do. Two minutes at the start of each session in that subject. That's the whole habit.
 
 **Three: decode the command words**
 
@@ -41,12 +41,14 @@ So before you write a single word of any answer, name the command word and say w
 
 **Four: close the loop**
 
-From now on, every W in your error log gets two lines instead of one: your wording, and theirs, side by side. Reading your own sentence next to the version that gets the mark is uncomfortable, but it's really useful discomfort. The gap between the two lines is usually tiny. A missing "because", a vague verb. You were one phrase away from the mark, again and again. That's not a knowledge problem, and now you can see it isn't.
+From now on, every W in your error log gets two lines instead of one: your wording, and theirs, side by side. Reading your own sentence next to the version that gets the mark is a bit uncomfortable, but it's really useful discomfort. The gap between the two lines is usually tiny. A missing "because", a vague verb. You were one phrase away from the mark, again and again, and now you can see it.
 
-I'll be honest about the limit of doing this alone, because your report deserves honesty. When you mark your own work, you'll sometimes give yourself the benefit of the doubt, and the benefit of the doubt is exactly what the real examiner doesn't give. There's a version of this training where a specialist reads your actual answers, in real time, and tells you exactly which phrase would have earned the mark, week after week until it becomes automatic. That's what our live subject programmes are for, and I'll lay that out properly in a couple of days, including the honest costs and who shouldn't bother.
+There's a trained version of all this too, where a specialist reads your actual answers, live, and tells you exactly which phrase would have earned the mark, week after week until it becomes automatic. That's what our Subject Accelerator sessions are, and I'll tell you properly about them in a couple of days.
 
 This week: build page one of your dictionary. Three mark schemes, ten minutes each, phrases in the back of the log. Then reply and tell me the most surprising phrase your board keeps rewarding. I collect these.
 
 Keep going!
 
 Waleed
+
+PS: My personal favourite is still biology's "complementary". I lost more marks to that one word at 17 than I'd like to admit haha.

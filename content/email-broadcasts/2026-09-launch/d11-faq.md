@@ -7,10 +7,11 @@ Subject B: everything people asked about Sunday's cohort
 Preheader: The real questions from this week, answered straight, the day before it starts.
 Goal: the FAQ email on deadline eve. Bold questions, plain answers, link after each block (FAQ emails are the one exception to the one-link rule, per the playbook). Add real reader questions from D10 replies before sending.
 Links: 4 (subject page after each answer block)
+Revised: 6 September 2026 (Waleed's style pass: "rather you ran that than stretched" and "I'll be straight about it" lines out, guarantee named, PS added)
 
 ---
 
-{$name},
+Hi {$name},
 
 The cohort starts tomorrow morning, so here are the questions people have asked this week, answered straight. Scan for yours.
 
@@ -28,7 +29,7 @@ https://alevelaccelerators.com/subject-accelerators/
 
 **"What if it turns out not to be right for me?"**
 
-The first session is risk-free. If it isn't valuable, full refund, no questions asked. That's in writing on the page. One real session tells you more than another week of deciding.
+That's what the satisfaction guarantee is for. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked. That's in writing on the page. One real session tells you more than another week of deciding.
 
 **"Will it clash with school or sport?"**
 
@@ -36,11 +37,11 @@ It's built not to. Maths Saturdays 1pm to 3pm, Biology Sundays 10am to 12pm, Che
 
 **"Is £339 actually worth it?"**
 
-It's less than seven hours of average £50-an-hour tutoring, spread across twelve weeks of specialist coaching in the exact skill that decides your marks. Two subjects £629, three £849. And if the honest answer for your budget is no, the drill from Thursday's email is free and it works. I'd rather you ran that than stretched.
+It's less than seven hours of average £50-an-hour tutoring, spread across twelve weeks of specialist coaching in the exact skill that decides your marks. Two subjects £629, three £849. And the guarantee covers the first session, so you're deciding on evidence, not on hope.
 
 **"My problem might be how I study, not one subject. Should I still join?"**
 
-Maybe not, and I'll be straight about it: if your diagnostic pointed at method rather than exam skills, the Study System is the right first fix, not this. Reply if you're unsure and I'll tell you honestly which one fits.
+If your diagnostic pointed at method rather than exam skills, the Study System is the right first fix, not this. Reply if you're unsure and I'll tell you which one fits you.
 
 Tomorrow morning the first sessions run. If you're in, book tonight and be there:
 
@@ -49,3 +50,5 @@ Tomorrow morning the first sessions run. If you're in, book tonight and be there
 Keep going!
 
 Waleed
+
+PS: If your question isn't here, reply tonight and I'll answer it before the morning. If I'm on shift I'll be checking between patients haha.

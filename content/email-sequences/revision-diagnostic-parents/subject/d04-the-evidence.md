@@ -1,29 +1,33 @@
-# PB1c · The evidence I can and can't show you
+# PB1c · What other families found
 
 Send: Day 4
-Subject A: the evidence I can and can't show you
-Subject B: what other families found
-Preheader: Real quotes, one measured number, and the claims I refuse to make.
-Goal: proof email in the honesty-first register. Quotes, the confidence number, the tutors' record, and the call as the single CTA.
+Subject A: what other families found
+Subject B: what students say from inside the sessions
+Preheader: The grades, the guarantee, the people who teach, and real quotes.
+Goal: proof email in the confident register. The two-grade average, the tutors' record, quotes, the guarantee, and the call as the single CTA.
 Links: 0 (reply is the action)
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass: "can and can't show you" framing replaced with plain positive proof)
 
 ---
 
-{$name},
+Hi {$name},
 
-Before you decide anything about {$diag_child_name|default('your child')}'s revision, you deserve to know what evidence sits behind my recommendations. So here it is, split honestly into what I can show you and what I can't.
+Before you decide anything about {$diag_child_name|default('your child')}'s revision, I'd like you to know what sits behind my recommendations, because you should be weighing this up on real evidence.
 
-**What I can show you.** Students inside our live subject programmes rate their confidence in each topic before and after every session. Across the recent 12 week Biology and Chemistry programmes, the average moved from 6.2 out of 10 to 8.3, over 74 responses. Confidence isn't a grade, and I won't dress it up as one. But it's measured rather than invented, and it moves, session after session.
+**The results.** On average, our students jump two grades. That's the gap between where they start with us and where they finish, and for a profile like {$diag_child_name|default('your child')}'s, where the knowledge is mostly there already, it's the most trainable gap in A-levels.
 
-On the teaching itself: our subject specialists achieved top grades in the subject they teach, and have helped hundreds of students do the same. And in students' own words. Naysa, biology: "The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content." Ahreen, chemistry: "Well structured and informative walkthroughs, with lots of hard questions and worked solutions."
+**Who teaches.** Our subject specialists achieved top grades in the subject they teach, and have helped hundreds of students do the same. Every session is built on real exam questions and the official mark schemes, which is exactly the layer the diagnostic found missing for {$diag_child_name|default('your child')}.
 
-**What I can't show you, yet.** Grade statistics for my own programmes. I won't quote a results number I haven't verified, full stop. And if a tutoring company ever promises your child a grade, I'd treat that the way you'd want me to: as a reason to walk away. I hold myself to the same rule, which is why you'll never see a promise like that from me.
+**What students say.** Naysa, biology: "The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content." Ahreen, chemistry: "Well structured and informative walkthroughs, with lots of hard questions and worked solutions." Maahil, chemistry: "We go straight into exam practice instead of spending ages on content, and it works."
 
-**Why I'm telling you this now.** Because tomorrow's email lays out the programme itself, and later this week I'll do the money properly. I'd rather you weighed all of it against evidence you've seen laid out honestly, not against marketing.
+**The guarantee.** Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
-And if you'd rather just talk it through, that's my standing offer: a free half hour where we look at {$diag_child_name|default('your child')}'s report together and I give you a straight recommendation, including "keep your money" when that's the truth. Reply to this email with a couple of days that suit you and we'll find a time.
+**Why I'm telling you this now.** Tomorrow's email lays out the programme itself, and later this week I'll do the money properly, so I wanted you to have the evidence first.
+
+And if you'd rather just talk it through, that's my standing offer: a free half hour where we look at {$diag_child_name|default('your child')}'s report together and you leave with a strategy plan for the next two weeks. I'm confident we can help with this. Reply to this email with a couple of days that suit you and we'll find a time.
 
 Best wishes,
 
 Waleed
+
+PS: I'm a full time doctor, so please bear with me if I'm on-call the week you reply! Give me a few days that work and I'll definitely make some time.

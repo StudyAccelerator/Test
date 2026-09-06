@@ -6,11 +6,11 @@ Subject B: reading the reply to the book-closed question
 Preheader: The four answers students give, what each one means, and the next move for each.
 Goal: follow up the PY1 dinner question with an interpretation guide. Pure value, builds the diagnostic habit. No pitch.
 Links: 0
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 Yesterday I gave you a question to ask {$diag_child_name|default('your child')}: "when you revise something, how do you check it actually stuck?"
 
@@ -26,6 +26,10 @@ If you asked it, you got one of four answers. Here's what each one means, becaus
 
 Whichever answer you got, the next move is the same and it's small: the report's plan starts with ten minutes and a blank page. One topic, tonight or tomorrow, and let them pick it. This gets fixed one honest page at a time, not in one big talk.
 
-Tomorrow I'll send you the evidence behind the fix. In the meantime, if the answer you got surprised you, reply and tell me what they said. I read every one, and I can usually tell you what it means.
+Tomorrow I'll send you what other families have found. In the meantime, if the answer you got surprised you, reply and tell me what they said. I read every one, and I can usually tell you what it means.
+
+Best wishes,
 
 Waleed
+
+PS: The shrug is my favourite answer to get, honestly. A student with no method yet is a student with nothing to unlearn, and they tend to move fastest once they're shown one!

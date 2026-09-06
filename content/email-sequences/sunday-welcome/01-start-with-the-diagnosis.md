@@ -6,11 +6,11 @@ Subject B: the five minute start most readers take
 Preheader: The free diagnostic that tells you which of your study hours are leaking, and why it makes the Sessions land harder.
 Goal: the diagnostic bridge for newsletter joiners who came in cold. One CTA.
 Links: 1 (diagnostic)
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 Quick one before your first Sunday Session lands.
 
@@ -29,3 +29,5 @@ If you have taken it, ignore all of the above, and I'll see you Sunday at 5.
 Keep going!
 
 Waleed
+
+PS: Once you've got your profile, reply and tell me which one you got. Some of them make me laugh in recognition, because going by my notes I'd have been The Perfectionist at 17 haha.

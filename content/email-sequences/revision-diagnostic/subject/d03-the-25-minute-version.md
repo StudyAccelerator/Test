@@ -6,15 +6,15 @@ Subject B: if the full drill felt like a lot
 Goal: get the first timed section actually done. Shrink the ask, remove the excuse, build the habit. Value only.
 Preheader: One question, five minutes of honest marking, one letter. Tonight.
 Links: 0
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 Yesterday I gave you the full examiner drill: a timed section, harsh marking, letters in the log. About 80 minutes, done properly.
 
-Be honest. Have you run it yet?
+Be honest with yourself. Have you run it yet?
 
 If yes, amazing, skip to the last line of this email. If not, I get it. 80 minutes is a big ask on a school night, and "I'll do it at the weekend" is where most good plans quietly die. So here's the version with no excuse attached.
 
@@ -28,10 +28,12 @@ Then open the mark scheme and mark it harshly. Not "I basically said that". Eith
 
 That's it. One question, honestly marked, letters logged. Twenty-five minutes, and you've started the evidence file that shows you exactly where your marks are going.
 
-The full drill can wait for the weekend. Starting can't. Doing something small tonight beats doing something perfect never, and I say that as someone who spent Year 12 planning perfect revision sessions that never happened.
+The full drill can wait for the weekend, but starting can't. Starting small tonight is worth far more than a perfect session that never happens, and I say that as someone who spent Year 12 planning perfect revision sessions that never happened.
 
 Run your question tonight, then reply to this email with your letters. Even if it's one W and one T. I read every reply, and I'll tell you what your pattern means.
 
 Keep going!
 
 Waleed
+
+PS: If your reply is "one K, three W, one T" I'll be genuinely pleased, because that's the most fixable pattern there is :)

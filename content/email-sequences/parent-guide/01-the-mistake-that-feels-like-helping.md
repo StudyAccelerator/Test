@@ -6,11 +6,11 @@ Subject B: why "have you revised?" backfires
 Preheader: The question every parent asks, what it does at home, and the swap that works.
 Goal: teach the single most useful behaviour change. Pure value, builds trust. One action, no links.
 Links: 0
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 Today, the most common mistake I see in households with an A-level student. You've probably made it this week. Most loving parents have, mine included, and it took me years to work out why it backfires.
 
@@ -29,3 +29,5 @@ Tomorrow: how to see your child's revision in actual numbers rather than impress
 Best wishes,
 
 Waleed
+
+PS: If you get an interesting answer to "how do you check it actually stuck?", reply and tell me what they said. I can usually tell you what it means in one line!

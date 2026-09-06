@@ -6,10 +6,11 @@ Subject B: the weekly Timed Paper, explained
 Preheader: Why one hour under real conditions beats three hours of anything else, once a topic is built.
 Goal: teach the Timed Paper session type, bridging revision to exam performance. Value only, call in PS.
 Links: 0 (call scheduler in PS)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 There's one block on your tracker that students skip more than any other: the weekly Timed Paper. It's also the one that most directly decides your grade, so today, why it's there and how to run it properly.
 
@@ -17,7 +18,7 @@ Here's the uncomfortable truth the other blocks can't fix on their own. Knowing 
 
 So, the block. One hour, once a week per subject, once its topics are up and running.
 
-Sit a past paper section under honest conditions: real timing (about a minute per mark), book closed, phone in another room, no pausing to check one thing. The conditions matter more than the questions. Practising without pressure trains a different, easier sport than the one you'll play in June.
+Sit a past paper section under honest conditions: real timing (about a minute per mark), book closed, phone in another room, no pausing to check one thing. The conditions matter more than the questions, because practising without pressure trains a different, easier sport than the one you'll play in June.
 
 Then mark it against the official mark scheme, harshly. Not "I basically said that". Either your wording earns the mark or it doesn't, because that's precisely how a real examiner will treat it. Every dropped mark gets a line in the error log: what you wrote, what would have scored.
 
@@ -31,4 +32,4 @@ Keep going!
 
 Waleed
 
-PS: If you've done a couple of timed papers and the results confuse you, that's a good problem for a free 30 minute call. Bring the marked sections: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If you've done a couple of timed papers and the results confuse you, that's a great problem to bring to a free strategy plan call. Bring the marked sections and we'll read them together: https://scheduler.zoom.us/dr-waleed-ahmad/a-level

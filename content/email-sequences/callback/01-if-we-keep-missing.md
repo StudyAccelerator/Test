@@ -6,11 +6,11 @@ Subject B: pick an exact slot instead
 Preheader: Rather than phone tag, pick an exact time and I'll call you then.
 Goal: the safety net for unreached callbacks. Convert phone tag into a scheduled slot. One CTA.
 Links: 1 (call scheduler)
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass: "no pitch" line out)
 
 ---
 
-{$name},
+Hi {$name},
 
 If we've already spoken, ignore this email. It's the automatic safety net, and you've beaten it.
 
@@ -18,10 +18,12 @@ If we haven't managed to connect yet, that's normal, not a problem. You asked me
 
 [BUTTON: Pick an exact time -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
 
-It's the same call either way: your diagnostic report, what I'd fix first, and a plan for the next few weeks, built together. Twenty to thirty minutes, free, and no pitch beyond one honest sentence if a programme genuinely fits.
+It's the same call either way: your diagnostic report, what I'd fix first, and a strategy plan for the next few weeks, built together. Twenty to thirty minutes, free, and all I ask in return is that you keep me updated on how it goes.
 
-And if things have changed and you'd rather not have the call at all, just reply and say so. No hard feelings, no more emails about it, and the report's plan still works without me.
+And if things have changed and you'd rather not have the call at all, just reply and say so. No hard feelings, and the report's plan still works without me.
 
 Talk soon,
 
 Waleed
+
+PS: If the calendar's fully booked the week you look, reply with a couple of evenings that suit and I'll open a slot. Doctors' rotas are strange things haha.

@@ -7,11 +7,11 @@ Subject B: the method underneath every subject
 Preheader: What a method problem looks like from the kitchen, and the one question to ask tonight.
 Goal: teach the system diagnosis to the parent, zero pitch, one action.
 Links: 1 (tracker)
-Revised: 28 August 2026 (natural-voice pass; "machine" imagery replaced with plain wording)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 The diagnostic put {$diag_child_name|default('your child')}'s biggest leak in **{$diag_bottleneck|default('the method itself')}**, and that means something important for you: this isn't a subject problem, so a subject tutor probably isn't the first fix.
 
@@ -23,6 +23,10 @@ The reason is that revision has a method underneath it: how you learn something,
 
 One free tool that helps this week: the Revision Tracker builds their week around their weakest topics with a method for every session, so the plan is decided in advance rather than negotiated every night: https://alevelaccelerators.com/revision-tracker
 
-Over the next few days: what actually fixing this looks like, and the honest cost of every option, including free.
+Over the next few days I'll show you what actually fixing this looks like.
+
+Best wishes,
 
 Waleed
+
+PS: Reply and tell me what they said to tonight's question. I can usually tell you what it means in one line, and tomorrow's email will make more sense for it!

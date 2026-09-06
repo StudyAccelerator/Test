@@ -4,15 +4,15 @@ Send: Instantly on joining group "Parent Leads"
 Subject A: your A-level parents' guide (and the page to read first)
 Subject B: the guide's here. Start with the three questions
 Preheader: The download link, the one section to read tonight, and what I'll send you this week.
-Goal: instant delivery, direct them to the highest-value section, set the week's cadence expectation. One link, one action.
+Goal: instant delivery, direct them to the highest-value section, set the daily cadence expectation. One link, one action.
 Links: 1 (the PDF)
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass: Sonia-style intro, unsubscribe line out, PS added)
 
 ---
 
-{$name},
+Hi {$name},
 
-Here's your guide:
+I hope you're well! I'm Dr Waleed, the founder of A-Level Accelerators, and here's your guide:
 
 [BUTTON: Download the Parents' Guide -> https://alevelaccelerators.com/ALevel-Accelerators-Parent-Guide.pdf]
 
@@ -22,12 +22,14 @@ Now, because you're busy and the guide isn't short, let me tell you where to sta
 
 **Tonight's move is just the first question.** Ask it casually, at dinner or in the car, not as an ambush. You're not launching a project, you're just taking one honest reading. The guide tells you what each answer means.
 
-A quick word on who's writing to you. I'm Dr Waleed Ahmad, an NHS foundation doctor, and before medicine I was the A-level student who worked very hard with a method that wasted most of it. I've since worked with over 1,000 A-level students, and the pattern the guide is built on is the one I see constantly: the effort is almost never the problem. The way the effort is being used usually is.
+A quick word on who's writing to you. I'm an NHS doctor, and before medicine I was the A-level student who worked very hard with a method that wasted most of it. I've since worked with over 1,000 A-level students, and the pattern the guide is built on is the one I see constantly: the effort is almost never the problem. The way the effort is being used usually is.
 
-Over the next few days I'll send you the practical layer around the guide, one short email at a time: the mistake that feels like helping, how to see your child's revision in actual numbers, what fixes what. A few emails this first week while it's fresh, and after that I settle into one short, useful email most days. If it's ever too much, the unsubscribe is at the bottom of every email.
+Over the next two weeks I'll email you every day with the practical layer around the guide, one short email at a time: the mistake that feels like helping, how to see your child's revision in actual numbers, what fixes what. Each one is something you can use the same evening.
 
 Tonight: one question, asked casually.
 
 Best wishes,
 
 Waleed
+
+PS: Reply and tell me your child's year and the subject you're most worried about. One line is plenty, and it means the emails I send you land closer to home. I read every reply myself, usually between patients!

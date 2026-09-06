@@ -6,17 +6,17 @@ Subject B: the rating that quietly decides your week
 Preheader: Why students rate their topics too kindly, what it costs, and the 10 second fix.
 Goal: protect the engine's input quality. Teach the honest-rating habit and the Sunday re-rate. Value only.
 Links: 0
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 Your whole tracker week was built from three little words: Struggling, Shaky, Solid. The weakest topics got the most time. Which means the plan is exactly as good as your honesty was, and this is where everyone's brain cheats a little.
 
-Here's how the cheating works. You look at a topic, you recognise it, the recognition feels like knowledge, and you click Solid. But recognising a topic on a list and producing it in an exam are two completely different skills, and the exam only pays for the second one. Every topic you rate too kindly quietly gives its sessions away to something that needed them less. The plan still looks perfect on the wall. It's just aimed at slightly the wrong things.
+Here's how the cheating works. You look at a topic, you recognise it, the recognition feels like knowledge, and you click Solid. But recognising a topic on a list and producing it in an exam are two completely different skills, and the exam only pays for the second one. Every topic you rate too kindly quietly gives its sessions away to something that needed them less. The plan still looks perfect on the wall, it's just aimed at slightly the wrong things.
 
-So here's the 10 second honesty test for any topic you're about to rate: could I write half a page on this right now, book closed, and get it mostly right? Not "have I seen it". Not "did we do it in class". Could I produce it, now, from nothing. If the honest answer is "probably not", that's Shaky, whatever your notes look like. And if the question makes you slightly nervous, that's Struggling, and it's just earned its Blurt and Fix.
+So here's the 10 second honesty test for any topic you're about to rate: could I write half a page on this right now, book closed, and get it mostly right? Not "have I seen it", and not "did we do it in class", but could I produce it, now, from nothing. If the honest answer is "probably not", that's Shaky, whatever your notes look like. And if the question makes you slightly nervous, that's Struggling, and it's just earned its Blurt and Fix.
 
 Nobody sees these ratings but you. There are no marks for a flattering dashboard. The whole value of the tracker comes from telling it the truth, and honestly, the students who improve fastest are usually the ones whose first week looks worst on paper, because they were honest enough to point the hours where they were actually needed.
 
@@ -27,3 +27,5 @@ Today's move: your scheduled block, plus one look back at your ratings. If one o
 Keep going!
 
 Waleed
+
+PS: I promise this is a judge-free zone. I'd have rated everything Solid at 17, and my mock results had other ideas haha.

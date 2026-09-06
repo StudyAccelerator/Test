@@ -7,10 +7,11 @@ Subject B: the version of improving that doesn't eat your life
 Preheader: You don't need more revision. You need the marks you already earn back.
 Goal: best-way-without email selling the cohort. The WITHOUT: more hours, £50 an hour tutoring, waiting for mocks. One CTA: the page.
 Links: 1 (subject page)
+Revised: 6 September 2026 (Waleed's style pass: "sell you the wrong thing" PS softened)
 
 ---
 
-{$name},
+Hi {$name},
 
 Every plan for getting grades up seems to start the same way: do more. More hours, more notes, more past papers stacked up unmarked, maybe a tutor at £50 an hour re-explaining things you already broadly know.
 
@@ -22,7 +23,7 @@ Which means the fastest route up isn't more. It's getting back the marks you're 
 
 That's what the sessions are. One recorded weekend session in your subject, built around real exam questions with the mark scheme open, your answers coached into the wording that pays. Two to three hours of directed practice between sessions, which replaces the aimless version of the same practice rather than adding to it. No weeknights, no clash with school, no £600-a-term tutoring bill. £339 for the full twelve weeks.
 
-So if the thing that's been stopping you is "I can't fit anything else in", this is the programme designed for exactly that. It starts Sunday. First session risk-free, full refund if it isn't valuable.
+So if the thing that's been stopping you is "I can't fit anything else in", this is the programme designed for exactly that. It starts Sunday, and the first session is covered by our satisfaction guarantee.
 
 [BUTTON: See how it fits your week -> https://alevelaccelerators.com/subject-accelerators/]
 
@@ -30,4 +31,4 @@ Keep going!
 
 Waleed
 
-PS: If your diagnostic said your leak is the method itself rather than one subject's exam skills, the right fix is the Study System instead, and I'll say so on a free call rather than sell you the wrong thing: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If your diagnostic said your leak is the method itself rather than one subject's exam skills, the right fix is the Study System instead, and I'm happy to point you at it on a free call: https://scheduler.zoom.us/dr-waleed-ahmad/a-level

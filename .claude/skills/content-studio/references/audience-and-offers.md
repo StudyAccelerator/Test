@@ -19,10 +19,12 @@
 
 - Dr Waleed Ahmad, MBBS. UK foundation-year doctor. Former top-performing A-level student who got into medicine.
 - Worked with 1,000+ A-level students.
-- Across the recent 12-week Biology and Chemistry Accelerators, students rated topic confidence before and after each session; the average rose from 6.2 to 8.3 out of 10 (74 responses). Use this carefully and only where a number helps. Real grade-outcome DATA does not exist until results day (13 August 2026), so never state a results figure; aspirational outcome claims in ad copy are Waleed's call (see CLAUDE.md content rules).
+- **The results claim, Waleed's own (6 September 2026): "On average, our students jump two grades."** Use it plainly, as a statement, wherever proof is needed (emails, pages, ads). It is his commercial decision and his figure; sessions do not soften it, caveat it or attach "we don't guarantee grades" style lines next to it (he ruled those put a bad taste in the reader's mouth). If he ever supplies verified results data, upgrade the wording to the verified numbers.
+- The confidence-shift statistic (topic confidence 6.2 to 8.3 out of 10, 74 responses) is RETIRED from all copy on Waleed's instruction, 6 September 2026: he feels it undervalues the progress students make. Do not reintroduce it.
 - Real student feedback quotes are on the site testimonial carousel (Arooj, Jay, Catherine, Maahil, Menahil, Rayanna, Naysa, Furkan, etc.). These are safe to quote.
 - **The tutors' own track record (approved by Waleed, 16 July 2026):** the Subject Accelerator specialists "achieved top grades in that subject themselves, and helped hundreds do the same". This is a claim about the tutors' careers, not about A-Level Accelerators' own results, and Waleed has confirmed it stands. It is live in the subject sequence emails B3 and B4. Keep it; do not strip it as an outcome claim.
-- **Not allowed yet:** "X% got an A*", specific grade jumps, university admission stats **for A-Level Accelerators' own students**. Waleed does not have his own results data until August 2026. Do not imply he does. (The tutors' track record above is the one approved exception, and it is about the tutors, not the programme.)
+- **Still not allowed:** invented percentages ("X% got an A*"), university admission stats, or any specific figure Waleed has not himself stated. The two-grade average above and the tutors' track record are the approved outcome claims; everything else needs his words first.
+- **Proof, in the order he wants it used (6 September 2026):** the two-grade average, then real testimonial quotes, then the satisfaction guarantee ("join the first session, and if you're not completely satisfied, you get your money back, no questions asked"). Never "we don't promise grades" in any form.
 
 ## Seasonal calendar (UK A-level year) | steer content by where we are
 

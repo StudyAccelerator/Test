@@ -4,13 +4,13 @@ Send: Day 9
 Subject A: you don't need more discipline, {$name}
 Subject B: what actually separates the top students
 Preheader: The decisions principle behind the tracker, and what the full version looks like.
-Goal: teach the system principle, introduce the Study System honestly as the full version. One CTA: the page.
+Goal: teach the system principle, introduce the Study System as the full version. One CTA: the page.
 Links: 1 (study systems page)
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass: guarantee named)
 
 ---
 
-{$name},
+Hi {$name},
 
 Nine days ago the tracker made a decision for you: what each study hour is for. Today I want to name the idea underneath it, because once you see it, you'll see it everywhere, and it changes what you think your problem is.
 
@@ -18,12 +18,14 @@ Students who revise consistently are not more disciplined than you. I've worked 
 
 That's why "I need to be more disciplined" is one of the least useful sentences in revision. You don't need a stronger will, you need fewer moments that depend on one. Your tracker already handles the what and the when. The next layer is the how: what happens inside each block, how the returns get scheduled, how the exam skills get trained, and how the whole thing survives week three, and week seven, and mocks.
 
-That layer is what my Top 1% Study System teaches. The Study Series (£119) is the complete method across four live sessions, for students who'll run it themselves once shown properly. The Study Accelerator (£499) adds twelve sessions and weekly accountability while the habits take root, and it exists because for most students the follow-through, not the knowledge, is the fragile part. For scale, £499 is about ten hours of average 1:1 tutoring money, spent once on the way every subject runs instead of patching one subject.
+That layer is what my Top 1% Study System teaches. The Study Series (£119) is the complete method across four live sessions, for students who'll run it themselves once shown properly. The Study Accelerator (£499) adds twelve sessions and weekly accountability while the habits take root, and it exists because for most students the follow-through, not the knowledge, is the fragile part. For scale, £499 is about ten hours of average 1:1 tutoring money, spent once on the way every subject runs instead of patching one subject. Both come with our satisfaction guarantee: join the first session, and if you're not completely satisfied, you get your money back.
 
-You've already shown you'll use structure when it's handed to you. Honestly, that's the best sign I know of a student the system works for.
+You've already shown you'll use structure when it's handed to you, and honestly, that's the best sign I know of a student the system works for :)
 
 [BUTTON: See how the Study System works -> https://alevelaccelerators.com/study-systems/]
 
 Keep going!
 
 Waleed
+
+PS: If you're not sure which version fits you, that's what my free strategy plan call is for. Reply with a couple of evenings that suit and we'll sort a time.

@@ -6,11 +6,11 @@ Subject B: the science of forgetting, in plain English
 Preheader: Why revised material disappears, and the ten second question that uses the science.
 Goal: teach the memory science parents half-know, make it practical. One action, no links.
 Links: 0
-Revised: 28 August 2026 (natural-voice pass)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 "They revised it. Two weeks later it's like they never saw it." If that sentence has been said in your house, today's email explains it, because there's a hundred years of memory research behind it, and knowing it changes what you push for.
 
@@ -27,3 +27,5 @@ That's tonight's move: one curiosity question about last Tuesday's topic.
 Best wishes,
 
 Waleed
+
+PS: Doctors sit exams for the rest of our careers, and this is still exactly how I'd revise for one. The science doesn't stop applying once you've left school!

@@ -19,7 +19,7 @@ The book's four principles: send more emails, send better emails, send the right
 - **Re-engagement:** Dean Jackson's nine word email, sent as-is, no additions. Most buyers buy after 90 days, so a quiet list is an asset that needs waking, not deleting.
 - **Sequence handoff:** when a sequence finishes, the lead joins the daily broadcast audience. The sequences now say so honestly (the old "one email a week" promise is retired).
 
-Honesty rules still bind everything: no invented numbers, no grade promises, urgency only from the real calendar (cohort dates, capped places), Waleed's voice per the 28 August natural-voice standard.
+Honesty rules still bind everything: no invented numbers, urgency only from the real calendar (cohort dates, capped places), Waleed's voice per `.claude/skills/content-studio/references/email-style-waleed.md` (the 6 September standard, learned from his own edits; it supersedes the 28 August natural-voice pass). Proof is stated his way: "on average, our students jump two grades", real testimonial quotes, the satisfaction guarantee. Never the retired confidence statistic, and never a "we don't promise grades" line in any form.
 
 ## This folder
 

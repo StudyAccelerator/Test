@@ -6,6 +6,7 @@ Subject B: the ten minutes after a bad mark decide a lot
 Preheader: Autumn tests are coming. Here's how to react so the mark becomes data instead of a verdict.
 Goal: prepare the parent for the season's first disappointment. High-value deposit, perfectly timed for autumn. Call in PS.
 Links: 0 (call scheduler in PS)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
@@ -29,4 +30,4 @@ Best wishes,
 
 Waleed
 
-PS: If a result like this has already landed and you want a second pair of eyes on what the pattern means, bring the paper to a free half hour call: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If a result like this has already landed and you want a second pair of eyes on what the pattern means, bring the paper to a free half hour and we'll build the plan from it together: https://scheduler.zoom.us/dr-waleed-ahmad/a-level

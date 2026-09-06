@@ -7,10 +7,11 @@ Subject B: my most productive waste of a day
 Preheader: A confession from my own Year 12, and what it taught me about why plans die.
 Goal: personal confession story, EBA deposit, lesson = fewer decisions. One CTA: the tracker.
 Links: 1 (tracker)
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 Confession time. When I was in Year 12, I once spent six hours in one sitting making the perfect revision timetable.
 
@@ -34,4 +35,4 @@ Keep going!
 
 Waleed
 
-PS: If you already know what your problem is and you'd rather just talk it through, I keep a few free 30 minute calls each week: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If you already know what your problem is and you'd rather just talk it through, I keep a few free 30 minute strategy plan calls each week for students keen to improve their grades: https://scheduler.zoom.us/dr-waleed-ahmad/a-level

@@ -6,10 +6,11 @@ Subject B: how to run Active Recall properly
 Preheader: What the middle-sized block on your timetable is for, step by step.
 Goal: teach the second session type so every block on the plan means something. Value only.
 Links: 0
+Revised: 6 September 2026 (Waleed's style pass)
 
 ---
 
-{$name},
+Hi {$name},
 
 You know the big 90 minute Blurt and Fix now. Today, the workhorse: the 45 minute Active Recall block, which is where most of your week's actual remembering happens.
 
@@ -23,10 +24,12 @@ Here's the block, minute by minute.
 
 **Last five: the log.** Anything you got wrong twice goes into your error log for Sunday's retest. Those repeat offenders are the highest-yield material you own.
 
-Two traps to avoid. Don't let checking turn into re-reading: you look up the answer, you correct yourself, you close the book, and that's it. And don't spend the block on your favourite topic because it feels good to get things right. The block belongs to whatever your tracker scheduled, which is usually the stuff that doesn't feel good yet. That's the point of it.
+Two traps to avoid. Don't let checking turn into re-reading: you look up the answer, you correct yourself, you close the book, and that's it. And don't spend the block on your favourite topic because it feels good to get things right. The block belongs to whatever your tracker scheduled, which is usually the stuff that doesn't feel good yet, and that's the point of it.
 
 Today's move: whatever your plan has scheduled. And if it's an Active Recall block, you now know exactly what those 45 minutes are for.
 
 Keep going!
 
 Waleed
+
+PS: "Yeah I know that one" in your head is the single most expensive sentence in revision haha. Say it out loud or write it down, every time.

@@ -7,10 +7,11 @@ Subject B: it isn't effort, and it isn't ability
 Preheader: The belief that keeps hardworking students stuck, and the one that gets them out.
 Goal: the core paradigm shift, taught fully. Deposit email. One CTA: the diagnostic.
 Links: 1 (diagnostic)
+Revised: 6 September 2026 (Waleed's style pass: unsubscribe PS replaced)
 
 ---
 
-{$name},
+Hi {$name},
 
 I want you to think about someone who's revising every evening. Maybe they have a tutor. They're paying attention in class, they're doing all the right things as far as anyone can tell. And they're still sitting at a B.
 
@@ -34,4 +35,4 @@ Keep going!
 
 Waleed
 
-PS: From today I'm in your inbox most days, with one thing you can use the same evening. Short, useful, and honest. If that's not for you, the unsubscribe is at the bottom, no hard feelings.
+PS: From today I'm in your inbox most days with one thing you can use the same evening. Drag this one into your Primary tab so the rest don't get lost, and reply with which profile you get, I read every one :)

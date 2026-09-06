@@ -13,6 +13,7 @@ Before writing anything, load the reference file(s) relevant to the task:
 - `references/platform-playbooks.md` | format, length, hook, hashtag and posting rules per platform (LinkedIn, Facebook, TikTok/Reels/Shorts, YouTube, Reddit).
 - `references/audience-and-offers.md` | who we're talking to (students vs parents), the products, prices, links, and the seasonal calendar (results day, clearing, summer launch).
 - `references/visual-guide.md` | when a post needs a graphic, what kind, and how to spec or generate it. Brand colours and templates live here.
+- `references/email-style-waleed.md` | how Waleed writes an EMAIL, learned from his own edits (6 September 2026). **Read before any email: sequences, dailies, the Sunday Session, 1:1 outreach drafts.**
 
 For filmable short-form video scripts (TikTok/Reels/Shorts) written from a video idea, hand over to the dedicated **video-script** skill (`.claude/skills/video-script/`): it holds Waleed's transcript-derived spoken fingerprint, the Viral Toolkit format skeletons and the retention evidence. Content-studio still owns posts, captions, outlines and everything that is not a camera script.
 
