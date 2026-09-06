@@ -22,6 +22,17 @@ These are private sales materials. They are never published on the site, linked 
 
 All three decks gained a "The four tiers" slide (Waleed's diagnostic framework: Foundation, Recall, Application, Exam Mastery, with the grade band each tier caps you at), inserted after "The real challenge" in the study-system deck and after "The method" in the other two, so every deck now carries both the diagnosis component and the four tiers. Decks are 10 slides now. The study-system deck's mentorship price moved from £2,000 a year to £300 a month (Waleed's monthly retention pricing ruling, 6 September 2026, recorded in CLAUDE.md). PDFs re-rendered the same day.
 
+## Study System deck rebuild (6 September 2026, Waleed's brief)
+
+The study-system deck is now **11 slides** and is deliberately EVERGREEN: no cohort start dates anywhere, and no price before the pricing slide (the cover chip and the at-a-glance price tile were removed on his instruction, so pricing is only discussed at the end). Changes in that pass:
+
+- **Cover** carries a white "Your route to results day" card modelled on the homepage hero (`app/page.tsx`): C/D, B, A, A star rungs with the labels where you start, content rebuilt, technique trained, your new grades, plus the 01 Diagnose, 02 Rebuild, 03 Coach chips.
+- **Method language is Diagnose, Rebuild, Coach everywhere** (it replaced Build, fix, optimise on the at-a-glance tile and as the three phase names), matching the other two decks' method slide.
+- **The four tiers** slide is a stepped pyramid (base Tier 1 widest and palest, apex Tier 4 gold) with the grade band each tier gets you listed alongside, instead of four equal cards.
+- **The phases slide** is three full-height cards with four concrete deliverables each plus a "you leave with" line, written so the phases can be explained without hand-waving.
+- **Proof** carries 96% first-choice offers, a 2-grade average jump and 1,000+ students, with real quotes from Vernon, Sarah and Furkan (Delicia and Biju came off). **The 96% and 2-grade figures are Waleed's own numbers, supplied 6 September 2026; they are NOT in the approved public proof points, so they stay in this private deck until he confirms the basis.** Note he said 98% on a sales call in the same period: one canonical number is needed everywhere.
+- **A guarantee slide** (10) sits between pricing and the close: come to the first session, decide honestly, send one email for a full refund, plus his own line that he will never guarantee a grade.
+
 ## The Canva mirror, current state (6 September 2026)
 
 The three CURRENT Canva decks live in the folder **Sales Call Decks** (https://www.canva.com/folder/FAHUcv7IxyM), re-imported from commit 3297df0 with the tier slide and monthly mentorship pricing, then corrected with the fix recipe below (chips on pages 1 and 10, founder caption, and the study deck's page 3 title re-wrap):
