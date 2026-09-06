@@ -19,8 +19,10 @@ const FREE_TOOL_LINKS = [
 ]
 
 const MORE_LINKS = [
+  ['/results/', 'Results'],
   ['/blog/', 'Blog'],
   ['/faqs/', 'FAQs'],
+  ['/about/', 'About'],
 ]
 
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'

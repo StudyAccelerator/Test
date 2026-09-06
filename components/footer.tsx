@@ -45,6 +45,8 @@ export default function Footer() {
             <div>
               <h3 className="text-sm text-white font-bold uppercase tracking-wide mb-3">Company</h3>
               <ul className="space-y-2 text-sm">
+                <li><a href="/about/" className="text-brand-gold hover:text-white transition">About Us</a></li>
+                <li><a href="/results/" className="text-brand-gold hover:text-white transition">Our Results</a></li>
                 <li><a href="/pricing/" className="text-brand-gold hover:text-white transition">Pricing</a></li>
                 <li><a href="/tutors/" className="text-brand-gold hover:text-white transition">Meet the Team</a></li>
                 <li><a href="/contact/" className="text-brand-gold hover:text-white transition">Contact</a></li>
