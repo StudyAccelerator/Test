@@ -4,7 +4,7 @@ Built 27 August 2026. This file is the master map of every way a lead enters A-L
 
 The design rules, set by Waleed:
 
-1. **Near-daily while intent is hot, then taper.** Every sequence is front-loaded: daily or near-daily for the first week, spacing out to day 14 (day 7 for programme interest), then handing off to the weekly rhythm or going quiet honestly.
+1. **Strictly daily while the lead is warm.** Every nurture sequence sends one email a day, every day, to day 14 (day 7 for programme interest), then hands off to the daily broadcast list. Tightened from near-daily on 6 Sept 2026, Waleed's instruction.
 2. **Every email ends with exactly one clear next action.** One primary CTA per email (a button, a reply ask, or a tonight-task). Secondary pointers only ever appear as inline text or a PS, never as a second button.
 3. **The instant email is warm and useful, not just a delivery note.** Every entry point's first email arrives within a minute and tells the reader exactly what to do tonight.
 4. **No dead ends.** Every sequence's last email says what happens next (weekly email, door stays open, reply any time). Nobody just stops hearing from us unexplained.
@@ -15,21 +15,21 @@ The design rules, set by Waleed:
 | Entry point | Trigger group | Automation (new) | Replaces (switch OFF at flip) | Emails | Days |
 |---|---|---|---|---|---|
 | Diagnostic, student | Revision Diagnostic `192687508025247162` | V2 · Diagnostic: instant report (E0) | Revision Diagnostic: instant report email (E0) | 1 | instant |
-| Diagnostic, student, subject route | Diagnostic Route: Subject Accelerator `192802207993693338` | V2 · Diagnostic: Subject route (14 days) | Revision Diagnostic: Subject Accelerator route | 10 | 1,2,3,4,5,6,8,10,12,14 |
-| Diagnostic, student, system route | Diagnostic Route: Study System `192802211655321354` | V2 · Diagnostic: Study System route (14 days) | Revision Diagnostic: Study System route | 10 | 1,2,3,4,5,6,8,10,12,14 |
+| Diagnostic, student, subject route | Diagnostic Route: Subject Accelerator `192802207993693338` | V2 · Diagnostic: Subject route (daily, 14 days) | Revision Diagnostic: Subject Accelerator route | 14 | daily, 1 to 14 |
+| Diagnostic, student, system route | Diagnostic Route: Study System `192802211655321354` | V2 · Diagnostic: Study System route (daily, 14 days) | Revision Diagnostic: Study System route | 14 | daily, 1 to 14 |
 | Diagnostic, parent | Revision Diagnostic Parents `193102828818925394` | V2 · Parent diagnostic: instant report (P0) | Parent diagnostic: instant report email (P0) | 1 | instant |
-| Diagnostic, parent, subject route | Diag Parents Subject Route `193102829598016991` | V2 · Parent diagnostic: Subject route (14 days) | Parent diagnostic: Subject route (PB1 to PB4) | 10 | 1,2,3,4,5,7,8,10,12,14 |
-| Diagnostic, parent, system route | Diag Parents System Route `193102829963970408` | V2 · Parent diagnostic: System route (14 days) | Parent diagnostic: System route (PY1 to PY4) | 10 | 1,2,3,4,5,7,8,10,12,14 |
-| Revision Tracker | Revision Tracker Users `187183128836573106` | V2 · Revision Tracker (14 days) | Revision Tracker (May 2026 copy) | 9 | 0,1,2,3,5,7,9,11,14 |
-| Parents' Guide | Parent Leads `188021995515937985` | V2 · Parents' Guide (14 days) | Parent Leads Nurture Sequence (May 2026 copy) | 9 | 0,1,2,3,5,7,9,11,14 |
+| Diagnostic, parent, subject route | Diag Parents Subject Route `193102829598016991` | V2 · Parent diagnostic: Subject route (daily, 14 days) | Parent diagnostic: Subject route (PB1 to PB4) | 14 | daily, 1 to 14 |
+| Diagnostic, parent, system route | Diag Parents System Route `193102829963970408` | V2 · Parent diagnostic: System route (daily, 14 days) | Parent diagnostic: System route (PY1 to PY4) | 14 | daily, 1 to 14 |
+| Revision Tracker | Revision Tracker Users `187183128836573106` | V2 · Revision Tracker (daily, 14 days) | Revision Tracker (May 2026 copy) | 15 | daily, 0 to 14 |
+| Parents' Guide | Parent Leads `188021995515937985` | V2 · Parents' Guide (daily, 14 days) | Parent Leads Nurture Sequence (May 2026 copy) | 15 | daily, 0 to 14 |
 | Sunday Session signup | Sunday Session `192801700892903405` | V2 · Sunday Session welcome | Sunday Session: welcome (SS1) (was OFF, never sent) | 2 | 0,2 |
 | Callback request (report card) | Callback requested `196438369449805734` | Callback requested: confirmation + safety net | nothing existed | 2 | 0,2 |
 | Call booked (Zoom Scheduler) | Call booked (new group) | Call booked: prep + follow-through | nothing existed | 2 | 0,2 |
-| Programme interest | Programme interest (new group) | Programme interest: the full picture (7 days) | nothing existed | 5 | 0,1,2,4,6 |
+| Programme interest | Programme interest (new group) | Programme interest: the full picture (daily, 7 days) | nothing existed | 7 | daily, 0 to 6 |
 
 The two summer-route automations stay PAUSED (cohort started 22 August; the diagnostic no longer routes anyone to summer). They were deliberately not rebuilt; when a new summer cohort exists, add a summer entry to `scripts/email-engine/manifest.json` and rebuild.
 
-Per-lead reality check: a student who takes the diagnostic now gets 11 emails in 14 days (was 6 in 11), a parent gets 11 in 14 (was 5 in 11), a tracker user 9 in 14 (was 8 in 10 of May-era copy), a guide parent 9 in 14 (was 7 in 10 of May-era copy), and callback/call/programme leads go from zero emails to full coverage.
+Per-lead reality check (daily pass, 6 Sept 2026, per Waleed's instruction and the Ian Stanley playbook): a diagnostic student or parent now gets 15 emails in 14 days, one every single day (was 6 in 11 / 5 in 11 before the engine); a tracker user or guide parent gets 15 in 15 days; programme-interest leads get 7 in 7. The gap-fillers are the playbook's own types: the hero/origin story, lifestyle, correlation, mini-FAQ and the one-question reply email. Shared emails (the story, the closers) are loaded into several automations from one file, so 101 loaded emails come from 87 distinct pieces of copy.
 
 ### The two manually fed groups
 
@@ -39,8 +39,8 @@ Per-lead reality check: a student who takes the diagnostic now gets 11 emails in
 
 - `revision-diagnostic/` student E0 + call offer + subject and system routes (summer folder is legacy, paused)
 - `revision-diagnostic-parents/` parent P0 + call offer + subject and system routes (summer legacy, paused)
-- `revision-tracker/` 9 emails, fresh 27 Aug 2026 (replaces May-era copy that only lived in MailerLite)
-- `parent-guide/` 9 emails, fresh 27 Aug 2026 (same)
+- `revision-tracker/` 15 daily emails, fresh Aug/Sept 2026 (replaces May-era copy that only lived in MailerLite)
+- `parent-guide/` 15 daily emails, fresh Aug/Sept 2026 (same)
 - `sunday-welcome/`, `callback/`, `call-booked/`, `programme-interest/`
 
 Every email file: header (Send day, Subject A, Preheader, Goal, Links) then the body in markdown with `[BUTTON: label -> url]` markers. Edit copy here, re-run the engine, and MailerLite matches the repo. Never edit only in MailerLite.

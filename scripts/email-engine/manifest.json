@@ -21,8 +21,8 @@
     },
     {
       "key": "diag-subject",
-      "name": "V2 · Diagnostic: Subject route (14 days)",
-      "automation_id": "196991190026946012",
+      "name": "V2 · Diagnostic: Subject route (daily, 14 days)",
+      "automation_id": "197828574581884432",
       "replaces": "Revision Diagnostic: Subject Accelerator route · 192802636764808949",
       "trigger_group_id": "192802207993693338",
       "trigger_group_name": "Diagnostic Route: Subject Accelerator",
@@ -65,25 +65,49 @@
           "email": "content/email-sequences/revision-diagnostic/subject/03-taught-to-the-mark-scheme.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/02-shared-my-story.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/subject/04-questions-and-parents.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/d09-what-june-feels-like.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/subject/d10-what-the-call-looks-like.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/subject/d11-how-doctors-pass-exams.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/subject/05-september-is-a-decision.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/03-shared-one-question.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/subject/d14-where-this-leaves-you.md"
@@ -92,8 +116,8 @@
     },
     {
       "key": "diag-system",
-      "name": "V2 · Diagnostic: Study System route (14 days)",
-      "automation_id": "196991200660555058",
+      "name": "V2 · Diagnostic: Study System route (daily, 14 days)",
+      "automation_id": "197828596237076474",
       "replaces": "Revision Diagnostic: Study System route · 192802538796352885",
       "trigger_group_id": "192802211655321354",
       "trigger_group_name": "Diagnostic Route: Study System",
@@ -136,25 +160,49 @@
           "email": "content/email-sequences/revision-diagnostic/system/03-fewer-decisions.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/02-shared-my-story.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/system/04-questions-and-parents.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/d09-when-it-runs-itself.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/system/d10-what-the-call-looks-like.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/d11-hospitals-dont-run-on-memory.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/system/05-the-compounding-window.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/03-shared-one-question.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic/system/d14-where-this-leaves-you.md"
@@ -177,8 +225,8 @@
     },
     {
       "key": "parent-subject",
-      "name": "V2 · Parent diagnostic: Subject route (14 days)",
-      "automation_id": "196991224512513281",
+      "name": "V2 · Parent diagnostic: Subject route (daily, 14 days)",
+      "automation_id": "197828616616150882",
       "replaces": "Parent diagnostic: Subject route (PB1 to PB4) · 193104582976472652",
       "trigger_group_id": "193102829598016991",
       "trigger_group_name": "Diag Parents Subject Route",
@@ -215,7 +263,13 @@
           "email": "content/email-sequences/revision-diagnostic-parents/subject/02-the-september-window.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/02-shared-my-story.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/subject/d07-the-maths.md"
@@ -227,19 +281,37 @@
           "email": "content/email-sequences/revision-diagnostic-parents/subject/03-the-questions-parents-ask.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/04-shared-what-changes-at-home.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/subject/d10-if-it-doesnt-fit.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/03-shared-three-questions.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/subject/04-september-is-a-decision.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/05-shared-one-question.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/subject/d14-where-you-landed.md"
@@ -248,8 +320,8 @@
     },
     {
       "key": "parent-system",
-      "name": "V2 · Parent diagnostic: System route (14 days)",
-      "automation_id": "196991233763050510",
+      "name": "V2 · Parent diagnostic: System route (daily, 14 days)",
+      "automation_id": "197828660091159977",
       "replaces": "Parent diagnostic: System route (PY1 to PY4) · 193104665931417269",
       "trigger_group_id": "193102829963970408",
       "trigger_group_name": "Diag Parents System Route",
@@ -286,7 +358,13 @@
           "email": "content/email-sequences/revision-diagnostic-parents/system/02-fixing-the-machine.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/02-shared-my-story.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/system/d07-the-maths.md"
@@ -298,19 +376,37 @@
           "email": "content/email-sequences/revision-diagnostic-parents/system/03-the-questions-parents-ask.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/04-shared-what-changes-at-home.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/system/d10-if-it-doesnt-fit.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/03-shared-three-questions.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/system/04-the-compounding-window.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/05-shared-one-question.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-diagnostic-parents/system/d14-where-you-landed.md"
@@ -319,8 +415,8 @@
     },
     {
       "key": "tracker",
-      "name": "V2 · Revision Tracker (14 days)",
-      "automation_id": "196991241289729468",
+      "name": "V2 · Revision Tracker (daily, 14 days)",
+      "automation_id": "197828685432096387",
       "replaces": "Revision Tracker · 187923587532850846",
       "trigger_group_id": "187183128836573106",
       "trigger_group_name": "Revision Tracker Users",
@@ -348,31 +444,67 @@
           "email": "content/email-sequences/revision-tracker/03-rate-it-honestly.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/d04-active-recall.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-tracker/04-what-students-say.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/02-shared-my-story.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-tracker/05-the-sunday-rebuild.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/d08-spaced-review.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-tracker/06-fewer-decisions.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/system/d09-when-it-runs-itself.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-tracker/07-show-your-parents.md"
         },
         {
-          "delay_days": 3
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-tracker/d12-timed-paper.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic/03-shared-one-question.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/revision-tracker/08-the-quiet-close.md"
@@ -381,8 +513,8 @@
     },
     {
       "key": "parent-guide",
-      "name": "V2 · Parents' Guide (14 days)",
-      "automation_id": "196991321554028288",
+      "name": "V2 · Parents' Guide (daily, 14 days)",
+      "automation_id": "197828735106287036",
       "replaces": "Parent Leads Nurture Sequence · 188201726456628307",
       "trigger_group_id": "188021995515937985",
       "trigger_group_name": "Parent Leads",
@@ -410,31 +542,67 @@
           "email": "content/email-sequences/parent-guide/03-why-tutors-alone-rarely-fix-it.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/parent-guide/d04-from-the-doorway.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/parent-guide/04-the-forgetting-curve.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/02-shared-my-story.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/parent-guide/05-what-other-parents-hear.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/parent-guide/d08-the-bad-test.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/parent-guide/06-the-three-paths.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/04-shared-what-changes-at-home.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/parent-guide/07-september-money.md"
         },
         {
-          "delay_days": 3
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/parent-guide/d12-the-year-map.md"
+        },
+        {
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/revision-diagnostic-parents/05-shared-one-question.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/parent-guide/08-door-open.md"
@@ -503,8 +671,8 @@
     },
     {
       "key": "programme-interest",
-      "name": "Programme interest: the full picture (7 days)",
-      "automation_id": "196991345692247303",
+      "name": "Programme interest: the full picture (daily, 7 days)",
+      "automation_id": "197828752289302439",
       "replaces": null,
       "trigger_group_id": "196991167186863124",
       "trigger_group_name": "Programme interest",
@@ -526,13 +694,25 @@
           "email": "content/email-sequences/programme-interest/02-in-their-words.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/programme-interest/d03-who-teaches.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/programme-interest/03-the-maths.md"
         },
         {
-          "delay_days": 2
+          "delay_days": 1
+        },
+        {
+          "email": "content/email-sequences/programme-interest/d05-week-by-week.md"
+        },
+        {
+          "delay_days": 1
         },
         {
           "email": "content/email-sequences/programme-interest/04-the-decision.md"
