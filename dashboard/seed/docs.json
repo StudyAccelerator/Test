@@ -55,6 +55,21 @@
       "id": "skool",
       "label": "Skool community plan",
       "path": "content/skool/01-strategy.md"
+    },
+    {
+      "id": "mentorship-spine",
+      "label": "Mentorship: the spine",
+      "path": "content/mentorship/01-the-spine.md"
+    },
+    {
+      "id": "mentorship-runsheets",
+      "label": "Mentorship: weekly runsheets",
+      "path": "content/mentorship/02-weekly-runsheets.md"
+    },
+    {
+      "id": "mentorship-scale",
+      "label": "Mentorship: scaling read",
+      "path": "content/mentorship/04-sustainability.md"
     }
   ]
 }

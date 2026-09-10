@@ -48,3 +48,7 @@ lerna-debug.log*
 
 # email engine rendered output (derived from content/email-sequences)
 scripts/email-engine/build/
+
+# Mentorship curriculum: rendered outputs (rebuild with content/mentorship/render.py)
+content/mentorship/*.pdf
+content/mentorship/*.html
