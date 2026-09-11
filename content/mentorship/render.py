@@ -11,7 +11,7 @@ import os, re, glob, shutil, subprocess, sys
 import markdown
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-FILES = ['README.md', '01-the-spine.md', '02-weekly-runsheets.md', '03-templates.md', '04-sustainability.md']
+FILES = ['README.md', '01-the-spine.md', '02-weekly-runsheets.md', '03-templates.md', '04-sustainability.md', '05-skool-merger-stress-test.md']
 OUT_HTML = os.path.join(HERE, 'Top-1-Mentorship-Curriculum.html')
 OUT_PDF = os.path.join(HERE, 'Top-1-Mentorship-Curriculum.pdf')
 
