@@ -75,6 +75,11 @@
       "id": "mentorship-stress-test",
       "label": "Mentorship: Skool and subjects stress test",
       "path": "content/mentorship/05-skool-merger-stress-test.md"
+    },
+    {
+      "id": "mentorship-billing",
+      "label": "Mentorship: billing and the four-month term",
+      "path": "content/mentorship/06-billing-and-the-four-month-term.md"
     }
   ]
 }

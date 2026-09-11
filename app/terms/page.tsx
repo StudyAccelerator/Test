@@ -73,6 +73,19 @@ export default function Terms() {
           email.
         </P>
         <P>4.3 All prices are stated in pounds sterling and include any applicable tax.</P>
+        <P>
+          4.4 Some Programmes are charged as a monthly subscription rather than as a single payment. Where
+          that applies, the Programme page and the checkout page say so before you pay. Your first payment is
+          taken when you book, and each later payment is taken automatically on the same date each month from
+          the payment method you gave us, until the subscription ends under clause 5.6.
+        </P>
+        <P>
+          4.5 The Top 1% Mentorship is a monthly subscription with a minimum term of four monthly payments.
+          The current monthly price is shown on the Programme page and at checkout. We ask for four months
+          because that is the shortest period over which a change in how a student studies reliably shows up
+          in their marks, and we would rather be honest about that at the start than take a payment for a
+          month that cannot do the job on its own.
+        </P>
 
         <H2>5. Cancellation and refunds</H2>
         <P>
@@ -86,7 +99,25 @@ export default function Terms() {
         </P>
         <P>
           5.3 Once you have taken part in more than the first session, the promise in clause 5.1 no longer
-          applies. To cancel at any time, contact us by email.
+          applies. For Programmes paid for in a single payment, you may cancel at any time by contacting us
+          by email.
+        </P>
+        <P>
+          5.4 Clauses 5.1 and 5.2 apply to subscription Programmes in the same way as to any other. If you
+          tell us within 48 hours of the first session that the Programme is not right, we refund your
+          payment in full, cancel the subscription, and the minimum term in clause 4.5 does not apply to you.
+        </P>
+        <P>
+          5.5 Once that risk-free period has passed, the minimum term in clause 4.5 applies and the four
+          monthly payments are due. If you need to stop before the end of the minimum term because of
+          illness, money, a change at school or any other genuine reason, email us and we will work something
+          out with you. We would always rather find a solution than hold a family to a payment they cannot
+          make.
+        </P>
+        <P>
+          5.6 After the minimum term, the subscription continues month to month and you may end it at any
+          time by giving us one month&apos;s notice by email. Your place, your sessions and your access
+          continue to the end of that notice month, and no payment is taken after it.
         </P>
 
         <H2>6. Delivery of sessions</H2>
