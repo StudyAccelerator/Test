@@ -49,22 +49,40 @@ P_STYLE = f"margin:0 0 18px 0;font-family:{FONT};font-size:17px;line-height:1.6;
 LINK_STYLE = "color:#C9A96E;text-decoration:underline;"
 MONO = "font-family:Menlo,Consolas,'Courier New',monospace;font-size:14px;"
 
-# Waleed's standard photo signature (his real headshot on the MailerLite CDN),
-# same block the Sunday Session builder uses.
-PHOTO_SIG = (
-    '<table role="presentation" border="0" cellspacing="0" cellpadding="0" style="margin:8px 0 4px 0;">'
-    '<tr>'
-    '<td valign="top" style="padding-right:16px;">'
-    '<img src="https://storage.mlcdn.com/account_image/2113061/3SoYgyuLfUdmX53Lnw82S2YV4c6PnZsQch9dP7T5.jpg"'
-    ' width="64" height="64" alt="Dr Waleed Ahmad"'
-    ' style="display:block;width:64px;height:64px;border-radius:64px;"></td>'
-    f'<td valign="middle" style="font-family:{FONT};font-size:15px;line-height:1.55;color:#1a1535;">'
-    '<strong>Dr Waleed Ahmad, MBBS</strong><br>'
-    'Founder, A-Level Accelerators<br>'
-    f'<a href="https://alevelaccelerators.com" style="{LINK_STYLE}">alevelaccelerators.com</a>'
-    '</td></tr></table>'
-)
-SIG_PLAIN = 'Dr Waleed Ahmad, MBBS\nFounder, A-Level Accelerators\nalevelaccelerators.com'
+# Waleed's sign-off block, matching the one his MailerLite builder emails have used
+# since July 2026 (checked against the live E0 and P0 on 12 September 2026).
+#
+# The photo is 1536x2048, a PORTRAIT, not a square. His builder block sets width
+# only and lets the height scale, so never give this img a height attribute or a
+# fixed CSS height: doing that squashes his face, which is exactly what the first
+# version of this signature did. If a true circle is ever wanted, the fix is a
+# square-cropped upload, not CSS.
+SIG_IMG = 'https://storage.mlcdn.com/account_image/2113061/3SoYgyuLfUdmX53Lnw82S2YV4c6PnZsQch9dP7T5.jpg'
+SIG_TEXT = f"margin:0;font-family:{FONT};font-size:16px;line-height:165%;color:#515856;"
+SIG_LINK = "color:#515856;text-decoration:underline;"
+VALEDICTIONS = ('Kind regards,', 'Best wishes,', 'Talk soon,', 'Warm wishes,', 'All the best,')
+
+
+def photo_sig(valediction='Kind regards,'):
+    """The signature block: round photo left, sign-off and credentials right."""
+    return (
+        '<table role="presentation" border="0" cellspacing="0" cellpadding="0"'
+        ' style="margin:30px 0 4px 0;">'
+        '<tr>'
+        '<td align="center" valign="top" width="80" style="width:80px;">'
+        f'<img src="{SIG_IMG}" width="80" border="0" alt="Dr Waleed Ahmad"'
+        ' style="display:inline-block;max-width:80px;border-radius:80px;"></td>'
+        '<td width="30" style="width:30px;line-height:30px;">&nbsp;</td>'
+        '<td valign="middle" align="left">'
+        f'<p style="{SIG_TEXT}">{html.escape(valediction)}<br>Dr Waleed Ahmad<br>'
+        f'<a href="https://alevelaccelerators.com" style="{SIG_LINK}">Founder of A-Level Accelerators</a><br>'
+        f'<a href="mailto:waleed@alevelaccelerators.com" style="{SIG_LINK}">waleed@alevelaccelerators.com</a>'
+        '</p></td></tr></table>'
+    )
+
+
+SIG_PLAIN = ('Dr Waleed Ahmad\nFounder of A-Level Accelerators\n'
+             'alevelaccelerators.com\nwaleed@alevelaccelerators.com')
 
 
 def api_key():
@@ -154,53 +172,65 @@ def para_html(block):
     return f'<p style="{P_STYLE}">{t}</p>'
 
 
-def swap_signature(paras):
-    """Insert the photo signature after the bare 'Waleed' sign-off paragraph,
-    replacing a plain-text credentials paragraph if one follows (the photo
-    block carries the credentials)."""
+def lift_signoff(blocks):
+    """Pull the written sign-off out of the body so the photo block can carry it,
+    the way Waleed's own builder emails are laid out: body, then any PS, then one
+    signature block at the very end.
+
+    Takes the markdown blocks. Removes the bare 'Waleed' line, the valediction
+    immediately above it if there is one, and a plain credentials line just below
+    it. Returns (remaining blocks, the valediction to print in the block)."""
     sig_ix = None
-    for i, p in enumerate(paras):
-        if re.fullmatch(r'<p style="[^"]*">\s*Waleed\s*</p>', p):
+    for i, b in enumerate(blocks):
+        if b.strip() == 'Waleed':
             sig_ix = i
     if sig_ix is None:
-        return paras, False
-    out = paras[:sig_ix + 1] + [PHOTO_SIG]
-    rest = paras[sig_ix + 1:]
-    if rest and 'Dr Waleed Ahmad' in rest[0]:
-        rest = rest[1:]
-    return out + rest, True
+        return blocks, 'Kind regards,'
+    valediction = 'Kind regards,'
+    start = sig_ix
+    if sig_ix and blocks[sig_ix - 1].strip() in VALEDICTIONS:
+        valediction = blocks[sig_ix - 1].strip()
+        start = sig_ix - 1
+    end = sig_ix + 1
+    if end < len(blocks) and blocks[end].lstrip().startswith('Dr Waleed Ahmad'):
+        end += 1
+    return blocks[:start] + blocks[end:], valediction
 
 
 def render_email(meta, footer):
-    body = meta['body']
-    paras = [para_html(b) for b in re.split(r'\n\s*\n', body) if b.strip()]
+    blocks = [b for b in re.split(r'\n\s*\n', meta['body']) if b.strip()]
+    sig = ''
     if not meta.get('no_signature'):
-        paras, swapped = swap_signature(paras)
-        if not swapped:
-            paras.append(PHOTO_SIG)
+        blocks, valediction = lift_signoff(blocks)
+        sig = photo_sig(valediction)
+    paras = [para_html(b) for b in blocks]
     pre = html.escape(meta['preheader'])
     return f"""<div style="display:none;max-height:0;overflow:hidden;mso-hide:all;">{pre}&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;</div>
 <table role="presentation" width="100%" cellpadding="0" cellspacing="0" style="background:#ffffff;"><tr><td align="center">
 <table role="presentation" width="600" cellpadding="0" cellspacing="0" style="max-width:600px;width:100%;"><tr><td style="padding:32px 24px 40px 24px;">
 {chr(10).join(paras)}
-<div style="border-top:2px solid #C9A96E;margin-top:28px;padding-top:16px;">
-<p style="margin:0;font-family:{FONT};font-size:13px;line-height:1.6;color:#6b6580;">
-{html.escape(footer)}<br>
-<a href="{{$unsubscribe}}" style="{LINK_STYLE}">Unsubscribe</a></p>
+{sig}
+<div style="border-top:1px solid #e6e2d8;margin-top:34px;padding-top:20px;">
+<p style="margin:0;font-family:{FONT};font-size:14px;line-height:150%;color:#515856;text-align:center;">
+{html.escape(footer)}<br><br>
+<a href="{{$unsubscribe}}" style="{SIG_LINK}">Unsubscribe</a></p>
 </div>
 </td></tr></table></td></tr></table>"""
 
 
 def render_plain(meta, footer):
-    body = meta['body']
+    blocks = [b for b in re.split(r'\n\s*\n', meta['body']) if b.strip()]
+    tail = ''
+    if not meta.get('no_signature'):
+        blocks, valediction = lift_signoff(blocks)
+        tail = f'\n\n{valediction}\n{SIG_PLAIN}'
+    body = '\n\n'.join(blocks) + tail
     body = re.sub(r'^\[BUTTON: (.+?) -> (\S+?)\]$', r'\1:\n\2', body, flags=re.M)
     body = re.sub(r'^\[LINK: (.+?) -> (\S+?)\]$', r'\1:\n\2', body, flags=re.M)
     body = re.sub(r'^\[BOX START.*\]$', 'From your report:', body, flags=re.M)
     body = re.sub(r'^\[BOX END\]$', '', body, flags=re.M)
     body = re.sub(r'\*\*(.+?)\*\*', r'\1', body, flags=re.S)
     body = re.sub(r'\n{3,}', '\n\n', body)
-    if 'Dr Waleed Ahmad' not in body:
-        body = body.rstrip() + '\n' + SIG_PLAIN
     return f"{body.rstrip()}\n\n----\n{footer}\nUnsubscribe: {{$unsubscribe}}\n"
 
 
