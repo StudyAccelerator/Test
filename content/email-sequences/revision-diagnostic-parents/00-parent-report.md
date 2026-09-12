@@ -1,37 +1,62 @@
-# P0 · The report, and one thing to do tonight
+# P0 · Your child's report and next steps
 
 Send: Instantly on joining group "Revision Diagnostic Parents"
-Subject A: {$diag_child_name|default('your child')}'s revision diagnosis, in plain English
-Subject B: what the diagnostic found, and one thing to do tonight
-Preheader: The profile, what it actually means, and the first move. No jargon.
-Goal: deliver value instantly, hand over tonight's one move, set the daily cadence expectation, prime replies via the PS.
-Links: 1 (report page)
-Revised: 6 September 2026 (Waleed's style pass: Sonia-style intro, defensive lines out, PS with character)
+Subject A: {$name} Here's {$diag_child_name|default('Your Child')}'s Diagnostic Report & Next Steps Towards A* Grades
+Subject B: {$name}, {$diag_child_name|default('your child')}'s report and your free strategy plan
+Preheader: Here's {$diag_child_name|default('your child')}'s report and a custom strategy plan towards A* grades
+Goal: the parent twin of Waleed's own E0 (12 September 2026): deliver the report AND sell the free academic strategy call as the reward for taking control of their child's grades. The call is the main CTA; the report follows it. Reply + Primary-tab favours after the report.
+Links: 2 (call scheduler, report page); the PS repeats the scheduler
+Source: Waleed's 12 September E0, tailored to the parent (his structure, his sentences, child's name threaded through). Keep the two in step: if he edits one, mirror the other.
 
 ---
 
-Hi {$name},
+Hey {$name},
 
-I hope you're well! I'm Dr Waleed, the founder of A-Level Accelerators, and thank you for taking the diagnostic for {$diag_child_name|default('your child')}. I know answering twenty questions about someone else's revision takes real honesty, so here's the same honesty back.
+I hope you're well, it's Dr Waleed! Well done for taking the first step towards top grades for {$diag_child_name|default('your child')} and filling in the revision diagnostic. You can find their full report below.
 
-The diagnosis came out as **{$diag_archetype|default('their revision profile')}**, with the biggest leak in **{$diag_bottleneck|default('how they revise')}**. In plain English, the problem isn't effort, and it isn't ability. It's that some of their {$diag_hours_per_week|default('weekly')} study hours, our estimate was {$diag_low_yield_hours|default('a fair chunk')}, are going into work that feels productive but doesn't turn into marks. I see this pattern very often in students who genuinely work hard but aren't quite getting the grades they're looking for, and it's one of the most fixable things there is.
+Now, just like in healthcare, the diagnosis isn't the only important bit, the management that follows is equally, if not even more important!
 
-I'm a doctor, and I'd never treat a patient before making a diagnosis. It's the same here: you can't fix revision until you know what's actually broken, and now you know.
+So alongside the report, you'll find the option to book a call with me for a completely free academic strategy plan for {$diag_child_name|default('your child')} (as a thank you and reward for taking control of their grades!). On the call, I'll highlight exactly the areas that are holding {$diag_child_name|default('them')} back and give you my personal advice on how they can get a huge head start into the year and boost their grades.
 
-**The one thing to do tonight**
+I've worked with over 1000 students in the past 6 years, and I promise, not a single parent has ever walked out of the strategy call thinking it wasn't the best use of their 20-30 minutes in helping their child towards top grades.
 
-Don't open with the report. Open with a question at dinner: "if you had an exam tomorrow, which topic would scare you most?" Whatever they name, that's where the report's plan starts, and they named it themselves. Then read the report together. It's written to be read together, and it says the same thing I've just told you: this isn't laziness, it's the way they're revising.
+If you're interested, you can book by clicking this link: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
-Your report stays saved here:
+If you have any questions, feel free to reply to this email.
 
-[BUTTON: Open the report again -> https://alevelaccelerators.com/revision-diagnostic/]
+Looking forward to meeting with you soon and helping {$diag_child_name|default('your child')} achieve those top grades :)
 
-Over the next two weeks I'll email you every day with the practical side, one short email at a time: what to say to {$diag_child_name|default('your child')}, what the fix actually looks like, and what your options are. Each one is something you can use the same evening.
+Now for the report!
 
-Tonight, just ask the question.
+[BOX START: "From your report", light border, mono labels]
+Profile: {$diag_archetype|default('on the report')}
+Primary leak: {$diag_bottleneck|default('on the report')}
+Study hours: {$diag_hours_per_week|default('their typical')} a week
+Leak estimate: {$diag_low_yield_hours|default('see the report')} hours on low-yield work
+System scores: {$diag_scores|default('on the report')}
+Recommended route: {$diag_route|default('on the report')}
+[BOX END]
 
-Best wishes,
+The full report, with the scores and the 7-day plan, stays saved on the device you used, and it's written to be read together with {$diag_child_name|default('your child')}:
+
+[LINK: Open the full report -> https://alevelaccelerators.com/revision-diagnostic/]
+
+Now that you've seen the report, I've got two quick favours:
+
+1. Move this email to your Primary tab (on Gmail, drag it across and tap "yes" when it asks; on iPhone Mail, add me to VIP). The next emails contain the actual fixes, and they're no use to you if you never see them.
+
+2. Hit reply and tell me the one thing in the report that stood out. One line is fine. I read every reply, and it tells me which fix to go deeper on for {$diag_child_name|default('your child')}.
+
+Here's what's coming: over the next few weeks, I'll send you the fixes for their result, one at a time. Each one is something you can use the same evening, most of them from the kitchen table.
+
+You've done the hard part already. Identified that the grades aren't where you want them to be for {$diag_child_name|default('your child')}, and you're looking for a solution. That's more than most parents ever do.
+
+Well done!
+
+PS: As promised, the most beneficial next step from here is a custom academic strategy plan for {$diag_child_name|default('your child')}. I guarantee that it will be the absolute best use of your 20-30 minutes in helping them achieve top grades. Click here to book: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
+
+Speak soon!
+
+Kind regards,
 
 Waleed
-
-PS: Once you've read the report together, reply and tell me the one line that surprised you most. I read every reply myself, usually between patients, and I'm always happy to talk it through!

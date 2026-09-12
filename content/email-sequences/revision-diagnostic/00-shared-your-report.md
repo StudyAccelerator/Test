@@ -1,18 +1,32 @@
-# E0 · Your report (shared, all routes)
+# E0 · Your report and next steps (shared, all routes)
 
 Send: immediately on joining group "Revision Diagnostic"
-Subject A: your diagnostic report, {$name}
-Subject B: {$name}, your revision profile: {$diag_archetype|default('the results are in')}
-Preheader: Your full result, saved to your inbox, plus one thing to do tonight.
-Goal: deliver the report as a keepsake, hand over tonight's first move, set the daily cadence expectation, earn a reply via the PS. No pitch.
-Links: 1 (report page)
-Revised: 6 September 2026 (Waleed's style pass: Dr Waleed intro, reward framing, defensive lines out, PS with character)
+Subject A: {$name} Here's Your Diagnostic Report & Next Steps Towards A* Grades
+Subject B: {$name}, your report and your free strategy plan
+Preheader: Here's your report and custom strategy plan towards A* grades
+Goal: deliver the report AND sell the free academic strategy call as the reward for taking control of their grades. The call is the main CTA; the report follows it. Reply + Primary-tab favours after the report.
+Links: 2 (call scheduler, report page); the PS repeats the scheduler
+Source: WALEED'S OWN COPY, written by him directly in the live E0 automation on 12 September 2026 and copied here verbatim (only the engine markup is added). This is the second reference email for the engine's style, alongside 01-shared-the-call.md: see .claude/skills/content-studio/references/email-style-waleed.md. Never "improve" it.
 
 ---
 
-Hi {$name},
+Hey {$name},
 
-Dr Waleed here, and your report's in. Before anything else, here it is in writing, so you don't lose it when the browser tab closes:
+I hope you're well, it's Dr Waleed! Well done for taking the first step to top grades and filling in the revision diagnostic. You can find the full report below.
+
+Now, just like in healthcare, the diagnosis isn't the only important bit, the management that follows is equally, if not even more important!
+
+So alongside your report, you'll find the option to book a call with me for a completely free academic strategy plan (as a thank you and reward for taking control of your grades!). On the call, I'll highlight exactly the areas that are holding you back (or your child if you're a parent) and my personal advice on how you can get a huge head start into the year and boost your grades.
+
+I've worked with over 1000 students in the past 6 years, and I promise, not a single student has ever walked out of the strategy call thinking it wasn't the best use of their 20-30 minutes in working towards top grades.
+
+If you're interested, you can book by clicking this link: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
+
+If you have any questions, feel free to reply to this email.
+
+Looking forward to meeting with you soon and helping you achieve those top grades :)
+
+Now for your report!
 
 [BOX START: "From your report", light border, mono labels]
 Profile: {$diag_archetype|default('on your report')}
@@ -23,24 +37,26 @@ System scores: {$diag_scores|default('on your report')}
 Recommended route: {$diag_route|default('on your report')}
 [BOX END]
 
-Your full report, with the scores and the 7 day plan, stays saved on the device you used:
+Your full report, with the scores and the 7-day plan, stays saved on the device you used:
 
 [LINK: Open my full report -> https://alevelaccelerators.com/revision-diagnostic/]
 
-Now the important bit.
+Now that you've seen your report, I've got two quick favours:
 
-Most students revise without really knowing if they're doing the right things. Am I doing enough hours? Should I make better notes? Why does nothing stick? That uncertainty can be really tiring, and it's why revision can feel a lot harder than it needs to be.
+1. Move this email to your Primary tab (on Gmail, drag it across and tap "yes" when it asks; on iPhone Mail, add me to VIP). The next emails contain the actual fixes, and they're no use to you if you never see them.
 
-You don't have that problem any more. You know exactly what your issue is. I'm a doctor, and I use this analogy all the time: I can't treat a patient until I've diagnosed them. It's the same with revision. You've got your diagnosis now, and everything I send you from here is the treatment for your specific result.
+2. Hit reply and tell me the one thing in your report that stood out. One line is fine. I read every reply, and it tells me which fix to go deeper on.
 
-So here's what I want you to do tonight. Do the first ten minutes of your plan. Take a blank page and write down every topic you'd dread seeing in an exam tomorrow. Don't fix anything yet, and don't open a textbook. Just get the list out of your head and onto paper. Once you can actually see the problem, you can fix it.
+Here's what's coming: over the next few weeks, I'll send you the fixes for your result, one at a time. Each one is something you can use the evening it arrives.
 
-And here's what's coming. I'll email you every day for the next two weeks, because the first couple of weeks are when it's easiest to get started, and each email is a fix for your specific result that you can use the same evening. After that you'll keep hearing from me most days, plus The Sunday Session every Sunday.
+You've done the hard part already. Identified that the grades aren't where you want them to be, and you're looking for a solution. That's more than most students and parents ever do.
 
-You've already done the honest part. Twenty questions, no flattering answers. That's more than most students ever do, so well done for taking an active approach to your grades :) Tonight's ten minutes is the next step, and it's the easiest one on the whole plan.
+Well done!
 
-Keep going!
+PS: As promised, the most beneficial next step from here is a custom academic strategy plan. I guarantee that it will be the absolute best use of your 20-30 minutes in helping you/your child achieve top grades. Click here to book: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
+
+Speak soon!
+
+Kind regards,
 
 Waleed
-
-PS: Two small favours. Drag this email into your Primary tab (Gmail will ask "do this for future messages?", say yes) so tomorrow's email doesn't get lost. And once you've written your list, reply and tell me the one thing in your report that surprised you. One line is fine. I read every reply myself, usually between patients haha.

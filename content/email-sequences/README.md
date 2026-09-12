@@ -15,10 +15,12 @@ The design rules, set by Waleed:
 
 | Entry point | Trigger group | Automation (new) | Replaces (switch OFF at flip) | Emails | Days |
 |---|---|---|---|---|---|
-| Diagnostic, student | Revision Diagnostic `192687508025247162` | V2 · Diagnostic: instant report (E0) | Revision Diagnostic: instant report email (E0) | 1 | instant |
+| Diagnostic, student | Revision Diagnostic `192687508025247162` | V2 · Diagnostic: instant report (E0) | Revision Diagnostic: instant report email (E0) (Waleed rewrote the live one himself on 12 Sept; V2 carries the same copy) | 1 | instant |
+| Diagnostic, student | Revision Diagnostic `192687508025247162` | Diagnostic: 6 hour strategy call follow-up (student) `198416817185621047` | nothing existed (added 12 Sept, Ian Stanley's six hour follow-up) | 1 | +6 hours |
 | Diagnostic, student, subject route | Diagnostic Route: Subject Accelerator `192802207993693338` | V2 · Diagnostic: Subject route (daily, 14 days) | Revision Diagnostic: Subject Accelerator route | 14 | daily, 1 to 14 |
 | Diagnostic, student, system route | Diagnostic Route: Study System `192802211655321354` | V2 · Diagnostic: Study System route (daily, 14 days) | Revision Diagnostic: Study System route | 14 | daily, 1 to 14 |
-| Diagnostic, parent | Revision Diagnostic Parents `193102828818925394` | V2 · Parent diagnostic: instant report (P0) | Parent diagnostic: instant report email (P0) | 1 | instant |
+| Diagnostic, parent | Revision Diagnostic Parents `193102828818925394` | V2 · Parent diagnostic: instant report (P0) (the parent twin of Waleed's 12 Sept E0) | Parent diagnostic: instant report email (P0) (still sends the old copy until the pair is flipped; the API cannot edit or switch an active automation) | 1 | instant |
+| Diagnostic, parent | Revision Diagnostic Parents `193102828818925394` | Parent diagnostic: 6 hour strategy call follow-up `198416821056963598` | nothing existed (added 12 Sept) | 1 | +6 hours |
 | Diagnostic, parent, subject route | Diag Parents Subject Route `193102829598016991` | V2 · Parent diagnostic: Subject route (daily, 14 days) | Parent diagnostic: Subject route (PB1 to PB4) | 14 | daily, 1 to 14 |
 | Diagnostic, parent, system route | Diag Parents System Route `193102829963970408` | V2 · Parent diagnostic: System route (daily, 14 days) | Parent diagnostic: System route (PY1 to PY4) | 14 | daily, 1 to 14 |
 | Revision Tracker | Revision Tracker Users `187183128836573106` | V2 · Revision Tracker (daily, 14 days) | Revision Tracker (May 2026 copy) | 15 | daily, 0 to 14 |

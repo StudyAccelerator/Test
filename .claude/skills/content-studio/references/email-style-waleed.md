@@ -29,6 +29,25 @@ What the session wrote, and what he changed it to:
 
 Spelling in his drafts gets corrected silently (bear, definitely, make). Nothing else in his own copy is ever "improved".
 
+## The 12 September E0, his second reference email
+
+On 12 September 2026 he rewrote the instant diagnostic report email (E0) himself, directly in the live automation, turning a "here's your report" delivery into a sell for the free call. It is copied verbatim into `content/email-sequences/revision-diagnostic/00-shared-your-report.md`, with a parent twin beside it. What it adds to the rules above:
+
+- **Opener:** "Hey {$name}," then "I hope you're well, it's Dr Waleed!" Warmer than "Hi", and the exclamation mark is his.
+- **Praise for the action, first sentence:** "Well done for taking the first step to top grades and filling in the revision diagnostic."
+- **The medical analogy, in his words:** "just like in healthcare, the diagnosis isn't the only important bit, the management that follows is equally, if not even more important!"
+- **The call has a full name:** "a completely free academic strategy plan", "a custom academic strategy plan", "the strategy call". Never shorten it to "a call" or "a chat".
+- **Reward framing, verbatim:** "(as a thank you and reward for taking control of your grades!)".
+- **What the call delivers:** "I'll highlight exactly the areas that are holding you back ... and my personal advice on how you can get a huge head start into the year and boost your grades."
+- **His proof line for the call:** "I've worked with over 1000 students in the past 6 years, and I promise, not a single student has ever walked out of the strategy call thinking it wasn't the best use of their 20-30 minutes in working towards top grades."
+- **Aspirational language is welcome:** "top grades", "A* grades" in the subject line and preheader, "boost your grades", "achieve those top grades :)". He is not shy of it; sessions should not be either.
+- **The link is spoken, not buttoned:** "If you're interested, you can book by clicking this link." and in the PS "Click here to book".
+- **Order:** the sell comes BEFORE the report ("Now for your report!"), the favours (Primary tab, reply) come after it, then the cadence promise, then "You've done the hard part already ... Well done!", then the PS repeats the call with "I guarantee that it will be the absolute best use of your 20-30 minutes".
+- **Sign-off:** "Speak soon!" then "Kind regards," then the signature. Student emails in this register end "Speak soon!", not "Keep going!".
+- **New scheduler link (12 September):** `https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call`. Use it for every call CTA from now on.
+
+The compliance scanner flags his "20-30 minutes" (hyphen range) and "when it comes to" in his own two emails. Those flags are accepted: his copy stays as he wrote it.
+
 ## The rules
 
 ### 1. Openers and sign-offs

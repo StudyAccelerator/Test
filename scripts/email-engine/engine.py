@@ -345,10 +345,16 @@ def cmd_verify(target_key):
                 print(f"  {mark} email[{ei}] {str(got.get('subject'))[:52]}  designed={em.get('is_designed')} from_name={got.get('from_name')}")
                 ei += 1
             else:
-                ok = got['type'] == 'delay' and int(got.get('value', 0)) == exp['delay_days'] and got.get('unit') == 'days'
+                # manifest delays are whole days (delay_days) or, for the six hour
+                # follow-ups, whole hours (delay_hours)
+                if 'delay_hours' in exp:
+                    want_v, want_u = exp['delay_hours'], 'hours'
+                else:
+                    want_v, want_u = exp['delay_days'], 'days'
+                ok = got['type'] == 'delay' and int(got.get('value', 0)) == want_v and got.get('unit') == want_u
                 if not ok:
                     failures += 1
-                    print(f"  FAIL delay: got {got.get('value')} {got.get('unit')}, want {exp['delay_days']} days")
+                    print(f"  FAIL delay: got {got.get('value')} {got.get('unit')}, want {want_v} {want_u}")
         print()
     print('VERIFY:', 'ALL OK' if failures == 0 else f'{failures} FAILURES')
     sys.exit(1 if failures else 0)
