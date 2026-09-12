@@ -57,7 +57,7 @@ export default function PricingSection() {
         'Full access to all systems',
       ],
       cta: 'Book Free Consultation',
-      ctaLink: 'https://scheduler.zoom.us/dr-waleed-ahmad/top-1-mentorship-meeting',
+      ctaLink: 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call',
       popular: false,
       highlight: true,
       extraNote: 'Invite only · limited to 5 spaces',
