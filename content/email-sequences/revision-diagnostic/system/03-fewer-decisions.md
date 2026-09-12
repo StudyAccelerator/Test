@@ -37,7 +37,7 @@ Both versions come with our satisfaction guarantee: join the first session, and 
 
 If you're not sure which version fits you, that's what the free strategy plan call is for. Thirty minutes, we look at your week together, and I'll tell you straight which one I'd pick for you:
 
-[BUTTON: Book a free call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 And the full details of both versions are here whenever you want them: https://alevelaccelerators.com/study-systems/
 

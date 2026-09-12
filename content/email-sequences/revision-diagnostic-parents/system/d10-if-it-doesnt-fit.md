@@ -24,7 +24,7 @@ By now you know what the Study System is, what it costs at each level and what s
 
 If your what-if isn't here, bring it to the free half hour. You'll leave with a straight answer and a strategy plan for {$diag_child_name|default('your child')}, and I'm confident we can help with this:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Best wishes,
 

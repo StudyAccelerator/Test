@@ -588,7 +588,7 @@ export default function PlanView({
           <p className="mt-3 text-[13px] text-brand-text/55">
             Or{' '}
             <a
-              href="https://scheduler.zoom.us/dr-waleed-ahmad/a-level"
+              href="https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call"
               target="_blank"
               rel="noopener noreferrer"
               className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-2"

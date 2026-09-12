@@ -14,7 +14,7 @@ export const metadata = {
 const STRIPE_LINK_ONE_SUBJECT = 'https://buy.stripe.com/7sYdRafdM2HA8nE36Ic3m09'
 const STRIPE_LINK_TWO_SUBJECTS = 'https://buy.stripe.com/28E14o3v495Y9rIazac3m0a'
 const STRIPE_LINK_THREE_SUBJECTS = 'https://buy.stripe.com/8x2eVe2r0cia47o36Ic3m0b'
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 
 export default function SubjectAccelerators() {
   const faqs = [

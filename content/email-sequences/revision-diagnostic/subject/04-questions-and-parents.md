@@ -45,7 +45,7 @@ The recommendation is our Subject Accelerator in their priority subject: twelve 
 
 Cost is £339 for the twelve weeks in one subject, which for scale is less than seven hours of typical 1:1 tutoring at the national average of around £50 an hour. Sessions are recorded if a weekend is missed. On average, our students jump two grades, and the first session is covered by our satisfaction guarantee: if you're not completely satisfied, you get your money back, no questions asked.
 
-If it would help to talk it through, I'd be happy to build your child's revision plan with you on a free 30 minute call. Reply to this email with a couple of evenings that suit, or book a slot here: https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions at all, please don't hesitate to send them over!
+If it would help to talk it through, I'd be happy to build your child's revision plan with you on a free 30 minute call. Reply to this email with a couple of evenings that suit, or book a slot here: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call. Any questions at all, please don't hesitate to send them over!
 
 ---
 

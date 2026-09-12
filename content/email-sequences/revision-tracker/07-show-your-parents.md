@@ -28,7 +28,7 @@ Hello, I'm Dr Waleed Ahmad, an NHS doctor and the founder of A-Level Accelerator
 
 Your child has built themselves a structured revision week with my free Revision Tracker. It plans their study hours around their weakest topics, uses self-testing rather than re-reading (the most repeated finding in the science of learning), caps the load at what's actually achievable, and rebuilds each Sunday from fresh evidence. The best thing you can do with it is ask to see the week, put it somewhere visible, and let the plan answer your questions instead of them.
 
-If it would help to talk through where their revision stands, I'd be happy to build your child's plan with you on a free 30 minute call. Book a slot here, or reply to this email with a couple of evenings that suit: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+If it would help to talk through where their revision stands, I'd be happy to build your child's plan with you on a free 30 minute call. Book a slot here, or reply to this email with a couple of evenings that suit: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 ---
 

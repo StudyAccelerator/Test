@@ -24,7 +24,7 @@ Most families' answer is a mix: the free structure as the base, plus the one pai
 
 If you can't place your child clearly on one path, that's exactly what the free half hour is for. Bring what you've seen, I'll bring six years of pattern-matching, and you'll leave with a strategy plan for them. I'm confident we can help with this:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Best wishes,
 

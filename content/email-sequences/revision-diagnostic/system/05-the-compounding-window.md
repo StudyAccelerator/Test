@@ -29,7 +29,7 @@ So, plainly, the two ways to do it.
 
 **On your own:** run what you already have. Blurt daily, messy pages, second colour, second pass. Book every topic's day 2 and day 5 returns into a calendar the moment you finish it. Keep the error log and retest it on Sundays. Forty-five minute sessions, phone in another room, decide tomorrow's topic tonight. That's the system, and you've had it across three emails.
 
-If you're stuck between the two, that's exactly what the free strategy plan call is for, and I'll tell you straight which one fits: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+If you're stuck between the two, that's exactly what the free strategy plan call is for, and I'll tell you straight which one fits: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 From here I'm in your inbox most days: one thing school never taught you, usable that evening, plus The Sunday Session on Sundays. When something from your report starts working, reply and tell me. Those replies are honestly the best part of this job.
 

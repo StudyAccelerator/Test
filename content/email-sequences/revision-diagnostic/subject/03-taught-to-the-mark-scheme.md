@@ -43,7 +43,7 @@ Details, dates and the session times are all here:
 
 [BUTTON: See the Subject Accelerators -> https://alevelaccelerators.com/subject-accelerators/]
 
-Not sure whether your log says K or W? That's exactly what the free strategy plan call is for: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Not sure whether your log says K or W? That's exactly what the free strategy plan call is for: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Keep going!
 

@@ -25,7 +25,7 @@ Four questions I hear about the Study System, answered straight.
 
 [BUTTON: The Study System, in detail -> https://alevelaccelerators.com/study-systems/]
 
-Or bring me your version of these questions on the free strategy plan call: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Or bring me your version of these questions on the free strategy plan call: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Best wishes,
 

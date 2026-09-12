@@ -1,6 +1,6 @@
 import Image from 'next/image'
 
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 
 export default function Footer() {
   return (

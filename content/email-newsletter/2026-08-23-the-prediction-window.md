@@ -54,7 +54,7 @@ Three weeks today, the September cohort starts: Sunday 13th September. Twelve we
 
 [BUTTON: Book my place for September -> https://alevelaccelerators.com/subject-accelerators/]
 
-Or the honest-answer call: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Or the honest-answer call: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Keep going!
 

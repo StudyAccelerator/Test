@@ -41,7 +41,7 @@ Places are capped because the sessions only work in small groups, so when a subj
 
 [BUTTON: Book my place for September -> https://alevelaccelerators.com/subject-accelerators/]
 
-Or if you'd rather talk it through first, that's what the free strategy plan call is for: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Or if you'd rather talk it through first, that's what the free strategy plan call is for: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 **Either way**
 

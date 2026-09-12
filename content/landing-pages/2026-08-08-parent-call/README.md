@@ -12,7 +12,7 @@ A standalone, self-contained landing page that funnels cold parent traffic into 
 
 ## Decisions taken as defaults (change any, the build swaps in minutes)
 
-1. **Booking target:** the existing Zoom scheduler (scheduler.zoom.us/dr-waleed-ahmad/a-level), in 4 places in the file. Swap to Calendly or anything else in one find-and-replace.
+1. **Booking target:** the existing Zoom scheduler (scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call), in 4 places in the file. Swap to Calendly or anything else in one find-and-replace.
 2. **No prices on the page.** The call sells; the FAQ promises exact prices on the call. Competitor pages do the same.
 3. **Direct booking, not phone-callback capture.** Victor's "give us your number, we ring you in 24 hours" mechanic converts well but needs someone free to ring within 24 hours, which an FY rota cannot promise. The honest version is self-booked slots on the real calendar. A phone-capture form that feeds MailerLite plus the personal-outreach habit can be added later as an A/B (needs a form backend decision first: MailerLite key handling).
 4. **Audience width:** GCSE and A-level, Year 9 to 13, per Waleed's instruction that this is not limited to one level. Copy stays A-level-weighted in examples because that is the core market.

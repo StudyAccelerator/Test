@@ -24,7 +24,7 @@ By this point you know what the Subject Accelerator is, what it costs and what s
 
 If there's a what-if I've missed, that's exactly what the free half hour is for. Bring the worry, and you'll leave with a straight answer and a strategy plan for {$diag_child_name|default('your child')}:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Best wishes,
 

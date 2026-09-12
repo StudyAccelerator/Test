@@ -4,7 +4,7 @@ import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
 import { WALL_QUOTES, type WallQuote } from '@/lib/testimonials'
 
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 const SITE_URL = 'https://alevelaccelerators.com'
 const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/60'
 

@@ -25,7 +25,7 @@ The diagnostic pointed {$diag_child_name|default('your child')} at our {$diag_wo
 
 [BUTTON: See the Subject Accelerators -> https://alevelaccelerators.com/subject-accelerators/]
 
-Want me to look at their result with you first? That's the free strategy plan call, and I'm confident we can help with this: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Want me to look at their result with you first? That's the free strategy plan call, and I'm confident we can help with this: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Best wishes,
 

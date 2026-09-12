@@ -24,6 +24,6 @@ The diagnostic recommended the Summer Accelerator for {$diag_child_name|default(
 
 [BUTTON: See the Summer Accelerator -> https://alevelaccelerators.com/summer-accelerators/]
 
-Not sure, or want to sense-check whether it fits? Book a free half hour call with me and I will tell you straight, even if the answer is no: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Not sure, or want to sense-check whether it fits? Book a free half hour call with me and I will tell you straight, even if the answer is no: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Waleed

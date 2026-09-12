@@ -28,7 +28,7 @@ const STRIPE_LINK_ONE_SUBJECT = 'https://buy.stripe.com/9B614oe9I6XQdHYdLmc3m06'
 const STRIPE_LINK_TWO_SUBJECTS = 'https://buy.stripe.com/dRmdRa2r04PI5bs6iUc3m07'
 const STRIPE_LINK_THREE_SUBJECTS = 'https://buy.stripe.com/14A00k6Hgeqi0Vc8r2c3m08'
 const STRIPE_LINK_FOUR_SUBJECTS = 'https://buy.stripe.com/dRm14o3v4aa2avM9v6c3m05'
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 
 export default function SummerAccelerators() {
   const subjects = [

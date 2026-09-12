@@ -18,7 +18,7 @@ Two days on from your booked slot, one of two things is true, so this email cove
 
 **If life got in the way and the call didn't happen:** zero judgement. My week has hospital shifts in it, so I understand plans moving. The offer doesn't expire, it just needs a new slot:
 
-[BUTTON: Rebook the call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Rebook the call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 And if things have changed and you'd rather leave it altogether, reply and say so, one line, and I'll leave your inbox in peace. The free tools and the report's plan all keep working without me.
 

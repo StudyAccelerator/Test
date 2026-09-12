@@ -26,7 +26,7 @@ the site's own hero). Pick one and use it everywhere: ad, call, follow-up
 email, so the thing the parent was promised is the thing they receive.
 
 **Destination (two versions to test against each other):**
-- Scheduler version: `https://scheduler.zoom.us/dr-waleed-ahmad/a-level`
+- Scheduler version: `https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call`
   (Traffic objective, optimise landing page views; judged on real Zoom bookings)
 - Instant Form version: same creative and primary text, Meta Instant Form with
   fields Name, Phone, "Best time to call" (Morning / Afternoon / Evening) and

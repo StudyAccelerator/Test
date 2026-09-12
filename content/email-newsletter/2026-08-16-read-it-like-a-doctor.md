@@ -52,7 +52,7 @@ The September Subject Accelerator cohort starts four weeks today: Sunday 13th Se
 
 [BUTTON: See the September cohort -> https://alevelaccelerators.com/subject-accelerators/]
 
-Or fifteen honest minutes first: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Or fifteen honest minutes first: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Keep going!
 

@@ -32,4 +32,4 @@ Keep going!
 
 Waleed
 
-PS: If you've done a couple of timed papers and the results confuse you, that's a great problem to bring to a free strategy plan call. Bring the marked sections and we'll read them together: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If you've done a couple of timed papers and the results confuse you, that's a great problem to bring to a free strategy plan call. Bring the marked sections and we'll read them together: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

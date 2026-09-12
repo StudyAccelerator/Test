@@ -24,7 +24,7 @@ Notice the word that keeps coming up: confidence, not grades. That's because con
 
 So here's a reward for getting this far into the week, because most students don't. I keep a few free 30 minute calls each week for students keen to improve their grades. We look at your tracker week and how it's actually going, I tell you what I'd change first and why, and you leave with a strategy plan for the next two weeks. No cost, and all I ask in return is that you keep me updated on how it goes :)
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Keep going!
 

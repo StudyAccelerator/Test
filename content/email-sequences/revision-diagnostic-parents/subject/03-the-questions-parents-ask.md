@@ -25,7 +25,7 @@ Four questions, answered the way I answer them on calls.
 
 [BUTTON: Dates, times and detail -> https://alevelaccelerators.com/subject-accelerators/]
 
-Your own version of these questions, answered live on the free strategy plan call: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Your own version of these questions, answered live on the free strategy plan call: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Best wishes,
 

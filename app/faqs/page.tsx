@@ -10,7 +10,7 @@ export const metadata = {
   alternates: { canonical: 'https://alevelaccelerators.com/faqs/' },
 }
 
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 
 type QA = { q: string; a: string }
 type Group = { heading: string; items: QA[] }

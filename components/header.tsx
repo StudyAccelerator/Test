@@ -23,7 +23,7 @@ const MORE_LINKS = [
   ['/faqs/', 'FAQs'],
 ]
 
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 
 const EASE = [0.22, 1, 0.36, 1] as const
 

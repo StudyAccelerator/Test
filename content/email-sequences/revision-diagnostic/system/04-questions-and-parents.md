@@ -43,13 +43,13 @@ Your child took my free 20 question diagnostic. Their result points at the metho
 
 The structure of it: the Study Series is £119 for the taught system across four live sessions, and the Study Accelerator is £499 with twelve sessions plus weekly accountability while the habits take hold. For comparison, £499 is about ten hours of typical 1:1 tutoring, which would address one subject and leave the underlying method untouched. Both are covered by our satisfaction guarantee: join the first session, and if you're not completely satisfied, you get your money back.
 
-If it would help to talk it through, I'd be happy to build your child's revision plan with you on a free 30 minute call. Reply to this email with a couple of evenings that suit, or book a slot here: https://scheduler.zoom.us/dr-waleed-ahmad/a-level. Any questions at all, please don't hesitate to send them over!
+If it would help to talk it through, I'd be happy to build your child's revision plan with you on a free 30 minute call. Reply to this email with a couple of evenings that suit, or book a slot here: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call. Any questions at all, please don't hesitate to send them over!
 
 ---
 
 If any question of yours isn't here, {$name}, hit reply and ask it. Otherwise, a quick call with me is the easiest next step, and you leave with a strategy plan whichever version you pick:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Keep going!
 

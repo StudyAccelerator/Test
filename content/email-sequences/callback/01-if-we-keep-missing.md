@@ -16,7 +16,7 @@ If we've already spoken, ignore this email. It's the automatic safety net, and y
 
 If we haven't managed to connect yet, that's normal, not a problem. You asked me to ring around {$diag_call_time|default('your chosen time')}, and life happens to both of us, my shifts included. So rather than playing phone tag all week, here's the fix: pick an exact slot in my calendar and I'll call you at that minute. It takes about thirty seconds and removes all the guesswork.
 
-[BUTTON: Pick an exact time -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Pick an exact time -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 It's the same call either way: your diagnostic report, what I'd fix first, and a strategy plan for the next few weeks, built together. Twenty to thirty minutes, free, and all I ask in return is that you keep me updated on how it goes.
 

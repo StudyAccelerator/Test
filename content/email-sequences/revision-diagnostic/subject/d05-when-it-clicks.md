@@ -26,7 +26,7 @@ And the number that matters most: on average, our students jump two grades. That
 
 So here's today's step, and it's a reward for actually running the drill rather than just reading about it. I keep a few free 30 minute calls each week for students keen to improve their grades. We look at your log together, I tell you what I'd fix first and why, and you leave with a strategy plan for the next two weeks. All I ask in return is that you keep me updated on how it goes :)
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Keep going!
 

@@ -22,7 +22,7 @@ On timing: the cohort starts Sunday 13 September because the twelve weeks then s
 
 If you're weighing it up and want a straight answer about fit, that's what my free strategy plan call is for. Bring the situation, and you'll leave with a plan either way:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Waleed
 

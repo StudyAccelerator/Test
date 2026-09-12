@@ -28,4 +28,4 @@ Best wishes,
 
 Waleed
 
-PS: If "still torn" is the honest answer, the quickest way through it is the free call. Half an hour, and you leave with a strategy plan either way: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If "still torn" is the honest answer, the quickest way through it is the free call. Half an hour, and you leave with a strategy plan either way: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

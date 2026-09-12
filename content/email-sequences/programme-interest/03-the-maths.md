@@ -26,7 +26,7 @@ Put simply: at £50 an hour you're paying for explanations. Here you're training
 
 If your situation makes the sums unclear, a tight budget, three shaky subjects, a method problem that looks like a subject problem, bring it to the free half hour and we'll work out the right path together:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Waleed
 

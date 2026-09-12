@@ -27,7 +27,7 @@ Everything else is on the page:
 
 [BUTTON: See the September programme -> https://alevelaccelerators.com/subject-accelerators/]
 
-And the standing offer stands all week: a free half hour where we look at your child's situation together and you leave with a strategy plan for them. I'm confident we can help with this. Book a slot here, or just reply with a couple of days that suit: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+And the standing offer stands all week: a free half hour where we look at your child's situation together and you leave with a strategy plan for them. I'm confident we can help with this. Book a slot here, or just reply with a couple of days that suit: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Best wishes,
 

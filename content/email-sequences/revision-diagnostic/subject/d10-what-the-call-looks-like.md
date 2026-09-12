@@ -24,7 +24,7 @@ That's the whole call. If the Subject Accelerator fits what your log shows, I'll
 
 It's free, and it's a reward for students keen enough to actually do the work. All I ask in return is that you keep me updated on how the plan goes :)
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Keep going!
 

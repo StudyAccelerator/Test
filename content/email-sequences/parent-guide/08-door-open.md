@@ -28,4 +28,4 @@ Best wishes,
 
 Waleed
 
-PS: If "still confused" is the honest answer, the quickest way through it is the free call. Half an hour, and you leave with a strategy plan for your child either way: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If "still confused" is the honest answer, the quickest way through it is the free call. Half an hour, and you leave with a strategy plan for your child either way: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

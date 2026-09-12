@@ -27,7 +27,7 @@ The options, one line each:
 
 [BUTTON: Choose the level -> https://alevelaccelerators.com/study-systems/]
 
-And the standing offer: a free half hour with me to look at the diagnostic together and pick the right level for {$diag_child_name|default('your child')}. I'm confident we can help with this: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+And the standing offer: a free half hour with me to look at the diagnostic together and pick the right level for {$diag_child_name|default('your child')}. I'm confident we can help with this: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Whatever you choose, do one thing today: ask {$diag_child_name|default('your child')} the book-closed question from my first email. The whole thing starts from that one honest moment.
 

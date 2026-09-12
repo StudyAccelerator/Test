@@ -12,7 +12,7 @@ export const metadata = {
   alternates: { canonical: 'https://alevelaccelerators.com/' },
 }
 
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 
 /* Layered shadow stack: the one card surface used across the page */
 const CARD =

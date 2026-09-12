@@ -27,7 +27,7 @@ Both come with our satisfaction guarantee: join the first session, and if you're
 
 [BUTTON: See the Study System -> https://alevelaccelerators.com/study-systems/]
 
-Not sure which level fits {$diag_child_name|default('your child')}? That's the free strategy plan call, and I'll tell you straight: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Not sure which level fits {$diag_child_name|default('your child')}? That's the free strategy plan call, and I'll tell you straight: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Best wishes,
 

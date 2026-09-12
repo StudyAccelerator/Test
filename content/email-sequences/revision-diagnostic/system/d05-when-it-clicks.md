@@ -26,7 +26,7 @@ You've now got the two core moves: the blurt and the day 2 return. If you starte
 
 So here's a reward for actually running the method rather than just reading about it. I keep a few free 30 minute calls each week for students keen to improve their grades. We look at your week together, I tell you what I'd change first, and you leave with a strategy plan for the next two weeks. All I ask in return is that you keep me updated on how it goes :)
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Keep going!
 

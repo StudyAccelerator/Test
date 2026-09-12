@@ -24,7 +24,7 @@ So the helpful thing now is not more information. It is a decision, either way.
 
 **If it is a no:** genuinely fine, and here is the free version of a good summer. The report's 7 day plan, repeated weekly. The free tracker to build each week. One past paper section in {$diag_worry_subject|default('their weakest subject')} every week under real timing. A student who does that all summer walks into September in better shape than most of the year group.
 
-**If you are torn:** that is what the free half hour call is for. I will look at the diagnostic result with you and say clearly whether this course fits {$diag_child_name|default('your child')}, or whether the free plan is honestly enough: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+**If you are torn:** that is what the free half hour call is for. I will look at the diagnostic result with you and say clearly whether this course fits {$diag_child_name|default('your child')}, or whether the free plan is honestly enough: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Either way, thank you for taking the diagnostic seriously. Most parents never look this closely at how their child actually studies, and the looking is half the fix.
 

@@ -22,7 +22,7 @@ A week of emails from me about method and questions. Today, what other families 
 
 **And a reward for getting this far.** Most parents who download the guide never make it to a week of emails, so here's what I keep for the ones who do. I keep a few free 30 minute calls each week for parents keen to see their child's grades improve. We talk through where your child actually is, based on whatever the guide and the questions have shown you, and you leave with a strategy plan for the next two weeks. I'm confident we can help with this, and all I ask in return is that you keep me updated on how they get on.
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Best wishes,
 

@@ -27,7 +27,7 @@ If those three come out yes, yes, yes, book the place tonight and tell {$diag_ch
 
 If any of them came out no, that's a fine answer, and the free path stays free: the diagnostic's plan, the weekly timed question with the mark scheme, the tracker. A student who runs those consistently trains a real part of the same skill.
 
-And if you're torn tonight, reply and say so. Or grab a free half hour after the weekend and we'll build {$diag_child_name|default('your child')}'s plan either way: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+And if you're torn tonight, reply and say so. Or grab a free half hour after the weekend and we'll build {$diag_child_name|default('your child')}'s plan either way: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Best wishes,
 

@@ -28,4 +28,4 @@ Keep going!
 
 Waleed
 
-PS: "Four" is a completely acceptable number haha. It just means we build week three differently. And if you'd rather talk it through than type it, the free call is here: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: "Four" is a completely acceptable number haha. It just means we build week three differently. And if you'd rather talk it through than type it, the free call is here: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

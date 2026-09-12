@@ -24,6 +24,6 @@ The same four questions come up on nearly every parent call about the Summer Acc
 
 [BUTTON: The full details and dates -> https://alevelaccelerators.com/summer-accelerators/]
 
-Or ask me your version of these directly: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+Or ask me your version of these directly: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Waleed

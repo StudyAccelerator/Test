@@ -28,4 +28,4 @@ Keep going!
 
 Waleed
 
-PS: "Started, then stopped" is the most common reply I get, and it's a completely fine one haha. It's also exactly what the Accelerator's weekly accountability exists for. The free call is here if you want to talk it through: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: "Started, then stopped" is the most common reply I get, and it's a completely fine one haha. It's also exactly what the Accelerator's weekly accountability exists for. The free call is here if you want to talk it through: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

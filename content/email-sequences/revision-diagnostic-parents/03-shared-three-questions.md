@@ -22,7 +22,7 @@ Across a thousand-plus students, the parents I speak to ask me the same three qu
 
 If your version of any of these three has details I haven't covered, that's exactly what the free half hour is for. You'll leave with a strategy plan for {$diag_child_name|default('your child')}, and I'm confident we can help with this:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Best wishes,
 

@@ -70,7 +70,7 @@ child, leave with their personal A* Roadmap.**
   "leave with your child's A* Roadmap" is an asset. The name recommended is
   **the A* Roadmap** (alternatives in the copy pack if it grates: the Grade
   Plan, the Route to Results plan, which echoes the site's own hero line).
-- Destination: the Zoom scheduler (`https://scheduler.zoom.us/dr-waleed-ahmad/a-level`).
+- Destination: the Zoom scheduler (`https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call`).
 - **Tracking caveat, decided honestly up front:** the scheduler is not our
   site, so no pixel fires and Meta cannot optimise on bookings. Two ways to
   run it, and the recommendation is to test both against each other:

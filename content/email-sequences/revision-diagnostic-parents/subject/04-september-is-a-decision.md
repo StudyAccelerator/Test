@@ -25,7 +25,7 @@ Places are capped because the sessions only work in small groups, so when a subj
 
 **If it's a no for now**, run the free version and mean it: the weekly timed question with the mark scheme, from my first email. A student who does that every week from now to mocks trains a real part of the same skill, and I'll keep sending you things that help.
 
-**If you're torn**, that's exactly what the free strategy plan call is for. I'll look at the diagnostic with you and give you a straight recommendation for {$diag_child_name|default('your child')}, and I'm confident we can help with this: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+**If you're torn**, that's exactly what the free strategy plan call is for. I'll look at the diagnostic with you and give you a straight recommendation for {$diag_child_name|default('your child')}, and I'm confident we can help with this: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 
 Whatever you decide, decide it this week and tell {$diag_child_name|default('your child')} the plan. Having a clear decision helps more than most parents expect.
 

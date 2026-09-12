@@ -31,4 +31,4 @@ Keep going!
 
 Waleed
 
-PS: If your diagnostic said your leak is the method itself rather than one subject's exam skills, the right fix is the Study System instead, and I'm happy to point you at it on a free call: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If your diagnostic said your leak is the method itself rather than one subject's exam skills, the right fix is the Study System instead, and I'm happy to point you at it on a free call: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

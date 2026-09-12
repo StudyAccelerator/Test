@@ -43,7 +43,7 @@ Two smaller corrections you should hear because they show the pattern: results d
 | Summer Accelerator, 6-week live course, Year 12 into 13 (Bio, Chem, Maths, Physics), cohort starts Sat 25 July | /summer-accelerators | £289 one subject, £539 two ("save £39"), £739 three ("most popular, save £128"), £849 four ("save £307"); "£9 to £12 per hour" anchoring against £50 1:1; first session risk-free with full refund | 4 Stripe payment links, live |
 | Subject Accelerators, 12-week live weekend programmes (Maths Sat, Bio and Chem Sun), cohort starts Sun 6 September | /subject-accelerators | £339 one subject, £629 two (featured, "save £49"), £849 all three ("save £168") | 3 Stripe payment links, live |
 | Study System layer, cohort starts Wed 9 September | /study-systems | Study Series £119; Study Accelerator £499; Top 1% Mentorship £2,000 per year, "invite only, limited to 5 spaces" | Stripe links for £119 and £499; consultation booking for the mentorship |
-| Free call | site-wide header/footer | n/a | scheduler.zoom.us/dr-waleed-ahmad/a-level |
+| Free call | site-wide header/footer | n/a | scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call |
 | Free tier | diagnostic, tracker, blurting PDF, parents guide, newsletter | £0 | MailerLite capture (except the blurting PDF, which is ungated) |
 
 **What the market charges around you (fetched 13 July):**

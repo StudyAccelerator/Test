@@ -30,4 +30,4 @@ Best wishes,
 
 Waleed
 
-PS: If a result like this has already landed and you want a second pair of eyes on what the pattern means, bring the paper to a free half hour and we'll build the plan from it together: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If a result like this has already landed and you want a second pair of eyes on what the pattern means, bring the paper to a free half hour and we'll build the plan from it together: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

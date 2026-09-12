@@ -21,7 +21,7 @@ const EASE = [0.22, 1, 0.36, 1] as const
 const CARD =
   'rounded-2xl bg-white [box-shadow:0_0_0_1px_rgba(46,37,87,.05),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)]'
 const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60'
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 
 const TONE_CHIP: Record<string, string> = {
   strong: 'bg-emerald-100 text-emerald-700',

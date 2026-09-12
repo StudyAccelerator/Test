@@ -33,4 +33,4 @@ Keep going!
 
 Waleed
 
-PS: If tonight's blank page test goes badly and you want to talk it through, that's what my free strategy plan calls are for. Bear with me if I'm on nights that week haha: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If tonight's blank page test goes badly and you want to talk it through, that's what my free strategy plan calls are for. Bear with me if I'm on nights that week haha: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

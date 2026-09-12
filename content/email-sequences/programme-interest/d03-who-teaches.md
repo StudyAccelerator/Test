@@ -24,7 +24,7 @@ The Study System side is different, and it's mine: the method itself, how to lea
 
 If you want to take the measure of us before deciding anything, that's genuinely what the free half hour is for. You'll be talking to me, and you'll leave with a strategy plan either way:
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Waleed
 

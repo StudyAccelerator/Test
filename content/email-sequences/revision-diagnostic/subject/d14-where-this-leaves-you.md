@@ -28,4 +28,4 @@ Keep going!
 
 Waleed
 
-PS: I mean the reply thing. Even "haven't started, sorry" gets a proper answer haha. And if you'd rather talk than type, the free call is here: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: I mean the reply thing. Even "haven't started, sorry" gets a proper answer haha. And if you'd rather talk than type, the free call is here: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call

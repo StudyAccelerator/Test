@@ -25,7 +25,7 @@ Top students don't do more. They do things better. They spend the same hours, us
 
 Now, sorting the hours is the WHAT, and you can do it yourself tonight with two columns on a page. Rebuilding your week around the high-yield 20 percent, for your subjects, your leak and your real timetable, is the part where a second pair of eyes helps. So here's a reward for anyone who actually does the sort: I keep a few free 30 minute calls each week for students keen to improve their grades. We look at your two columns together and you leave with a strategy plan for the next fortnight. All I ask in return is that you keep me updated on how it goes :)
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/a-level]
+[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Keep going!
 

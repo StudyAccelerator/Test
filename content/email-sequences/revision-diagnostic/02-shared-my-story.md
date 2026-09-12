@@ -30,4 +30,4 @@ Keep going with the plan. You're further ahead of 17 year old me than you probab
 
 Waleed
 
-PS: If any of this sounds familiar and you want to talk your own version of it through, that's exactly what my free strategy plan calls are for. Reply with a couple of days that work, or grab a slot here: https://scheduler.zoom.us/dr-waleed-ahmad/a-level
+PS: If any of this sounds familiar and you want to talk your own version of it through, that's exactly what my free strategy plan calls are for. Reply with a couple of days that work, or grab a slot here: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
