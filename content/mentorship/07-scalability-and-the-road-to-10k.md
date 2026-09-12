@@ -8,7 +8,11 @@
 
 **Stated (Waleed, 11 September):** about £20 a day on one ad; £70 over the last three to four days; 16 leads, so roughly £4.40 to £7 per lead; five of the 16 interested; one paid, one paying tomorrow, one starting 24 September, one 50/50 on Monday, one after the UCAT on Tuesday.
 
-**Verified (MailerLite, 12 September):** 18 diagnostic leads since 1 September, 10 parents and 8 students, and about 10 of those in the five days from 8 to 12 September. That is 2 a day, not 4 to 5 a day. So either the current ad runs to a Meta Instant Form (leads sit in Meta, never reach MailerLite, and are cheaper and colder than diagnostic completions), or the 16 includes leads from other sources. Worth checking, because the two kinds of lead convert very differently and the model below assumes diagnostic-quality leads. Two more things the September leads say: four of the eight students declined a call while the parents mostly chose Evening, and the buying signal across them is exam technique, a better method and a custom plan, which is the mentorship's exact pitch.
+**Verified (Ads Manager screenshot, 12 September, last 7 days):** campaign "Revision Diag Aug 11th", Leads objective, one ad set live, £20 daily budget. £67.96 spent, 16 website leads, £4.25 per website lead, reach 5,150, impressions 6,722. Two readings from those numbers: the ad only ran about three and a half of the seven days (£68 at £20 a day), and it is cheap and unsaturated (about £10 per thousand impressions, frequency 1.3), so there is headroom before the audience tires.
+
+**Verified (MailerLite, 12 September):** 18 diagnostic leads since 1 September, 10 parents and 8 students, and about 10 of those in the five days the ad has been running. The gap between Meta's 16 and MailerLite's 10 is not a fault. "Website leads" is the pixel's Lead event, and the site fires that same event on every capture point (diagnostic, parents' guide, newsletter, tracker), counted within Meta's attribution window, which also credits people who saw the ad and converted later on their own. So the true cost per diagnostic lead is about £68 divided by 10, roughly £6.80, which is the base case below almost exactly. Two things the September leads say: four of the eight students declined a call while the parents mostly chose Evening, and the buying signal across them is exam technique, a better method and a custom plan, which is the mentorship's exact pitch.
+
+One fix worth ten minutes in Events Manager, no code: create a custom conversion from the Lead event filtered to URLs containing /revision-diagnostic, and optimise the ad set for that instead of the bare Lead event. Meta then chases the lead that actually converts to a call, and the Ads Manager number matches MailerLite.
 
 **Not seen from here:** Stripe, and the Ads Manager totals since the relaunch. Both are on the Mac.
 
@@ -46,7 +50,7 @@ A full-time doctor can onboard about four to six new students a month under the 
 2. Scale only while the blended cost per lead stays under £10 and every lead is called within 24 hours. If the uncalled queue passes ten, hold the budget, not the calls.
 3. Any ad set over £18 per lead after £50 of spend is switched off. That number is the stress-case CAC divided by the stress-case conversion, so it is the point where a lead stops paying for itself in month one.
 4. Expect term-time CPL to run 20 to 40 percent above what a good week shows. A £9 week in October is not a broken ad.
-5. Keep the diagnostic as the destination for the main spend. If an Instant Form ad is running, treat it as the call-test line at £10 a day and measure it on booked calls, not leads.
+5. Keep the diagnostic as the destination for the main spend, and judge it on MailerLite's diagnostic count, not Meta's website-lead count, until the custom conversion is in.
 
 ## The number that actually decides £10k a month
 
@@ -124,7 +128,7 @@ The line to watch is 12 students: it is the doctor's-salary milestone and it is 
 
 ## What to do this week
 
-1. Check whether the live ad sends leads to the diagnostic or an Instant Form, and reconcile the 16 against MailerLite's 10. It changes which conversion rate to believe.
+1. In Events Manager, create the diagnostic-only custom conversion and switch the ad set to optimise for it, so the ad chases the lead that converts and the numbers reconcile.
 2. Hold the budget at £20 to £30 a day. Ring every lead within a day. Work the August list.
 3. Run the first two students exactly to the runsheets for four weeks. The month-one review page and the first parent email are the retention mechanism, and the first sale is the one that proves it.
 4. Sign the 24 September parent and close the two maybes before the ad produces anyone new.
