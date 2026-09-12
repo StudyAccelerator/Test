@@ -80,6 +80,11 @@
       "id": "mentorship-billing",
       "label": "Mentorship: billing and the four-month term",
       "path": "content/mentorship/06-billing-and-the-four-month-term.md"
+    },
+    {
+      "id": "mentorship-scale-model",
+      "label": "Mentorship: scalability and the road to 10k",
+      "path": "content/mentorship/07-scalability-and-the-road-to-10k.md"
     }
   ]
 }
