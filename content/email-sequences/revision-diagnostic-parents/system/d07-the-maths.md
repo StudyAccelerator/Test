@@ -34,4 +34,4 @@ Best wishes,
 
 Waleed
 
-PS: If {$diag_child_name|default('your child')} already has a tutor, nothing here says stop. The system makes those expensive hours finally stick, and I'm happy to talk through how the two fit together, just reply with a couple of days that suit!
+PS: If {$diag_child_name|default('your child')} already has a tutor, nothing here says stop. The system makes those expensive hours finally stick, and I'm happy to talk through how the two fit together on a free call. [Book one here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)!

@@ -28,4 +28,4 @@ Keep going!
 
 Waleed
 
-PS: If you're not sure which version fits you, that's what my free strategy plan call is for. Reply with a couple of evenings that suit and we'll sort a time.
+PS: If you're not sure which version fits you, that's what my free strategy plan call is for. [Book your call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

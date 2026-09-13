@@ -28,4 +28,4 @@ Best wishes,
 
 Waleed
 
-PS: If home currently feels a long way from the version I described, that's worth half an hour of my time, and I'd be happy to build {$diag_child_name|default('your child')}'s plan with you: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
+PS: If home currently feels a long way from the version I described, that's worth half an hour of my time, and I'd be happy to build {$diag_child_name|default('your child')}'s plan with you. [Book a call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

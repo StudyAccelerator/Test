@@ -26,4 +26,4 @@ If you're weighing it up and want a straight answer about fit, that's what my fr
 
 Waleed
 
-PS: If none of the slots suit, just reply with a couple of days that do and we'll sort a time. I'm a full time doctor, so bear with me if I'm on-call that week!
+PS: I'm a full time doctor, so bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just [book whichever day and time works best for you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

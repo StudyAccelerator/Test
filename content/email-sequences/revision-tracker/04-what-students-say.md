@@ -30,4 +30,4 @@ Keep going!
 
 Waleed
 
-PS: If none of the slots work around school, just reply with a couple of evenings that do and we'll sort a time. I'm a full time doctor, so bear with me if I'm on nights that week haha.
+PS: I'm a full time doctor, so bear with me if I'm on nights that week and the slot times look a bit strange haha. Just [book whichever time works best for you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

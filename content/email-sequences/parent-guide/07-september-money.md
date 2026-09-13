@@ -24,7 +24,7 @@ If the diagnostic or your own reading points at exam skills in one of those subj
 
 [BUTTON: See the September programme -> https://alevelaccelerators.com/subject-accelerators/]
 
-And if you're not sure the diagnosis points there, reply to this email or book the free half hour, and we'll work out what the evidence actually says first.
+And if you're not sure the diagnosis points there, [book the free half hour here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call) and we'll work out what the evidence actually says first.
 
 Best wishes,
 

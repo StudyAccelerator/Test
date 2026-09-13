@@ -5,9 +5,10 @@ Subject A: happy to talk {$diag_child_name|default('your child')}'s report throu
 Subject B: the report, explained out loud
 Preheader: A free 30 minute call with Dr Waleed, and a strategy plan for {$diag_child_name|default('your child')}.
 Goal: offer the free strategy-plan call the day after the report, while it is still warm. The single repeated offer of the parent funnel, made early, in the warm register.
-Links: 0 (reply is the action)
+Links: 1 (call scheduler, inline)
 Source: the parent twin of Waleed's own 6 September 2026 rewrite of the student call email (reward framing, "keen" qualifier, ask in return, on-call PS), in the Sonia register.
 Revised: 6 September 2026 (Waleed's style pass)
+Revised: 13 September 2026 (Waleed: the call CTA is now the booking link, not a reply with days), PS reworded to his wording.
 
 ---
 
@@ -19,10 +20,10 @@ A report is a good start, but a full strategy plan for {$diag_child_name|default
 
 So here's a reward for taking the diagnostic and getting ahead of this for {$diag_child_name|default('your child')}: I keep a few free 30 minute calls each week for parents keen to see their child's grades improve. We go through the report together, I tell you what I'd change first and why, and you leave with a plan for their next two weeks. That's it. No cost, and all I ask in return is that you keep me updated on how things go for {$diag_child_name|default('them')}. I'm confident we can help with this.
 
-If you'd like one, just reply to this email with a couple of days that suit and we'll work out a time.
+If you'd like one, you can [book your call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
 
 Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so please bear with me if I'm on-call or on nights that week! Give me a few days that work best for you and I'll definitely make some time.
+PS: I'm a full time doctor, so please bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just book whichever day and time suits you best.

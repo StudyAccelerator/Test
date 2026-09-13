@@ -28,4 +28,4 @@ Best wishes,
 
 Waleed
 
-PS: The first session is covered by our satisfaction guarantee, so the real decision isn't £339, it's whether one session's evidence is worth collecting. If you'd like to talk the numbers through for your situation, just reply with a couple of days that suit!
+PS: The first session is covered by our satisfaction guarantee, so the real decision isn't £339, it's whether one session's evidence is worth collecting. If you'd like to talk the numbers through for your situation, [book a free call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)!

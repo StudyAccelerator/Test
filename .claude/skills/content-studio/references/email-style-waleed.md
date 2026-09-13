@@ -46,6 +46,10 @@ On 12 September 2026 he rewrote the instant diagnostic report email (E0) himself
 - **Sign-off:** "Speak soon!" then "Kind regards," then the signature. Student emails in this register end "Speak soon!", not "Keep going!".
 - **New scheduler link (12 September):** `https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call`. Use it for every call CTA from now on.
 
+## 13 September: the call CTA is always the booking link
+
+Waleed's instruction (13 September 2026, also in his 12 September review replies): wherever an email recommends the strategy plan call, the action is the booking link, never "reply with a couple of days that suit" or "give me a few days that work". And the link is never a bare URL: it is named link text, written in the markdown as an inline link, e.g. `[Book your call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)`, `[Click here to book the call](...)`, or a `[LINK: Book a Free Academic Strategy Call -> ...]` line, or a `[BUTTON: ...]`. The on-call PS keeps his real life but now points at booking, in his own suggested shape: "I'm a full time doctor, so please bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just book whichever day and time suits you best." (The day 1 call email PS in the table above was changed this way on his instruction.) Replies are still welcome for everything that isn't booking the call: questions, error-log letters, "tell me where you landed".
+
 The compliance scanner flags his "20-30 minutes" (hyphen range) and "when it comes to" in his own two emails. Those flags are accepted: his copy stays as he wrote it.
 
 ## The rules
@@ -84,7 +88,7 @@ The compliance scanner flags his "20-30 minutes" (hyphen range) and "when it com
 
 - **Every email has one** (the only exceptions are the nine-word re-engagement emails, which must stay nine words).
 - Its job: restate the single action in a lighter voice, and add a bit of him. A joke, a confession, the on-call line, a reply ask.
-- It may carry the link when the body has none, or the call scheduler as the secondary pointer. Never a second button. Keep total links at one or two per email for Primary-tab placement.
+- It may carry the link when the body has none, or the call scheduler as the secondary pointer, always as named link text, never a bare URL and never "reply with days". Never a second button. Keep total links at one or two per email for Primary-tab placement.
 - It is the second most-read line after the subject line, so it never says nothing.
 
 ### 6. Honesty rules that still bind

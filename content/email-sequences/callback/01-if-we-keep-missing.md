@@ -26,4 +26,4 @@ Talk soon,
 
 Waleed
 
-PS: If the calendar's fully booked the week you look, reply with a couple of evenings that suit and I'll open a slot. Doctors' rotas are strange things haha.
+PS: Doctors' rotas are strange things haha, so the slot times may look a bit random. Just [grab whichever one suits you best](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call) and I'll ring you then.

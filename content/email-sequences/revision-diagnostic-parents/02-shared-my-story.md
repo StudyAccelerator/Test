@@ -26,4 +26,4 @@ Best wishes,
 
 Waleed
 
-PS: If any of my story sounded like the young person at your kitchen table, reply and tell me. Those are the replies I answer first, and if you'd like to talk it through properly, the free strategy plan call is always there!
+PS: If any of my story sounded like the young person at your kitchen table, reply and tell me. Those are the replies I answer first, and if you'd like to talk it through properly, the free strategy plan call is always there, and you can [book it here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)!

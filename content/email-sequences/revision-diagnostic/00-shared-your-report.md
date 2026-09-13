@@ -20,7 +20,9 @@ So alongside your report, you'll find the option to book a call with me for a co
 
 I've worked with over 1000 students in the past 6 years, and I promise, not a single student has ever walked out of the strategy call thinking it wasn't the best use of their 20-30 minutes in working towards top grades.
 
-If you're interested, you can book by clicking this link: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
+If you're interested, you can book by clicking this link:
+
+[LINK: Book a Free Academic Strategy Call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 If you have any questions, feel free to reply to this email.
 
@@ -53,7 +55,7 @@ You've done the hard part already. Identified that the grades aren't where you w
 
 Well done!
 
-PS: As promised, the most beneficial next step from here is a custom academic strategy plan. I guarantee that it will be the absolute best use of your 20-30 minutes in helping you/your child achieve top grades. Click here to book: https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
+PS: As promised, the most beneficial next step from here is a custom academic strategy plan. I guarantee that it will be the absolute best use of your 20-30 minutes in helping you/your child achieve top grades. [Click here to book](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)
 
 Speak soon!
 

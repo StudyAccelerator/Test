@@ -4,8 +4,8 @@ Send: Day 4
 Subject A: what other families found
 Subject B: what sits behind the method
 Preheader: The grades, the guarantee, real quotes, and the science behind the method.
-Goal: proof email in the confident register for the method purchase. One CTA: the call, via reply.
-Links: 0 (reply is the action)
+Goal: proof email in the confident register for the method purchase. One CTA: the call, via the booking link.
+Links: 1 (call scheduler, inline)
 Revised: 6 September 2026 (Waleed's style pass: "can and can't show you" framing replaced with plain positive proof)
 
 ---
@@ -24,10 +24,10 @@ Before you decide anything about how {$diag_child_name|default('your child')} st
 
 **Why this email exists.** Tomorrow's email lays out the fix itself, and later this week I'll do the money properly, so I wanted you to have the evidence first.
 
-And the standing offer stands: a free half hour where we look at {$diag_child_name|default('your child')}'s report together and you leave with a strategy plan for the next two weeks. I'm confident we can help with this. Reply with a couple of days that suit you and we'll find a time.
+And the standing offer stands: a free half hour where we look at {$diag_child_name|default('your child')}'s report together and you leave with a strategy plan for the next two weeks. I'm confident we can help with this. [Click here to book the call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
 
 Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so please bear with me if I'm on-call the week you reply! Give me a few days that work and I'll definitely make some time.
+PS: I'm a full time doctor, so please bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just book whichever day and time suits you best.

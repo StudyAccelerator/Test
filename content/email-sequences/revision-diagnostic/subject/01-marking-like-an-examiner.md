@@ -48,4 +48,4 @@ Keep going!
 
 Waleed
 
-PS: Keep every marked section in one folder. In three weeks you'll be able to see the W column shrinking, and honestly that does more for motivation than any quote I could send you. And if you want me to look at your first log with you, that's what the free strategy plan call is for, just reply with a couple of days that suit.
+PS: Keep every marked section in one folder. In three weeks you'll be able to see the W column shrinking, and honestly that does more for motivation than any quote I could send you. And if you want me to look at your first log with you, that's what the free strategy plan call is for, and you can [book it here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

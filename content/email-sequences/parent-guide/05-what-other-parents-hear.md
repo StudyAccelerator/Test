@@ -28,4 +28,4 @@ Best wishes,
 
 Waleed
 
-PS: If the slots don't suit, just reply with a couple of evenings that do and we'll work out a time. I'm a full time doctor, so please bear with me if I'm on-call that week!
+PS: I'm a full time doctor, so please bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just [book whichever day and time suits you best](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

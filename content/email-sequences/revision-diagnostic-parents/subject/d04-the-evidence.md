@@ -5,7 +5,7 @@ Subject A: what other families found
 Subject B: what students say from inside the sessions
 Preheader: The grades, the guarantee, the people who teach, and real quotes.
 Goal: proof email in the confident register. The two-grade average, the tutors' record, quotes, the guarantee, and the call as the single CTA.
-Links: 0 (reply is the action)
+Links: 1 (call scheduler, inline)
 Revised: 6 September 2026 (Waleed's style pass: "can and can't show you" framing replaced with plain positive proof)
 
 ---
@@ -24,10 +24,10 @@ Before you decide anything about {$diag_child_name|default('your child')}'s revi
 
 **Why I'm telling you this now.** Tomorrow's email lays out the programme itself, and later this week I'll do the money properly, so I wanted you to have the evidence first.
 
-And if you'd rather just talk it through, that's my standing offer: a free half hour where we look at {$diag_child_name|default('your child')}'s report together and you leave with a strategy plan for the next two weeks. I'm confident we can help with this. Reply to this email with a couple of days that suit you and we'll find a time.
+And if you'd rather just talk it through, that's my standing offer: a free half hour where we look at {$diag_child_name|default('your child')}'s report together and you leave with a strategy plan for the next two weeks. I'm confident we can help with this. [Click here to book the call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
 
 Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so please bear with me if I'm on-call the week you reply! Give me a few days that work and I'll definitely make some time.
+PS: I'm a full time doctor, so please bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just book whichever day and time suits you best.
