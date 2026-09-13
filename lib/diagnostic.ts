@@ -71,12 +71,23 @@ export interface Option {
      subjects, which course, why it stopped). Detail is context for Waleed's
      call, stored in diag_support_detail; it never blocks the quiz. */
   followUp?: {
-    kind: 'subjects' | 'text'
+    kind: 'subjects' | 'text' | 'choice'
     prompt: string
     promptParent?: string
     placeholder?: string
+    /* 'choice' follow-ups: the chips offered, the answer key they write to,
+       and whether the quiz refuses to move on without one. The pre-A-level
+       year is compulsory (Waleed, 13 September 2026) so his call is about
+       the right school year. */
+    choices?: string[]
+    store?: string
+    required?: boolean
   }
 }
+
+/* Asked only after "Pre-A-level" is picked: Year 7 to 11 on the first card
+   would be excessive, one chip after the click is not. */
+export const PRE_YEARS = ['Year 9 or below', 'Year 10', 'Year 11']
 
 export interface Question {
   id: string
@@ -202,7 +213,20 @@ export const QUESTIONS: Question[] = [
     options: [
       { id: 'y12', label: 'Year 12', detail: 'First year, or about to start Year 13' },
       { id: 'y13', label: 'Year 13', detail: 'Final year, exams at the end of it' },
-      { id: 'pre', label: 'Starting A-levels soon', labelParent: 'Starting A-levels soon', detail: 'In Year 11, or just finished GCSEs' },
+      {
+        id: 'pre',
+        label: 'Pre-A-level',
+        labelParent: 'Pre-A-level',
+        detail: 'Year 11 or below, or just finished GCSEs',
+        followUp: {
+          kind: 'choice',
+          prompt: 'Which year are you in?',
+          promptParent: 'Which year is your child in?',
+          choices: PRE_YEARS,
+          store: 'preYear',
+          required: true,
+        },
+      },
       { id: 'resit', label: 'Resitting', detail: 'Retaking one or more A-levels' },
     ],
   },
@@ -656,6 +680,13 @@ export function isAnswered(q: Question, answers: Answers): boolean {
   const v = answers[q.id]
   if (v === undefined) return false
   if (q.type === 'multi') return Array.isArray(v) && v.length > 0
+  /* A required follow-up (the pre-A-level year) is part of the answer */
+  const picked = q.type === 'single' ? q.options.find((o) => o.id === v) : undefined
+  const fu = picked?.followUp
+  if (fu?.required && fu.store) {
+    const d = answers[fu.store]
+    return typeof d === 'string' && d.length > 0
+  }
   return true
 }
 
@@ -1446,6 +1477,14 @@ export function gradeLabel(id: string | undefined): string {
 export function yearLabel(id: string | undefined): string {
   const map: Record<string, string> = { y12: 'Year 12', y13: 'Year 13', pre: 'Pre A-level', resit: 'Resitting' }
   return id ? map[id] ?? id : ''
+}
+
+/* The MailerLite year_group value: "Pre A-level (Year 10)" once the
+   follow-up is answered, so the alert and the CRM show the real year. */
+export function yearGroupString(answers: Answers): string {
+  const base = yearLabel(answers.year as string | undefined)
+  const pre = answers.preYear
+  return answers.year === 'pre' && typeof pre === 'string' && pre ? `${base} (${pre})` : base
 }
 
 /* Human-readable support status for the CRM (diag_support) */

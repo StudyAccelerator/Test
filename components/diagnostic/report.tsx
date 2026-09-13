@@ -296,6 +296,50 @@ interface ReportProps {
   onRetake: () => void
 }
 
+/* Mobile only: a sticky "book my call" bar over the long report (13 September
+   2026). Two thirds of mobile readers were leaving without clicking anything,
+   because every call to action sat below a long scroll. Appears once the cover
+   is scrolled past, hides while the closing callback card is on screen. */
+function StickyCallBar({ isParent, child, onClick }: { isParent: boolean; child: string; onClick: () => void }) {
+  const [show, setShow] = useState(false)
+  const [atEnd, setAtEnd] = useState(false)
+  useEffect(() => {
+    const onScroll = () => setShow(window.scrollY > 700)
+    onScroll()
+    window.addEventListener('scroll', onScroll, { passive: true })
+    const end = document.getElementById('callback-bottom')
+    let io: IntersectionObserver | undefined
+    if (end && 'IntersectionObserver' in window) {
+      io = new IntersectionObserver((entries) => setAtEnd(entries.some((e) => e.isIntersecting)))
+      io.observe(end)
+    }
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      io?.disconnect()
+    }
+  }, [])
+  const visible = show && !atEnd
+  return (
+    <div
+      className={`fixed bottom-0 inset-x-0 z-40 md:hidden print:hidden transition-transform duration-300 ${
+        visible ? 'translate-y-0' : 'translate-y-full'
+      }`}
+    >
+      <div className="bg-brand-cream/95 backdrop-blur border-t border-brand-purple/10 px-4 pt-3 pb-[calc(0.8rem+env(safe-area-inset-bottom))] shadow-[0_-10px_28px_rgba(46,37,87,.14)]">
+        <button
+          type="button"
+          onClick={onClick}
+          className="w-full inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-6 py-3.5 font-bold shadow-[0_10px_24px_rgba(201,169,110,.35)] active:translate-y-0.5 transition-all"
+        >
+          {isParent && child ? `Book ${child}'s free strategy call` : 'Book my free strategy call'}
+          <span aria-hidden="true" className="ml-2">→</span>
+        </button>
+        <p className="mt-1.5 text-center text-[11px] text-brand-text/55">Dr Waleed rings you and builds the plan with you</p>
+      </div>
+    </div>
+  )
+}
+
 export default function Report({ diagnosis, answers, firstName, taker, childName, email, onRetake }: ReportProps) {
   const { archetype, scores, overall, bottleneck, hoursLeak, prescription, plan, routing } = diagnosis
   const worry = (answers.worry as string) ?? ''
@@ -361,6 +405,16 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
   const scrollToRoute = (e: React.MouseEvent<HTMLAnchorElement>) => {
     e.preventDefault()
     document.getElementById('route')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
+  }
+
+  const scrollToCallback = () => {
+    trackFunnel('diagnostic_route_click', {
+      placement: 'sticky_bar',
+      target: 'callback_card',
+      route: routing.primary.name,
+      taker: isParent ? 'parent' : 'student',
+    })
+    document.getElementById('callback')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
   }
 
   /* Both reports lead with the recommendation, the way a treatment plan
@@ -745,7 +799,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
 
       {/* ══ Callback side door: asked again where they are warmest, after the
           scores have shown them the leak ══ */}
-      <section className="px-5 sm:px-6 py-10 md:py-12">
+      <section id="callback" className="px-5 sm:px-6 py-10 md:py-12 scroll-mt-6">
         <div className="max-w-3xl mx-auto">
           <CallbackCard email={email} child={child} isParent={isParent} />
         </div>
@@ -951,7 +1005,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               Read the full recommendation again
             </a>
           </p>
-          <div className="mt-10 text-left">
+          <div id="callback-bottom" className="mt-10 text-left">
             <CallbackCard email={email} child={child} isParent={isParent} dark />
           </div>
         </div>
@@ -994,6 +1048,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
           </p>
         </div>
       </section>
+      {email && <StickyCallBar isParent={isParent} child={child} onClick={scrollToCallback} />}
     </div>
   )
 }

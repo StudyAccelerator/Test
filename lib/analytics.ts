@@ -14,6 +14,7 @@ type TrackFn = (...args: unknown[]) => void
    already on the page, with an event name and a couple of plain parameters.
    Safe no-op when GA is absent or blocked. */
 export type FunnelStep =
+  | 'diagnostic_gate_step2'
   | 'diagnostic_start'
   | 'diagnostic_halfway'
   | 'diagnostic_questions_done'
@@ -24,7 +25,15 @@ export type FunnelStep =
 export function trackFunnel(step: FunnelStep, params: Record<string, string | number> = {}): void {
   if (typeof window === 'undefined') return
   const w = window as typeof window & { gtag?: TrackFn }
-  w.gtag?.('event', step, params)
+  /* variant: 'direct' when the visitor landed straight on question one
+     (?start=1, the paid-traffic A/B of 13 September 2026), 'landing'
+     otherwise. Register it as a custom dimension in GA4 to break the
+     funnel down by it. */
+  let variant = 'landing'
+  try {
+    if (new URLSearchParams(window.location.search).get('start') === '1') variant = 'direct'
+  } catch {}
+  w.gtag?.('event', step, { variant, ...params })
 }
 
 export function trackLead(): void {

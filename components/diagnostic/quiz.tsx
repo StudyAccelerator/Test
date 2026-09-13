@@ -29,9 +29,12 @@ interface QuizProps {
   onAnswer: (id: string, value: string | string[]) => void
   onComplete: () => void
   onExit: () => void
+  /* Landed straight on question one from an ad (?start=1): show the one-line
+     hook above the first card instead of the landing page. */
+  direct?: boolean
 }
 
-export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: QuizProps) {
+export default function Quiz({ answers, taker, onAnswer, onComplete, onExit, direct = false }: QuizProps) {
   /* Resume where the student left off: first incomplete question. */
   const firstUnanswered = QUESTIONS.findIndex((q) => !isAnswered(q, answers))
   const [index, setIndex] = useState(firstUnanswered === -1 ? QUESTIONS.length - 1 : firstUnanswered)
@@ -83,7 +86,11 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
     () => options.find((o) => o.id === answers[question.id]),
     [options, answers, question.id]
   )
-  const followUp = question.id === 'support' ? pickedOption?.followUp : undefined
+  const followUp = question.id === 'support' || question.id === 'year' ? pickedOption?.followUp : undefined
+  const followUpReady =
+    !followUp?.required ||
+    !followUp.store ||
+    (typeof answers[followUp.store] === 'string' && (answers[followUp.store] as string).length > 0)
 
   const pickSingle = useCallback(
     (optionId: string) => {
@@ -92,7 +99,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
       onAnswer(question.id, optionId)
       /* An option with a follow-up keeps the card open for the extra detail;
          everything else advances on its own. */
-      if (question.id === 'support' && opt?.followUp) {
+      if ((question.id === 'support' || question.id === 'year') && opt?.followUp) {
         setFlash(null)
         return
       }
@@ -159,7 +166,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
         e.preventDefault()
         if (question.type === 'multi') toggleMulti(options[num - 1].id)
         else pickSingle(options[num - 1].id)
-      } else if (e.key === 'Enter' && (multiReady || followUp !== undefined || gradesReady)) {
+      } else if (e.key === 'Enter' && (multiReady || (followUp !== undefined && followUpReady) || gradesReady)) {
         e.preventDefault()
         goNext()
       } else if (e.key === 'Escape' || e.key === 'Backspace') {
@@ -169,7 +176,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
     }
     window.addEventListener('keydown', handler)
     return () => window.removeEventListener('keydown', handler)
-  }, [options, question.type, pickSingle, toggleMulti, goNext, goBack, multiReady, followUp, gradesReady])
+  }, [options, question.type, pickSingle, toggleMulti, goNext, goBack, multiReady, followUp, followUpReady, gradesReady])
 
   useEffect(() => () => {
     if (advanceTimer.current) clearTimeout(advanceTimer.current)
@@ -240,6 +247,18 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
               exit="exit"
               transition={{ duration: reduceMotion ? 0.1 : 0.3, ease: EASE }}
             >
+              {direct && index === 0 && (
+                <div className="mb-7">
+                  <h1 className="font-serif font-bold tracking-tight text-3xl sm:text-4xl text-brand-purple leading-tight">
+                    Frustrated by marks that don&apos;t match the hours?
+                  </h1>
+                  <p className="mt-2 text-brand-text/70 leading-relaxed">
+                    {taker === 'parent'
+                      ? 'About 4 minutes to a custom plan for your child. Start with question one.'
+                      : 'About 4 minutes to your custom plan. Start with question one.'}
+                  </p>
+                </div>
+              )}
               {taker === 'parent' && index === 0 && (
                 <div className="mb-6 rounded-xl border border-brand-gold/30 bg-brand-gold/[0.08] px-4 py-3 text-sm text-brand-text/75 leading-relaxed">
                   Best done with your teenager next to you. If they&apos;re not around, answer from what you
@@ -382,7 +401,29 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                   <p className="font-semibold text-brand-purple">
                     {taker === 'parent' ? followUp.promptParent ?? followUp.prompt : followUp.prompt}
                   </p>
-                  {followUp.kind === 'subjects' && gradeRows(answers).length > 0 ? (
+                  {followUp.kind === 'choice' && followUp.choices && followUp.store ? (
+                    <div className="mt-3 flex flex-wrap gap-2" role="radiogroup">
+                      {followUp.choices.map((choice) => {
+                        const picked = answers[followUp.store as string] === choice
+                        return (
+                          <button
+                            key={choice}
+                            type="button"
+                            role="radio"
+                            aria-checked={picked}
+                            onClick={() => onAnswer(followUp.store as string, choice)}
+                            className={`rounded-full border-2 px-4 py-2 text-sm font-semibold transition ${
+                              picked
+                                ? 'border-brand-purple bg-brand-purple text-brand-cream'
+                                : 'border-brand-purple/15 bg-white text-brand-purple hover:border-brand-gold'
+                            }`}
+                          >
+                            {choice}
+                          </button>
+                        )
+                      })}
+                    </div>
+                  ) : followUp.kind === 'subjects' && gradeRows(answers).length > 0 ? (
                     <div className="mt-3 flex flex-wrap gap-2">
                       {gradeRows(answers).map((subject) => {
                         const picked = Array.isArray(answers.supportDetail) && answers.supportDetail.includes(subject)
@@ -419,7 +460,9 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                       className="mt-3 w-full rounded-xl border-2 border-brand-purple/15 bg-white px-4 py-3 text-brand-purple placeholder:text-brand-text/35 focus:outline-none focus:border-brand-gold transition"
                     />
                   )}
-                  <p className="mt-2.5 text-xs text-brand-text/50">Optional, but it makes my advice sharper.</p>
+                  <p className="mt-2.5 text-xs text-brand-text/50">
+                    {followUp.required ? 'Needed, so the call is about the right year.' : 'Optional, but it makes my advice sharper.'}
+                  </p>
                 </motion.div>
               )}
 
@@ -429,7 +472,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit }: Q
                   <button
                     type="button"
                     onClick={goNext}
-                    disabled={question.type === 'multi' ? !multiReady : question.type === 'grades' ? !gradesReady : false}
+                    disabled={question.type === 'multi' ? !multiReady : question.type === 'grades' ? !gradesReady : !followUpReady}
                     className="inline-flex items-center gap-2 rounded-full bg-brand-purple text-brand-cream px-8 py-3.5 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all disabled:opacity-40 disabled:cursor-not-allowed disabled:hover:translate-y-0"
                   >
                     Continue
