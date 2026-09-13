@@ -946,7 +946,35 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                 </span>
                 <h3 className="mt-2 font-serif font-bold text-lg text-brand-purple">{item.task}</h3>
                 <p className="mt-1 text-[15px] text-brand-text/70 leading-relaxed max-w-xl">{item.detail}</p>
-                {item.task === 'Build next week properly' && (
+                {item.action === 'strategy' &&
+                  (email ? (
+                    <button
+                      type="button"
+                      onClick={() => {
+                        trackFunnel('diagnostic_route_click', {
+                          placement: 'plan_day1',
+                          target: 'callback_card',
+                          route: routing.primary.name,
+                          taker: isParent ? 'parent' : 'student',
+                        })
+                        document.getElementById('callback-bottom')?.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth' })
+                      }}
+                      className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
+                    >
+                      Pick a time for the call
+                      <span aria-hidden="true">→</span>
+                    </button>
+                  ) : (
+                    <a
+                      href={BOOK_A_CALL_LINK}
+                      onClick={trackRoute('plan_day1', 'book_a_call')}
+                      className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"
+                    >
+                      Book the call
+                      <span aria-hidden="true">→</span>
+                    </a>
+                  ))}
+                {item.action === 'tracker' && (
                   <a
                     href="/revision-tracker/"
                     className="mt-2 inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple underline underline-offset-4 decoration-brand-gold/60 hover:text-brand-gold transition"

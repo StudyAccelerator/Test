@@ -1126,24 +1126,35 @@ export interface PlanDay {
   day: string
   task: string
   detail: string
+  /* Renders a link under the day: the strategy call, or the tracker */
+  action?: 'strategy' | 'tracker'
 }
 
 export function buildSevenDayPlan(bottleneck: Dim, answers: Answers): PlanDay[] {
   const worry = worrySubjectLabel(answers)
   const subj = worry ?? 'your weakest subject'
 
-  const audit: PlanDay = {
+  /* Day 1 is always the free academic strategy plan (Waleed, 13 September
+     2026): diagnose what is really holding them back before any of the
+     self-directed days, so the rest of the week runs on his plan. */
+  const strategy: PlanDay = {
     day: 'Day 1',
+    task: 'Get your free academic strategy plan',
+    detail: 'Dr Waleed diagnoses the areas that are actually holding you back, then puts a plan in place to optimise your study system around them. Pick a time and he rings you.',
+    action: 'strategy',
+  }
+  const audit: PlanDay = {
+    day: 'Day 2',
     task: 'Run the topic audit',
     detail: `List every ${subj} topic and rate each out of 5: how well could you answer questions on it, book closed? Anything at 3 or below goes on the priority list.`,
   }
   const blurt: PlanDay = {
-    day: 'Day 2',
+    day: 'Day 3',
     task: 'First blurting session',
     detail: 'Take your worst-rated topic. Blank page, book closed, write everything you know. Fill the gaps in another colour. Keep the page.',
   }
   const recall: PlanDay = {
-    day: 'Day 3',
+    day: 'Day 4',
     task: 'Return and retrieve',
     detail: 'Re-blurt the same topic from memory before anything new. Compare with the first page. The gap between them is your progress, in ink.',
   }
@@ -1156,6 +1167,7 @@ export function buildSevenDayPlan(bottleneck: Dim, answers: Answers): PlanDay[] 
     day: 'Day 6',
     task: 'Build next week properly',
     detail: 'Use the free Revision Tracker to build the week for you: deep sessions, next-day recall and reviews, placed around your real commitments.',
+    action: 'tracker',
   }
   const rest: PlanDay = {
     day: 'Day 7',
@@ -1165,15 +1177,16 @@ export function buildSevenDayPlan(bottleneck: Dim, answers: Answers): PlanDay[] 
 
   if (bottleneck === 'examCraft') {
     return [
+      strategy,
       audit,
-      { day: 'Day 2', task: 'Mark scheme study session', detail: `One hour inside ${subj} mark schemes. Collect the exact phrases that earn marks in your weak topics. Write them out by hand.` },
-      { day: 'Day 3', task: 'First timed section', detail: 'One exam section under real timing. Mark it like an examiner. Rewrite every lost-mark answer in scheme wording.' },
+      { day: 'Day 3', task: 'Mark scheme study session', detail: `One hour inside ${subj} mark schemes. Collect the exact phrases that earn marks in your weak topics. Write them out by hand.` },
+      { day: 'Day 4', task: 'First timed section', detail: 'One exam section under real timing. Mark it like an examiner. Rewrite every lost-mark answer in scheme wording.' },
       { day: 'Day 5', task: 'Second timed section', detail: 'Same format, new questions. Pace and wording are trainable skills, and this is the training.' },
       plan,
       rest,
     ]
   }
-  return [audit, blurt, recall, paper, plan, rest]
+  return [strategy, audit, blurt, recall, paper, plan, rest]
 }
 
 /* ── Programme routing ─────────────────────────────────────────────────── */

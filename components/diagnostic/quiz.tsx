@@ -461,7 +461,7 @@ export default function Quiz({ answers, taker, onAnswer, onComplete, onExit, dir
                     />
                   )}
                   <p className="mt-2.5 text-xs text-brand-text/50">
-                    {followUp.required ? 'Needed, so the call is about the right year.' : 'Optional, but it makes my advice sharper.'}
+                    {followUp.required ? 'Needed, so the plan is about the right year.' : 'Optional, but it makes my advice sharper.'}
                   </p>
                 </motion.div>
               )}
