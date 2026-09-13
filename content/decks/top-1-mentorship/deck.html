@@ -2,12 +2,13 @@
 <html lang="en-GB">
 <head>
 <meta charset="utf-8">
-<title>A-Level Accelerators · Top 1% Study System</title>
+<title>A-Level Accelerators · Top 1% Mentorship</title>
 <!--
-  Top 1% Study System sales-call deck. Built with the deck-studio skill, 16 July 2026.
-  Facts sourced from app/study-systems/page.tsx and
-  .claude/skills/content-studio/references/audience-and-offers.md on that date.
-  Render: scripts/render-deck.sh content/decks/study-system/deck.html
+  Top 1% Mentorship sales-call deck (£300 a month). Rebuilt 13 September 2026 from the
+  former programme deck on Waleed's instruction: the group programmes are no longer
+  sold, so this deck sells the mentorship only. Pricing and inclusions match
+  components/ui/pricing-section.tsx on main; the tutoring comparison is his own call framing.
+  Render: scripts/render-deck.sh content/decks/top-1-mentorship/deck.html
 -->
 <style>
   :root {
@@ -170,11 +171,50 @@
 
   .row { display: flex; }
   .grow { flex: 1; }
+
+  /* Comparison: tutoring against the mentorship */
+  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
+  .vs-card { padding: 26px 30px 24px; border-radius: 16px; }
+  .vs-card.tut { background: #fff; box-shadow: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05), 0 12px 24px rgba(46,37,87,.06); }
+  .vs-card.men { background: var(--purple); box-shadow: 0 18px 36px rgba(46,37,87,.22); }
+  .vs-card .k { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+  .vs-card.tut .k { color: rgba(46,37,87,.5); }
+  .vs-card.men .k { color: var(--gold); }
+  .vs-card .amt { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 62px; line-height: 1; margin-top: 14px; }
+  .vs-card.tut .amt { color: rgba(46,37,87,.72); }
+  .vs-card.men .amt { color: var(--gold); }
+  .vs-card .per { font-size: 14px; margin-top: 8px; }
+  .vs-card.tut .per { color: rgba(26,21,53,.6); }
+  .vs-card.men .per { color: rgba(251,248,243,.78); }
+  .vs-card .rows { margin-top: 18px; }
+  .vs-card .rw { display: flex; gap: 11px; font-size: 14.5px; line-height: 1.5; }
+  .vs-card .rw + .rw { margin-top: 10px; }
+  .vs-card.tut .rw { color: rgba(26,21,53,.74); }
+  .vs-card.men .rw { color: rgba(251,248,243,.9); }
+  .vs-card .rw .x { color: #b3544f; font-weight: 800; flex-shrink: 0; }
+  .vs-card .rw .t { color: var(--gold); font-weight: 800; flex-shrink: 0; }
+
+  /* Pricing: one large mentorship card beside the risk-free panel */
+  .solo { display: flex; gap: 24px; align-items: stretch; }
+  .solo .ring-wrap { flex: 1.3; }
+  .solo-card { position: relative; padding: 30px 38px 28px; }
+  .solo-card .name { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 28px; color: var(--purple); }
+  .solo-card .amtrow { margin-top: 12px; }
+  .solo-card .amt { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 84px; line-height: 1; color: var(--purple); letter-spacing: -.01em; }
+  .solo-card .per { font-size: 16px; color: rgba(26,21,53,.6); margin-top: 6px; }
+  .solo-card .feat { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 26px; row-gap: 12px; }
+  .solo-card .feat .rw { display: flex; gap: 10px; font-size: 14.5px; line-height: 1.45; color: rgba(26,21,53,.78); }
+  .solo-card .feat .t { color: var(--gold); font-weight: 800; flex-shrink: 0; }
+  .solo-card .flag { position: absolute; top: 30px; right: 34px; left: auto; transform: none; }
+  .risk { flex: 1; background: var(--gold); border-radius: 18px; padding: 32px 34px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 18px 36px rgba(46,37,87,.14); }
+  .risk .k { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(46,37,87,.62); }
+  .risk h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 34px; line-height: 1.15; color: var(--purple); margin-top: 14px; }
+  .risk p { font-size: 16px; line-height: 1.55; color: rgba(46,37,87,.86); margin-top: 16px; }
+  .risk .small { font-size: 13px; font-weight: 700; color: var(--purple); margin-top: 20px; }
 </style>
 </head>
 <body>
 
-<!-- 01 · Cover -->
 <section data-document-role="page" data-label="Cover" class="slide dark">
   <div class="row" style="justify-content:space-between; align-items:center;">
     <div class="brandline" style="gap:10px;">
@@ -186,12 +226,12 @@
 
   <div class="row grow" style="align-items:center; gap:56px;">
     <div style="max-width:680px;">
-      <p class="eyebrow">Top 1% Study System</p>
+      <p class="eyebrow">Top 1% Mentorship</p>
       <h1 class="cover-title" style="margin-top:22px;">Stay ahead <span class="gold-i">without burning out.</span></h1>
-      <p class="lede" style="max-width:620px;">Workload, revision method and exam performance, taught as one system. The method behind everything we run, for students whose problem is how they study.</p>
+      <p class="lede" style="max-width:620px;">Working directly with Dr Waleed on how you study, revise and perform in the exam. Not subject tutoring: one system that moves every subject at once.</p>
       <div style="display:flex; gap:12px; margin-top:34px; flex-wrap:wrap;">
-        <span class="chip">Live online · small groups</span>
-        <span class="chip">Twelve weeks, three phases</span>
+        <span class="chip">Working directly with Dr Waleed</span>
+        <span class="chip">Not subject tutoring</span>
       </div>
     </div>
     <div class="grow" style="display:flex; justify-content:center;">
@@ -219,24 +259,22 @@
   </div>
 </section>
 
-<!-- 02 · At a glance -->
 <section data-document-role="page" data-label="At a glance" class="slide">
-  <p class="eyebrow">The programme in one slide</p>
+  <p class="eyebrow">The mentorship in one slide</p>
   <h2 class="slide-title">A system for every subject <span class="gold-i">at once.</span></h2>
   <div class="grow" style="display:flex; align-items:center;">
   <div class="tiles" style="flex:1; margin-top:0;">
-    <div class="card tile"><p class="k">What it is</p><p class="v">A system, not more tutoring</p><p class="s">How to study, not another content class</p></div>
+    <div class="card tile"><p class="k">What it is</p><p class="v">Not subject tutoring</p><p class="s">The system for how you study, across every subject</p></div>
     <div class="card tile"><p class="k">Who it is for</p><p class="v">Hard workers, stuck grades</p><p class="s">Students whose problem is how they study</p></div>
-    <div class="card tile"><p class="k">Format</p><p class="v">Live sessions and Q&amp;A</p><p class="s">Learn the system, then implement it with support</p></div>
-    <div class="card tile"><p class="k">The method</p><p class="v">Diagnose, rebuild, coach</p><p class="s">Twelve weeks, three phases, one system</p></div>
+    <div class="card tile"><p class="k">Format</p><p class="v">At least four months</p><p class="s">Building your systems directly with Dr Waleed</p></div>
+    <div class="card tile"><p class="k">The method</p><p class="v">Diagnose, rebuild, coach</p><p class="s">Three phases, one system</p></div>
     <div class="card tile"><p class="k">Safety net</p><p class="v">First session risk-free</p><p class="s">Full refund, no questions asked</p></div>
-    <div class="card tile"><p class="k">Where it leads</p><p class="v">First-choice offers</p><p class="s">The grades that win the university place</p></div>
+    <div class="card tile"><p class="k">Where it leads</p><p class="v">96% get their first choice</p><p class="s">University offer, and on average a 2 grade increase</p></div>
   </div>
   </div>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 02</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 02</span></div>
 </section>
 
-<!-- 03 · The problem -->
 <section data-document-role="page" data-label="The real challenge" class="slide">
   <div class="row grow" style="gap:54px; align-items:center;">
     <div style="flex:1.05;">
@@ -263,10 +301,9 @@
       </div>
     </div>
   </div>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 03</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 03</span></div>
 </section>
 
-<!-- 04 · The four tiers -->
 <section data-document-role="page" data-label="The four tiers" class="slide">
   <p class="eyebrow">Diagnose before you treat</p>
   <h2 class="slide-title">Every stuck grade is stuck at <span class="gold-i">one of four tiers.</span></h2>
@@ -293,11 +330,9 @@
     </div>
   </div>
   <p class="serif" style="font-style:italic; font-size:19px; color:var(--gold); margin-top:14px;">School has time to teach Tier 1. This system climbs all four.</p>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 04</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 04</span></div>
 </section>
 
-
-<!-- 05 · Who built this -->
 <section data-document-role="page" data-label="Who built this" class="slide">
   <div class="row grow" style="gap:56px; align-items:center;">
     <div style="flex:1.15;">
@@ -316,32 +351,16 @@
       </div>
     </div>
   </div>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 05</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 05</span></div>
 </section>
 
-<!-- 06 · The first four weeks -->
-<section data-document-role="page" data-label="The first four weeks" class="slide">
-  <p class="eyebrow">The first four weeks</p>
-  <h2 class="slide-title">Four weeks to install <span class="gold-i">the system.</span></h2>
-  <div class="grow" style="display:flex; align-items:center;">
-  <div style="flex:1; display:grid; grid-template-columns:repeat(2, 1fr); gap:18px;">
-    <div class="card step-card"><p class="n">Week 1</p><h3>Take control of the workload</h3><p>Cut low-impact work and build a weekly plan you can actually follow.</p></div>
-    <div class="card step-card"><p class="n">Week 2</p><h3>Start without a fight</h3><p>Why procrastination happens, and the system that gets work started quickly.</p></div>
-    <div class="card step-card"><p class="n">Week 3</p><h3>Carry heavy weeks</h3><p>Manage time and energy so pressure never turns into burnout.</p></div>
-    <div class="card step-card"><p class="n">Week 4</p><h3>Revise like the top 1%</h3><p>The right revision method for the right situation, so weak topics actually move.</p></div>
-  </div>
-  </div>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 06</span></div>
-</section>
-
-<!-- 07 · The 12-week arc -->
-<section data-document-role="page" data-label="The 12-week arc" class="slide">
-  <p class="eyebrow">Inside the twelve weeks</p>
+<section data-document-role="page" data-label="The three phases" class="slide">
+  <p class="eyebrow">The three phases</p>
   <h2 class="slide-title">Diagnose, rebuild, <span class="gold-i">coach.</span></h2>
   <div class="grow" style="display:flex; align-items:center;">
   <div class="phase" style="flex:1;">
     <div class="card phase-card">
-      <p class="n">Phase 1 · Weeks 1 to 4</p>
+      <p class="n">Phase 1</p>
       <h3>Diagnose</h3>
       <p class="sum">We find where the marks are actually going before we change anything.</p>
       <div class="plines">
@@ -353,23 +372,23 @@
       <p class="out"><em>You leave with</em>A written plan you can still follow on a bad week.</p>
     </div>
     <div class="card phase-card">
-      <p class="n">Phase 2 · Weeks 5 to 8</p>
+      <p class="n">Phase 2</p>
       <h3>Rebuild</h3>
       <p class="sum">The revision method itself gets rebuilt around what the diagnosis found.</p>
       <div class="plines">
         <div class="r"><span class="t">✓</span><span>Blurting, active recall and spaced review, taught and timed</span></div>
         <div class="r"><span class="t">✓</span><span>Weakest topics get the most sessions, strong ones get maintenance</span></div>
         <div class="r"><span class="t">✓</span><span>An error log: every dropped mark logged, sorted and retested</span></div>
-        <div class="r"><span class="t">✓</span><span>A weekly check-in: what got done, what slipped, what changes</span></div>
+        <div class="r"><span class="t">✓</span><span>A check-in on every call: what got done, what slipped, what changes</span></div>
       </div>
       <p class="out"><em>You leave with</em>A method that survives a heavy school week.</p>
     </div>
     <div class="card phase-card">
-      <p class="n">Phase 3 · Weeks 9 to 12</p>
+      <p class="n">Phase 3</p>
       <h3>Coach</h3>
       <p class="sum">We train exam performance until the grade holds under pressure.</p>
       <div class="plines">
-        <div class="r"><span class="t">✓</span><span>Full questions under timed conditions, every single week</span></div>
+        <div class="r"><span class="t">✓</span><span>Full questions under timed conditions, set between every call</span></div>
         <div class="r"><span class="t">✓</span><span>Mark scheme language drilled: what describe, explain and analyse pay for</span></div>
         <div class="r"><span class="t">✓</span><span>Mock post-mortems: every lost mark traced to a tier and fixed</span></div>
         <div class="r"><span class="t">✓</span><span>The exam week routine: timing, nerves and the last 48 hours</span></div>
@@ -378,10 +397,9 @@
     </div>
   </div>
   </div>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 07</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 06</span></div>
 </section>
 
-<!-- 08 · Proof -->
 <section data-document-role="page" data-label="Proof" class="slide">
   <p class="eyebrow">Proof</p>
   <h2 class="slide-title">The results, and the students <span class="gold-i">behind them.</span></h2>
@@ -397,65 +415,83 @@
       <div class="card quote" style="padding:20px 24px; justify-content:flex-start;"><span class="stars">★★★★★</span><p style="font-size:14px; margin-top:10px;">"The programme really gave me that confidence. That weekly structure, going through topic by topic, and then exam technique at the end."</p><p class="who" style="margin-top:12px;">Furkan<span>Medicine at Birmingham, his first choice</span></p></div>
     </div>
   </div>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 08</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 07</span></div>
 </section>
 
-<!-- 09 · Levels and pricing -->
-<section data-document-role="page" data-label="Pricing" class="slide">
-  <p class="eyebrow">Pricing</p>
-  <h2 class="slide-title">Choose the level of support.</h2>
-  <div class="grow" style="display:flex; flex-direction:column; justify-content:center;">
-  <div class="prices cols-3" style="max-width:1000px; margin:0 auto; width:100%;">
-    <div class="card price">
-      <p class="name">Study Series</p><p class="save"></p><p class="amt">£119</p><p class="per">learn the system</p>
-      <div class="plist"><div class="tickrow"><span class="t">✓</span><span>4 live sessions</span></div><div class="tickrow"><span class="t">✓</span><span>Fortnightly group Q&amp;A</span></div></div>
-    </div>
-    <div class="ring-wrap">
-    <div class="card price">
-        <span class="flag pill">Most chosen</span>
-        <p class="name">Study Accelerator</p><p class="save">12 weeks</p><p class="amt">£499</p><p class="per">implement the system</p>
-        <div class="plist"><div class="tickrow"><span class="t">✓</span><span>12 sessions plus weekly accountability</span></div><div class="tickrow"><span class="t">✓</span><span>1:1 guidance, templates and feedback</span></div></div>
+<section data-document-role="page" data-label="Tutoring or mentorship" class="slide">
+  <p class="eyebrow">Before we talk price</p>
+  <h2 class="slide-title">Tutoring costs more, and <span class="gold-i">fixes less.</span></h2>
+  <p class="lede" style="max-width:860px;">Tutoring re-teaches content, one subject at a time. If your grade is stuck because of how you study, more hours of content won't move it.</p>
+  <div class="grow" style="display:flex; align-items:center;">
+    <div class="vs" style="flex:1;">
+      <div class="vs-card tut">
+        <p class="k">One-to-one subject tutoring</p>
+        <p class="amt">Up to £400</p>
+        <p class="per">a month, for one subject</p>
+        <div class="rows">
+          <div class="rw"><span class="x">✗</span><span>£40 to £50 an hour, 2 hours a week</span></div>
+          <div class="rw"><span class="x">✗</span><span>Re-teaches content, the bottom tier</span></div>
+          <div class="rw"><span class="x">✗</span><span>Every extra subject is another bill</span></div>
+        </div>
+      </div>
+      <div class="vs-card men">
+        <p class="k">Working directly with Dr Waleed</p>
+        <p class="amt">£300</p>
+        <p class="per">a month, for every subject</p>
+        <div class="rows">
+          <div class="rw"><span class="t">✓</span><span>All four tiers, not just the content</span></div>
+          <div class="rw"><span class="t">✓</span><span>One system that moves every subject at once</span></div>
+          <div class="rw"><span class="t">✓</span><span>Your first session risk-free</span></div>
+        </div>
       </div>
     </div>
-    <div class="card price">
-      <p class="name">Top 1% Mentorship</p><p class="save">Monthly</p><p class="amt">£300</p><p class="per">per month · optimise and accelerate</p>
-      <div class="plist"><div class="tickrow"><span class="t">✓</span><span>Fortnightly calls all year</span></div><div class="tickrow"><span class="t">✓</span><span>24/7 access to Dr Waleed, fully customised plan</span></div></div>
-    </div>
   </div>
-  <p style="margin-top:26px; font-size:14px; color:rgba(26,21,53,.65); text-align:center;">Most students choose the Accelerator for faster results and accountability. <strong style="color:var(--purple);">First session risk-free: full refund, no questions asked.</strong></p>
-  </div>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 09</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 08</span></div>
 </section>
 
-<!-- 10 · The guarantee -->
-<section data-document-role="page" data-label="The guarantee" class="slide">
-  <p class="eyebrow">The guarantee</p>
-  <h2 class="slide-title">Try it. If it is not for you, <span class="gold-i">I refund you.</span></h2>
-  <p class="lede" style="max-width:820px;">You should not have to gamble on whether this works for your child. So the risk sits with me instead of with you.</p>
-  <div class="grow" style="display:flex; align-items:center;">
-    <div class="steps" style="flex:1;">
-      <div class="card step-card"><p class="n">01</p><h3>Come to the first session</h3><p>The full session, exactly as every other student gets it. You see how it actually runs.</p></div>
-      <div class="card step-card"><p class="n">02</p><h3>Decide honestly</h3><p>If it is not what you expected, that is a fair answer. You do not have to explain yourself to me.</p></div>
-      <div class="card step-card"><p class="n">03</p><h3>Send one email</h3><p>I refund you in full. No forms, no retention call, no awkward conversation.</p></div>
+<section data-document-role="page" data-label="Pricing" class="slide">
+  <p class="eyebrow">Pricing</p>
+  <h2 class="slide-title">The Top 1% <span class="gold-i">Mentorship.</span></h2>
+  <div class="grow" style="display:flex; flex-direction:column; justify-content:center;">
+    <div class="solo">
+      <div class="ring-wrap">
+        <div class="card solo-card">
+          <span class="flag pill">Invite only · 5 places</span>
+          <p class="name">Top 1% Mentorship</p>
+          <div class="amtrow"><p class="amt">£300</p><p class="per">per month, working directly with Dr Waleed</p></div>
+          <div class="feat">
+            <div class="rw"><span class="t">✓</span><span>Personalised performance plan</span></div>
+            <div class="rw"><span class="t">✓</span><span>Fortnightly calls, year-round</span></div>
+            <div class="rw"><span class="t">✓</span><span>Monthly performance reviews</span></div>
+            <div class="rw"><span class="t">✓</span><span>Priority support between calls</span></div>
+            <div class="rw"><span class="t">✓</span><span>Full access to every system</span></div>
+            <div class="rw"><span class="t">✓</span><span>Every subject, not just one</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="risk">
+        <p class="k">Zero risk</p>
+        <h3>Your first session is<br>risk-free.</h3>
+        <p>Come to the first session. If you're not completely satisfied, you get your money back, no questions asked.</p>
+        <p class="small">You only carry on once you've seen it work.</p>
+      </div>
     </div>
   </div>
-  <p class="serif" style="font-style:italic; font-size:19px; color:var(--gold); margin-top:6px;">What I will never do is guarantee a grade. Nobody honestly can, and I am not going to give your child false hope.</p>
-  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Study System · 10</span></div>
+  <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 09</span></div>
 </section>
 
-<!-- 11 · Close -->
 <section data-document-role="page" data-label="The next step" class="slide dark">
   <div class="row grow" style="align-items:center; gap:60px;">
     <div style="max-width:660px;">
       <p class="eyebrow">The next step</p>
       <h1 class="cover-title" style="font-size:52px; margin-top:20px;">Fix how you study, and every subject <span class="gold-i">moves at once.</span></h1>
       <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px;">
-        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">01</span><span style="font-size:16px;">Pick the level of support that fits on this call.</span></div>
-        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">02</span><span style="font-size:16px;">Enrol today at alevelaccelerators.com/study-systems</span></div>
-        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">03</span><span style="font-size:16px;">Try the first session risk-free. Full refund, no questions asked.</span></div>
+        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">01</span><span style="font-size:16px;">Agree your personalised plan on this call.</span></div>
+        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">02</span><span style="font-size:16px;">Secure one of the five mentorship places.</span></div>
+        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">03</span><span style="font-size:16px;">Come to your first session risk-free. Not satisfied? Full refund.</span></div>
       </div>
       <div style="display:flex; gap:12px; margin-top:28px;">
-        <span class="chip">Small groups</span>
+        <span class="chip">Invite only · 5 places</span>
         <span class="chip">First session risk-free</span>
       </div>
     </div>

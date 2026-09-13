@@ -16,7 +16,22 @@ These are private sales materials. They are never published on the site, linked 
 |---|---|---|---|
 | Summer Accelerator | `summer-accelerator/` | Parent sales calls, cohort starting Saturday 8 August 2026 | 16 July 2026 |
 | Subject Accelerators | `subject-accelerators/` | Parent sales calls, cohort starting Sunday 13 September 2026 | 16 July 2026 |
-| Top 1% Study System | `study-system/` | Parent sales calls, cohort starting Wednesday 16 September 2026 | 16 July 2026 |
+| Top 1% Mentorship | `top-1-mentorship/` | Sales calls for the £300 a month mentorship, evergreen | 16 July 2026, rebuilt 13 September 2026 |
+
+## Top 1% Mentorship deck (13 September 2026, Waleed's brief)
+
+The former Top 1% Study System deck now sells **only the Top 1% Mentorship (£300 a month)**. Waleed no longer sells the Study Series or the Study Accelerator, so every mention of them is gone; the folder was renamed from `study-system/` to `top-1-mentorship/` and the PDF to `A-Level-Accelerators-Top-1-Mentorship-Deck.pdf`. It is 10 slides:
+
+1. **Cover**: eyebrow Top 1% Mentorship, lede framed as working directly with Dr Waleed and "not subject tutoring", chips "Working directly with Dr Waleed" and "Not subject tutoring" (the small-groups and twelve-weeks chips are gone).
+2. **At a glance**: What it is "Not subject tutoring"; Format "At least four months" building your systems directly with Dr Waleed; The method "three phases, one system" (no week count); Where it leads "96% get their first choice" with "university offer, and on average a 2 grade increase", in his words.
+3. to 5. **The real challenge, the four tiers, who built this**: unchanged, his call.
+6. **The three phases**: the old "first four weeks" slide is deleted and the twelve-week arc became Phase 1 Diagnose, Phase 2 Rebuild, Phase 3 Coach with no week ranges, since he uses this slide to explain the phases. Two lines that assumed a weekly group format now say "a check-in on every call" and "set between every call".
+7. **Proof**: unchanged.
+8. **Tutoring or mentorship (new)**: his standing sales-call comparison. One-to-one subject tutoring at £40 to £50 an hour, 2 hours a week, is "up to £400 a month, for one subject" (the "up to" keeps the arithmetic true at both ends: £320 to £400), and it only re-teaches content; working directly with Dr Waleed is £300 a month for every subject. On the transcripts he quotes £40 to £60 an hour; the deck uses the £40 to £50 range he gave on 13 September.
+9. **Pricing**: a single large mentorship card (the three-tier layout is gone) beside a gold risk-free panel headed "Your first session is risk-free." Inclusions match `components/ui/pricing-section.tsx` on main: personalised performance plan, fortnightly calls year-round, monthly performance reviews, priority support, full access to every system, plus every subject; flagged "Invite only · 5 places" as on the live site.
+10. **Close**: agree your plan on this call, secure one of the five places, first session risk-free.
+
+The old guarantee slide was removed: risk-free now leads the pricing slide instead, and it carried a "never guarantee a grade" line that his 6 September confidence ruling retired. The headline on the gold panel carries an explicit line break so "risk-free" never splits across lines.
 
 ## 6 September 2026 update
 
