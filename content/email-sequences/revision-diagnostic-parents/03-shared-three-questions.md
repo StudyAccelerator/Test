@@ -1,28 +1,45 @@
 # P3 · The three questions parents ask most (shared, both parent route automations)
 
 Send: Day 11
-Subject A: the three questions parents ask me most
-Subject B: too late, tutor or this, and how to help
-Preheader: The three, answered straight, in one short email.
+Subject A: {$name}, The 3 Questions Parents Ask Me Most
+Subject B: Is It Too Late To Fix {$diag_child_name|default('your child')}'s Grades?
+Preheader: Too late, tutor or this, and how to help at home, answered the way I answer them on calls.
 Goal: the mini-FAQ deposit late in the sequence, sweeping up the unasked worries before the door email. One CTA: reply or call.
 Links: 1 (call scheduler)
 Revised: 6 September 2026 (Waleed's style pass)
+Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English for parents, Title Case subject, named booking links)
 
 ---
 
 Hi {$name},
 
-Across a thousand-plus students, the parents I speak to ask me the same three questions more than everything else combined. So here they are, answered the way I answer them on calls.
+Across more than a thousand students, the parents I speak to ask me the same three questions more than all the rest. So here they are, answered the way I answer them on calls.
 
-**"Is it too late?"** Almost never, and to be honest the panic behind this question usually does more damage than the timing. What's true is that the earlier in the year the method gets fixed, the more of the year benefits, and autumn fixes help predicted grades in a way spring fixes can't. What's also true is that I've watched students turn things around from January, from March, even between mocks and the real thing. So the right question isn't "is it too late", it's "what's the best move from exactly where we are", and that always has an answer.
+**"Is it too late?"**
 
-**"Should we get a tutor, or do this?"** It depends entirely on what's broken, which is why I keep going on about diagnosis. A genuine content gap, a topic never understood, wants a tutor or a subject programme. A method problem wants the method fixed, because a tutor pouring more content into a leaking method is the most expensive way to stand still. And if you're not sure which one {$diag_child_name|default('your child')} has, that's a reason to find out first, and I'm happy to help you do that.
+Almost never. To be honest, the panic behind this question often does more harm than the timing.
 
-**"How do I actually help without making it worse?"** The short version of everything I've written to you: ask about the process, not the hours. Put the plan somewhere visible and let it answer your questions. React to evidence, not to moods. And say the sentence they most need to hear from you, which is some version of "I know the effort is real". A teenager who feels believed accepts help, and one who feels accused defends themselves instead.
+It's true that the sooner the method gets fixed, the more of the year it helps. Autumn fixes help predicted grades in a way spring fixes can't.
 
-If your version of any of these three has details I haven't covered, that's exactly what the free half hour is for. You'll leave with a strategy plan for {$diag_child_name|default('your child')}, and I'm confident we can help with this:
+But I've watched students turn things around from January, from March, even between mocks and the real exams. So the better question is "what's the best move from where we are now?", and that always has an answer.
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
+**"Should we get a tutor, or do this?"**
+
+It depends on what's broken, which is why I keep going on about diagnosis.
+
+A real content gap, a topic that never made sense, needs a tutor or a subject course. A method problem needs the method fixed. A tutor pouring more content into a method that leaks is a costly way to stand still.
+
+If you're not sure which one {$diag_child_name|default('your child')} has, that's a reason to find out first, and I'm happy to help you do that.
+
+**"How do I help without making it worse?"**
+
+Ask about the process, not the hours. Put the plan where you can both see it, and let it answer your questions. React to what you see, not to moods.
+
+And say the sentence they most need to hear from you, which is some version of "I know the effort is real". A teenager who feels believed accepts help, but one who feels accused defends themselves instead.
+
+If your version of any of these questions has details I haven't covered, that's just what the free academic strategy call is for. It's 20 to 30 minutes with me, and you'll leave with a clear plan for {$diag_child_name|default('your child')}. I'm confident we can help.
+
+[BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Best wishes,
 

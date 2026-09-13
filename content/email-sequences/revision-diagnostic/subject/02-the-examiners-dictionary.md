@@ -2,50 +2,69 @@
 
 Send: Day 4
 Segment: diag_route contains "Subject Accelerator"
-Subject A: mark schemes are a language. Learn it like one
-Subject B: the exact words that earn the marks
-Preheader: How to build your examiner's dictionary, decode command words, and stop losing marks you deserved.
+Subject A: {$name}, The Exact Words That Earn The Marks
+Subject B: {$name}, Learn Mark Schemes Like A Language
+Preheader: How to build your examiner's dictionary, decode the command words, and stop losing marks you knew.
 Goal: teach mark scheme language study and command word decoding. Value only, one soft seed.
 Links: 0
 Revised: 6 September 2026 (Waleed's style pass: defensive limit paragraph replaced with a confident seed)
+Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 
 ---
 
 Hi {$name},
 
-Did you run the drill? If so, you've now seen your letters: K, R, W, T. And if your log looks like most students with your diagnostic result, the biggest pile is W: you knew it, you wrote it, and you worded it wrong.
+Did you run the drill? If so, you've now seen your letters: K, R, W, T.
 
-So today, the fix for W. It starts with an idea that changed how I revised for every exam I've sat since.
+And if your log looks like most students with your result, the biggest pile is W. You knew it, you wrote it, and you worded it wrong.
 
-A mark scheme isn't really an answer sheet. It's more like a dictionary for a language you're being tested in. You think in your own words, but the examiner can only give marks for theirs. So every W in your log is a sentence you translated badly, and the fix is the same as any language: learn the vocabulary properly.
+So today, the fix for W. It starts with an idea that changed how I revised for each exam I've sat since.
+
+A mark scheme isn't really an answer sheet. It's more like a dictionary for a language you're being tested in.
+
+You think in your own words, but the examiner can only give marks for theirs. So each W in your log is a sentence you translated badly. The fix is the same as any language: learn the words properly.
 
 Here's how you do that in {$diag_worry_subject|default('your subject')}.
 
-**One: collect the phrases**
+**Step 1: Collect the phrases.**
 
-Open three or four mark schemes for papers you've done or topics you know well. Go through them asking one question: which exact wording keeps being rewarded? Every subject has these. In biology, answers live and die on words like "complementary", "specific", "gradient". Chemistry schemes reward precise mechanism language. In maths, "hence" in a question is an instruction with marks attached, and method marks have their own rules entirely.
+Open three or four mark schemes for papers you've done or topics you know well. Go through them asking one question: which exact wording keeps being rewarded?
 
-Write the phrases that keep appearing into the back pages of your error log, sorted by topic. Ten minutes per scheme. Within two weeks you'll have your own list of what your board actually gives marks for, in their exact wording.
+Each subject has these. In biology, answers live and die on words like "complementary", "specific", "gradient". Chemistry schemes reward precise mechanism language. In maths, "hence" in a question is an instruction with marks attached, and method marks have rules of their own.
 
-**Two: learn it actively, like vocab**
+Write the phrases that keep appearing into the back pages of your error log, sorted by topic. Ten minutes per scheme. Within two weeks you'll have your own list of what your board gives marks for, in their exact wording.
 
-Just reading the list does nothing, so treat it like language learning: cover the phrase, produce it from memory, say it out loud. Saying it out loud matters more than you'd think, because phrases you've actually said come back under pressure in a way phrases you've only read never do. Two minutes at the start of each session in that subject. That's the whole habit.
+**Step 2: Learn it like vocab.**
 
-**Three: decode the command words**
+Just reading the list does nothing. So treat it like learning a language: cover the phrase, produce it from memory, say it out loud.
 
-Separate from the content vocabulary, there's the language of the question itself. Every board publishes what their command words mean, and most students have never once looked it up.
+Saying it out loud matters more than you'd think. Phrases you've said come back under pressure in a way phrases you've only read never do.
 
-"State" wants a fact, no reasoning, stop writing. "Explain" wants cause and effect, linked with becauses, and the marks live in the links. "Compare" wants both things in every sentence, and answers that describe them one at a time score half. "Evaluate" wants a judgement at the end, and a surprising number of evaluate answers lose the final mark by never actually judging anything.
+Two minutes at the start of each session in that subject. That's the whole habit.
+
+**Step 3: Decode the command words.**
+
+Separate from the content words, there's the language of the question itself. Each board publishes what their command words mean, and most students have never once looked it up.
+
+"State" wants a fact, no reasoning, stop writing. "Explain" wants cause and effect, linked with becauses, and the marks live in the links.
+
+"Compare" wants both things in each sentence, and answers that describe them one at a time score half. "Evaluate" wants a judgement at the end, and a surprising number of answers lose the final mark by never judging anything.
 
 So before you write a single word of any answer, name the command word and say what it's asking for. Five seconds. It's the difference between answering the question and answering the topic, and examiners only pay for the first one.
 
-**Four: close the loop**
+**Step 4: Close the loop.**
 
-From now on, every W in your error log gets two lines instead of one: your wording, and theirs, side by side. Reading your own sentence next to the version that gets the mark is a bit uncomfortable, but it's really useful discomfort. The gap between the two lines is usually tiny. A missing "because", a vague verb. You were one phrase away from the mark, again and again, and now you can see it.
+From now on, each W in your error log gets two lines instead of one: your wording, and theirs, side by side.
 
-There's a trained version of all this too, where a specialist reads your actual answers, live, and tells you exactly which phrase would have earned the mark, week after week until it becomes automatic. That's what our Subject Accelerator sessions are, and I'll tell you properly about them in a couple of days.
+Reading your own sentence next to the version that gets the mark is a bit awkward, but it's the useful kind of awkward. The gap between the two lines is usually tiny. A missing "because", a vague verb.
 
-This week: build page one of your dictionary. Three mark schemes, ten minutes each, phrases in the back of the log. Then reply and tell me the most surprising phrase your board keeps rewarding. I collect these.
+You were one phrase away from the mark, again and again, and now you can see it.
+
+There's a trained version of all this too. A specialist reads your actual answers, live, and tells you exactly which phrase would have earned the mark, week after week until it becomes automatic. That's what our Subject Accelerator sessions are, and I'll tell you properly about them in a couple of days.
+
+This week: build page one of your dictionary. Three mark schemes, ten minutes each, phrases in the back of the log.
+
+Then reply and tell me the most surprising phrase your board keeps rewarding. I collect these.
 
 Keep going!
 

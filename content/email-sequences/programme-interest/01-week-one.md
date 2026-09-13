@@ -1,29 +1,48 @@
 # PI1 · What week one feels like
 
 Send: Day 1
-Subject A: what week one actually feels like
-Subject B: the first session, from the inside
+Subject A: {$name}, What Week One Actually Feels Like
+Subject B: What Happens In The First Session
 Preheader: A first session from start to finish, and why the cohort starts when it does.
 Goal: make joining concrete and small. Calendar urgency. One CTA: the call.
 Links: 1 (call scheduler)
 Revised: 6 September 2026 (Waleed's style pass: "calendar not countdown" and "don't join stays an outcome" lines out)
+Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 
 ---
 
 Hi {$name},
 
-Yesterday I sent you the structure and the prices. Today, the thing the page can't quite show you: what the first week actually feels like, because "twelve week live programme" sounds much bigger from the outside than it is from the inside.
+Yesterday I sent you the structure and the prices. Today, the thing the page can't quite show you: what the first week feels like.
 
-The first session opens with the specialist mapping the topic against the exam: what the board actually asks, where the marks concentrate, and what high-scoring answers do differently. Twenty minutes in, the mark scheme comes out and stays out. Real questions, attempted live, then worked against the exact wording the scheme rewards. Nobody gets put on the spot beyond what they volunteer. And here's the part students always mention: watching someone else's answer get re-worded teaches nearly as much as your own, because everyone makes surprisingly similar mistakes. By the end there's a short list of exactly what to practise before session two, which takes two to three hours across the week, mostly past-paper work that should be happening anyway, now with direction.
+"Twelve week live programme" sounds much bigger from the outside than it does from the inside.
 
-That's it. No surprises, no mountain of homework, one recorded session a weekend and a clear list. Week two builds on week one, and by week four the mark-scheme wording starts appearing in answers without anyone having to think about it. That's the whole point.
+**How the first session runs**
 
-On timing: the cohort starts Sunday 13 September because the twelve weeks then sit exactly under the autumn term, when teachers form the impressions that become predicted grades. Join late and you're catching up on recordings. Wait until January and the programme still helps the summer exams, but the predictions will already be written.
+The first session opens with the specialist mapping the topic against the exam. What the board asks, where the marks sit, and what high-scoring answers do that others don't.
 
-If you're weighing it up and want a straight answer about fit, that's what my free strategy plan call is for. Bring the situation, and you'll leave with a plan either way:
+Twenty minutes in, the mark scheme comes out and stays out. Real questions, tried live, then worked against the exact wording the scheme rewards. No one is asked to answer in front of the group unless they choose to.
 
-[BUTTON: Book a free 30 minute call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
+And here's the part students always mention. Watching someone else's answer get re-worded teaches nearly as much as your own, because most students make very similar mistakes.
+
+By the end there's a short list of what to practise before session two. That takes two to three hours across the week. It's mostly past paper work that should be done in any case, now with a clear aim.
+
+**That's it.**
+
+No surprises, and no pile of homework. One recorded session a weekend and a clear list.
+
+Week two builds on week one. By week four, the mark scheme wording starts to show up in answers without you having to think about it. That's the whole point.
+
+**On timing**
+
+The cohort starts Sunday 13 September because the twelve weeks then sit right under the autumn term. That's when teachers form the views that become predicted grades.
+
+Join late and you catch up on the recordings. Wait until January and the programme still helps the summer exams, but the predicted grades will be set by then.
+
+If you're weighing it up and want a straight answer about fit, that's what my free academic strategy call is for. Tell me where things stand, and you'll leave with a custom academic strategy plan either way.
+
+[BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
 Waleed
 
-PS: I'm a full time doctor, so bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just [book whichever day and time works best for you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: I'm a full time doctor, so the slot times might look a bit strange some weeks (blame the night shifts haha). Just [book whichever day and time works best for you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

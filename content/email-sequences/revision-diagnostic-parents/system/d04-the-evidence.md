@@ -1,33 +1,52 @@
 # PY1c · What other families found
 
 Send: Day 4
-Subject A: what other families found
-Subject B: what sits behind the method
-Preheader: The grades, the guarantee, real quotes, and the science behind the method.
+Subject A: {$name}, What Other Families Found
+Subject B: The Evidence Behind {$diag_child_name|default('your child')}'s Plan
+Preheader: The results, real quotes from students, the guarantee, and the science the method is built on.
 Goal: proof email in the confident register for the method purchase. One CTA: the call, via the booking link.
-Links: 1 (call scheduler, inline)
+Links: 2 (call scheduler, inline and in the PS)
 Revised: 6 September 2026 (Waleed's style pass: "can and can't show you" framing replaced with plain positive proof)
+Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 
 ---
 
 Hi {$name},
 
-Before you decide anything about how {$diag_child_name|default('your child')} studies, I'd like you to know what sits behind my recommendation, because you should be weighing this up on real evidence.
+I hope you're well!
 
-**The method itself.** Testing yourself instead of re-reading, and returning to material before it fades, isn't mine and isn't new. It's the most repeated finding in the whole science of learning. What I do is get teenagers to actually run it, which turns out to be the part that matters.
+Before you decide how to help {$diag_child_name|default('your child')}, I'd like to show you what sits behind my advice. You should be able to weigh it up on real proof.
 
-**The results.** On average, our students jump two grades. And because the method runs underneath every subject, fixing it lifts all of them at once rather than patching one.
+**The method itself.**
 
-**What students say.** Biju, who joined during a gap year: "All the information provided was clear and understandable. It was really helpful and improved my confidence!" Delicia, Year 13: "The topics were really hard to approach while researching alone, so seeing it broken down into manageable points was useful."
+Testing yourself instead of re-reading, and going back to a topic before it fades, isn't mine and isn't new. It's the most repeated finding in the whole science of learning.
 
-**The guarantee.** Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+What I do is get students to run it, week in and week out. That turns out to be the part that counts.
 
-**Why this email exists.** Tomorrow's email lays out the fix itself, and later this week I'll do the money properly, so I wanted you to have the evidence first.
+**The results.**
 
-And the standing offer stands: a free half hour where we look at {$diag_child_name|default('your child')}'s report together and you leave with a strategy plan for the next two weeks. I'm confident we can help with this. [Click here to book the call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+On average, our students jump two grades. And because the method runs under each subject, fixing it lifts all of them at once.
+
+**What students say.**
+
+Biju, who joined during a gap year: "All the information provided was clear and understandable. It was really helpful and improved my confidence!"
+
+Delicia, Year 13: "The topics were really hard to approach while researching alone, so seeing it broken down into manageable points was useful."
+
+**The guarantee.**
+
+Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+
+**Why I'm sending this today.**
+
+The next email lays out the fix itself. Later this week I'll go through the money in plain numbers. I wanted you to have the proof first.
+
+And as a reward for taking the diagnostic for {$diag_child_name|default('your child')}, my free academic strategy call is open to you. It's 20 to 30 minutes with me. We look at their report side by side, and you leave with a custom academic strategy plan for the next two weeks. I'm confident we can help.
+
+[Click here to book your free academic strategy call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)
 
 Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so please bear with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just book whichever day and time suits you best.
+PS: I'm a full time doctor, so the slot times might look a bit strange some weeks (blame the night shifts haha). Just book whichever day and time suits you best. [Click here to book](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)
