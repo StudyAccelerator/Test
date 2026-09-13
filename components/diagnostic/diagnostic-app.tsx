@@ -118,7 +118,9 @@ export default function DiagnosticApp() {
         setStage('report')
         return
       }
-      setResumeCount(Object.keys(stored.answers).length)
+      /* Count answered QUESTIONS, not stored keys: follow-up keys like
+         preYear and supportDetail would otherwise read "21 of 20 done". */
+      setResumeCount(QUESTIONS.filter((q) => isAnswered(q, stored.answers)).length)
       if (storedTaker) {
         if (startNow) {
           setDirect(true)
