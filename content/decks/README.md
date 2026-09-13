@@ -52,7 +52,7 @@ The study-system deck is now **11 slides** and is deliberately EVERGREEN: no coh
 
 The three CURRENT Canva decks live in the folder **Sales Call Decks** (https://www.canva.com/folder/FAHUcv7IxyM), re-imported from commit 3297df0 with the tier slide and monthly mentorship pricing, then corrected with the fix recipe below (chips on pages 1 and 10, founder caption, and the study deck's page 3 title re-wrap):
 
-- Top 1% Study System | Sales Call Deck (11 slides, rebuilt): design DAHUcpaXSec, edit https://www.canva.com/d/dUluvmING10d2tv
+- Top 1% Mentorship | Sales Call Deck (10 slides, 13 September 2026): design DAHVGfs5o8M, open via https://www.canva.com/design/DAHVGfs5o8M. Imported from commit 93f1b4c, then corrected in Canva: chips on pages 1 and 10 (the first pill on each was also widened 20px and the second chip shifted right, because Canva's monospace runs wider than Chrome's), the page 3 title re-wrap, the founder caption on page 5, and the big prices on pages 8 and 9 lifted clear of the line beneath them. The old Top 1% Study System deck (DAHUcpaXSec) moved to the archive folder the same day. Connector note from this pass: edit-design operations now need BOTH `element_id` and `locator_id` (same value); the published schema lists only the first, but the server rejects calls without the second.
 - Subject Accelerators | Sales Call Deck: design DAHUch3u4hs, edit https://www.canva.com/d/QF56sItPeNs1D80
 - Summer Accelerator | Sales Call Deck: design DAHUcsh4yj4, edit https://www.canva.com/d/6ZxgoKaQBkUkflx
 
