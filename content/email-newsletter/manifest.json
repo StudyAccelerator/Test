@@ -1,0 +1,45 @@
+{
+ "comment": "The Sunday Session as engine campaigns (from 13 Sept 2026). Two campaigns per issue: the student version to the students + mixed list, the parent twin to the parent groups. Load with: python3 scripts/email-engine/engine.py campaigns content/email-newsletter --live (creates DRAFTS; --update rewrites existing drafts). Scheduling is done on Waleed's go, never automatically.",
+ "audiences": {
+  "students": [
+   "179596195547580232",
+   "185843873480705989",
+   "184392744125334599",
+   "179320609561380062",
+   "185844353497826496",
+   "186350189379847805",
+   "186744403779388652",
+   "192687508025247162",
+   "187183128836573106",
+   "192801700892903405",
+   "181017936836691101",
+   "181018180338058259"
+  ],
+  "parents": [
+   "193102828818925394",
+   "188021995515937985"
+  ]
+ },
+ "footers": {
+  "students": "You're getting this because you signed up at alevelaccelerators.com (the diagnostic, the tracker, a workshop or the newsletter).",
+  "parents": "You're getting this because you signed up for the free parents' resources at alevelaccelerators.com."
+ },
+ "campaigns": [
+  {
+   "key": "ss-0913-s",
+   "name": "Sunday Session 2026-09-13 · marks per minute (students)",
+   "file": "2026-09-13-marks-per-minute.md",
+   "audience": "students",
+   "send_hint": "Sun 13 Sep 17:00 UK",
+   "campaign_id": "198502771422398394"
+  },
+  {
+   "key": "ss-0913-p",
+   "name": "Sunday Session 2026-09-13 · marks per minute (parents)",
+   "file": "2026-09-13-marks-per-minute-parents.md",
+   "audience": "parents",
+   "send_hint": "Sun 13 Sep 17:00 UK",
+   "campaign_id": "198502774740092843"
+  }
+ ]
+}

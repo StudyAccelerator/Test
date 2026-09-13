@@ -23,6 +23,14 @@ Subcommands (run from the repo root):
       Re-fetch each automation and assert: step order matches the manifest,
       delays match, every email is designed, sender is right. Prints a table.
 
+  python3 scripts/email-engine/engine.py harness <file> <audience> [<file> <audience>]
+      Load up to two rendered emails into the REVIEW HARNESS automation (OFF,
+      empty trigger group) so a Claude session can trigger a MailerLite test
+      send to waleed@alevelaccelerators.com. This is how Waleed reviews copy:
+      the Gmail connector strips images and wraps links in redirect notices,
+      a MailerLite test send shows exactly what a subscriber gets. Audience is
+      students or parents (picks the footer).
+
 The content write uses PUT /api/automations/{aid}/emails/{eid}/content
 (undocumented but verified: it applies the design and registers link
 tracking, unlike writing the `content` field directly). Subject, from_name
@@ -261,6 +269,43 @@ def render_plain_short(meta, footer):
 
 # ---------------------------------------------------------------- commands
 
+# The review harness: an automation that exists only for test sends. Created
+# 13 September 2026. It is switched off and its trigger group is empty; both
+# stay that way, so nothing loaded here can ever reach a subscriber.
+HARNESS_AUTOMATION = '198499107557345247'
+HARNESS_FOOTERS = {
+    'students': "You're getting this because you signed up at alevelaccelerators.com "
+                "(the diagnostic, the tracker, a workshop or the newsletter).",
+    'parents': "You're getting this because you signed up for the free parents' resources "
+               "at alevelaccelerators.com.",
+}
+
+
+def cmd_harness(pairs):
+    key = api_key()
+    data = api(f'automations/{HARNESS_AUTOMATION}', key=key)['data']
+    if data.get('enabled'):
+        sys.exit('the review harness automation is ON; switch it off before loading anything into it')
+    chain = [s for s in ordered_steps(data) if s['type'] == 'email']
+    if len(pairs) > len(chain):
+        sys.exit(f'harness has {len(chain)} email steps, {len(pairs)} files given')
+    for step, (path, aud) in zip(chain, pairs):
+        if aud not in HARNESS_FOOTERS:
+            sys.exit(f'audience must be one of {list(HARNESS_FOOTERS)}')
+        meta = parse_email(path)
+        footer = HARNESS_FOOTERS[aud]
+        eid = step['email_id']
+        api(f'automations/{HARNESS_AUTOMATION}/emails/{eid}/content', 'PUT',
+            {'html': render_email(meta, footer)}, key)
+        api(f'automations/{HARNESS_AUTOMATION}/emails/{eid}', 'PUT', {
+            'subject': meta['subject'], 'from_name': 'Dr Waleed Ahmad',
+            'from': 'waleed@alevelaccelerators.com',
+            'plain_text': render_plain_short(meta, footer)}, key)
+        print(f"harness step {step['id']} <- {path} ({aud}): {meta['subject']}")
+        time.sleep(0.7)
+    print('now trigger send_test_automation on', HARNESS_AUTOMATION, 'to waleed@alevelaccelerators.com')
+
+
 def load_manifest():
     return json.loads(MANIFEST.read_text())
 
@@ -478,5 +523,8 @@ if __name__ == '__main__':
         cmd_verify(args[1] if len(args) > 1 and not args[1].startswith('-') else 'all')
     elif cmd == 'campaigns':
         cmd_campaigns(args[1], '--live' in args, '--update' in args)
+    elif cmd == 'harness':
+        rest = args[1:]
+        cmd_harness(list(zip(rest[0::2], rest[1::2])))
     else:
         sys.exit(__doc__)
