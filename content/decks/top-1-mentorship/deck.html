@@ -172,45 +172,40 @@
   .row { display: flex; }
   .grow { flex: 1; }
 
-  /* Comparison: tutoring against the mentorship */
-  .vs { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; }
-  .vs-card { padding: 26px 30px 24px; border-radius: 16px; }
-  .vs-card.tut { background: #fff; box-shadow: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05), 0 12px 24px rgba(46,37,87,.06); }
-  .vs-card.men { background: var(--purple); box-shadow: 0 18px 36px rgba(46,37,87,.22); }
-  .vs-card .k { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
-  .vs-card.tut .k { color: rgba(46,37,87,.5); }
-  .vs-card.men .k { color: var(--gold); }
-  .vs-card .amt { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 62px; line-height: 1; margin-top: 14px; }
-  .vs-card.tut .amt { color: rgba(46,37,87,.72); }
-  .vs-card.men .amt { color: var(--gold); }
-  .vs-card .per { font-size: 14px; margin-top: 8px; }
-  .vs-card.tut .per { color: rgba(26,21,53,.6); }
-  .vs-card.men .per { color: rgba(251,248,243,.78); }
-  .vs-card .rows { margin-top: 18px; }
-  .vs-card .rw { display: flex; gap: 11px; font-size: 14.5px; line-height: 1.5; }
-  .vs-card .rw + .rw { margin-top: 10px; }
-  .vs-card.tut .rw { color: rgba(26,21,53,.74); }
-  .vs-card.men .rw { color: rgba(251,248,243,.9); }
-  .vs-card .rw .x { color: #b3544f; font-weight: 800; flex-shrink: 0; }
-  .vs-card .rw .t { color: var(--gold); font-weight: 800; flex-shrink: 0; }
+  /* Tutoring cost: the maths table plus the one-subject, tier-1 point */
+  .cost { display: grid; grid-template-columns: 1.25fr 1fr; gap: 26px; align-items: stretch; }
+  .cost-table { padding: 10px 34px; display: flex; flex-direction: column; justify-content: center; }
+  .cost-table .tr { display: flex; justify-content: space-between; align-items: baseline; padding: 20px 0; }
+  .cost-table .tr + .tr { box-shadow: 0 -1px 0 rgba(46,37,87,.1); }
+  .cost-table .l { font-size: 17px; color: rgba(26,21,53,.7); }
+  .cost-table .v { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 38px; color: var(--purple); }
+  .cost-table .tr.total .l { font-weight: 700; color: var(--purple); }
+  .cost-table .tr.total .v { font-size: 50px; color: var(--purple); }
+  .cost-notes { display: flex; flex-direction: column; gap: 18px; }
+  .note { flex: 1; border-radius: 16px; padding: 24px 28px; display: flex; flex-direction: column; justify-content: center; }
+  .note.light { background: #fff; box-shadow: 0 0 0 1px rgba(46,37,87,.05), 0 2px 4px rgba(46,37,87,.05), 0 12px 24px rgba(46,37,87,.06); }
+  .note.dark { background: var(--purple); box-shadow: 0 18px 36px rgba(46,37,87,.22); }
+  .note .k { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 10.5px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); }
+  .note h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 26px; line-height: 1.2; margin-top: 8px; }
+  .note.light h3 { color: var(--purple); }
+  .note.dark h3 { color: var(--cream); }
+  .note p { font-size: 14.5px; line-height: 1.5; margin-top: 8px; }
+  .note.light p { color: rgba(26,21,53,.7); }
+  .note.dark p { color: rgba(251,248,243,.8); }
 
-  /* Pricing: one large mentorship card beside the risk-free panel */
-  .solo { display: flex; gap: 24px; align-items: stretch; }
-  .solo .ring-wrap { flex: 1.3; }
-  .solo-card { position: relative; padding: 30px 38px 28px; }
-  .solo-card .name { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 28px; color: var(--purple); }
-  .solo-card .amtrow { margin-top: 12px; }
-  .solo-card .amt { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 84px; line-height: 1; color: var(--purple); letter-spacing: -.01em; }
-  .solo-card .per { font-size: 16px; color: rgba(26,21,53,.6); margin-top: 6px; }
-  .solo-card .feat { margin-top: 22px; display: grid; grid-template-columns: 1fr 1fr; column-gap: 26px; row-gap: 12px; }
-  .solo-card .feat .rw { display: flex; gap: 10px; font-size: 14.5px; line-height: 1.45; color: rgba(26,21,53,.78); }
+  /* Pricing: one centred mentorship card, risk-free line underneath */
+  .solo { display: flex; flex-direction: column; align-items: center; }
+  .solo .ring-wrap { width: 900px; }
+  .solo-card { padding: 34px 44px 32px; text-align: center; }
+  .solo-card .name { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 12px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(46,37,87,.55); }
+  .solo-card .amt { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 76px; line-height: 1; color: var(--purple); letter-spacing: -.01em; margin-top: 16px; white-space: nowrap; }
+  .solo-card .per { font-size: 16px; color: rgba(26,21,53,.62); margin-top: 12px; }
+  .solo-card .feat { margin-top: 26px; padding-top: 22px; box-shadow: 0 -1px 0 rgba(46,37,87,.1); display: flex; justify-content: center; gap: 30px; }
+  .solo-card .feat .rw { display: flex; gap: 9px; font-size: 15px; line-height: 1.4; color: rgba(26,21,53,.8); white-space: nowrap; }
   .solo-card .feat .t { color: var(--gold); font-weight: 800; flex-shrink: 0; }
-  .solo-card .flag { position: absolute; top: 30px; right: 34px; left: auto; transform: none; }
-  .risk { flex: 1; background: var(--gold); border-radius: 18px; padding: 32px 34px; display: flex; flex-direction: column; justify-content: center; box-shadow: 0 18px 36px rgba(46,37,87,.14); }
-  .risk .k { font-family: "SF Mono", Menlo, Consolas, monospace; font-size: 11px; font-weight: 700; letter-spacing: .2em; text-transform: uppercase; color: rgba(46,37,87,.62); }
-  .risk h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 34px; line-height: 1.15; color: var(--purple); margin-top: 14px; }
-  .risk p { font-size: 16px; line-height: 1.55; color: rgba(46,37,87,.86); margin-top: 16px; }
-  .risk .small { font-size: 13px; font-weight: 700; color: var(--purple); margin-top: 20px; }
+  .risk-line { margin-top: 30px; text-align: center; max-width: 780px; }
+  .risk-line h3 { font-family: Georgia, "Times New Roman", serif; font-weight: 700; font-size: 24px; color: var(--purple); }
+  .risk-line p { font-size: 15.5px; line-height: 1.5; color: rgba(26,21,53,.7); margin-top: 6px; }
 </style>
 </head>
 <body>
@@ -418,31 +413,20 @@
   <div class="foot"><span class="brandline"><svg width="14" height="12" viewBox="0 0 20 17" aria-hidden="true"><path d="M10 0 L20 17 L15.2 17 L10 7.8 L4.8 17 L0 17 Z" fill="var(--purple)" opacity=".45"/></svg><span>A-Level Accelerators</span></span><span>Top 1% Mentorship · 07</span></div>
 </section>
 
-<section data-document-role="page" data-label="Tutoring or mentorship" class="slide">
+<section data-document-role="page" data-label="The cost of tutoring" class="slide">
   <p class="eyebrow">Before we talk price</p>
-  <h2 class="slide-title">Tutoring costs more, and <span class="gold-i">fixes less.</span></h2>
-  <p class="lede" style="max-width:860px;">Tutoring re-teaches content, one subject at a time. If your grade is stuck because of how you study, more hours of content won't move it.</p>
+  <h2 class="slide-title">What one-to-one tutoring <span class="gold-i">really costs.</span></h2>
+  <p class="lede" style="max-width:860px;">On average, one-to-one tutoring costs £40 to £50 an hour.</p>
   <div class="grow" style="display:flex; align-items:center;">
-    <div class="vs" style="flex:1;">
-      <div class="vs-card tut">
-        <p class="k">One-to-one subject tutoring</p>
-        <p class="amt">Up to £400</p>
-        <p class="per">a month, for one subject</p>
-        <div class="rows">
-          <div class="rw"><span class="x">✗</span><span>£40 to £50 an hour, 2 hours a week</span></div>
-          <div class="rw"><span class="x">✗</span><span>Re-teaches content, the bottom tier</span></div>
-          <div class="rw"><span class="x">✗</span><span>Every extra subject is another bill</span></div>
-        </div>
+    <div class="cost" style="flex:1;">
+      <div class="card cost-table">
+        <div class="tr"><span class="l">An hour</span><span class="v">£40 to £50</span></div>
+        <div class="tr"><span class="l">2 hours a week</span><span class="v">£80 to £100</span></div>
+        <div class="tr total"><span class="l">Every month</span><span class="v">£320 to £400</span></div>
       </div>
-      <div class="vs-card men">
-        <p class="k">Working directly with Dr Waleed</p>
-        <p class="amt">£300</p>
-        <p class="per">a month, for every subject</p>
-        <div class="rows">
-          <div class="rw"><span class="t">✓</span><span>All four tiers, not just the content</span></div>
-          <div class="rw"><span class="t">✓</span><span>One system that moves every subject at once</span></div>
-          <div class="rw"><span class="t">✓</span><span>Your first session risk-free</span></div>
-        </div>
+      <div class="cost-notes">
+        <div class="note light"><p class="k">And that's</p><h3>For one subject.</h3><p>Every other subject you add costs the same again.</p></div>
+        <div class="note dark"><p class="k">And it all sits in</p><h3>Tier 1, Foundation.</h3><p>Re-teaching content, which isn't what's holding the grade back.</p></div>
       </div>
     </div>
   </div>
@@ -456,24 +440,18 @@
     <div class="solo">
       <div class="ring-wrap">
         <div class="card solo-card">
-          <span class="flag pill">Invite only · 5 places</span>
-          <p class="name">Top 1% Mentorship</p>
-          <div class="amtrow"><p class="amt">£300</p><p class="per">per month, working directly with Dr Waleed</p></div>
+          <p class="name">Working directly with Dr Waleed</p>
+          <p class="amt">£300 per month</p>
           <div class="feat">
             <div class="rw"><span class="t">✓</span><span>Personalised performance plan</span></div>
             <div class="rw"><span class="t">✓</span><span>Fortnightly calls, year-round</span></div>
-            <div class="rw"><span class="t">✓</span><span>Monthly performance reviews</span></div>
             <div class="rw"><span class="t">✓</span><span>Priority support between calls</span></div>
-            <div class="rw"><span class="t">✓</span><span>Full access to every system</span></div>
-            <div class="rw"><span class="t">✓</span><span>Every subject, not just one</span></div>
           </div>
         </div>
       </div>
-      <div class="risk">
-        <p class="k">Zero risk</p>
-        <h3>Your first session is<br>risk-free.</h3>
+      <div class="risk-line">
+        <h3>Your first session is risk-free.</h3>
         <p>Come to the first session. If you're not completely satisfied, you get your money back, no questions asked.</p>
-        <p class="small">You only carry on once you've seen it work.</p>
       </div>
     </div>
   </div>
@@ -487,11 +465,11 @@
       <h1 class="cover-title" style="font-size:52px; margin-top:20px;">Fix how you study, and every subject <span class="gold-i">moves at once.</span></h1>
       <div style="margin-top:32px; display:flex; flex-direction:column; gap:14px;">
         <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">01</span><span style="font-size:16px;">Agree your personalised plan on this call.</span></div>
-        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">02</span><span style="font-size:16px;">Secure one of the five mentorship places.</span></div>
+        <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">02</span><span style="font-size:16px;">Start working directly with Dr Waleed.</span></div>
         <div class="dark-card" style="padding:16px 22px; display:flex; gap:16px; align-items:baseline;"><span class="mono" style="color:var(--gold); font-size:12px; font-weight:700; letter-spacing:.2em;">03</span><span style="font-size:16px;">Come to your first session risk-free. Not satisfied? Full refund.</span></div>
       </div>
       <div style="display:flex; gap:12px; margin-top:28px;">
-        <span class="chip">Invite only · 5 places</span>
+        <span class="chip">Working directly with Dr Waleed</span>
         <span class="chip">First session risk-free</span>
       </div>
     </div>
