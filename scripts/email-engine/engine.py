@@ -167,7 +167,19 @@ def para_html(block):
                 f'letter-spacing:1px;font-size:12px;">From your report</p>{rows}</div>')
     t = html.escape(block, quote=False)
     t = re.sub(r'\*\*(.+?)\*\*', r'<strong>\1</strong>', t, flags=re.S)
+    # Inline [label](url) links (Waleed's builder edits use named links like
+    # "Click here to book"). Held out while linkify runs so the href URL is not
+    # wrapped a second time, then restored in his link style.
+    held = []
+
+    def hold(m):
+        held.append((m.group(1), m.group(2)))
+        return f'\x00{len(held) - 1}\x00'
+    t = re.sub(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', hold, t)
     t = linkify(t)
+    t = re.sub(r'\x00(\d+)\x00', lambda m: (
+        f'<a href="{held[int(m.group(1))][1]}" style="color:#2E2557;font-weight:600;'
+        f'text-decoration:underline;">{held[int(m.group(1))][0]}</a>'), t)
     t = t.replace('\n', '<br>\n')
     return f'<p style="{P_STYLE}">{t}</p>'
 
@@ -225,6 +237,7 @@ def render_plain(meta, footer):
         blocks, valediction = lift_signoff(blocks)
         tail = f'\n\n{valediction}\n{SIG_PLAIN}'
     body = '\n\n'.join(blocks) + tail
+    body = re.sub(r'\[([^\]]+)\]\((https?://[^)\s]+)\)', r'\1: \2', body)
     body = re.sub(r'^\[BUTTON: (.+?) -> (\S+?)\]$', r'\1:\n\2', body, flags=re.M)
     body = re.sub(r'^\[LINK: (.+?) -> (\S+?)\]$', r'\1:\n\2', body, flags=re.M)
     body = re.sub(r'^\[BOX START.*\]$', 'From your report:', body, flags=re.M)
