@@ -43,7 +43,9 @@ The free diagnostic, the free tracker, and the drills my emails teach. A student
 
 At £50 an hour you pay for someone to explain things. Here you train the skill of scoring, on a term-long structure, with the satisfaction guarantee on the first session.
 
-If your case makes the sums unclear, bring it to my free academic strategy call. A tight budget, three shaky subjects, or a method problem that looks like a subject problem. We'll work out the right path side by side, and you'll leave with a custom academic strategy plan.
+If your case makes the sums unclear, bring it to my free academic strategy call. A tight budget, three shaky subjects, or a method problem that looks like a subject problem.
+
+We'll work out the right path side by side, and you'll leave with a custom academic strategy plan.
 
 [BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 

@@ -27,7 +27,9 @@ Take the topic from two days ago. Fresh page, book still closed.
 
 Write out what you remember. Pay special attention to the second colour material, the stuff that wasn't there the first time.
 
-Then check. Most of it will be there now. That's not luck, that's just how memory works. You pulled it out once, so pulling it out again tonight is easier.
+Then check. Most of it will be there now. That's not luck, that's just how memory works.
+
+You pulled it out once, so pulling it out again tonight is easier.
 
 Anything still missing goes back in the second colour and gets an extra thirty seconds of attention.
 

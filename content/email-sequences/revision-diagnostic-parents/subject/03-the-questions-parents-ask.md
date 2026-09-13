@@ -26,7 +26,9 @@ Within two sessions they start hearing their own mistakes in other people's answ
 
 **"What evidence do you have?"**
 
-On average, our students jump two grades. The specialists who teach got top grades in the subject themselves. They have helped hundreds of students do the same. I've worked with over 1,000 A-level students across six years.
+On average, our students jump two grades. The specialists who teach got top grades in the subject themselves. They have helped hundreds of students do the same.
+
+I've worked with over 1,000 A-level students across six years.
 
 Naysa, biology, put it like this: "The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content."
 

@@ -28,7 +28,9 @@ Twelve weeks of live, exam focused teaching in one subject: Biology, Chemistry o
 
 The next cohort starts Sunday 13th September. We chose the second weekend of the school year on purpose. Your exam skills build alongside the content from the start of Year 13, not patched on after Christmas mocks.
 
-Each session runs the way you'd hope after these emails. A short content review first, then most of the time inside real exam questions with the mark scheme open. Your answers get coached into the wording that earns the marks. It's the examiner drill with the examiner in the room.
+Each session runs the way you'd hope after these emails. A short content review first, then most of the time inside real exam questions with the mark scheme open.
+
+Your answers get coached into the wording that earns the marks. It's the examiner drill with the examiner in the room.
 
 The times are built around school. Maths runs Saturdays 1pm to 3pm, Biology Sundays 10am to 12pm, Chemistry Sundays 1pm to 3pm. So nothing clashes with school, and nothing clashes if you take two.
 
@@ -40,7 +42,9 @@ Your report flagged {$diag_bottleneck|default('Exam Craft')} in {$diag_worry_sub
 
 For that profile, normal tutoring is the wrong tool, and a costly one. You don't need someone to teach you content you mostly know all over again.
 
-You need your answers read, fixed and re-worded, again and again, by someone who knows the scheme inside out. That goes on until the right wording comes out under pressure without you thinking about it. It's the one thing this programme does that a textbook can't.
+You need your answers read, fixed and re-worded, again and again, by someone who knows the scheme inside out.
+
+That goes on until the right wording comes out under pressure without you thinking about it. It's the one thing this programme does that a textbook can't.
 
 **What students say**
 
@@ -72,4 +76,4 @@ Keep going!
 
 Waleed
 
-PS: If you already know you're in, book now and spend the time before the 13th on the drill. That way you arrive with a log full of proof for your specialist to work on. And any questions at all, just reply, I'm always happy to help :)
+PS: If you already know you're in, book now and spend the time before the 13th on the drill. You'll arrive with a log full of proof for your expert to work on. Any questions, just reply, I'm always happy to help :)

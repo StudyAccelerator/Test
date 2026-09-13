@@ -25,7 +25,7 @@ Rayanna, biology: "The whole session was interactive and the tutor was really he
 
 Here's the thing I want you to see. All four of them come back to the same point. They spent their time inside real exam questions, not sat through hour after hour of content.
 
-That's the design. You don't watch someone else do the work. You do it, and you get coached as you go. It's why the sessions don't feel like school at all.
+That's the design: you don't watch someone else do the work. You do it, and you get coached as you go. It's why the sessions don't feel like school at all.
 
 And here's what all of that adds up to: on average, our students jump two grades.
 

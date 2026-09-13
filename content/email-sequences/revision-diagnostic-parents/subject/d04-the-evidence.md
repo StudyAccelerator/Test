@@ -43,7 +43,9 @@ Join the first session, and if you're not completely satisfied, you get your mon
 
 The next email explains the programme itself. Later this week I'll go through the money. I wanted you to have the proof first.
 
-And if you'd rather talk it through, that's what the free academic strategy call is for. I go through {$diag_child_name|default('your child')}'s report with you. You leave with a clear plan for the next two weeks. I'm confident we can help.
+And if you'd rather talk it through, that's what the free academic strategy call is for. I go through {$diag_child_name|default('your child')}'s report with you.
+
+You leave with a clear plan for the next two weeks. I'm confident we can help.
 
 [Click here to book the call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)
 

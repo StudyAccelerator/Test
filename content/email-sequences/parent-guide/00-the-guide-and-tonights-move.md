@@ -43,7 +43,9 @@ Since then I've worked with over 1,000 A-level students. The guide is built on t
 
 **What's coming this week**
 
-Over the next two weeks I'll email you every day with one short, practical email around the guide. The mistake that feels like helping. How to see your child's revision in real numbers. What fixes what.
+Over the next two weeks I'll email you every day with one short, practical email around the guide.
+
+The mistake that feels like helping. How to see your child's revision in real numbers. What fixes what.
 
 Each one is something you can use the same evening.
 

@@ -26,13 +26,15 @@ Wait until after mocks to fix your exam skills, and the grades have mostly been 
 
 **"Will it clash with school, sport, life?"**
 
-It's built not to. Maths is Saturday 1pm to 3pm, Biology Sunday 10am to 12pm, Chemistry Sunday 1pm to 3pm. Nothing touches the school week. And the subjects never clash with each other.
+It's built not to. Maths is Saturday 1pm to 3pm, Biology Sunday 10am to 12pm, Chemistry Sunday 1pm to 3pm.
+
+Nothing touches the school week. And the subjects never clash with each other.
 
 If a weekend goes wrong, the session's recorded. Between sessions, plan two to three hours of work on your own. That's mostly the drill you run each week, now with coached answers feeding it.
 
 **"I'm one person in a group. How does that fix MY wording?"**
 
-Fair question. The answer is in how the sessions are built. Groups are kept small on purpose. Each session works on real answers, yours included, against the scheme live.
+Fair question. The answer is in how the sessions are built: groups are kept small on purpose, and each session works on real answers, yours included, against the scheme live.
 
 And here's the thing students don't expect. Watching someone else's answer get re-worded teaches you almost as much as your own. We all make the same mistakes: the same missing "because", the same vague verb.
 
@@ -40,7 +42,9 @@ In two sessions you'll hear your own mistakes coming out of other people's answe
 
 **"£339 feels like a lot."**
 
-It's real money. So here's how it compares. The UK average for 1:1 A-level tutoring is about £50 an hour. So £339 buys under seven hours of it.
+It's real money. So here's how it compares.
+
+The UK average for 1:1 A-level tutoring is about £50 an hour. So £339 buys under seven hours of it.
 
 The Accelerator is twelve weeks of weekly live expert sessions for the same money. And it comes with our satisfaction guarantee: join the first session, and if you're not completely satisfied, you get your money back.
 
@@ -50,15 +54,23 @@ The Accelerator is twelve weeks of weekly live expert sessions for the same mone
 
 {$name}, forward this to whoever would be paying. This part's for them.
 
-Hello, I'm Dr Waleed Ahmad, an NHS doctor and the founder of A-Level Accelerators. I've worked with over 1,000 A-level students. Before medicine I was one myself: a hard worker who lost marks for years to things nobody taught me about how exams are marked.
+Hello, I'm Dr Waleed Ahmad. I'm an NHS doctor and the founder of A-Level Accelerators. I've worked with over 1,000 A-level students.
 
-Your child took my free 20 question revision diagnostic. Their result is one I see very often in able students. The knowledge is mostly there. The marks get lost on the way to the page: timing, reading the question, and above all the exact wording that mark schemes reward.
+Before medicine I was one myself: a hard worker who lost marks for years to things nobody taught me about how exams are marked.
+
+Your child took my free 20 question revision diagnostic. Their result is one I see very often in able students.
+
+The knowledge is mostly there. The marks get lost on the way to the page: timing, reading the question, and above all the exact wording that mark schemes reward.
 
 The good news is that this is the most trainable problem in A-levels, and I'm confident we can help with it.
 
-I'd suggest our Subject Accelerator in their main subject. It's twelve weeks of live weekend teaching in small groups. The specialists who run it got top grades in that subject themselves. And they've helped hundreds do the same.
+I'd suggest our Subject Accelerator in their main subject. It's twelve weeks of live weekend teaching in small groups.
 
-Each session is built around real exam questions and the real mark schemes. The next cohort starts Sunday 13th September. That means the training runs through the autumn term. That's when schools set the predicted grades that go on UCAS forms.
+The specialists who run it got top grades in that subject themselves. And they've helped hundreds do the same.
+
+Each session is built around real exam questions and the real mark schemes. The next cohort starts Sunday 13th September.
+
+That means the training runs through the autumn term. That's when schools set the predicted grades that go on UCAS forms.
 
 Cost is £339 for the twelve weeks in one subject. For scale, that's less than seven hours of 1:1 tutoring at the UK average of around £50 an hour. Sessions are recorded if a weekend is missed.
 

@@ -4,7 +4,7 @@ Waleed's two notes from 13 September 2026, verbatim in substance: Hormozi's and 
 
 ## The bar (measured by `scripts/readability.py`)
 
-- Paragraphs: one to three sentences. Average under 25 words. Nothing over 55.
+- Paragraphs: one to three sentences, most one or two. Average 23 words or fewer. Nothing over 45 (Waleed flagged 45+ word paragraphs as still too long on 13 September; the approved Sunday issue averages 21). A very short paragraph of quick beats or quoted speech (25 words or fewer) may run to four sentences, and the PS may run to 55 words because it stays one block (the approved Sunday issue's PS is 53).
 - Sentences: average 13 words or fewer. Nothing over 30. If a sentence has two commas and an "and", split it.
 - Flesch reading ease 85 or above (about reading age 9). The 13 September issue scored 91.
 - Bold step headings on their own line, so the eye can skim the structure.

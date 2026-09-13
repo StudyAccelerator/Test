@@ -41,7 +41,9 @@ Join the first session, and if you're not completely satisfied, you get your mon
 
 The next email lays out the fix itself. Later this week I'll go through the money in plain numbers. I wanted you to have the proof first.
 
-And as a reward for taking the diagnostic for {$diag_child_name|default('your child')}, my free academic strategy call is open to you. It's 20 to 30 minutes with me. We look at their report side by side, and you leave with a custom academic strategy plan for the next two weeks. I'm confident we can help.
+And as a reward for taking the diagnostic for {$diag_child_name|default('your child')}, my free academic strategy call is open to you. It's 20 to 30 minutes with me.
+
+We look at their report side by side, and you leave with a custom academic strategy plan for the next two weeks. I'm confident we can help.
 
 [Click here to book your free academic strategy call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)
 

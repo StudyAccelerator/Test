@@ -17,7 +17,9 @@ This is the last email in this series, so let me end it the way I'd end a clinic
 
 **What you have now**
 
-Two weeks ago you downloaded a guide. Since then you've had the questions that replace guessing with facts. The swap for "have you revised?". The science of why revised work fades.
+Two weeks ago you downloaded a guide. Since then you've had the questions that replace guessing with facts.
+
+The swap for "have you revised?". The science of why revised work fades.
 
 You've also had the honest view on tutoring, the three paths compared, and the truth about autumn term timing.
 

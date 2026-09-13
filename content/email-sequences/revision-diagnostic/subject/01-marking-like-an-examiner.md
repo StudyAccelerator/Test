@@ -18,7 +18,9 @@ Your diagnostic said something specific about you. I want to make sure you actua
 
 Your revision itself is broadly working. The leak it found is {$diag_bottleneck|default('Exam Craft')}. That's the gap between what you know and what the examiner is actually looking for.
 
-In {$diag_worry_subject|default('your weakest subject')}, you're currently at {$diag_current_grade|default('your current grade')} and aiming for {$diag_target_grade|default('higher')}. Having worked with over 1,000 students, my honest review of profiles like yours is that a large part of that gap is already in your head. It's just not converting in exams yet.
+In {$diag_worry_subject|default('your weakest subject')}, you're currently at {$diag_current_grade|default('your current grade')} and aiming for {$diag_target_grade|default('higher')}.
+
+Having worked with over 1,000 students, my honest review of profiles like yours is that a large part of that gap is already in your head. It's just not converting in exams yet.
 
 It's frustrating, I know, but there's genuinely good news in it. Content takes years to learn (that's why A-levels are 2 years long), and exam skills can be perfected in months. Profiles like yours are the most fixable ones I see.
 
@@ -64,7 +66,9 @@ Rewrite each W answer, in full, in the exact language the scheme rewards. By han
 
 It feels a bit silly, but it's how the phrasing becomes yours instead of the scheme's. This is where the drill actually turns into marks.
 
-One student put the whole idea better than I can. Maahil, one of our chemistry students, described the approach as "we go straight into exam practice instead of spending ages on content, and it works". At your stage, with your profile, the paper is the textbook.
+One student put the whole idea better than I can. Maahil, one of our chemistry students, described the approach as "we go straight into exam practice instead of spending ages on content, and it works".
+
+At your stage, with your profile, the paper is the textbook.
 
 Do the drill once this week. One section, one honest marking, one letter coded log.
 
@@ -74,4 +78,4 @@ Keep going!
 
 Waleed
 
-PS: Keep each marked section in one folder. In three weeks you'll see the W column shrinking, and that does more for you than any quote I could send. And if you want me to look at your first log, that's what the free academic strategy call is for. You can [book it here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: Keep each marked section in one folder. In three weeks you'll see the W column shrinking, which beats any pep talk I could send. If you want me to look at your first log, [book your free academic strategy call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

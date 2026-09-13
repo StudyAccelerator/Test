@@ -47,4 +47,4 @@ Keep going!
 
 Waleed
 
-PS: I'll email you every day for the next two weeks, one short, useful thing each time about running the plan. The first fortnight is when a system either takes hold or doesn't, and I'd rather be in your corner for it. Drag this into your Primary tab so tomorrow's doesn't get lost!
+PS: I'll email you every day for the next two weeks, one short, useful thing about running the plan. The first fortnight is when a system takes hold or doesn't. Drag this into your Primary tab so tomorrow's doesn't get lost!

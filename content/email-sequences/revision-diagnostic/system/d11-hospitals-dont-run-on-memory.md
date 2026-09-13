@@ -29,7 +29,9 @@ Now look at how most students revise. It all runs on memory and mood.
 
 What to study tonight gets picked in the moment. And that moment is the one hour of the day when you're most tired.
 
-You go back to a topic whenever you happen to think of it. So it's mostly never. And whether a thing stuck is judged by feel. That's just how marks slip away.
+You go back to a topic whenever you happen to think of it. So it's mostly never.
+
+And whether a thing stuck is judged by feel. That's just how marks slip away.
 
 It's the one thing in your life with real stakes that has no system under it.
 
@@ -39,7 +41,9 @@ The fix is the same one medicine uses. Move the load off memory and mood, and in
 
 Topics get picked in advance, and returns get booked like appointments. Each session ends with a closed-book check, which is your way of reading the checklist out loud.
 
-You've had the whole structure across these emails. The Study System is that structure, set up well. It's taught live. And on the Accelerator, weekly check-ins hold it in place until it's as normal as a ward routine.
+You've had the whole structure across these emails. The Study System is that structure, set up well.
+
+It's taught live. And on the Accelerator, weekly check-ins hold it in place until it's as normal as a ward routine.
 
 [BUTTON: See the Study System -> https://alevelaccelerators.com/study-systems/]
 

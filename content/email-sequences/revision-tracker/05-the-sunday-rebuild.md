@@ -35,7 +35,9 @@ The cap that parked them is the same cap that kept your week doable, so trust it
 
 **Step 3: Rebuild the week around what's actually coming.**
 
-New test announced? That subject's topics get re-rated with it in mind. Sports fixture eating Saturday? Tell the tracker the hours you really have and let it fit the plan around the truth.
+New test announced? That subject's topics get re-rated with it in mind.
+
+Sports fixture eating Saturday? Tell the tracker the hours you really have and let it fit the plan around the truth.
 
 The plan serves your week, never the other way round.
 

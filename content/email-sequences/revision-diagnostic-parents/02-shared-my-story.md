@@ -35,7 +35,9 @@ The pattern I see is almost always my own. A young person working hard, with all
 
 That still gets to me. It's why the diagnostic exists, why these emails exist, and why so much of what I make is free.
 
-So when I say I'm confident we can help {$diag_child_name|default('your child')}, that's where the confidence comes from. I've been the student. I've been the person who finally worked out what was wrong, and I've watched it make sense for a great many families.
+So when I say I'm confident we can help {$diag_child_name|default('your child')}, that's where the confidence comes from.
+
+I've been the student. I've been the person who finally worked out what was wrong, and I've watched it make sense for a great many families.
 
 Best wishes,
 

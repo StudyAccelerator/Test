@@ -32,7 +32,9 @@ Fix it this month and {$diag_child_name|default('your child')} gets each of the 
 
 [BUTTON: Choose the level -> https://alevelaccelerators.com/study-systems/]
 
-And my free academic strategy call is still there for you. It's 20 to 30 minutes with me, where we look at the report side by side and pick the right level for {$diag_child_name|default('your child')}. I'm confident we can help. [Book the call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+And my free academic strategy call is still there for you. It's 20 to 30 minutes with me, where we look at the report side by side and pick the right level for {$diag_child_name|default('your child')}.
+
+I'm confident we can help. [Book the call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
 
 Whatever you choose, do one thing today. Ask {$diag_child_name|default('your child')} the book-closed question from my first email. The whole thing starts from that one honest moment.
 

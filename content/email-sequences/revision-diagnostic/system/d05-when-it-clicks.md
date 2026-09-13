@@ -23,7 +23,9 @@ Jay, Year 12: "The lessons were interactive with well explained concepts, easy t
 
 Notice what changes first. No one's first line is about grades. It's confidence, clear heads, topics that stopped being scary.
 
-The grades follow. On average, our students jump two grades. But confidence moves first, weeks before any test agrees. You'd feel it in your own blurt pages before you see it in a mark.
+The grades follow. On average, our students jump two grades.
+
+But confidence moves first, weeks before any test agrees. You'd feel it in your own blurt pages before you see it in a mark.
 
 You've now got the two core moves: the blurt and the day 2 return. If you started with me on day one, the day 5 return lands about now.
 

@@ -35,7 +35,9 @@ The weekly check-in is the part of the product that catches it. So the fade risk
 
 Then we move you. Series to Accelerator if the follow-through needs holding, or a talk about what's working. No one gets left on the wrong option.
 
-If your what-if isn't here, bring it to me on the free strategy call. It's 20 to 30 minutes with me, and you'll leave with a straight answer and a custom academic strategy plan for {$diag_child_name|default('your child')}. I'm confident we can help.
+If your what-if isn't here, bring it to me on the free strategy call.
+
+It's 20 to 30 minutes with me, and you'll leave with a straight answer and a custom academic strategy plan for {$diag_child_name|default('your child')}. I'm confident we can help.
 
 [BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 

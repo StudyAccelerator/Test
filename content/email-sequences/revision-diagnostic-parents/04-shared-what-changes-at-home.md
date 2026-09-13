@@ -35,7 +35,9 @@ Let's be honest, they won't suddenly be cheerful about chemistry. But they'll be
 
 The gap between effort and results is what quietly tires them out. When it starts to close, a bit of confidence comes back, and that happens before any grade moves.
 
-I tell you this because it's the true answer to "what am I really buying if we fix this?". Mostly, you're buying back the evenings. The grades question gets answered later, by the exams. The mood at home question gets answered in the first few weeks.
+I tell you this because it's the true answer to "what am I really buying if we fix this?". Mostly, you're buying back the evenings.
+
+The grades question gets answered later, by the exams. The mood at home question gets answered in the first few weeks.
 
 **Tonight, try this:** one question at the kitchen table about how the plan's going, asked the way you'd ask about their day. Nothing else.
 

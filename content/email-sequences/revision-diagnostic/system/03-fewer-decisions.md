@@ -16,7 +16,9 @@ Hi {$name},
 
 Two emails ago you learned the blurting protocol. Last time, the day 1, day 2, day 5 rhythm and the 45 minute session.
 
-If you've run them this week, you may have noticed one odd thing about this method. None of it is hard. There's no genius move in there. It's a pen, a page, and a calendar.
+If you've run them this week, you may have noticed one odd thing about this method. None of it is hard.
+
+There's no genius move in there. It's a pen, a page, and a calendar.
 
 So why isn't everyone doing it?
 
@@ -46,7 +48,9 @@ Twelve live sessions, plus the bit that matters most: weekly accountability and 
 
 This is "run the system". It exists because week three is where running it fails. Most students who mean it pick this one.
 
-The maths is worth seeing plainly. £499 is about ten hours with a £50 an hour private tutor. That tutor would fix one subject's content and leave your method as it was. The system lifts each subject at once, this year and next.
+The maths is worth seeing plainly. £499 is about ten hours with a £50 an hour private tutor.
+
+That tutor would fix one subject's content and leave your method as it was. The system lifts each subject at once, this year and next.
 
 There's a year-round mentorship tier above these too. If that's right for your family, it's on the page, but the two above are where almost all students belong.
 

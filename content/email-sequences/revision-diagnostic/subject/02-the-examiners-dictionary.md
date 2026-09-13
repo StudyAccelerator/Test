@@ -30,7 +30,9 @@ Here's how you do that in {$diag_worry_subject|default('your subject')}.
 
 Open three or four mark schemes for papers you've done or topics you know well. Go through them asking one question: which exact wording keeps being rewarded?
 
-Each subject has these. In biology, answers live and die on words like "complementary", "specific", "gradient". Chemistry schemes reward precise mechanism language. In maths, "hence" in a question is an instruction with marks attached, and method marks have rules of their own.
+Each subject has these. In biology, answers live and die on words like "complementary", "specific", "gradient". Chemistry schemes reward precise mechanism language.
+
+In maths, "hence" in a question is an instruction with marks attached, and method marks have rules of their own.
 
 Write the phrases that keep appearing into the back pages of your error log, sorted by topic. Ten minutes per scheme. Within two weeks you'll have your own list of what your board gives marks for, in their exact wording.
 
@@ -60,7 +62,9 @@ Reading your own sentence next to the version that gets the mark is a bit awkwar
 
 You were one phrase away from the mark, again and again, and now you can see it.
 
-There's a trained version of all this too. A specialist reads your actual answers, live, and tells you exactly which phrase would have earned the mark, week after week until it becomes automatic. That's what our Subject Accelerator sessions are, and I'll tell you properly about them in a couple of days.
+There's a trained version of all this too. A specialist reads your actual answers, live, and tells you exactly which phrase would have earned the mark, week after week until it becomes automatic.
+
+That's what our Subject Accelerator sessions are, and I'll tell you properly about them in a couple of days.
 
 This week: build page one of your dictionary. Three mark schemes, ten minutes each, phrases in the back of the log.
 

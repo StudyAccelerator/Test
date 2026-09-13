@@ -17,7 +17,9 @@ This is the last email in this series, so let me be a doctor about it and close 
 
 Two weeks ago the diagnostic named the thing you'd been sensing. {$diag_child_name|default('your child')} isn't short of effort or ability. They're losing marks in the gap between knowing it and scoring it.
 
-Since then you've had the ten minute check, the guide to the talk at home, what other families found, the money in plain numbers, and the what-ifs answered. Whatever you decide, you're deciding with the full picture. That's all I ever wanted these emails to do.
+Since then you've had the ten minute check, the guide to the talk at home, what other families found, the money in plain numbers, and the what-ifs answered.
+
+Whatever you decide, you're deciding with the full picture. That's all I ever wanted these emails to do.
 
 From here, this series ends and you join my main list. That's one short, useful email most days, each one a thing you can use the same evening. And when something big happens in their year, like a cohort date, I'll say it plainly.
 

@@ -37,7 +37,9 @@ Ask about the process, not the hours. Put the plan where you can both see it, an
 
 And say the sentence they most need to hear from you, which is some version of "I know the effort is real". A teenager who feels believed accepts help, but one who feels accused defends themselves instead.
 
-If your version of any of these questions has details I haven't covered, that's just what the free academic strategy call is for. It's 20 to 30 minutes with me, and you'll leave with a clear plan for {$diag_child_name|default('your child')}. I'm confident we can help.
+If your version of any of these questions has details I haven't covered, that's just what the free academic strategy call is for.
+
+It's 20 to 30 minutes with me, and you'll leave with a clear plan for {$diag_child_name|default('your child')}. I'm confident we can help.
 
 [BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 

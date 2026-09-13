@@ -24,7 +24,9 @@ That's not a flaw in your brain. It's how every brain works, mine included.
 
 The students who seem to remember everything aren't built differently. They just come back to material at the right moments, so it never fully fades.
 
-Here's what this costs you, in your own numbers. You told the diagnostic you study about {$diag_hours_per_week|default('several')} hours a week. Your report estimated that {$diag_low_yield_hours|default('a fair chunk')} of those hours are going into low-yield work.
+Here's what this costs you, in your own numbers.
+
+You told the diagnostic you study about {$diag_hours_per_week|default('several')} hours a week. Your report estimated that {$diag_low_yield_hours|default('a fair chunk')} of those hours are going into low-yield work.
 
 A big part of that waste is one loop. You learn a topic, leave it, forget it, then re-learn it from scratch in a panic before a test.
 
@@ -44,7 +46,9 @@ Miss this window and the day 5 session becomes a rescue job instead of a top-up.
 
 **Day 5: ten more minutes.**
 
-Day 4 to 6 all work. Re-blurt again. By now it comes out faster and the page fills up more. Honestly, it's really satisfying when you notice that happening.
+Day 4 to 6 all work. Re-blurt again. By now it comes out faster and the page fills up more.
+
+Honestly, it's really satisfying when you notice that happening.
 
 After that, the topic only needs the occasional Sunday retest through your error log. So the total extra cost per topic is about twenty minutes. What you save is the entire re-learning loop.
 
@@ -68,7 +72,9 @@ Decide the night before which topic and which task you're doing. That way you st
 
 Phone in another room before you sit down, not after, because "after" never comes. And when the 45 minutes are up, actually stop. If you don't resent the system, you'll still be running it in October.
 
-Want the returns and the sessions planned around your real week? School, work, sport, all of it. The free Revision Tracker builds the week for you on exactly this method. [Build your week with the free Revision Tracker](https://alevelaccelerators.com/revision-tracker/)
+Want the returns and the sessions planned around your real week? School, work, sport, all of it.
+
+The free Revision Tracker builds the week for you on exactly this method. [Build your week with the free Revision Tracker](https://alevelaccelerators.com/revision-tracker/)
 
 **Tonight, try this:** take the topic you blurted after my last email. Book its day 5 return into your plan right now. One line in a calendar.
 

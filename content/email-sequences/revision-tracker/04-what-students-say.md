@@ -23,7 +23,9 @@ Delicia, Year 13: "The topics were really hard to approach while researching alo
 
 Biju, who came to us in a gap year: "All the information provided was clear and understandable. It was really helpful and improved my confidence!"
 
-I could read these all day. And notice the word that keeps coming up. Not grades, but confidence. That's no fluke, because confidence is what changes first.
+I could read these all day. And notice the word that keeps coming up.
+
+Not grades, but confidence. That's no fluke, because confidence is what changes first.
 
 It makes sense when you think about it. The first win is that you know what to do when you sit down. The marks show up a bit later.
 
@@ -31,7 +33,9 @@ The grades follow. On average, our students jump two grades. If you've run even 
 
 So here's a reward for getting this far into the week, because most students don't. I keep a few free academic strategy calls each week for students keen to improve their grades.
 
-It's 30 minutes with me. We look at your tracker week and how it's really going. I tell you what I'd change first and why. And you leave with a custom academic strategy plan for the next two weeks.
+It's 30 minutes with me. We look at your tracker week and how it's really going.
+
+I tell you what I'd change first and why. And you leave with a custom academic strategy plan for the next two weeks.
 
 All I ask in return is that you keep me updated on the improvements you see :)
 

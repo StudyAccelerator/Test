@@ -21,7 +21,9 @@ It's a single thing school never taught you about revision, exams or memory, tau
 
 It lands on Sunday evening on purpose. That's when you're looking at the week ahead and deciding what it's going to look like.
 
-There's also a clinic section, where I answer one reader's question straight. And a high-yield and low-yield pair: one thing worth your hours this week, and one thing to stop doing. Now and then there's something of mine too, when it fits the week.
+There's also a clinic section, where I answer one reader's question straight.
+
+And a high-yield and low-yield pair: one thing worth your hours this week, and one thing to stop doing. Now and then there's something of mine too, when it fits the week.
 
 On most weekdays there's the daily as well. One short, useful email, separate from the Session. The Sunday one is the flagship.
 

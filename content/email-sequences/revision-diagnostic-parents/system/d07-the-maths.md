@@ -21,7 +21,9 @@ The UK average for 1:1 tutoring is about £50 an hour. Through an autumn term, o
 
 And for {$diag_child_name|default('your child')} there's a problem no tutor can fix from inside it. The diagnostic found the leak in the method itself, the way they study across each subject.
 
-A tutor patches one subject while the method keeps wasting hours in all of them. Plenty of parents pay for a tutor for two years and watch the same pattern come back each term. The tutor isn't bad. The thing being treated just isn't the thing that's broken.
+A tutor patches one subject while the method keeps wasting hours in all of them. Plenty of parents pay for a tutor for two years and watch the same pattern come back each term.
+
+The tutor isn't bad. The thing being treated just isn't the thing that's broken.
 
 **Fixing the method, at each level.**
 
@@ -29,7 +31,7 @@ A tutor patches one subject while the method keeps wasting hours in all of them.
 
 **£119, the Study Series.** The full method, taught live across four sessions. Right for a student who, once shown, will run it themselves.
 
-**£499, the Study Accelerator.** Twelve sessions plus a weekly check-in from us while the habits form. That's roughly ten hours of tutor money, spent once, on the way each subject runs. This year, next year, and beyond.
+**£499, the Study Accelerator.** Twelve sessions plus a weekly check-in from us while the habits form. That's roughly ten hours of tutor money, spent once, on the way each subject runs, this year, next year, and beyond.
 
 If the follow-through is the weak part, the weekly check-in is the real product.
 
@@ -45,4 +47,4 @@ Best wishes,
 
 Waleed
 
-PS: If {$diag_child_name|default('your child')} has a tutor now, nothing here says stop. The system makes those costly hours stick at last. I'm happy to talk through how the two fit on my free academic strategy call. [Book the call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)!
+PS: If {$diag_child_name|default('your child')} has a tutor now, nothing here says stop. The system makes those costly hours stick at last, and I'm happy to talk through how the two fit on my free academic strategy call. [Book the call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)!

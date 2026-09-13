@@ -5,9 +5,10 @@ Usage: python3 .claude/skills/email-writer/scripts/readability.py <file.md> [...
 
 Reads the body after the '---' header separator, strips link and button markup,
 and reports words, paragraph lengths, sentence lengths and Flesch reading ease.
-The bar (Waleed, 13 September 2026): paragraphs of one to three sentences
-(average under 25 words, none over 55), average sentence 13 words or fewer,
-no sentence over 30 words, Flesch reading ease 85 or above. Exits 1 on a miss."""
+The bar (Waleed, 13 September 2026, tightened same day to match the approved
+Sunday Session): paragraphs of one to three sentences (average 23 words or
+fewer, none over 45), average sentence 13 words or fewer, no sentence over
+30 words, Flesch reading ease 85 or above. Exits 1 on a miss."""
 import re
 import sys
 
@@ -42,10 +43,13 @@ def check(path):
     fre = 206.835 - 1.015 * W / S - 84.6 * syl / W
     para_words = [len(re.findall(r"[A-Za-z0-9']+", p)) for p in paras]
     long_sents = [s.strip() for s in sents if len(s.split()) > 30]
-    long_paras = [p.strip()[:60] for p, n in zip(paras, para_words) if n > 55]
+    sent_counts = [len([x for x in re.split(r'(?<=[.!?])\s+', p.strip()) if re.search('[A-Za-z]', x)]) for p in paras]
+    long_paras = [p.strip()[:60] for p, n, c in zip(paras, para_words, sent_counts)
+                  if (n > 55 if p.strip().startswith('PS:')
+                      else n > 45 or (c > 3 and n > 25))]
     avg_para = W / len(paras)
     avg_sent = W / S
-    ok = avg_sent <= 13 and not long_sents and not long_paras and avg_para < 25 and fre >= 85
+    ok = avg_sent <= 13 and not long_sents and not long_paras and avg_para <= 23 and fre >= 85
     name = path.split('/')[-1]
     print(f"{'PASS' if ok else 'FAIL'} {name}: {W} words, {len(paras)} paragraphs "
           f"(avg {avg_para:.0f} words, longest {max(para_words)}), avg sentence {avg_sent:.1f} words, "
@@ -54,6 +58,8 @@ def check(path):
         print(f'   long sentence ({len(s.split())} words): {s[:90]}')
     for p in long_paras:
         print(f'   long paragraph: {p}...')
+    if avg_para > 23:
+        print('   average paragraph over 23 words')
     if avg_sent > 13:
         print('   average sentence over 13 words')
     if fre < 85:

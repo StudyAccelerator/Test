@@ -19,15 +19,21 @@ It's June. You turn the paper over, and the first thing that happens is nothing.
 
 No cold jolt, no scanning for the questions you can do. You've sat so many timed sections that a fresh paper is just another Tuesday, and your hands already know the routine.
 
-You hit a six mark explain question and you don't write everything you know about the topic. You clock the command word, you build the chain (cause, because, effect), and you move on, knowing roughly what you just scored.
+You hit a six mark explain question and you don't write everything you know about the topic.
+
+You clock the command word, you build the chain (cause, because, effect), and you move on, knowing roughly what you just scored.
 
 That's the strange gift of training with the mark scheme open. You stop hoping about marks and start counting them, in the room, as you go.
 
-And when time's called, you walk out without that awful corridor chat where everyone rebuilds the paper and your stomach drops. It isn't because you were perfect. It's because for once there's no gap between what you knew and what you wrote.
+And when time's called, you walk out without that awful corridor chat where everyone rebuilds the paper and your stomach drops.
+
+It isn't because you were perfect. It's because for once there's no gap between what you knew and what you wrote.
 
 Whatever the grade turns out to be, you left nothing behind in that hall.
 
-That's what exam skills buy you: the end of losing marks on things you knew. And that feeling in June is built in the autumn, one harshly marked section at a time, just the way you've been practising this week.
+That's what exam skills buy you: the end of losing marks on things you knew.
+
+And that feeling in June is built in the autumn, one harshly marked section at a time, just the way you've been practising this week.
 
 So tonight's move is the same as it's been all week, and that's on purpose. Run the drill, log the letters. The June version of you is just this version, plus repetitions :)
 

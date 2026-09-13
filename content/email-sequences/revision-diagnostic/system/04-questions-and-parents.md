@@ -74,7 +74,9 @@ Your child took my free 20 question diagnostic. Their result points at the metho
 
 That's good news. It's the most fixable finding there is, and fixing it lifts each subject at once.
 
-What I'd suggest is our Top 1% Study System. It teaches and then installs the same approach I had to learn the hard way at medical school: testing yourself instead of re-reading, going back to topics before they fade, and working to the exam's mark scheme.
+What I'd suggest is our Top 1% Study System.
+
+It teaches and then installs the same approach I had to learn the hard way at medical school: testing yourself instead of re-reading, going back to topics before they fade, and working to the exam's mark scheme.
 
 I'm confident we can help with this.
 

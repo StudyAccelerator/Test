@@ -20,13 +20,17 @@ The diagnostic put {$diag_child_name|default('your child')}'s biggest leak in **
 
 Here's the pattern as it looks from home. They work, sometimes a lot. The grades don't follow.
 
-So everyone decides more work is needed. The pressure goes up, they work more, and the grades still don't move. Everyone ends up more tired. Does that sound familiar?
+So everyone decides more work is needed. The pressure goes up, they work more, and the grades still don't move.
+
+Everyone ends up more tired. Does that sound familiar?
 
 The reason is that revision has a method under it. How you learn something, when you come back to it, and how you check it stuck.
 
 If the method is wrong, the hours get wasted, however many there are.
 
-Their report found that {$diag_low_yield_hours|default('a real share')} of their {$diag_hours_per_week|default('weekly')} hours go into work that feels useful. Reading, highlighting, making notes look neat. It scores almost nothing. Adding more hours to that just wastes more.
+Their report found that {$diag_low_yield_hours|default('a real share')} of their {$diag_hours_per_week|default('weekly')} hours go into work that feels useful. Reading, highlighting, making notes look neat.
+
+It scores almost nothing. Adding more hours to that just wastes more.
 
 **Tonight's question**
 

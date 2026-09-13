@@ -29,11 +29,15 @@ The sessions work on students' real answers against the real mark schemes, live.
 
 **My role**
 
-I built the method the sessions run on, and I set the bar for how they're taught. I also stay close to the students. That's why my free calls exist, and why each of these emails has my name on it and comes back to my own inbox.
+I built the method the sessions run on, and I set the bar for how they're taught. I also stay close to the students.
+
+That's why my free calls exist, and why each of these emails has my name on it and comes back to my own inbox.
 
 The teaching is specialist-led on purpose. Their subjects are sharper than mine would be across three subjects at once.
 
-The Study System side is mine. The method itself, how to learn and how to keep a system going, is the thing I teach myself. It's the thing I had to learn the hard way, and I've now taught it to more than 1,000 students.
+The Study System side is mine. The method itself, how to learn and how to keep a system going, is the thing I teach myself.
+
+It's the thing I had to learn the hard way, and I've now taught it to more than 1,000 students.
 
 If you'd like to get to know us before you decide, that's what my free academic strategy call is for. You'll be talking to me, and you'll leave with a custom academic strategy plan either way.
 
