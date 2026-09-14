@@ -23,4 +23,4 @@ If you want one, you can [book your call here](https://scheduler.zoom.us/dr-wale
 
 Waleed
 
-PS: I am a full time doctor so bear with me if I'm on-call or on nights haha. The slot times might look a bit strange, but just book whichever day and time works best for you :))
+PS: If you're not sure what we'd even talk about, that's fine, that's my job haha. Just bring your report and I'll do the rest :))

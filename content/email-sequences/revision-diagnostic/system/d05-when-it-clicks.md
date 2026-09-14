@@ -41,4 +41,4 @@ Keep going!
 
 Waleed
 
-PS: I'm a full time doctor, so bear with me if I'm on nights that week and the slot times look a bit strange haha. Just [book any time that works for you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: Keep your first blurt page safe. It's the before photo, and in a month you'll love how much more of the same topic comes out. Want the fast route? [Book your free strategy call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

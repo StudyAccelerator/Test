@@ -39,4 +39,4 @@ Keep going!
 
 Waleed
 
-PS: I'm a full time doctor, so bear with me if I'm on nights that week and the slot times look a bit strange haha. Just [book the time that works best for you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: The click tends to land in week two or three, so don't judge the drill by day one. And if you want a short cut, my [free strategy call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call) is there when you need it.

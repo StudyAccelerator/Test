@@ -53,4 +53,4 @@ Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so the slot times might look a bit strange some weeks (blame the night shifts haha). Just book any day and time that suits you.
+PS: Each quote above is a real student, word for word. If you'd like to hear how students like {$diag_child_name|default('your child')} got on, that's a great thing to ask me on the call.

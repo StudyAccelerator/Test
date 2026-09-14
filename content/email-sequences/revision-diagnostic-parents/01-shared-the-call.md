@@ -6,10 +6,11 @@ Subject B: {$diag_child_name|default('your child')}'s Report, Explained Out Loud
 Preheader: A free academic strategy call with Dr Waleed, and a custom plan for their next two weeks.
 Goal: offer the free strategy-plan call the day after the report, while it is still warm. The single repeated offer of the parent funnel, made early, in the warm register.
 Links: 2 (call scheduler, inline in the body and again in the PS)
-Source: the parent twin of Waleed's own 6 September 2026 rewrite of the student call email (reward framing, "keen" qualifier, ask in return, on-call PS), in the Sonia register.
+Source: the parent twin of Waleed's own 6 September 2026 rewrite of the student call email (reward framing, "keen" qualifier, ask in return), in the Sonia register.
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (Waleed: the call CTA is now the booking link, not a reply with days), PS reworded to his wording.
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English for parents, Title Case subject, named booking links)
+Revised: 14 September 2026 by Waleed in the MailerLite builder (tighter body, and a new PS explaining empty slots with the reply fallback); ported back word for word the same day. His body: do not rewrite.
 
 ---
 
@@ -31,4 +32,4 @@ Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so the slot times might look a bit strange some weeks (blame the night shifts haha). Just book whichever day and time suits you best. [Click here to book](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)
+PS: If you don't see any available slots, it either means they're all booked out or I'm on night shifts (I'm a full time doctor and trust me I'm not pleased about the on-calls either haha). Reply back with whichever day and time suits you best and I'll try to fit you in. To check which slots are available and to confirm a time [Click here to book](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)

@@ -45,4 +45,4 @@ Keep going!
 
 Waleed
 
-PS: I'm a full time doctor, so bear with me if I'm on nights that week and the slot times look a bit strange haha. Just [book a time that works best for you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: Note that none of the quotes say "I worked more hours". Each one is about the same hours starting to count, and that's just what your tracker week is for.

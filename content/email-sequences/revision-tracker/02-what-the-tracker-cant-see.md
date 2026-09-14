@@ -41,4 +41,4 @@ Keep going!
 
 Waleed
 
-PS: Once you've got your profile, reply and tell me which one you got. It changes what I'd say to you next, and I read every reply :)
+PS: Once you've got your profile, reply and tell me which one you got, because it changes what I'd send you next. Some of them are eerily accurate :)

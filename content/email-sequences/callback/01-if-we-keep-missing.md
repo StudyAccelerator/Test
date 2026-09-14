@@ -31,4 +31,4 @@ Talk soon,
 
 Waleed
 
-PS: Doctors' rotas are strange things haha, so the slot times may look a bit random. Just [grab whichever one suits you best](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call) and I'll ring you then.
+PS: Evenings go quickest, but honestly any slot works for me, and the plan we build is the same whenever we speak. [Grab the one that suits you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call) and I'll ring you then.

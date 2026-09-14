@@ -1,13 +1,14 @@
 # PY1c · What other families found
 
 Send: Day 4
-Subject A: {$name}, What Other Families Found
+Subject A: {$name}, Here's What Other Families Found
 Subject B: The Evidence Behind {$diag_child_name|default('your child')}'s Plan
 Preheader: The results, real quotes from students, the guarantee, and the science the method is built on.
 Goal: proof email in the confident register for the method purchase. One CTA: the call, via the booking link.
 Links: 2 (call scheduler, inline and in the PS)
 Revised: 6 September 2026 (Waleed's style pass: "can and can't show you" framing replaced with plain positive proof)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 by Waleed in the MailerLite builder (new subject, tightened body, and a new PS explaining how slots are released); ported back word for word the same day, spelling fixes only. His body: do not rewrite.
 
 ---
 
@@ -51,4 +52,4 @@ Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so the slot times might look a bit strange some weeks (blame the night shifts haha). Just book whichever day and time suits you best. [Click here to book](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)
+PS: I'm a full time doctor, so I release slots a few days in advance, in line with my rota, on a first come first served basis. Pick whichever works best for you and [Click here to book](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)

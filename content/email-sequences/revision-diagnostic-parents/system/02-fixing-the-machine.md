@@ -1,55 +1,56 @@
-# PY2 · Fixing the method, at every level
+# PY2 · The recommendation: Top 1% Mentorship
 
 Send: Day 5
 Segment: group "Diag Parents System Route"
-Subject A: {$name}, What Fixing The Method Looks Like
-Subject B: The Three Ways To Fix How {$diag_child_name|default('your child')} Studies
-Preheader: The free version, the £119 Series, the £499 Accelerator, and how to pick the right one.
-Goal: the route pitch with a genuinely open free path. System buyers need low pressure.
-Links: 2 (study systems page, call inline)
-Revised: 6 September 2026 (Waleed's style pass: "honest catch" lines out, guarantee named)
-Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Subject A: {$name}, What Fixing The Study Method Looks Like
+Subject B: {$name}, My Recommendation For {$diag_child_name|default('your child')}
+Preheader: What I'd actually do about the method, the honest sums, and why the free call comes first.
+Goal: the route's main recommendation, restructured to the Top 1% Mentorship on Waleed's 14 September instruction. Personalised to the report, the £400 a month tutoring comparison, five places, and the free call before any decision.
+Links: 3 (call button, study systems page, call in the PS context)
+Revised: 6 September 2026 (Waleed's style pass)
+Revised: 13 September 2026 (email-writer voice and readability pass)
+Revised: 14 September 2026 (Waleed's restructure: the Series and Accelerator breakdown replaced with the Top 1% Mentorship recommendation; his subject from the builder kept)
 
 ---
 
 Hi {$name},
 
-Here's what fixing how {$diag_child_name|default('your child')} revises really looks like. There are three levels, and one of them costs nothing.
+I hope you're well!
 
-**The free version.**
+You've now had a few days with {$diag_child_name|default('your child')}'s report. So today I want to tell you plainly what I'd do about it.
 
-The report's plan, run each week. Testing themselves instead of re-reading, return dates in a diary, an error log, and one timed paper section a week. Plus the free tracker to plan each week.
+From looking at their report, it's the system they study with that's costing them the most marks and holding them back. Not effort, and usually not ability either.
 
-If they run this for a month, things improve. The words that matter are "each week".
+Here's the hard part. Exam technique, and the way someone actually studies, isn't really covered in school.
 
-The students who most need a system tend to find it hardest to keep going alone. That isn't a flaw in them. It's the whole reason coaching exists.
+And it's exactly how I've helped the majority of my 1,000+ students.
 
-**The Study Series, £119.**
+**The usual answer, in real numbers.**
 
-The full method, taught live across four sessions: testing yourself, spaced returns, what to work on first, and exam technique. They learn it in one place instead of piecing it together from emails.
+Most families turn to a tutor. The UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week.
 
-It's right for a student who, once shown, will run it themselves.
+That's £400 a month, per subject. And it goes into re-teaching content, an area {$diag_child_name|default('your child')} was never really struggling with.
 
-**The Study Accelerator, £499.**
+**What I recommend instead.**
 
-The same system, set up over twelve sessions, with a weekly check-in from us while the habits form.
+The Top 1% Mentorship. {$diag_child_name|default('Your child')} works directly with me all month long: I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck.
 
-For scale, £499 is roughly ten hours of average 1:1 tutoring. That would patch one subject and change nothing about how they study. This changes how each subject runs, this year and for years to come.
+It's £300 a month. Less than one subject's tutoring, spent on the thing their report actually found.
 
-**Which level fits?**
+I only keep five places on it, because that's the honest limit of how many students I can work with this closely.
 
-It comes down to one question. Once they've been shown the method, will they run it alone?
+**If you're interested, here's what I'd do first.**
 
-If yes, the Series. If the follow-through is the weak part, then the weekly check-in is the real product, and that's the Accelerator. Their report's score for how well they stick at things is the clue.
+Before you decide anything, have a free call with me. We'll talk through {$diag_child_name|default('your child')}'s report itself: what's holding them back most, and exactly how we'd lift their grades.
 
-Both come with our satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+Then you can decide with everything in front of you.
 
-[BUTTON: See the Study System -> https://alevelaccelerators.com/study-systems/]
+[BUTTON: Book your free call with me -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
-Not sure which level fits {$diag_child_name|default('your child')}? That's what my free academic strategy call is for, and I'll tell you straight. [Book the call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+And if you'd like the detail in writing first, it's all on the Study System page: [see the Top 1% Mentorship here](https://alevelaccelerators.com/study-systems/).
 
 Best wishes,
 
 Waleed
 
-PS: Most parents I speak to have a good sense of the follow-through question. If your gut says "they'll start strong and fade", trust it. That's just what the Accelerator's weekly check-in is for!
+PS: The free plan in their report still stands whatever you decide, and I'd run it either way. The mentorship is for making it stick, faster, with me alongside them.

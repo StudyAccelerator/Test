@@ -58,6 +58,8 @@ Parents get "I'm confident we can help." after the ask in return (his Sonia line
 
 Students: `Speak soon!` then `Kind regards,` then `Waleed`. Parents: `Best wishes,` then `Waleed`. Sequence teaching emails may close `Keep going!` then `Waleed`. The engine lifts the valediction into the photo signature block, which sits last, after the PS.
 
+**PS variety (Waleed, 14 September 2026).** A subscriber reads the whole journey, so before writing any PS, read the PSs of the emails around it, including the ON instant and 6 hour emails that run before day 1. Never repeat a joke or device within a journey: the night-shift/slot-times joke at most once (the day 1 email or earlier owns it), "I read every reply" at most once, "between shifts/patients" at most once, and never the same promise twice ("the best 20 to 30 minutes..."). Most PSs are deposits in Ian Stanley's sense: a value add, a confession, a one-line tip, a reply prompt with a reason. The call link rides in the PS only where the body doesn't already carry it, roughly every third email. Waleed's own slot-explainer PSs (why the calendar can look empty, how slots are released against his rota) are the reference for making the doctor's life useful rather than decorative.
+
 The PS always exists, restates the one action, and carries his real life plus the link again: "PS: I'm a full time doctor, so the slot times might look a bit strange some weeks (blame the night shifts haha). Just book whichever day and time works best for you. I promise it'll be the best 20 to 30 minutes you spend on your grades this term. [Click here to book](url)". Waleed asked for the night shifts joke in the parent version too, so parents get it as well.
 
 ## Length

@@ -3,37 +3,38 @@
 Send: Day 10
 Subject A: {$name}, What If It Isn't Right For {$diag_child_name|default('your child')}?
 Subject B: What Happens If They Fade By Week Three
-Preheader: The guarantee, the resistance question, and what we do if the level turns out to be wrong.
-Goal: the de-risk email for the method purchase. The real what-ifs at the decision point, answered with confidence. One CTA: the call.
+Preheader: The call-first promise, the resistance question, and what happens if the budget says no.
+Goal: the de-risk email, restructured to the Top 1% Mentorship on Waleed's 14 September instruction. The real what-ifs at the decision point, answered with confidence. One CTA: the call.
 Links: 1 (call scheduler)
-Revised: 6 September 2026 (Waleed's style pass: "keep your money stays an outcome" and "don't buy it" lines out, guarantee named)
-Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 6 September 2026 (Waleed's style pass)
+Revised: 13 September 2026 (email-writer voice and readability pass)
+Revised: 14 September 2026 (Waleed's restructure: level-picking what-ifs replaced with mentorship what-ifs; the Series kept as the one smaller-start answer)
 
 ---
 
 Hi {$name},
 
-By now you know what the Study System is, what it costs at each level, and what sits behind it. What's left are the quieter worries. Here are the real ones, answered.
+By now you know what I recommend for {$diag_child_name|default('your child')} and what it costs. What's left are the quieter worries. Here are the real ones, answered.
 
 **"What if it turns out not to be right for {$diag_child_name|default('my child')}?"**
 
-That's what the satisfaction guarantee is for. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked. It's on the page in writing.
+That's exactly why the free call comes first. I won't suggest the mentorship for {$diag_child_name|default('your child')} unless I'm confident it will work for them, and I'll tell you straight if it isn't the right fit.
 
-One real session tells you more than two more weeks of weighing it up from the outside.
+One honest conversation tells you more than two more weeks of weighing it up from the outside.
 
 **"What if they push back on the whole idea?"**
 
-Then start free and small: the one question, the report's plan, and the tracker. If two weeks of the free version moves things at all, the talk about help changes on its own. The levels will still be there.
+Then start free and small: the one question, the report's plan, and the tracker. If two weeks of the free version moves things at all, the talk about help changes on its own.
 
 **"What if they start strong and fade by week three?"**
 
-Week three is the very reason the Accelerator level exists. The fade isn't a flaw in them. It's what happens to any system that runs on willpower alone, and mine did the same at that age.
+Week three is the very reason the mentorship runs the way it does. The fade isn't a flaw in them. It's what happens to any system that runs on willpower alone, and mine did the same at that age.
 
-The weekly check-in is the part of the product that catches it. So the fade risk is really a reason for that level, not against the whole idea.
+The fortnightly follow-ups exist to catch it. And between them, {$diag_child_name|default('your child')} can reach me directly whenever they're stuck.
 
-**"What if we pick the wrong level?"**
+**"What if £300 a month isn't in the budget?"**
 
-Then we move you. Series to Accelerator if the follow-through needs holding, or a talk about what's working. No one gets left on the wrong option.
+Then say so on the call, and I'll point you somewhere smaller instead. The Study Series teaches the same method across four live sessions for £119, for a student who'll run it themselves once shown.
 
 If your what-if isn't here, bring it to me on the free strategy call.
 
@@ -45,4 +46,4 @@ Best wishes,
 
 Waleed
 
-PS: If you'd rather ask your what-if in writing, just reply here. I answer each one myself, mostly between shifts!
+PS: The what-if I hear most is "is it too late this year?". It isn't. The method takes about two weeks to settle in, and mocks are still comfortably beyond that.

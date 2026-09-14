@@ -53,4 +53,4 @@ Best wishes,
 
 Waleed
 
-PS: I'm a full time doctor, so please be patient with me if I'm on-call or on nights that week! The slot times may look a bit strange, but just [book whichever day and time suits you best](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: Each quote is a real student, word for word. If one of them sounds like your child, that's a good sign, and it's worth saying so on the call. [Book it here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

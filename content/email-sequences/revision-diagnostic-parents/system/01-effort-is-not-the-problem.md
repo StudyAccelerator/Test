@@ -2,13 +2,14 @@
 
 Send: Day 2
 Segment: group "Diag Parents System Route"
-Subject A: {$name}, Why Working Harder Isn't Fixing It
+Subject A: {$name}, Why Working Harder Isn't Improving the Grades
 Subject B: {$diag_child_name|default('your child')}'s Effort Was Never The Problem
 Preheader: What a method problem looks like at home, and the one question to ask tonight.
 Goal: teach the system diagnosis to the parent, zero pitch, one action.
 Links: 1 (tracker)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 by Waleed in the MailerLite builder (new subject, "I hope you're well!" opener, tightened body); ported back word for word the same day. His body: do not rewrite.
 
 ---
 
@@ -16,7 +17,7 @@ Hi {$name},
 
 I hope you're well!
 
-The diagnostic put {$diag_child_name|default('your child')}'s biggest leak in **{$diag_bottleneck|default('the method itself')}**. That tells you something big. This isn't a subject problem, so a subject tutor probably isn't the first fix.
+The diagnostic put {$diag_child_name|default('your child')}'s biggest leak in **the method itself**. That tells you something big. This isn't a subject problem, so a subject tutor probably isn't the first fix.
 
 Here's the pattern as it looks from home. They work, sometimes a lot. The grades don't follow.
 
@@ -44,7 +45,7 @@ The fix is testing themselves with the book closed. The report's 7 day plan star
 
 The Revision Tracker builds their week around their weakest topics, with a method for every session. So the plan is decided in advance, not argued about every night.
 
-[LINK: Open the free Revision Tracker -> https://alevelaccelerators.com/revision-tracker]
+[Open the free Revision Tracker](https://alevelaccelerators.com/revision-tracker)
 
 Over the next few days I'll show you what fixing this looks like. I'm confident we can help.
 

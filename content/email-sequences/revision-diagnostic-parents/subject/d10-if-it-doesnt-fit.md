@@ -41,4 +41,4 @@ Best wishes,
 
 Waleed
 
-PS: If you'd rather ask your what-if in writing, just reply here. I answer each one myself, often between shifts!
+PS: The what-if I hear most is "have we left it too late?". You haven't. The training takes weeks, not months, to show up in marked work, and mocks are still comfortably beyond that.

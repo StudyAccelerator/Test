@@ -27,7 +27,7 @@ This series ends here, and you join my main list. That's one short, useful email
 
 **One small favour before I go quiet**
 
-Reply and tell me what you decided, even in five words. "Going with the Series." "Running the free plan." "Still not sure." "Not for us."
+Reply and tell me what you decided, even in five words. "Booked the call." "Running the free plan." "Still not sure." "Not for us."
 
 I read each reply, and it makes this better for the next parent I help. And if you're still not sure, say so. At times one question is all it takes to get unstuck.
 

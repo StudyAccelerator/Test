@@ -39,4 +39,4 @@ Keep going!
 
 Waleed
 
-PS: I'm a full time doctor, so bear with me if I'm on nights that week and the slot times look a bit odd haha. [Pick the time that suits you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call) and I'll be there.
+PS: Bring your letter log if you've started one, even two rows of it. Real answers make the call twice as useful, because we build your plan straight from them. [Pick a time here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

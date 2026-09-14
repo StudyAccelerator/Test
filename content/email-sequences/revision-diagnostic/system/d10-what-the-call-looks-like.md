@@ -45,4 +45,4 @@ Keep going!
 
 Waleed
 
-PS: I'm a full time doctor, so bear with me if I'm on nights that week and the slot times look a bit odd haha. [Pick whichever time suits you](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call) and I'll be there.
+PS: You don't need to prepare anything for it. Your report and twenty honest minutes are plenty, and I'll have your numbers open when you join. [Pick a time here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

@@ -47,4 +47,4 @@ Whatever you choose, choosing this week beats drifting. That's true in revision,
 
 Waleed
 
-PS: If you're not sure tonight, reply and say so. One question is often all it takes to get unstuck, and I answer each reply myself, mostly between shifts!
+PS: If you're not sure tonight, reply and say so. One question is often all it takes to get unstuck, and I answer each reply myself, whatever time it lands!

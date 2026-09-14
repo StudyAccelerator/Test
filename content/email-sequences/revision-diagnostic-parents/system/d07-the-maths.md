@@ -3,11 +3,12 @@
 Send: Day 7
 Subject A: {$name}, The £50 An Hour Question
 Subject B: What Tutoring Money Buys, And What It Doesn't
-Preheader: The sums for a method problem, done in plain numbers against the £50 an hour average.
-Goal: the money email for the method purchase. Anchor £119 and £499 against the £50 an hour tutoring average. One CTA: the page.
-Links: 1 (study systems page)
+Preheader: £400 a month for a tutor, or £300 a month working directly with me. The sums in plain numbers.
+Goal: the money email, restructured to the Top 1% Mentorship on Waleed's 14 September instruction. The £400 a month per subject tutoring anchor against £300 a month all in. One CTA: the call.
+Links: 3 (call button, study systems page, call in the PS)
 Revised: 6 September 2026 (Waleed's style pass: industry digs out)
-Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 13 September 2026 (email-writer voice and readability pass)
+Revised: 14 September 2026 (Waleed's restructure: Series and Accelerator pricing replaced with the mentorship comparison)
 
 ---
 
@@ -17,7 +18,9 @@ Let's do the money in plain numbers, because you're likely weighing it up. I'd r
 
 **The benchmark.**
 
-The UK average for 1:1 tutoring is about £50 an hour. Through an autumn term, one hour a week, that's £600 and up.
+The UK average for 1:1 tutoring is about £50 an hour. Most parents book 2 hours a week.
+
+That's £400 a month. Per subject.
 
 And for {$diag_child_name|default('your child')} there's a problem no tutor can fix from inside it. The diagnostic found the leak in the method itself, the way they study across each subject.
 
@@ -25,26 +28,28 @@ A tutor patches one subject while the method keeps wasting hours in all of them.
 
 The tutor isn't bad. The thing being treated just isn't the thing that's broken.
 
-**Fixing the method, at each level.**
+**The mentorship, next to that.**
 
-**Free.** The report's plan plus the free tracker, run weekly. It works, and it leans on the follow-through their report flagged as the weak part.
+The Top 1% Mentorship is £300 a month. For less than one subject's tutoring, {$diag_child_name|default('your child')} works directly with me all month long.
 
-**£119, the Study Series.** The full method, taught live across four sessions. Right for a student who, once shown, will run it themselves.
+I build their study system with them. Fortnightly follow-ups keep it running. And between sessions, they can reach me whenever they're stuck.
 
-**£499, the Study Accelerator.** Twelve sessions plus a weekly check-in from us while the habits form. That's roughly ten hours of tutor money, spent once, on the way each subject runs, this year, next year, and beyond.
+One option treats a subject's symptoms. The other fixes the way every subject runs, this year and next.
 
-If the follow-through is the weak part, the weekly check-in is the real product.
+I keep five places on it, so I can genuinely stay this close to every student.
 
-**The sums in one line.**
+**The step I'd take first.**
 
-£600 a term treating one subject's symptoms, or £499 once on the cause. And both levels come with the satisfaction guarantee on the first session.
+Have the free call with me before you decide anything. We'll go through {$diag_child_name|default('your child')}'s report together, and I'll show you exactly what's holding them back and how we'd improve their grades.
 
-Today's step: look at the levels with the £50 an hour number in your head, and see how they compare.
+You'll know by the end of it whether the mentorship is right for them.
 
-[BUTTON: See the Study System levels -> https://alevelaccelerators.com/study-systems/]
+[BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
+
+The detail in writing is here: [the Top 1% Mentorship on the Study System page](https://alevelaccelerators.com/study-systems/).
 
 Best wishes,
 
 Waleed
 
-PS: If {$diag_child_name|default('your child')} has a tutor now, nothing here says stop. The system makes those costly hours stick at last, and I'm happy to talk through how the two fit on my free academic strategy call. [Book the call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call)!
+PS: If {$diag_child_name|default('your child')} has a tutor now, nothing here says stop. The mentorship makes those costly hours stick at last, and I'm happy to talk through how the two fit on the call.
