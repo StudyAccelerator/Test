@@ -9,6 +9,7 @@ Links: 1 (call scheduler)
 Revised: 6 September 2026 (Waleed's style pass: "bigger sale" and "no secrets" lines out)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -48,7 +49,7 @@ The free diagnostic, the free tracker, and the drills my emails teach. A student
 
 **Put simply.**
 
-At £50 an hour you pay for someone to explain things. Here you train the skill of scoring, on a structure built for it. And the Subject Accelerator's first session is covered by our satisfaction guarantee.
+At £50 an hour you pay for someone to explain things. Here you train the skill of scoring, on a structure built for it. And the first session of every programme, the mentorship included, is covered by our satisfaction guarantee.
 
 If your case makes the sums unclear, bring it to my free academic strategy call. A tight budget, three shaky subjects, or a method problem that looks like a subject problem.
 

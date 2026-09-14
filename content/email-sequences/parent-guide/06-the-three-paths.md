@@ -9,6 +9,7 @@ Links: 1 (call scheduler)
 Revised: 6 September 2026 (Waleed's style pass: "I'll never pretend otherwise" and "I say so" lines out, guarantee named)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English for parents, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -44,7 +45,7 @@ If it's the method itself, the Top 1% Mentorship. Your child works directly with
 
 It's £300 a month, less than one subject's tutoring, and I only keep five places on it.
 
-Each one costs less than the tutoring it replaces, and each one treats the cause rather than the symptom. The Subject Accelerator comes with our satisfaction guarantee on the first session.
+Each one costs less than the tutoring it replaces, and each one treats the cause rather than the symptom. Both come with our satisfaction guarantee on the first session.
 
 **Which path?**
 

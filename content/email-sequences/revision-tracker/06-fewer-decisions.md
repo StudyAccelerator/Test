@@ -9,6 +9,7 @@ Links: 1 (study systems page)
 Revised: 6 September 2026 (Waleed's style pass: guarantee named)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -40,11 +41,11 @@ You work directly with me all month long. I build your study system with you, fo
 
 It exists because for most students the follow through, not the knowledge, is the part that breaks.
 
-It's £300 a month, and I only keep five places on it.
+It's £300 a month, and I only keep five places on it. It comes with our satisfaction guarantee: if the first session isn't helpful, you get a full refund.
 
 For scale, the UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week. That's £400 a month spent patching one subject, against £300 spent on the way every subject runs.
 
-If the budget says not yet, the Study Series (£119) is the complete method across four live sessions. It comes with our satisfaction guarantee: join the first session, and if you're not completely satisfied, you get your money back.
+If the budget says not yet, the Study Series (£119) is the complete method across four live sessions. It comes with the same guarantee.
 
 You've shown you'll use structure when it's handed to you. Honestly, that's the best sign I know of a student the system works for :)
 

@@ -95,7 +95,7 @@ const faqs = [
     answer: (
       <>
         <p className="mb-4 text-brand-gold font-semibold">👉 You can request a full refund after the first session if it&apos;s not right for you.</p>
-        <p>For the Top 1% Mentorship, book your free consultation first. We&apos;ll discuss if it&apos;s the right fit for you.</p>
+        <p>That includes the Top 1% Mentorship. Book your free consultation first so we can check it&apos;s the right fit, and if you join and your first session isn&apos;t valuable, you still get a full refund.</p>
       </>
     ),
   },

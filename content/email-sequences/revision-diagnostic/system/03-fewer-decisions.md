@@ -10,6 +10,7 @@ Links: 2 (call scheduler, study systems page inline)
 Revised: 6 September 2026 (Waleed's style pass: "who is this not for" and grade-statistics disclaimers out, guarantee named)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -53,13 +54,15 @@ The mentorship is £300 a month. Less than one subject's tutoring, spent on the 
 
 I only keep five places on it, because that's the honest limit of how many students I can work with this closely.
 
+It comes with our satisfaction guarantee too. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+
 **What students say from inside these sessions**
 
 Biju, who joined in a gap year: "All the information provided was clear and understandable. It was really helpful and improved my confidence!"
 
 Delicia, Year 13: "The topics were really hard to approach while researching alone, so seeing it broken down into manageable points was useful."
 
-And if the budget says not yet, the Study Series (£119) teaches the whole system across four live sessions. It comes with our satisfaction guarantee: join the first session, and if you're not happy, you get your money back.
+And if the budget says not yet, the Study Series (£119) teaches the whole system across four live sessions. It comes with the same guarantee.
 
 **The step to take first.**
 

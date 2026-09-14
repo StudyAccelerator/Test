@@ -10,6 +10,7 @@ Links: 2 (call scheduler: the parent section link and the closing button)
 Revised: 6 September 2026 (Waleed's style pass: defensive lines out of the answers and the parent section)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -57,7 +58,7 @@ The Top 1% Mentorship is £300 a month. You work directly with me all month long
 
 That's less than one subject's tutoring, spent on the way each subject runs. This year, next year, and to be honest at uni too.
 
-I only keep five places on it, so I can genuinely stay this close to every student.
+I only keep five places on it, so I can genuinely stay this close to every student. And if your first session isn't helpful, our satisfaction guarantee gives you a full refund.
 
 ---
 
@@ -82,6 +83,8 @@ It installs the same approach I had to learn the hard way at medical school: tes
 I'm confident we can help with this.
 
 Your child works directly with me all month long. I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck. It's £300 a month, and I only keep five places on it.
+
+The first session is covered by our satisfaction guarantee.
 
 To compare, the UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week. That's £400 a month per subject, and it would help one subject while leaving the method itself untouched.
 

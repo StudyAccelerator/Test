@@ -9,6 +9,7 @@ Links: 1 (call scheduler)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass)
 Revised: 14 September 2026 (Waleed's restructure: level-picking what-ifs replaced with mentorship what-ifs; the Series kept as the one smaller-start answer)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -21,6 +22,8 @@ By now you know what I recommend for {$diag_child_name|default('your child')} an
 That's exactly why the free call comes first. I won't suggest the mentorship for {$diag_child_name|default('your child')} unless I'm confident it will work for them, and I'll tell you straight if it isn't the right fit.
 
 One honest conversation tells you more than two more weeks of weighing it up from the outside.
+
+And if you do join, the satisfaction guarantee covers you. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
 **"What if they push back on the whole idea?"**
 

@@ -10,6 +10,7 @@ Note: joined manually by Waleed when someone asks about programmes (from a call,
 Revised: 6 September 2026 (Waleed's style pass: "honesty rule" line out, satisfaction guarantee named, PS added)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -43,7 +44,7 @@ If you'd like the Study System detail in full, reply with the word "system" and 
 
 **The guarantee.**
 
-The Subject Accelerators come with our satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+Every programme comes with our satisfaction guarantee, the mentorship included. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
 The dates, session times and full detail are here:
 

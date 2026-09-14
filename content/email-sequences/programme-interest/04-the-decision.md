@@ -9,6 +9,7 @@ Links: 1 (subject page)
 Revised: 6 September 2026 (Waleed's style pass: "do it loudly", "invent a countdown", "don't argue with decisions" lines out)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -26,7 +27,7 @@ And if you really don't know which, take the free diagnostic, or book my free ac
 
 **The risk is covered on purpose.**
 
-The Subject Accelerator comes with the satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+Every programme comes with the satisfaction guarantee, the mentorship included. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
 So the real choice isn't "pay £339 and hope". It's "is one session enough to find out", and it is.
 

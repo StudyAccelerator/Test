@@ -10,6 +10,7 @@ Links: 3 (call button, study systems page, call in the PS context)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass)
 Revised: 14 September 2026 (Waleed's restructure: the Series and Accelerator breakdown replaced with the Top 1% Mentorship recommendation; his subject from the builder kept)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -21,7 +22,7 @@ You've now had a few days with {$diag_child_name|default('your child')}'s report
 
 From looking at their report, it's the system they study with that's costing them the most marks and holding them back. Not effort, and usually not ability either.
 
-Here's the hard part. Exam technique, and the way someone actually studies, isn't really covered in school.
+Here's the hard part. Exam technique, and the way someone studies, isn't really taught in school.
 
 And it's exactly how I've helped the majority of my 1,000+ students.
 
@@ -37,7 +38,9 @@ The Top 1% Mentorship. {$diag_child_name|default('Your child')} works directly w
 
 It's £300 a month. Less than one subject's tutoring, spent on the thing their report actually found.
 
-I only keep five places on it, because that's the honest limit of how many students I can work with this closely.
+I only keep five places on it, because that's how many students I can work with this closely.
+
+It also comes with my satisfaction guarantee. If the first session isn't helpful, you get a full refund, no questions asked.
 
 **If you're interested, here's what I'd do first.**
 

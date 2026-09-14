@@ -10,6 +10,7 @@ Links: 2 (study systems page, call scheduler inline)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
 Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -40,6 +41,8 @@ So, plainly, the two ways to do it.
 You work directly with me all month long for £300 a month. I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
 
 All I said about it two emails ago stands, including the five places. That's the honest limit of how closely I can work with each student.
+
+It comes with the satisfaction guarantee too: if your first session isn't helpful, you get a full refund.
 
 [BUTTON: See the Top 1% Mentorship -> https://alevelaccelerators.com/study-systems/]
 

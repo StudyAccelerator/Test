@@ -9,6 +9,7 @@ Links: 3 (call button, study systems page, call in the PS)
 Revised: 6 September 2026 (Waleed's style pass: industry digs out)
 Revised: 13 September 2026 (email-writer voice and readability pass)
 Revised: 14 September 2026 (Waleed's restructure: Series and Accelerator pricing replaced with the mentorship comparison)
+Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
 
 ---
 
@@ -37,6 +38,8 @@ I build their study system with them. Fortnightly follow-ups keep it running. An
 One option treats a subject's symptoms. The other fixes the way every subject runs, this year and next.
 
 I keep five places on it, so I can genuinely stay this close to every student.
+
+And it comes with my satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
 **The step I'd take first.**
 
