@@ -6,6 +6,7 @@ Subject A: {$name}, Predicted Grades Get Set In The Autumn
 Subject B: The 12 Weeks That Shape {$diag_child_name|default('your child')}'s Predictions
 Preheader: What the Subject Accelerator is, when it runs, what it costs next to tutoring, and the guarantee.
 Goal: the route pitch, parent-framed around predicted grades evidence.
+Revised: 14 September 2026 (cohort dates removed for evergreen)
 Links: 2 (subject page, call inline)
 Revised: 6 September 2026 (Waleed's style pass: "can't promise" and "who shouldn't join" out, satisfaction guarantee in)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English for parents, Title Case subject, named booking links)
@@ -20,7 +21,7 @@ The diagnostic pointed {$diag_child_name|default('your child')} at our {$diag_wo
 
 Predicted grades, the ones on the UCAS form, get set and reviewed in the autumn term. Teachers base them on what they see: early tests, mocks and classwork.
 
-The next cohort starts Sunday 13th September and runs for twelve weeks, which covers that exact period. A student writing answers that score well from September gives their teacher new evidence at the moment it counts.
+The programme runs for twelve weeks through that exact period, and the next start date is always on the page. A student writing answers that score well from September gives their teacher new evidence at the moment it counts.
 
 **What it is.**
 
@@ -48,4 +49,4 @@ Best wishes,
 
 Waleed
 
-PS: If you know it's a yes, book now. Then {$diag_child_name|default('your child')} can spend the days before the 13th on the report's plan, and arrive with a marked past paper for their specialist to work on!
+PS: If you know it's a yes, book now. Then {$diag_child_name|default('your child')} can spend the days before the first session on the report's plan, and arrive with a marked past paper for their specialist to work on!

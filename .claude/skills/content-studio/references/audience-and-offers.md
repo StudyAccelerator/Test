@@ -8,9 +8,10 @@
 
 ## The offers (real prices and links, do not change)
 
-- **Summer Accelerator** (sales page `/summer-accelerators`): 6-week live summer course, Year 12 going into Year 13. Biology, Chemistry, Maths, Physics. £289 one subject, £539 two, £739 three, £849 four. First session risk-free. **Cohort starts Saturday 22 August 2026** (moved from 8 August on 13 August after that date passed unfilled; originally 25 July); content naming the start date must say 22 August.
-- **Subject Accelerators** (`/subject-accelerators`): live 12-week exam programmes through the year.
-- **Study System** (`/study-systems`): the exam-technique and revision-system layer.
+- **Summer Accelerator: RETIRED from the site 14 September 2026** (season over; page deleted, /summer-accelerators redirects to /subject-accelerators). It lives in git history for a future cohort. Never reference it in new content.
+- **Subject Accelerators** (`/subject-accelerators`): live 12-week weekend exam programmes in Biology, Chemistry and Maths. £339 one subject, £629 two, £849 three. **Next cohort: Sunday 17 January** (site only; see the evergreen rule below).
+- **Study System** (`/study-systems`): the method layer. Two products since 14 September 2026: the **Study Series** (£119, the method across four live sessions, self-serve down-sell) and the **Top 1% Mentorship** (£300 a month, working directly with Dr Waleed, fortnightly follow-ups, five places, free call first). The Study Accelerator (£499) is RETIRED; never mention it or its price again.
+- **Evergreen email rule (Waleed, 14 September 2026):** emails never name cohort start dates; dates live on the site only ("the next start date is on the page"). Seasonal arguments (the autumn predicted-grades window) are fine.
 - **Free lead magnets:** the Revision Tracker (`/revision-tracker`), the blog (`/blog/`), the printable Blurting Template PDF, the Parent Guide (`/parents`).
 - **Book a free call:** the Zoom scheduler link (in the site header/footer).
 - Contact: Waleed@alevelaccelerators.com.

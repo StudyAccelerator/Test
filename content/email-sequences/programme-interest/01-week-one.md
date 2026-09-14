@@ -8,6 +8,7 @@ Goal: make joining concrete and small. Calendar urgency. One CTA: the call.
 Links: 1 (call scheduler)
 Revised: 6 September 2026 (Waleed's style pass: "calendar not countdown" and "don't join stays an outcome" lines out)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -35,7 +36,7 @@ Week two builds on week one. By week four, the mark scheme wording starts to sho
 
 **On timing**
 
-The cohort starts Sunday 13 September because the twelve weeks then sit right under the autumn term. That's when teachers form the views that become predicted grades.
+Cohorts start every term, and the next start date is on the page. An autumn start puts the twelve weeks right under the autumn term, which is when teachers form the views that become predicted grades.
 
 Join late and you catch up on the recordings. Wait until January and the programme still helps the summer exams, but the predicted grades will be set by then.
 

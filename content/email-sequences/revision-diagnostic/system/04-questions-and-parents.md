@@ -9,6 +9,7 @@ Goal: clear the real objections, arm the parent conversation with a forwardable 
 Links: 2 (call scheduler: the parent section link and the closing button)
 Revised: 6 September 2026 (Waleed's style pass: defensive lines out of the answers and the parent section)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -46,17 +47,17 @@ The re-learning loop alone, learn it, forget it, re-learn it, means you're payin
 
 Students on this system tend to end up studying fewer hours, not more. That's the point.
 
-**"Is £499 really worth it?"**
+**"Is £300 a month really worth it?"**
 
 It depends what you'd do instead, so here's how it compares.
 
-£499 is roughly ten hours with a private tutor at £50 an hour. Ten hours of 1:1 lifts one subject's content for one stretch of one year. It changes nothing about how you study.
+The UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week. That's £400 a month, per subject, and it lifts one subject's content while changing nothing about how you study.
 
-The Study Accelerator spends the same money on the way each subject runs. This year, next year, and to be honest at uni too.
+The Top 1% Mentorship is £300 a month. You work directly with me all month long: I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
 
-And if £499 isn't on the cards right now, the £119 Study Series teaches the whole system without the weekly check-ins.
+That's less than one subject's tutoring, spent on the way each subject runs. This year, next year, and to be honest at uni too.
 
-Both come with our satisfaction guarantee, so the first session is your money back if you're not happy.
+I only keep five places on it, so I can genuinely stay this close to every student.
 
 ---
 
@@ -74,17 +75,15 @@ Your child took my free 20 question diagnostic. Their result points at the metho
 
 That's good news. It's the most fixable finding there is, and fixing it lifts each subject at once.
 
-What I'd suggest is our Top 1% Study System.
+What I'd suggest is our Top 1% Mentorship.
 
-It teaches and then installs the same approach I had to learn the hard way at medical school: testing yourself instead of re-reading, going back to topics before they fade, and working to the exam's mark scheme.
+It installs the same approach I had to learn the hard way at medical school: testing yourself instead of re-reading, going back to topics before they fade, and working to the exam's mark scheme.
 
 I'm confident we can help with this.
 
-The Study Series is £119 for the taught system across four live sessions. The Study Accelerator is £499 with twelve sessions plus weekly accountability while the habits take hold.
+Your child works directly with me all month long. I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck. It's £300 a month, and I only keep five places on it.
 
-To compare, £499 is about ten hours of 1:1 tutoring at normal rates. That would help one subject and leave the method itself untouched.
-
-Both come with our satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back.
+To compare, the UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week. That's £400 a month per subject, and it would help one subject while leaving the method itself untouched.
 
 If it would help to talk it through, I'd be happy to build your child's plan with you on a free 30 minute call. [Book your child's free academic strategy call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call). Any questions at all, please don't hesitate to send them over!
 

@@ -22,29 +22,6 @@ export default function PricingSection() {
       extraNote: '',
     },
     {
-      name: 'Study Accelerator',
-      tagline: 'Implement the System',
-      price: '£499',
-      description: 'Best for: Students who want results, not just information',
-      highlightLine: 'Includes full 12-week implementation support',
-      subLine: 'Not just learning the system, actually applying it with guidance and feedback',
-      features: [
-        '12 weekly live sessions, 3 full months of support',
-        'Full Top 1% Study System',
-        'Worksheets + templates',
-        'Fortnightly group Q&A',
-        'Personalised guidance',
-        'Direct feedback on your progress',
-        'Community support',
-      ],
-      cta: 'Join Study Accelerator',
-      ctaLink: 'https://buy.stripe.com/bJe14o8Po1DweM27mYc3m04',
-      popular: true,
-      highlight: true,
-      extraNote: '',
-      badge: 'Most Popular',
-    },
-    {
       name: 'Top 1% Mentorship',
       tagline: 'Optimise and Accelerate',
       price: '£300/month',
@@ -67,7 +44,7 @@ export default function PricingSection() {
   return (
     <section className="py-16 px-4 bg-brand-purple">
       <div className="max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-4 items-end">
+        <div className="grid md:grid-cols-2 gap-6 items-end max-w-4xl mx-auto">
           {tiers.map((tier, index) => (
             <TimelineContent
               key={tier.name}
@@ -81,14 +58,6 @@ export default function PricingSection() {
                     : 'border-2 border-brand-cream-dark shadow-lg bg-brand-cream'
                 } ${tier.popular ? 'md:scale-105 md:-mt-8' : ''} p-10`}
               >
-                {tier.popular && (
-                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 w-max">
-                    <span className="bg-brand-gold text-brand-purple px-6 py-2 rounded-full text-sm font-bold shadow-md whitespace-nowrap">
-                      {tier.badge || 'Most Popular'}
-                    </span>
-                  </div>
-                )}
-
                 <h3 className="text-3xl font-serif font-bold text-brand-purple mb-1 text-center">
                   {tier.name}
                 </h3>
@@ -99,15 +68,6 @@ export default function PricingSection() {
                   {tier.price}
                 </div>
                 <p className="text-sm text-brand-text mb-4 opacity-90 text-center font-bold">{tier.description}</p>
-
-                {tier.highlightLine && (
-                  <div className="mb-6 mx-auto bg-brand-gold/15 border border-brand-gold/40 rounded-lg p-3 text-center">
-                    <p className="text-sm font-bold text-brand-purple">{tier.highlightLine}</p>
-                    {tier.subLine && (
-                      <p className="text-xs text-brand-text mt-1 italic">{tier.subLine}</p>
-                    )}
-                  </div>
-                )}
 
                 <ul className="space-y-3 mb-6 flex-grow">
                   {tier.features.map((feature, i) => (

@@ -1283,7 +1283,7 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     ],
     href: '/subject-accelerators/',
     cta: 'Explore the Subject Accelerators',
-    meta: 'Biology, Chemistry and Maths · next cohort starts 13th September',
+    meta: 'Biology, Chemistry and Maths · next cohort starts 17th January',
   })
 
   const system = (why: string): Route => ({

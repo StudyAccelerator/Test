@@ -8,6 +8,7 @@ Goal: the quiet close after the door email. Recap the system, hand off to the da
 Links: 0 (call scheduler in PS)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -33,10 +34,10 @@ One last thing before this run ends. Reply to this email with one word: the part
 
 "Returns" or "phone" or "started, then stopped" is plenty. I'll write back with the one change I'd make. Those replies are honestly the best part of my week.
 
-And maybe you already know that follow-through is the hard part for you. If you want the structure held in place while it becomes automatic, the Study System and the free academic strategy call are both right where I said they'd be.
+And maybe you already know that follow-through is the hard part for you. If you want the structure held in place while it becomes automatic, the Top 1% Mentorship and the free academic strategy call are both right where I said they'd be.
 
 Keep going!
 
 Waleed
 
-PS: "Started, then stopped" is the most common reply I get, and it's a completely fine one haha. It's also exactly what the Accelerator's weekly accountability exists for. If you want to talk it through, [book your free academic strategy call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: "Started, then stopped" is the most common reply I get, and it's a completely fine one haha. It's also exactly what the mentorship's fortnightly follow-ups exist for. If you want to talk it through, [book your free academic strategy call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

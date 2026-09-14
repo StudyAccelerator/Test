@@ -577,13 +577,13 @@ export default function PlanView({
         {/* Soft CTA */}
         <section className={`${CARD} mt-8 border-t-4 border-brand-gold p-6 text-center sm:p-8`}>
           <p className="mx-auto max-w-xl font-serif text-xl font-bold text-brand-purple">
-            This plan tells you what to fix. The Summer Accelerator is where we fix it, live.
+            This plan tells you what to fix. The Subject Accelerators are where we fix it, live.
           </p>
           <a
-            href="/summer-accelerators/"
+            href="/subject-accelerators/"
             className="mt-4 inline-block rounded-xl bg-brand-purple px-6 py-3 font-semibold text-brand-cream transition hover:bg-brand-purple-light"
           >
-            See the Summer Accelerator
+            See the Subject Accelerators
           </a>
           <p className="mt-3 text-[13px] text-brand-text/55">
             Or{' '}

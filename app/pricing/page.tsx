@@ -9,7 +9,7 @@ const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-pur
 export const metadata: Metadata = {
   title: { absolute: 'A-Level Course Pricing | A-Level Accelerators' },
   description:
-    "Every A-Level Accelerators price on one page: the Summer Accelerator, 12-week Subject Accelerators and the Study System, with honest per-hour maths and what's included.",
+    "Every A-Level Accelerators price on one page: the 12-week Subject Accelerators and the Study System, with honest per-hour maths and what's included.",
   alternates: { canonical: 'https://alevelaccelerators.com/pricing/' },
   openGraph: {
     siteName: 'A-Level Accelerators',
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
 const PRICING_FAQS = [
   {
     q: 'Which programme should I pick?',
-    a: "Start with the problem, not the price list. If you don't know why the marks aren't moving, take the free Revision Diagnostic first: it names the problem and points at the right fix, which is sometimes free. If you already know the weak subject, that's a Subject Accelerator. If the problem is how you study rather than one subject, that's the Study System. And if you're a Year 12 going into Year 13, the Summer Accelerator is built for exactly that jump. Still unsure? Book the free call and we'll work it out together.",
+    a: "Start with the problem, not the price list. If you don't know why the marks aren't moving, take the free Revision Diagnostic first: it names the problem and points at the right fix, which is sometimes free. If you already know the weak subject, that's a Subject Accelerator. If the problem is how you study rather than one subject, that's the Study System. Still unsure? Book the free call and we'll work it out together.",
   },
   {
     q: "What's included in the price?",
@@ -33,7 +33,7 @@ const PRICING_FAQS = [
   },
   {
     q: 'Is there a discount for taking more subjects?',
-    a: 'Yes. On the Summer Accelerator: one subject is £289, two are £539, three are £739 and all four are £849. On the Subject Accelerators: one subject is £339 and all three are £849. The more you take, the less each one costs.',
+    a: 'Yes. On the Subject Accelerators: one subject is £339, two are £629 and all three are £849. The more you take, the less each one costs.',
   },
   {
     q: "What if it's not right for us?",
@@ -58,7 +58,7 @@ const pricingPageSchema = {
   url: 'https://alevelaccelerators.com/pricing/',
   name: 'A-Level Course Pricing',
   description:
-    'All A-Level Accelerators programme prices on one page: Summer Accelerator, Subject Accelerators and the Study System.',
+    'All A-Level Accelerators programme prices on one page: Subject Accelerators and the Study System.',
   isPartOf: { '@type': 'WebSite', '@id': 'https://alevelaccelerators.com/#website' },
 }
 
@@ -81,17 +81,9 @@ const ROWS: {
     cta: 'Start with the Diagnostic',
   },
   {
-    name: 'Summer Accelerator',
-    href: '/summer-accelerators/',
-    price: '£289 one subject · £539 two · £739 three · £849 all four',
-    format: 'Six weeks, live online, around 24 hours of teaching per subject. Works out to ~£12/hr of live teaching.',
-    builtFor: 'Year 12 students getting ahead of Year 13 before September',
-    cta: 'See the Summer Accelerator',
-  },
-  {
     name: 'Subject Accelerators',
     href: '/subject-accelerators/',
-    price: '£339 per subject · £849 for all three',
+    price: '£339 one subject · £629 two · £849 all three',
     format: 'Twelve weeks, live weekend sessions, in Biology, Chemistry and Maths. Works out to ~£14/hr of live teaching.',
     builtFor: 'Fixing one weak subject properly through the school year',
     cta: 'See Subject Accelerators',
@@ -99,7 +91,7 @@ const ROWS: {
   {
     name: 'Top 1% Study System',
     href: '/study-systems/',
-    price: 'Study Series £119 · Study Accelerator £499 · Top 1% Mentorship £300 a month',
+    price: 'Study Series £119 · Top 1% Mentorship £300 a month',
     format: 'The method itself: high-yield revision, time management and exam performance, taught live.',
     builtFor: 'Students whose problem is how they study, not one subject',
     cta: 'See the Study System',

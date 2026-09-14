@@ -8,6 +8,7 @@ Goal: urgency from the academic calendar. One CTA: the subject page, with the ca
 Links: 1 (subject page)
 Revised: 6 September 2026 (Waleed's style pass: "can't promise" and "don't buy anything" lines out)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English for parents, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -35,7 +36,7 @@ Same fix, very different value, just because of the date.
 
 **The programme**
 
-That's why our Subject Accelerator cohort starts Sunday 13 September. It runs for twelve weeks, right under that window.
+That's why our Subject Accelerator runs in twelve week cohorts, with a new one starting every term. Joined in the autumn, those twelve weeks sit right under that window. The next start date is on the page.
 
 Live weekend sessions in Biology, Chemistry or Maths, built on real exam questions and mark schemes. £339 for the term, with our satisfaction guarantee on the first session.
 

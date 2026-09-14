@@ -8,7 +8,7 @@ const faqs = [
     answer: (
       <>
         <p className="mb-4">It&apos;s the method behind everything we teach: how to find where your marks are leaking, put your hours into high-yield work like <strong>active recall and past papers</strong> instead of re-reading, and hold it all together under exam pressure.</p>
-        <p>The 12-week Study Accelerator teaches it live. And if you want to know which part of your own system needs it most, the free Revision Diagnostic will tell you in about 4 minutes.</p>
+        <p>The Study Series teaches it live across four sessions, and the Top 1% Mentorship installs it working directly with Dr Waleed. If you want to know which part of your own system needs it most, the free Revision Diagnostic will tell you in about 4 minutes.</p>
       </>
     ),
   },
@@ -103,7 +103,7 @@ const faqs = [
     question: "When does the next cohort start?",
     answer: (
       <>
-        <p className="mb-4 text-brand-gold font-semibold">👉 Next cohort starts Wednesday 9 September.</p>
+        <p className="mb-4 text-brand-gold font-semibold">👉 Study Series cohorts run in small groups through the year.</p>
         <p>The Top 1% Mentorship is by appointment, we schedule 1:1s based on your availability.</p>
       </>
     ),

@@ -158,7 +158,7 @@ export default function Home() {
               The System You&apos;ll Learn in the First 4 Weeks
             </h2>
             <p className="text-center text-lg text-brand-text mb-12 max-w-3xl mx-auto italic">
-              This is the foundation. The Accelerator continues with 8 additional weeks of implementation, feedback, and optimisation.
+              This is the foundation, taught live across the four Study Series sessions. The Top 1% Mentorship then builds on it, working directly with Dr Waleed.
             </p>
 
             <div className="grid md:grid-cols-2 gap-6">
@@ -244,94 +244,6 @@ export default function Home() {
 
       <Divider />
 
-      {/* Accelerator 12-Week Breakdown */}
-      <ScrollFade delay={0.2}>
-        <section className="py-20 px-4 bg-gradient-to-b from-white via-yellow-50 to-white">
-          <div className="max-w-5xl mx-auto">
-            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
-              What Happens Inside the Study Accelerator (12 Weeks)
-            </h2>
-            <p className="text-center text-lg text-brand-text mb-12 max-w-3xl mx-auto italic">
-              The first 4 weeks build your system. The next 8 weeks perfect it to your specific needs.
-            </p>
-
-            <div className="grid md:grid-cols-3 gap-6">
-              <div className="bg-gradient-to-br from-yellow-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow">
-                <div className="inline-block bg-brand-gold text-brand-purple px-4 py-2 rounded-full text-sm font-bold mb-4">
-                  Phase 1
-                </div>
-                <p className="text-xs text-brand-text italic mb-3">Weeks 1 to 4</p>
-                <h3 className="text-2xl font-bold text-brand-purple mb-4">Build your system</h3>
-                <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
-                    <span>Learn how to manage your workload</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
-                    <span>Create a structured weekly plan</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-brand-gold font-bold">✓</span>
-                    <span>Understand how to revise effectively</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-pink-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-pink-400 hover:shadow-xl transition-shadow">
-                <div className="inline-block bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
-                  Phase 2
-                </div>
-                <p className="text-xs text-brand-text italic mb-3">Weeks 5 to 8</p>
-                <h3 className="text-2xl font-bold text-brand-purple mb-4">Fix what&apos;s not working</h3>
-                <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-400 font-bold">✓</span>
-                    <span>Identify why you&apos;re not improving</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-400 font-bold">✓</span>
-                    <span>Fix inefficient revision methods</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-pink-400 font-bold">✓</span>
-                    <span>Learn what to prioritise and what to cut</span>
-                  </li>
-                </ul>
-              </div>
-
-              <div className="bg-gradient-to-br from-purple-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-purple-400 hover:shadow-xl transition-shadow">
-                <div className="inline-block bg-purple-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
-                  Phase 3
-                </div>
-                <p className="text-xs text-brand-text italic mb-3">Weeks 9 to 12</p>
-                <h3 className="text-2xl font-bold text-brand-purple mb-4">Optimise your performance</h3>
-                <ul className="space-y-3 text-brand-text">
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-400 font-bold">✓</span>
-                    <span>Improve how you approach exam questions</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-400 font-bold">✓</span>
-                    <span>Learn from mistakes properly</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="text-purple-400 font-bold">✓</span>
-                    <span>Refine your system so you keep improving</span>
-                  </li>
-                </ul>
-              </div>
-            </div>
-
-            <p className="text-center text-lg text-brand-purple font-bold mt-12 max-w-3xl mx-auto">
-              This is where students start making long-lasting changes.
-            </p>
-          </div>
-        </section>
-      </ScrollFade>
-
-      <Divider />
-
       {/* Why Trust Us - With Image */}
       <ScrollFade delay={0.2}>
         <section className="py-20 px-4 bg-white">
@@ -385,83 +297,51 @@ export default function Home() {
               Choose Your Level of Support
             </h2>
             <p className="text-center text-lg text-brand-text mb-12 max-w-2xl mx-auto">
-              Most students choose the Accelerator for faster results, accountability and direct support.
+              The Study Series teaches the system in four live sessions. The Top 1% Mentorship installs it, working directly with Dr Waleed.
             </p>
 
             <div className="overflow-x-auto bg-white rounded-lg shadow-md mb-4">
               <table className="w-full table-fixed">
                 <thead>
                   <tr>
-                    <th className="bg-brand-purple text-brand-cream p-4 text-left w-1/5"></th>
-                    <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/5">Study Series</th>
-                    <th className="bg-brand-gold text-brand-purple p-4 text-left font-semibold w-3/10">Study Accelerator</th>
-                    <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-3/10">Top 1% Mentorship</th>
+                    <th className="bg-brand-purple text-brand-cream p-4 text-left w-1/3"></th>
+                    <th className="bg-brand-purple text-brand-cream p-4 text-left font-semibold w-1/3">Study Series</th>
+                    <th className="bg-brand-gold text-brand-purple p-4 text-left font-semibold w-1/3">Top 1% Mentorship</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Price</td>
-                    <td className="p-4 w-1/5"><span className="text-xl font-bold text-brand-gold">£119</span></td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-xl font-bold text-brand-gold">£499</span></td>
-                    <td className="p-4 w-3/10"><span className="text-xl font-bold text-brand-gold">£300/month</span></td>
+                    <td className="p-4 font-semibold text-brand-purple w-1/3">Price</td>
+                    <td className="p-4 w-1/3"><span className="text-xl font-bold text-brand-gold">£119</span></td>
+                    <td className="p-4 w-1/3 bg-brand-gold bg-opacity-10"><span className="text-xl font-bold text-brand-gold">£300/month</span></td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Focus</td>
-                    <td className="p-4 w-1/5">Learn the System</td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10">Implement the System</td>
-                    <td className="p-4 w-3/10">Optimise &amp; Accelerate</td>
+                    <td className="p-4 font-semibold text-brand-purple w-1/3">Focus</td>
+                    <td className="p-4 w-1/3">Learn the System</td>
+                    <td className="p-4 w-1/3 bg-brand-gold bg-opacity-10">Optimise &amp; Accelerate</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Live Sessions</td>
-                    <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> 12 sessions + weekly accountability</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fortnightly calls, year-round</td>
+                    <td className="p-4 font-semibold text-brand-purple w-1/3">Live Sessions</td>
+                    <td className="p-4 w-1/3"><span className="text-green-700 font-bold">✓</span> 4 sessions</td>
+                    <td className="p-4 w-1/3 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Fortnightly calls, year-round</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Group Q&amp;A</td>
-                    <td className="p-4 w-1/5"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
+                    <td className="p-4 font-semibold text-brand-purple w-1/3">Group Q&amp;A</td>
+                    <td className="p-4 w-1/3"><span className="text-green-700 font-bold">✓</span> Fortnightly</td>
+                    <td className="p-4 w-1/3 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Ongoing</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">1:1 Support</td>
-                    <td className="p-4 w-1/5"></td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Personalised guidance</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> 24/7 access to Dr. Waleed</td>
+                    <td className="p-4 font-semibold text-brand-purple w-1/3">1:1 Support</td>
+                    <td className="p-4 w-1/3"></td>
+                    <td className="p-4 w-1/3 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> 24/7 access to Dr. Waleed</td>
                   </tr>
                   <tr className="border-b border-brand-cream-dark">
-                    <td className="p-4 font-semibold text-brand-purple w-1/5">Personal Plan</td>
-                    <td className="p-4 w-1/5"></td>
-                    <td className="p-4 w-3/10 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Templates &amp; feedback</td>
-                    <td className="p-4 w-3/10"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
+                    <td className="p-4 font-semibold text-brand-purple w-1/3">Personal Plan</td>
+                    <td className="p-4 w-1/3"></td>
+                    <td className="p-4 w-1/3 bg-brand-gold bg-opacity-10"><span className="text-green-700 font-bold">✓</span> Fully customised</td>
                   </tr>
                 </tbody>
               </table>
-            </div>
-          </div>
-        </section>
-      </ScrollFade>
-
-      {/* Cohort Start Date: continues the gradient section above */}
-      <ScrollFade delay={0.2}>
-        <section className="pt-6 pb-16 px-4 bg-gradient-to-r from-yellow-50 via-pink-50 to-yellow-50">
-          <div className="max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="inline-block bg-gradient-to-r from-yellow-200 to-pink-200 rounded-full px-6 py-2 mb-4">
-                <p className="text-brand-purple font-semibold text-sm uppercase tracking-wide">Limited Spots Available</p>
-              </div>
-              <h3 className="text-3xl md:text-4xl font-serif font-bold text-brand-purple mb-4">
-                Next Cohort Starts Wednesday, September 16th
-              </h3>
-              <p className="text-lg text-brand-text mb-6">
-                Secure your spot before the programme fills up
-              </p>
-              <a
-                href="#pricing-cards"
-                className="inline-block px-8 py-4 bg-gradient-to-r from-brand-purple to-brand-purple-light text-brand-cream font-semibold rounded-lg hover:shadow-lg transition-all hover:-translate-y-1"
-              >
-                Join Now →
-              </a>
             </div>
           </div>
         </section>

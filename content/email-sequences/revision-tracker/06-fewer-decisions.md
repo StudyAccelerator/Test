@@ -8,6 +8,7 @@ Goal: teach the system principle, introduce the Study System as the full version
 Links: 1 (study systems page)
 Revised: 6 September 2026 (Waleed's style pass: guarantee named)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -33,15 +34,17 @@ Your tracker handles the what and the when. The next layer is the how.
 
 What happens inside each block, how the returns get planned in, how the exam skills get trained, and how the whole thing survives week three, week seven and mocks.
 
-That layer is what my Top 1% Study System teaches.
+That layer is what my Top 1% Study System teaches. And the way I teach it best is the Top 1% Mentorship.
 
-The Study Series (£119) is the complete method across four live sessions. It's for students who'll run it themselves once shown properly.
+You work directly with me all month long. I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
 
-The Study Accelerator (£499) adds twelve sessions and a weekly check in while the habits take root. It exists because for most students the follow through, not the knowledge, is the part that breaks.
+It exists because for most students the follow through, not the knowledge, is the part that breaks.
 
-For scale, £499 is about ten hours of average 1:1 tutoring money. Spent once on the way every subject runs, instead of patching one subject.
+It's £300 a month, and I only keep five places on it.
 
-Both come with our satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back.
+For scale, the UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week. That's £400 a month spent patching one subject, against £300 spent on the way every subject runs.
+
+If the budget says not yet, the Study Series (£119) is the complete method across four live sessions. It comes with our satisfaction guarantee: join the first session, and if you're not completely satisfied, you get your money back.
 
 You've shown you'll use structure when it's handed to you. Honestly, that's the best sign I know of a student the system works for :)
 
@@ -51,4 +54,4 @@ Keep going!
 
 Waleed
 
-PS: If you're not sure which version fits you, that's exactly what the free academic strategy call is for. [Book your call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).
+PS: If you're not sure whether it's right for you, that's exactly what the free academic strategy call is for. [Book your call here](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

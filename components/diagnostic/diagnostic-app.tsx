@@ -458,7 +458,7 @@ function ReportPreviewCluster() {
       <HeroFade delay={0.62}>
         <div className={`${CARD} border-t-4 border-brand-gold p-5 mt-4 sm:-ml-4 sm:mr-8 sm:-rotate-1 transition-transform duration-300 hover:rotate-0 hover:-translate-y-1.5`}>
           <p className="font-mono text-[10px] uppercase tracking-[0.18em] text-brand-purple/50">Your fastest route</p>
-          <p className="mt-1.5 font-serif font-bold text-lg text-brand-purple">Summer Accelerator</p>
+          <p className="mt-1.5 font-serif font-bold text-lg text-brand-purple">Subject Accelerators</p>
           <p className="text-sm text-brand-text/65 leading-snug">Matched to your diagnosis, with the reasons why.</p>
           <span className="mt-3 inline-block rounded-full bg-brand-gold/20 px-3 py-1 text-xs font-extrabold text-brand-purple">
             Personalised 7 day plan included

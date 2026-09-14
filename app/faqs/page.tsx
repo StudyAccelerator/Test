@@ -46,7 +46,7 @@ const groups: Group[] = [
     items: [
       {
         q: 'Which subjects can I take?',
-        a: "The Summer Accelerator covers Biology, Chemistry, Maths and Physics: take one subject or several, and the more you take, the more you save. The 12-week Subject Accelerators currently run in Biology, Chemistry and Maths, with Physics planned to join them.",
+        a: "The 12-week Subject Accelerators currently run in Biology, Chemistry and Maths, with Physics planned to join them. Take one subject or several, and the more you take, the more you save.",
       },
       {
         q: 'Can I join from anywhere in the UK?',
@@ -54,7 +54,7 @@ const groups: Group[] = [
       },
       {
         q: 'What is the difference between your programmes?',
-        a: "The Summer Accelerator is a six-week course over the summer that gets Year 12 students ahead on the high-yield Year 13 topics before term starts. The Subject Accelerators are live 12-week exam programmes that run through the year. The Study System teaches the exam technique and revision strategy that sit on top of subject knowledge. If you're not sure which fits, book a free call and we'll help you choose.",
+        a: "The Subject Accelerators are live 12-week exam programmes in Biology, Chemistry and Maths that run through the year. The Study System teaches the exam technique and revision strategy that sit on top of subject knowledge, through the Study Series and the Top 1% Mentorship. If you're not sure which fits, book a free call and we'll help you choose.",
       },
       {
         q: 'How are the sessions structured?',
@@ -70,7 +70,7 @@ const groups: Group[] = [
       },
       {
         q: 'Do sessions for different subjects overlap?',
-        a: "No. On the Summer Accelerator, session times are scheduled so subjects never clash, so you can take all four and still attend every session live.",
+        a: "No. Session times are scheduled so subjects never clash, so you can take more than one and still attend every session live.",
       },
     ],
   },
@@ -79,7 +79,7 @@ const groups: Group[] = [
     items: [
       {
         q: 'How much do the courses cost?',
-        a: "Summer Accelerator pricing starts at £289 for one subject, with discounts for taking more (£539 for two, £739 for three, £849 for all four). That works out at roughly £9 to £12 per hour of live teaching, compared with an average of around £50 an hour for one-to-one tutoring. Exact pricing for each programme is shown on its page.",
+        a: "Subject Accelerator pricing starts at £339 for one subject, with discounts for taking more (£629 for two, £849 for all three). That works out at roughly £14 per hour of live teaching, compared with an average of around £50 an hour for one-to-one tutoring. Exact pricing for each programme is shown on its page.",
       },
       {
         q: 'How do I pay?',

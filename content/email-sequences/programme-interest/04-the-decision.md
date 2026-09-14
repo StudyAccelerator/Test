@@ -8,6 +8,7 @@ Goal: the close. Decision framing without pressure. One CTA: the page. Reply as 
 Links: 1 (subject page)
 Revised: 6 September 2026 (Waleed's style pass: "do it loudly", "invent a countdown", "don't argue with decisions" lines out)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -17,15 +18,15 @@ This is the last email in this run, so let's get the choice made well. You've ha
 
 **Decide from the diagnosis, not the worry.**
 
-If the signs say exam skills in Biology, Chemistry or Maths, the Subject Accelerator is the exact treatment. September is its moment, because the twelve weeks sit under the predicted grades window.
+If the signs say exam skills in Biology, Chemistry or Maths, the Subject Accelerator is the exact treatment. An autumn start is its best moment, because the twelve weeks then sit under the predicted grades window.
 
-If the signs say the method itself, the Study System is the right first fix. The subject panic tends to ease once the studying starts to stick.
+If the signs say the method itself, the Top 1% Mentorship is the right first fix. Working directly with me on the way they study, the subject panic tends to ease once the studying starts to stick.
 
 And if you really don't know which, take the free diagnostic, or book my free academic strategy call first.
 
 **The risk is covered on purpose.**
 
-Each programme comes with the satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+The Subject Accelerator comes with the satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
 So the real choice isn't "pay £339 and hope". It's "is one session enough to find out", and it is.
 
@@ -35,7 +36,7 @@ Places are capped because small groups are the whole point. When a subject fills
 
 Book the place and put the first session in the family diary tonight.
 
-[BUTTON: Book the September place -> https://alevelaccelerators.com/subject-accelerators/]
+[BUTTON: Book your place -> https://alevelaccelerators.com/subject-accelerators/]
 
 **If the answer is no, or not yet**
 

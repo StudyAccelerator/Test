@@ -195,10 +195,10 @@ export default function Page() {
       </P>
 
       <CourseCTA
-        href="/summer-accelerators/"
-        heading="Want the summer plan run for you, live?"
-        body="The Summer Accelerator is our six-week live programme for Year 12 students going into Year 13: Biology, Chemistry, Maths and Physics, taught in small groups with the exact diagnose-and-repair method this article describes. Led by Dr Waleed Ahmad. First session risk-free."
-        label="See the Summer Accelerator"
+        href="/subject-accelerators/"
+        heading="Want the repair work run for you, live?"
+        body="The Subject Accelerators are our live 12-week weekend programmes in Biology, Chemistry and Maths, taught in small groups with the exact diagnose-and-repair method this article describes. Led by Dr Waleed Ahmad. First session risk-free."
+        label="See the Subject Accelerators"
       />
     </ArticleLayout>
   )

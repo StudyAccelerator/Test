@@ -9,6 +9,7 @@ Goal: close the arc: bridge plan, September decision, hand off to the daily emai
 Links: 2 (subject page, call scheduler inline)
 Revised: 6 September 2026 (Waleed's style pass: "not a sales trick" and "don't buy on urgency" lines out)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -38,7 +39,7 @@ Do that and you arrive at the start of term already moving.
 
 **The September decision**
 
-The cohort starts Sunday 13th September and runs twelve weeks. That covers the exact stretch when autumn tests happen and predicted grades get set.
+Cohorts start every term, and the next start date is on the page. Each one runs twelve weeks, so an autumn start covers the exact stretch when autumn tests happen and predicted grades get set.
 
 Join in September and your coached answers become the evidence your teachers see. That's just how the school calendar works.
 

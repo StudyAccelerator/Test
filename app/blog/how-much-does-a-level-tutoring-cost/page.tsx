@@ -108,7 +108,7 @@ export default function Page() {
             </tr>
             <tr className="border-t border-brand-cream-dark">
               <td className="p-4 font-semibold">Our live small-group programmes</td>
-              <td className="p-4">£12 to £14 an hour (£289 to £339 per subject)</td>
+              <td className="p-4">Around £14 an hour (£339 per subject)</td>
               <td className="p-4">A full 12-week programme costs less than two months of weekly one-to-one</td>
             </tr>
           </tbody>
@@ -170,10 +170,8 @@ export default function Page() {
       <P>
         Since this is an article about prices, here are ours, in the open. Our live 12-week{' '}
         <A href="/subject-accelerators/">Subject Accelerators</A>{' '}in Biology, Chemistry and Maths cost
-        £339 per subject, which works out at roughly £14 per teaching hour, with a bundle price of £849 for
-        all three. The six-week{' '}
-        <A href="/summer-accelerators/">Summer Accelerator</A>{' '}starts at £289 per subject, around £12 per
-        live teaching hour, with discounts as you add subjects. Small groups, specialist teachers, sessions
+        £339 per subject, which works out at roughly £14 per teaching hour, with £629 for two subjects and
+        £849 for all three. Small groups, specialist teachers, sessions
         built around exam questions and mark schemes, first session risk-free. That is how the one-to-one maths above gets beaten.
       </P>
 

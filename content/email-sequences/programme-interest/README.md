@@ -1,3 +1,7 @@
 # Programme interest sequence
 
+
+**14 September 2026:** the Study Accelerator (£499) is retired and cohort start dates never appear in email copy (evergreen rule: dates live on the site only). Method pitches are the Top 1% Mentorship (£300 a month, five places) with the Study Series (£119) as the one smaller option. Older lines below that mention £499 or a dated cohort are historical.
+
+
 Written 27 August 2026. Seven emails, one a day, over 7 days on the new group "Programme interest", fed manually by Waleed whenever someone asks about the programmes (DM, reply, call, CRM): the full picture with prices in plain sight, week one from inside, proof in students' words, the money done openly, and the decision email. Mixed student/parent audience, so the copy stays neutral. Prices and dates must match the live pages (£339/£629/£849, Study System £119/£499, cohort Sunday 13 September 2026); if the pages change, update these files and re-run the engine the same day. Cadence, build and switch-on: ../README.md.

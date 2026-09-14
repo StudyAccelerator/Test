@@ -201,9 +201,11 @@ export default function Page() {
         Everything above is doable on your own. The honest failure mode isn&apos;t the plan. It&apos;s that
         self-directed summer work asks you to be your own teacher, examiner and accountability system for six
         weeks, and most seventeen-year-olds (and most adults, if we&apos;re honest) struggle with that. That&apos;s the
-        exact problem our Summer Accelerator was built to solve. Live small-group teaching through the summer,
-        covering the high-yield Year 13 topics in Biology, Chemistry, Maths and Physics, so you walk into
-        September already ahead. Right when predicted grades are being decided.
+        exact problem structured teaching solves. Our live 12-week{' '}
+        <A href="/subject-accelerators/">Subject Accelerators</A>{' '}in Biology, Chemistry and Maths supply
+        the teaching, the exam practice and the accountability, so the plan gets done whether or not your
+        willpower shows up. And if you want to know exactly which topics to repair first, our free{' '}
+        <A href="/revision-diagnostic/">revision diagnostic</A>{' '}takes about three minutes.
       </P>
       <P>
         And revision is only one part of the pre-September job. The UCAS admin, the personal statement
@@ -212,10 +214,10 @@ export default function Page() {
       </P>
 
       <CourseCTA
-        href="/summer-accelerators/"
-        heading="Start September ahead of your class"
-        body="The Summer Accelerator is a six-week live online programme covering the high-yield topics that decide Year 13 predicted grades. Small groups, taught by subject specialists and led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. Two sessions a week per subject, recordings included, first session risk-free."
-        label="Explore the Summer Accelerator"
+        href="/subject-accelerators/"
+        heading="Start Year 13 ahead of your class"
+        body="The Subject Accelerators are live 12-week weekend programmes in Biology, Chemistry and Maths. Small groups, sessions built around exam questions and mark schemes, led by Dr Waleed Ahmad, a doctor and former top-performing A-level student. First session risk-free."
+        label="Explore the Subject Accelerators"
       />
     </ArticleLayout>
   )

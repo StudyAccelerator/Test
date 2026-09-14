@@ -3,6 +3,8 @@
     { "source": "/workshop", "destination": "/", "permanent": true },
     { "source": "/workshop/", "destination": "/", "permanent": true },
     { "source": "/error-log", "destination": "/revision-tracker/", "permanent": false },
+    { "source": "/summer-accelerators", "destination": "/subject-accelerators/", "permanent": false },
+    { "source": "/summer-accelerators/", "destination": "/subject-accelerators/", "permanent": false },
     { "source": "/error-log/", "destination": "/revision-tracker/", "permanent": false }
   ],
   "functions": {

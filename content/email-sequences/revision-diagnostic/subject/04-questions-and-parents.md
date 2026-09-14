@@ -9,6 +9,7 @@ Goal: clear the real objections, arm the parent conversation with a forwardable 
 Links: 2 (subject page, call scheduler)
 Revised: 6 September 2026 (Waleed's style pass: defensive lines out of the answers and the parent section)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -68,9 +69,9 @@ I'd suggest our Subject Accelerator in their main subject. It's twelve weeks of 
 
 The specialists who run it got top grades in that subject themselves. And they've helped hundreds do the same.
 
-Each session is built around real exam questions and the real mark schemes. The next cohort starts Sunday 13th September.
+Each session is built around real exam questions and the real mark schemes. Cohorts start every term, and the next start date is on the programme page.
 
-That means the training runs through the autumn term. That's when schools set the predicted grades that go on UCAS forms.
+Joined in the autumn, the training runs through the autumn term. That's when schools set the predicted grades that go on UCAS forms.
 
 Cost is £339 for the twelve weeks in one subject. For scale, that's less than seven hours of 1:1 tutoring at the UK average of around £50 an hour. Sessions are recorded if a weekend is missed.
 

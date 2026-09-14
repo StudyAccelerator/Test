@@ -5,7 +5,6 @@ import Image from 'next/image'
 import { AnimatePresence, motion } from 'framer-motion'
 
 const PROGRAMME_LINKS = [
-  ['/summer-accelerators/', 'Summer Accelerator'],
   ['/study-systems/', 'Study System'],
   ['/subject-accelerators/', 'Subject Accelerators'],
 ]

@@ -25,9 +25,8 @@ const programmesSchema = {
   '@type': 'ItemList',
   name: 'A-Level Accelerators Programmes',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Summer Accelerator', url: 'https://alevelaccelerators.com/summer-accelerators/' },
-    { '@type': 'ListItem', position: 2, name: 'Subject Accelerators', url: 'https://alevelaccelerators.com/subject-accelerators/' },
-    { '@type': 'ListItem', position: 3, name: 'Top 1% Study System', url: 'https://alevelaccelerators.com/study-systems/' },
+    { '@type': 'ListItem', position: 1, name: 'Subject Accelerators', url: 'https://alevelaccelerators.com/subject-accelerators/' },
+    { '@type': 'ListItem', position: 2, name: 'Top 1% Study System', url: 'https://alevelaccelerators.com/study-systems/' },
   ],
 }
 
@@ -96,23 +95,9 @@ const TopOnePercentArt = () => (
 const PROGRAMMES = [
   {
     featured: true,
-    audience: 'For Year 12 going into Year 13',
-    name: 'Summer Accelerator',
-    badge: 'Enrolling now · starts 22nd August',
-    hook: 'Master the topics that decide your predicted grades.',
-    art: <GradeClimbArt />,
-    artBg: 'bg-gradient-to-br from-brand-gold/15 via-brand-cream to-brand-cream-dark',
-    outcome:
-      'Six weeks, live. Cover the high-yield Year 13 topics over summer, and walk into September already ahead.',
-    points: ['Biology, Chemistry, Maths and Physics', 'Two live sessions a week per subject', 'Every session recorded'],
-    href: '/summer-accelerators/',
-    cta: 'Explore the Summer Accelerator',
-  },
-  {
-    featured: false,
     audience: 'For students who know their weak subject',
     name: 'Subject Accelerators',
-    badge: 'Runs through the school year',
+    badge: 'Next cohort starts Sunday 17th January',
     hook: 'Struggling with your exam technique?',
     art: <MarkSchemeArt />,
     artBg: 'bg-gradient-to-br from-brand-purple/[0.07] via-brand-cream to-brand-cream-dark',

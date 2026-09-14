@@ -9,6 +9,7 @@ Goal: close the arc with the compounding argument, the Study Systems and free-ca
 Links: 2 (study systems page, call scheduler inline)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -34,13 +35,13 @@ And when the autumn tests come, the ones that set predicted grades, they meet a 
 
 So, plainly, the two ways to do it.
 
-**The full setup: the Study System itself.**
+**The full setup: the Top 1% Mentorship.**
 
-£119 for the taught Series. £499 for the Accelerator, with weekly accountability while the habits take hold.
+You work directly with me all month long for £300 a month. I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
 
-All I said about it two emails ago stands, including the satisfaction guarantee on your first session.
+All I said about it two emails ago stands, including the five places. That's the honest limit of how closely I can work with each student.
 
-[BUTTON: See the Study System levels -> https://alevelaccelerators.com/study-systems/]
+[BUTTON: See the Top 1% Mentorship -> https://alevelaccelerators.com/study-systems/]
 
 **On your own: run what you've got.**
 
@@ -62,4 +63,4 @@ Keep going!
 
 Waleed
 
-PS: If you know follow-through is your weak spot (mine was, twice), the Accelerator's weekly accountability is the real product. And the first session is your money back if you're not completely satisfied.
+PS: If you know follow-through is your weak spot (mine was, twice), the mentorship's fortnightly follow-ups are the real product. Being able to reach me the moment you're stuck is what stops week three from winning.

@@ -182,10 +182,10 @@ export default function Page() {
       </P>
 
       <CourseCTA
-        href="/summer-accelerators/"
-        heading="Six weeks to repair Year 12, live"
-        body="The Summer Accelerator takes Year 12 students going into Year 13 through exactly this repair: diagnose the leaks, rebuild the weak topics in Biology, Chemistry, Maths or Physics, and walk into September with evidence. Small live groups, led by Dr Waleed Ahmad, MBBS. First session risk-free."
-        label="See the Summer Accelerator"
+        href="/subject-accelerators/"
+        heading="Rebuild the weak topics, live"
+        body="Our live 12-week Subject Accelerators take students through exactly this repair in Biology, Chemistry and Maths: diagnose the leaks, rebuild the weak topics, and hand your teachers new evidence. Small live groups, led by Dr Waleed Ahmad, MBBS. First session risk-free."
+        label="See the Subject Accelerators"
       />
     </ArticleLayout>
   )

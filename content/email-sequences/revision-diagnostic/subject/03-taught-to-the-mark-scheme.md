@@ -5,10 +5,11 @@ Segment: diag_route contains "Subject Accelerator"
 Subject A: {$name}, {$diag_worry_subject|default('Your Subject')} Taught To The Mark Scheme
 Subject B: {$name}, The September Plan For Your Subject
 Preheader: The Subject Accelerator: 12 weeks, live, weekend sessions, from £339, satisfaction guaranteed.
-Goal: the earned pitch for the Subject Accelerator with September cohort timing, prices, the two-grade average, testimonials and the satisfaction guarantee.
+Goal: the earned pitch for the Subject Accelerator with prices, the two-grade average, testimonials and the satisfaction guarantee.
 Links: 2 (subject page, call scheduler inline)
 Revised: 6 September 2026 (Waleed's style pass: every defensive line out, guarantee is the satisfaction guarantee, "who shouldn't join" replaced by a helpful pointer)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -26,7 +27,7 @@ Breaking that loop needs a second pair of eyes that knows the scheme inside out.
 
 Twelve weeks of live, exam focused teaching in one subject: Biology, Chemistry or Maths. Small groups, taught by specialists who got top grades in the very subject they teach. They've helped hundreds of students do the same.
 
-The next cohort starts Sunday 13th September. We chose the second weekend of the school year on purpose. Your exam skills build alongside the content from the start of Year 13, not patched on after Christmas mocks.
+Cohorts start every term, and the next start date is on the page. Join early in the term and your exam skills grow with the content all term, not patched on after mocks.
 
 Each session runs the way you'd hope after these emails. A short content review first, then most of the time inside real exam questions with the mark scheme open.
 
@@ -76,4 +77,4 @@ Keep going!
 
 Waleed
 
-PS: If you already know you're in, book now and spend the time before the 13th on the drill. You'll arrive with a log full of proof for your expert to work on. Any questions, just reply, I'm always happy to help :)
+PS: If you already know you're in, book now and spend the time before your first session on the drill. You'll arrive with a log full of proof for your expert to work on. Any questions, just reply, I'm always happy to help :)

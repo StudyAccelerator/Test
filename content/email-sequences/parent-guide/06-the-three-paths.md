@@ -8,6 +8,7 @@ Goal: map the decision space so the parent can place themselves. One CTA: the ca
 Links: 1 (call scheduler)
 Revised: 6 September 2026 (Waleed's style pass: "I'll never pretend otherwise" and "I say so" lines out, guarantee named)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English for parents, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -31,7 +32,7 @@ The right tool when the problem is a real content gap in one subject. Something 
 
 The wrong first tool for all the rest. It patches one subject while the method keeps wasting hours in all of them.
 
-And at £600 or so a term, it's a lot of money to find out the problem was never the content.
+And most parents book 2 hours a week, which comes to £400 or so a month per subject. That's a lot of money to find out the problem was never the content.
 
 **Path three: fix the method or the exam skills.**
 
@@ -39,9 +40,11 @@ Our programmes, matched to what the diagnostic found.
 
 If it's exam skills in Biology, Chemistry or Maths, the Subject Accelerator. Twelve weeks of live weekend sessions built on real exam questions and mark schemes, £339 a subject.
 
-If it's the method itself, the Study System. The complete approach taught live for £119, or set up with weekly accountability for £499.
+If it's the method itself, the Top 1% Mentorship. Your child works directly with me all month long: I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck.
 
-Each one costs less than a term of tutoring, and each one treats the cause rather than the symptom. Both come with our satisfaction guarantee on the first session.
+It's £300 a month, less than one subject's tutoring, and I only keep five places on it.
+
+Each one costs less than the tutoring it replaces, and each one treats the cause rather than the symptom. The Subject Accelerator comes with our satisfaction guarantee on the first session.
 
 **Which path?**
 

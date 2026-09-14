@@ -8,6 +8,7 @@ Goal: the correlation email. Hospital systems to study systems, ending naturally
 Links: 1 (study systems page)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -41,11 +42,11 @@ The fix is the same one medicine uses. Move the load off memory and mood, and in
 
 Topics get picked in advance, and returns get booked like appointments. Each session ends with a closed-book check, which is your way of reading the checklist out loud.
 
-You've had the whole structure across these emails. The Study System is that structure, set up well.
+You've had the whole structure across these emails. The Top 1% Mentorship is that structure, set up well.
 
-It's taught live. And on the Accelerator, weekly check-ins hold it in place until it's as normal as a ward routine.
+I build it with you directly, and fortnightly follow-ups hold it in place until it's as normal as a ward routine. And between sessions, you can reach me whenever you're stuck.
 
-[BUTTON: See the Study System -> https://alevelaccelerators.com/study-systems/]
+[BUTTON: See the Top 1% Mentorship -> https://alevelaccelerators.com/study-systems/]
 
 Keep going!
 

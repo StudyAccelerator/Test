@@ -4,11 +4,12 @@ Send: Day 6
 Segment: diag_route contains "Study System"
 Subject A: {$name}, You Don't Need More Discipline
 Subject B: {$name}, Why Week Three Breaks Every Method
-Preheader: The Top 1% Study System, its two versions, and the free strategy call that tells you which one fits.
-Goal: the earned pitch. The Study System tiers, with the free call as the low-friction on-ramp.
+Preheader: The Top 1% Mentorship, working directly with me, and the free strategy call that comes first.
+Goal: the earned pitch. The Top 1% Mentorship as the method fix, the Series as the smaller option, with the free call as the low-friction on-ramp.
 Links: 2 (call scheduler, study systems page inline)
 Revised: 6 September 2026 (Waleed's style pass: "who is this not for" and grade-statistics disclaimers out, guarantee named)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+Revised: 14 September 2026 (Study Accelerator retired, mentorship-first, cohort dates removed for evergreen)
 
 ---
 
@@ -34,25 +35,23 @@ Your report told the same story, by the way. {$diag_bottleneck|default('Your pri
 
 And how-you-work gaps don't close because you read a good email. They close when the structure stops leaning on your mood.
 
-That's what the Top 1% Study System is. It's the method you've been learning this week, set up well, with other people keeping you on track until it runs on its own.
+That's what my Top 1% Mentorship is. It's the method you've been learning this week, set up properly, with me alongside you until it runs on its own.
 
-**The Study Series, £119.**
+**How it works.**
 
-Four live sessions that teach the whole system: high-yield revision, memory methods, time management, exam skills. Plus a group Q&A each fortnight while you apply it.
+You work directly with me all month long. I build your study system with you, fortnightly follow-ups keep it running, and whenever you're stuck between sessions, you can reach me.
 
-This is "learn the system", for students who'll then run it themselves.
+It's exactly how I've helped most of my 1,000+ students.
 
-**The Study Accelerator, £499.**
+**The maths, worth seeing plainly.**
 
-Twelve live sessions, plus the bit that matters most: weekly accountability and one to one guidance while the system takes root in your real week.
+Most families answer this problem with a tutor. The UK average is about £50 an hour, and most parents book 2 hours a week.
 
-This is "run the system". It exists because week three is where running it fails. Most students who mean it pick this one.
+That's £400 a month, per subject. And it goes into re-teaching content, which was never your real problem.
 
-The maths is worth seeing plainly. £499 is about ten hours with a £50 an hour private tutor.
+The mentorship is £300 a month. Less than one subject's tutoring, spent on the way every subject runs, this year and next.
 
-That tutor would fix one subject's content and leave your method as it was. The system lifts each subject at once, this year and next.
-
-There's a year-round mentorship tier above these too. If that's right for your family, it's on the page, but the two above are where almost all students belong.
+I only keep five places on it, because that's the honest limit of how many students I can work with this closely.
 
 **What students say from inside these sessions**
 
@@ -60,13 +59,15 @@ Biju, who joined in a gap year: "All the information provided was clear and unde
 
 Delicia, Year 13: "The topics were really hard to approach while researching alone, so seeing it broken down into manageable points was useful."
 
-Both come with our satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+And if the budget says not yet, the Study Series (£119) teaches the whole system across four live sessions. It comes with our satisfaction guarantee: join the first session, and if you're not happy, you get your money back.
 
-If you're not sure which one fits you, that's what the free academic strategy call is for. Thirty minutes, we look at your week, and I'll tell you straight which one I'd pick for you.
+**The step to take first.**
+
+Before you decide anything, have the free academic strategy call with me. Thirty minutes, we look at your week and your report, and I'll tell you straight what I'd do.
 
 [BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]
 
-And the full details of both are here when you want them: [see the Top 1% Study System](https://alevelaccelerators.com/study-systems/)
+And the full detail is here when you want it: [see the Top 1% Mentorship](https://alevelaccelerators.com/study-systems/)
 
 Let me know if you have any questions :)
 
