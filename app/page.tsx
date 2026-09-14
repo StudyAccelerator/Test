@@ -8,7 +8,7 @@ import TestimonialWall from '@/components/home/testimonial-wall'
 export const metadata = {
   title: 'A-Level Accelerators | Live A-Level Courses, Study Systems & Free Revision Tools',
   description:
-    'Doctor-led A-level education: live online courses in Biology, Chemistry, Maths and Physics, the Top 1% Study System, and free revision tools. Founded by Dr Waleed Ahmad MBBS, trusted by 1,000+ students.',
+    'Doctor-led A-level education: live online courses in Biology, Chemistry and Maths, the Top 1% Study System, and free revision tools. Founded by Dr Waleed Ahmad MBBS, trusted by 1,000+ students.',
   alternates: { canonical: 'https://alevelaccelerators.com/' },
 }
 
@@ -31,26 +31,11 @@ const programmesSchema = {
 }
 
 /* Card artwork: brand-styled DOM graphics, no photography */
-const GradeClimbArt = () => (
-  <div className="flex items-end justify-center gap-3.5 h-full pb-3" aria-hidden="true">
-    {[
-      ['B', 'h-14 w-14 bg-white text-brand-purple/60 ring-1 ring-brand-purple/10 text-xl'],
-      ['A', 'h-20 w-20 bg-brand-gold/25 text-brand-purple ring-1 ring-brand-gold/40 text-2xl'],
-      ['A*', 'h-24 w-24 bg-brand-purple text-brand-gold text-3xl shadow-lg shadow-brand-purple/30'],
-    ].map(([g, cls]) => (
-      <span key={g as string} className={`flex items-center justify-center rounded-2xl font-serif font-bold ${cls}`}>
-        {g}
-      </span>
-    ))}
-  </div>
-)
-
 const MarkSchemeArt = () => (
   <div className="relative flex items-center justify-center h-full" aria-hidden="true">
     <span className="absolute left-4 top-14 -rotate-6 rounded-full bg-emerald-100 px-2.5 py-1 text-[10px] font-bold text-emerald-700 shadow-sm">Biology</span>
     <span className="absolute right-4 top-16 rotate-6 rounded-full bg-violet-100 px-2.5 py-1 text-[10px] font-bold text-violet-700 shadow-sm">Chemistry</span>
     <span className="absolute left-6 bottom-5 rotate-3 rounded-full bg-blue-100 px-2.5 py-1 text-[10px] font-bold text-blue-700 shadow-sm">Maths</span>
-    <span className="absolute right-6 bottom-6 -rotate-3 rounded-full bg-amber-100 px-2.5 py-1 text-[10px] font-bold text-amber-700 shadow-sm">Physics</span>
     <div className="w-44 rotate-[-2deg] rounded-xl bg-white p-4 shadow-lg shadow-brand-purple/10 ring-1 ring-brand-purple/10">
       <p className="font-mono text-[9px] uppercase tracking-[0.15em] text-brand-purple/50 mb-2.5">Mark scheme</p>
       {[true, true, false].map((ticked, i) => (
@@ -150,7 +135,7 @@ export default function Home() {
             </h1>
             <HeroFade delay={0.45}>
               <p className="mt-6 text-lg md:text-xl text-brand-text/75 leading-relaxed max-w-xl">
-                Live A-level courses and study systems for Biology, Chemistry, Maths and Physics. Built by Dr Waleed Ahmad MBBS and designed to help you achieve your desired grades with confidence.
+                Live A-level courses and study systems for Biology, Chemistry and Maths. Built by Dr Waleed Ahmad MBBS and designed to help you achieve your desired grades with confidence.
               </p>
             </HeroFade>
             <HeroFade delay={0.55}>
@@ -262,15 +247,17 @@ export default function Home() {
       <section id="programmes" className="pt-12 pb-24 md:pt-16 md:pb-32 px-6">
         <div className="max-w-6xl mx-auto">
           <ScrollFade>
+            <div className="text-center">
             <p className={`${EYEBROW} mb-4`}>Choose your route</p>
-            <h2 className="font-serif tracking-tight text-3xl md:text-5xl text-brand-purple max-w-2xl leading-tight">
-              Three programmes. <span className="italic text-brand-gold">One</span> method.
+            <h2 className="font-serif tracking-tight text-3xl md:text-5xl text-brand-purple max-w-2xl mx-auto leading-tight">
+              Two programmes. <span className="italic text-brand-gold">One</span> method.
             </h2>
-            <p className="mt-4 max-w-xl text-brand-text/70">
+            <p className="mt-4 max-w-xl mx-auto text-brand-text/70">
               Everything we run trains the same thing: turning what you know into marks. Start from where you actually are.
             </p>
+            </div>
           </ScrollFade>
-          <div className="mt-14 grid md:grid-cols-3 gap-6">
+          <div className="mt-14 grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
             {PROGRAMMES.map((p, i) => (
               <ScrollFade key={p.name} delay={i * 0.12}>
                 <a
@@ -281,7 +268,7 @@ export default function Home() {
                       : '[box-shadow:0_0_0_1px_rgba(46,37,87,.06),0_2px_4px_rgba(46,37,87,.05),0_12px_24px_rgba(46,37,87,.06)] hover:[box-shadow:0_0_0_1px_rgba(46,37,87,.08),0_8px_16px_rgba(46,37,87,.08),0_24px_48px_rgba(46,37,87,.12)]'
                   }`}
                 >
-                  <div className={`relative h-44 overflow-hidden rounded-t-3xl ${p.artBg}`}>
+                  <div className={`relative h-52 md:h-56 overflow-hidden rounded-t-3xl ${p.artBg}`}>
                     {p.art}
                     <span
                       className={`absolute top-4 left-4 rounded-full text-xs font-bold px-3 py-1.5 ${
@@ -291,14 +278,14 @@ export default function Home() {
                       {p.badge}
                     </span>
                   </div>
-                  <div className="flex flex-col flex-1 p-7">
+                  <div className="flex flex-col flex-1 p-8 md:p-10">
                     <p className="font-mono text-[11px] uppercase tracking-[0.15em] leading-snug text-brand-purple/55 md:min-h-[31px]">{p.audience}</p>
-                    <h3 className="mt-2 font-serif text-2xl md:text-[1.7rem] font-bold text-brand-purple">
+                    <h3 className="mt-2 font-serif text-3xl md:text-[2.1rem] font-bold text-brand-purple">
                       {p.name}
                     </h3>
-                    <p className="mt-2 font-serif italic text-lg text-brand-gold leading-snug">{p.hook}</p>
-                    <p className="mt-3 leading-relaxed text-brand-text/75">{p.outcome}</p>
-                    <ul className="mt-5 space-y-2 text-sm text-brand-text/70">
+                    <p className="mt-2 font-serif italic text-xl text-brand-gold leading-snug">{p.hook}</p>
+                    <p className="mt-3 text-lg leading-relaxed text-brand-text/75">{p.outcome}</p>
+                    <ul className="mt-5 space-y-2.5 text-base text-brand-text/70">
                       {p.points.map((pt) => (
                         <li key={pt} className="flex items-start gap-2.5">
                           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true">

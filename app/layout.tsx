@@ -13,7 +13,7 @@ const websiteSchema = {
   url: `${SITE_URL}/`,
   name: "A-Level Accelerators",
   description:
-    "Improve your A-Level results with A-Level Accelerators: live online courses, structured study systems, and subject support for Biology, Chemistry, Maths and Physics.",
+    "Improve your A-Level results with A-Level Accelerators: live online courses, structured study systems, and subject support for Biology, Chemistry and Maths.",
   inLanguage: "en-GB",
   publisher: {
     "@type": "Organization",
@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     template: "%s | A-Level Accelerators",
   },
   description:
-    "Live online A-level courses in Biology, Chemistry, Maths and Physics. Small groups taught by subject specialists, led by Dr Waleed Ahmad, MBBS. Plus a free revision timetable tool and revision guides.",
+    "Live online A-level courses in Biology, Chemistry and Maths. Small groups taught by subject specialists, led by Dr Waleed Ahmad, MBBS. Plus a free revision timetable tool and revision guides.",
   keywords: [
     "a level tutoring",
     "a level courses online",
@@ -80,7 +80,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "A-Level Accelerators | Live Online A-Level Courses & Tutoring",
     description:
-      "Live online A-level courses in Biology, Chemistry, Maths and Physics, led by Dr Waleed Ahmad, MBBS, plus free revision tools.",
+      "Live online A-level courses in Biology, Chemistry and Maths, led by Dr Waleed Ahmad, MBBS, plus free revision tools.",
     images: ["/og-default.png"],
   },
 }

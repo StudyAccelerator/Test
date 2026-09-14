@@ -21,7 +21,7 @@ const groups: Group[] = [
     items: [
       {
         q: 'What is A-Level Accelerators?',
-        a: "We're a UK A-level tuition company that runs live, small-group online courses in Biology, Chemistry, Maths and Physics. Every session is built around exam questions and mark schemes rather than just re-teaching content, and it's led by Dr Waleed Ahmad, a doctor and former top-performing A-level student who has worked with over 1,000 students.",
+        a: "We're a UK A-level tuition company that runs live, small-group online courses in Biology, Chemistry and Maths. Every session is built around exam questions and mark schemes rather than just re-teaching content, and it's led by Dr Waleed Ahmad, a doctor and former top-performing A-level student who has worked with over 1,000 students.",
       },
       {
         q: 'Who teaches the sessions?',
