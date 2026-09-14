@@ -244,6 +244,112 @@ export default function Home() {
 
       <Divider />
 
+      {/* The Three Phases of the Top 1% Mentorship (from Waleed's mentorship deck, 14 September 2026) */}
+      <ScrollFade delay={0.2}>
+        <section id="mentorship-phases" className="py-20 px-4 bg-gradient-to-b from-white via-yellow-50 to-white">
+          <div className="max-w-6xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
+              The Three Phases of the Top 1% Mentorship
+            </h2>
+            <p className="text-center text-lg text-brand-text mb-12 max-w-3xl mx-auto italic">
+              Diagnose, rebuild, coach. Working directly with Dr Waleed, one phase at a time.
+            </p>
+
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="bg-gradient-to-br from-yellow-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-brand-gold hover:shadow-xl transition-shadow flex flex-col">
+                <div className="inline-block self-start bg-brand-gold text-brand-purple px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  Phase 1
+                </div>
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Diagnose</h3>
+                <p className="text-brand-text mb-4">We find where the marks are actually going before we change anything.</p>
+                <ul className="space-y-3 text-brand-text mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Every topic rated for real confidence, not familiarity</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>An audit of the week: where the hours go and what they buy</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>Past paper marks broken down by tier to find the leak</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-brand-gold font-bold">✓</span>
+                    <span>A weekly plan built around your real school timetable</span>
+                  </li>
+                </ul>
+                <div className="rounded-lg bg-white/70 border border-brand-cream-dark p-4">
+                  <p className="text-xs uppercase tracking-wide font-semibold text-brand-purple/60 mb-1">You leave with</p>
+                  <p className="font-semibold text-brand-purple">A written plan you can still follow on a bad week.</p>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-pink-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-pink-400 hover:shadow-xl transition-shadow flex flex-col">
+                <div className="inline-block self-start bg-pink-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  Phase 2
+                </div>
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Rebuild</h3>
+                <p className="text-brand-text mb-4">The revision method itself gets rebuilt around what the diagnosis found.</p>
+                <ul className="space-y-3 text-brand-text mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-400 font-bold">✓</span>
+                    <span>Blurting, active recall and spaced review, taught and timed</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-400 font-bold">✓</span>
+                    <span>Weakest topics get the most sessions, strong ones get maintenance</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-400 font-bold">✓</span>
+                    <span>An error log: every dropped mark logged, sorted and retested</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-pink-400 font-bold">✓</span>
+                    <span>A check-in on every call: what got done, what slipped, what changes</span>
+                  </li>
+                </ul>
+                <div className="rounded-lg bg-white/70 border border-brand-cream-dark p-4">
+                  <p className="text-xs uppercase tracking-wide font-semibold text-brand-purple/60 mb-1">You leave with</p>
+                  <p className="font-semibold text-brand-purple">A method that survives a heavy school week.</p>
+                </div>
+              </div>
+              <div className="bg-gradient-to-br from-purple-50 to-brand-cream p-8 rounded-lg shadow-md border-l-4 border-purple-400 hover:shadow-xl transition-shadow flex flex-col">
+                <div className="inline-block self-start bg-purple-400 text-white px-4 py-2 rounded-full text-sm font-bold mb-4">
+                  Phase 3
+                </div>
+                <h3 className="text-2xl font-bold text-brand-purple mb-2">Coach</h3>
+                <p className="text-brand-text mb-4">We train exam performance until the grade holds under pressure.</p>
+                <ul className="space-y-3 text-brand-text mb-6 flex-grow">
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-400 font-bold">✓</span>
+                    <span>Full questions under timed conditions, set between every call</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-400 font-bold">✓</span>
+                    <span>Mark scheme language drilled: what describe, explain and analyse pay for</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-400 font-bold">✓</span>
+                    <span>Mock post-mortems: every lost mark traced to a tier and fixed</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-purple-400 font-bold">✓</span>
+                    <span>The exam week routine: timing, nerves and the last 48 hours</span>
+                  </li>
+                </ul>
+                <div className="rounded-lg bg-white/70 border border-brand-cream-dark p-4">
+                  <p className="text-xs uppercase tracking-wide font-semibold text-brand-purple/60 mb-1">You leave with</p>
+                  <p className="font-semibold text-brand-purple">A paper you walk into knowing how you will attack it.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      <Divider />
+
       {/* Why Trust Us - With Image */}
       <ScrollFade delay={0.2}>
         <section className="py-20 px-4 bg-white">
