@@ -40,6 +40,8 @@ def scan(path: str) -> list[str]:
                 # apostrophes inside JSX text are written &apos; in this repo
                 issues.append(f"{path}:{i}: CURLY QUOTE ({ch!r}): {line.strip()[:90]}")
                 break
+        if re.search(r"\\\\u201[89cd]", line) or "\\u2018" in line or "\\u2019" in line or "\\u201c" in line or "\\u201d" in line:
+            issues.append(f"{path}:{i}: CURLY QUOTE ESCAPE (\\uXXXX renders curly): {line.strip()[:90]}")
         low = line.lower()
         for w in BANNED_WORDS:
             if re.search(rf"\b{re.escape(w)}\b", low):

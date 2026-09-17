@@ -14,6 +14,108 @@ export const SITE_URL = 'https://alevelaccelerators.com'
 // Newest first. Add new posts to the top; /blog and sitemap.xml pick them up automatically.
 export const posts: Post[] = [
   {
+    slug: 'ucas-personal-statement-three-questions',
+    title: 'The New UCAS Personal Statement: How to Answer All Three Questions (2027 Entry)',
+    description:
+      'The three UCAS questions, the 4,000-character limit, and how to answer each one with evidence instead of adjectives. What actually earns the place, from a doctor who has worked with over 1,000 A-level students.',
+    datePublished: '2026-09-17',
+    dateModified: '2026-09-17',
+    readingMinutes: 10,
+    category: 'Predicted Grades & UCAS',
+    keywords: [
+      'ucas personal statement 2027 entry',
+      'new ucas personal statement three questions',
+      'how to answer the ucas personal statement questions',
+      'ucas personal statement character limit',
+      'personal statement examples structure',
+    ],
+  },
+  {
+    slug: 'predicted-grades-lower-than-expected',
+    title: 'Predicted Grades Lower Than Expected? What to Do in the First Two Weeks',
+    description:
+      "A low prediction is a judgement, not a verdict, and it can change until your school submits UCAS. The evidence route, the application strategy route, and the teacher conversation that actually works.",
+    datePublished: '2026-09-15',
+    dateModified: '2026-09-15',
+    readingMinutes: 9,
+    category: 'Predicted Grades & UCAS',
+    keywords: [
+      'predicted grades lower than expected',
+      'can you challenge predicted grades',
+      'unhappy with predicted grades a level',
+      'can predicted grades change after being set',
+      'apply with higher entry requirements than predicted',
+    ],
+  },
+  {
+    slug: 'how-to-revise-a-level-maths',
+    title: "How to Revise for A-Level Maths (Notes Won't Save You)",
+    description:
+      'Maths is a performance subject: the only revision that works is doing questions, logging every error and re-attempting them cold. The full system, from the core loop to exam-day time-per-mark.',
+    datePublished: '2026-09-14',
+    dateModified: '2026-09-14',
+    readingMinutes: 9,
+    category: 'Subject Guides',
+    keywords: [
+      'how to revise for a level maths',
+      'a level maths revision',
+      'a level maths revision tips',
+      'best way to revise a level maths',
+      'a level maths past papers how many',
+    ],
+  },
+  {
+    slug: 'how-to-revise-a-level-biology',
+    title: 'How to Revise for A-Level Biology: The Method That Actually Earns Marks',
+    description:
+      'Biology punishes re-reading harder than any A-level: the marks live in retrieval, mark-scheme wording and application. A doctor who took it to medicine lays out the full topic-by-topic method.',
+    datePublished: '2026-09-12',
+    dateModified: '2026-09-12',
+    readingMinutes: 10,
+    category: 'Subject Guides',
+    keywords: [
+      'how to revise for a level biology',
+      'a level biology revision',
+      'a level biology revision tips',
+      'how to get an a in a level biology',
+      'a level biology exam technique',
+    ],
+  },
+  {
+    slug: 'is-my-child-revising-properly',
+    title: "Is My Child Actually Revising? Six Signs the Hours Aren't Working",
+    description:
+      'Hours at a desk and tidy notes are the worst predictors of results. A doctor explains the six signs revision isn\'t converting into marks, and how to fix it without starting a war at home.',
+    datePublished: '2026-09-10',
+    dateModified: '2026-09-10',
+    readingMinutes: 9,
+    category: 'For Parents',
+    keywords: [
+      'is my child revising properly',
+      'how do i know if my child is revising',
+      "child revises but grades don't improve",
+      'signs revision is not working',
+      'how to help teenager revise a levels',
+    ],
+  },
+  {
+    slug: 'gcse-to-a-level-jump',
+    title: 'The GCSE to A-Level Jump: Why Bright Students Hit a Wall in Year 12',
+    description:
+      "Strong GCSEs, sinking in Year 12: the most predictable crisis in British education, and it isn't about ability. What actually changes at A-level, the warning signs parents can see, and the September fix.",
+    datePublished: '2026-09-08',
+    dateModified: '2026-09-08',
+    readingMinutes: 9,
+    category: 'For Parents',
+    keywords: [
+      'gcse to a level jump',
+      'why are a levels harder than gcse',
+      'year 12 struggling first term',
+      'a level step up from gcse',
+      'bright child struggling at a level',
+    ],
+  },
+  {
     slug: 'how-much-does-a-level-tutoring-cost',
     title: 'How Much Does A-Level Tutoring Cost in 2026? Honest Numbers',
     description:
