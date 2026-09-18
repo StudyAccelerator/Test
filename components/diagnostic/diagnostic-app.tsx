@@ -956,11 +956,10 @@ function EmailGate({
 }) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
-  /* Two-step gate (13 September 2026): name, child and email first, then
-     the phone as the last thing before the report. Splitting the decision
-     lifts completion, and every lead still arrives with a number, which
-     is the channel Waleed converts on. Nothing is sent until step 2. */
-  const [step, setStep] = useState<1 | 2>(1)
+  /* Single-step gate. A two-step version (name and email, then phone on a
+     second screen) ran 13 to 18 September 2026 and GA4 showed completion
+     falling from 71% to 38% of finishers while it was live, so it was
+     reverted. Do not split this form again without an A/B. */
   const failCount = useRef(0)
   const isParent = taker === 'parent'
   /* Their own words from the final question: if they already asked for a
@@ -987,12 +986,6 @@ function EmailGate({
     }
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
       setError("That email doesn't look right. Check for typos.")
-      return
-    }
-    if (step === 1) {
-      setStep(2)
-      trackFunnel('diagnostic_gate_step2', { taker })
-      window.scrollTo({ top: 0, behavior: 'smooth' })
       return
     }
     /* Phone is required since 12 August 2026 (Waleed's call: he rings new
@@ -1114,11 +1107,7 @@ function EmailGate({
               : `All ${QUESTIONS.length} answers scored. Pop your details in and it opens right here: your profile, your five scores, and your 7 day plan.`}
           </p>
 
-          <form onSubmit={handleSubmit} noValidate className="mt-8 space-y-4">
-            <p className="font-mono text-[11px] uppercase tracking-[0.18em] text-brand-cream/50">
-              Step {step} of 2{step === 2 ? ': where Dr Waleed calls you' : ''}
-            </p>
-            <div hidden={step === 2} className="space-y-4">
+          <form onSubmit={handleSubmit} className="mt-8 space-y-4">
             <div>
               <label htmlFor="diag-name" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
                 {isParent ? 'Your first name' : 'First name'}
@@ -1165,24 +1154,6 @@ function EmailGate({
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
             </div>
-            {error && step === 1 && (
-              <p className="rounded-lg border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-200" role="alert">
-                {error}
-              </p>
-            )}
-            <button
-              type="submit"
-              className="w-full rounded-full bg-brand-gold text-brand-purple px-8 py-4 text-lg font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-[0_12px_28px_rgba(201,169,110,.35)]"
-            >
-              {isParent ? 'Continue to the report' : 'Continue to my report'}
-            </button>
-            <p className="text-xs text-brand-cream/50 leading-relaxed">
-              {isParent
-                ? "Free, and stays free. You'll also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."
-                : "Free, and stays free. You'll also get Dr Waleed's revision emails: the fixes from your report, one at a time, then one a week. Unsubscribe any time."}
-            </p>
-            </div>
-            <div hidden={step === 1} className="space-y-4">
             <div>
               <label htmlFor="diag-phone" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
                 Phone number
@@ -1253,7 +1224,7 @@ function EmailGate({
               />
             </div>
 
-            {error && step === 2 && (
+            {error && (
               <p className="rounded-lg border border-red-400/40 bg-red-500/10 px-4 py-3 text-sm font-medium text-red-200" role="alert">
                 {error}
               </p>
@@ -1278,17 +1249,11 @@ function EmailGate({
               />
               I&apos;d rather not get a call. Just the report and the emails.
             </label>
-            <button
-              type="button"
-              onClick={() => {
-                setError(null)
-                setStep(1)
-              }}
-              className="w-full text-center text-xs text-brand-cream/50 underline underline-offset-4 hover:text-brand-cream/80 transition"
-            >
-              Back to my details
-            </button>
-            </div>
+            <p className="text-xs text-brand-cream/50 leading-relaxed">
+              {isParent
+                ? "Free, and stays free. You'll also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."
+                : "Free, and stays free. You'll also get Dr Waleed's revision emails: the fixes from your report, one at a time, then one a week. Unsubscribe any time."}
+            </p>
           </form>
         </motion.div>
       </div>
