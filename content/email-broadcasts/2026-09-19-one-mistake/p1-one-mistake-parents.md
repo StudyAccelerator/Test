@@ -8,6 +8,7 @@ Preheader: It's the fix almost every parent reaches for first, and it's usually 
 Goal: the parent twin of S1. The family fallback is a one to one subject tutor; the real leak is how their child prepares. One CTA: the free academic strategy call for their child.
 Links: 2 (call scheduler, body and PS)
 Written: 19 September 2026, from Waleed's brief, in the email-writer skill, plain English for parents. Student version: s1-one-mistake-students.md.
+Revised: 19 September 2026, second pass (Waleed: no full stops on the bold subheadings)
 Revised: 19 September 2026 (Waleed's notes, mirrored from the student version: A* subject, no "hope you're well" opener, new opening line, stress and burnout, A* with the asterisk, "in the wrong place", 30 minutes)
 
 ---
@@ -18,7 +19,7 @@ Now that the first term has started picking up the pace, your child probably has
 
 I made it myself for years.
 
-**My own fallback.**
+**My own fallback**
 
 When I was doing my A-levels and a class test didn't go well, my answer was always the same. Work more.
 
@@ -26,7 +27,7 @@ Spend more time revising. More time going through the textbook. More practice pa
 
 I was hoping that repetition would fix it. My grades did improve, but very slowly, and it caused me a lot of stress, burnout and lost evenings.
 
-**The mistake I see now.**
+**The mistake I see now**
 
 Over the last 6 years I've worked with over 1,000 students. The most common thing parents tell me is this: "My child is putting in the hard work, but the grade still doesn't match the effort."
 
@@ -38,7 +39,7 @@ It's how your child prepares for the exam. Whether they have the right study sys
 
 School spends its time on what to learn. Almost nobody teaches them how to learn.
 
-**The test of that idea.**
+**The test of that idea**
 
 If one to one tutoring was always the answer, every student with a tutor would be getting A*s. They aren't.
 
@@ -46,7 +47,7 @@ Most of the students I work with have already tried a subject tutor. They're sti
 
 As a doctor, if a patient keeps coming back with the same problem, I don't just double the dose. I ask why the treatment isn't working.
 
-**What I'd do instead.**
+**What I'd do instead**
 
 Before you pay for more hours in the wrong place, find out what's actually holding your child back. That's what my free academic strategy call is for.
 

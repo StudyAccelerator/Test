@@ -30,7 +30,7 @@ His own pattern from the E0 ("just like in healthcare, the diagnosis isn't the o
 
 ## 5. The teach (numbered bold steps)
 
-Each step heading is bold and sits on its own line: `**Step 1: Work out your time per mark.**` Then one to three short sentences per paragraph, with a worked example that uses real numbers ("a 2 hour paper worth 100 marks gives you 1.2 minutes per mark").
+Each step heading is bold and sits on its own line: `**Step 1: Work out your time per mark**`. **Bold headings never end in a full stop** (Waleed, 19 September 2026), and nor do the section headings that break up a story email (`**Year 7**`, `**The test of that idea**`). Then one to three short sentences per paragraph, with a worked example that uses real numbers ("a 2 hour paper worth 100 marks gives you 1.2 minutes per mark").
 
 Give the idea a memorable name. Waleed rejected "your number" as vague and asked for "time per mark"; the name is then used identically in every step and in the parent question, so it sticks.
 
@@ -55,6 +55,8 @@ Then the offer, in his order:
 Parents get "I'm confident we can help." after the ask in return (his Sonia line).
 
 ## 8. Sign-off and PS
+
+**Banned in a reply CTA: "I read every one myself" and its variants** ("I read every reply", "and those are the ones I remember longest"). Waleed dislikes the line, 19 September 2026. Ask for the reply and stop: "reply to this email and let me know." It survives in about twenty older sequence and broadcast files that have not been swept; take it out of any file you touch.
 
 Students: `Speak soon!` then `Kind regards,` then `Waleed`. Parents: `Best wishes,` then `Waleed`. Sequence teaching emails may close `Keep going!` then `Waleed`. The engine lifts the valediction into the photo signature block, which sits last, after the PS.
 
