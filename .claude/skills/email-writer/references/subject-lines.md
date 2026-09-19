@@ -19,7 +19,9 @@ What they teach: the reader's name goes in, usually first; Title Case; the subje
 2. **Title Case.** Every main word capitalised, small words (of, in, the, a, to) lower case unless first.
 3. **Under 50 characters including the name** (count the name as five letters). Phones cut the rest. Use `validate_subject_lines` on the MailerLite connector, or count.
 4. **Curiosity + benefit.** A specific benefit the reader cares about (stop running out of time, save marks, a higher predicted grade) plus one element that makes them wonder (This Number, The 2 Minute Habit, Why You Keep, What Teachers Look For).
-5. **Sentence-shaped, not label-shaped.** "Why Students Run Out Of Time In Exams" reads as a sentence; "Exam Timing Tips" reads as a label. Labels lose.
+5. **A\* is always written with the asterisk** (A\*, A\*s, A\* grades), never "A star" or "A stars", in subjects and in the body (Waleed, 19 September 2026). The engine only treats paired `**` as bold, so a single asterisk renders as typed.
+6. **When Waleed dictates a subject, use his words verbatim in Title Case**, even past 50 characters (his 19 September story subject: "At 11, I Was Told I Wasn't Good Enough, And Now I'm A Doctor"). Flag the length once; do not shorten it.
+7. **Sentence-shaped, not label-shaped.** "Why Students Run Out Of Time In Exams" reads as a sentence; "Exam Timing Tips" reads as a label. Labels lose.
 6. **No clickbait.** If the email doesn't deliver the subject's promise, change the subject. Never "URGENT", never fake scarcity, never a question the email doesn't answer.
 7. **Two subjects per email**, A and B, both meeting the rules, so an A/B test is always possible.
 

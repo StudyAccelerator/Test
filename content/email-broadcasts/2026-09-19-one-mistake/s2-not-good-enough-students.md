@@ -1,25 +1,26 @@
 # S2 · Not good enough (students)
 
-Send: Sunday 20 September 2026, 5pm UK, on Waleed's go (takes the Sunday slot this week)
+Send: Saturday 19 September 2026, 5pm UK (Waleed: "let's just send that first", 19 September)
 Audience: students + mixed list
-Subject A: {$name}, I Was Told I Wasn't Good Enough
+Subject A: At 11, I Was Told I Wasn't Good Enough, And Now I'm A Doctor
 Subject B: {$name}, What My Year 7 Teacher Got Wrong
 Preheader: At 11 I was told to think about other options. Now I'm a doctor. Here's what that taught me.
 Goal: a story deposit for Ian Stanley's emotional bank account. There is no such thing as not good enough, only not yet taught what works for you. One CTA: reply.
 Links: 0 (reply is the action)
 Written: 19 September 2026, from Waleed's own story, in the email-writer skill. Parent twin: p2-not-good-enough-parents.md.
+Revised: 19 September 2026 (Waleed's notes: his subject line verbatim, no "hope you've had a good weekend" opener, secondary school context before Miss Booth, simpler closing line, new PS)
 
 ---
 
 Hey {$name},
 
-I hope you've had a good weekend, it's Dr Waleed!
-
 I want to tell you a quick story today, because it changed how I think about every grade.
 
 **Year 7.**
 
-My biology teacher, Miss Booth, asked me what I wanted to do when I grew up. I told her I wanted to be a doctor and study medicine.
+I didn't transition very well into secondary school. Biology in particular wasn't going well for me in class, and my class tests were coming back with poor grades.
+
+So my biology teacher, Miss Booth, asked me what I wanted to do when I grew up. I told her I wanted to be a doctor and study medicine.
 
 She gave me this look. Then she told me I should maybe think about some other options.
 
@@ -51,10 +52,10 @@ Studying works exactly the same way. The same revision method doesn't work for e
 
 Don't decide that you're not smart enough. How can you be expected to do well when nobody has taught you what to do?
 
-That's a fixable problem. Being "not good enough" never was one, because it was never true.
+That's a fixable problem. Being "not good enough" was never the issue, because it was never true.
 
 Speak soon!
 
 Waleed
 
-PS: If you've ever been told you're not good enough, or you've ever felt it after a result, reply and tell me. Even one line. I read every reply myself, and those are the ones I remember longest.
+PS: Let me know if you've ever been told you're not good enough, or maybe you've felt it yourself after a result. Just reply to this email. I read every one myself.

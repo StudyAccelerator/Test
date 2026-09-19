@@ -46,5 +46,5 @@ Every email to "the whole list" is two emails. The parent twin is not a find-and
 - Reframed as something to pass on at home: "here are three simple steps to share with your child."
 - Add the one thing a parent can do: a better question to ask at home ("What's your time per mark for that paper?") in place of "have you revised?", or a way to bring it up without a fight. Forwarding the email to the child is a valid action.
 - The offer is "a free academic strategy call for your child", the qualifier is "parents who want their child to achieve top grades", the ask in return is "keep me updated on how things go", followed by "I'm confident we can help."
-- Register is the Sonia email: `Hi {$name},` "I hope you're well!", "Best wishes,". The night shifts joke stays in the PS (Waleed's instruction). Smileys stay rare.
+- Register is the Sonia email: `Hi {$name},` then straight in ("I hope you're well!" only on a first-contact email, per the 19 September opener rule), "Best wishes,". The night shifts joke stays in the PS (Waleed's instruction). Smileys stay rare.
 - Footers and recipient groups come from the audience in the manifest; the parent twin never goes to a student group and no student email ever goes to a parent group.

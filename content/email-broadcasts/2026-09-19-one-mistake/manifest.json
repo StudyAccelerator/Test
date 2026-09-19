@@ -1,5 +1,5 @@
 {
- "comment": "Two broadcasts Waleed asked for on 19 September 2026, each as a student version plus a parent twin. Saturday: the one mistake (falling back on 1:1 subject tutoring when the real leak is how they prepare). Sunday: the Miss Booth story (there is no such thing as not good enough), a reply-CTA deposit that takes the Sunday slot this week. Load with: python3 scripts/email-engine/engine.py campaigns content/email-broadcasts/2026-09-19-one-mistake --live (DRAFTS only; scheduling is a separate step on Waleed's go).",
+ "comment": "Two broadcasts Waleed asked for on 19 September 2026, each as a student version plus a parent twin. Order swapped on his instruction the same day: Saturday 19 Sept 5pm = the Miss Booth story (there is no such thing as not good enough, reply CTA); Sunday 20 Sept 5pm = the one mistake (falling back on 1:1 subject tutoring when the real leak is how they prepare), sent as that week's Sunday Session. Load with: python3 scripts/email-engine/engine.py campaigns content/email-broadcasts/2026-09-19-one-mistake --live --update. Schedule with: python3 scripts/email-engine/engine.py schedule <campaign_id> <YYYY-MM-DD> <HH:MM> --live (only on Waleed's go).",
  "audiences": {
   "students": [
    "179596195547580232",
@@ -27,34 +27,34 @@
  "campaigns": [
   {
    "key": "s1",
-   "name": "Broadcast 2026-09-19 · the one mistake (students)",
+   "name": "Sunday Session 2026-09-20 · the one mistake (students)",
    "file": "s1-one-mistake-students.md",
    "audience": "students",
-   "send_hint": "Sat 19 Sep 17:00 UK, on Waleed's go",
+   "send_hint": "Sun 20 Sep 17:00 UK, the Sunday Session",
    "campaign_id": "199039590148868027"
   },
   {
    "key": "p1",
-   "name": "Broadcast 2026-09-19 · the one mistake (parents)",
+   "name": "Sunday Session 2026-09-20 · the one mistake (parents)",
    "file": "p1-one-mistake-parents.md",
    "audience": "parents",
-   "send_hint": "Sat 19 Sep 17:00 UK, on Waleed's go",
+   "send_hint": "Sun 20 Sep 17:00 UK, the Sunday Session",
    "campaign_id": "199039593603925525"
   },
   {
    "key": "s2",
-   "name": "Broadcast 2026-09-20 · not good enough (students)",
+   "name": "Broadcast 2026-09-19 · not good enough (students)",
    "file": "s2-not-good-enough-students.md",
    "audience": "students",
-   "send_hint": "Sun 20 Sep 17:00 UK, on Waleed's go (takes the Sunday slot)",
+   "send_hint": "Sat 19 Sep 17:00 UK",
    "campaign_id": "199039597003408754"
   },
   {
    "key": "p2",
-   "name": "Broadcast 2026-09-20 · not good enough (parents)",
+   "name": "Broadcast 2026-09-19 · not good enough (parents)",
    "file": "p2-not-good-enough-parents.md",
    "audience": "parents",
-   "send_hint": "Sun 20 Sep 17:00 UK, on Waleed's go (takes the Sunday slot)",
+   "send_hint": "Sat 19 Sep 17:00 UK",
    "campaign_id": "199039600397649416"
   }
  ]

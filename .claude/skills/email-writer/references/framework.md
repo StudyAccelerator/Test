@@ -4,11 +4,11 @@ Built from the 13 September 2026 Sunday Session ("marks per minute"), which Wale
 
 Not every email carries every part (a two-paragraph daily has no numbered steps), but the order never changes, and parts 1, 7 and 8 are always there.
 
-## 1. The warm opener (two short paragraphs)
+## 1. The opener (salutation, then straight in)
 
-Students: `Hey {$name},` then `I hope you're well and you've had a good weekend, it's Dr Waleed!` (vary the middle clause to the day: "I hope the first week back has been kind to you"). Parents: `Hi {$name},` then `I hope you're well and you've had a lovely weekend! It's Dr Waleed.`
+Students: `Hey {$name},` Parents: `Hi {$name},` Then the first real sentence of the email. **No "I hope you're well" or "I hope you've had a good weekend" line** except on the FIRST email of an automation (the instant welcome, where he also introduces himself: "it's Dr Waleed!" / "Dr Waleed here."). Waleed's ruling, 19 September 2026, from Ian Stanley's book: the pleasantry reads corporate and is the first place a reader clicks off, so every other email, broadcast and Sunday Session goes straight into its opening line ("Now that the first term has started picking up the pace, you probably have a few upcoming class tests.").
 
-Inside a sequence, only the first email introduces him ("Dr Waleed here."). Later emails open `Hi {$name},` and go straight in. The Sunday Session then names itself: "Welcome to this week's Sunday Session. It's the email where I share one thing school never really teaches you, that you can use straight away."
+Inside a sequence, only the first email introduces him. Later emails open with the salutation and go straight in. The Sunday Session then names itself: "Welcome to this week's Sunday Session. It's the email where I share one thing school never really teaches you, that you can use straight away."
 
 ## 2. Why this matters now (one or two paragraphs)
 

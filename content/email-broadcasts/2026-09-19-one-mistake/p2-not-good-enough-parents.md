@@ -1,25 +1,26 @@
 # P2 · Not good enough (parents)
 
-Send: Sunday 20 September 2026, 5pm UK, on Waleed's go (takes the Sunday slot this week)
+Send: Saturday 19 September 2026, 5pm UK (Waleed: "let's just send that first", 19 September)
 Audience: parent groups
-Subject A: {$name}, I Was Told I Wasn't Good Enough
+Subject A: At 11, I Was Told I Wasn't Good Enough, And Now I'm A Doctor
 Subject B: {$name}, Your Child Isn't The Problem
 Preheader: At 11 I was told to think about other options. Now I'm a doctor. Here's what that taught me about grades.
 Goal: the parent twin of S2. A story deposit: there is no such thing as not good enough, only a child who hasn't been taught what works for them. One CTA: reply.
 Links: 0 (reply is the action)
 Written: 19 September 2026, from Waleed's own story, in the email-writer skill, plain English for parents. Student version: s2-not-good-enough-students.md.
+Revised: 19 September 2026 (Waleed's notes: his subject line verbatim, no "hope you've had a lovely weekend" opener, secondary school context before Miss Booth, simpler closing line, his PS wording)
 
 ---
 
 Hi {$name},
 
-I hope you've had a lovely weekend! It's Dr Waleed.
-
 I want to tell you a quick story today, because it changed how I think about every grade a student brings home.
 
 **Year 7.**
 
-My biology teacher, Miss Booth, asked me what I wanted to do when I grew up. I told her I wanted to be a doctor and study medicine.
+I didn't transition very well into secondary school. Biology in particular wasn't going well for me in class, and my class tests were coming back with poor grades.
+
+So my biology teacher, Miss Booth, asked me what I wanted to do when I grew up. I told her I wanted to be a doctor and study medicine.
 
 She gave me this look. Then she told me I should maybe think about some other options.
 
@@ -51,10 +52,10 @@ Studying works exactly the same way. The same revision method doesn't work for e
 
 Please don't let them decide they're not smart enough. How can they be expected to do well when nobody has taught them what to do?
 
-That's a fixable problem. Being "not good enough" never was one, because it was never true.
+That's a fixable problem. Being "not good enough" was never the issue, because it was never true.
 
 Best wishes,
 
 Waleed
 
-PS: If your child has ever been told they're not good enough, or you were told it yourself at school, reply and tell me. Even one line. I read every reply myself, and those are the ones I remember longest.
+PS: Let me know if your child has ever been told they're not good enough, or maybe you were told it yourself at school. Just reply to this email. I read every one myself.

@@ -530,6 +530,39 @@ def cmd_campaigns(dirpath, live, update=False):
               f"(send hints are in the manifest; schedule on approval)")
 
 
+LONDON_TZ = '342'  # MailerLite timezone id for Europe/London (GET /api/timezones)
+
+
+def cmd_schedule(campaign_id, date, hhmm, live):
+    """Schedule a DRAFT campaign for a UK date and time (POST /campaigns/{id}/schedule).
+    Only ever run on Waleed's explicit go. Refuses anything that is not a draft.
+    Cancel with: python3 engine.py unschedule <campaign_id> --live."""
+    key = api_key()
+    cur = api(f'campaigns/{campaign_id}', 'GET', None, key)['data']
+    print(f"{campaign_id}  {cur.get('name')}  status={cur.get('status')}")
+    if cur.get('status') != 'draft':
+        sys.exit('not a draft; refusing to schedule')
+    hh, mm = hhmm.split(':')
+    body = {'delivery': 'scheduled',
+            'schedule': {'date': date, 'hours': hh, 'minutes': mm, 'timezone_id': LONDON_TZ}}
+    if not live:
+        print('dry run:', json.dumps(body))
+        return
+    out = api(f'campaigns/{campaign_id}/schedule', 'POST', body, key)['data']
+    print(f"  -> {out.get('status')} for {out.get('scheduled_for')} (UTC in the API)")
+
+
+def cmd_unschedule(campaign_id, live):
+    """Put a scheduled campaign back to draft (POST /campaigns/{id}/cancel)."""
+    key = api_key()
+    cur = api(f'campaigns/{campaign_id}', 'GET', None, key)['data']
+    print(f"{campaign_id}  {cur.get('name')}  status={cur.get('status')}")
+    if not live:
+        return
+    out = api(f'campaigns/{campaign_id}/cancel', 'POST', None, key)['data']
+    print(f"  -> {out.get('status')}")
+
+
 if __name__ == '__main__':
     args = sys.argv[1:]
     if not args:
@@ -550,5 +583,9 @@ if __name__ == '__main__':
         cmd_harness(list(zip(rest[0::2], rest[1::2])), send='--send' in args)
     elif cmd == 'harness-send':
         harness_send()
+    elif cmd == 'schedule':
+        cmd_schedule(args[1], args[2], args[3], '--live' in args)
+    elif cmd == 'unschedule':
+        cmd_unschedule(args[1], '--live' in args)
     else:
         sys.exit(__doc__)
