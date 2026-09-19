@@ -281,7 +281,7 @@ HARNESS_FOOTERS = {
 }
 
 
-def cmd_harness(pairs):
+def cmd_harness(pairs, send=False):
     key = api_key()
     data = api(f'automations/{HARNESS_AUTOMATION}', key=key)['data']
     if data.get('enabled'):
@@ -303,7 +303,29 @@ def cmd_harness(pairs):
             'plain_text': render_plain_short(meta, footer)}, key)
         print(f"harness step {step['id']} <- {path} ({aud}): {meta['subject']}")
         time.sleep(0.7)
-    print('now trigger send_test_automation on', HARNESS_AUTOMATION, 'to waleed@alevelaccelerators.com')
+    if send:
+        harness_send()
+    else:
+        print('now run: engine.py harness-send   (or send_test_automation on', HARNESS_AUTOMATION + ')')
+
+
+def harness_send(to='waleed@alevelaccelerators.com'):
+    """Trigger MailerLite's test send of every email in the review harness.
+    Found 19 September 2026 when the MailerLite connector was invalidated:
+    POST /api/automations/{id}/test with {"email": ...} answers 204 and queues
+    one [Test] copy of each email step to that address (the same call the
+    connector's send_test_automation makes). Only the verified sender address
+    is accepted."""
+    key = api_key()
+    req = urllib.request.Request(
+        f'https://connect.mailerlite.com/api/automations/{HARNESS_AUTOMATION}/test',
+        data=json.dumps({'email': to}).encode(), method='POST',
+        headers={'Authorization': f'Bearer {key}', 'Content-Type': 'application/json',
+                 'Accept': 'application/json'})
+    with urllib.request.urlopen(req) as r:
+        if r.status not in (200, 204):
+            sys.exit(f'test send failed: HTTP {r.status}')
+    print(f'test copies of the harness emails queued to {to}')
 
 
 def load_manifest():
@@ -524,7 +546,9 @@ if __name__ == '__main__':
     elif cmd == 'campaigns':
         cmd_campaigns(args[1], '--live' in args, '--update' in args)
     elif cmd == 'harness':
-        rest = args[1:]
-        cmd_harness(list(zip(rest[0::2], rest[1::2])))
+        rest = [a for a in args[1:] if a != '--send']
+        cmd_harness(list(zip(rest[0::2], rest[1::2])), send='--send' in args)
+    elif cmd == 'harness-send':
+        harness_send()
     else:
         sys.exit(__doc__)
