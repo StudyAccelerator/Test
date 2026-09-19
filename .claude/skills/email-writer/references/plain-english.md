@@ -43,6 +43,7 @@ Keep his own everyday phrases that read fine in plain English: "no one size fits
 Every email to "the whole list" is two emails. The parent twin is not a find-and-replace of "you" with "your child":
 
 - Same teach, same steps, same idea name, so a parent can talk to their child about it in the same words.
+- **"Child" and "student" alternate** (Waleed, 19 September 2026): say "child" whenever the sentence is about THEIR child ("what's holding your child back", "your child's report"), and "student" for the general school picture ("every student at school sits in the same room", "the same revision method doesn't work for every student"). Writing "child" in every line reads repetitive.
 - Reframed as something to pass on at home: "here are three simple steps to share with your child."
 - Add the one thing a parent can do: a better question to ask at home ("What's your time per mark for that paper?") in place of "have you revised?", or a way to bring it up without a fight. Forwarding the email to the child is a valid action.
 - The offer is "a free academic strategy call for your child", the qualifier is "parents who want their child to achieve top grades", the ask in return is "keep me updated on how things go", followed by "I'm confident we can help."
