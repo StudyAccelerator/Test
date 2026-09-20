@@ -502,6 +502,11 @@ code {
   padding: 7px 10px; font-size: 13px;
 }
 .task-add input:focus { outline: 1px solid var(--accent); border-color: var(--accent); }
+.task-add select {
+  border: 1px solid var(--line); border-radius: 8px; padding: 7px 8px;
+  font: inherit; font-size: 12.5px; background: #fff; color: var(--ink);
+}
+.sale-row .row-meta { display: flex; align-items: center; gap: 8px; }
 
 /* ---------------------------------------------------------------- radar */
 

@@ -2,19 +2,34 @@
   "note": "The working documents surfaced on the HQ Playbooks panel. Paths are relative to the repo root; the panel always renders the live file with its real last-updated date, so keeping these documents current keeps the HQ current. Sessions add or retire entries here when Waleed's working set changes.",
   "docs": [
     {
+      "id": "reaudit",
+      "label": "Reaudit and road to \u00a31M",
+      "path": "content/business-audit/2026-07-16-reaudit-and-road-to-1m.md"
+    },
+    {
       "id": "audit",
       "label": "Business audit and growth plan",
       "path": "content/business-audit/2026-07-13-business-audit-and-growth-plan.md"
     },
     {
-      "id": "lead-map",
-      "label": "Lead generation and conversion map",
-      "path": "content/business-audit/2026-07-17-lead-generation-and-conversion-map.md"
+      "id": "ads",
+      "label": "Ads snapshot and plan",
+      "path": "content/meta-ads/2026-09-13-ads-snapshot-and-plan.md"
     },
     {
-      "id": "email-engine",
-      "label": "Email engine: every entry point",
+      "id": "seo",
+      "label": "SEO and AEO roadmap",
+      "path": "content/seo/2026-07-17-seo-aeo-assessment-and-roadmap.md"
+    },
+    {
+      "id": "emails",
+      "label": "Email engine map",
       "path": "content/email-sequences/README.md"
+    },
+    {
+      "id": "dailies",
+      "label": "Daily broadcasts playbook",
+      "path": "content/email-broadcasts/README.md"
     },
     {
       "id": "fb-playbook",
@@ -42,19 +57,14 @@
       "path": "content/reddit/2026-07-15-reddit-verdict-and-plan.md"
     },
     {
+      "id": "skool",
+      "label": "Skool community strategy",
+      "path": "content/skool/01-strategy.md"
+    },
+    {
       "id": "lead-magnets",
       "label": "Lead magnet roadmap",
       "path": "content/lead-magnet-roadmap.md"
-    },
-    {
-      "id": "seo",
-      "label": "SEO and AEO plan",
-      "path": "content/seo/2026-07-17-seo-aeo-assessment-and-roadmap.md"
-    },
-    {
-      "id": "skool",
-      "label": "Skool community plan",
-      "path": "content/skool/01-strategy.md"
     }
   ]
 }

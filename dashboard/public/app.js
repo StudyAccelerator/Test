@@ -620,6 +620,115 @@ function renderSubs() {
   })
 }
 
+/* ----------------------------------------------------------- sales, MRR */
+
+const SALES_PROGRAMMES = ['Top 1% Mentorship', 'Subject Accelerator', 'Study Series', 'Other']
+
+function salesList() {
+  return Array.isArray(state.sales) ? state.sales : []
+}
+
+function poundsGBP(n) {
+  return '\u00a3' + Number(n || 0).toLocaleString('en-GB')
+}
+
+/* MRR counts ACTIVE monthly enrolments only. One-off fees are kept separate so
+   the recurring number never gets flattered by a single lump payment. */
+function mrrFigures() {
+  const rows = salesList()
+  const active = rows.filter((r) => r.cadence === 'monthly' && !r.endedAt)
+  const mrr = active.reduce((a, r) => a + Number(r.amount || 0), 0)
+  const month = new Date().toISOString().slice(0, 7)
+  const oneOffMonth = rows
+    .filter((r) => r.cadence === 'once' && String(r.startedAt || '').slice(0, 7) === month)
+    .reduce((a, r) => a + Number(r.amount || 0), 0)
+  const oneOffLife = rows.filter((r) => r.cadence === 'once').reduce((a, r) => a + Number(r.amount || 0), 0)
+  return { rows, active, mrr, oneOffMonth, oneOffLife }
+}
+
+function renderSales() {
+  const body = $('#sales-body')
+  const chip = $('#sales-chip')
+  if (!body) return
+  const { rows, active, mrr, oneOffMonth, oneOffLife } = mrrFigures()
+
+  chip.textContent = rows.length ? 'your record' : 'nothing recorded'
+  chip.className = rows.length ? 'chip chip-manual' : 'chip chip-pending'
+
+  const list = rows.length
+    ? rows
+        .slice()
+        .sort((a, b) => (String(a.startedAt) < String(b.startedAt) ? 1 : -1))
+        .map(
+          (r) => `
+      <div class="list-row sale-row" data-id="${esc(r.id)}">
+        <span class="row-name">${esc(r.name || 'Unnamed')} <span class="muted small">${esc(r.programme || '')}${r.endedAt ? ' \u00b7 ended ' + esc(shortDate(r.endedAt)) : ''}</span></span>
+        <span class="row-meta">${poundsGBP(r.amount)}${r.cadence === 'monthly' ? '/mo' : ''}
+          ${r.cadence === 'monthly' && !r.endedAt ? '<button class="task-del sale-stop" title="Mark as ended">stop</button>' : ''}
+          <button class="task-del sale-del" title="Remove this row">remove</button>
+        </span>
+      </div>`
+        )
+        .join('')
+    : `<p class="empty-state">Nothing recorded yet. This panel never guesses: it shows what you enter here, or what Stripe reports once a read only key is added.</p>`
+
+  body.innerHTML = `
+    <div class="li-stats">
+      <div class="li-stat"><div class="label">MRR</div><div class="hero-number">${poundsGBP(mrr)}</div><div class="hero-sub">${active.length} paying ${active.length === 1 ? 'student' : 'students'}</div></div>
+      <div class="li-stat"><div class="label">One off this month</div><div class="hero-number">${poundsGBP(oneOffMonth)}</div><div class="hero-sub">${poundsGBP(oneOffLife)} recorded lifetime</div></div>
+    </div>
+    <div class="money-row"><span class="m-key">Annual run rate</span><span class="m-val">${poundsGBP(mrr * 12)}</span></div>
+    <div class="subhead">Enrolments</div>
+    ${list}
+    <div class="task-add">
+      <input id="sale-name" type="text" placeholder="Student name" />
+      <select id="sale-prog">${SALES_PROGRAMMES.map((p) => `<option>${esc(p)}</option>`).join('')}</select>
+      <input id="sale-amt" type="number" min="0" step="1" placeholder="\u00a3" style="max-width:80px" />
+      <select id="sale-cad"><option value="monthly">per month</option><option value="once">one off</option></select>
+      <button id="sale-save" class="gold-btn">Add</button>
+    </div>
+    <p class="small muted" style="margin-bottom:0">Record a student the day they pay. MRR is active monthly enrolments only; one off programme fees are counted separately.</p>`
+
+  const persist = async () => {
+    await putStore('sales', state.sales)
+    renderSales()
+    renderTriage()
+  }
+  const addBtn = $('#sale-save')
+  if (addBtn) {
+    addBtn.addEventListener('click', async () => {
+      const name = $('#sale-name').value.trim()
+      const amount = Number($('#sale-amt').value)
+      if (!name || !amount) return
+      state.sales = salesList().concat([
+        {
+          id: 's' + Date.now(),
+          name,
+          programme: $('#sale-prog').value,
+          amount,
+          cadence: $('#sale-cad').value,
+          startedAt: new Date().toISOString().slice(0, 10),
+          endedAt: null,
+        },
+      ])
+      await persist()
+    })
+  }
+  body.querySelectorAll('.sale-del').forEach((b) =>
+    b.addEventListener('click', async () => {
+      state.sales = salesList().filter((r) => r.id !== b.closest('.list-row').dataset.id)
+      await persist()
+    })
+  )
+  body.querySelectorAll('.sale-stop').forEach((b) =>
+    b.addEventListener('click', async () => {
+      const row = salesList().find((r) => r.id === b.closest('.list-row').dataset.id)
+      if (row) row.endedAt = new Date().toISOString().slice(0, 10)
+      await persist()
+    })
+  )
+}
+
 /* ----------------------------------------------------------------- bank */
 
 function renderBank() {
@@ -1152,7 +1261,7 @@ const CRM_OUTCOMES = {
   texted: ['', 'Sent', 'Replied', 'No reply'],
   callHeld: ['', 'Wants a programme', 'Thinking about it', 'Not a fit', 'No show'],
 }
-const CRM_PROGRAMMES = ['', 'Subject Accelerator', 'Top 1% Study System', 'Summer Accelerator', 'Study Series', 'Other']
+const CRM_PROGRAMMES = ['', 'Top 1% Mentorship', 'Subject Accelerator', 'Study Series', 'Other']
 
 function crmCallsDue(leads) {
   return leads.filter(
@@ -1964,7 +2073,7 @@ function renderTriage() {
       items.push({
         sev: 'high',
         title: `No sales for ${gap} days`,
-        why: `The last payment was ${shortDate(s.lastSale)} and the Summer Accelerator cohort starts 25 July. The funnel is built; it needs traffic pointed at it.`,
+        why: `The last Stripe payment was ${shortDate(s.lastSale)}. Record any enrolment taken since then on the Sales panel so MRR is real, or add a read only STRIPE_KEY so this refreshes itself.`,
       })
     }
   }
@@ -2065,6 +2174,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/docs'),
     getJSON('/api/store/linkedin-inbox'),
     getJSON('/api/leads-crm'),
+    getJSON('/api/store/sales'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -2091,6 +2201,7 @@ async function loadAll(fresh = false) {
   state.liInbox = liInboxStore && liInboxStore.lastSweep ? liInboxStore : null
   const crmStore = val(18, null)
   state.crm = crmStore && Array.isArray(crmStore.leads) ? crmStore : null
+  state.sales = val(19, [])
   /* fresh reload: drop cached document bodies so edits show up */
   if (fresh) docCache.clear()
 }
@@ -2100,6 +2211,7 @@ function renderAll() {
   renderPulse()
   renderEmail()
   renderStripe()
+  renderSales()
   renderSubs()
   renderBank()
   renderLinkedIn()

@@ -2,6 +2,21 @@
 
 Waleed's private business dashboard. One screen that shows the real state of the business: what needs attention, the email engine, money, content, projects and the competitor radar.
 
+## Sales and MRR
+
+The Money section's first panel. MRR counts ACTIVE monthly enrolments only; one-off programme fees
+(Subject Accelerator, Study Series) are shown separately so the recurring figure is never inflated by a
+single lump payment. Add a student the day they pay: name, programme, amount, per month or one off.
+"Stop" ends an enrolment so it leaves MRR while staying in the record; "remove" deletes the row.
+
+Data lives in gitignored `data/sales.json` (store `sales`). With nothing recorded the panel says so
+rather than guessing, in line with the honesty rule.
+
+Why it is entered by hand: the Stripe snapshot only covers the one-off payments taken up to 6 May 2026,
+and Monzo is connected to the PERSONAL current account only, so its inflows are not business revenue and
+must never be presented as sales. Adding a read only `STRIPE_KEY` to `dashboard/.env` makes the Stripe
+panel live and self-updating, which is the better long-term fix.
+
 ## Run it
 
 ```

@@ -77,7 +77,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox', 'leads-crm']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox', 'leads-crm', 'sales']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })

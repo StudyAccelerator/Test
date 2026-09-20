@@ -1,58 +1,66 @@
 [
   {
     "id": "p1",
-    "name": "Summer Accelerator",
+    "name": "Top 1% Mentorship",
     "status": "live",
-    "milestone": "Sales page live with Stripe payment links",
+    "milestone": "The one programme sold on calls, \u00a3300 a month",
     "due": null,
-    "note": "The flagship paid programme. Full sales page at /summer-accelerators."
+    "note": "Replaced the Study Series and Study Accelerator as the call offer on 13 September. Record every enrolment on the Sales panel so MRR stays real."
   },
   {
     "id": "p2",
     "name": "Revision Diagnostic funnel",
     "status": "live",
-    "milestone": "All four follow-up automations on and capturing",
+    "milestone": "Conversion pass shipped 13 September",
     "due": null,
-    "note": "Tool live with the student/parent fork; all four student automations and all four parent automations are on (verified 14 and 27 July). Triage tracks the live count."
+    "note": "Two step gate, sticky book-a-call bar on mobile, compulsory pre A-level year and the ?start=1 direct-to-question-one variant are all live."
   },
   {
     "id": "p3",
-    "name": "Results Day Rescue",
-    "status": "next",
-    "milestone": "Ship by Tuesday 12 August",
-    "due": "2026-08-12",
-    "note": "Calm decision tool for results morning. Roadmap item 1. Results day is Thursday 13 August."
+    "name": "Email engine",
+    "status": "attention",
+    "milestone": "Twelve automations built and switched OFF, awaiting your review",
+    "due": null,
+    "note": "Review flow you asked for: a summary plus test sends of each automation to your Gmail, then go per automation. Nothing sends until you flip them."
   },
   {
     "id": "p4",
-    "name": "Parent Diagnostic",
-    "status": "planned",
-    "milestone": "Ship late August, before school starts",
-    "due": "2026-08-31",
-    "note": "The diagnostic reworded for the buyer. Highest conversion tool on the roadmap."
+    "name": "Daily broadcast layer",
+    "status": "attention",
+    "milestone": "Nineteen draft campaigns loaded, none scheduled",
+    "due": null,
+    "note": "One email a day to the active list, on top of the Sunday Session. Drafts send nothing until you schedule them."
   },
   {
     "id": "p5",
-    "name": "Topic Audit",
-    "status": "planned",
-    "milestone": "September to early October, Biology and Chemistry first",
-    "due": "2026-10-05",
-    "note": "Topic-level weakness data per student. You sanity-check the spec topic lists."
+    "name": "Meta ads",
+    "status": "live",
+    "milestone": "Evergreen diagnostic campaign running, round 3 tests built",
+    "due": null,
+    "note": "The August campaign resumed on 6 September. Proof creatives and a book-a-call test are built and await your publish."
   },
   {
     "id": "p6",
-    "name": "Mock Result Debrief",
-    "status": "planned",
-    "milestone": "Ship early November, before mock season",
-    "due": "2026-11-02",
-    "note": "Post-mortem tool for mock results. Feeds spring cohort decisions."
+    "name": "Blog wave 2",
+    "status": "waiting",
+    "milestone": "Six posts built, awaiting your review before merge",
+    "due": null,
+    "note": "On branch claude/seo-blog-wave-2 with the backlink twins and Pragya pack. Nothing merges to main until you approve."
   },
   {
     "id": "p7",
-    "name": "First real results data",
-    "status": "waiting",
-    "milestone": "Results day, Thursday 13 August",
-    "due": "2026-08-13",
-    "note": "First outcome data. Until it arrives, no grade claims anywhere in marketing."
+    "name": "Subject Accelerator, January cohort",
+    "status": "planned",
+    "milestone": "Next cohort Sunday 17 January",
+    "due": null,
+    "note": "Biology, Chemistry and Maths. The Summer Accelerator is retired from the site and its page now redirects."
+  },
+  {
+    "id": "p8",
+    "name": "Skool community",
+    "status": "planned",
+    "milestone": "Launch pack written, awaiting your review",
+    "due": null,
+    "note": "Top 1% A-Levels, free tier plus a paid Locked In tier. Nothing is live and no account exists yet."
   }
 ]
