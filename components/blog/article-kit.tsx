@@ -104,13 +104,36 @@ export const DiagnosticCTA = ({ audience = 'student' }: { audience?: 'student' |
     <p className="text-brand-cream mb-6 max-w-xl mx-auto">
       {audience === 'parent'
         ? 'The free Revision Diagnostic asks 20 questions about how your child studies, then names the exact pattern holding their grades back and what to do about it. There is a parent version, answered from what you observe at home.'
-        : 'The free Revision Diagnostic asks 20 questions about how you actually study, then names the exact pattern costing you marks, how many hours a week it wastes, and the fix. It takes about three minutes.'}
+        : 'The free Revision Diagnostic asks 20 questions about how you actually study, then names the exact pattern costing you marks, how many hours a week it wastes, and the fix. It takes about 4 minutes.'}
     </p>
     <a
       href={audience === 'parent' ? '/revision-diagnostic/?for=parents' : '/revision-diagnostic/'}
       className="inline-block px-8 py-3 bg-brand-gold text-brand-purple font-semibold rounded-md hover:bg-brand-gold-light transition"
     >
       {audience === 'parent' ? 'Take the Parent Diagnostic' : 'Take the Free Diagnostic'}
+    </a>
+  </div>
+)
+
+
+/* The slim mid-article diagnostic mention: custom lead per article so no two
+   pages read the same, deliberately quieter than the full DiagnosticCTA. */
+export const DiagnosticInline = ({
+  lead,
+  audience = 'student',
+  label,
+}: {
+  lead: string
+  audience?: 'student' | 'parent'
+  label?: string
+}) => (
+  <div className="my-8 rounded-xl border-l-4 border-brand-gold bg-brand-cream p-6">
+    <p className="text-brand-text/85 leading-relaxed">{lead}</p>
+    <a
+      href={audience === 'parent' ? '/revision-diagnostic/?for=parents' : '/revision-diagnostic/'}
+      className="mt-3 inline-block font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-4 hover:text-brand-gold"
+    >
+      {label ?? 'Take the free Revision Diagnostic'}
     </a>
   </div>
 )

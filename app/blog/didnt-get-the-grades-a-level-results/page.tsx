@@ -166,6 +166,13 @@ export default function Page() {
         next week, not today. It&apos;s a decision for a calm kitchen table, not a school corridor.
       </P>
 
+      <P>
+
+        And if a resit year makes your shortlist, do one thing differently this time: find out exactly why the marks fell short before you rebuild. The <a href="/revision-diagnostic/" className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-4">free Revision Diagnostic</a> does that in about 4 minutes.
+
+      </P>
+
+
       <H2 id="what-not-to-do">What not to do on results morning</H2>
       <UL>
         <LI>Don&apos;t decide your future from the group chat. Comparison is a terrible triage nurse.</LI>

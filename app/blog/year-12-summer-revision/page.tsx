@@ -16,6 +16,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -132,6 +133,9 @@ export default function Page() {
         The discipline isn&apos;t in the break. It&apos;s in the edge of the break. Pick the date your working summer
         starts, put it in your phone, and honour it the way you&apos;d honour an exam date.
       </P>
+
+      <DiagnosticInline lead="Before you build a summer plan, it helps to know which part of your revision actually needs the work. The free Revision Diagnostic shows you in about 4 minutes, and the plan below lands far better once you know what you&apos;re fixing." />
+
 
       <H2 id="the-plan">Step 2: The 30 to 50 hour summer plan</H2>
       <P>

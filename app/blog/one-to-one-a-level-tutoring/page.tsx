@@ -16,6 +16,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -149,6 +150,9 @@ export default function Page() {
         for more homework and harder exam questions, which tells you something about what a structured group
         does to motivation.
       </P>
+
+      <DiagnosticInline lead="Before you decide, find out what you&apos;d actually be paying someone to fix. The free Revision Diagnostic shows whether the leak is content, recall or exam technique, in about 4 minutes." />
+
 
       <H2 id="how-to-decide">How to decide for your child</H2>
       <OL>

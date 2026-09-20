@@ -187,6 +187,13 @@ export default function Page() {
 
       <TrackerCTA />
 
+      <P>
+
+        One honest caveat before the verdict: blurting fixes retrieval. If you&apos;re blurting regularly and your grades still aren't moving, the leak is probably somewhere else, and the <a href="/revision-diagnostic/" className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-4">free Revision Diagnostic</a> will tell you where in about 4 minutes.
+
+      </P>
+
+
       <H2 id="verdict">The honest verdict</H2>
       <P>
         Blurting isn&apos;t magic, and it isn&apos;t the only technique you need. Past papers under timed conditions are

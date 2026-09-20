@@ -16,6 +16,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -119,6 +120,9 @@ export default function Page() {
         one-hour exercise is worth more than a week of unfocused revision, because every session afterwards has
         a target.
       </P>
+
+      <DiagnosticInline lead="The quickest way to run that audit honestly is the free Revision Diagnostic: 20 questions, about 4 minutes, and it names the exact pattern costing you marks." />
+
 
       <H2 id="step-two-plan">Step 2: Plan the week, not the term</H2>
       <P>

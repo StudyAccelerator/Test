@@ -15,6 +15,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -136,6 +137,9 @@ export default function Page() {
         of work stretched across 10 hours of low-grade guilt. Plus exhaustion, minus the sleep that
         consolidates memory.
       </Callout>
+
+      <DiagnosticInline lead="If you&apos;re already doing the hours and the grades still aren&apos;t moving, the problem isn&apos;t time. The free Revision Diagnostic shows you where those hours are leaking, in about 4 minutes." />
+
 
       <H2 id="structure">Structure beats willpower</H2>
       <UL>

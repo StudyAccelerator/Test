@@ -16,6 +16,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -121,6 +122,9 @@ export default function Page() {
         real mark scheme, with every lost mark logged: what went wrong, why, and what you&apos;ll do differently.
         Ten papers done properly beat thirty done casually.
       </P>
+
+      <DiagnosticInline lead="Which of these techniques you need first depends on where your marks are actually leaking. The free Revision Diagnostic tells you in about 4 minutes, so you fix the right system instead of guessing." />
+
 
       <H2 id="subject-specific">Subject-specific revision advice</H2>
       <H3>How to revise A-level Maths</H3>

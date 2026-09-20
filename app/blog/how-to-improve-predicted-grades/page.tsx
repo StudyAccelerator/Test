@@ -16,6 +16,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -162,6 +163,9 @@ export default function Page() {
           will continue rather than being a one-off.
         </LI>
       </OL>
+
+      <DiagnosticInline lead="Predictions move on evidence, and evidence starts with knowing where your marks are leaking. The free Revision Diagnostic names it in about 4 minutes, so you can fix it before your next assessment locks the prediction in." />
+
 
       <H2 id="the-plan">The 8-week plan to raise a predicted grade</H2>
       <P>

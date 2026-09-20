@@ -16,6 +16,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -191,6 +192,9 @@ export default function Page() {
         <A href="/blog/didnt-get-the-grades-a-level-results/">the results day triage guide</A>{' '}first: it
         puts all four options in the right order for the morning itself.
       </P>
+
+      <DiagnosticInline lead="Planning a resit year? Don&apos;t rebuild it on the same revision that missed last time. The free Revision Diagnostic takes about 4 minutes and shows you exactly what went wrong: content gaps, weak recall or exam technique. Fix the right thing this time round." />
+
 
       <H2 id="ucas">Resits and your UCAS application</H2>
       <P>

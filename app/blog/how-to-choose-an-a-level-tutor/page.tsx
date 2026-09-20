@@ -16,6 +16,7 @@ import {
   TrackerCTA,
   CourseCTA,
   type FAQ,
+  DiagnosticInline,
 } from '@/components/blog/article-kit'
 import { getPost, SITE_URL } from '@/lib/posts'
 
@@ -127,6 +128,9 @@ export default function Page() {
         the fact that something gets measured. If nobody&apos;s measuring, nobody knows whether the money is
         working.
       </P>
+
+      <DiagnosticInline lead="Before you pay anyone, find out whether the real problem is content, recall or exam technique, because the answer changes what kind of help is worth your money. The free Revision Diagnostic tells you in about 4 minutes." />
+
 
       <H2 id="questions-to-ask">The four questions to ask before hiring anyone</H2>
       <OL>

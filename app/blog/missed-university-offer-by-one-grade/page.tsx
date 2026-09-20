@@ -153,6 +153,13 @@ export default function Page() {
         are in <A href="/blog/a-level-appeals-2026/">the full appeals guide</A>.
       </P>
 
+      <P>
+
+        One more thing: if the route you end up choosing involves a resit year, start it by finding out what actually went wrong last time. The <a href="/revision-diagnostic/" className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-4">free Revision Diagnostic</a> is where I&apos;d begin.
+
+      </P>
+
+
       <H2 id="zoom-out">Keep the day the right size</H2>
       <P>
         A one-grade miss feels enormous at 8:05am. By September it&apos;s a footnote: you&apos;ll be at your

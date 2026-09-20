@@ -168,6 +168,13 @@ export default function Page() {
         counsellor. Getting help early is the strong move, not the weak one.
       </Callout>
 
+      <P>
+
+        And if you&apos;re not sure which gap is feeding the nerves, the <a href="/revision-diagnostic/" className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-4">free Revision Diagnostic</a> names it in about 4 minutes, which is a much calmer starting point than guessing.
+
+      </P>
+
+
       <H2 id="signs-youre-ready">Signs you&apos;re actually ready</H2>
       <P>
         You can recall your weak topics from memory, not just recognise them. Your last few timed papers sit
