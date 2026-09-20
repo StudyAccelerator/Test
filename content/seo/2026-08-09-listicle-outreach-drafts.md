@@ -93,7 +93,7 @@ I found your piece on UK tutoring services worth using in 2026 and wanted to int
 
 I'm Waleed, an NHS doctor and a former top A-level student. I run A-Level Accelerators: live small group teaching for A-level Biology, Chemistry and Maths, built on the method I used for my own grades and refined across more than 1,000 students.
 
-Two things set us apart from most of the market. Our programmes work out to £12 to £14 an hour, against the £25 to £50 most one to one tutors charge. And every price we have is public on one page: https://alevelaccelerators.com/pricing/
+Two things set us apart from most of the market. Our live small group programmes work out to about £14 an hour, against the £40 to £50 most one to one tutors charge. And every price we have is public on one page: https://alevelaccelerators.com/pricing/
 
 If you're open to considering us for the list, I'll answer anything you want to check. Our free Revision Diagnostic is the quickest way to see how the method thinks: https://alevelaccelerators.com/revision-diagnostic/
 
@@ -113,7 +113,7 @@ Hi,
 
 Your comparison of tutoring websites for A-level students is more thorough than most, so I wanted to put A-Level Accelerators in front of you for a future update.
 
-I'm an NHS doctor and former top A-level student, and the business teaches A-level Biology, Chemistry and Maths in live small groups using the method I built across more than 1,000 students. Programmes work out to £12 to £14 an hour, and all pricing is public at https://alevelaccelerators.com/pricing/
+I'm an NHS doctor and former top A-level student, and the business teaches A-level Biology, Chemistry and Maths in live small groups using the method I built across more than 1,000 students. Programmes work out to about £14 an hour, and all pricing is public at https://alevelaccelerators.com/pricing/
 
 We also run two free tools your readers might value on their own: a 20 question Revision Diagnostic and a Revision Tracker that builds weekly timetables. Happy to answer anything you'd want to verify for the comparison.
 
@@ -133,7 +133,7 @@ Hi,
 
 Your 5 best A-level tutors article is one of the first things parents find when they search for tutoring, so I wanted to introduce myself for the next time you revisit it.
 
-I'm Waleed, an NHS doctor and a former top A-level student. I run A-Level Accelerators: live small group teaching for A-level Biology, Chemistry and Maths, taught to a method I refined across more than 1,000 students. We're the transparent option in the market: programmes work out to £12 to £14 an hour and every price is public at https://alevelaccelerators.com/pricing/
+I'm Waleed, an NHS doctor and a former top A-level student. I run A-Level Accelerators: live small group teaching for A-level Biology, Chemistry and Maths, taught to a method I refined across more than 1,000 students. We're the transparent option in the market: programmes work out to about £14 an hour and every price is public at https://alevelaccelerators.com/pricing/
 
 If you're open to considering us, I'll answer anything you want to check, and our free Revision Diagnostic (https://alevelaccelerators.com/revision-diagnostic/) is the quickest way to see how we work.
 
