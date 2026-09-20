@@ -541,7 +541,8 @@ export default function SubjectAccelerators() {
             </h2>
             <p className="text-center text-brand-text/75 max-w-2xl mx-auto mb-10 leading-relaxed">
               Each accelerator is taught by a specialist who achieved top grades in the subject
-              themselves, using the method Dr Waleed Ahmad built and teaches across all three.
+              themselves and has helped hundreds of students do the same, using the method
+              Dr Waleed Ahmad built.
             </p>
             <div className="grid sm:grid-cols-3 gap-6">
               {TUTORS.map((tutor) => (

@@ -22,6 +22,9 @@ export type Tutor = {
   studying: string
   aStar: string[]
   waleedOn: string
+  /* Name of a real quote in lib/testimonials.ts WALL_QUOTES, shown on the
+     tutor's card. Only ever reference real, existing quotes. */
+  studentQuoteName: string
   color: TutorColor
 }
 
@@ -38,12 +41,13 @@ export const TUTORS: Tutor[] = [
     ],
     studying: '[What Tanya is currently studying: her course and university]',
     aStar: [
+      'Achieved top grades in Biology herself, and has helped hundreds of students do the same',
       'Builds every session around real exam questions and the mark scheme, not textbook re-teaching',
       'Targets the misconceptions that quietly cost Biology students marks in application questions',
-      '[A real example of a student Tanya has helped, and the jump they made]',
     ],
     waleedOn:
       '[Your words on Tanya: why you trust her with your Biology students, and what students say about her.]',
+    studentQuoteName: 'Naysa',
     color: {
       chip: 'bg-green-600',
       accent: 'text-green-700',
@@ -62,12 +66,13 @@ export const TUTORS: Tutor[] = [
     ],
     studying: '[What Advait is currently studying: his course and university]',
     aStar: [
+      'Achieved top grades in Chemistry himself, and has helped hundreds of students do the same',
       'Trains students to structure answers the way the mark scheme rewards, so understanding turns into marks',
       'Drills the calculation and mechanism errors that separate a B from an A*',
-      '[A real example of a student Advait has helped, and the jump they made]',
     ],
     waleedOn:
       '[Your words on Advait: why you trust him with your Chemistry students, and what students say about him.]',
+    studentQuoteName: 'Maahil',
     color: {
       chip: 'bg-purple-600',
       accent: 'text-purple-700',
@@ -86,12 +91,13 @@ export const TUTORS: Tutor[] = [
     ],
     studying: '[What Andrii is currently studying: his course and university]',
     aStar: [
+      'Achieved top grades in Maths himself, and has helped hundreds of students do the same',
       'Teaches problem-solving as a repeatable process, so unfamiliar questions stop being scary',
       'Walks through the common pitfalls in pure and applied that cost marks under time pressure',
-      '[A real example of a student Andrii has helped, and the jump they made]',
     ],
     waleedOn:
       '[Your words on Andrii: why you trust him with your Maths students, and what students say about him.]',
+    studentQuoteName: 'Jay',
     color: {
       chip: 'bg-blue-500',
       accent: 'text-blue-600',

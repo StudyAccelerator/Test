@@ -9,7 +9,7 @@ import { WALL_QUOTES } from '@/lib/testimonials'
 export const metadata = {
   title: 'Meet the Team | A-Level Biology, Chemistry and Maths Tutors',
   description:
-    'The people who teach A-Level Accelerators: specialist Biology, Chemistry and Maths tutors, led by Dr Waleed Ahmad MBBS, an NHS doctor who teaches the Study System himself.',
+    'The people who teach A-Level Accelerators: specialist Biology, Chemistry and Maths tutors, led by Dr Waleed Ahmad MBBS, the NHS doctor behind the Top 1% Mentorship.',
   alternates: { canonical: 'https://alevelaccelerators.com/tutors/' },
   /* Draft gate: the page carries placeholder copy until Waleed supplies the
      real tutor bios and photos. Remove this robots block when it goes live
@@ -17,13 +17,14 @@ export const metadata = {
   robots: { index: false, follow: true },
 }
 
-const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/a-level'
+const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/50'
 
-/* One real feedback-form quote per teaching subject, pulled from the shared
-   testimonial list so the words stay identical everywhere they appear. */
-const TEAM_QUOTES = WALL_QUOTES.filter((q) =>
-  ['Maahil', 'Naysa', 'Rayanna'].includes(q.name)
+/* Real feedback-form quotes from the shared testimonial list, so the words
+   stay identical everywhere they appear. Each tutor card shows the quote
+   named in lib/tutors.ts; three more close the page. */
+const STRIP_QUOTES = WALL_QUOTES.filter((q) =>
+  ['Rayanna', 'Ahreen', 'Catherine'].includes(q.name)
 )
 
 export default function MeetTheTeam() {
@@ -66,7 +67,7 @@ export default function MeetTheTeam() {
               </div>
               <div className="p-8 sm:p-10 md:p-12">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-cream/50">
-                  Founder · Teaches the Study System
+                  Founder · Leads the Top 1% Mentorship
                 </p>
                 <h2 className="mt-3 font-serif text-3xl font-bold text-brand-gold sm:text-4xl">
                   Dr Waleed Ahmad, MBBS
@@ -74,17 +75,20 @@ export default function MeetTheTeam() {
                 <p className="mt-5 leading-relaxed text-brand-cream/90">
                   I&apos;m an NHS doctor and a former top-performing A-level student. Over 6 years
                   I&apos;ve worked with more than 1,000 students, and everything we teach comes from
-                  one idea: top grades are a system, not a talent.
+                  one idea: top grades are a system, not a talent.{' '}
+                  <span className="font-semibold text-brand-gold">
+                    On average, our students jump two grades.
+                  </span>
                 </p>
                 <p className="mt-4 leading-relaxed text-brand-cream/90">
-                  I built the method behind every programme, and I teach the Study System myself:
-                  the exam technique, revision strategy and 1:1 coaching side of the business. The
+                  I built the method behind every programme, and inside the Top 1% Mentorship I
+                  work with students directly: exam technique, revision strategy and coaching. The
                   subject teaching belongs to three specialists I trust completely, and you can meet
                   them below.
                 </p>
                 <div className="mt-6 flex flex-wrap gap-2">
                   <span className="rounded-full border border-brand-gold/40 bg-brand-gold/10 px-4 py-1.5 text-sm font-semibold text-brand-gold">
-                    The Study System
+                    Top 1% Mentorship
                   </span>
                   <span className="rounded-full border border-brand-cream/20 px-4 py-1.5 text-sm text-brand-cream/80">
                     Exam technique &amp; strategy
@@ -97,7 +101,7 @@ export default function MeetTheTeam() {
                   href="/study-systems/"
                   className="mt-7 inline-block rounded-md bg-brand-gold px-6 py-3 font-semibold text-brand-purple transition hover:bg-brand-gold-light"
                 >
-                  See the Study System
+                  See the Top 1% Mentorship
                 </a>
               </div>
             </div>
@@ -119,11 +123,17 @@ export default function MeetTheTeam() {
                 achieved top grades themselves and teaches the same way every session: exam
                 questions first, mark schemes always.
               </p>
+              <p className="mt-3 inline-flex items-center gap-2 rounded-full border border-brand-purple/10 bg-brand-purple/[0.04] px-4 py-1.5 text-sm font-semibold text-brand-purple">
+                <span className="h-1.5 w-1.5 rounded-full bg-brand-gold" aria-hidden="true" />
+                Next 12-week cohort starts Sunday 17 January
+              </p>
             </div>
           </ScrollFade>
 
           <div className="mt-12 space-y-12">
-            {TUTORS.map((tutor, idx) => (
+            {TUTORS.map((tutor, idx) => {
+              const studentQuote = WALL_QUOTES.find((q) => q.name === tutor.studentQuoteName)
+              return (
               <ScrollFade key={tutor.slug}>
                 <article
                   id={tutor.slug}
@@ -134,10 +144,23 @@ export default function MeetTheTeam() {
                       idx % 2 === 1 ? 'md:[direction:rtl]' : ''
                     }`}
                   >
-                    <div className="p-6 md:p-8 [direction:ltr]">
-                      <div className="h-72 md:h-full md:min-h-[24rem]">
+                    <div className="flex flex-col gap-5 p-6 md:p-8 [direction:ltr]">
+                      <div className="h-72 md:flex-1 md:min-h-[20rem]">
                         <TutorPortrait tutor={tutor} />
                       </div>
+                      {studentQuote && (
+                        <figure className="rounded-2xl bg-white p-5 shadow-sm ring-1 ring-brand-purple/10">
+                          <span aria-hidden="true" className="text-sm tracking-tight text-brand-gold">
+                            ★★★★★
+                          </span>
+                          <blockquote className="mt-2 text-sm leading-relaxed text-brand-text/80">
+                            &ldquo;{studentQuote.quote}&rdquo;
+                          </blockquote>
+                          <figcaption className="mt-3 text-sm font-semibold text-brand-purple">
+                            {studentQuote.name} · {studentQuote.role}
+                          </figcaption>
+                        </figure>
+                      )}
                     </div>
                     <div className="px-6 pb-8 md:py-8 md:pr-10 [direction:ltr]">
                       <div className="flex flex-wrap items-center gap-3">
@@ -201,7 +224,8 @@ export default function MeetTheTeam() {
                   </div>
                 </article>
               </ScrollFade>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
@@ -217,7 +241,7 @@ export default function MeetTheTeam() {
               Real, unedited feedback from students in the live sessions.
             </p>
             <div className="mt-8 grid gap-4 sm:grid-cols-3">
-              {TEAM_QUOTES.map((q) => (
+              {STRIP_QUOTES.map((q) => (
                 <figure
                   key={q.name}
                   className="rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10"
@@ -231,6 +255,22 @@ export default function MeetTheTeam() {
                 </figure>
               ))}
             </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Guarantee */}
+      <ScrollFade>
+        <section className="px-5 pt-14">
+          <div className="mx-auto max-w-2xl rounded-3xl border-4 border-brand-gold bg-brand-cream p-10 text-center shadow-lg">
+            <div className="mb-4 text-4xl">🛡️</div>
+            <h2 className="font-serif text-2xl font-bold text-brand-purple sm:text-3xl">
+              Every programme is backed by our guarantee
+            </h2>
+            <p className="mt-4 text-lg leading-relaxed text-brand-text">
+              Join the first session, and if you&apos;re not completely satisfied, you get your
+              money back, no questions asked.
+            </p>
           </div>
         </section>
       </ScrollFade>
