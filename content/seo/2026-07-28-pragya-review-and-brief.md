@@ -47,7 +47,7 @@ Waleed
 2. Her crawls lag the site: verify any "missing" item against the live site before acting.
 3. On-site changes never come from her files directly; they go through the optimiser and the voice rules.
 4. Her FAQ and content-topic suggestions are the valuable part; her schema and meta rewrites mostly are not.
-5. Never hand over Search Console, GA or repo access; she works from public crawls and reports.
+5. AMENDED 20 September 2026, Waleed's ruling: he has given Pragya READ access to Google Search Console himself and is happy with it (it is how her performance report got real numbers). Analytics, MailerLite and repo access stay never-handed-over. Do not re-flag the GSC access.
 
 ## Round 2: the 1 August delivery (14 files)
 
@@ -163,7 +163,7 @@ Her 5 September reply accepted every instruction (address closed, www fix, Web 2
 
 Her 17 September reply accepted every round 9 instruction (suggestions closed, fresh-crawl-only, Web 2.0 targets, quality placements, two-listing cap). No link report this week; the deliverable is an 11-page "Detailed Performance Report", **her first document built on real measured data instead of tool templates**, and a genuine step change in quality.
 
-**Verified against ground truth:** its Search Console figures match the 17 September live read exactly (234 clicks and 30.9K impressions in the 28-day window, average position 9.7, 35 indexed pages; 432 clicks and 45.1K impressions over the 3 months to 17 September is consistent with the log's trajectory). GA4 figures (3,011 users, 1,143 organic sessions vs 44 in the prior quarter, 55.29% organic engagement rate, 2m 10s organic engagement time) look real. It honestly labels what she does not have (no SEMrush, backlink, or AI-visibility data, "not supplied") and correctly warns that the +1,099% GA4 growth compares against a pre-launch quarter, a new baseline rather than a trend. HOW she has GSC and GA4 numbers is an open question for Waleed (standing rule 5 says access is never handed over): either he shared screenshots/exports, which is fine, or account access was granted, which he should confirm and reconsider. Raised in the summary, his call.
+**Verified against ground truth:** its Search Console figures match the 17 September live read exactly (234 clicks and 30.9K impressions in the 28-day window, average position 9.7, 35 indexed pages; 432 clicks and 45.1K impressions over the 3 months to 17 September is consistent with the log's trajectory). GA4 figures (3,011 users, 1,143 organic sessions vs 44 in the prior quarter, 55.29% organic engagement rate, 2m 10s organic engagement time) look real. It honestly labels what she does not have (no SEMrush, backlink, or AI-visibility data, "not supplied") and correctly warns that the +1,099% GA4 growth compares against a pre-launch quarter, a new baseline rather than a trend. HOW she has the numbers was raised with Waleed and RESOLVED 20 September: he gave her Search Console read access himself and is happy with it; rule 5 above is amended accordingly. The GA4 figures presumably came the same way or via shared exports.
 
 **Two factual corrections owed to her:** GA4 key events ARE configured (generate_lead fires on every capture point and a full diagnostic funnel exploration exists), she simply cannot see them; and AI visibility IS measured on our side (Bing Copilot citations, the GA4 AI Assistant channel), so those "unassessed" flags are gaps in her view, not in the operation.
 
