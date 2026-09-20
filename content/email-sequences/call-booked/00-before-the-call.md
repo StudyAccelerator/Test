@@ -18,26 +18,22 @@ Dr Waleed here. Your call with me is booked, and I'm genuinely looking forward t
 
 Here's how to get the most out of your thirty minutes.
 
-**Have two things to hand.**
-
+**Have two things to hand**
 The first is the diagnostic report, if you've taken the diagnostic. If you haven't, it's five minutes on the site, and it makes the call twice as useful.
 
 The second is the real grades. The most recent tests or mocks, actual numbers, not the summary version. I'm a doctor, so I work best from the real chart.
 
-**Know your one goal.**
-
+**Know your one goal**
 Calls wander when nobody names the destination. Yours might be "a plan for the next month", or "working out whether the method or the subject is the problem", or "whether any of your programmes fit".
 
 Any of those is perfect. Just pick one before we speak.
 
-**What I'll bring.**
-
+**What I'll bring**
 Six years of teaching A-level students, over 1,000 of them, and a custom academic strategy plan you'll leave with, written down, for the next few weeks.
 
 All I ask in return is that you keep me updated on how it goes.
 
-**The one thing to do now.**
-
+**The one thing to do now**
 Reply to this email with the question you most want answered when we speak. One line is enough. We'll start there, and the whole call gets better for it.
 
 If the time stops working, no drama, just use the original booking link to move it.

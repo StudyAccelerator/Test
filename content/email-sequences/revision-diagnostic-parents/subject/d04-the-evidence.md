@@ -15,32 +15,27 @@ Hi {$name},
 
 Before you decide anything for {$diag_child_name|default('your child')}, I'd like you to know what sits behind my advice. You should be able to see the real proof.
 
-**The results.**
-
+**The results**
 On average, our students jump two grades. That's the gap between where they start with us and where they finish.
 
 For a profile like {$diag_child_name|default('your child')}'s, where the knowledge is mostly there, it's the easiest gap to close in A-levels.
 
-**Who teaches.**
-
+**Who teaches**
 Our subject specialists got top grades in the subject they teach, and have helped hundreds of students do the same.
 
 Every session is built on real exam questions and the official mark schemes. That's the exact layer the diagnostic found missing for {$diag_child_name|default('your child')}.
 
-**What students say.**
-
+**What students say**
 Naysa, biology: "The exam question walk-throughs were brilliant, really focused on applying what we know rather than just repeating content."
 
 Ahreen, chemistry: "Well structured and informative walkthroughs, with lots of hard questions and worked solutions."
 
 Maahil, chemistry: "We go straight into exam practice instead of spending ages on content, and it works."
 
-**The guarantee.**
-
+**The guarantee**
 Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
-**Why I'm telling you this now.**
-
+**Why I'm telling you this now**
 The next email explains the programme itself. Later this week I'll go through the money. I wanted you to have the proof first.
 
 And if you'd rather talk it through, that's what the free academic strategy call is for. I go through {$diag_child_name|default('your child')}'s report with you.

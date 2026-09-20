@@ -23,16 +23,13 @@ And "I'll do it at the weekend" is where most good plans quietly die. So here's 
 
 **The 25 minute version, tonight**
 
-**Step 1: Pick one question.**
-
+**Step 1: Pick one question**
 Not a whole section, just one long answer question from a past paper in {$diag_worry_subject|default('your priority subject')}. Six to ten marks' worth.
 
-**Step 2: Sit it under real conditions.**
-
+**Step 2: Sit it under real conditions**
 Set a timer, about a minute per mark. Book closed, phone in another room. Write your answer as if it were the real thing.
 
-**Step 3: Mark it harshly.**
-
+**Step 3: Mark it harshly**
 Open the mark scheme. Not "I basically said that". Either your wording earns the mark or it doesn't.
 
 For every dropped mark, one letter in your log. K if you didn't know it, and R if you knew it but couldn't get it out. W if you knew it and worded it wrong, and T if timing or misreading cost you.
@@ -43,7 +40,7 @@ The full drill can wait for the weekend, but starting can't. Starting small toni
 
 I say that as someone who spent Year 12 planning perfect revision sessions that never happened.
 
-Run your question tonight, then reply to this email with your letters. Even if it's one W and one T. I read every reply, and I'll tell you what your pattern means.
+Run your question tonight, then reply to this email with your letters. Even if it's one W and one T. I'll tell you what your pattern means.
 
 Keep going!
 

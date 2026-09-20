@@ -30,30 +30,25 @@ That's where "I revised loads and it went badly" comes from. And to be honest, i
 
 There's only one way to get better at pulling things out of your head. That's practising pulling things out of your head. Blurting is just that, done right.
 
-**Step 1: Pick one small topic.**
-
+**Step 1: Pick one small topic**
 "Biology" is not a topic. "The cardiac cycle" is. Go smaller than feels normal.
 
-**Step 2: Blank page, book closed, phone in another room.**
-
+**Step 2: Blank page, book closed, phone in another room**
 Write down all you know about the topic. Key terms, diagrams, equations, half-remembered bits.
 
 It's meant to look messy. Speed matters more than neatness. Give it five to ten minutes.
 
-**Step 3: Check it honestly.**
-
+**Step 3: Check it honestly**
 Stop, open your notes, and check your page. Tick all the bits you got right.
 
 Anything missing or wrong goes back on the page in a second colour. That second colour is the whole point. It shows you what you don't know yet, which no revision guide can tell you.
 
-**Step 4: The part everyone skips.**
-
+**Step 4: The part everyone skips**
 Close it all again. Re-blurt just the second colour bits, book closed, right now, not tomorrow.
 
 This is where "I saw the right answer" becomes "I can produce the right answer". It only takes a few minutes.
 
-**Step 5: Keep the page and date it.**
-
+**Step 5: Keep the page and date it**
 You'll come back to this topic tomorrow for ten minutes, and again in about four days.
 
 In a couple of days I'll show you how to book those returns in, so they really happen. There's a trick to it: your calendar does the remembering, not your willpower.

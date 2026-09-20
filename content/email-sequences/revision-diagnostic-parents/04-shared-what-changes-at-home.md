@@ -1,13 +1,15 @@
 # P4 · What changes at home (shared, both parent route automations)
 
 Send: Day 9
-Subject A: {$name}, Home Without The Revision Arguments
+Subject A: {$name}, Want a Home Without The Revision Arguments?
 Subject B: What Changes First (It Isn't The Grades)
 Preheader: A picture of what fixing the revision does to your evenings, before any test result moves.
 Goal: the lifestyle email, parent-voiced. Paint the after-state at home. Deposit with the call in the PS.
 Links: 0 (call scheduler in PS)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English for parents, Title Case subject, named booking links)
+
+Revised: 20 September 2026 (Waleed's own subject line, ported back from the MailerLite builder)
 
 ---
 
@@ -23,14 +25,12 @@ The worry doesn't stay in their room. It moves into the kitchen, and it sits wit
 
 So here's what parents notice first when the revision itself gets fixed, and I mean before any test result moves.
 
-**The house gets calmer.**
-
+**The house gets calmer**
 When a student has a plan that fits their week, and a way of working they trust, the shame goes out of the subject. When the shame goes, they stop being defensive.
 
 "How's the plan going?" gets a real answer, because there's a plan to report on. You stop being the one who checks, because the plan does the checking. You get to go back to being the parent.
 
-**The student changes too.**
-
+**The student changes too**
 Let's be honest, they won't suddenly be cheerful about chemistry. But they'll be less anxious. The Sunday night dread eases, because the week ahead has a shape.
 
 The gap between effort and results is what quietly tires them out. When it starts to close, a bit of confidence comes back, and that happens before any grade moves.

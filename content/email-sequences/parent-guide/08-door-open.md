@@ -35,7 +35,7 @@ And when something really matters to your child's year, I'll say it plainly.
 
 Reply and tell me what you decided, even in five words. "Running the free plan." "Booked the call." "Went with a tutor." "Still watching."
 
-I read every reply, and each one helps me do this better for the next family.
+Each reply helps me do this better for the next family.
 
 And if the honest answer is "still confused", say that, because now and then one question is all it takes.
 

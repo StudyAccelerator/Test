@@ -55,4 +55,4 @@ Best wishes,
 
 Waleed
 
-PS: Reply and tell me your child's year group and the subject you're most worried about. One line is plenty, and it helps me make these emails more useful for you. I read every reply myself, usually between patients!
+PS: Reply and tell me your child's year group and the subject you're most worried about. One line is plenty, and it helps me make these emails more useful for you. I'll get back to you, usually between patients!

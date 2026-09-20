@@ -17,32 +17,27 @@ Schools are oddly bad at telling parents the shape of the year in advance. So it
 
 Here's the map. The five moments that really matter, and what each one needs from your home.
 
-**1. Autumn term: the evidence window.**
-
+**1. Autumn term: the evidence window**
 Teachers set and check predicted grades from what they see this term: early tests, classwork, mocks. For Year 13, this is the term that writes the UCAS form.
 
 What it needs: the method working NOW, not after Christmas. This is why I keep talking about the autumn, and it's the most useful thing on this whole map.
 
-**2. Mid-October (Year 13, some subjects): the early UCAS deadline.**
-
+**2. Mid-October (Year 13, some subjects): the early UCAS deadline**
 UCAS forms for medicine, dentistry, vet courses and Oxbridge go in around mid-October. All the rest go in by the main January deadline.
 
 What it needs: if your child is close to those courses, the personal statement talk should have started by now, not in half term week.
 
-**3. November to December: mocks, round one.**
-
+**3. November to December: mocks, round one**
 The first full practice run, and the most common surprise of the year, because content from a whole year ago comes back.
 
 What it needs: revision that started weeks before, and, more than that, a calm response at home to the results, good or bad. A rough November mock, read well, is a gift with six months still to go.
 
-**4. January to March: the long middle.**
-
+**4. January to March: the long middle**
 No big events, which is just the danger. This is where methods slowly fall apart and no one notices until spring.
 
 What it needs: the weekly rhythm holding, and someone now and then checking the plan is still on the wall. Not the drama of a crisis, just upkeep.
 
-**5. April to June: exam season.**
-
+**5. April to June: exam season**
 By now the work is mostly done or it isn't. The small gains move to sleep, routine and exam skills.
 
 What it needs from you: food, calm and lifts. Truly, by this point, your job is lifts and staying calm.

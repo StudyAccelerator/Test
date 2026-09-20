@@ -2,7 +2,7 @@
 
 Send: Day 12
 Segment: group "Diag Parents System Route"
-Subject A: {$name}, The Cost Of Leaving It Another Week
+Subject A: {$name} This is The Cost Of Leaving It Another Week
 Subject B: Why Fixing It Now Beats Waiting For Mocks
 Preheader: A fixed method pays off every week it runs, and I only keep five mentorship places.
 Goal: the door, restructured to the Top 1% Mentorship on Waleed's 14 September instruction. Compounding argument, five places, call CTA.
@@ -11,6 +11,8 @@ Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass)
 Revised: 14 September 2026 (Waleed's restructure: the three-level menu replaced with the mentorship close)
 Revised: 14 September 2026 (Waleed: the satisfaction guarantee covers the Top 1% Mentorship too, restored)
+
+Revised: 20 September 2026 (Waleed's own subject line, ported back from the MailerLite builder)
 
 ---
 
@@ -24,8 +26,7 @@ A fixed method pays off in each week it runs. Topics stick instead of fading, th
 
 Fix it this month and {$diag_child_name|default('your child')} gets each of the weeks left of that. Wait for the mock results shock in November, and the same fix has half the time left and twice the panic attached.
 
-**Where that leaves the mentorship.**
-
+**Where that leaves the mentorship**
 I keep five places on the Top 1% Mentorship, where {$diag_child_name|default('your child')} works directly with me all month long, with fortnightly follow-ups. That's the honest limit of how closely I can work with each student.
 
 It's £300 a month, less than most families spend on tutoring for one subject, and it comes with my satisfaction guarantee on the first session. The detail is on [the Study System page](https://alevelaccelerators.com/study-systems/).

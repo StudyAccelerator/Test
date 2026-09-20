@@ -15,18 +15,15 @@ Hi {$name},
 
 A few students have replied asking the same thing in different words: "what actually happens if I book the call?" Fair question, so here's exactly what happens, minute by minute.
 
-**The first five minutes: you talk, I listen.**
-
+**The first five minutes: you talk, I listen**
 Your subjects, your year, what the diagnostic said, and what really happens when you sit a paper. If you've been running the drill, have your letter log open. If you haven't, that's fine too, come as you are.
 
-**The middle twenty: we look at the evidence together.**
-
+**The middle twenty: we look at the evidence together**
 Your K, R, W and T letters if you have them, or your report if you don't. I tell you what I'd fix first, and just as usefully, what I'd ignore for now.
 
 Most students are trying to fix four things at once, and that's the reason none of them move.
 
-**The last five: you leave with your plan.**
-
+**The last five: you leave with your plan**
 Your custom academic strategy plan for the next two weeks, written down. Which drill, which days, which topic first. Clear enough that when Monday comes, you already know what you're doing.
 
 That's the whole call. If the Subject Accelerator fits what your log shows, I'll say so in a sentence and you can ask about it or not. And if something else fits better, I'll point you there instead.

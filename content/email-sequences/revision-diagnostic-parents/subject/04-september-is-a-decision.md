@@ -21,20 +21,17 @@ The only time-bound fact is this: a new cohort is starting soon, and the exact d
 
 Places are capped because the sessions only work in small groups. So when a subject fills, it fills.
 
-**If it's a yes.**
-
+**If it's a yes**
 Book the place now. Then they can spend the time before the start date on the free plan, with the decision already made.
 
 [BUTTON: Book the September place -> https://alevelaccelerators.com/subject-accelerators/]
 
-**If it's a no for now.**
-
+**If it's a no for now**
 Run the free version and mean it: the weekly timed question with the mark scheme, from my first email.
 
 A student who does that every week from now to mocks trains a real part of the same skill, and I'll keep sending you things that help.
 
-**If you're not sure yet.**
-
+**If you're not sure yet**
 That's exactly what the free academic strategy call is for. I'll look at the diagnostic with you and give you a straight recommendation for {$diag_child_name|default('your child')}.
 
 I'm confident we can help. [Click here to book your free academic strategy call](https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call).

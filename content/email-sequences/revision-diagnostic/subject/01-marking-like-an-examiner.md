@@ -28,20 +28,17 @@ So here's the training. It's one drill, done properly, once or twice a week.
 
 **The examiner drill (about 80 minutes)**
 
-**Part one: sit a timed section (30 to 40 minutes).**
-
+**Part one: sit a timed section (30 to 40 minutes)**
 Sit one section of a past paper in {$diag_worry_subject|default('your subject')} under real conditions. Real timing, about a minute per mark (check your board's ratio). No notes, no pausing to check one thing, no music.
 
 The conditions are the point. An exam tests whether you can pull the knowledge out under pressure, so practising without pressure is practising something completely different.
 
-**Part two: trust the feeling (10 minutes).**
-
+**Part two: trust the feeling (10 minutes)**
 Before you touch the mark scheme, go back through your answers. For each question where you had that "not sure I said that right" feeling, put a mark in the margin.
 
 That feeling is usually correct. Learning to notice it is an exam skill in itself.
 
-**Part three: mark it harshly (30 minutes).**
-
+**Part three: mark it harshly (30 minutes)**
 This is the part that separates grades. Mark it with the official scheme, and mark it harshly. You're not your friend here, you're the examiner, and the examiner gives nothing for "they clearly sort of knew it".
 
 The mark scheme says specific wording earns the mark. So if your answer was close but missed the wording, that's no mark. Count it properly.
@@ -60,8 +57,7 @@ Now look at which letters come up most. Students with your result almost always 
 
 That's the most useful thing you'll learn about yourself this month. It tells you exactly where your next hour of revision should go, and it's almost never "make more notes".
 
-**Part four: rewrite each W (don't skip this).**
-
+**Part four: rewrite each W (don't skip this)**
 Rewrite each W answer, in full, in the exact language the scheme rewards. By hand. Then say it out loud.
 
 It feels a bit silly, but it's how the phrasing becomes yours instead of the scheme's. This is where the drill actually turns into marks.

@@ -26,8 +26,7 @@ You think in your own words, but the examiner can only give marks for theirs. So
 
 Here's how you do that in {$diag_worry_subject|default('your subject')}.
 
-**Step 1: Collect the phrases.**
-
+**Step 1: Collect the phrases**
 Open three or four mark schemes for papers you've done or topics you know well. Go through them asking one question: which exact wording keeps being rewarded?
 
 Each subject has these. In biology, answers live and die on words like "complementary", "specific", "gradient". Chemistry schemes reward precise mechanism language.
@@ -36,16 +35,14 @@ In maths, "hence" in a question is an instruction with marks attached, and metho
 
 Write the phrases that keep appearing into the back pages of your error log, sorted by topic. Ten minutes per scheme. Within two weeks you'll have your own list of what your board gives marks for, in their exact wording.
 
-**Step 2: Learn it like vocab.**
-
+**Step 2: Learn it like vocab**
 Just reading the list does nothing. So treat it like learning a language: cover the phrase, produce it from memory, say it out loud.
 
 Saying it out loud matters more than you'd think. Phrases you've said come back under pressure in a way phrases you've only read never do.
 
 Two minutes at the start of each session in that subject. That's the whole habit.
 
-**Step 3: Decode the command words.**
-
+**Step 3: Decode the command words**
 Separate from the content words, there's the language of the question itself. Each board publishes what their command words mean, and most students have never once looked it up.
 
 "State" wants a fact, no reasoning, stop writing. "Explain" wants cause and effect, linked with becauses, and the marks live in the links.
@@ -54,8 +51,7 @@ Separate from the content words, there's the language of the question itself. Ea
 
 So before you write a single word of any answer, name the command word and say what it's asking for. Five seconds. It's the difference between answering the question and answering the topic, and examiners only pay for the first one.
 
-**Step 4: Close the loop.**
-
+**Step 4: Close the loop**
 From now on, each W in your error log gets two lines instead of one: your wording, and theirs, side by side.
 
 Reading your own sentence next to the version that gets the mark is a bit awkward, but it's the useful kind of awkward. The gap between the two lines is usually tiny. A missing "because", a vague verb.

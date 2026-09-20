@@ -21,8 +21,7 @@ And here's the part that matters for {$diag_child_name|default('your child')}. F
 
 The diagnostic found an exam skills gap, not a content gap. So a general tutor going over content they mostly know is treating the wrong problem, at £50 an hour.
 
-**What our programme costs.**
-
+**What our programme costs**
 It's £339 for twelve weeks. That's a full term of weekly live sessions with a specialist, built around real exam questions and mark schemes. It's the right treatment for what the diagnostic found.
 
 That works out at just over £14 a session hour, because a small group shares the cost of the specialist.

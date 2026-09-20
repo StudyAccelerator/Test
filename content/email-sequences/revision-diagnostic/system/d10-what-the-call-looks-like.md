@@ -17,20 +17,17 @@ A few students have replied asking the same thing in different words: "what actu
 
 Fair question, so here's exactly what happens, minute by minute.
 
-**First five minutes: you talk, I listen.**
-
+**First five minutes: you talk, I listen**
 Your subjects, your year, what the diagnostic said, and what your week actually looks like. School, work, sport, all of it.
 
 A system that ignores your real week isn't a system, it's wishful thinking.
 
-**The middle twenty: we look at how the method is going.**
-
+**The middle twenty: we look at how the method is going**
 Which parts you've run, which parts wobbled, where the returns got skipped.
 
 I tell you what I'd fix first, and just as usefully, what to stop worrying about. Most students are trying to fix four things at once, and that's exactly why none of them move.
 
-**The last five: you leave with your custom academic strategy plan.**
-
+**The last five: you leave with your custom academic strategy plan**
 Your plan for the next two weeks, written down. Which topics, which sessions, where the returns go.
 
 Specific enough that when Monday comes, you already know what you're doing.

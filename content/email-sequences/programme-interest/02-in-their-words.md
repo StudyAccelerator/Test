@@ -29,8 +29,7 @@ That's the design: you don't watch someone else do the work. You do it, and you 
 
 And here's what all of that adds up to: on average, our students jump two grades.
 
-**What you get, plainly.**
-
+**What you get, plainly**
 Specialist teaching, real exam papers, and a recorded session each week that you can watch back at any time. And a small group, so you get seen, not lost at the back.
 
 Plus the satisfaction guarantee. If you're not completely satisfied after the first session, you get your money back, no questions asked.

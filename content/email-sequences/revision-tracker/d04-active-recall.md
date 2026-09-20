@@ -23,26 +23,22 @@ Every time you pull something out of memory, it gets easier to pull out next tim
 
 Here's the block, minute by minute.
 
-**First five minutes: pick the questions, not the notes.**
-
+**First five minutes: pick the questions, not the notes**
 Past paper questions on the topic, questions from the back of the textbook, or flashcards if you've got them. Or just turn the headings into questions ("explain why...", "compare...").
 
 The material must ask you for something. If the plan is "go over the topic", you've already lost the block.
 
-**The middle 35: answer from memory, then check.**
-
+**The middle 35: answer from memory, then check**
 Question, book closed, produce the answer properly. Written down or out loud in full sentences, not just "yeah I know that one" in your head.
 
 Then check. If it's right, move on. If it's wrong or half right, correct it, say the right version out loud, and put a mark next to it so it comes back later in the block.
 
 Keep the cycles quick. You're aiming for lots of retrievals, not a perfect essay on each one.
 
-**Last five: the log.**
-
+**Last five: the log**
 Anything you got wrong twice goes into your error log for Sunday's retest. Those repeat offenders are the highest yield material you own.
 
-**Two traps to avoid.**
-
+**Two traps to avoid**
 Don't let checking turn into re-reading. You look up the answer, correct yourself, close the book, and that's it.
 
 And don't spend the block on your favourite topic because it feels good to get things right. The block belongs to whatever your tracker scheduled. That's usually the stuff that doesn't feel good yet, and that's the point of it.

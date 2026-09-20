@@ -17,8 +17,7 @@ Hi {$name},
 
 Let's do the money in plain numbers, because you're likely weighing it up. I'd rather do the sums with you than leave you to do them alone.
 
-**The benchmark.**
-
+**The benchmark**
 The UK average for 1:1 tutoring is about £50 an hour. Most parents book 2 hours a week.
 
 That's £400 a month. Per subject.
@@ -29,8 +28,7 @@ A tutor patches one subject while the method keeps wasting hours in all of them.
 
 The tutor isn't bad. The thing being treated just isn't the thing that's broken.
 
-**The mentorship, next to that.**
-
+**The mentorship, next to that**
 The Top 1% Mentorship is £300 a month. For less than one subject's tutoring, {$diag_child_name|default('your child')} works directly with me all month long.
 
 I build their study system with them. Fortnightly follow-ups keep it running. And between sessions, they can reach me whenever they're stuck.
@@ -41,8 +39,7 @@ I keep five places on it, so I can genuinely stay this close to every student.
 
 And it comes with my satisfaction guarantee. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
-**The step I'd take first.**
-
+**The step I'd take first**
 Have the free call with me before you decide anything. We'll go through {$diag_child_name|default('your child')}'s report together, and I'll show you exactly what's holding them back and how we'd improve their grades.
 
 You'll know by the end of it whether the mentorship is right for them.

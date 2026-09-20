@@ -19,14 +19,12 @@ It's the normal thing to do. It's what the other parents at school did. And at a
 
 So before you make that choice, or renew it, here's what tutoring can and can't do. This comes from someone who runs live teaching for a living.
 
-**What a good tutor really fixes: content gaps.**
-
+**What a good tutor really fixes: content gaps**
 A topic never learned well. Something from GCSE that never went in. A section the school rushed through.
 
 If the problem is "they don't understand it", an hour with a good teacher is exactly the right medicine.
 
-**What a tutor can't fix: the other 167 hours of the week.**
-
+**What a tutor can't fix: the other 167 hours of the week**
 Say your child learns a topic well on Tuesday, then revises it by re-reading. It fades by Friday and it's gone by the next test.
 
 The tutor explains it again next week. It feels like things are moving. And it quietly costs £200 a month for standing still.
@@ -35,8 +33,7 @@ Not because the tutor is bad. The problem was never what they knew. It was the w
 
 I watch families repeat this for two years, changing tutors along the way, when the tutor was never the broken part.
 
-**The order that works: diagnose first.**
-
+**The order that works: diagnose first**
 Then fix the method, if the method is the problem.
 
 And then tutoring, if it's still needed, really sticks. The hours between sessions hold what the sessions build.
@@ -49,7 +46,7 @@ If your child already has a tutor, nothing here says stop. It says check what th
 
 Reply and tell me your child's current set-up in one line. "Maths tutor since March." "No tutor, thinking about it." "Two tutors, grades flat."
 
-I read every reply, and I'll tell you what I'd check first in your case. It costs you one sentence.
+Tell me and I'll tell you what I'd check first in your case. It costs you one sentence.
 
 Best wishes,
 

@@ -47,4 +47,4 @@ Best wishes,
 
 Waleed
 
-PS: If it's easier, just reply with your question here and I'll answer it in writing. I read every reply myself, between shifts!
+PS: If it's easier, just reply with your question here and I'll answer it in writing, usually between shifts!

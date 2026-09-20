@@ -23,26 +23,22 @@ The exam doesn't ask whether the knowledge is in your head. It asks whether you 
 
 That's a performance skill. Like any performance skill, it only improves by performing.
 
-**Step 1: Sit it under honest conditions.**
-
+**Step 1: Sit it under honest conditions**
 One hour, once a week per subject, once its topics are up and running. Real timing (about a minute per mark), book closed, phone in another room, no pausing to check one thing.
 
 The conditions matter more than the questions. Practising without pressure trains an easier sport than the one you'll play in June.
 
-**Step 2: Mark it harshly.**
-
+**Step 2: Mark it harshly**
 Use the official mark scheme. "I basically said that" doesn't count. Either your wording earns the mark or it doesn't, because that's exactly how a real examiner will treat it.
 
 Every dropped mark gets a line in the error log: what you wrote, and what would have scored.
 
-**Step 3: Read the leaks.**
-
+**Step 3: Read the leaks**
 That marked up section is worth more than any set of notes you own. It tells you exactly where your marks are leaking.
 
 Knowledge that wasn't there, knowledge that wouldn't come out, wording that missed, time that ran out. Different leaks want different fixes, and now next week's blocks have real evidence to aim at.
 
-**One warning.**
-
+**One warning**
 This block is not fun at first. Finding out what you'd really score is hard to face, and that's why students skip it.
 
 Do it anyway. A rough score on your desk in October is a gift. The same news in the exam hall is a disaster.

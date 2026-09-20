@@ -30,7 +30,7 @@ Run the 90 minute day most mornings. Blurt, rebuild, break, exam questions, book
 
 Keep the error log. Retest it every Sunday. It's the most personalised revision resource that will ever exist for you, and it costs a notebook.
 
-Do that for the rest of the summer and you'll walk into September ahead of most students in the country, having paid me nothing. I'll still be in your inbox once a week with the things school never taught you, and when you smash something or get stuck on something, reply and tell me. I read every one.
+Do that for the rest of the summer and you'll walk into September ahead of most students in the country, having paid me nothing. I'll still be in your inbox once a week with the things school never taught you, and when you smash something or get stuck on something, reply and tell me.
 
 And if you're genuinely torn, don't sit in the middle feeling guilty about it. Half an hour, free, and I'll tell you straight whether the Accelerator fits your situation, even if the honest answer is "keep your money and run the free plan": https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call
 

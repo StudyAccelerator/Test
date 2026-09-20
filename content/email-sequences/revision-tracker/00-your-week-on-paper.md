@@ -21,18 +21,15 @@ That 7pm back and forth is where most revision falls apart. And you've just remo
 
 Two things make the difference between a plan that runs and one that gets forgotten by Thursday.
 
-**Step 1: Make it real tonight.**
-
+**Step 1: Make it real tonight**
 Download the poster or screenshot your week. Put it where you actually study. Wall, desk, phone lock screen, any spot your eyes land without looking for it.
 
 A plan that lives in a browser tab is a plan you have to go and find. After a long school day, nobody goes and finds it.
 
-**Step 2: Run the first session tonight, even a short one.**
-
+**Step 2: Run the first session tonight, even a short one**
 Whatever your week starts with, do its first 20 minutes tonight. Those 20 minutes won't change much on their own. But a plan you've started feels very different from one you haven't, and you'll notice that tomorrow.
 
-**A quick word on how the week is built, so you trust it.**
-
+**A quick word on how the week is built, so you trust it**
 Your worst topics got the most sessions, on purpose. The Blurt and Fix blocks are long because it takes one honest sitting to rebuild a topic well.
 
 The short Active Recall and Spaced Review slots aren't padding. They're the returns that stop last week's work fading away.

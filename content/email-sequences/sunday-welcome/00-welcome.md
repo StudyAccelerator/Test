@@ -15,8 +15,7 @@ Hey {$name},
 
 Dr Waleed here, and you're in. Well done for signing up, and I think you should know exactly what you've signed up for. So here it is.
 
-**Every Sunday at 5pm, one email.**
-
+**Every Sunday at 5pm, one email**
 It's a single thing school never taught you about revision, exams or memory, taught properly enough to use that evening. Not a list of links, and not "5 quick tips", but one real teach.
 
 It lands on Sunday evening on purpose. That's when you're looking at the week ahead and deciding what it's going to look like.
@@ -35,8 +34,7 @@ If you can't produce it three metres from your notes, you couldn't produce it in
 
 **Low-yield:** copying your notes out again to make them neater. Neat notes look good, but neatness isn't memory. A messy page written from a closed book is worth ten beautiful ones copied from an open one.
 
-**One thing before Sunday, and it genuinely makes your issues better.**
-
+**One thing before Sunday, and it genuinely makes your issues better**
 Reply and tell me your year and your subjects. One line, like "Year 13, bio chem maths".
 
 The clinic questions and the examples come from what readers actually take. So that one line shapes what you get.

@@ -23,11 +23,10 @@ Whatever you decide, you're deciding with the full picture. That's all I ever wa
 
 From here, this series ends and you join my main list. That's one short, useful email most days, each one a thing you can use the same evening. And when something big happens in their year, like a cohort date, I'll say it plainly.
 
-**One small ask before this series ends.**
-
+**One small ask before this series ends**
 Reply and tell me what you decided, even in five words. "Enrolled", "Running the free version", "Still not sure" or "Decided against it" are all fine.
 
-I read every reply, and it really helps me do this better for the next family. And if you're still not sure, say so, because often one question is all it takes.
+It really helps me do this better for the next family. And if you're still not sure, say so, because often one question is all it takes.
 
 The programme, the free weekly check and the free strategy call all stay right where they've been.
 

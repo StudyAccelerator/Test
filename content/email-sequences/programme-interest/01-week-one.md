@@ -28,8 +28,7 @@ And here's the part students always mention. Watching someone else's answer get 
 
 By the end there's a short list of what to practise before session two. That takes two to three hours across the week. It's mostly past paper work that should be done in any case, now with a clear aim.
 
-**That's it.**
-
+**That's it**
 No surprises, and no pile of homework. One recorded session a weekend and a clear list.
 
 Week two builds on week one. By week four, the mark scheme wording starts to show up in answers without you having to think about it. That's the whole point.

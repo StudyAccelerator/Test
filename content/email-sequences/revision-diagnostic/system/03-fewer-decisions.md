@@ -38,14 +38,12 @@ And how-you-work gaps don't close because you read a good email. They close when
 
 That's what my Top 1% Mentorship is. It's the method you've been learning this week, set up properly, with me alongside you until it runs on its own.
 
-**How it works.**
-
+**How it works**
 You work directly with me all month long. I build your study system with you, fortnightly follow-ups keep it running, and whenever you're stuck between sessions, you can reach me.
 
 It's exactly how I've helped most of my 1,000+ students.
 
-**The maths, worth seeing plainly.**
-
+**The maths, worth seeing plainly**
 Most families answer this problem with a tutor. The UK average is about £50 an hour, and most parents book 2 hours a week.
 
 That's £400 a month, per subject. And it goes into re-teaching content, which was never your real problem.
@@ -64,8 +62,7 @@ Delicia, Year 13: "The topics were really hard to approach while researching alo
 
 And if the budget says not yet, the Study Series (£119) teaches the whole system across four live sessions. It comes with the same guarantee.
 
-**The step to take first.**
-
+**The step to take first**
 Before you decide anything, have the free academic strategy call with me. Thirty minutes, we look at your week and your report, and I'll tell you straight what I'd do.
 
 [BUTTON: Book your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]

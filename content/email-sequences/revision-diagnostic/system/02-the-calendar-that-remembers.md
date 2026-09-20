@@ -34,26 +34,22 @@ Re-learning takes nearly as long as learning did. So you end up paying twice for
 
 **The rhythm: day 1, day 2, day 5**
 
-**Day 1: learn the topic properly.**
-
+**Day 1: learn the topic properly**
 That's the blurting protocol from my last email.
 
-**Day 2: ten minutes.**
-
+**Day 2: ten minutes**
 Re-blurt the topic from memory, check it, fill the gaps. Only ten minutes, because the memory is still fresh.
 
 Miss this window and the day 5 session becomes a rescue job instead of a top-up.
 
-**Day 5: ten more minutes.**
-
+**Day 5: ten more minutes**
 Day 4 to 6 all work. Re-blurt again. By now it comes out faster and the page fills up more.
 
 Honestly, it's really satisfying when you notice that happening.
 
 After that, the topic only needs the occasional Sunday retest through your error log. So the total extra cost per topic is about twenty minutes. What you save is the entire re-learning loop.
 
-**Now the part your diagnostic actually flagged.**
-
+**Now the part your diagnostic actually flagged**
 This rhythm dies if it lives in your head. "I'll come back to it in a few days" almost never happens, because new content always feels more urgent than old content.
 
 The fix is simple. The moment you finish a topic, write the two return dates into your plan, like appointments.
@@ -62,8 +58,7 @@ Your calendar does the remembering. All you have to do is show up to appointment
 
 That one rule is most of what sets top students apart from hard-working ones. All I teach is built on it.
 
-**And while we're at it: the session itself.**
-
+**And while we're at it: the session itself**
 Forget the four hour marathon. Forty-five focused minutes, most days, beats one big weekly session easily.
 
 Partly because the day 2 and day 5 returns need "most days" to exist. Partly because your focus really does run out.

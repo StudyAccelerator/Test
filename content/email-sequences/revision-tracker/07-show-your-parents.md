@@ -21,8 +21,7 @@ And revision is mostly out of sight. They can't see what's in your head. What th
 
 The nagging isn't because they doubt you. It's because they can't see the work, and that has a very easy fix.
 
-**Show them the plan.**
-
+**Show them the plan**
 The printed week, the finished sessions, the stack building up if you've kept the old ones. A system they can see changes the question from "have you revised?" to "how's the plan going?". That's a much nicer question to live with.
 
 Students tell me the nagging drops within a week of the plan going up on the wall. Evidence calms parents. It's very like medicine that way.

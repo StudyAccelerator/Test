@@ -36,8 +36,7 @@ And when the autumn tests come, the ones that set predicted grades, they meet a 
 
 So, plainly, the two ways to do it.
 
-**The full setup: the Top 1% Mentorship.**
-
+**The full setup: the Top 1% Mentorship**
 You work directly with me all month long for £300 a month. I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
 
 All I said about it two emails ago stands, including the five places. That's the honest limit of how closely I can work with each student.
@@ -46,8 +45,7 @@ It comes with the satisfaction guarantee too: if your first session isn't helpfu
 
 [BUTTON: See the Top 1% Mentorship -> https://alevelaccelerators.com/study-systems/]
 
-**On your own: run what you've got.**
-
+**On your own: run what you've got**
 Blurt daily, messy pages, second colour, second pass. Book each topic's day 2 and day 5 returns into a calendar the moment you finish it.
 
 Keep the error log and retest it on Sundays. Forty-five minute sessions, phone out of the room, pick tomorrow's topic tonight.

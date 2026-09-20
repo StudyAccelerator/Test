@@ -33,8 +33,7 @@ Twenty honest minutes of self-testing produces real memory.
 
 So a child can truthfully say yes every single day while their method wastes most of the effort. The effort was never the thing that needed watching. The method was.
 
-**The swap: ask about the process, not whether it happened.**
-
+**The swap: ask about the process, not whether it happened**
 "What did you work on today?" opens a real conversation.
 
 "Which topic scares you most right now?" gets you real information. And they name it themselves, which matters.

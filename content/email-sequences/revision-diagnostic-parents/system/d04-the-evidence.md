@@ -18,28 +18,23 @@ I hope you're well!
 
 Before you decide how to help {$diag_child_name|default('your child')}, I'd like to show you what sits behind my advice. You should be able to weigh it up on real proof.
 
-**The method itself.**
-
+**The method itself**
 Testing yourself instead of re-reading, and going back to a topic before it fades, isn't mine and isn't new. It's the most repeated finding in the whole science of learning.
 
 What I do is get students to run it, week in and week out. That turns out to be the part that counts.
 
-**The results.**
-
+**The results**
 On average, our students jump two grades. And because the method runs under each subject, fixing it lifts all of them at once.
 
-**What students say.**
-
+**What students say**
 Biju, who joined during a gap year: "All the information provided was clear and understandable. It was really helpful and improved my confidence!"
 
 Delicia, Year 13: "The topics were really hard to approach while researching alone, so seeing it broken down into manageable points was useful."
 
-**The guarantee.**
-
+**The guarantee**
 Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
-**Why I'm sending this today.**
-
+**Why I'm sending this today**
 The next email lays out the fix itself. Later this week I'll go through the money in plain numbers. I wanted you to have the proof first.
 
 And as a reward for taking the diagnostic for {$diag_child_name|default('your child')}, my free academic strategy call is open to you. It's 20 to 30 minutes with me.

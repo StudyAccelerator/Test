@@ -19,24 +19,21 @@ By now you've got the guide, the questions, and a clearer picture of where your 
 
 Parents like you tend to pick from three paths. Here they are, compared the way I'd compare them for my own family.
 
-**Path one: free, structured, self-run.**
-
+**Path one: free, structured, self-run**
 The guide's plan, my free Revision Tracker to build each week, the diagnostic to aim it, and self-testing instead of re-reading.
 
 This can really move grades. What it needs is for your child to run it themselves, week after week, even the weeks that go wrong.
 
 For a self-driven student, this path is enough. You'll know within two weeks whether yours is running it or just pretending.
 
-**Path two: tutoring, about £50 an hour.**
-
+**Path two: tutoring, about £50 an hour**
 The right tool when the problem is a real content gap in one subject. Something never learned that needs teaching again by a good teacher.
 
 The wrong first tool for all the rest. It patches one subject while the method keeps wasting hours in all of them.
 
 And most parents book 2 hours a week, which comes to £400 or so a month per subject. That's a lot of money to find out the problem was never the content.
 
-**Path three: fix the method or the exam skills.**
-
+**Path three: fix the method or the exam skills**
 Our programmes, matched to what the diagnostic found.
 
 If it's exam skills in Biology, Chemistry or Maths, the Subject Accelerator. Twelve weeks of live weekend sessions built on real exam questions and mark schemes, £339 a subject.

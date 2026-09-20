@@ -17,16 +17,14 @@ Hi {$name},
 
 This is the last email in this run, so let's get the choice made well. You've had the structure, the first week from the inside, the quotes, and the sums. What's left is deciding, and I'd like to help you do that well.
 
-**Decide from the diagnosis, not the worry.**
-
+**Decide from the diagnosis, not the worry**
 If the signs say exam skills in Biology, Chemistry or Maths, the Subject Accelerator is the exact treatment. An autumn start is its best moment, because the twelve weeks then sit under the predicted grades window.
 
 If the signs say the method itself, the Top 1% Mentorship is the right first fix. Working directly with me on the way they study, the subject panic tends to ease once the studying starts to stick.
 
 And if you really don't know which, take the free diagnostic, or book my free academic strategy call first.
 
-**The risk is covered on purpose.**
-
+**The risk is covered on purpose**
 Every programme comes with the satisfaction guarantee, the mentorship included. Join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
 So the real choice isn't "pay £339 and hope". It's "is one session enough to find out", and it is.

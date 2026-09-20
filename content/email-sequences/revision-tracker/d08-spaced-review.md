@@ -23,8 +23,7 @@ So students pour effort in at the front while it drains out the back. Then they 
 
 That's what the 30 minute Spaced Review block on your tracker is for. It's the smallest block on your plan, and it might be the most useful one. It protects all the work the bigger blocks built.
 
-**How to run it.**
-
+**How to run it**
 The block will sit a few days after you covered its topics. That's on purpose, because that's the window where a cheap top up still works.
 
 Book closed, re-blurt the topic or answer a handful of questions on it from memory. Most of it will come back, and the act of pulling it back is what resets the fading.
@@ -33,8 +32,7 @@ Whatever's gone missing gets patched on the spot, in the second colour. Anything
 
 Thirty minutes. That's the entire cost of keeping a topic, versus hours of relearning it from scratch in November.
 
-**Why I keep saying trust the plan.**
-
+**Why I keep saying trust the plan**
 When the tracker books in a review of last week's topic instead of more of the new thing, it's not wasting your time. It's stopping last week's hours from draining away.
 
 The students who seem to remember it all at mocks aren't smarter. Their old topics just never fully faded, because something kept bringing them back at the right times.

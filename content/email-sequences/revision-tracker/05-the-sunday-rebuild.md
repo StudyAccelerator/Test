@@ -21,20 +21,17 @@ If your week didn't go to plan, good. That means you're running a real system, n
 
 The move now is the 15 minute Sunday rebuild. It's the most useful quarter of an hour in your week.
 
-**Step 1: Re-rate your topics with fresh eyes.**
-
+**Step 1: Re-rate your topics with fresh eyes**
 Anything you rebuilt with a Blurt and Fix probably moves up a level. Anything that faded moves back down, no shame attached. Fading is just what memory does when the returns get missed.
 
 The honesty rule from my earlier email counts double on Sundays.
 
-**Step 2: Deal with the parked topics.**
-
+**Step 2: Deal with the parked topics**
 If the tracker parked topics last week, they weren't cancelled, they were queued. So they go first in the new week.
 
 The cap that parked them is the same cap that kept your week doable, so trust it. A plan that fits gets done. A plan that looks impressive gets abandoned by Thursday.
 
-**Step 3: Rebuild the week around what's actually coming.**
-
+**Step 3: Rebuild the week around what's actually coming**
 New test announced? That subject's topics get re-rated with it in mind.
 
 Sports fixture eating Saturday? Tell the tracker the hours you really have and let it fit the plan around the truth.

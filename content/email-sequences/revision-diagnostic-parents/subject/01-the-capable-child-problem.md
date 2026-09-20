@@ -24,8 +24,7 @@ Marks live in the details, like the command word, the exact phrase the mark sche
 
 Here's what that means for you. More revision of content won't move this, because they mostly have the content. What moves it is exam practice under real conditions, marked the way an examiner marks.
 
-**The ten minute check you can run this week.**
-
+**The ten minute check you can run this week**
 Ask them to do one past paper question in {$diag_worry_subject|default('that subject')}, timed. Then sit together with the official mark scheme, which is free on the exam board's website, and mark it.
 
 Don't count the things they didn't know. Count the marks lost on things they knew and didn't turn into marks.

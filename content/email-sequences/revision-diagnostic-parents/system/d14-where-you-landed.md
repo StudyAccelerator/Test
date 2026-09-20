@@ -1,13 +1,15 @@
 # PY4b · Either way, tell me where you landed
 
 Send: Day 14
-Subject A: {$name}, Tell Me What You Decided
+Subject A: {$name}, Are You Interested in {$diag_child_name|default('your child')} Achieving Top Grades?
 Subject B: One Small Favour Before This Series Ends
 Preheader: What you have now, what happens next, and one small favour that takes five words.
 Goal: the quiet close after the door email. Release the pressure, keep the relationship, one warm reply CTA. No links in the body.
 Links: 0 (call scheduler in PS)
 Revised: 6 September 2026 (Waleed's style pass)
 Revised: 13 September 2026 (email-writer voice and readability pass: short paragraphs, plain English, Title Case subject, named booking links)
+
+Revised: 20 September 2026 (Waleed's own subject line, ported back from the MailerLite builder)
 
 ---
 

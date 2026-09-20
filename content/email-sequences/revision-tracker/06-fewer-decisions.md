@@ -19,8 +19,7 @@ Nine days ago the tracker made a choice for you: what each study hour is for. To
 
 Once you see it, you can't unsee it, and it changes what you think your problem is.
 
-**Top students are not more disciplined than you.**
-
+**Top students are not more disciplined than you**
 I've worked with over 1,000 A-level students. The top ones feel the same pull towards their phone, the same dread of the hard subject, the same 7pm "do I really have to" moment.
 
 The difference is that they've removed the choice. The session is decided in advance. So is the topic, and so is the method inside the block.
@@ -29,8 +28,7 @@ From the outside it looks like discipline. Really, it's just decisions made in a
 
 That's why "I need to be more disciplined" is one of the least useful sentences in revision. You don't need a stronger will, you need fewer moments that depend on one.
 
-**The next layer.**
-
+**The next layer**
 Your tracker handles the what and the when. The next layer is the how.
 
 What happens inside each block, how the returns get planned in, how the exam skills get trained, and how the whole thing survives week three, week seven and mocks.

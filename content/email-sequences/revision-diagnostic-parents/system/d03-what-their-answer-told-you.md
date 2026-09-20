@@ -35,8 +35,7 @@ Better than most. The follow-up that matters is "book open or closed?"
 
 Open-book testing is really just re-reading with extra steps. If it's truly closed-book, their method is better than the grades suggest. The problem is likely in when they return to topics, which the report also measures.
 
-**A shrug.**
-
+**A shrug**
 Often not rudeness. Nobody has ever asked them to have a method, so there's no answer to give. And this is the easiest starting point of the four, because there's nothing to unlearn.
 
 Whichever answer you got, the next move is the same and it's small. The report's plan starts with ten minutes and a blank page. One topic, tonight or tomorrow, and let them pick it.

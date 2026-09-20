@@ -26,14 +26,12 @@ Here's the hard part. Exam technique, and the way someone studies, isn't really 
 
 And it's exactly how I've helped the majority of my 1,000+ students.
 
-**The usual answer, in real numbers.**
-
+**The usual answer, in real numbers**
 Most families turn to a tutor. The UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week.
 
 That's £400 a month, per subject. And it goes into re-teaching content, an area {$diag_child_name|default('your child')} was never really struggling with.
 
-**What I recommend instead.**
-
+**What I recommend instead**
 The Top 1% Mentorship. {$diag_child_name|default('Your child')} works directly with me all month long: I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck.
 
 It's £300 a month. Less than one subject's tutoring, spent on the thing their report actually found.
@@ -42,8 +40,7 @@ I only keep five places on it, because that's how many students I can work with 
 
 It also comes with my satisfaction guarantee. If the first session isn't helpful, you get a full refund, no questions asked.
 
-**If you're interested, here's what I'd do first.**
-
+**If you're interested, here's what I'd do first**
 Before you decide anything, have a free call with me. We'll talk through {$diag_child_name|default('your child')}'s report itself: what's holding them back most, and exactly how we'd lift their grades.
 
 Then you can decide with everything in front of you.

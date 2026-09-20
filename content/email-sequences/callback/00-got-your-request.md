@@ -22,14 +22,12 @@ You asked for {$diag_call_time|default('the time you picked')}, so that's when I
 
 An unknown UK mobile number around your chosen time will be me.
 
-**What the call actually is.**
-
+**What the call actually is**
 It's 20 to 30 minutes on the diagnostic report you've just been reading. We go through what it found, and I tell you what I'd fix first and why.
 
 By the end you'll have a custom academic strategy plan for the next few weeks: what to work on, in what order, using what method. It's the conversation after the test results, which is exactly how I think about it.
 
-**The one thing to do before I ring.**
-
+**The one thing to do before I ring**
 Reply to this email with the single question you most want answered on the call. One line is enough.
 
 It means we start with the thing you actually care about, instead of finding it at minute twenty. The plan comes out better for it.

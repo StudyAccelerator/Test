@@ -15,8 +15,7 @@ Hi {$name},
 
 Two days on from your booked slot, one of two things is true. So this email covers both.
 
-**If we spoke.**
-
+**If we spoke**
 Thank you, genuinely. Those conversations are why I do this.
 
 Now the important part, because it's the part everyone skips. Write the plan down tonight. Not in your head, on paper or in your notes app.
@@ -25,8 +24,7 @@ What we agreed, in order, with the first action at the top. A plan that only exi
 
 If anything we agreed has already gone fuzzy, reply and ask, and I'll happily put it in writing. And when the first week of the plan is done, tell me how it went. I answer every reply.
 
-**If life got in the way and the call didn't happen.**
-
+**If life got in the way and the call didn't happen**
 Zero judgement. My week has hospital shifts in it, so I understand plans moving. The offer doesn't expire, it just needs a new slot:
 
 [BUTTON: Rebook your free academic strategy call -> https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call]

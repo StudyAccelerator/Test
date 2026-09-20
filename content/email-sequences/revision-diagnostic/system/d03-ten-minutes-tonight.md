@@ -21,8 +21,7 @@ If you did it, that page has an appointment tonight. If you didn't, do the blurt
 
 Either way you're on the plan. There's no guilt attached, because guilt doesn't help anyone revise.
 
-**Tonight's session: the day 2 return. Ten minutes, all in.**
-
+**Tonight's session: the day 2 return. Ten minutes, all in**
 Take the topic from two days ago. Fresh page, book still closed.
 
 Write out what you remember. Pay special attention to the second colour material, the stuff that wasn't there the first time.

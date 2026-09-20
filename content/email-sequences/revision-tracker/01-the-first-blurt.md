@@ -17,26 +17,22 @@ Somewhere on your week there's a block called Blurt and Fix. It's 90 minutes lon
 
 So today, here's exactly what to do inside it. "Revise the topic" is exactly the vagueness the tracker exists to get rid of.
 
-**Minutes 0 to 10: the blurt.**
-
+**Minutes 0 to 10: the blurt**
 Blank page, book closed, phone in another room. Write down everything you know about the topic. Definitions, diagrams, mechanisms, half remembered bits, all of it.
 
 It's meant to look messy. You're not making notes here, you're finding out what's actually in your head.
 
-**Minutes 10 to 15: the check.**
-
+**Minutes 10 to 15: the check**
 Open your notes or textbook and check your page honestly. Tick what's right. Everything missing or wrong goes back on the page in a second colour.
 
 That second colour is the whole point. It shows you exactly what this topic needs, based on evidence rather than guesswork.
 
-**Minutes 15 to 70: the fix.**
-
+**Minutes 15 to 70: the fix**
 Work through the second colour material properly. Don't re-read it, rebuild it. Work the examples, draw the diagram from scratch, and explain the mechanism out loud like you're teaching it.
 
 Out loud matters. If you can say it to an empty room, you can write it in an exam hall.
 
-**Minutes 70 to 90: the proof.**
-
+**Minutes 70 to 90: the proof**
 Book closed again, fresh page. Blurt the topic one more time, and see how much of the second colour made it into memory.
 
 Whatever still didn't stick becomes tomorrow's ten minute warm up. Knowing exactly what that is counts as a win, not a failure.
@@ -51,4 +47,4 @@ Keep going!
 
 Waleed
 
-PS: The first blurt page is always humbling. Mine at 17 would have been mostly white space haha. Reply and tell me one word for yours, I read every one.
+PS: The first blurt page is always humbling. Mine at 17 would have been mostly white space haha. Reply and tell me one word for yours.
