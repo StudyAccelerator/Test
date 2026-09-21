@@ -1,5 +1,7 @@
 # Top 1% Mentorship: the weekly runsheets
 
+**Teaching content update, 21 September 2026: read file 08 first.** Waleed's real session 1 teaches blurting plus a four tier mark loss analysis on a past paper (Knowledge, Recall, Application, Exam technique), which is a sharper diagnosis than the one assumed below. `08-the-teaching-curriculum.md` carries the sixteen named teaches for sessions 2 to 17 and supersedes the teaching content in the runsheets that follow. The session shape, scorecard, parent updates and deviate-if logic here all still stand.
+
 *Sessions 1 to 26, 14 September 2026 to 28 March 2027, plus the sketched run-in to the exams. Open at the week. Every runsheet has the same seven headings. You need this page, the student's scorecard and the Revision Tracker, nothing else.*
 
 *Calendar assumptions, to overwrite with each student's real dates in session 1: session 1 in the week of 14 September; autumn half term the week of 26 October; schools break for Christmas around 18 December and return 4 January; spring half term the week of 15 February; Easter holidays 29 March to 9 April (Easter Sunday is 28 March 2027); A-level exams from early May 2027; Year 12 end-of-year exams in May or June, school dependent. The resit student's exam centre sets its own entry deadline ahead of the JCQ deadline of 21 February.*

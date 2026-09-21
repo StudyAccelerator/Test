@@ -85,6 +85,11 @@
       "id": "mentorship-scale-model",
       "label": "Mentorship: scalability and the road to 10k",
       "path": "content/mentorship/07-scalability-and-the-road-to-10k.md"
+    },
+    {
+      "id": "mentorship-teaching",
+      "label": "Mentorship: the teaching curriculum",
+      "path": "content/mentorship/08-the-teaching-curriculum.md"
     }
   ]
 }
