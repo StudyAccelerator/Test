@@ -136,12 +136,13 @@ body {
 .col-3 { grid-column: span 3; }
 .col-4 { grid-column: span 4; }
 .col-5 { grid-column: span 5; }
+.col-6 { grid-column: span 6; }
 .col-7 { grid-column: span 7; }
 .col-8 { grid-column: span 8; }
 .col-12 { grid-column: span 12; }
 
 @media (max-width: 980px) {
-  .col-3, .col-4, .col-5, .col-7, .col-8, .col-12 { grid-column: span 12; }
+  .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-12 { grid-column: span 12; }
   .shell { padding: 18px 14px 32px; }
 }
 
@@ -1023,3 +1024,9 @@ code {
 .crm-notes { flex: 1 1 260px; min-height: 34px; resize: vertical; line-height: 1.45; }
 .crm-status { font-weight: 600; }
 .crm-more { margin-top: 6px; text-align: center; }
+
+/* Full-width MRR meter on the Sales panel (the inline .meter is 52px) */
+.meter.mrr-meter { display: block; width: 100%; height: 8px; margin: 4px 0 10px; }
+.sale-add { flex-wrap: wrap; }
+.sale-add input[type="text"] { flex: 1 1 160px; }
+.sale-add select { flex: 0 1 auto; }

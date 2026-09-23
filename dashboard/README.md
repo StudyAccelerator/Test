@@ -12,6 +12,15 @@ single lump payment. Add a student the day they pay: name, programme, amount, pe
 Data lives in gitignored `data/sales.json` (store `sales`). With nothing recorded the panel says so
 rather than guessing, in line with the honesty rule.
 
+Since 23 September 2026 each row also carries `yearGroup` (Year 13, Year 12, Pre-A-level) and `source`
+(Meta ads, Organic or SEO, Referral, Old list, Other), and the panel shows the distance to the £100k line
+(£8,333 MRR held all year), the summer-exposed share (Year 13 or unknown year, which stops in June), days
+since the last enrolment and each student's month count. Rows flagged `approx: true` show "start date
+approx" until Waleed corrects them. The top bar carries an MRR pill on every page and `/api/widget`
+returns `mrr` and `payingStudents`. The scheduled task `mrr-daily-brief` (7:25am) reads `data/sales.json`,
+appends one line a day to gitignored `data/mrr-log.jsonl` and pushes the position to his phone (ntfy plus
+PushNotification). The standing partner view is `content/business-audit/2026-09-23-partner-brief-mrr-100k-and-1m.md`.
+
 Why it is entered by hand: the Stripe snapshot only covers the one-off payments taken up to 6 May 2026,
 and Monzo is connected to the PERSONAL current account only, so its inflows are not business revenue and
 must never be presented as sales. Adding a read only `STRIPE_KEY` to `dashboard/.env` makes the Stripe

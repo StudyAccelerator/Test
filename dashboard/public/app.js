@@ -298,6 +298,14 @@ function renderTop() {
   $('#top-countdown').textContent =
     days > 0 ? `${days} days to results day` : days === 0 ? 'Results day is today' : 'Results are out'
 
+  const mrrPill = $('#top-mrr')
+  if (mrrPill) {
+    const { mrr, active } = mrrFigures()
+    mrrPill.textContent = active.length ? `MRR ${poundsGBP(mrr)} \u00b7 ${active.length} paying` : 'MRR: nothing recorded'
+    mrrPill.className = active.length ? 'pill pill-ok' : 'pill pill-muted'
+    mrrPill.title = 'Active monthly enrolments from the Sales and MRR panel. Click to jump there.'
+  }
+
   const pill = $('#top-site')
   if (!state.site) return
   if (state.site.up) {
@@ -643,14 +651,31 @@ function mrrFigures() {
     .filter((r) => r.cadence === 'once' && String(r.startedAt || '').slice(0, 7) === month)
     .reduce((a, r) => a + Number(r.amount || 0), 0)
   const oneOffLife = rows.filter((r) => r.cadence === 'once').reduce((a, r) => a + Number(r.amount || 0), 0)
-  return { rows, active, mrr, oneOffMonth, oneOffLife }
+  /* Summer exposure: Year 13s stop paying after their exams (June), so the
+     share of MRR that comes from Year 13 is the share that falls away in
+     summer unless it is replaced. Unknown year groups count as exposed. */
+  const y13 = active.filter((r) => r.yearGroup !== 'Year 12' && r.yearGroup !== 'Pre-A-level')
+  const y13Mrr = y13.reduce((a, r) => a + Number(r.amount || 0), 0)
+  const lastStart = rows.length ? rows.map((r) => String(r.startedAt || '')).sort().pop() : null
+  return { rows, active, mrr, oneOffMonth, oneOffLife, y13Mrr, lastStart }
+}
+
+/* The two targets Waleed set on 23 September 2026: £100k a year, then £1m.
+   Expressed as MRR held every month of the year (no summer dip). */
+const MRR_TARGET_100K = Math.ceil(100000 / 12)
+const MRR_TARGET_1M = Math.ceil(1000000 / 12)
+
+function monthsPaid(r) {
+  const start = new Date(r.startedAt || Date.now())
+  const end = r.endedAt ? new Date(r.endedAt) : new Date()
+  return Math.max(1, Math.floor((end - start) / (30.44 * 86400000)) + 1)
 }
 
 function renderSales() {
   const body = $('#sales-body')
   const chip = $('#sales-chip')
   if (!body) return
-  const { rows, active, mrr, oneOffMonth, oneOffLife } = mrrFigures()
+  const { rows, active, mrr, oneOffMonth, oneOffLife, y13Mrr, lastStart } = mrrFigures()
 
   chip.textContent = rows.length ? 'your record' : 'nothing recorded'
   chip.className = rows.length ? 'chip chip-manual' : 'chip chip-pending'
@@ -662,7 +687,7 @@ function renderSales() {
         .map(
           (r) => `
       <div class="list-row sale-row" data-id="${esc(r.id)}">
-        <span class="row-name">${esc(r.name || 'Unnamed')} <span class="muted small">${esc(r.programme || '')}${r.endedAt ? ' \u00b7 ended ' + esc(shortDate(r.endedAt)) : ''}</span></span>
+        <span class="row-name">${esc(r.name || 'Unnamed')} <span class="muted small">${esc(r.programme || '')}${r.yearGroup ? ' \u00b7 ' + esc(r.yearGroup) : ''}${r.source ? ' \u00b7 ' + esc(r.source) : ''}${r.cadence === 'monthly' ? ' \u00b7 month ' + monthsPaid(r) : ''}${r.approx ? ' \u00b7 start date approx' : ''}${r.endedAt ? ' \u00b7 ended ' + esc(shortDate(r.endedAt)) : ''}</span></span>
         <span class="row-meta">${poundsGBP(r.amount)}${r.cadence === 'monthly' ? '/mo' : ''}
           ${r.cadence === 'monthly' && !r.endedAt ? '<button class="task-del sale-stop" title="Mark as ended">stop</button>' : ''}
           <button class="task-del sale-del" title="Remove this row">remove</button>
@@ -678,20 +703,27 @@ function renderSales() {
       <div class="li-stat"><div class="label">One off this month</div><div class="hero-number">${poundsGBP(oneOffMonth)}</div><div class="hero-sub">${poundsGBP(oneOffLife)} recorded lifetime</div></div>
     </div>
     <div class="money-row"><span class="m-key">Annual run rate</span><span class="m-val">${poundsGBP(mrr * 12)}</span></div>
+    <div class="money-row"><span class="m-key">To a £100k year</span><span class="m-val">${mrr >= MRR_TARGET_100K ? 'reached' : `${Math.ceil((MRR_TARGET_100K - mrr) / 300)} more at £300`} <span class="muted small">(£${MRR_TARGET_100K.toLocaleString('en-GB')} MRR held all year)</span></span></div>
+    <div class="meter mrr-meter" title="MRR against the £100k a year line"><i style="width:${Math.min(100, Math.round((mrr / MRR_TARGET_100K) * 100))}%"></i></div>
+    <div class="money-row"><span class="m-key">Summer exposed</span><span class="m-val">${poundsGBP(y13Mrr)} <span class="muted small">(Year 13 or unknown year: stops in June unless replaced)</span></span></div>
+    <div class="money-row"><span class="m-key">Last enrolment</span><span class="m-val">${lastStart ? `${esc(shortDate(lastStart))} <span class="muted small">(${-daysUntil(lastStart)} days ago)</span>` : 'none'}</span></div>
     <div class="subhead">Enrolments</div>
     ${list}
-    <div class="task-add">
+    <div class="task-add sale-add">
       <input id="sale-name" type="text" placeholder="Student name" />
       <select id="sale-prog">${SALES_PROGRAMMES.map((p) => `<option>${esc(p)}</option>`).join('')}</select>
       <input id="sale-amt" type="number" min="0" step="1" placeholder="\u00a3" style="max-width:80px" />
       <select id="sale-cad"><option value="monthly">per month</option><option value="once">one off</option></select>
+      <select id="sale-year" title="Year group: this decides how much MRR falls away in summer"><option value="">year?</option><option>Year 13</option><option>Year 12</option><option>Pre-A-level</option></select>
+      <select id="sale-src" title="Where this student came from, so ad return stays real"><option value="">source?</option><option>Meta ads</option><option>Organic or SEO</option><option>Referral</option><option>Old list</option><option>Other</option></select>
       <button id="sale-save" class="gold-btn">Add</button>
     </div>
-    <p class="small muted" style="margin-bottom:0">Record a student the day they pay. MRR is active monthly enrolments only; one off programme fees are counted separately.</p>`
+    <p class="small muted" style="margin-bottom:0">Record a student the day they pay, with year group and source. MRR is active monthly enrolments only; one off programme fees are counted separately. A daily 7:25am push (mrr-daily-brief) reads this record, so it is only as true as you keep it.</p>`
 
   const persist = async () => {
     await putStore('sales', state.sales)
     renderSales()
+    renderTop()
     renderTriage()
   }
   const addBtn = $('#sale-save')
@@ -707,6 +739,8 @@ function renderSales() {
           programme: $('#sale-prog').value,
           amount,
           cadence: $('#sale-cad').value,
+          yearGroup: $('#sale-year').value || null,
+          source: $('#sale-src').value || null,
           startedAt: new Date().toISOString().slice(0, 10),
           endedAt: null,
         },

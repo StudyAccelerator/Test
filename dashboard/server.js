@@ -850,8 +850,12 @@ async function handleApi(req, res, url) {
     const inboxStore = readStore('linkedin-inbox', null)
     const inboxDrafts = inboxStore && inboxStore.conversations ? inboxStore.conversations.filter((c) => c.status === 'pending').length : 0
     const crmDue = callsDue(readStore('leads-crm', null))
+    const salesRows = readStore('sales', [])
+    const paying = (Array.isArray(salesRows) ? salesRows : []).filter((r) => r.cadence === 'monthly' && !r.endedAt)
     return sendJson(res, 200, {
       updatedAt: new Date().toISOString(),
+      mrr: paying.reduce((a, r) => a + Number(r.amount || 0), 0),
+      payingStudents: paying.length,
       openTasks: open.length,
       tasks: open.slice(0, 4).map((t) => ({ title: t.title, due: t.due })),
       todayEvents: events,
