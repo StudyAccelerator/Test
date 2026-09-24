@@ -6,6 +6,16 @@ Format per entry: GSC totals, top movers, SERP spot checks, AEO probes, indexati
 
 ---
 
+## 2026-09-24 (batch shipped: blog wave 2 live, 24 posts total)
+
+**A change record, not a measurement.** The six wave 2 posts went live on main the same day as the diagnostic CTA batch, verified on production (all six HTTP 200, correct dates in their JSON-LD, all six in the live sitemap, blog index now listing 24 posts). IndexNow pinged for the six plus the blog index and sitemap (HTTP 200).
+
+Publish dates were staggered on Waleed's instruction rather than stamped with today's date: 10, 13, 15, 18, 22 and 24 September, irregular gaps across a two week window, newest first in `lib/posts.ts` (the array was reordered so index order matches date order). The rule for every future wave: never one batch date, never an even rhythm.
+
+The six: UCAS personal statement three questions (24 Sept), predicted grades lower than expected (22nd), is my child revising properly (18th), how to revise A-level Biology (15th), how to revise A-level Maths (13th), the GCSE to A-level jump (10th). Five carry the diagnostic CTA; the UCAS post deliberately does not, since a personal statement has no revision-diagnosis angle.
+
+Their syndication twins are in Backlink Pack 2 (`content/backlink-articles/A-Level-Accelerators-Backlink-Pack-2-September-2026.pdf`), handed to Waleed for Pragya the same day, now that the site versions exist for the links to point at.
+
 ## 2026-09-24 (batch shipped: diagnostic CTAs live on the blog)
 
 **A change record, not a measurement.** The diagnostic conversion pass went LIVE on main and is verified on production across all 12 articles; IndexNow pinged (HTTP 200). Before this, 10 of the 18 live articles carried no diagnostic call to action at all, including the two biggest traffic pages (resits, 19,226 impressions; year-12-summer), so most blog readers were never offered the funnel entry point.
