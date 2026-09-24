@@ -6,6 +6,27 @@ Format per entry: GSC totals, top movers, SERP spot checks, AEO probes, indexati
 
 ---
 
+## 2026-09-24 (batch shipped: diagnostic CTAs live on the blog)
+
+**A change record, not a measurement.** The diagnostic conversion pass went LIVE on main and is verified on production across all 12 articles; IndexNow pinged (HTTP 200). Before this, 10 of the 18 live articles carried no diagnostic call to action at all, including the two biggest traffic pages (resits, 19,226 impressions; year-12-summer), so most blog readers were never offered the funnel entry point.
+
+What shipped: a new slim `DiagnosticInline` component (cream card, gold left edge, per-article framing, one link) placed mid-article on 8 posts; a single in-text sentence with a link on 4 more (the results-day crisis posts and two method posts, where a card read as pushy); the appeals post and the timetable post deliberately left with nothing; the 4 posts that already had the full end-of-article `DiagnosticCTA` untouched. The kit's stale "about three minutes" claim was corrected to 4 minutes to match the page.
+
+**What to watch next:** GA4 `diagnostic_start` broken down by landing page, before and after. The baseline to beat is 41 diagnostic starts in the month to mid-September against thousands of blog sessions. GA4 key events were also marked the same day (`generate_lead`, `diagnostic_callback_request`), so from now on the conversion columns in every channel and landing-page report carry real numbers; they do not backfill, so anything before 24 September stays at zero.
+
+**Filing note:** the 17 September entry below was written on the `claude/seo-blog-wave-2` branch and never reached main, so it was replayed here on 24 September. Measurement entries belong on main the day they are taken, whatever branch the session is sitting on.
+
+## 2026-09-17 (on-demand check, requested by Waleed during the Pragya round 9 review)
+
+**Google Search Console** (sc-domain:alevelaccelerators.com, last 28 days, 19 August to 15 September 2026, read live via Chrome):
+
+- Totals: **234 clicks, 30,900 impressions, average CTR 0.8%, average position 9.7. 636 queries** with impressions.
+- Against the record: the 8 August all-time read (7 July to 7 August, about a month) was 63 clicks and 3,150 impressions at position 12.3 across 140 queries. The monthly run-rate is therefore roughly **4x on clicks and 10x on impressions in six weeks**, the average position has crossed onto page 1 (12.3 to 9.7), and the query footprint has more than quadrupled (140 to 636).
+- Top queries in the window are the free-tools cluster ("revision timetable maker" and "a level revision planner", the latter at 319 impressions), resits, and the appeals-deadline queries ("a level remark deadline 2026"), i.e. the July planner-targeting batch and the results cluster doing the work. Clicks are long-tail spread across hundreds of queries.
+- GSC now offers a "performance in generative AI features" report for the property; not yet read, worth folding into the next weekly run.
+
+**Context for the read:** requested while assessing whether the SEO operation (on-site optimiser + Pragya's off-site work since late July) is working. It is: every headline number moved the right way. Attribution stays honest: the ranking pages and winning queries map to on-site batches (planner targeting, resit hub, results cluster, subject pages); the off-site layer is still profiles and syndication with zero editorial education/parenting placements, so the authority lane remains the open gap.
+
 ## 2026-08-08 (on-demand audit, requested by Waleed)
 
 **Google Search Console** (all time, 7 July to 7 August; ground truth):
