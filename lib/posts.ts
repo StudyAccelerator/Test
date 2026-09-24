@@ -18,8 +18,8 @@ export const posts: Post[] = [
     title: 'The New UCAS Personal Statement: How to Answer All Three Questions (2027 Entry)',
     description:
       'The three UCAS questions, the 4,000-character limit, and how to answer each one with evidence instead of adjectives. What actually earns the place, from a doctor who has worked with over 1,000 A-level students.',
-    datePublished: '2026-09-17',
-    dateModified: '2026-09-17',
+    datePublished: '2026-09-24',
+    dateModified: '2026-09-24',
     readingMinutes: 10,
     category: 'Predicted Grades & UCAS',
     keywords: [
@@ -35,8 +35,8 @@ export const posts: Post[] = [
     title: 'Predicted Grades Lower Than Expected? What to Do in the First Two Weeks',
     description:
       "A low prediction is a judgement, not a verdict, and it can change until your school submits UCAS. The evidence route, the application strategy route, and the teacher conversation that actually works.",
-    datePublished: '2026-09-15',
-    dateModified: '2026-09-15',
+    datePublished: '2026-09-22',
+    dateModified: '2026-09-22',
     readingMinutes: 9,
     category: 'Predicted Grades & UCAS',
     keywords: [
@@ -48,46 +48,12 @@ export const posts: Post[] = [
     ],
   },
   {
-    slug: 'how-to-revise-a-level-maths',
-    title: "How to Revise for A-Level Maths (Notes Won't Save You)",
-    description:
-      'Maths is a performance subject: the only revision that works is doing questions, logging every error and re-attempting them cold. The full system, from the core loop to exam-day time-per-mark.',
-    datePublished: '2026-09-14',
-    dateModified: '2026-09-14',
-    readingMinutes: 9,
-    category: 'Subject Guides',
-    keywords: [
-      'how to revise for a level maths',
-      'a level maths revision',
-      'a level maths revision tips',
-      'best way to revise a level maths',
-      'a level maths past papers how many',
-    ],
-  },
-  {
-    slug: 'how-to-revise-a-level-biology',
-    title: 'How to Revise for A-Level Biology: The Method That Actually Earns Marks',
-    description:
-      'Biology punishes re-reading harder than any A-level: the marks live in retrieval, mark-scheme wording and application. A doctor who took it to medicine lays out the full topic-by-topic method.',
-    datePublished: '2026-09-12',
-    dateModified: '2026-09-12',
-    readingMinutes: 10,
-    category: 'Subject Guides',
-    keywords: [
-      'how to revise for a level biology',
-      'a level biology revision',
-      'a level biology revision tips',
-      'how to get an a in a level biology',
-      'a level biology exam technique',
-    ],
-  },
-  {
     slug: 'is-my-child-revising-properly',
     title: "Is My Child Actually Revising? Six Signs the Hours Aren't Working",
     description:
       'Hours at a desk and tidy notes are the worst predictors of results. A doctor explains the six signs revision isn\'t converting into marks, and how to fix it without starting a war at home.',
-    datePublished: '2026-09-10',
-    dateModified: '2026-09-10',
+    datePublished: '2026-09-18',
+    dateModified: '2026-09-18',
     readingMinutes: 9,
     category: 'For Parents',
     keywords: [
@@ -99,12 +65,46 @@ export const posts: Post[] = [
     ],
   },
   {
+    slug: 'how-to-revise-a-level-biology',
+    title: 'How to Revise for A-Level Biology: The Method That Actually Earns Marks',
+    description:
+      'Biology punishes re-reading harder than any A-level: the marks live in retrieval, mark-scheme wording and application. A doctor who took it to medicine lays out the full topic-by-topic method.',
+    datePublished: '2026-09-15',
+    dateModified: '2026-09-15',
+    readingMinutes: 10,
+    category: 'Subject Guides',
+    keywords: [
+      'how to revise for a level biology',
+      'a level biology revision',
+      'a level biology revision tips',
+      'how to get an a in a level biology',
+      'a level biology exam technique',
+    ],
+  },
+  {
+    slug: 'how-to-revise-a-level-maths',
+    title: "How to Revise for A-Level Maths (Notes Won't Save You)",
+    description:
+      'Maths is a performance subject: the only revision that works is doing questions, logging every error and re-attempting them cold. The full system, from the core loop to exam-day time-per-mark.',
+    datePublished: '2026-09-13',
+    dateModified: '2026-09-13',
+    readingMinutes: 9,
+    category: 'Subject Guides',
+    keywords: [
+      'how to revise for a level maths',
+      'a level maths revision',
+      'a level maths revision tips',
+      'best way to revise a level maths',
+      'a level maths past papers how many',
+    ],
+  },
+  {
     slug: 'gcse-to-a-level-jump',
     title: 'The GCSE to A-Level Jump: Why Bright Students Hit a Wall in Year 12',
     description:
       "Strong GCSEs, sinking in Year 12: the most predictable crisis in British education, and it isn't about ability. What actually changes at A-level, the warning signs parents can see, and the September fix.",
-    datePublished: '2026-09-08',
-    dateModified: '2026-09-08',
+    datePublished: '2026-09-10',
+    dateModified: '2026-09-10',
     readingMinutes: 9,
     category: 'For Parents',
     keywords: [
