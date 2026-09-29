@@ -1,0 +1,4 @@
+{
+  "note": "Template only. The real roster of current Top 1% Mentorship students lives in dashboard/data/student-roster.json, which is gitignored, because student names never reach GitHub. Add a student the day they join: name, any spellings used in meeting titles, and status.",
+  "students": []
+}

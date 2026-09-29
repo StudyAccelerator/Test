@@ -1,0 +1,7 @@
+{
+  "note": "Template only. The real values live in dashboard/data/student-sessions-config.json, which is gitignored, because the spreadsheet holds student data and its link is private.",
+  "sheet_id": "",
+  "sheet_url": "",
+  "tab_name": "Student Sessions",
+  "row_order": "newest session first"
+}
