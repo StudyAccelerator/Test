@@ -90,6 +90,11 @@
       "id": "mentorship-teaching",
       "label": "Mentorship: the teaching curriculum",
       "path": "content/mentorship/08-the-teaching-curriculum.md"
+    },
+    {
+      "id": "mentorship-clinic",
+      "label": "Mentorship: scaling past one to one",
+      "path": "content/mentorship/09-past-one-to-one.md"
     }
   ]
 }
