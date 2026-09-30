@@ -4,6 +4,8 @@
 
 ## 1. The scorecard (one per student)
 
+**Superseded 30 September 2026: use `10-the-scorecard.md` instead.** That file rebuilds the scorecard around the four tier mark loss analysis, cuts the twenty seven columns below to eight fields a student will actually fill in, and ships two importable CSV templates. The version below is kept only as the record of what came first.
+
 Keep it wherever you will actually open it: a Google Sheet shared with the student is the simplest, because they fill it in before every session and you both see the same page. One row per week. The student owns the weekly rows; you own the monthly page.
 
 **Header block (filled in session 1).** Name. Year and track (Year 12 or Resit). Subjects, boards, spec links. Target grades and the reason behind them (their words). Diagnostic profile and the five scores. Exam dates. School test and mock dates. Resit: exam centre, entry deadline, entry confirmed (date). Contact rules agreed (date). Parent name and email.

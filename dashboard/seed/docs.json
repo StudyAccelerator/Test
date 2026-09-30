@@ -95,6 +95,11 @@
       "id": "mentorship-clinic",
       "label": "Mentorship: scaling past one to one",
       "path": "content/mentorship/09-past-one-to-one.md"
+    },
+    {
+      "id": "mentorship-scorecard",
+      "label": "Mentorship: the scorecard",
+      "path": "content/mentorship/10-the-scorecard.md"
     }
   ]
 }
