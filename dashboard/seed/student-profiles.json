@@ -1,0 +1,3 @@
+{
+  "note": "Template only. Real student profiles live in dashboard/data/student-profiles.json, which is gitignored, because they hold student names, grades and personal context. Keyed by student name; the shape is documented in scripts/fathom-sessions/README.md."
+}

@@ -22,6 +22,31 @@ by hand after each session.
    student details, the **WhatsApp draft**, and Waleed's **private feedback**.
 5. Exports the spreadsheet and updates the Google Sheet.
 
+## The spreadsheet
+
+It is a workbook, not one grid, because forty sessions on a single page is not
+readable before a session.
+
+- **All sessions**, the overview: one row per call, newest first, with the
+  WhatsApp draft in column D and the private feedback further along.
+- **One tab per mentorship student**, which is what Waleed opens before a
+  session. Each one leads with year, subjects, exam board, what they are working
+  at now, target, what they want it for, first session, sessions so far and the
+  next session date. Then where they are right now, what to cover next session,
+  what to watch out for, and every session so far underneath.
+
+The profile fields live in `dashboard/data/student-profiles.json`, keyed by
+student name, and are kept current by a Claude session rather than by the
+script: a session writes `next_session_plan` and `where_they_are` fresh after
+almost every session, bumps `sessions_so_far`, and only touches `year`,
+`subjects`, `working_at` or `target` when a call actually says so. Anything that
+was never said is "not stated". `watch_out_for` is where a task that has slipped
+twice gets named plainly.
+
+`workbook` builds the .xlsx. Google Sheets imports every tab of an .xlsx in one
+go, which is the whole reason it is a workbook: the spreadsheet rebuilds in a
+single import rather than one per student.
+
 ## The hard rules
 
 - **Nothing is ever sent.** The WhatsApp message is a draft Waleed copies and
@@ -57,9 +82,21 @@ python3 scripts/fathom-sessions/fathom_sessions.py whatsapp --student Leighton
 # Record that one has been sent
 python3 scripts/fathom-sessions/fathom_sessions.py mark-sent 187889270
 
-# Write the spreadsheet
+# Write the spreadsheet: the flat CSV and the multi-tab workbook
 python3 scripts/fathom-sessions/fathom_sessions.py export-csv
+python3 scripts/fathom-sessions/fathom_sessions.py workbook
 ```
+
+## The voice of the messages
+
+The WhatsApp drafts go out under Waleed's name, so they follow the same voice
+standard as his emails: `.claude/skills/content-studio/references/email-style-waleed.md`
+and `.claude/skills/email-writer/references/plain-english.md`. The rules that
+matter most here are joined sentences rather than fragment pairs, what was
+covered written as prose rather than a bulleted list of nouns, a median sentence
+of about twelve words, and a shape that varies between messages so they do not
+read as generated. Check each one with the readability script in the
+email-writer skill and with `scripts/compliance-scan.py`.
 
 ## The roster
 
