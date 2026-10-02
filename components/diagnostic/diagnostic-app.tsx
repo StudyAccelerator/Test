@@ -87,10 +87,15 @@ export default function DiagnosticApp() {
   const [taker, setTaker] = useState<Taker | null>(null)
   const [diagnosis, setDiagnosis] = useState<Diagnosis | null>(null)
   const [resumeCount, setResumeCount] = useState(0)
-  /* ?start=1: paid traffic skips the landing page and lands on question one
-     (13 September 2026). Run as an A/B in Ads Manager with two otherwise
-     identical ads, one URL with the flag and one without. */
+  /* ?start=1: paid traffic skips the landing page (13 September 2026). Run as
+     an A/B in Ads Manager with two otherwise identical ads, one URL with the
+     flag and one without. `direct` marks a RESUMED run jumping straight to the
+     quiz (its question-one header gives the context the fork hero would have);
+     `directEntry` marks a fresh direct visitor, who gets the fork rendered as
+     a mini landing instead (2 October 2026, Waleed's call: parents forward the
+     link to their teenager, so the who-is-answering fork must survive). */
   const [direct, setDirect] = useState(false)
+  const [directEntry, setDirectEntry] = useState(false)
 
   /* Restore a previous run: unlocked report, or progress mid-quiz. Saves that
      predate the fork have no taker; every one of those was a student run.
@@ -129,12 +134,10 @@ export default function DiagnosticApp() {
         return
       }
     }
-    if (paramTaker) {
-      setTaker(paramTaker)
-      if (startNow) {
-        setDirect(true)
-        setStage('quiz')
-      }
+    if (paramTaker) setTaker(paramTaker)
+    if (startNow) {
+      setDirectEntry(true)
+      setStage('fork')
     }
   }, [])
 
@@ -270,7 +273,7 @@ export default function DiagnosticApp() {
     <>
       {(stage === 'intro' || stage === 'report') && <Header />}
       {stage === 'intro' && <Landing onStart={startQuiz} resumeCount={resumeCount} taker={taker} />}
-      {stage === 'fork' && <Fork onChoose={chooseTaker} onExit={() => setStage('intro')} />}
+      {stage === 'fork' && <Fork onChoose={chooseTaker} onExit={() => setStage('intro')} direct={directEntry} />}
       {stage === 'quiz' && (
         <Quiz
           answers={answers}
@@ -303,36 +306,76 @@ export default function DiagnosticApp() {
    Fork: who is this diagnostic for?
    ═══════════════════════════════════════════════════════════════════════ */
 
-function Fork({ onChoose, onExit }: { onChoose: (t: Taker) => void; onExit: () => void }) {
+function Fork({ onChoose, onExit, direct = false }: { onChoose: (t: Taker) => void; onExit: () => void; direct?: boolean }) {
+  /* `direct` renders the fork as a MINI LANDING for ?start=1 ad traffic
+     (2 October 2026): the ad already sold the click, so this one screen does
+     the whole landing job (headline, promise, who built it) and the only
+     decision is who's answering. The full landing page never shows. */
   return (
     <div className="min-h-[100svh] flex flex-col bg-brand-cream">
-      <div className="max-w-3xl w-full mx-auto px-5 pt-6">
-        <button
-          type="button"
-          onClick={onExit}
-          className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple/60 hover:text-brand-purple transition -ml-1 px-1 py-1"
-        >
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
-            <path d="M15 18l-6-6 6-6" />
-          </svg>
-          Back
-        </button>
-      </div>
-      <div className="flex-1 flex items-center justify-center px-5 pb-16">
+      {!direct && (
+        <div className="max-w-3xl w-full mx-auto px-5 pt-6">
+          <button
+            type="button"
+            onClick={onExit}
+            className="inline-flex items-center gap-1.5 text-sm font-semibold text-brand-purple/60 hover:text-brand-purple transition -ml-1 px-1 py-1"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4" aria-hidden="true">
+              <path d="M15 18l-6-6 6-6" />
+            </svg>
+            Back
+          </button>
+        </div>
+      )}
+      <div className="flex-1 flex items-center justify-center px-5 py-14">
         <motion.div
           initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, ease: EASE }}
           className="w-full max-w-2xl"
         >
-          <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-4 text-center">Before we start</p>
-          <h1 className="font-serif font-bold tracking-tight text-3xl sm:text-4xl text-brand-purple text-center leading-tight">
-            Who&apos;s taking this?
-          </h1>
-          <p className="mt-3 text-center text-brand-text/60 leading-relaxed max-w-md mx-auto">
-            Same diagnosis either way. The questions are just written for whoever&apos;s answering.
-          </p>
-          <div className="mt-9 grid sm:grid-cols-2 gap-4">
+          {direct ? (
+            <>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-4 text-center">
+                Free revision diagnostic
+              </p>
+              <h1 className="font-serif font-bold tracking-tight text-3xl sm:text-[2.6rem] text-brand-purple text-center leading-tight">
+                Find out what&apos;s holding you back from A* grades in 4 minutes
+              </h1>
+              <p className="mt-3 text-center text-brand-text/60 leading-relaxed max-w-lg mx-auto">
+                20 questions about how the revision actually happens. Instant report: where the marks are
+                leaking, and what to change first.
+              </p>
+              <div className="mt-5 flex items-center justify-center gap-3">
+                <Image
+                  src="/photos/waleed-grad-portrait.jpg"
+                  alt="Dr Waleed Ahmad"
+                  width={96}
+                  height={96}
+                  unoptimized
+                  className="h-11 w-11 shrink-0 rounded-full object-cover object-top ring-2 ring-brand-gold/50"
+                />
+                <div className="leading-tight text-left">
+                  <p className="text-sm font-bold text-brand-purple">Built by Dr Waleed Ahmad, MBBS</p>
+                  <p className="text-xs text-brand-text/60">NHS doctor &middot; 1,000+ A-level students over 6 years</p>
+                </div>
+              </div>
+              <p className="mt-9 text-center font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/50">
+                Who&apos;s answering?
+              </p>
+            </>
+          ) : (
+            <>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold mb-4 text-center">Before we start</p>
+              <h1 className="font-serif font-bold tracking-tight text-3xl sm:text-4xl text-brand-purple text-center leading-tight">
+                Who&apos;s taking this?
+              </h1>
+              <p className="mt-3 text-center text-brand-text/60 leading-relaxed max-w-md mx-auto">
+                Same diagnosis either way. The questions are just written for whoever&apos;s answering.
+              </p>
+            </>
+          )}
+          <div className={`${direct ? 'mt-4' : 'mt-9'} grid sm:grid-cols-2 gap-4`}>
             <button
               type="button"
               onClick={() => onChoose('student')}
@@ -999,11 +1042,15 @@ function EmailGate({
       setError("That phone number doesn't look right. Check it and try again.")
       return
     }
-    const noContact = data.get('noContact') === 'on'
-    /* Preferred call slot (Morning/Afternoon/Evening), added 21 August 2026:
-       the opt-out became a positive choice of time, with the decline moved
-       below the button. Never sent for someone who declined the call. */
-    const callTime = noContact ? '' : ((data.get('callTime') as string) ?? '').trim()
+    /* The opt-out tick box and the call-time chips were REMOVED on 2 October
+       2026 (Waleed's call): the card above the field says plainly that the
+       number is for Dr Waleed's call, so submitting is the consent. Anyone who
+       asks not to be called gets marked no-contact by hand in MailerLite, and
+       the report's callback card still offers the time chips. Watch gate
+       completion in GA4 daily after this change; if it falls hard, the box
+       comes back. */
+    const noContact = false
+    const callTime = ''
 
     setSubmitting(true)
     const d = diagnose(answers, taker)
@@ -1169,42 +1216,56 @@ function EmailGate({
                 placeholder="07..."
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
-              {/* The sell on the number, made prominent on Waleed's 5 September
-                  instruction: the call IS the free strategy plan, and when their
-                  final answer asked for a custom plan, it says so in their words. */}
-              <div className="mt-2 rounded-xl border-2 border-brand-gold/60 bg-brand-gold/10 px-4 py-3">
-                <p className="text-sm font-bold text-brand-gold leading-snug">
+              {/* The sell on the number, rebuilt 2 October 2026 to lift call
+                  opt-ins: who is calling (photo and credentials), what the call
+                  delivers, and honest scarcity (his real rota). The call IS the
+                  free strategy plan, and when their final answer asked for a
+                  custom plan, it says so in their words. */}
+              <div className="mt-2 rounded-xl border-2 border-brand-gold/60 bg-brand-gold/10 px-4 py-4">
+                <div className="flex items-center gap-3">
+                  <Image
+                    src="/photos/waleed-grad-portrait.jpg"
+                    alt="Dr Waleed Ahmad"
+                    width={96}
+                    height={96}
+                    unoptimized
+                    className="h-12 w-12 shrink-0 rounded-full object-cover object-top ring-2 ring-brand-gold/60"
+                  />
+                  <div className="leading-tight">
+                    <p className="text-sm font-bold text-brand-cream">Who&apos;s calling: Dr Waleed Ahmad</p>
+                    <p className="mt-0.5 text-xs text-brand-cream/70">NHS doctor &middot; 1,000+ A-level students over 6 years</p>
+                  </div>
+                </div>
+                <p className="mt-3 text-sm font-bold text-brand-gold leading-snug">
                   {wantsPlan
                     ? isParent
                       ? 'You said your child would benefit from a custom revision plan. This call is where Dr Waleed builds it, free.'
                       : "You said you'd benefit from a custom revision plan. This call is where Dr Waleed builds it, free."
                     : isParent
-                      ? 'Dr Waleed will call you to create a free A-level strategy plan for your child.'
-                      : 'Dr Waleed will call you to create your free A-level strategy plan.'}
+                      ? "Your free strategy call: Dr Waleed builds your child's plan with you, from these results."
+                      : 'Your free strategy call: Dr Waleed builds your plan with you, from these results.'}
                 </p>
-                <p className="mt-1 text-xs text-brand-cream/70 leading-relaxed">
-                  {isParent
-                    ? 'Built from these results, usually the same day, to give them a head start in their A-levels.'
-                    : 'Built from these results, usually the same day, to give you a head start in your A-levels.'}
+                <ul className="mt-2.5 space-y-1.5 text-sm text-brand-cream/85">
+                  {[
+                    isParent ? 'He reads these results before he rings you' : 'He reads your results before he rings you',
+                    isParent
+                      ? "The two changes that will move your child's grade first"
+                      : 'The two changes that will move your grade first',
+                    'You leave with the plan, whatever you decide',
+                  ].map((line) => (
+                    <li key={line} className="flex items-start gap-2">
+                      <span aria-hidden="true" className="mt-0.5 font-bold text-brand-gold">
+                        &#10003;
+                      </span>
+                      {line}
+                    </li>
+                  ))}
+                </ul>
+                <p className="mt-3 text-xs text-brand-cream/60 leading-relaxed">
+                  He takes a limited number of calls each week around his hospital shifts, and usually rings the same
+                  day, while the results are still fresh.
                 </p>
               </div>
-              {/* The call is the default: picking a time is the natural action,
-                  declining lives under the button in smaller text. */}
-              <fieldset className="mt-3">
-                <legend className="text-sm font-bold text-brand-cream/85 mb-1.5">
-                  When&apos;s best for his call? <span className="font-normal text-brand-cream/50">(optional)</span>
-                </legend>
-                <div className="flex flex-wrap gap-2">
-                  {['Right now', 'Morning', 'Afternoon', 'Evening'].map((t) => (
-                    <label key={t} className="cursor-pointer">
-                      <input type="radio" name="callTime" value={t} className="peer sr-only" />
-                      <span className="inline-block rounded-full border-2 border-white/15 bg-white/[0.06] px-4 py-2 text-sm font-semibold text-brand-cream/80 transition hover:border-brand-gold/60 peer-checked:border-brand-gold peer-checked:bg-brand-gold peer-checked:text-brand-purple peer-focus-visible:ring-2 peer-focus-visible:ring-brand-gold peer-focus-visible:ring-offset-2 peer-focus-visible:ring-offset-brand-purple">
-                        {t}
-                      </span>
-                    </label>
-                  ))}
-                </div>
-              </fieldset>
             </div>
             <div>
               <label htmlFor="diag-notes" className="block text-sm font-bold text-brand-cream/85 mb-1.5">
@@ -1237,18 +1298,6 @@ function EmailGate({
             >
               {submitting ? 'Unsealing the report…' : isParent ? 'Show me the report' : 'Show my report'}
             </button>
-            <label
-              htmlFor="diag-nocontact"
-              className="flex items-start justify-center gap-2 text-xs text-brand-cream/60 leading-snug cursor-pointer select-none"
-            >
-              <input
-                id="diag-nocontact"
-                name="noContact"
-                type="checkbox"
-                className="mt-0.5 h-3.5 w-3.5 shrink-0 rounded accent-brand-gold"
-              />
-              I&apos;d rather not get a call. Just the report and the emails.
-            </label>
             <p className="text-xs text-brand-cream/50 leading-relaxed">
               {isParent
                 ? "Free, and stays free. You'll also get Dr Waleed's emails for parents: what the report means, how to help, and the honest options. Unsubscribe any time."
