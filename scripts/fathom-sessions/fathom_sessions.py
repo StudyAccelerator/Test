@@ -463,6 +463,152 @@ def cmd_mark_sent(args):
     return 1
 
 
+# ------------------------------------------------------------------ workbook
+
+PROFILES = os.path.join(DATA_DIR, 'student-profiles.json')
+
+PROFILE_ROWS = [
+    ('year', 'Year'),
+    ('subjects', 'Subjects'),
+    ('exam_board', 'Exam board'),
+    ('working_at', 'Working at now'),
+    ('target', 'Target'),
+    ('goal', 'What they want it for'),
+    ('started', 'First session'),
+    ('sessions_so_far', 'Sessions so far'),
+    ('next_session', 'Next session'),
+]
+
+HISTORY_COLS = ['Date', 'Type', 'What we covered', 'Where they struggled',
+                'Tasks set', 'Open the next session with', 'Recording']
+
+
+def load_profiles():
+    try:
+        with open(PROFILES) as fh:
+            return json.load(fh)
+    except Exception:
+        return {}
+
+
+def cmd_workbook(args):
+    """Build the multi-tab spreadsheet: one overview tab plus a tab per student.
+
+    Google Sheets imports every tab of an .xlsx in one go, which is why this
+    exists: it means the whole spreadsheet is rebuilt in a single import rather
+    than one fiddly import per student.
+    """
+    try:
+        from openpyxl import Workbook
+        from openpyxl.styles import Font, Alignment, PatternFill
+        from openpyxl.utils import get_column_letter
+    except ImportError:
+        print('openpyxl is needed for the workbook: python3 -m pip install openpyxl',
+              file=sys.stderr)
+        return 1
+
+    store = load_store()
+    profiles = load_profiles()
+    sessions = sorted(store['sessions'], key=lambda s: (s['date'], s['recording_id']),
+                      reverse=True)
+
+    wb = Workbook()
+    head = Font(bold=True, color='FFFFFF')
+    head_fill = PatternFill('solid', fgColor='4A3A6B')
+    label = Font(bold=True)
+    section = Font(bold=True, size=12, color='4A3A6B')
+    wrap = Alignment(wrap_text=True, vertical='top')
+    top = Alignment(vertical='top')
+
+    # ---- overview tab -----------------------------------------------------
+    ws = wb.active
+    ws.title = 'All sessions'
+    headers = [lbl for _, lbl in CSV_COLUMNS]
+    ws.append(headers)
+    for c in range(1, len(headers) + 1):
+        ws.cell(1, c).font = head
+        ws.cell(1, c).fill = head_fill
+    for r in sessions:
+        ws.append([str(r.get(k, '') or '') for k, _ in CSV_COLUMNS])
+    widths = {'Date': 11, 'Student': 13, 'Session type': 13, 'WhatsApp draft': 60,
+              'Tasks for next meeting': 50, 'What we covered': 50,
+              'Where they struggled': 50, 'Start next session with': 40,
+              'Student details and notes': 45, 'My feedback (private)': 50,
+              'WhatsApp status': 14, 'Recording': 30}
+    for i, h in enumerate(headers, start=1):
+        ws.column_dimensions[get_column_letter(i)].width = widths.get(h, 20)
+    for row in ws.iter_rows(min_row=2):
+        for cell in row:
+            cell.alignment = wrap
+    ws.freeze_panes = 'A2'
+
+    # ---- one tab per student ---------------------------------------------
+    names = sorted({r['student'] for r in sessions if r['type'] == 'mentorship' and r['student']})
+    for extra in profiles:
+        if extra not in names:
+            names.append(extra)
+    names = sorted(set(names))
+
+    for name in names:
+        tab = wb.create_sheet(title=name[:31])
+        p = profiles.get(name, {})
+        tab['A1'] = name
+        tab['A1'].font = Font(bold=True, size=16, color='4A3A6B')
+        row = 3
+        for key, lbl in PROFILE_ROWS:
+            tab.cell(row, 1, lbl).font = label
+            tab.cell(row, 2, str(p.get(key, 'not stated') or 'not stated')).alignment = wrap
+            row += 1
+
+        row += 1
+        tab.cell(row, 1, 'WHERE THEY ARE').font = section
+        row += 1
+        tab.cell(row, 1, str(p.get('where_they_are', '') or '')).alignment = wrap
+        tab.merge_cells(start_row=row, start_column=1, end_row=row + 3, end_column=7)
+        row += 5
+
+        tab.cell(row, 1, 'NEXT SESSION: WHAT TO COVER').font = section
+        row += 1
+        plan = str(p.get('next_session_plan', '') or '')
+        for part in re.split(r'\s(?=\d\))', plan.strip()):
+            if part.strip():
+                tab.cell(row, 1, part.strip()).alignment = wrap
+                tab.merge_cells(start_row=row, start_column=1, end_row=row, end_column=7)
+                row += 1
+
+        row += 1
+        tab.cell(row, 1, 'WATCH OUT FOR').font = section
+        row += 1
+        tab.cell(row, 1, str(p.get('watch_out_for', '') or '')).alignment = wrap
+        tab.merge_cells(start_row=row, start_column=1, end_row=row + 1, end_column=7)
+        row += 3
+
+        tab.cell(row, 1, 'EVERY SESSION SO FAR').font = section
+        row += 1
+        for i, h in enumerate(HISTORY_COLS, start=1):
+            c = tab.cell(row, i, h)
+            c.font = head
+            c.fill = head_fill
+        row += 1
+        mine = [r for r in sessions if r['student'] == name]
+        for r in mine:
+            vals = [r['date'],
+                    'Mentorship' if r['type'] == 'mentorship' else 'Sales call',
+                    r.get('covered', ''), r.get('struggled_with', ''),
+                    r.get('tasks_set', ''), r.get('next_session_focus', ''), r.get('url', '')]
+            for i, v in enumerate(vals, start=1):
+                tab.cell(row, i, str(v or '')).alignment = wrap
+            row += 1
+
+        for col, w in zip('ABCDEFG', [22, 46, 46, 46, 46, 40, 30]):
+            tab.column_dimensions[col].width = w
+
+    path = args.path or os.path.join(DATA_DIR, 'Student Sessions.xlsx')
+    wb.save(path)
+    print(f'{len(names)} student tab(s) plus the overview written to {path}')
+    return 0
+
+
 def main():
     p = argparse.ArgumentParser(description=__doc__,
                                 formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -501,6 +647,10 @@ def main():
     ms = sub.add_parser('mark-sent', help='record that a message was sent')
     ms.add_argument('recording_id')
     ms.set_defaults(func=cmd_mark_sent)
+
+    wbk = sub.add_parser('workbook', help='build the multi-tab xlsx for Google Sheets')
+    wbk.add_argument('path', nargs='?')
+    wbk.set_defaults(func=cmd_workbook)
 
     exp = sub.add_parser('export-csv', help='write the spreadsheet')
     exp.add_argument('path', nargs='?')
