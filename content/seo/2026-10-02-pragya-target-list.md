@@ -8,7 +8,7 @@ Her work is measured two ways from here: placements live (a URL we can open) and
 
 ## Tier 1: parent-of-teen publications (guest articles, the big prize)
 
-These accept editorial contributions. The play: Pragya pitches, the article runs under Dr Waleed's byline using our pre-written syndication articles (packs 1 and 2, already in her hands) or a fresh piece we write on request. Waleed approves every pitch and every final placement before it goes live.
+These accept editorial contributions. The play: Pragya pitches, the article runs under Dr Waleed's byline using our pre-written syndication articles (packs 1 and 2, already in her hands). Under the standing rules below she does not need per-placement approval: the content is already approved, so as long as it is published word for word she just goes.
 
 1. **The Parents' Guide To** (theparentsguideto.co.uk/write-for-us). Parents of Years 10 to 13 exactly, 15 published guides, sold into schools. They ask for original articles of 1,500 to 2,500 words supporting parents of teens. The single best-matched site on this list. Our "is my child revising properly" and "predicted grades" twins fit their brief directly.
 2. **Families Online** (familiesonline.co.uk). The Families magazine network, local editions across the UK. Already approved as the priority in the round 12 reply: listing plus, if possible, an editorial feature.
@@ -51,7 +51,17 @@ Home educating parents of GCSE and A-level age children buy tutoring at above-av
 ## Who sends what
 
 - **Waleed sends** (relationship asks under his own name, drafts in content/seo/2026-08-09-listicle-outreach-drafts.md): eParenting, MidKent College, MasteryMind, Morningfold, Latimer, Avalon, the school template, and Save the Student if a route exists.
-- **Pragya executes** everything else above: pitches, submissions, listings, follow-ups. Every guest article pitch and final placement is approved by Waleed before it goes live, and every completed placement is reported as a live URL.
+- **Pragya executes** everything else above: pitches, submissions, listings, follow-ups, reported weekly as live URLs.
+
+## Standing rules (2 October 2026, so Waleed does not have to micromanage)
+
+Waleed's ruling: no per-placement approvals. She operates freely inside these rules and only asks when a situation falls outside them.
+
+1. Only sites on this list (or a later approved addition).
+2. Only content we have written: the syndication pack articles, word for word, byline Dr Waleed Ahmad, linking to https://alevelaccelerators.com (non-www). No edits, no rewrites, nothing AI-written under his name.
+3. Listings carry only: business name A-Level Accelerators, the website link, and a description of the free tools. Never an address.
+4. Nothing paid for without his written OK first.
+5. Ask only when a site wants the article changed, wants money, or is not on the list. Otherwise go.
 
 ## Log
 
