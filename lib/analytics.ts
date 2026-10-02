@@ -30,10 +30,15 @@ export function trackFunnel(step: FunnelStep, params: Record<string, string | nu
      otherwise. Register it as a custom dimension in GA4 to break the
      funnel down by it. */
   let variant = 'landing'
+  /* hero: which mini-landing headline a direct visitor saw (?h=medic etc,
+     round 4 angle test, 2 October 2026); 'default' when none was asked for. */
+  let hero = 'default'
   try {
-    if (new URLSearchParams(window.location.search).get('start') === '1') variant = 'direct'
+    const qs = new URLSearchParams(window.location.search)
+    if (qs.get('start') === '1') variant = 'direct'
+    hero = qs.get('h') || 'default'
   } catch {}
-  w.gtag?.('event', step, { variant, ...params })
+  w.gtag?.('event', step, { variant, hero, ...params })
 }
 
 export function trackLead(): void {

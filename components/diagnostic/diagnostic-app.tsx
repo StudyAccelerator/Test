@@ -96,6 +96,8 @@ export default function DiagnosticApp() {
      link to their teenager, so the who-is-answering fork must survive). */
   const [direct, setDirect] = useState(false)
   const [directEntry, setDirectEntry] = useState(false)
+  /* ?h=<key>: which mini-landing headline to show (see FORK_HEADLINES) */
+  const [hero, setHero] = useState('default')
 
   /* Restore a previous run: unlocked report, or progress mid-quiz. Saves that
      predate the fork have no taker; every one of those was a student run.
@@ -109,6 +111,8 @@ export default function DiagnosticApp() {
       if (param === 'parents' || param === 'parent') paramTaker = 'parent'
       if (param === 'students' || param === 'student') paramTaker = 'student'
       startNow = qs.get('start') === '1'
+      const h = qs.get('h')
+      if (h && h in FORK_HEADLINES) setHero(h)
     } catch {}
     const stored = loadStored()
     if (stored) {
@@ -273,7 +277,7 @@ export default function DiagnosticApp() {
     <>
       {(stage === 'intro' || stage === 'report') && <Header />}
       {stage === 'intro' && <Landing onStart={startQuiz} resumeCount={resumeCount} taker={taker} />}
-      {stage === 'fork' && <Fork onChoose={chooseTaker} onExit={() => setStage('intro')} direct={directEntry} />}
+      {stage === 'fork' && <Fork onChoose={chooseTaker} onExit={() => setStage('intro')} direct={directEntry} hero={hero} />}
       {stage === 'quiz' && (
         <Quiz
           answers={answers}
@@ -306,7 +310,36 @@ export default function DiagnosticApp() {
    Fork: who is this diagnostic for?
    ═══════════════════════════════════════════════════════════════════════ */
 
-function Fork({ onChoose, onExit, direct = false }: { onChoose: (t: Taker) => void; onExit: () => void; direct?: boolean }) {
+/* Mini-landing headlines for the direct entry, selected by ?h=<key> so an ad
+   angle can land on a matching headline (round 4 angle test, 2 October 2026).
+   Every funnel event carries `hero` so GA4 can compare them. */
+const FORK_HEADLINES: Record<string, { title: string; sub: string }> = {
+  default: {
+    title: "Find out what's holding you back from A* grades in 4 minutes",
+    sub: '20 questions about how the revision actually happens. Instant report: where the marks are leaking, and what to change first.',
+  },
+  medic: {
+    title: "Is your child's revision good enough for medicine? Find out in 4 minutes",
+    sub: '20 questions about how they actually revise. Instant report: where the marks are leaking, and what to change before the grades have to carry the application.',
+  },
+  stuck: {
+    title: 'Find out why the grade is stuck, in 4 minutes',
+    sub: '20 questions about how the revision actually happens. Instant report: where the marks are leaking, and what to change first.',
+  },
+}
+
+function Fork({
+  onChoose,
+  onExit,
+  direct = false,
+  hero = 'default',
+}: {
+  onChoose: (t: Taker) => void
+  onExit: () => void
+  direct?: boolean
+  hero?: string
+}) {
+  const copy = FORK_HEADLINES[hero] ?? FORK_HEADLINES.default
   /* `direct` renders the fork as a MINI LANDING for ?start=1 ad traffic
      (2 October 2026): the ad already sold the click, so this one screen does
      the whole landing job (headline, promise, who built it) and the only
@@ -340,12 +373,9 @@ function Fork({ onChoose, onExit, direct = false }: { onChoose: (t: Taker) => vo
                 Free revision diagnostic
               </p>
               <h1 className="font-serif font-bold tracking-tight text-3xl sm:text-[2.6rem] text-brand-purple text-center leading-tight">
-                Find out what&apos;s holding you back from A* grades in 4 minutes
+                {copy.title}
               </h1>
-              <p className="mt-3 text-center text-brand-text/60 leading-relaxed max-w-lg mx-auto">
-                20 questions about how the revision actually happens. Instant report: where the marks are
-                leaking, and what to change first.
-              </p>
+              <p className="mt-3 text-center text-brand-text/60 leading-relaxed max-w-lg mx-auto">{copy.sub}</p>
               <div className="mt-5 flex items-center justify-center gap-3">
                 <Image
                   src="/photos/waleed-grad-portrait.jpg"
