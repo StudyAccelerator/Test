@@ -1043,10 +1043,14 @@ function EmailGate({
     e.preventDefault()
     setError(null)
     const data = new FormData(e.currentTarget)
-    const name = (data.get('firstName') as string).trim()
+    /* Phones autocapitalise off left names like "waleed" in the report's
+       headings and every email's "Hi {name}", so the first letter is fixed
+       here, at the single point the names enter the system (2 October 2026). */
+    const capFirst = (s: string) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s)
+    const name = capFirst((data.get('firstName') as string).trim())
     const email = (data.get('email') as string).trim()
     const phoneRaw = ((data.get('phone') as string) ?? '').trim()
-    const child = ((data.get('childName') as string) ?? '').trim()
+    const child = capFirst(((data.get('childName') as string) ?? '').trim())
     const notes = ((data.get('notes') as string) ?? '').trim().slice(0, 250)
 
     if (!name) {
@@ -1262,7 +1266,7 @@ function EmailGate({
                     className="h-12 w-12 shrink-0 rounded-full object-cover object-top ring-2 ring-brand-gold/60"
                   />
                   <div className="leading-tight">
-                    <p className="text-sm font-bold text-brand-cream">Who&apos;s calling: Dr Waleed Ahmad</p>
+                    <p className="text-sm font-bold text-brand-cream">Your completion gift from Dr Waleed Ahmad</p>
                     <p className="mt-0.5 text-xs text-brand-cream/70">NHS doctor &middot; 1,000+ A-level students over 6 years</p>
                   </div>
                 </div>
@@ -1272,8 +1276,8 @@ function EmailGate({
                       ? 'You said your child would benefit from a custom revision plan. This call is where Dr Waleed builds it, free.'
                       : "You said you'd benefit from a custom revision plan. This call is where Dr Waleed builds it, free."
                     : isParent
-                      ? "Your free strategy call: Dr Waleed builds your child's plan with you, from these results."
-                      : 'Your free strategy call: Dr Waleed builds your plan with you, from these results.'}
+                      ? "A free strategy call: Dr Waleed builds your child's plan with you, from these results."
+                      : 'A free strategy call: Dr Waleed builds your plan with you, from these results.'}
                 </p>
                 <ul className="mt-2.5 space-y-1.5 text-sm text-brand-cream/85">
                   {[
@@ -1281,7 +1285,7 @@ function EmailGate({
                     isParent
                       ? "The two changes that will move your child's grade first"
                       : 'The two changes that will move your grade first',
-                    'You leave with the plan, whatever you decide',
+                    'You leave with a written action plan',
                   ].map((line) => (
                     <li key={line} className="flex items-start gap-2">
                       <span aria-hidden="true" className="mt-0.5 font-bold text-brand-gold">
@@ -1292,7 +1296,7 @@ function EmailGate({
                   ))}
                 </ul>
                 <p className="mt-3 text-xs text-brand-cream/60 leading-relaxed">
-                  He takes a limited number of calls each week around his hospital shifts, and usually rings the same
+                  Dr Waleed takes a limited number of calls each week around his hospital shifts, and usually rings the same
                   day, while the results are still fresh.
                 </p>
               </div>

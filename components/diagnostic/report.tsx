@@ -352,6 +352,11 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
   const isOptimiser = archetype.id === 'optimiser'
   const isParent = taker === 'parent'
   /* How the parent report refers to the student */
+  /* Names typed before 2 October 2026 may be stored lowercase ("waleed"):
+     fix the first letter at display time; the gate now fixes new ones at source. */
+  const capFirst = (s: string) => (s ? s.charAt(0).toUpperCase() + s.slice(1) : s)
+  firstName = capFirst(firstName)
+  childName = capFirst(childName)
   const child = childName || 'your child'
   const reduceMotion = useReducedMotion()
 
@@ -657,8 +662,8 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                     </div>
                   </div>
                   <div className="mt-4 border-t border-brand-purple/10 pt-4">
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-5 md:gap-7">
-                      <div className="relative shrink-0 w-[130px] rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(201,169,110,.35),0_12px_24px_rgba(46,37,87,.18)] transition-transform duration-300 hover:rotate-3 hover:-translate-y-2 hover:scale-[1.02]">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-10">
+                      <div className="relative shrink-0 w-[150px] md:w-[210px] rotate-2 rounded-2xl bg-white p-2 shadow-[0_0_0_1px_rgba(201,169,110,.35),0_12px_24px_rgba(46,37,87,.18)] transition-transform duration-300 hover:rotate-3 hover:-translate-y-2 hover:scale-[1.02]">
                         <Image
                           src="/photos/waleed-grad-portrait.jpg"
                           alt="Dr Waleed Ahmad, founder of A-Level Accelerators, at his medical school graduation"
@@ -667,31 +672,33 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
                           unoptimized
                           className="w-full h-auto rounded-xl"
                         />
-                        <div className="px-1 pt-1.5 pb-1 text-center">
-                          <p className="text-[11px] font-bold text-brand-purple leading-tight">Dr Waleed Ahmad, MBBS</p>
-                          <p className="mt-0.5 text-[9px] text-brand-purple/60 leading-tight">Founder, A-Level Accelerators</p>
+                        <div className="px-1 pt-2 pb-1 text-center">
+                          <p className="text-[13px] md:text-sm font-bold text-brand-purple leading-tight">Dr Waleed Ahmad, MBBS</p>
+                          <p className="mt-0.5 text-[10px] md:text-[11px] text-brand-purple/60 leading-tight">Founder, A-Level Accelerators</p>
                         </div>
                       </div>
-                      <p className="max-w-xl text-sm leading-relaxed text-brand-text/70 text-center md:text-left">
-                        <span className="font-bold text-brand-purple">
+                      <div className="max-w-xl text-center md:text-left">
+                        <p className="font-serif font-bold tracking-tight text-2xl md:text-[1.9rem] leading-tight text-brand-purple">
                           {isParent
-                            ? <>Click the button to see {child}&apos;s personalised plan, created by Dr Waleed Ahmad, MBBS.</>
-                            : <>Click the button to see your personalised plan, created by Dr Waleed Ahmad, MBBS.</>}
-                        </span>{' '}
-                        Over 6 years, we&apos;ve helped 1,000+ students towards top grades and first-choice university offers.
-                      </p>
-                    </div>
-                    <div className="mt-4 flex justify-center">
-                      <a
-                        href="#route"
-                        onClick={scrollToRoute}
-                        className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-10 py-4 text-lg font-bold hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)]"
-                      >
-                        {isParent
-                          ? <>Show me {childName ? `${childName}'s` : "my child's"} personalised plan</>
-                          : 'Show me my personalised plan'}
-                        <span aria-hidden="true" className="ml-2">↓</span>
-                      </a>
+                            ? <>{child}&apos;s personalised plan is ready.</>
+                            : <>Your personalised plan is ready.</>}
+                        </p>
+                        <p className="mt-3 text-[15px] md:text-base leading-relaxed text-brand-text/70">
+                          Built from these answers by Dr Waleed Ahmad, MBBS. Over 6 years, we&apos;ve helped 1,000+
+                          students towards top grades and first-choice university offers, and on average our students
+                          jump two grades.
+                        </p>
+                        <a
+                          href="#route"
+                          onClick={scrollToRoute}
+                          className="mt-6 inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-10 py-4 text-lg md:px-12 md:py-5 md:text-xl font-bold hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)]"
+                        >
+                          {isParent
+                            ? <>Show me {childName ? `${childName}'s` : "my child's"} plan</>
+                            : 'Show me my plan'}
+                          <span aria-hidden="true" className="ml-2">↓</span>
+                        </a>
+                      </div>
                     </div>
                   </div>
             </div>
