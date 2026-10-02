@@ -388,18 +388,21 @@ def cmd_patch(args):
     return 1
 
 
+# Column order matters: this is exactly how the Google Sheet is laid out, and the
+# fallback import rebuilds the sheet from this file. The WhatsApp draft sits
+# fourth on purpose, because it is the column Waleed reaches for most.
 CSV_COLUMNS = [
     ('date', 'Date'),
     ('student', 'Student'),
     ('type', 'Session type'),
+    ('student_message', 'WhatsApp draft'),
+    ('tasks_set', 'Tasks for next meeting'),
     ('covered', 'What we covered'),
     ('struggled_with', 'Where they struggled'),
-    ('tasks_set', 'Tasks for next meeting'),
     ('next_session_focus', 'Start next session with'),
     ('notes', 'Student details and notes'),
     ('private_feedback', 'My feedback (private)'),
     ('message_status', 'WhatsApp status'),
-    ('student_message', 'WhatsApp draft'),
     ('url', 'Recording'),
 ]
 
@@ -416,7 +419,11 @@ def cmd_export_csv(args):
         order = (lambda s: (s['student'] or 'zz', s['date'])) if args.by_student \
             else (lambda s: (s['date'], s['recording_id']))
         for r in sorted(rows, key=order, reverse=not args.by_student):
-            w.writerow([str(r.get(key, '') or '').replace('\n', ' ') for key, _ in CSV_COLUMNS])
+            w.writerow([
+                str(r.get(key, '') or '') if key == 'student_message'
+                else str(r.get(key, '') or '').replace('\n', ' ')
+                for key, _ in CSV_COLUMNS
+            ])
     print(f'{len(rows)} row(s) written to {path}')
     return 0
 
