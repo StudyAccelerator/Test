@@ -1289,18 +1289,24 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
   const system = (why: string): Route => ({
     id: 'system',
     eyebrow: p ? 'The recommended route' : 'Your recommended route',
-    name: 'Top 1% Study System',
-    strap: p ? 'Fix how they study, and every subject moves at once.' : 'Fix how you study, and every subject moves at once.',
+    name: 'Top 1% Mentorship',
+    strap: p
+      ? 'Dr Waleed works with them directly. Fix how they study, and every subject moves at once.'
+      : 'Dr Waleed works with you directly. Fix how you study, and every subject moves at once.',
     why,
     points: [
-      'Active recall, spaced repetition and exam technique, installed as habits',
-      'Time management that survives real school weeks',
-      'The exact system behind everything we teach',
+      'Diagnose, rebuild, coach: method, retention and exam technique, fixed in order',
+      p ? 'Dr Waleed watches their grades, their plan and their progress all year' : 'Dr Waleed watches your grades, your plan and your progress all year',
+      p ? 'Covers every subject they take at once, not one at a time' : 'Covers every subject you take at once, not one at a time',
     ],
     href: '/study-systems/',
-    cta: 'Explore the Study System',
-    meta: p ? 'Works alongside any subject they take' : 'Works alongside any subject you take',
+    cta: 'Explore the Top 1% Mentorship',
+    meta: p ? 'Works across every subject they take' : 'Works across every subject you take',
   })
+
+  /* Retained for a future cohort relaunch; no live branch routes to it since
+     2 October 2026 (every route now recommends the Top 1% Mentorship). */
+  void subjectAccel
 
   const callLine = p
     ? "Not sure which fits, or whether anything does yet? Book a free 30 minute call with Dr Waleed and talk it through, parent to doctor. He'll tell you honestly, even if the answer is none of them."
@@ -1372,12 +1378,12 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     if (accelSubjects.length > 0 && !systemSide) {
       const focus = worryIsAccel ? worry! : accelSubjects[0]
       return {
-        primary: subjectAccel(
+        primary: system(
           p
-            ? `${focus} is where the marks are leaking, and Year 13 starts the term that sets their predicted grades. The September cohort runs alongside school, working through real questions with a specialist every week, so the fix lands while it still counts.`
-            : `${focus} is where your marks are leaking, and Year 13 starts the term that sets your predicted grades. The September cohort runs alongside school, working through real questions with a specialist every week, so the fix lands while it still counts.`
+            ? `${focus} is where the marks are leaking, and the gap is in turning what they know into exam marks. That's the first thing Dr Waleed fixes in the mentorship: mark scheme wording and exam technique trained on real questions, in ${focus} first, then across everything they take, before the term that sets their predicted grades.`
+            : `${focus} is where your marks are leaking, and the gap is in turning what you know into exam marks. That's the first thing Dr Waleed fixes in the mentorship: mark scheme wording and exam technique trained on real questions, in ${focus} first, then across everything you take, before the term that sets your predicted grades.`
         ),
-        secondaryLine: 'If the underlying habits need work too, the Top 1% Study System runs alongside it. ' + callLine,
+        secondaryLine: `If you'd rather start with live subject teaching alone, the ${focus} Subject Accelerator's next cohort starts 17 January. ` + callLine,
       }
     }
     return {
@@ -1387,20 +1393,20 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
           : 'Your diagnostic points at how you study rather than at one subject, and that transfers to every subject you take. Going into Year 13 with the method already fixed is the difference between a calm year and a frantic one.'
       ),
       secondaryLine: accelSubjects.length > 0
-        ? `And if ${accelSubjects[0]} stays stubborn once the system is in, the Subject Accelerators start in September. ` + callLine
+        ? `And if ${accelSubjects[0]} stays stubborn once the system is in, the Subject Accelerators' next cohort starts 17 January. ` + callLine
         : callLine,
     }
   }
 
-  /* Year 13 and resits: September programmes and the system. */
+  /* Year 13 and resits: the mentorship, personalised by the diagnosis. */
   if (worryIsAccel && bottleneck === 'examCraft') {
     return {
-      primary: subjectAccel(
+      primary: system(
         p
-          ? `${worry} is where their marks are leaking, and the diagnostic shows the gap is in turning knowledge into exam marks. That's exactly what the twelve weeks train: past paper questions, mark scheme wording, and feedback on their answers, every single session.`
-          : `${worry} is where your marks are leaking, and your diagnostic shows the gap is in turning knowledge into exam marks. That's exactly what the twelve weeks train: past paper questions, mark scheme wording, and feedback on your answers, every single session.`
+          ? `${worry} is where their marks are leaking, and the diagnostic shows the gap is in turning knowledge into exam marks. That's exactly where the mentorship starts: past paper questions, mark scheme wording and feedback on their answers with Dr Waleed, in the subject that's costing them most first.`
+          : `${worry} is where your marks are leaking, and your diagnostic shows the gap is in turning knowledge into exam marks. That's exactly where the mentorship starts: past paper questions, mark scheme wording and feedback on your answers with Dr Waleed, in the subject that's costing you most first.`
       ),
-      secondaryLine: 'If the deeper habits need work too, the Top 1% Study System runs alongside it. ' + callLine,
+      secondaryLine: `If you'd rather start with live subject teaching alone, the ${worry} Subject Accelerator's next cohort starts 17 January. ` + callLine,
     }
   }
   if (systemSide) {
@@ -1415,7 +1421,7 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
             : 'Your diagnostic points at how you study, not at one subject. Fixing the system moves every grade at once, and in Year 13 the compounding starts immediately.'
       ),
       secondaryLine: accelSubjects.length > 0
-        ? `And if ${accelSubjects[0]} stays stubborn once the system is in, the Subject Accelerators start in September. ` + callLine
+        ? `And if ${accelSubjects[0]} stays stubborn once the system is in, the Subject Accelerators' next cohort starts 17 January. ` + callLine
         : callLine,
     }
   }
@@ -1423,16 +1429,16 @@ export function buildRouting(answers: Answers, scores: Scores, bottleneck: Dim, 
     const focus = worryIsAccel ? worry! : accelSubjects[0]
     const gapLine = gradeGap !== null && gradeGap >= 2
       ? p
-        ? ` With the grade jump they're chasing in ${focus}, specialist sessions every week is the honest route.`
-        : ` With the grade jump you're chasing in ${focus}, specialist sessions every week is the honest route.`
+        ? ` With the grade jump they're chasing in ${focus}, one person watching the whole picture every week is the honest route.`
+        : ` With the grade jump you're chasing in ${focus}, one person watching the whole picture every week is the honest route.`
       : ''
     return {
-      primary: subjectAccel(
+      primary: system(
         p
-          ? `Their fundamentals are solid, so the biggest available gain is subject-specific: live, exam-focused teaching in ${focus}, working through real questions with a specialist until the mark scheme wording is second nature.${gapLine}`
-          : `Your fundamentals are solid, so the biggest available gain is subject-specific: live, exam-focused teaching in ${focus}, working through real questions with a specialist until the mark scheme wording is second nature.${gapLine}`
+          ? `Their fundamentals are solid, so the biggest available gain is precision: Dr Waleed working through real ${focus} questions with them until the mark scheme wording is second nature, while keeping every other subject on track.${gapLine}`
+          : `Your fundamentals are solid, so the biggest available gain is precision: Dr Waleed working through real ${focus} questions with you until the mark scheme wording is second nature, while keeping every other subject on track.${gapLine}`
       ),
-      secondaryLine: callLine,
+      secondaryLine: `If you'd rather start with live subject teaching alone, the ${focus} Subject Accelerator's next cohort starts 17 January. ` + callLine,
     }
   }
   return {

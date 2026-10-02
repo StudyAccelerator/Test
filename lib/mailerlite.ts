@@ -33,8 +33,12 @@ const PARENT_ROUTE_GROUPS = {
 } as const
 
 /* Mirrors the sequence build guide: route values arrive as "Summer Accelerator",
-   "Chemistry Subject Accelerator" (or plain "Subject Accelerator"), or
-   "Top 1% Study System", so match Summer first, then contains-Subject, else system. */
+   "Chemistry Subject Accelerator" (or plain "Subject Accelerator"), or the
+   system-side name ("Top 1% Study System" until 2 October 2026, "Top 1%
+   Mentorship" since), so match Summer first, then contains-Subject, else
+   system. Since 2 October 2026 every diagnostic route is the mentorship, so
+   new leads all land in the system route groups and the subject/summer groups
+   receive nobody new. */
 export function routeGroupId(route: string): string {
   if (route.includes('Summer Accelerator')) return ROUTE_GROUPS.summer
   if (route.includes('Subject Accelerator')) return ROUTE_GROUPS.subject
