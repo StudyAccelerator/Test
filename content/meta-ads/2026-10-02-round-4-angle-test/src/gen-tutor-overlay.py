@@ -13,8 +13,8 @@ OUT = HERE.parent / "final"; OUT.mkdir(exist_ok=True)
 PHOTOS = {"pen": HERE / "photos/doctor-pen-600.jpg", "mask": HERE / "photos/doctor-original-upright.jpg"}
 CRED = "Dr Waleed Ahmad &middot; NHS Doctor &middot; 1,000+ A-level students"
 CONCEPTS = [
-    ("o1-tutor-mask", "mask", "If one-to-one tuition was the answer,", "every student with a tutor would get A*s.", ""),
-    ("o2-tutor-pen",  "pen",  "If one-to-one tuition was the answer,", "every student with a tutor would get A*s.", ""),
+    ("o1-tutor-mask", "mask", "If one-to-one tuition were the answer,", "every student with a tutor would be getting A*s.", "They aren't..."),
+    ("o2-tutor-pen",  "pen",  "If one-to-one tuition were the answer,", "every student with a tutor would be getting A*s.", "They aren't..."),
 ]
 # ratio: (w, h, photo focus y, text block bottom, gradient start)
 RATIOS = {"1x1": (1080, 1080, "18%", 70, 38), "4x5": (1080, 1350, "20%", 80, 42), "9x16": (1080, 1920, "22%", 340, 48)}
