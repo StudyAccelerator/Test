@@ -277,7 +277,7 @@ export default function DiagnosticApp() {
     <>
       {(stage === 'intro' || stage === 'report') && <Header />}
       {stage === 'intro' && <Landing onStart={startQuiz} resumeCount={resumeCount} taker={taker} />}
-      {stage === 'fork' && <Fork onChoose={chooseTaker} onExit={() => setStage('intro')} direct={directEntry} hero={hero} />}
+      {stage === 'fork' && <Fork onChoose={chooseTaker} onExit={() => setStage('intro')} direct={directEntry} hero={hero} voice={taker ?? 'student'} />}
       {stage === 'quiz' && (
         <Quiz
           answers={answers}
@@ -313,18 +313,40 @@ export default function DiagnosticApp() {
 /* Mini-landing headlines for the direct entry, selected by ?h=<key> so an ad
    angle can land on a matching headline (round 4 angle test, 2 October 2026).
    Every funnel event carries `hero` so GA4 can compare them. */
-const FORK_HEADLINES: Record<string, { title: string; sub: string }> = {
+type ForkCopy = { title: string; sub: string }
+/* Each key has a student voice and a parent voice; ?for=parents (every parent
+   ad URL) picks the parent one, so the headline addresses the person the ad
+   reached while the cards below still let them hand the link to their child. */
+const FORK_HEADLINES: Record<string, { student: ForkCopy; parent: ForkCopy }> = {
   default: {
-    title: "Find out what's holding you back from A* grades in 4 minutes",
-    sub: '20 questions about how the revision actually happens. Instant report: where the marks are leaking, and what to change first.',
+    student: {
+      title: "Find out what's holding you back from A* grades in 4 minutes",
+      sub: '20 questions about how you actually revise. Instant report: where the marks are leaking, and what to change first.',
+    },
+    parent: {
+      title: "Find out what's holding your child back from A* grades in 4 minutes",
+      sub: '20 questions about how they actually revise. Instant report: where the marks are leaking, and what to change first.',
+    },
   },
   medic: {
-    title: "Is your child's revision good enough for medicine? Find out in 4 minutes",
-    sub: '20 questions about how they actually revise. Instant report: where the marks are leaking, and what to change before the grades have to carry the application.',
+    student: {
+      title: 'Is your revision good enough for medicine? Find out in 4 minutes',
+      sub: '20 questions about how you actually revise. Instant report: where the marks are leaking, and what to change before the grades have to carry the application.',
+    },
+    parent: {
+      title: "Is your child's revision good enough for medicine? Find out in 4 minutes",
+      sub: '20 questions about how they actually revise. Instant report: where the marks are leaking, and what to change before the grades have to carry the application.',
+    },
   },
   stuck: {
-    title: 'Find out why the grade is stuck, in 4 minutes',
-    sub: '20 questions about how the revision actually happens. Instant report: where the marks are leaking, and what to change first.',
+    student: {
+      title: 'Find out why your grade is stuck, in 4 minutes',
+      sub: '20 questions about how you actually revise. Instant report: where the marks are leaking, and what to change first.',
+    },
+    parent: {
+      title: "Find out why your child's grade is stuck, in 4 minutes",
+      sub: '20 questions about how they actually revise. Instant report: where the marks are leaking, and what to change first.',
+    },
   },
 }
 
@@ -333,13 +355,15 @@ function Fork({
   onExit,
   direct = false,
   hero = 'default',
+  voice = 'student',
 }: {
   onChoose: (t: Taker) => void
   onExit: () => void
   direct?: boolean
   hero?: string
+  voice?: Taker
 }) {
-  const copy = FORK_HEADLINES[hero] ?? FORK_HEADLINES.default
+  const copy = (FORK_HEADLINES[hero] ?? FORK_HEADLINES.default)[voice === 'parent' ? 'parent' : 'student']
   /* `direct` renders the fork as a MINI LANDING for ?start=1 ad traffic
      (2 October 2026): the ad already sold the click, so this one screen does
      the whole landing job (headline, promise, who built it) and the only
