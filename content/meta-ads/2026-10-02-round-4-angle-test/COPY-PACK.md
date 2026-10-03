@@ -287,3 +287,54 @@ Kong headlines ("Doctors in Shock" etc) stay banned; the ones below are clean.
 > My free Revision Diagnostic finds the leak in about 4 minutes: 20 questions about how your child actually revises, an instant report, and the first thing I'd change. Then, if you want it, a free call where I build the plan with you.
 >
 > Tap Learn More, and let's make the hard work count.
+
+## The original control ad, verbatim from the Ad Library (3 October 2026)
+
+This is the exact live copy of the August evergreen and its Custom Audience
+twin, kept here so the control in every test is the real thing.
+
+- Headline: How to get an A* at A-levels in 4 minutes
+- Description: A personalised doctor's plan
+- Button: Learn More
+- Primary text:
+
+> Parents of Year 12 and 13: if your child is aiming for As and A*s, read this.
+>
+> I'm Dr Waleed Ahmad, an NHS doctor and founder of A-Level Accelerators. Over the past 6 years, I have worked with over 1,000 A-level students, helped them achieve top grades and get into their dream university.
+>
+> Right now, if you're finding your child is:
+>
+> ❌ Overwhelmed by the sheer amount of A-level content
+> ❌ Revising for hours but the grades haven't changed
+> ❌ Running out of time in every paper they sit
+> ❌ Rereading and highlighting notes because nobody ever taught them anything better
+> ❌ Working hard all week with no actual plan behind it
+>
+> Then I built something for you, and it's completely free!
+>
+> Here's the truth about A-levels: they're designed to spread students out. Nationally, fewer than 10% of students come out with an A*. The difference between the students who get there and the ones who don't is almost never ability. It's method.
+>
+> But you can't fix a method until you know exactly where it's breaking down.
+>
+> That's why I built the Revision Diagnostic. Doctors don't finalise treatment before they diagnose, and revision shouldn't work any differently.
+>
+> It takes about 4 minutes. You answer 20 questions about how your child actually revises, and you get an instant report showing:
+>
+> ✅ Why your child isn't achieving A/A* grades
+> ✅ How many of their weekly study hours are going into wasted low-yield work
+> ✅ Where the marks are being lost, and the first thing to change
+> ✅ A personalised doctor's plan, based on their answers and focusing on how to maximise their grades
+>
+> It's completely free, and you'll receive the full report instantly.
+>
+> Every delayed day is another day your child spends revising ineffectively. Don't wait for the next poor test result. Optimise their revision now.
+>
+> Tap Learn More and see how to help your child get A/A* grades.
+>
+> Dr Waleed Ahmad
+> NHS Doctor
+> Founder of A-Level Accelerators
+
+Plain photo crops for Meta (no text on the image) are in `final/` as
+`plain-mask-*` (full resolution) and `plain-pen-*` (from the 600px Ad Library
+copy, so softer; re-crop from the original when found).
