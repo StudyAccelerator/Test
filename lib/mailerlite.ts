@@ -90,6 +90,13 @@ export interface DiagnosticSubscriber {
   bottleneck: string
   scores: string
   route: string
+  /* Where they came from (3 October 2026): the ad's utm labels captured on
+     arrival, so the lead alert can say which ad produced the lead. All
+     optional; '' is never sent, so a retake without them keeps the first. */
+  source?: string
+  campaign?: string
+  ad?: string
+  referrer?: string
 }
 
 /* "Callback requested": joined from the report's callback card (21 August
@@ -131,6 +138,10 @@ export async function subscribeDiagnostic(sub: DiagnosticSubscriber): Promise<Su
     if (sub.supportNeeded) optional.diag_support_needed = sub.supportNeeded
     if (sub.notes) optional.diag_notes = sub.notes
     if (sub.callTime) optional.diag_call_time = sub.callTime
+    if (sub.source) optional.diag_source = sub.source
+    if (sub.campaign) optional.diag_campaign = sub.campaign
+    if (sub.ad) optional.diag_ad = sub.ad
+    if (sub.referrer) optional.diag_referrer = sub.referrer
 
     /* Parents join the parent master group and a parent route group, never
        the student groups: the follow-up automations hang off group joins,

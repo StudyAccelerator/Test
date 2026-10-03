@@ -26,7 +26,7 @@ import {
   yearGroupString,
 } from '@/lib/diagnostic'
 import { subscribeDiagnostic } from '@/lib/mailerlite'
-import { trackFunnel } from '@/lib/analytics'
+import { trackFunnel, captureAttribution, getAttribution } from '@/lib/analytics'
 
 declare global {
   interface Window {
@@ -103,6 +103,9 @@ export default function DiagnosticApp() {
      predate the fork have no taker; every one of those was a student run.
      A ?for=parents deep link (for parent-facing ads) preselects the fork. */
   useEffect(() => {
+    /* Remember which ad (utm tags, click id, referrer) brought this visitor,
+       before anything else can navigate the params away. */
+    captureAttribution()
     let paramTaker: Taker | null = null
     let startNow = false
     try {
@@ -1138,6 +1141,7 @@ function EmailGate({
       bottleneck: d.bottleneckLabel,
       scores: `${scoresToString(d.scores)}, overall ${d.overall}`,
       route: d.routing.primary.name,
+      ...getAttribution(),
     })
 
     if (result === 'ok') {

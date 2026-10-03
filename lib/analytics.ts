@@ -47,3 +47,72 @@ export function trackLead(): void {
   w.fbq?.('track', 'Lead')
   w.gtag?.('event', 'generate_lead')
 }
+
+/* Where the lead came from (3 October 2026, Waleed's ask: the phone push must
+   say which ad a lead came from). Read once per visit from the URL and the
+   referrer, kept in localStorage so a visitor who answers the 20 questions
+   over two sittings still carries their first ad into the gate. A later visit
+   that arrives with its own utm tags or an ad click id overwrites it (last
+   paid touch wins); a plain revisit keeps what was stored. Nothing here
+   identifies a person: it is the ad's own labels. */
+export interface Attribution {
+  /* "facebook / paid-social", "facebook (click id, no utm)", "google / organic",
+     "referral: example.com" or "direct" */
+  source: string
+  campaign: string
+  ad: string
+  /* Referrer host plus the landing flags that matter to the ad test */
+  referrer: string
+}
+
+const ATTRIBUTION_KEY = 'ala-attribution-v1'
+
+export function captureAttribution(): void {
+  if (typeof window === 'undefined') return
+  try {
+    const qs = new URLSearchParams(window.location.search)
+    const utmSource = qs.get('utm_source') || ''
+    const utmMedium = qs.get('utm_medium') || ''
+    const campaign = qs.get('utm_campaign') || ''
+    const ad = [qs.get('utm_content') || '', qs.get('utm_term') || ''].filter(Boolean).join(' / ')
+    const fbclid = qs.has('fbclid')
+    const gclid = qs.has('gclid')
+    let refHost = ''
+    try {
+      refHost = document.referrer ? new URL(document.referrer).hostname.replace(/^www\./, '') : ''
+    } catch {}
+    const paidTouch = Boolean(utmSource || utmMedium || campaign || ad || fbclid || gclid)
+    const existing = localStorage.getItem(ATTRIBUTION_KEY)
+    if (existing && !paidTouch) return
+    let source = 'direct'
+    if (utmSource || utmMedium) source = `${utmSource || '?'} / ${utmMedium || '?'}`
+    else if (fbclid) source = 'facebook (click id, no utm)'
+    else if (gclid) source = 'google ads (click id, no utm)'
+    else if (refHost) source = `referral: ${refHost}`
+    const flags = []
+    if (refHost) flags.push(refHost)
+    if (qs.get('start') === '1') flags.push('start=1')
+    if (qs.get('h')) flags.push(`h=${qs.get('h')}`)
+    if (qs.get('for')) flags.push(`for=${qs.get('for')}`)
+    const a: Attribution = { source, campaign, ad, referrer: flags.join('; ') }
+    localStorage.setItem(ATTRIBUTION_KEY, JSON.stringify(a))
+  } catch {}
+}
+
+export function getAttribution(): Attribution {
+  const empty: Attribution = { source: '', campaign: '', ad: '', referrer: '' }
+  if (typeof window === 'undefined') return empty
+  try {
+    const raw = localStorage.getItem(ATTRIBUTION_KEY)
+    if (!raw) return empty
+    const a = JSON.parse(raw)
+    return {
+      source: String(a.source || ''),
+      campaign: String(a.campaign || ''),
+      ad: String(a.ad || ''),
+      referrer: String(a.referrer || ''),
+    }
+  } catch {
+    return empty
+  }
+}

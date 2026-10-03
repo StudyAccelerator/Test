@@ -71,6 +71,24 @@ function mailerliteKey() {
   throw new Error('ML_API_KEY not found: lib/mailerlite.ts missing from the function bundle')
 }
 
+/* Which ad the lead came from (3 October 2026, Waleed's ask). The site stores
+   the ad's utm labels on arrival (lib/analytics.ts captureAttribution) and
+   sends them with the diagnostic as diag_source / diag_campaign / diag_ad /
+   diag_referrer. Round 4 ad URLs carry utm_content=s1-control ... s7; ads
+   built in Ads Manager with Meta's dynamic parameters carry the ad's own name.
+   A lead with nothing stored arrived direct, from a shared link, or before
+   this shipped. */
+function sourceLine(f) {
+  const parts = []
+  if (f.diag_ad) parts.push(`ad ${f.diag_ad}`)
+  if (f.diag_campaign) parts.push(`campaign ${f.diag_campaign}`)
+  if (f.diag_source) parts.push(f.diag_source)
+  else if (f.diag_referrer) parts.push(f.diag_referrer)
+  if (!parts.length) return 'no source recorded (direct, shared link, or an older run)'
+  const base = parts.join(', ')
+  return f.diag_referrer && f.diag_source ? `${base} (${f.diag_referrer})` : base
+}
+
 const esc = (s) =>
   String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;')
 
@@ -131,6 +149,7 @@ module.exports = async function handler(req, res) {
   if (f.diag_support) lines.push(`Existing support: ${esc(f.diag_support)}`)
   if (f.diag_support_detail) lines.push(`Support detail: ${esc(f.diag_support_detail)}`)
   if (f.diag_notes) lines.push(`Their note: ${esc(f.diag_notes)}`)
+  lines.push(`From: ${esc(sourceLine(f))}`)
   lines.push(`Email: ${esc(email)}`)
 
   const firstName = String(name).split(' ')[0]
@@ -187,6 +206,7 @@ module.exports = async function handler(req, res) {
         f.diag_support_detail ? `Detail: ${f.diag_support_detail}` : '',
         f.diag_support_needed ? `Wants: ${f.diag_support_needed}` : '',
         f.diag_notes ? `Note: ${f.diag_notes}` : '',
+        `From: ${sourceLine(f)}`,
         groupLabel || '',
       ]
         .filter(Boolean)
