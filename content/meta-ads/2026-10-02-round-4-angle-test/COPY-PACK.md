@@ -179,3 +179,25 @@ carries `hero` so the two can be compared on starts and leads.
 - "A*AA" is the typical medicine offer; the ad does not promise it.
 - No marketplace framing, no tutor-matching language, no prices.
 - Headlines kept to about 40 characters so they do not truncate on mobile.
+
+## Addendum, 3 October 2026: the fixed-creative version (Waleed's call)
+
+Waleed's steer: hold the creatives to proven performers and let the MESSAGE be
+the variable, rather than testing new images, headlines and bodies at once.
+The four-ad set, each in its own ad set as before:
+
+| Ad | Creative | Message |
+|---|---|---|
+| 1 | Original Doctor image (reuse from Ads Manager, untouched) | Working hard (angle 3) |
+| 2 | Doctor pen image (reuse from Ads Manager, untouched) | Mark scheme (angle 2) |
+| 3 | t1-tutor-pen (pen photo, tutor line on the card) | Tutor comparison (angle 5) |
+| 4 | t2-tutor-original (original photo, tutor line on the card) | Tutor comparison (angle 5, SAME copy as ad 3) |
+
+Ads 3 and 4 share identical copy, so they are a pure creative A/B; ads 1 to 3
+compare messages on proven creatives. The paste-ready bodies with the tick and
+cross lists were delivered in chat on 3 October; they are the angle bodies
+with a ❌/✅ block added in the style of the August ad. t1/t2 renders are in
+`final/` (four ratios each) from `src/gen-tutor-variants.py`; the pen photo is
+the 600px Ad Library copy because the full-resolution unmasked pen original
+was not in Waleed's Photos folder (IMG_1447.HEIC's primary frame is the masked
+cannula shot), so swap in the original and re-render if he finds it.
