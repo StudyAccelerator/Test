@@ -54,7 +54,7 @@ and the 9:16 in stories and reels); add the 1:1 if it asks for one.
 **£2,000 over four weeks (about £70 a day):**
 - Weeks 1 to 2: five angles at £10 a day (£700) plus control £10 (£140).
 - Weeks 3 to 4: three winners at £15 (£630), lookalike £15 (£210), control £10
-  (£140), and the Year 13 UCAT twin (a1b) as a second ad inside A1 if medics won.
+  (£140).
 - Total about £1,800.
 
 Either way, spend lands where the answer is, not evenly.

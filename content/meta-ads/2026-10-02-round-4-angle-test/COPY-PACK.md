@@ -8,7 +8,7 @@ August has carried the same primary text and the same headline, and the "fatigue
 was the conversion rate after the click collapsing as that one message
 harvested its audience. A new angle reaches new people; a new photo does not.**
 
-Images are in `final/` (six concepts x 1:1, 4:5, 9:16, 1.91:1), rendered by
+Images are in `final/` (five concepts x 1:1, 4:5, 9:16, 1.91:1), rendered by
 `src/gen.py` from the approved studio stills. Proof figures are Waleed's own:
 "on average, our students jump two grades in about 3 months" (the public line
 since 6 September; he said "4 months" on 2 October, so if 4 is right change the
@@ -30,7 +30,7 @@ university offer" (substantiation risk raised once in the round 3 pack).
 Base URL (replace `ANGLE`):
 `https://alevelaccelerators.com/revision-diagnostic/?for=parents&utm_source=facebook&utm_medium=paid-social&utm_campaign=r4-angles-2026-10&utm_content=ANGLE&start=1`
 
-## Angle 1: Future medics (image a1-future-medics; Year 13 twin a1b-ucat)
+## Angle 1: Future medics (image a1-future-medics)
 
 Why: 15 of the 23 September callers were aiming at medicine or dentistry, 17
 at healthcare. Nobody said they clicked because of the doctor image, but the
@@ -41,7 +41,7 @@ medical identity landed on every call. Naming the room should pull more of it.
 - Headline B: Is their revision good enough for medicine?
 - Primary text:
 
-> Parents of future doctors: medicine wants A*AA, and the UCAT only gets your child to the door. The A-level grades decide whether it opens.
+> Parents of future doctors: the top universities want A*s. If your child isn't there yet, here's why.
 >
 > I'm Dr Waleed Ahmad, an NHS doctor. Over 6 years I've worked with more than 1,000 A-level students, and most of the families I speak to are aiming at medicine, dentistry or healthcare. Nearly every one of them is working hard. The grade is still a B.
 >
@@ -53,9 +53,6 @@ medical identity landed on every call. Naming the room should pull more of it.
 >
 > Tap Learn More. Then, if you want, I'll build the plan with you on a free call.
 
-- Year 13 twin (image a1b-ucat, same URL with `utm_content=a1b-ucat`). Swap the first paragraph for:
-
-> Weak UCAT? Then every A-level grade now has to carry the application, and there are about seven months to move them.
 
 ## Angle 2: The mark scheme (image a2-mark-scheme)
 
@@ -149,7 +146,7 @@ doctor-coach offer in Waleed's own framing.
 
 | Angle | Image | Headline A (default) | Landing headline |
 |---|---|---|---|
-| 1 Future medics | a1-future-medics (Y13: a1b-ucat) | Parents of future doctors: read this | medic (`h=medic`) |
+| 1 Future medics | a1-future-medics | Parents of future doctors: read this | medic (`h=medic`) |
 | 2 Mark scheme | a2-mark-scheme | Knows it. Loses the mark anyway. | default |
 | 3 Working hard | a3-working-hard | Working hard. Grades not moving? | default |
 | 4 Forgets | a4-forgets | Learns fast, forgets faster? | default |
@@ -224,67 +221,130 @@ Kong headlines ("Doctors in Shock" etc) stay banned; the ones below are clean.
 ### Opener bank (the FIRST LINE of primary text; this is where long callouts belong, the headline field truncates them)
 
 - Parents of future doctors and dentists: the top universities want A*s. If your child isn't there yet, here's why.
-- Parents of future medics: the UCAT only gets your child to the door. The A-level grades decide whether it opens.
 - Stuck at a B or C in Year 12 or 13? There's a reason, and it isn't effort.
 - "She's working hard, she's studying, but not getting the marks. I don't understand."
 - If one-to-one tuition was the answer, every student with a tutor would be getting A*s.
 
-### Body D: the belief breaker, long form (Waleed's doctor analogy; replaces the short tutor body where length is wanted)
+### Body D: the belief breaker (Waleed's short-line rewrite, 3 October, with the doctor analogy)
 
 > If one-to-one tuition was the answer, every student with a tutor would be getting A*s. They aren't.
 >
-> I'm Dr Waleed Ahmad, an NHS doctor, and I've worked with over 1,000 A-level students. Here's the pattern I see every single week: a grade comes back as a B or a C, and everyone around your child says the same two things. Work more hours. Get a tutor. So the hours go up, a tutor gets hired, and six months later the grade is exactly where it started.
+> I'm Dr Waleed Ahmad, an NHS doctor, and I've worked with over 1,000 A-level students.
+>
+> Here's the pattern I see every single week: a grade comes back as a B or a C, and everyone around your child says the same two things.
+>
+> Work more hours and get a tutor...
+>
+> So the hours go up, a tutor gets hired, and six months later the grade is exactly where it started.
 >
 > Here's why. There is no one-size-fits-all fix for a stuck grade.
 >
 > ❌ "Do more hours" piles revision onto a method that already isn't working
 > ❌ "Get a tutor" reinforces the content they already know best, because that's what feels productive
-> ❌ Neither one touches the real leak
+> ❌ Neither one touches the real reason their grades aren't improving
 >
-> I see this in medicine every day. As a doctor, I can't treat a patient until I know what's actually wrong with them. Nobody would accept a treatment before the diagnosis, because the same symptom can have five different causes. A stuck grade is exactly the same. For some students the leak really is content. For most, it's how they revise, what they prioritise, whether what they learn stays learned, or whether they can turn what they know into marks under exam pressure. Until you know which one it is, every fix is a guess, and the grade stays where it is while the time runs out.
+> I see this in medicine every day.
 >
-> So that's where I start, and it's free. My Revision Diagnostic takes about 4 minutes: 20 questions about how your child actually revises, and an instant report showing which of the five systems is leaking marks and what I'd change first. Then, if you want it, a free call where I build the plan with you: the whole week, every subject, the whole system a tutor never touches.
+> As a doctor, I can't treat a patient until I know what's actually wrong.
+>
+> Nobody would accept a treatment before the diagnosis, because the same symptom can have many different causes.
+>
+> A stuck grade is exactly the same.
+>
+> For some students, the leak is content. For most, it's how they revise, what they prioritise, whether what they learn stays learned, or whether they can turn what they know into marks under exam pressure.
+>
+> Until you know which one it is, every solution is a guess, and the grade stays where it is while the time to exams runs out.
+>
+> So let's start with the diagnosis.
+>
+> My free Revision Diagnostic takes about 4 minutes: 20 questions about how your child actually revises, and an instant report showing which of their revision systems is costing them marks, and what I'd change first.
+>
+> Then, if you want it, a free call where I build the plan with you.
+>
+> Once the diagnosis and the treatment are locked in, that's when you see your child's grades move.
 >
 > The results are the proof: on average, our students jump two grades in about 3 months, and 96% of our students get their first-choice university offer.
 >
-> Tap Learn More and get the diagnosis before anyone sells you another treatment.
+> Tap Learn More and find out what's really holding your child back from A* grades.
 
-### Body E: future medics, long proof letter
+### Body E: future medics, long proof letter (short-line format; admissions tests are never named, Waleed's non-compete ruling of 3 October)
 
-> Parents of future doctors and dentists: the top universities want A*s, and the UCAT only gets your child to the door. The A-level grades decide whether it opens.
+> Parents of future doctors and dentists: the top universities want A*s. If your child isn't there yet, here's why.
 >
-> I'm Dr Waleed Ahmad, an NHS doctor and founder of A-Level Accelerators. I sat in those interview chairs myself, and over the past 6 years I've worked with more than 1,000 A-level students, most of them aiming at medicine, dentistry or healthcare. Here's what that road has taught me: it isn't won by talent, and it isn't won by hours. It's won by method.
+> I'm Dr Waleed Ahmad, an NHS doctor and founder of A-Level Accelerators.
 >
-> Almost every family I speak to tells me the same story. The work ethic is there. The ambition is there. And the grades are sitting at a B, while medicine asks for A*AA. The students who close that gap are never the ones revising the most. They're the ones whose revision actually works:
+> I sat in those interview chairs myself. And over the past 6 years I've worked with more than 1,000 A-level students, most of them aiming at medicine, dentistry or healthcare.
+>
+> Here's what that road has taught me.
+>
+> It isn't won by talent, and it isn't won by hours. It's won by method.
+>
+> Almost every family I speak to tells me the same story.
+>
+> The work ethic is there. The ambition is there. And the grades are sitting at a B, while medicine asks for A*AA.
+>
+> The students who close that gap are never the ones revising the most. They're the ones whose revision actually works:
 >
 > ✅ A weekly plan that says exactly what to prioritise, so no hour is wasted
 > ✅ Revision built on recall, so Year 12 content is still there in the Year 13 exam
 > ✅ Mark scheme training, so what they know becomes marks under time pressure
 >
-> The results are the proof. On average, our students jump two grades in about 3 months. 96% of our students get their first-choice university offer. Sarah went from a C to an A* in Biology and is now at Bristol studying Veterinary Science, her first choice.
+> That's the difference between a predicted B and the A* the offer needs.
 >
-> If your child is aiming at medicine and isn't at A* yet, don't guess at the fix. My free Revision Diagnostic shows you in about 4 minutes exactly where their marks are leaking: 20 questions about how they actually revise, an instant report, and the method I'd use, built from their answers.
+> The results are the proof.
+>
+> On average, our students jump two grades in about 3 months.
+>
+> 96% of our students get their first-choice university offer.
+>
+> Sarah went from a C to an A* in Biology and is now at Bristol studying Veterinary Science, her first choice.
+>
+> If your child is aiming at medicine and isn't at A* yet, don't guess at the fix.
+>
+> My free Revision Diagnostic shows you in about 4 minutes exactly where their marks are leaking: 20 questions about how they actually revise, an instant report, and the method I'd use, built from their answers.
 >
 > Tap Learn More. Application season won't wait.
 
-### Body F: the hardworking child, long parent letter
+### Body F: the hardworking child, long parent letter (short-line format)
 
 > "She's working hard, she's studying, but not getting the marks. I don't understand."
 >
-> A parent said that to me on a call last week. I hear a version of it almost every day, and it's usually about the most conscientious student in the house. Hours at the desk every evening. Notes rewritten. Mocks that looked fine. Then the real result comes back and it doesn't match any of it.
+> A parent said that to me on a call last week.
 >
-> I'm Dr Waleed Ahmad, an NHS doctor, and I've worked with over 1,000 A-level students. The hardworking ones are the ones I worry about most, because effort hides the problem: when the hours are going in, everyone assumes the method must be fine. It almost never is.
+> I hear a version of it almost every day, and it's usually about the most conscientious student in the house.
+>
+> Hours at the desk every evening. Notes rewritten. Mocks that looked fine.
+>
+> Then the real result comes back, and it doesn't match any of it.
+>
+> I'm Dr Waleed Ahmad, an NHS doctor, and I've worked with over 1,000 A-level students.
+>
+> The hardworking ones are the ones I worry about most, because effort hides the problem.
+>
+> When the hours are going in, everyone assumes the method must be fine. It almost never is.
 >
 > ❌ Rereading and highlighting feel productive and keep almost nothing
 > ❌ Revising without a plan means the comfortable topics get all the time
 > ❌ Knowing the topic but not the mark scheme means right answers, lost marks
 > ❌ Doing fine at home and losing it in the exam isn't nerves, it's untrained technique
 >
-> None of this is your child's fault. Nobody taught them a better way, because school teaches content, and these are systems. And here's the part I need you to hear: more hours cannot fix it. More hours just pour more work into the same leaking method.
+> None of this is your child's fault.
 >
-> When the method changes, the same hours produce a different grade. On average, our students jump two grades in about 3 months, and 96% of our students get their first-choice university offer. Their effort finally showed up on the paper.
+> Nobody taught them a better way, because school teaches content, and these are systems.
 >
-> My free Revision Diagnostic finds the leak in about 4 minutes: 20 questions about how your child actually revises, an instant report, and the first thing I'd change. Then, if you want it, a free call where I build the plan with you.
+> And here's the part I need you to hear: more hours cannot fix it.
+>
+> More hours just pour more work into the same leaking method.
+>
+> When the method changes, the same hours produce a different grade.
+>
+> On average, our students jump two grades in about 3 months, and 96% of our students get their first-choice university offer.
+>
+> Their effort finally showed up on the paper.
+>
+> My free Revision Diagnostic finds the leak in about 4 minutes: 20 questions about how your child actually revises, an instant report, and the first thing I'd change.
+>
+> Then, if you want it, a free call where I build the plan with you.
 >
 > Tap Learn More, and let's make the hard work count.
 

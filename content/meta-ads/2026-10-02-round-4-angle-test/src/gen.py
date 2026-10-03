@@ -28,7 +28,6 @@ CRED = "Dr Waleed Ahmad &middot; NHS Doctor &middot; 1,000+ A-level students"
 # slug, photo, pre, highlighted, post
 CONCEPTS = [
     ("a1-future-medics", "scrubs",   "Parents of future doctors: is your child's revision", "good enough for medicine?", ""),
-    ("a1b-ucat",         "scrubs",   "Weak UCAT?", "Every A-level grade now has to carry the application.", ""),
     ("a2-mark-scheme",   "notebook", "Your child knows it.", "The examiner still won't give the mark.", ""),
     ("a3-working-hard",  "pointing", "She's working hard.", "The grades don't show it.", "Here's why."),
     ("a4-forgets",       "pointing", "He learns it fast", "and forgets it faster.", ""),
