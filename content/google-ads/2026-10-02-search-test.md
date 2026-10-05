@@ -17,6 +17,8 @@ Waleed's decision, 2 October 2026: test buying the head terms we cannot yet rank
 
 ## Keywords (phrase match unless stated)
 
+5 October 2026: Pragya's Keyword Planner export confirms real volumes and bids for this set: a level chemistry tutor 880 searches a month (top of page bids £5.11 to £14.13), a level biology tutor 590, a level maths tutor near me 480, a level tutors near me 480, a level tuition 390, the rest 170 to 320. Her list misses "a level tutor" itself, which stays in. Her bid ranges mean the £6 CPC cap will sometimes buy positions below absolute top; fine for the test, revisit the cap if impression share is tiny.
+
 Buyer intent core: "a level tutor", "a level tutors", "a level tuition", "a level tutoring", "online a level tutor", "a level tutor online", "best a level tutors uk".
 Subject: "a level biology tutor", "a level chemistry tutor", "a level maths tutor" (and the "tutor a level biology" word orders Google folds in).
 Parent phrasing: "tutor for a level student", "a level help for my child".
