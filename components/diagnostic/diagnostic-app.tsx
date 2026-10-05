@@ -26,6 +26,7 @@ import {
   yearGroupString,
 } from '@/lib/diagnostic'
 import { subscribeDiagnostic } from '@/lib/mailerlite'
+import { checkPhone } from '@/lib/phone'
 import { trackFunnel, captureAttribution, getAttribution } from '@/lib/analytics'
 
 declare global {
@@ -104,7 +105,7 @@ export default function DiagnosticApp() {
      A ?for=parents deep link (for parent-facing ads) preselects the fork. */
   useEffect(() => {
     /* Remember which ad (utm tags, click id, referrer) brought this visitor,
-       before anything else can navigate the params away. */
+       before anything else can change the URL. */
     captureAttribution()
     let paramTaker: Taker | null = null
     let startNow = false
@@ -1056,6 +1057,8 @@ function EmailGate({
 }) {
   const [submitting, setSubmitting] = useState(false)
   const [error, setError] = useState<string | null>(null)
+  /* Echoes the number back as it will be dialled, so a typo is visible before submit */
+  const [phonePreview, setPhonePreview] = useState('')
   /* Single-step gate. A two-step version (name and email, then phone on a
      second screen) ran 13 to 18 September 2026 and GA4 showed completion
      falling from 71% to 38% of finishers while it was live, so it was
@@ -1094,15 +1097,17 @@ function EmailGate({
     }
     /* Phone is required since 12 August 2026 (Waleed's call: he rings new
        leads himself; framed on the page as his same-day call, 15 Aug 2026). */
-    const phoneClean = phoneRaw.replace(/[\s().-]/g, '')
-    if (!phoneClean) {
-      setError("Add a phone number: it's where Dr Waleed rings you to go through the plan.")
+    /* One layer of fail-proofing on the number, no text message and no code
+       (5 October 2026, Waleed's ask after too many "call failed" numbers):
+       lib/phone.ts knows what UK mobiles and landlines look like, says what
+       is wrong in plain words, and stores the international form (+44...)
+       so it dials correctly from his phone and WhatsApp. */
+    const phone = checkPhone(phoneRaw)
+    if (!phone.ok) {
+      setError(phone.error)
       return
     }
-    if (!/^\+?\d{7,15}$/.test(phoneClean)) {
-      setError("That phone number doesn't look right. Check it and try again.")
-      return
-    }
+    const phoneClean = phone.e164
     /* The opt-out tick box and the call-time chips were REMOVED on 2 October
        2026 (Waleed's call): the card above the field says plainly that the
        number is for Dr Waleed's call, so submitting is the consent. Anyone who
@@ -1276,8 +1281,17 @@ function EmailGate({
                 maxLength={20}
                 autoComplete="tel"
                 placeholder="07..."
+                onChange={(e) => {
+                  const r = checkPhone(e.target.value)
+                  setPhonePreview(r.ok ? r.display : '')
+                }}
                 className="w-full rounded-xl border-2 border-white/10 bg-white/[0.06] px-4 py-3.5 text-brand-cream placeholder:text-brand-cream/30 focus:outline-none focus:border-brand-gold transition"
               />
+              {phonePreview && (
+                <p className="mt-1.5 text-xs text-brand-cream/60" aria-live="polite">
+                  Dr Waleed will ring <span className="font-bold text-brand-cream/85">{phonePreview}</span>
+                </p>
+              )}
               {/* The sell on the number, rebuilt 2 October 2026 to lift call
                   opt-ins: who is calling (photo and credentials), what the call
                   delivers, and honest scarcity (his real rota). The call IS the
