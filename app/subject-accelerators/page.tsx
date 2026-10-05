@@ -4,6 +4,8 @@ import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
 import FAQItem from '@/components/ui/faq-item'
 import { HeroHeadline, HeroWord, HeroFade } from '@/components/home/hero-reveal'
+import { TUTORS } from '@/lib/tutors'
+import { TutorAvatar } from '@/components/tutors/tutor-photo'
 
 export const metadata = {
   title: 'Live 12-Week A-Level Exam Programmes',
@@ -525,6 +527,49 @@ export default function SubjectAccelerators() {
                   Join Chemistry 🧪
                 </a>
               </div>
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Meet the team */}
+      <ScrollFade delay={0.2}>
+        <section className="py-16 px-4 bg-white">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl text-brand-purple font-serif text-center mb-4">
+              Meet the team
+            </h2>
+            <p className="text-center text-brand-text/75 max-w-2xl mx-auto mb-10 leading-relaxed">
+              Each accelerator is taught by a specialist who achieved top grades in the subject
+              themselves and has helped hundreds of students do the same, using the method{' '}
+              <a
+                href="/about/"
+                className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-2 hover:text-brand-gold transition"
+              >
+                Dr Waleed Ahmad
+              </a>{' '}
+              built.
+            </p>
+            <div className="grid sm:grid-cols-3 gap-6">
+              {TUTORS.map((tutor) => (
+                <div
+                  key={tutor.slug}
+                  className="flex flex-col items-center text-center rounded-2xl bg-brand-cream p-6 ring-1 ring-brand-purple/10"
+                >
+                  <TutorAvatar tutor={tutor} />
+                  <h3 className="mt-4 font-serif text-xl font-bold text-brand-purple">
+                    {tutor.name}
+                  </h3>
+                  <span
+                    className={`mt-2 rounded-full ${tutor.color.chip} px-3 py-0.5 text-xs font-semibold text-white`}
+                  >
+                    {tutor.subject}
+                  </span>
+                  <p className={`mt-2 text-sm font-semibold ${tutor.color.accent}`}>
+                    {tutor.sessionTime}
+                  </p>
+                </div>
+              ))}
             </div>
           </div>
         </section>

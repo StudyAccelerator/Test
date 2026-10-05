@@ -18,6 +18,7 @@ const FREE_TOOL_LINKS = [
 ]
 
 const MORE_LINKS = [
+  ['/about/', 'About'],
   ['/blog/', 'Blog'],
   ['/faqs/', 'FAQs'],
 ]
