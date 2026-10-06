@@ -6,6 +6,7 @@ import {
   buildWeekSettings,
   collectTopics,
   loadState,
+  newId,
   saveState,
   sleepDurationMins,
   DEFAULT_FORM,
@@ -14,6 +15,7 @@ import {
   YEAR_GROUPS,
   type CommitmentForm,
   type SubjectForm,
+  type TopicForm,
   type TrackerForm,
 } from '@/lib/tracker/form'
 import { RATINGS, type Rating } from '@/lib/tracker/techniques'
@@ -31,9 +33,6 @@ const INPUT =
   'w-full rounded-lg border border-brand-purple/15 bg-white px-3.5 py-2.5 text-[15px] text-brand-text transition focus:border-brand-purple focus:outline-none focus:ring-2 focus:ring-brand-purple/15'
 const LABEL = 'block text-sm font-semibold text-brand-purple mb-1.5'
 const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.18em] text-brand-purple/60'
-
-let nextId = 1
-const newId = () => nextId++
 
 function StepCard({
   step,
@@ -163,10 +162,41 @@ export default function TrackerApp() {
     }))
   }
 
-  function updateSubject(id: number, patch: Partial<SubjectForm>) {
+  function updateSubject(id: string, patch: Partial<SubjectForm>) {
     setForm((f) => ({
       ...f,
       subjects: f.subjects.map((s) => (s.id === id ? { ...s, ...patch } : s)),
+    }))
+  }
+
+  /* Topic edits patch the latest state inside the updater, never a topic list
+     captured by the render, so two quick edits cannot overwrite each other */
+  function updateTopic(subjectId: string, topicId: string, patch: Partial<TopicForm>) {
+    setForm((f) => ({
+      ...f,
+      subjects: f.subjects.map((s) =>
+        s.id === subjectId ? { ...s, topics: s.topics.map((t) => (t.id === topicId ? { ...t, ...patch } : t)) } : s
+      ),
+    }))
+  }
+
+  function removeTopic(subjectId: string, topicId: string) {
+    setForm((f) => ({
+      ...f,
+      subjects: f.subjects.map((s) =>
+        s.id === subjectId ? { ...s, topics: s.topics.filter((t) => t.id !== topicId) } : s
+      ),
+    }))
+  }
+
+  function addTopic(subjectId: string) {
+    setForm((f) => ({
+      ...f,
+      subjects: f.subjects.map((s) =>
+        s.id === subjectId && s.topics.length < MAX_TOPICS_PER_SUBJECT
+          ? { ...s, topics: [...s.topics, { id: newId(), name: '', rating: 'shaky' }] }
+          : s
+      ),
     }))
   }
 
@@ -177,7 +207,7 @@ export default function TrackerApp() {
     }))
   }
 
-  function updateCommitment(id: number, patch: Partial<CommitmentForm>) {
+  function updateCommitment(id: string, patch: Partial<CommitmentForm>) {
     setForm((f) => ({
       ...f,
       commitments: f.commitments.map((c) => (c.id === id ? { ...c, ...patch } : c)),
@@ -509,16 +539,12 @@ export default function TrackerApp() {
                       placeholder={placeholder}
                       className={INPUT}
                       value={t.name}
-                      onChange={(e) =>
-                        updateSubject(s.id, {
-                          topics: s.topics.map((x) => (x.id === t.id ? { ...x, name: e.target.value } : x)),
-                        })
-                      }
+                      onChange={(e) => updateTopic(s.id, t.id, { name: e.target.value })}
                     />
                     <button
                       type="button"
                       aria-label={`Remove ${t.name || 'topic'}`}
-                      onClick={() => updateSubject(s.id, { topics: s.topics.filter((x) => x.id !== t.id) })}
+                      onClick={() => removeTopic(s.id, t.id)}
                       className="flex h-11 w-9 shrink-0 items-center justify-center rounded-lg text-xl text-brand-purple/50 transition hover:bg-red-50 hover:text-red-600"
                     >
                       ×
@@ -528,22 +554,14 @@ export default function TrackerApp() {
                     groupName={`rating-${s.id}-${t.id}`}
                     topicName={t.name}
                     value={t.rating}
-                    onChange={(rating) =>
-                      updateSubject(s.id, {
-                        topics: s.topics.map((x) => (x.id === t.id ? { ...x, rating } : x)),
-                      })
-                    }
+                    onChange={(rating) => updateTopic(s.id, t.id, { rating })}
                   />
                 </div>
               ))}
               {s.topics.length < MAX_TOPICS_PER_SUBJECT ? (
                 <button
                   type="button"
-                  onClick={() =>
-                    updateSubject(s.id, {
-                      topics: [...s.topics, { id: newId(), name: '', rating: 'shaky' }],
-                    })
-                  }
+                  onClick={() => addTopic(s.id)}
                   className="w-full rounded-lg border-2 border-dashed border-brand-purple/25 py-2.5 text-sm font-semibold text-brand-purple transition hover:border-brand-purple hover:bg-brand-purple hover:text-brand-cream"
                 >
                   + Add topic
