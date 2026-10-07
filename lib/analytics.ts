@@ -117,18 +117,16 @@ export function getAttribution(): Attribution {
   }
 }
 
-/* Qualified-lead signal for Meta (7 October 2026, Waleed's call). Meta's
-   delivery model learns from whoever fires the event an ad set optimises
-   for, and until this date every gate submission fired the standard Lead
-   event, so a Year 9 parent taught it as much as a Year 13 parent (28% of
-   round 4's leads were pre-A-level). Now the standard Lead fires only for
-   Year 12, Year 13 and resit takers, the ones his method and proof are built
-   for, and everyone else fires the custom event PreALevelLead so they are
-   still counted and still called. Nothing about the page, the questions,
-   the report or MailerLite changes; only what Meta is told to chase. GA4
-   keeps one generate_lead for all, flagged with `qualified` and the year.
-   Ads Manager's Results column counts only qualified leads from this date,
-   so its cost per result reads higher than before for the same spend. */
+/* Qualified-lead signal for Meta (7 October 2026, Waleed's call). Every gate
+   submission still fires Meta's standard Lead event, so every lead, GCSE
+   included, keeps showing up as a lead in Ads Manager. On top of that, Year
+   12, Year 13 and resit takers (the ones his method and proof are built for)
+   also fire the custom event QualifiedLead. In Events Manager that custom
+   event becomes a custom conversion ("A-level lead"), and pointing an ad
+   set's conversion event at it makes Meta's delivery chase A-level parents
+   while the Lead column still counts everyone. Nothing about the page, the
+   questions, the report, MailerLite or the phone push changes. GA4 keeps one
+   generate_lead for all, flagged with `qualified` and the year. */
 export const QUALIFIED_YEAR_IDS = ['y12', 'y13', 'resit']
 
 export function isQualifiedLead(yearId: string | undefined): boolean {
@@ -139,7 +137,7 @@ export function trackDiagnosticLead(yearId: string | undefined, yearGroup: strin
   if (typeof window === 'undefined') return
   const w = window as typeof window & { fbq?: TrackFn; gtag?: TrackFn }
   const qualified = isQualifiedLead(yearId)
-  if (qualified) w.fbq?.('track', 'Lead', { content_category: yearGroup })
-  else w.fbq?.('trackCustom', 'PreALevelLead', { content_category: yearGroup })
+  w.fbq?.('track', 'Lead', { content_category: yearGroup })
+  if (qualified) w.fbq?.('trackCustom', 'QualifiedLead', { content_category: yearGroup })
   w.gtag?.('event', 'generate_lead', { qualified: qualified ? 'yes' : 'no', year_group: yearGroup })
 }

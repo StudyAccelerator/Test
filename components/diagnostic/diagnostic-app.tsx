@@ -1150,8 +1150,8 @@ function EmailGate({
     })
 
     if (result === 'ok') {
-      /* Meta is told only A-level-year leads are the conversion it should
-         chase (7 October 2026); pre-A-level still fires its own event. */
+      /* Lead for everyone, plus QualifiedLead for A-level years so Meta can
+         be pointed at the leads Waleed wants most (7 October 2026). */
       trackDiagnosticLead(answers.year as string | undefined, yearGroupString(answers))
       onUnlock(name, isParent ? child : '', email)
       return
