@@ -1031,3 +1031,5 @@ code {
 .eco-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px 22px; margin-bottom: 10px; }
 .eco-stats .hero-number { font-size: 26px; }
 .eco-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 28px; }
+.eco-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 28px; margin: 6px 0 10px; }
+.eco-charts .chart { min-height: 130px; }

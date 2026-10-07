@@ -437,8 +437,18 @@ function economics() {
   const ltvSoFar = avgTenure && avgMonthly ? avgTenure * avgMonthly : null
   const churned = monthly.filter((r) => r.endedAt).length
 
+  /* last 30 days, one point a day: leads (MailerLite, via the CRM store),
+     Meta spend and Meta's own lead count, for the live chart */
+  const series = []
+  for (let i = 29; i >= 0; i--) {
+    const date = daysAgo(i)
+    const dayLeads = leads.filter((l) => l.isDiagnostic && String(l.subscribedAt || '').slice(0, 10) === date).length
+    const sp = entries.find((e) => e.date === date)
+    series.push({ date, leads: dayLeads, spend: sp ? Number(sp.amount || 0) : 0, metaLeads: sp && sp.leads != null ? Number(sp.leads) : null })
+  }
   const spendDates = entries.map((e) => e.date).sort()
   return {
+    series,
     generatedAt: new Date().toISOString(),
     windows: out,
     ltv: { avgTenureMonths: avgTenure, avgMonthly, ltvSoFar, monthlyStudents: monthly.length, churned },

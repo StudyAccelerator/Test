@@ -350,6 +350,15 @@ function renderPulse() {
             : 'loading',
     },
     {
+      k: 'Leads',
+      v: (() => {
+        const ser = (state.economics && state.economics.series) || []
+        if (ser.length < 2) return 'loading'
+        const t = ser[ser.length - 1], y = ser[ser.length - 2]
+        return `<b>${t.leads}</b> today <span class="muted small">${y.leads} yesterday, ${ser.slice(-7).reduce((a, d) => a + d.leads, 0)} this week</span>`
+      })(),
+    },
+    {
       k: 'In Stripe',
       v:
         state.stripe && state.stripe.snapshot
@@ -807,9 +816,23 @@ function renderEconomics() {
 
   const srcLine = ['spend', 'leads', 'calls', 'sales'].map((k) => eco.sources[k]).filter(Boolean).join(' · ')
 
+  const ser = eco.series || []
+  const last7 = ser.slice(-7).reduce((a, d) => a + d.leads, 0)
+  const prev7 = ser.slice(-14, -7).reduce((a, d) => a + d.leads, 0)
+  const trend = prev7 ? Math.round(((last7 - prev7) / prev7) * 100) : null
   body.innerHTML = `
     <div class="eco-tabs">${tabs}</div>
     <div class="li-stats eco-stats">${stats}</div>
+    <div class="eco-charts">
+      <div>
+        <div class="subhead">Leads per day, last 30 days <span class="muted small">${last7} this week${trend == null ? '' : `, ${trend >= 0 ? 'up' : 'down'} ${Math.abs(trend)}% on last week`}</span></div>
+        <div id="eco-chart-leads" class="chart"></div>
+      </div>
+      <div>
+        <div class="subhead">Meta spend per day <span class="muted small">${money(ser.slice(-7).reduce((a, d) => a + d.spend, 0), 0)} this week</span></div>
+        <div id="eco-chart-spend" class="chart"></div>
+      </div>
+    </div>
     <div class="eco-cols">
       <div>${funnel}</div>
       <div>${ltv}</div>
@@ -827,6 +850,10 @@ function renderEconomics() {
       </div>
     </div>`
 
+  if (ser.length > 1) {
+    renderLineChart($('#eco-chart-leads'), ser.map((d) => ({ date: d.date, value: d.leads })), 'leads', '#2f7d57')
+    renderLineChart($('#eco-chart-spend'), ser.map((d) => ({ date: d.date, value: Math.round(d.spend) })), 'pounds', '#b08a3e')
+  }
   body.querySelectorAll('.eco-tab').forEach((b) =>
     b.addEventListener('click', () => {
       ecoWindow = b.dataset.key
