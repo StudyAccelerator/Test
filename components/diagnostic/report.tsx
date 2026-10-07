@@ -193,7 +193,7 @@ function CallbackCard({
 
   return (
     <div className={shell}>
-      <p className={`font-mono text-xs uppercase tracking-[0.2em] ${eyebrow}`}>Not ready for a programme yet?</p>
+      <p className={`font-mono text-xs uppercase tracking-[0.2em] ${eyebrow}`}>Rather Dr Waleed rang you?</p>
       <h3 className={`mt-2 font-serif font-bold text-2xl md:text-[1.7rem] leading-tight ${title}`}>
         {isParent ? <>Want Dr Waleed to build {child}&apos;s plan with you?</> : <>Want Dr Waleed to build your plan with you?</>}
       </h3>
@@ -326,15 +326,17 @@ function StickyCallBar({ isParent, child, onClick }: { isParent: boolean; child:
       }`}
     >
       <div className="bg-brand-cream/95 backdrop-blur border-t border-brand-purple/10 px-4 pt-3 pb-[calc(0.8rem+env(safe-area-inset-bottom))] shadow-[0_-10px_28px_rgba(46,37,87,.14)]">
-        <button
-          type="button"
+        <a
+          href={BOOK_A_CALL_LINK}
           onClick={onClick}
+          target="_blank"
+          rel="noopener noreferrer"
           className="w-full inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-6 py-3.5 font-bold shadow-[0_10px_24px_rgba(201,169,110,.35)] active:translate-y-0.5 transition-all"
         >
           {isParent && child ? `Book ${child}'s free strategy call` : 'Book my free strategy call'}
           <span aria-hidden="true" className="ml-2">→</span>
-        </button>
-        <p className="mt-1.5 text-center text-[11px] text-brand-text/55">Dr Waleed rings you and builds the plan with you</p>
+        </a>
+        <p className="mt-1.5 text-center text-[11px] text-brand-text/55">Pick a slot. Dr Waleed builds the plan with you on the call.</p>
       </div>
     </div>
   )
@@ -427,32 +429,39 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
      closing band links back to the route so nobody has to scroll up. */
   const [firstDiagPara, ...restDiagParas] = isParent ? archetype.diagnosisParent : archetype.diagnosis
 
+  /* Section 02 sells the free strategy call, not a programme (Waleed's call,
+     7 October 2026): nobody buys £300 a month off a web page, the sales-call
+     notes show the calls do the convincing, and a self-booked slot means he
+     is not ringing every lead by hand. The programme matched to the diagnosis
+     survives as a text link, and the callback card stays as the smaller door
+     for people who would rather be rung. */
+  const callCta = isParent && child ? `Book ${child}'s free strategy call` : 'Book my free strategy call'
   const routeSection = (
     <section id="route" className="px-5 sm:px-6 py-14 md:py-20 bg-[#241d47] relative overflow-hidden scroll-mt-4">
       <div aria-hidden="true" className="pointer-events-none absolute -top-24 right-[-8%] h-[22rem] w-[28rem] rounded-full bg-brand-gold/10 blur-3xl" />
       <div className="relative max-w-3xl mx-auto">
         <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">
-          02 · {routing.primary.eyebrow}
+          02 · {isParent ? `The next step for ${child}` : 'Your next step'}
         </p>
         <h2 className="mt-3 font-serif font-bold tracking-tight text-3xl md:text-4xl leading-tight text-brand-cream">
           {isParent ? (
-            <>
-              {firstName}, here&apos;s the route I&apos;d recommend for {childName || 'your child'}
-            </>
+            <>{firstName}, here&apos;s what I&apos;d do next for {child}</>
           ) : (
-            <>{firstName}, this is your fastest route</>
+            <>{firstName}, here&apos;s what I&apos;d do next</>
           )}
         </h2>
         <p className="mt-4 text-brand-cream/70 leading-relaxed max-w-2xl">
           {isParent ? (
             <>
-              Diagnosis first, then treatment. Based on your answers about {child}, this is where I&apos;d
-              start. The full breakdown, the five scores, the hours and the 7 day plan, carries on below.
+              Diagnosis first, then treatment. These results show where {child}&apos;s marks are leaking. The
+              call is where I turn that into a plan, with you. The full breakdown, the five scores, the hours
+              and the 7 day plan, carries on below.
             </>
           ) : (
             <>
-              Diagnosis first, then treatment. Based on your answers, this is where I&apos;d start. The
-              evidence, your five scores, your hours and your 7 day plan, carries on below.
+              Diagnosis first, then treatment. These results show where your marks are leaking. The call is
+              where I turn that into a plan, with you. The evidence, your five scores, your hours and your 7
+              day plan, carries on below.
             </>
           )}
         </p>
@@ -466,15 +475,29 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
         >
           <div className="flex flex-wrap items-center gap-3">
             <span className="rounded-full bg-brand-gold text-brand-purple text-xs font-bold px-3 py-1.5">
-              {isParent ? 'Matched to their diagnosis' : 'Matched to your diagnosis'}
+              Free
             </span>
-            <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/50">{routing.primary.meta}</span>
+            <span className="font-mono text-[11px] uppercase tracking-[0.15em] text-brand-purple/50">
+              30 minutes · on Zoom · with Dr Waleed himself
+            </span>
           </div>
-          <h3 className="mt-4 font-serif font-bold text-3xl md:text-4xl text-brand-purple">{routing.primary.name}</h3>
-          <p className="mt-2 font-serif italic text-lg text-brand-gold leading-snug">{routing.primary.strap}</p>
-          <p className="mt-4 text-brand-text/80 leading-relaxed">{routing.primary.why}</p>
-          <ul className="mt-5 space-y-2.5 text-[15px] text-brand-text/75">
-            {routing.primary.points.map((pt) => (
+          <h3 className="mt-4 font-serif font-bold text-3xl md:text-4xl text-brand-purple">Your free strategy call</h3>
+          <p className="mt-2 font-serif italic text-lg text-brand-gold leading-snug">
+            {isParent
+              ? <>I read {child}&apos;s results with you, then build the plan from them.</>
+              : <>I read your results with you, then build the plan from them.</>}
+          </p>
+          <ul className="mt-5 space-y-3 text-[15px] text-brand-text/80">
+            {[
+              isParent
+                ? `We find exactly what's holding ${child} back, from these answers, not a guess.`
+                : "We find exactly what's holding you back, from these answers, not a guess.",
+              isParent
+                ? `You leave with a custom plan: the two or three changes that move ${child}'s grade first, and the order to make them in, so the year gets ahead of the exams instead of chasing them.`
+                : 'You leave with a custom plan: the two or three changes that move your grade first, and the order to make them in, so you get ahead of the year instead of chasing it.',
+              "It's the same clear structure that has helped 1,000+ of my students. On average they jump two grades within four months.",
+              '96% of my students get their first-choice university offer.',
+            ].map((pt) => (
               <li key={pt} className="flex items-start gap-2.5">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true">
                   <path d="M5 13l4 4L19 7" />
@@ -483,8 +506,6 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               </li>
             ))}
           </ul>
-          {/* Who is recommending this: written for someone who has never seen
-              the site before this report */}
           <div className="mt-6 flex items-start gap-3.5 rounded-xl bg-brand-cream/70 border border-brand-purple/[0.08] px-4 py-3.5">
             <Image
               src="/photos/waleed-grad-portrait.jpg"
@@ -495,34 +516,45 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               className="h-12 w-12 rounded-full object-cover object-top ring-2 ring-brand-gold/50 shrink-0"
             />
             <p className="text-sm text-brand-text/70 leading-relaxed">
-              <span className="font-bold text-brand-purple">Recommended by Dr Waleed Ahmad, MBBS.</span>{' '}
-              NHS doctor. He&apos;s worked with over 1,000 A-level students and helped them towards top grades
-              and the first-choice university offers they were chasing.{' '}
-              {isParent ? <>This route was picked from {child}&apos;s answers, not a default.</> : <>This route was picked from your answers, not a default.</>}
+              <span className="font-bold text-brand-purple">The call is with Dr Waleed Ahmad, MBBS.</span>{' '}
+              NHS doctor, and the person who built this diagnostic. He takes a limited number of calls each
+              week around his hospital shifts, so pick the slot that suits you and it&apos;s held for you.
             </p>
           </div>
-          <div className="mt-7 flex flex-col sm:flex-row gap-3">
-            <a
-              href={routing.primary.href}
-              onClick={trackRoute('route_section', 'programme')}
-              className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
-            >
-              {routing.primary.cta}
-              <span aria-hidden="true" className="ml-2">→</span>
-            </a>
+          <div className="mt-7 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
             <a
               href={BOOK_A_CALL_LINK}
               onClick={trackRoute('route_section', 'book_a_call')}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center rounded-full border-2 border-brand-purple/20 text-brand-purple px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
+              className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
             >
-              Book a Free Call Instead
+              {callCta}
+              <span aria-hidden="true" className="ml-2">→</span>
+            </a>
+            <a
+              href="#callback"
+              onClick={scrollToCallback}
+              className="text-sm font-semibold text-brand-purple/70 underline underline-offset-4 hover:text-brand-gold transition"
+            >
+              Rather he rang you? Request a callback
             </a>
           </div>
         </motion.div>
 
-        <p className="mt-6 text-sm text-brand-cream/65 leading-relaxed max-w-2xl">{routing.secondaryLine}</p>
+        <p className="mt-6 text-sm text-brand-cream/65 leading-relaxed max-w-2xl">
+          {isParent
+            ? <>Want to read about the programme first? {routing.primary.name} is the one matched to {child}&apos;s diagnosis. </>
+            : <>Want to read about the programme first? {routing.primary.name} is the one matched to your diagnosis. </>}
+          <a
+            href={routing.primary.href}
+            onClick={trackRoute('route_section', 'programme')}
+            className="underline underline-offset-4 text-brand-cream/85 hover:text-brand-gold transition"
+          >
+            See how it works
+          </a>
+          . {routing.secondaryLine}
+        </p>
       </div>
     </section>
   )
@@ -1006,33 +1038,30 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
           <p className="mt-3 text-brand-cream/70 leading-relaxed max-w-xl mx-auto">
             {isParent ? (
               <>
-                {routing.primary.name} is the route matched to {child}&apos;s diagnosis. If you&apos;d rather
-                talk it through first, the call is free and honest.
+                The call is free, it&apos;s with me, and you leave with {child}&apos;s plan. Pick a slot that
+                suits you.
               </>
             ) : (
-              <>
-                {routing.primary.name} is the route matched to your diagnosis. If you&apos;d rather talk it
-                through first, the call is free and honest.
-              </>
+              <>The call is free, it&apos;s with me, and you leave with your plan. Pick a slot that suits you.</>
             )}
           </p>
           <div className="mt-7 flex flex-col sm:flex-row justify-center gap-3">
-            <a
-              href={routing.primary.href}
-              onClick={trackRoute('closing_band', 'programme')}
-              className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
-            >
-              {routing.primary.cta}
-              <span aria-hidden="true" className="ml-2">→</span>
-            </a>
             <a
               href={BOOK_A_CALL_LINK}
               onClick={trackRoute('closing_band', 'book_a_call')}
               target="_blank"
               rel="noopener noreferrer"
+              className="inline-flex justify-center items-center rounded-full bg-brand-gold text-brand-purple px-8 py-4 font-bold hover:bg-brand-gold-light hover:-translate-y-0.5 transition-all shadow-lg"
+            >
+              {callCta}
+              <span aria-hidden="true" className="ml-2">→</span>
+            </a>
+            <a
+              href={routing.primary.href}
+              onClick={trackRoute('closing_band', 'programme')}
               className="inline-flex justify-center items-center rounded-full border-2 border-brand-cream/25 text-brand-cream px-8 py-4 font-semibold hover:border-brand-gold hover:text-brand-gold transition-all"
             >
-              Book a Free Call
+              See the {routing.primary.name}
             </a>
           </div>
           <p className="mt-5 text-sm text-brand-cream/55">
