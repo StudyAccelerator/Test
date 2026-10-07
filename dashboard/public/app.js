@@ -41,6 +41,7 @@ const state = {
   connections: null,
   economics: null,
   adSpend: null,
+  ga4: null,
 }
 
 /* ------------------------------------------------------------------ api */
@@ -749,6 +750,35 @@ function renderSales() {
    without data says pending. Spend comes from Ads Manager exports with
    Breakdown: Day dropped in ~/Downloads (Import button), or typed in. */
 
+
+/* GA4 site funnel, read from Analytics by a Claude session through Waleed's
+   Chrome and written to the ga4 store with its extraction time (7 October
+   2026). GA4 only hands numbers to software through an API credential, so
+   until one exists this block is dated, like the Gmail and calendar extracts,
+   and a session refreshes it on request. GA4 undercounts (ad blockers and
+   in-app browsers), so the rates matter more than the counts. */
+function ga4Block() {
+  const g = state.ga4
+  if (!g) return '<div class="subhead">Site funnel (GA4)</div><p class="empty-state">Not extracted yet. Ask a session to read GA4 and update the dashboard.</p>'
+  const r = g.ranges || {}
+  const pc = (a, b) => (b ? Math.round((a / b) * 100) + '%' : 'n/a')
+  const col = (key, label) => {
+    const x = r[key]
+    if (!x) return ''
+    return `<div>
+      <div class="subhead">${esc(label)} <span class="muted small">${esc(x.from.slice(5))} to ${esc(x.to.slice(5))}</span></div>
+      <div class="money-row"><span class="m-key">Sessions</span><span class="m-val">${nf.format(x.sessions)}</span></div>
+      <div class="money-row"><span class="m-key">Paid social sessions</span><span class="m-val">${nf.format(x.paidSessions)}</span></div>
+      <div class="money-row"><span class="m-key">Started the quiz</span><span class="m-val">${x.starts} <span class="muted small">${pc(x.starts, x.sessions)} of sessions</span></span></div>
+      <div class="money-row"><span class="m-key">Answered all 20</span><span class="m-val">${x.done} <span class="muted small">${pc(x.done, x.starts)} of starters</span></span></div>
+      <div class="money-row"><span class="m-key">Gave details (gate)</span><span class="m-val">${x.leads} <span class="muted small">${pc(x.leads, x.done)} of finishers</span></span></div>
+      <div class="money-row"><span class="m-key">Paid session to lead</span><span class="m-val">${pc(x.paidKeyEvents, x.paidSessions)}</span></div>
+    </div>`
+  }
+  return `<div class="subhead" style="margin-top:14px">Site funnel (GA4) <span class="muted small">extracted ${esc(shortDate(g.extractedAt))}${g.note ? ', ' + esc(g.note) : ''}</span></div>
+    <div class="eco-cols ga4-cols">${col('last7', 'Last 7 days')}${col('prev7', 'Previous 7 days')}${col('last30', 'Last 30 days')}</div>`
+}
+
 let ecoWindow = 'round4'
 
 function money(n, dp = 2) {
@@ -833,6 +863,7 @@ function renderEconomics() {
         <div id="eco-chart-spend" class="chart"></div>
       </div>
     </div>
+    ${ga4Block()}
     <div class="eco-cols">
       <div>${funnel}</div>
       <div>${ltv}</div>
@@ -2344,6 +2375,7 @@ async function loadAll(fresh = false) {
     getJSON('/api/store/sales'),
     getJSON('/api/economics'),
     getJSON('/api/store/ad-spend'),
+    getJSON('/api/store/ga4'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -2375,6 +2407,8 @@ async function loadAll(fresh = false) {
   state.economics = eco && eco.windows ? eco : null
   const spendStore = val(21, null)
   state.adSpend = spendStore && Array.isArray(spendStore.entries) ? spendStore : { entries: [], importedFiles: {} }
+  const ga4Store = val(22, null)
+  state.ga4 = ga4Store && ga4Store.extractedAt ? ga4Store : null
   /* fresh reload: drop cached document bodies so edits show up */
   if (fresh) docCache.clear()
 }

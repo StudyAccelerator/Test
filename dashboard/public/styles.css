@@ -1033,3 +1033,4 @@ code {
 .eco-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 28px; }
 .eco-charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 0 28px; margin: 6px 0 10px; }
 .eco-charts .chart { min-height: 130px; }
+.ga4-cols { margin-bottom: 14px; }
