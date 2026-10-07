@@ -27,7 +27,7 @@ import {
 } from '@/lib/diagnostic'
 import { subscribeDiagnostic } from '@/lib/mailerlite'
 import { checkPhone } from '@/lib/phone'
-import { trackFunnel, captureAttribution, getAttribution } from '@/lib/analytics'
+import { trackFunnel, captureAttribution, getAttribution, trackDiagnosticLead } from '@/lib/analytics'
 
 declare global {
   interface Window {
@@ -1150,8 +1150,9 @@ function EmailGate({
     })
 
     if (result === 'ok') {
-      window.fbq?.('track', 'Lead')
-      window.gtag?.('event', 'generate_lead')
+      /* Meta is told only A-level-year leads are the conversion it should
+         chase (7 October 2026); pre-A-level still fires its own event. */
+      trackDiagnosticLead(answers.year as string | undefined, yearGroupString(answers))
       onUnlock(name, isParent ? child : '', email)
       return
     }

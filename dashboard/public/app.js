@@ -878,6 +878,7 @@ function renderEconomics() {
           <button id="eco-import" class="gold-btn" title="Reads Ads Manager CSV exports (Breakdown: Day) from your Downloads folder">Import exports</button>
         </div>
         <p id="eco-note" class="small muted" style="margin-bottom:0">${esc(srcLine || 'Nothing recorded yet.')}</p>
+        <p class="small muted" style="margin-bottom:0">From 7 Oct 2026 Meta's Lead event counts Year 12, 13 and resit leads only (pre-A-level fires PreALevelLead), so Ads Manager results and cost per result before and after that date are not comparable. MailerLite counts here include everyone.</p>
       </div>
     </div>`
 
