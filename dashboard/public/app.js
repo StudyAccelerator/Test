@@ -39,6 +39,8 @@ const state = {
   monzo: null,
   competitors: null,
   connections: null,
+  economics: null,
+  adSpend: null,
 }
 
 /* ------------------------------------------------------------------ api */
@@ -727,6 +729,144 @@ function renderSales() {
       await persist()
     })
   )
+}
+
+
+/* ------------------------------------------------------------ economics */
+/* Funnel economics (7 October 2026, Waleed's ask): the unit numbers behind
+   the ads in one place: cost per lead, per callback, per call held, per
+   enrolment (CAC), AOV, LTV so far, ROAS and the conversion rates between
+   each step. The server computes them from real stores only; anything
+   without data says pending. Spend comes from Ads Manager exports with
+   Breakdown: Day dropped in ~/Downloads (Import button), or typed in. */
+
+let ecoWindow = 'round4'
+
+function money(n, dp = 2) {
+  return n == null || !isFinite(n) ? 'n/a' : '£' + Number(n).toLocaleString('en-GB', { minimumFractionDigits: dp, maximumFractionDigits: dp })
+}
+
+function renderEconomics() {
+  const body = $('#eco-body')
+  const chip = $('#eco-chip')
+  if (!body) return
+  const eco = state.economics
+  if (!eco) {
+    chip.textContent = 'pending'
+    chip.className = 'chip chip-pending'
+    body.innerHTML = '<p class="empty-state">The dashboard server could not compute the funnel numbers. Restart it and refresh.</p>'
+    return
+  }
+  const w = eco.windows[ecoWindow] || eco.windows.round4
+  const hasSpend = w.spend > 0
+  chip.textContent = hasSpend ? 'real figures' : 'spend pending'
+  chip.className = hasSpend ? 'chip chip-live' : 'chip chip-pending'
+
+  const tabs = Object.values(eco.windows)
+    .map((x) => `<button class="eco-tab${x.key === ecoWindow ? ' active' : ''}" data-key="${x.key}">${esc(x.label)}</button>`)
+    .join('')
+
+  const stat = (label, value, sub) =>
+    `<div class="li-stat"><div class="label">${esc(label)}</div><div class="hero-number">${value}</div><div class="hero-sub">${esc(sub || '')}</div></div>`
+  const rate = (f) => (f == null ? 'n/a' : (f * 100).toFixed(0) + '%')
+  const pendingNote = (n, what) => (n ? '' : ` (no ${what} recorded in this window)`)
+
+  const stats = [
+    stat('Ad spend', money(w.spend), hasSpend ? `${w.spendDays} days with spend` : 'import or enter spend below'),
+    stat('Leads', String(w.diagnosticLeads), `${w.parents} parents, ${w.students} students`),
+    stat('Cost per lead', money(w.cpl), w.metaLeads ? `Meta counts ${w.metaLeads} (${money(w.cplMeta)})` : 'from MailerLite leads'),
+    stat('Callbacks asked', String(w.callbacks), money(w.costPerCallback) + ' each'),
+    stat('Calls held', String(w.held), w.held ? `${money(w.costPerCallHeld)} each, from ${w.heldSource === 'fathom' ? 'Fathom' : 'your CRM ticks'}` : 'none on record'),
+    stat('Enrolments', String(w.enrolments), w.enrolments ? `${money(w.newMrr, 0)}/mo new MRR` : 'none recorded in the Sales panel'),
+    stat('CAC', money(w.cac), 'ad spend per enrolment' + pendingNote(w.enrolments, 'enrolments')),
+    stat('AOV', money(w.aov), 'average first payment'),
+    stat('Cash from them', money(w.cash, 0), w.roas == null ? 'ROAS needs spend' : `ROAS ${w.roas.toFixed(2)}x so far`),
+  ].join('')
+
+  const funnel = `
+    <div class="subhead">Conversion between steps</div>
+    <div class="money-row"><span class="m-key">Lead to call held</span><span class="m-val">${rate(w.leadToCall)}</span></div>
+    <div class="money-row"><span class="m-key">Call held to enrolment</span><span class="m-val">${rate(w.callToEnrol)}</span></div>
+    <div class="money-row"><span class="m-key">Lead to enrolment</span><span class="m-val">${rate(w.leadToEnrol)}</span></div>
+    <div class="money-row"><span class="m-key">Called (CRM tick)</span><span class="m-val">${w.called}</span></div>
+    <div class="money-row"><span class="m-key">Calls booked (CRM tick)</span><span class="m-val">${w.booked}</span></div>`
+
+  const l = eco.ltv
+  const ltv = `
+    <div class="subhead">Lifetime value (observed, not projected)</div>
+    <div class="money-row"><span class="m-key">Monthly students on record</span><span class="m-val">${l.monthlyStudents} (${l.churned} ended)</span></div>
+    <div class="money-row"><span class="m-key">Average tenure so far</span><span class="m-val">${l.avgTenureMonths == null ? 'n/a' : l.avgTenureMonths.toFixed(1) + ' months'}</span></div>
+    <div class="money-row"><span class="m-key">LTV so far (tenure x monthly)</span><span class="m-val">${money(l.ltvSoFar, 0)}</span></div>
+    <div class="money-row"><span class="m-key">LTV to CAC</span><span class="m-val">${l.ltvSoFar && w.cac ? (l.ltvSoFar / w.cac).toFixed(1) + 'x' : 'n/a'}</span></div>
+    <p class="small muted">Tenure grows every month a student stays, so LTV here only ever rises with the record. Nobody has ended yet, which is why there is no churn-based projection.</p>`
+
+  const days = (eco.daily || []).slice().reverse()
+  const dailyRows = days.length
+    ? days.map((d) => `<div class="money-row"><span class="m-key">${esc(shortDate(d.date))}${d.source === 'manual' ? ' (typed)' : ''}</span><span class="m-val" style="font-size:14px">${money(d.amount)} · ${d.leads ?? 'n/a'} Meta leads</span></div>`).join('')
+    : '<p class="empty-state">No daily spend yet. In Ads Manager set Breakdown to Day, Export as CSV, then press Import. Or type a day below.</p>'
+
+  const srcLine = ['spend', 'leads', 'calls', 'sales'].map((k) => eco.sources[k]).filter(Boolean).join(' · ')
+
+  body.innerHTML = `
+    <div class="eco-tabs">${tabs}</div>
+    <div class="li-stats eco-stats">${stats}</div>
+    <div class="eco-cols">
+      <div>${funnel}</div>
+      <div>${ltv}</div>
+      <div>
+        <div class="subhead">Daily Meta spend (last 14 days)</div>
+        ${dailyRows}
+        <div class="task-add">
+          <input id="eco-date" type="date" style="max-width:150px" />
+          <input id="eco-amt" type="number" min="0" step="0.01" placeholder="£ spent" style="max-width:100px" />
+          <input id="eco-leads" type="number" min="0" step="1" placeholder="Meta leads" style="max-width:100px" />
+          <button id="eco-add" class="gold-btn">Add day</button>
+          <button id="eco-import" class="gold-btn" title="Reads Ads Manager CSV exports (Breakdown: Day) from your Downloads folder">Import exports</button>
+        </div>
+        <p id="eco-note" class="small muted" style="margin-bottom:0">${esc(srcLine || 'Nothing recorded yet.')}</p>
+      </div>
+    </div>`
+
+  body.querySelectorAll('.eco-tab').forEach((b) =>
+    b.addEventListener('click', () => {
+      ecoWindow = b.dataset.key
+      renderEconomics()
+    })
+  )
+  const reload = async () => {
+    try {
+      state.economics = await getJSON('/api/economics')
+      state.adSpend = await getJSON('/api/store/ad-spend')
+    } catch {}
+    renderEconomics()
+  }
+  const add = $('#eco-add')
+  if (add)
+    add.addEventListener('click', async () => {
+      const date = $('#eco-date').value
+      const amount = Number($('#eco-amt').value)
+      const leadsIn = $('#eco-leads').value
+      if (!date || !(amount >= 0)) return
+      const store = state.adSpend || { entries: [], importedFiles: {} }
+      store.entries = (store.entries || []).filter((e) => !(e.date === date && e.source === 'manual'))
+      store.entries.push({ id: `manual-${date}`, date, platform: 'meta', amount, leads: leadsIn === '' ? null : Number(leadsIn), source: 'manual' })
+      store.entries.sort((a, b) => (a.date < b.date ? -1 : 1))
+      await putStore('ad-spend', store)
+      await reload()
+    })
+  const imp = $('#eco-import')
+  if (imp)
+    imp.addEventListener('click', async () => {
+      imp.textContent = 'Importing…'
+      imp.disabled = true
+      try {
+        const r = await (await fetch('/api/ad-spend/import', { method: 'POST' })).json()
+        const note = $('#eco-note')
+        if (note) note.textContent = r.error ? r.error : `Imported ${r.days} day${r.days === 1 ? '' : 's'} from ${r.files.length} file${r.files.length === 1 ? '' : 's'}${r.skipped.length ? '. Skipped: ' + r.skipped.join('; ') : ''}`
+      } finally {
+        await reload()
+      }
+    })
 }
 
 /* ----------------------------------------------------------------- bank */
@@ -2175,6 +2315,8 @@ async function loadAll(fresh = false) {
     getJSON('/api/store/linkedin-inbox'),
     getJSON('/api/leads-crm'),
     getJSON('/api/store/sales'),
+    getJSON('/api/economics'),
+    getJSON('/api/store/ad-spend'),
   ])
   const val = (i, fallback) => (results[i].status === 'fulfilled' ? results[i].value : fallback)
   state.ml = val(0, { error: 'dashboard server unreachable' })
@@ -2202,6 +2344,10 @@ async function loadAll(fresh = false) {
   const crmStore = val(18, null)
   state.crm = crmStore && Array.isArray(crmStore.leads) ? crmStore : null
   state.sales = val(19, [])
+  const eco = val(20, null)
+  state.economics = eco && eco.windows ? eco : null
+  const spendStore = val(21, null)
+  state.adSpend = spendStore && Array.isArray(spendStore.entries) ? spendStore : { entries: [], importedFiles: {} }
   /* fresh reload: drop cached document bodies so edits show up */
   if (fresh) docCache.clear()
 }
@@ -2212,6 +2358,7 @@ function renderAll() {
   renderEmail()
   renderStripe()
   renderSales()
+  renderEconomics()
   renderSubs()
   renderBank()
   renderLinkedIn()

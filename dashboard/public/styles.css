@@ -1023,3 +1023,11 @@ code {
 .crm-notes { flex: 1 1 260px; min-height: 34px; resize: vertical; line-height: 1.45; }
 .crm-status { font-weight: 600; }
 .crm-more { margin-top: 6px; text-align: center; }
+
+/* funnel economics panel */
+.eco-tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 14px; }
+.eco-tab { font: inherit; font-size: 12.5px; padding: 5px 10px; border-radius: 999px; border: 1px solid var(--line, rgba(26,21,53,.12)); background: transparent; color: var(--ink-muted); cursor: pointer; }
+.eco-tab.active { background: var(--ink, #1a1535); color: #fff; border-color: var(--ink, #1a1535); }
+.eco-stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 14px 22px; margin-bottom: 10px; }
+.eco-stats .hero-number { font-size: 26px; }
+.eco-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 0 28px; }

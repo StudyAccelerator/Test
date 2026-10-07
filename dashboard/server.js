@@ -22,6 +22,7 @@
 const http = require('node:http')
 const fs = require('node:fs')
 const path = require('node:path')
+const os = require('os')
 const crypto = require('node:crypto')
 const { execFile } = require('node:child_process')
 
@@ -77,7 +78,7 @@ const STRIPE_KEY = env.STRIPE_KEY || null
 
 /* ------------------------------------------------------------ local data */
 
-const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox', 'leads-crm', 'sales']
+const STORES = ['tasks', 'projects', 'subscriptions', 'linkedin', 'facebook', 'competitors', 'history', 'gmail', 'calendar', 'stripe-snapshot', 'linkedin-competitors', 'leads', 'docs', 'linkedin-inbox', 'leads-crm', 'sales', 'ad-spend']
 
 function ensureData() {
   fs.mkdirSync(DATA_DIR, { recursive: true })
@@ -238,6 +239,217 @@ async function syncLeadsCrm() {
     crmSyncing = null
   })
   return crmSyncing
+}
+
+
+/* ---------------------------------------------------------- economics */
+/* Funnel economics (7 October 2026, Waleed's ask): cost per lead, per call,
+   per enrolment (CAC), AOV, LTV and the conversion rates between them, in
+   one place. Sources, all real: ad spend from Ads Manager exports he
+   downloads (Breakdown: Day) or types in, leads from the Lead CRM store
+   (MailerLite), callbacks from the callback group, calls booked from the
+   CRM checklist, calls held from the Fathom session store, enrolments and
+   revenue from the Sales panel. Anything missing reads as pending, never
+   as a guess. */
+
+const AD_SPEND_EMPTY = { entries: [], importedFiles: {} }
+const META_ACCOUNT = '980086329528962'
+const LAUNCH_R4 = '2026-10-03'
+const FIRST_AD_DAY = '2026-07-28'
+
+function parseCsv(text) {
+  const rows = []
+  let row = [], field = '', q = false
+  for (let i = 0; i < text.length; i++) {
+    const c = text[i]
+    if (q) {
+      if (c === '"') {
+        if (text[i + 1] === '"') { field += '"'; i++ } else q = false
+      } else field += c
+    } else if (c === '"') q = true
+    else if (c === ',') { row.push(field); field = '' }
+    else if (c === '\n' || c === '\r') {
+      if (c === '\r' && text[i + 1] === '\n') i++
+      row.push(field); rows.push(row); row = []; field = ''
+    } else field += c
+  }
+  if (field || row.length) { row.push(field); rows.push(row) }
+  const header = (rows.shift() || []).map((h) => h.replace(/^﻿/, '').trim())
+  return rows.filter((r) => r.length > 1).map((r) => Object.fromEntries(header.map((h, i) => [h, r[i] ?? ''])))
+}
+
+/* Reads every Ads Manager export for the account in ~/Downloads, keeps only
+   day-level rows (Reporting starts == Reporting ends), sums each day across
+   the rows in that file (campaigns, ad sets or ads), and upserts one entry
+   per day. A newer export of the same day replaces the older one. */
+function importMetaExports() {
+  const dir = path.join(os.homedir(), 'Downloads')
+  const store = readStore('ad-spend', null) || JSON.parse(JSON.stringify(AD_SPEND_EMPTY))
+  store.entries = Array.isArray(store.entries) ? store.entries : []
+  store.importedFiles = store.importedFiles || {}
+  const report = { files: [], days: 0, skipped: [] }
+  let files = []
+  try {
+    files = fs.readdirSync(dir).filter((f) => f.startsWith(`${META_ACCOUNT}-`) && f.toLowerCase().endsWith('.csv'))
+  } catch (err) {
+    return { ...report, error: `Cannot read ${dir}: ${err.message}` }
+  }
+  for (const f of files) {
+    const full = path.join(dir, f)
+    const mtime = fs.statSync(full).mtimeMs
+    if (store.importedFiles[f] && store.importedFiles[f] >= mtime) continue
+    let rows
+    try {
+      rows = parseCsv(fs.readFileSync(full, 'utf8'))
+    } catch (err) {
+      report.skipped.push(`${f}: ${err.message}`)
+      continue
+    }
+    const perDay = new Map()
+    for (const r of rows) {
+      const a = r['Reporting starts'], b = r['Reporting ends']
+      if (!/^\d{4}-\d{2}-\d{2}$/.test(a || '') || a !== b) continue
+      const spend = Number(r['Amount spent (GBP)'] || 0)
+      const leads = Number(r['Results'] || 0)
+      const d = perDay.get(a) || { spend: 0, leads: 0, rows: 0 }
+      d.spend += spend; d.leads += leads; d.rows += 1
+      perDay.set(a, d)
+    }
+    if (!perDay.size) {
+      report.skipped.push(`${f}: no day-level rows (export with Breakdown: Day)`)
+      store.importedFiles[f] = mtime
+      continue
+    }
+    for (const [date, d] of perDay) {
+      const existing = store.entries.find((e) => e.date === date && e.source === 'import')
+      const entry = { id: `meta-${date}`, date, platform: 'meta', amount: Math.round(d.spend * 100) / 100, leads: d.leads, source: 'import', file: f }
+      if (existing) Object.assign(existing, entry)
+      else store.entries.push(entry)
+      report.days += 1
+    }
+    store.importedFiles[f] = mtime
+    report.files.push(f)
+  }
+  store.entries.sort((a, b) => (a.date < b.date ? -1 : 1))
+  writeStore('ad-spend', store)
+  return report
+}
+
+function monthsBetween(a, b) {
+  const d1 = new Date(a), d2 = new Date(b)
+  return Math.max(0, (d2 - d1) / (86400000 * 30.4375))
+}
+
+function economics() {
+  const today = new Date().toISOString().slice(0, 10)
+  const daysAgo = (n) => new Date(Date.now() - n * 86400000).toISOString().slice(0, 10)
+  const windows = [
+    { key: 'last7', label: 'Last 7 days', from: daysAgo(6), to: today },
+    { key: 'last30', label: 'Last 30 days', from: daysAgo(29), to: today },
+    { key: 'round4', label: 'Since 3 Oct (round 4)', from: LAUNCH_R4, to: today },
+    { key: 'all', label: 'Since the first ad (28 Jul)', from: FIRST_AD_DAY, to: today },
+  ]
+  const spendStore = readStore('ad-spend', null) || AD_SPEND_EMPTY
+  /* one figure per day: a typed (manual) day overrides an imported one,
+     because an Ads Manager export taken while edits are unpublished leaves
+     out the ad sets being deleted and under-reports the day */
+  const byDate = new Map()
+  for (const e of Array.isArray(spendStore.entries) ? spendStore.entries : []) {
+    const cur = byDate.get(e.date)
+    if (!cur || (e.source === 'manual' && cur.source !== 'manual')) byDate.set(e.date, e)
+  }
+  const entries = [...byDate.values()].sort((a, b) => (a.date < b.date ? -1 : 1))
+  const crm = readStore('leads-crm', null) || { leads: [] }
+  const leads = Array.isArray(crm.leads) ? crm.leads : []
+  const sessions = (readStore('student-sessions', null) || {}).sessions || []
+  const sales = readStore('sales', [])
+  const inWin = (date, w) => date && date.slice(0, 10) >= w.from && date.slice(0, 10) <= w.to
+  const tick = (l, k) => l.checklist && l.checklist[k] && l.checklist[k].done ? l.checklist[k] : null
+
+  const out = {}
+  for (const w of windows) {
+    const spendRows = entries.filter((e) => inWin(e.date, w))
+    const spend = spendRows.reduce((a, e) => a + Number(e.amount || 0), 0)
+    const metaLeads = spendRows.reduce((a, e) => a + Number(e.leads || 0), 0)
+    const spendDays = new Set(spendRows.map((e) => e.date)).size
+    const wl = leads.filter((l) => inWin(l.subscribedAt, w))
+    const diag = wl.filter((l) => l.isDiagnostic)
+    const parents = diag.filter((l) => l.taker === 'parent').length
+    const callbacks = leads.filter((l) => l.callbackRequested && inWin(l.callbackAt || l.subscribedAt, w)).length
+    const called = leads.filter((l) => { const t = tick(l, 'called'); return t && inWin(t.at, w) }).length
+    const booked = leads.filter((l) => { const t = tick(l, 'callBooked'); return t && inWin(t.at, w) }).length
+    const heldCrm = leads.filter((l) => { const t = tick(l, 'callHeld'); return t && inWin(t.at, w) }).length
+    const heldFathom = sessions.filter((x) => x.type === 'sales_call' && inWin(x.date, w)).length
+    const held = Math.max(heldCrm, heldFathom)
+    const enrol = sales.filter((r) => inWin(r.startedAt, w))
+    const enrolments = enrol.length
+    const newMrr = enrol.filter((r) => r.cadence === 'monthly').reduce((a, r) => a + Number(r.amount || 0), 0)
+    const oneOff = enrol.filter((r) => r.cadence !== 'monthly').reduce((a, r) => a + Number(r.amount || 0), 0)
+    /* cash recognised from enrolments made in the window: months elapsed on
+       each monthly one (first month counts in full) plus one-offs */
+    const cash = enrol.reduce((a, r) => {
+      if (r.cadence !== 'monthly') return a + Number(r.amount || 0)
+      const end = r.endedAt || today
+      return a + Number(r.amount || 0) * Math.max(1, Math.ceil(monthsBetween(r.startedAt, end)))
+    }, 0)
+    const aov = enrolments ? (newMrr + oneOff) / enrolments : null
+    const div = (a, b) => (b ? a / b : null)
+    /* a cost with no spend recorded is unknown, not free */
+    const cost = (b) => (spend > 0 && b ? spend / b : null)
+    out[w.key] = {
+      ...w,
+      spend: Math.round(spend * 100) / 100,
+      spendDays,
+      metaLeads,
+      leads: wl.length,
+      diagnosticLeads: diag.length,
+      parents,
+      students: diag.length - parents,
+      callbacks,
+      called,
+      booked,
+      held,
+      heldSource: heldFathom >= heldCrm ? 'fathom' : 'crm',
+      enrolments,
+      newMrr,
+      oneOff,
+      cash,
+      aov,
+      cpl: cost(diag.length),
+      cplMeta: cost(metaLeads),
+      costPerCallback: cost(callbacks),
+      costPerCallHeld: cost(held),
+      cac: cost(enrolments),
+      roas: spend ? cash / spend : null,
+      leadToCall: div(held, diag.length),
+      callToEnrol: div(enrolments, held),
+      leadToEnrol: div(enrolments, diag.length),
+    }
+  }
+
+  /* lifetime value: what a monthly student has actually paid so far on
+     average, and what they would pay at the current average tenure. No
+     projection beyond observed tenure, because none has finished yet. */
+  const monthly = sales.filter((r) => r.cadence === 'monthly' && r.startedAt)
+  const tenures = monthly.map((r) => Math.max(1, Math.ceil(monthsBetween(r.startedAt, r.endedAt || today))))
+  const avgTenure = tenures.length ? tenures.reduce((a, b) => a + b, 0) / tenures.length : null
+  const avgMonthly = monthly.length ? monthly.reduce((a, r) => a + Number(r.amount || 0), 0) / monthly.length : null
+  const ltvSoFar = avgTenure && avgMonthly ? avgTenure * avgMonthly : null
+  const churned = monthly.filter((r) => r.endedAt).length
+
+  const spendDates = entries.map((e) => e.date).sort()
+  return {
+    generatedAt: new Date().toISOString(),
+    windows: out,
+    ltv: { avgTenureMonths: avgTenure, avgMonthly, ltvSoFar, monthlyStudents: monthly.length, churned },
+    daily: entries.slice(-14),
+    sources: {
+      spend: entries.length ? `${entries.length} days of Meta spend, ${spendDates[0]} to ${spendDates[spendDates.length - 1]}` : null,
+      leads: crm.syncedAt ? `Lead CRM synced ${crm.syncedAt.slice(0, 16).replace('T', ' ')}` : null,
+      calls: sessions.length ? `Fathom: ${sessions.filter((x) => x.type === 'sales_call').length} strategy calls on record` : null,
+      sales: sales.length ? `${sales.length} enrolments in the Sales panel` : null,
+    },
+  }
 }
 
 const CRM_FRESH_MS = 20 * 60_000
@@ -810,6 +1022,22 @@ async function handleApi(req, res, url) {
       }
     }
     if (req.method === 'GET') return sendJson(res, 200, await leadsCrmFresh())
+  }
+
+  if (seg[1] === 'economics' && req.method === 'GET') {
+    try {
+      return sendJson(res, 200, economics())
+    } catch (err) {
+      return sendJson(res, 200, { error: err.message })
+    }
+  }
+
+  if (seg[1] === 'ad-spend' && seg[2] === 'import' && req.method === 'POST') {
+    try {
+      return sendJson(res, 200, importMetaExports())
+    } catch (err) {
+      return sendJson(res, 200, { error: err.message })
+    }
   }
 
   if (seg[1] === 'store' && STORES.includes(seg[2])) {

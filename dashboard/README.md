@@ -81,3 +81,7 @@ Once an hour, a scheduled task sweeps Facebook for UK parents actively asking fo
 - `public/` is the dashboard UI (plain HTML, CSS, JS, hand-rolled SVG charts).
 - `seed/` holds committed defaults, copied into `data/` on first run only.
 - `data/` is your live local data. Gitignored. Delete a file to re-seed it.
+
+## Funnel economics (7 October 2026)
+
+The Money section's first panel computes cost per lead, cost per callback, cost per call held, CAC, AOV, cash recognised, ROAS, step conversion rates and an observed LTV from the real stores (`ad-spend`, `leads-crm`, the Fathom session store, `sales`). Spend: press **Import exports** after saving an Ads Manager export with Breakdown set to Day into `~/Downloads` (any export of the account, campaign, ad set or ad level, is summed per day), or type a day in the panel. Typed days win over imported ones for the same date. With no spend recorded every cost shows as unknown; nothing is estimated.
