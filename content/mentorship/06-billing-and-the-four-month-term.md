@@ -48,6 +48,28 @@ No payment provider can force a card payment. If a parent cancels the card or ca
 
 So treat the four months as a commitment device at the moment of signing, not as a fence you would ever defend. It works because a parent who has consciously agreed to four months turns up differently in month three, not because you could sue. The real retention machinery is the programme itself: the monthly review page and the monthly parent update are what stop anyone wanting to leave. That is the last time I will raise this.
 
+## Is it actually recurring? The check before the first renewal
+
+**An empty upcoming-payments view is expected and is not evidence of a problem.** Stripe does not pre-create future charges. It generates the invoice about an hour before it takes the money, so a renewal that is ten days away does not exist anywhere as a pending payment or a draft invoice yet. Looking for it in Payments or Invoices will always come up empty, on a perfectly healthy subscription.
+
+The thing that proves a subscription is live is the subscription record itself, not a future payment.
+
+**The sixty second check.** In the Stripe dashboard go to Billing, then Subscriptions. Labels move, so if that is not where it sits, type a student's email into the search bar at the top and open their customer page instead.
+
+| What you see | What it means | What to do |
+|---|---|---|
+| A row per paying student, status Active, with a **next invoice date** about a month after they joined | Working correctly. They will be charged automatically on that date. | Nothing |
+| The Subscriptions list is empty, but the payments show up under Payments | The payment link used a **one-off price, not a recurring one**. Nobody will ever be charged again. | Fix today, see below |
+| Status Trialing with a next invoice further out than expected | A trial period got added at setup | Edit the subscription and end the trial, or let it run and note the real first charge date |
+| Status Past due or Unpaid | The card failed on a renewal | Smart Retries should be handling it. Check the emails are switched on. |
+| Nothing at all, anywhere | Check the test mode toggle. Test mode data is a separate world from live. | Switch to live mode |
+
+**The scenario that matters.** If Subscriptions is empty, the monthly recurring revenue is not recurring. Those payments were one-off charges, the money came in once, and no renewal will ever fire. That is a materially different business from the one the MRR figure describes, and it is worth ten minutes to rule out rather than discovering it by nobody being charged.
+
+**If it turns out they were one-off payments.** Do not try to convert the existing charges. Create a proper recurring price (Products, add a price, set billing period to monthly), make a new payment link from it, and email each family one line: the first month is paid, here is the link that sets up the monthly payment from here so you never have to think about it again. It is a slightly awkward email and it is far less awkward than an unpaid month nobody noticed.
+
+**While you are in there, before the first renewal wave.** The first renewal is when card failures surface, so confirm these are on: automatic retries for failed payments, the customer email for a failed payment, the card-expiring reminder, and the receipt email for a successful payment. Confirm too that self-serve cancellation is still switched off in the Customer portal settings, because the renewal date is exactly when someone goes looking for the cancel button.
+
 ## Set up so you never chase anyone
 
 Turn these on once and the monthly admin is reading a notification.
