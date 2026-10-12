@@ -4,9 +4,35 @@
 import type { Commitment, TopicInput, WeekSettings } from './engine'
 import type { Rating } from './techniques'
 
-export type TopicForm = { id: number; name: string; rating: Rating }
-export type SubjectForm = { id: number; name: string; topics: TopicForm[] }
-export type CommitmentForm = { id: number; day: number; start: string; end: string; label: string }
+export type TopicForm = { id: string; name: string; rating: Rating }
+export type SubjectForm = { id: string; name: string; topics: TopicForm[] }
+export type CommitmentForm = { id: string; day: number; start: string; end: string; label: string }
+
+/* Row identity for subjects, topics and commitments. Every edit and removal
+   matches on this id, and React keys rows by it, so two rows must never share
+   one. The old scheme was a counter that restarted at 1 on each page load
+   while the restored audit kept its saved ids, so the next "Add topic" reused
+   an id a restored row already had and typing in one row renamed both (and
+   adding a subject could copy its topic list onto a restored subject). Random
+   ids cannot collide with anything restored, and loadState() re-keys every
+   restored row anyway, so a state saved by the old scheme is healed on load. */
+export function newId(): string {
+  const c = typeof crypto !== 'undefined' ? crypto : undefined
+  if (c && typeof c.randomUUID === 'function') return c.randomUUID()
+  return `${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 10)}`
+}
+
+export function rekeyForm(form: TrackerForm): TrackerForm {
+  return {
+    ...form,
+    subjects: (form.subjects || []).map((s) => ({
+      ...s,
+      id: newId(),
+      topics: (s.topics || []).map((t) => ({ ...t, id: newId() })),
+    })),
+    commitments: (form.commitments || []).map((c) => ({ ...c, id: newId() })),
+  }
+}
 
 export type TrackerForm = {
   name: string
@@ -147,7 +173,8 @@ export function loadState(): StoredState | null {
     if (!raw) return null
     const parsed = JSON.parse(raw) as StoredState
     if (!parsed || typeof parsed !== 'object' || !parsed.form || !Array.isArray(parsed.form.subjects)) return null
-    return parsed
+    /* Fresh ids for every restored row: see newId() for why this is load bearing */
+    return { ...parsed, form: rekeyForm(parsed.form), parked: Array.isArray(parsed.parked) ? parsed.parked : [] }
   } catch {
     return null
   }

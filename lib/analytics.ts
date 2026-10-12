@@ -116,3 +116,28 @@ export function getAttribution(): Attribution {
     return empty
   }
 }
+
+/* Qualified-lead signal for Meta (7 October 2026, Waleed's call). Every gate
+   submission still fires Meta's standard Lead event, so every lead, GCSE
+   included, keeps showing up as a lead in Ads Manager. On top of that, Year
+   12, Year 13 and resit takers (the ones his method and proof are built for)
+   also fire the custom event QualifiedLead. In Events Manager that custom
+   event becomes a custom conversion ("A-level lead"), and pointing an ad
+   set's conversion event at it makes Meta's delivery chase A-level parents
+   while the Lead column still counts everyone. Nothing about the page, the
+   questions, the report, MailerLite or the phone push changes. GA4 keeps one
+   generate_lead for all, flagged with `qualified` and the year. */
+export const QUALIFIED_YEAR_IDS = ['y12', 'y13', 'resit']
+
+export function isQualifiedLead(yearId: string | undefined): boolean {
+  return QUALIFIED_YEAR_IDS.includes(String(yearId || ''))
+}
+
+export function trackDiagnosticLead(yearId: string | undefined, yearGroup: string): void {
+  if (typeof window === 'undefined') return
+  const w = window as typeof window & { fbq?: TrackFn; gtag?: TrackFn }
+  const qualified = isQualifiedLead(yearId)
+  w.fbq?.('track', 'Lead', { content_category: yearGroup })
+  if (qualified) w.fbq?.('trackCustom', 'QualifiedLead', { content_category: yearGroup })
+  w.gtag?.('event', 'generate_lead', { qualified: qualified ? 'yes' : 'no', year_group: yearGroup })
+}

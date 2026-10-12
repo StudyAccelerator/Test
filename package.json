@@ -8,6 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "hq": "node dashboard/server.js",
+    "hq:install": "bash dashboard/install-launch-agent.sh",
     "content-hq": "node content-hq/server.js"
   },
   "dependencies": {
