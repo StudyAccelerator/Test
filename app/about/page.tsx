@@ -2,97 +2,134 @@ import Image from 'next/image'
 import Header from '@/components/header'
 import Footer from '@/components/footer'
 import { ScrollFade } from '@/components/ui/scroll-fade'
-import { WALL_QUOTES } from '@/lib/testimonials'
 
 export const metadata = {
   title: 'About Dr Waleed Ahmad | The NHS Doctor Behind A-Level Accelerators',
   description:
     'Dr Waleed Ahmad MBBS is an NHS doctor and former A-level student who built the study system behind A-Level Accelerators. Over 6 years he has worked with 1,000+ students.',
   alternates: { canonical: 'https://alevelaccelerators.com/about/' },
-  /* Draft gate: the page carries [bracketed] slots until Waleed supplies the
-     personal facts, and Sarah's quote needs her confirmed consent. Remove
-     this robots block at go-live and add the page to public/llms.txt. */
+  /* Draft gate: the testimonials below need the speakers' (or parents')
+     confirmation, which Waleed is collecting himself. Remove this robots
+     block at go-live and add the page to public/llms.txt. */
   robots: { index: false, follow: true },
 }
 
 const BOOK_A_CALL_LINK = 'https://scheduler.zoom.us/dr-waleed-ahmad/academic-strategy-call'
 const EYEBROW = 'font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/50'
 
-/* Real feedback-form quotes from the shared testimonial list, so the words
-   stay identical everywhere they appear on the site. */
-const VOICE_QUOTES = WALL_QUOTES.filter((q) =>
-  ['Maahil', 'Naysa', 'Rayanna'].includes(q.name)
-)
-
-/* The journey, in Waleed's own facts (given 12 October 2026): two A*s and
-   two As at A-level, St George's University of London, graduated 2025,
-   Foundation Year 2 doctor at St George's, tutoring since medical school. */
+/* Every image renders at its own aspect ratio (w-full h-auto), so nothing
+   is ever cropped. Portraits get a narrower column so they do not tower. */
 const JOURNEY = [
   {
     label: 'The A-level years',
     photo: '/photos/stressed-student.jpg',
     alt: 'Waleed as a stressed student during his A-levels',
+    portrait: false,
     body: [
-      'Two A*s and two As. From the outside it looked effortless. It wasn\'t. I worked harder than anyone I knew: hours and hours of revising, every evening, every weekend. It was incredibly stressful, and by the end it had burnt me out.',
-      'The grades came. But the way I got them is not something I\'d wish on any student, and it was about to stop working altogether.',
+      'I got As and A*s all the way through school, GCSEs and A-levels alike. From the outside it looked easy. It wasn\'t. I worked harder than anyone I knew: hours and hours, every evening, every weekend, and by the end it had burnt me out.',
+      'Hard work got me the grades. It also came close to breaking me, and I had no idea there was a better way.',
     ],
   },
   {
     label: 'Medical school',
-    photo: '/photos/waleed-graduation.jpg',
-    alt: 'Dr Waleed Ahmad at his medical school graduation',
+    photo: '/photos/waleed-scrubs-portrait.jpg',
+    alt: 'Waleed as a medical student at St George\'s, in scrubs',
+    portrait: true,
     body: [
-      'At St George\'s, University of London, there was simply too much to cover. Hard work, the only tool I had, stopped being enough. I had to learn the right way: how memory actually works, what examiners actually reward, how to study so every hour counts.',
-      'So I built myself a system. And I realised that if I\'d had it at 17, I\'d have got the same grades in a fraction of the time, without the burnout.',
+      'At St George\'s, University of London, the volume was on another level. Hard work, the only tool I had, stopped being enough. For the first time I had to learn how to learn: how memory actually works, what examiners actually reward, how to make every hour count.',
+      'So I built myself a system, and everything changed. If I\'d had it at 17, I\'d have got the same grades in a fraction of the time, without the burnout.',
     ],
   },
   {
-    label: 'The NHS',
-    photo: '/photos/waleed-scrubs-portrait.jpg',
-    alt: 'Dr Waleed Ahmad working as an NHS doctor',
+    label: 'Becoming a doctor',
+    photo: '/photos/waleed-graduation.jpg',
+    alt: 'Dr Waleed Ahmad at his medical school graduation',
+    portrait: true,
     body: [
-      'I graduated in 2025 and I\'m now a Foundation Year 2 doctor at St George\'s. Medicine trains you to diagnose before you treat, and that habit runs through everything we do here: find the real reason the marks are leaking first, then fix that, not everything.',
-      'It also means I teach around a hospital rota. My students hear about the night shifts. They also get a teacher who still sits exams, still revises, and still uses the system every week.',
+      'I graduated in 2025 and I\'m now a Foundation Year 2 doctor at St George\'s. Medicine trains you to diagnose before you treat, and that is exactly how I work with a student: find out why the marks are leaking first, then fix that, not everything.',
+      'It also means I teach around a hospital rota. My students know their teacher still sits exams, still revises, and still uses the system every week.',
     ],
   },
   {
     label: 'A-Level Accelerators',
     photo: '/photos/waleed-desk-calm.jpg',
     alt: 'Dr Waleed Ahmad teaching online from his desk',
+    portrait: false,
     body: [
-      'I started tutoring six years ago, in medical school, one GCSE and A-level student at a time. It was mostly subject support, and it worked: grades went up. But I was only ever fixing the knowledge side. What I really wanted was to fix how my students studied.',
-      'Once I started teaching the system instead of the subject, the results became consistent. It\'s why, on average, my students jump two grades within four months, and 96% get their first-choice university offer. More than 1,000 students later, that system is A-Level Accelerators.',
+      'I started tutoring six years ago, in medical school, one GCSE and A-level student at a time. It was subject support, and it worked: grades went up. But I was only fixing the knowledge side. What I really wanted to fix was how my students studied.',
+      'Once I started teaching the system instead of the subject, the results became consistent. On average my students jump two grades within four months, and 96% get their first-choice university offer. More than 1,000 students later, that system is A-Level Accelerators.',
     ],
   },
 ]
 
-/* Current Top 1% Mentorship students, from recorded coaching sessions
-   (dashboard/data/testimonials-master.md, 29 Sep to 2 Oct 2026). First
-   names only, minors; Waleed is getting their consent before go-live. */
-const MENTORSHIP_VOICES = [
+/* Testimonials: the point made clearly, in the speaker's own meaning if
+   not their exact filler. Sources: dashboard/data/testimonials-master.md
+   and the Fathom call recordings. Waleed collects each consent before
+   go-live. */
+const RESULTS = [
   {
-    name: 'Leighton',
-    role: 'Year 13 · two weeks into the Top 1% Mentorship',
+    name: 'Sarah',
+    before: 'C',
+    after: 'A*',
+    subject: 'Biology',
     quote:
-      'I got 65% on my physics test. I was quite pleased with that. I didn\'t think I was going to get anywhere near that.',
-    detail:
-      'I was using the blurting method. At first I had nothing on the page. I was trying what you suggested, and it was slowly coming to me more and more. And we had a six marker on stuff exactly to do with that, and I just remembered.',
+      'I started the year on Bs, and in Biology I was sometimes getting Cs. By my mocks I was getting A*s, and I finished with an A* in Biology. It would have been so much harder on my own.',
+    role: 'Now studying veterinary science at Bristol',
   },
   {
-    name: 'Azka',
-    role: 'Year 12 · Top 1% Mentorship',
+    name: 'Vernon',
+    before: 'B/C',
+    after: 'A',
+    subject: 'Biology and Chemistry',
     quote:
-      'It really did help me find out the minuscule bits that I was forgetting, or that I pretty much didn\'t even know about.',
-    detail:
-      'I didn\'t know about any of this. Now that I see it, there\'s a lot more to it than just the content.',
+      'I knew the content. In class I could answer anything. In exams I waffled and missed what the question was asking. The sessions fixed how I answered, and I finished with an A in Biology and an A in Chemistry. It gave my parents peace of mind too.',
+    role: 'Now studying at Brighton and Sussex Medical School',
+  },
+]
+
+const PARENTS = [
+  {
+    quote: 'Daniel has had so many tutors over the years. Not one of them ever explained it like this.',
+    who: 'Jeeva, Daniel\'s mum',
+    context: 'Enrolled Daniel on the Top 1% Mentorship the same call',
   },
   {
-    name: 'Angela',
-    role: 'Year 13 · Top 1% Mentorship',
     quote:
-      'Setting a timer and using subheadings, trying to get everything out. I think it was good.',
-    detail:
-      'Angela rated her confidence on a psychology case study at 7 out of 10. One 45-minute blurt cycle with Dr Waleed later, she rated it 10.',
+      'I\'m a dentist and I still couldn\'t help my daughter with this. I needed someone who had actually cracked it. Then we found Dr Waleed.',
+    who: 'Anam\'s mum',
+    context: 'Year 12 parent',
+  },
+]
+
+const STUDENTS = [
+  {
+    quote:
+      'I paid £70 an hour for an examiner and it didn\'t help. This isn\'t a tutoring session. It\'s the whole system, and someone there when I fall back.',
+    who: 'Kavi, Year 13',
+  },
+  {
+    quote: 'It gets to the root of the problem and fixes it.',
+    who: 'Samar, resitting Biology and Chemistry',
+  },
+  {
+    quote:
+      'Every tutor I had felt like another school lesson: the same thing taught to me again. This was the part that was always missing.',
+    who: 'Doreen, Year 13',
+  },
+  {
+    quote:
+      'Ask a tutor how to get better at studying and they talk about the subject. Procrastination and burnout are an afterthought to them. This is nothing like typical tuition.',
+    who: 'Hani, Year 13, predicted A*A*A',
+  },
+  {
+    quote:
+      'I could do the knowledge part myself. What I didn\'t know was how to answer the way the mark scheme wants. Now I can see exactly which small bits I was missing.',
+    who: 'Azka, Year 12',
+  },
+  {
+    quote:
+      'Nobody at school had told me any of this. It\'s completely different to what my teachers say, and it\'s helped.',
+    who: 'Yusuf, Year 11',
   },
 ]
 
@@ -115,11 +152,11 @@ export default function AboutDrWaleed() {
               <span className="italic text-brand-gold">the hard way.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-brand-text/75 md:mx-0 md:text-xl">
-              I&apos;m Dr Waleed Ahmad: NHS doctor, two A*s and two As at A-level earned the
-              exhausting way, and the founder of A-Level Accelerators. This is the story, and
-              the proof.
+              I&apos;m Dr Waleed Ahmad: NHS doctor, founder of A-Level Accelerators, and a former
+              student who got the A*s through sheer hours, then found a far better way. This is
+              the story, and the proof.
             </p>
-            <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row md:justify-start justify-center">
+            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row md:justify-start">
               <a
                 href={BOOK_A_CALL_LINK}
                 className="inline-block rounded-md bg-brand-gold px-8 py-3 font-semibold text-brand-purple transition hover:bg-brand-gold-light"
@@ -134,16 +171,16 @@ export default function AboutDrWaleed() {
               </a>
             </div>
           </div>
-          <div className="mx-auto w-full max-w-[300px] md:max-w-none">
+          <div className="mx-auto w-full max-w-[320px] md:max-w-none">
             <div className="rotate-2 rounded-2xl bg-white p-1.5 shadow-[0_0_0_1px_rgba(46,37,87,.08),0_16px_32px_rgba(46,37,87,.18)]">
               <Image
                 src="/photos/waleed-hero.jpg"
                 alt="Dr Waleed Ahmad, NHS doctor and founder of A-Level Accelerators"
-                width={800}
-                height={1000}
+                width={1600}
+                height={900}
                 priority
                 unoptimized
-                className="h-auto w-full rounded-xl object-cover"
+                className="h-auto w-full rounded-xl"
               />
             </div>
             <div className="mt-4 flex items-center gap-3 rounded-xl bg-white px-4 py-3 shadow-sm ring-1 ring-brand-purple/10">
@@ -162,33 +199,37 @@ export default function AboutDrWaleed() {
       </section>
 
       {/* Journey */}
-      <section id="journey" className="bg-white px-5 py-16 scroll-mt-24">
+      <section id="journey" className="scroll-mt-24 bg-white px-5 py-16">
         <div className="mx-auto max-w-4xl">
           <ScrollFade>
             <div className="text-center">
               <p className={EYEBROW}>My journey</p>
               <h2 className="mt-3 font-serif text-3xl font-bold text-brand-purple sm:text-4xl">
-                From nearly falling short to teaching the system
+                From burning out on the grades to teaching the system
               </h2>
             </div>
           </ScrollFade>
-          <div className="mt-12 space-y-10">
+          <div className="mt-12 space-y-12">
             {JOURNEY.map((step, idx) => (
               <ScrollFade key={step.label}>
                 <div
-                  className={`grid items-center gap-6 md:grid-cols-[1fr,1.6fr] ${
+                  className={`grid items-center gap-8 md:grid-cols-[1fr,1.6fr] ${
                     idx % 2 === 1 ? 'md:[direction:rtl]' : ''
                   }`}
                 >
                   <div className="[direction:ltr]">
-                    <div className="overflow-hidden rounded-2xl shadow-sm ring-1 ring-brand-purple/10">
+                    <div
+                      className={`mx-auto overflow-hidden rounded-2xl shadow-sm ring-1 ring-brand-purple/10 ${
+                        step.portrait ? 'max-w-[260px] md:max-w-[300px]' : 'max-w-md md:max-w-none'
+                      }`}
+                    >
                       <Image
                         src={step.photo}
                         alt={step.alt}
-                        width={640}
-                        height={480}
+                        width={step.portrait ? 900 : 1200}
+                        height={step.portrait ? 1200 : 675}
                         unoptimized
-                        className="h-56 w-full object-cover md:h-64"
+                        className="h-auto w-full"
                       />
                     </div>
                   </div>
@@ -239,147 +280,36 @@ export default function AboutDrWaleed() {
         </section>
       </ScrollFade>
 
-      {/* Results spotlight */}
+      {/* Results: two students */}
       <section className="bg-brand-light-gray px-5 py-16">
         <div className="mx-auto max-w-5xl">
           <ScrollFade>
             <h2 className="text-center font-serif text-3xl font-bold text-brand-purple sm:text-4xl">
-              Two students, in their own words
+              From Cs to A*s, in their own words
             </h2>
-            <p className="mx-auto mt-3 max-w-xl text-center leading-relaxed text-brand-text/70">
-              Recorded interviews with students who finished the full 12 weeks. Their words, not
-              mine.
-            </p>
           </ScrollFade>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
-            <ScrollFade>
-              <figure className="flex h-full flex-col rounded-3xl bg-white p-8 shadow-sm ring-1 ring-brand-purple/10">
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-full bg-green-600 px-3 py-1 text-sm font-semibold text-white">
-                    A · Biology
-                  </span>
-                  <span className="rounded-full bg-purple-600 px-3 py-1 text-sm font-semibold text-white">
-                    A · Chemistry
-                  </span>
-                </div>
-                <blockquote className="mt-5 flex-1 space-y-4 leading-relaxed text-brand-text/80">
-                  <p>
-                    &ldquo;I definitely had the knowledge. In class, if the teacher asked me a
-                    question, I could answer it. But when it came to exams, sometimes I waffled
-                    too much, or missed what the question was actually asking. It wasn&apos;t
-                    about my knowledge, but about exam technique. And that was helped by the
-                    sessions, by literally going through the questions and seeing how the tutors
-                    thought.&rdquo;
-                  </p>
-                  <p>
-                    &ldquo;It&apos;s literally like having extra teachers to help you out. And,
-                    for sure, it gave my parents peace of mind.&rdquo;
-                  </p>
-                </blockquote>
-                <figcaption className="mt-5 border-t border-brand-purple/10 pt-4 text-sm">
-                  <span className="font-bold text-brand-purple">Vernon</span>
-                  <span className="block text-brand-text/65">
-                    Subject Accelerator alumnus, now at Brighton and Sussex Medical School
-                  </span>
-                </figcaption>
-              </figure>
-            </ScrollFade>
-            <ScrollFade>
-              <figure className="flex h-full flex-col rounded-3xl bg-white p-8 shadow-sm ring-1 ring-brand-purple/10">
-                <div className="flex flex-wrap gap-2">
-                  <span className="rounded-full bg-green-600 px-3 py-1 text-sm font-semibold text-white">
-                    A* · Biology
-                  </span>
-                </div>
-                <blockquote className="mt-5 flex-1 space-y-4 leading-relaxed text-brand-text/80">
-                  <p>
-                    &ldquo;I definitely improved. I think I started with Bs for everything, but
-                    throughout my mocks I started getting more of a mixture of As and Bs, a
-                    couple of A*s. So I think it got better over the year, actually.&rdquo;
-                  </p>
-                  <p>
-                    &ldquo;Because it&apos;s small groups as well, it still felt like I was
-                    still being listened to.&rdquo;
-                  </p>
-                </blockquote>
-                <figcaption className="mt-5 border-t border-brand-purple/10 pt-4 text-sm">
-                  <span className="font-bold text-brand-purple">Sarah</span>
-                  <span className="block text-brand-text/65">
-                    Subject Accelerator alumna, now studying veterinary science at Bristol, her
-                    first choice
-                  </span>
-                </figcaption>
-              </figure>
-            </ScrollFade>
-          </div>
-
-          {/* What Vernon told us to tell parents */}
-          <ScrollFade>
-            <div className="mt-6 rounded-3xl bg-brand-purple p-8 text-brand-cream sm:p-10">
-              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-cream/50">
-                For parents, in a student&apos;s words
-              </p>
-              <div className="mt-4 grid gap-6 md:grid-cols-2">
-                <blockquote className="leading-relaxed text-brand-cream/90">
-                  &ldquo;I would tell them definitely try it out, because it&apos;s definitely made
-                  an effect for me. And although it is an upfront investment, it will pay you back
-                  eventually. It&apos;s just cheaper than tutors as well. So it&apos;s just worth it
-                  for sure.&rdquo;
-                </blockquote>
-                <blockquote className="leading-relaxed text-brand-cream/90">
-                  &ldquo;First of all, they were like, oh, that much money, that&apos;s quite
-                  expensive. And actually they ended up saying, wow, that&apos;s quite a good deal.
-                  The main thing was they worried there would be no effect. But afterwards they were
-                  more than happy, because I definitely did improve.&rdquo;
-                </blockquote>
-              </div>
-              <p className="mt-5 text-sm font-semibold text-brand-gold">
-                Vernon, on what he would tell other parents, and on his own
-              </p>
-            </div>
-          </ScrollFade>
-
-          {/* Inside the mentorship, right now */}
-          <ScrollFade>
-            <div className="mt-14 text-center">
-              <p className={EYEBROW}>Inside the Top 1% Mentorship</p>
-              <h2 className="mt-3 font-serif text-3xl font-bold text-brand-purple">
-                What this year&apos;s students are saying, weeks in
-              </h2>
-            </div>
-          </ScrollFade>
-          <div className="mt-8 grid gap-4 md:grid-cols-3">
-            {MENTORSHIP_VOICES.map((v) => (
-              <ScrollFade key={v.name}>
-                <figure className="flex h-full flex-col rounded-2xl border-2 border-brand-gold/50 bg-white p-6 shadow-sm">
-                  <blockquote className="font-serif text-lg font-bold leading-snug text-brand-purple">
-                    &ldquo;{v.quote}&rdquo;
+            {RESULTS.map((r) => (
+              <ScrollFade key={r.name}>
+                <figure className="flex h-full flex-col rounded-3xl bg-white p-8 shadow-sm ring-1 ring-brand-purple/10">
+                  <div className="flex items-center gap-3">
+                    <span className="rounded-xl bg-brand-cream px-3 py-2 font-serif text-2xl font-bold text-brand-text/50">
+                      {r.before}
+                    </span>
+                    <span aria-hidden="true" className="text-xl text-brand-gold">
+                      →
+                    </span>
+                    <span className="rounded-xl bg-brand-purple px-3 py-2 font-serif text-2xl font-bold text-brand-gold">
+                      {r.after}
+                    </span>
+                    <span className="ml-1 text-sm font-semibold text-brand-purple">{r.subject}</span>
+                  </div>
+                  <blockquote className="mt-5 flex-1 text-lg leading-relaxed text-brand-text/85">
+                    &ldquo;{r.quote}&rdquo;
                   </blockquote>
-                  <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-text/75">
-                    {v.name === 'Angela' ? v.detail : <>&ldquo;{v.detail}&rdquo;</>}
-                  </p>
-                  <figcaption className="mt-4 border-t border-brand-purple/10 pt-3 text-sm">
-                    <span className="font-bold text-brand-purple">{v.name}</span>
-                    <span className="block text-brand-text/65">{v.role}</span>
-                  </figcaption>
-                </figure>
-              </ScrollFade>
-            ))}
-          </div>
-
-          {/* Shorter voices */}
-          <div className="mt-6 grid gap-4 sm:grid-cols-3">
-            {VOICE_QUOTES.map((q) => (
-              <ScrollFade key={q.name}>
-                <figure className="h-full rounded-2xl bg-white p-6 shadow-sm ring-1 ring-brand-purple/10">
-                  <span aria-hidden="true" className="text-sm tracking-tight text-brand-gold">
-                    ★★★★★
-                  </span>
-                  <blockquote className="mt-2 text-sm leading-relaxed text-brand-text/80">
-                    &ldquo;{q.quote}&rdquo;
-                  </blockquote>
-                  <figcaption className="mt-3 text-sm font-semibold text-brand-purple">
-                    {q.name} · {q.role}
+                  <figcaption className="mt-5 border-t border-brand-purple/10 pt-4">
+                    <span className="font-bold text-brand-purple">{r.name}</span>
+                    <span className="block text-sm text-brand-text/65">{r.role}</span>
                   </figcaption>
                 </figure>
               </ScrollFade>
@@ -388,8 +318,61 @@ export default function AboutDrWaleed() {
         </div>
       </section>
 
-      {/* Where I spend my time */}
+      {/* Parents */}
+      <ScrollFade>
+        <section className="bg-brand-purple px-5 py-16">
+          <div className="mx-auto max-w-5xl">
+            <p className="text-center font-mono text-[11px] uppercase tracking-[0.2em] text-brand-cream/50">
+              What parents say
+            </p>
+            <div className="mt-8 grid gap-8 md:grid-cols-2">
+              {PARENTS.map((p) => (
+                <figure key={p.who} className="rounded-3xl border border-brand-gold/30 bg-white/5 p-8">
+                  <blockquote className="font-serif text-2xl font-bold leading-snug text-brand-cream sm:text-3xl">
+                    &ldquo;{p.quote}&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-5">
+                    <span className="font-semibold text-brand-gold">{p.who}</span>
+                    <span className="block text-sm text-brand-cream/70">{p.context}</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      </ScrollFade>
+
+      {/* Students on the method */}
       <section className="bg-white px-5 py-16">
+        <div className="mx-auto max-w-5xl">
+          <ScrollFade>
+            <div className="text-center">
+              <p className={EYEBROW}>Inside the Top 1% Mentorship</p>
+              <h2 className="mt-3 font-serif text-3xl font-bold text-brand-purple sm:text-4xl">
+                Why students pick this over another tutor
+              </h2>
+            </div>
+          </ScrollFade>
+          <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {STUDENTS.map((s) => (
+              <ScrollFade key={s.who}>
+                <figure className="flex h-full flex-col rounded-2xl bg-brand-cream p-6 ring-1 ring-brand-purple/10">
+                  <span aria-hidden="true" className="text-sm tracking-tight text-brand-gold">
+                    ★★★★★
+                  </span>
+                  <blockquote className="mt-3 flex-1 font-semibold leading-relaxed text-brand-purple">
+                    &ldquo;{s.quote}&rdquo;
+                  </blockquote>
+                  <figcaption className="mt-4 text-sm text-brand-text/65">{s.who}</figcaption>
+                </figure>
+              </ScrollFade>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Where I spend my time */}
+      <section className="bg-brand-light-gray px-5 py-16">
         <div className="mx-auto max-w-5xl">
           <ScrollFade>
             <div className="text-center">
@@ -401,7 +384,7 @@ export default function AboutDrWaleed() {
           </ScrollFade>
           <div className="mt-10 grid gap-6 md:grid-cols-2">
             <ScrollFade>
-              <div className="flex h-full flex-col rounded-3xl border-2 border-brand-gold bg-brand-cream p-8">
+              <div className="flex h-full flex-col rounded-3xl border-2 border-brand-gold bg-white p-8">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold">
                   With me, directly
                 </p>
@@ -423,7 +406,7 @@ export default function AboutDrWaleed() {
               </div>
             </ScrollFade>
             <ScrollFade>
-              <div className="flex h-full flex-col rounded-3xl bg-brand-cream p-8 ring-1 ring-brand-purple/10">
+              <div className="flex h-full flex-col rounded-3xl bg-white p-8 ring-1 ring-brand-purple/10">
                 <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/50">
                   Built on my method
                 </p>
@@ -448,7 +431,7 @@ export default function AboutDrWaleed() {
           <ScrollFade>
             <p className="mx-auto mt-8 max-w-2xl text-center leading-relaxed text-brand-text/70">
               Not ready for either? Start with the free{' '}
-              <a href="/revision-diagnostic/" className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-2 hover:text-brand-gold transition">
+              <a href="/revision-diagnostic/" className="font-semibold text-brand-purple underline decoration-brand-gold decoration-2 underline-offset-2 transition hover:text-brand-gold">
                 Revision Diagnostic
               </a>
               : 20 questions that show exactly where your marks are leaking, and what I&apos;d fix
