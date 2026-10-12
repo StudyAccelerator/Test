@@ -527,24 +527,27 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               suits you and it&apos;s held for you.
             </p>
           </div>
-          <div className="mt-7 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
+          <div className="mt-7">
             <a
               href={BOOK_A_CALL_LINK}
               onClick={trackRoute('route_section', 'book_a_call')}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-4 font-semibold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_10px_24px_rgba(46,37,87,.25)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
+              className="flex w-full justify-center items-center rounded-full bg-brand-purple text-brand-cream px-8 py-5 text-lg font-bold shadow-[inset_0_-8px_10px_rgba(255,255,255,.12),0_12px_28px_rgba(46,37,87,.3)] hover:bg-brand-purple-light hover:-translate-y-0.5 transition-all"
             >
               {callCta}
               <span aria-hidden="true" className="ml-2">→</span>
             </a>
-            <a
-              href="#callback"
-              onClick={scrollToCallback}
-              className="text-sm font-semibold text-brand-purple/70 underline underline-offset-4 hover:text-brand-gold transition"
-            >
-              Prefer Dr Waleed to call you instead? Request a callback
-            </a>
+            <p className="mt-3.5 text-center text-sm text-brand-text/60">
+              Prefer Dr Waleed to call you instead?{' '}
+              <a
+                href="#callback"
+                onClick={scrollToCallback}
+                className="font-semibold text-brand-purple/80 underline underline-offset-4 hover:text-brand-gold transition"
+              >
+                Request a callback
+              </a>
+            </p>
           </div>
         </motion.div>
 
