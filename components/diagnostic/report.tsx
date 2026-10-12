@@ -193,7 +193,7 @@ function CallbackCard({
 
   return (
     <div className={shell}>
-      <p className={`font-mono text-xs uppercase tracking-[0.2em] ${eyebrow}`}>Rather Dr Waleed rang you?</p>
+      <p className={`font-mono text-xs uppercase tracking-[0.2em] ${eyebrow}`}>Prefer Dr Waleed to call you instead?</p>
       <h3 className={`mt-2 font-serif font-bold text-2xl md:text-[1.7rem] leading-tight ${title}`}>
         {isParent ? <>Want Dr Waleed to build {child}&apos;s plan with you?</> : <>Want Dr Waleed to build your plan with you?</>}
       </h3>
@@ -490,13 +490,17 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
           <ul className="mt-5 space-y-3 text-[15px] text-brand-text/80">
             {[
               isParent
-                ? `We find exactly what's holding ${child} back, from these answers, not a guess.`
-                : "We find exactly what's holding you back, from these answers, not a guess.",
+                ? `We find exactly what's holding ${child} back. Not a guess: their answers, the marks they're losing, and why.`
+                : "We find exactly what's holding you back. Not a guess: your answers, the marks you're losing, and why.",
               isParent
-                ? `You leave with a custom plan: the two or three changes that move ${child}'s grade first, and the order to make them in, so the year gets ahead of the exams instead of chasing them.`
-                : 'You leave with a custom plan: the two or three changes that move your grade first, and the order to make them in, so you get ahead of the year instead of chasing it.',
-              "It's the same clear structure that has helped 1,000+ of my students. On average they jump two grades within four months.",
-              '96% of my students get their first-choice university offer.',
+                ? `${child} leaves with a plan they can actually follow: what to prioritise, in what order, and what to stop doing. Smarter, not longer. Most of my students end up working fewer hours, not more.`
+                : 'You leave with a plan you can actually follow: what to prioritise, in what order, and what to stop doing. Smarter, not longer. Most of my students end up working fewer hours, not more.',
+              isParent
+                ? "Their hard work finally turns into marks. It's the same structure that's helped 1,000+ of my students, and on average they jump two grades within four months."
+                : "Your hard work finally turns into marks. It's the same structure that's helped 1,000+ of my students, and on average they jump two grades within four months.",
+              isParent
+                ? `Peace of mind for you, and for ${child}. You both know they're on the right track: no burnout, and no coin flip in the exam hall. This method is how 96% of my students get their first-choice university offer.`
+                : "Peace of mind. You walk in knowing it's working: no burnout, and no coin flip in the exam hall. This method is how 96% of my students get their first-choice university offer.",
             ].map((pt) => (
               <li key={pt} className="flex items-start gap-2.5">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" className="mt-0.5 h-4 w-4 shrink-0 text-brand-gold" aria-hidden="true">
@@ -517,8 +521,10 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
             />
             <p className="text-sm text-brand-text/70 leading-relaxed">
               <span className="font-bold text-brand-purple">The call is with Dr Waleed Ahmad, MBBS.</span>{' '}
-              NHS doctor, and the person who built this diagnostic. He takes a limited number of calls each
-              week around his hospital shifts, so pick the slot that suits you and it&apos;s held for you.
+              NHS doctor, and the person who built this diagnostic.{' '}
+              {isParent && <>A-levels are past the point where most parents can help at home. That&apos;s what this call is for.{' '}</>}
+              He takes a limited number of calls each week around his hospital shifts, so pick the slot that
+              suits you and it&apos;s held for you.
             </p>
           </div>
           <div className="mt-7 flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-5">
@@ -537,7 +543,7 @@ export default function Report({ diagnosis, answers, firstName, taker, childName
               onClick={scrollToCallback}
               className="text-sm font-semibold text-brand-purple/70 underline underline-offset-4 hover:text-brand-gold transition"
             >
-              Rather he rang you? Request a callback
+              Prefer Dr Waleed to call you instead? Request a callback
             </a>
           </div>
         </motion.div>
