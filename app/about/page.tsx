@@ -24,16 +24,17 @@ const VOICE_QUOTES = WALL_QUOTES.filter((q) =>
   ['Maahil', 'Naysa', 'Rayanna'].includes(q.name)
 )
 
-/* The journey, anchored on the approved founder story. Anything in
-   [square brackets] is a slot for a fact only Waleed can supply. */
+/* The journey, in Waleed's own facts (given 12 October 2026): two A*s and
+   two As at A-level, St George's University of London, graduated 2025,
+   Foundation Year 2 doctor at St George's, tutoring since medical school. */
 const JOURNEY = [
   {
     label: 'The A-level years',
     photo: '/photos/stressed-student.jpg',
     alt: 'Waleed as a stressed student during his A-levels',
     body: [
-      'I worked as hard as anyone I knew. Re-reading, highlighting, beautiful notes until midnight. It looked like dedication. It was actually hundreds of hours thrown at a method that wasted most of them.',
-      '[Where you grew up and did your A-levels, which subjects you took, and how close it came: the grades story in your words.]',
+      'Two A*s and two As. From the outside it looked effortless. It wasn\'t. I worked harder than anyone I knew: hours and hours of revising, every evening, every weekend. It was incredibly stressful, and by the end it had burnt me out.',
+      'The grades came. But the way I got them is not something I\'d wish on any student, and it was about to stop working altogether.',
     ],
   },
   {
@@ -41,8 +42,8 @@ const JOURNEY = [
     photo: '/photos/waleed-graduation.jpg',
     alt: 'Dr Waleed Ahmad at his medical school graduation',
     body: [
-      'Medicine does not care how long you stare at a textbook. The volume forced me to learn properly: active recall, spaced repetition, working backwards from what the examiner actually rewards. Same hours, pointed at the right work.',
-      '[Where you studied medicine and when you graduated, and anything you want to say about those years.]',
+      'At St George\'s, University of London, there was simply too much to cover. Hard work, the only tool I had, stopped being enough. I had to learn the right way: how memory actually works, what examiners actually reward, how to study so every hour counts.',
+      'So I built myself a system. And I realised that if I\'d had it at 17, I\'d have got the same grades in a fraction of the time, without the burnout.',
     ],
   },
   {
@@ -50,8 +51,8 @@ const JOURNEY = [
     photo: '/photos/waleed-scrubs-portrait.jpg',
     alt: 'Dr Waleed Ahmad working as an NHS doctor',
     body: [
-      "I work as an NHS doctor. Medicine trains you to diagnose before you treat, and that habit runs through everything we do here: find the real reason the marks are leaking first, then fix that, not everything.",
-      '[Anything you want to add about doctor life: your rotations, the on-call rota that students hear about in your emails, what the job has taught you about pressure.]',
+      'I graduated in 2025 and I\'m now a Foundation Year 2 doctor at St George\'s. Medicine trains you to diagnose before you treat, and that habit runs through everything we do here: find the real reason the marks are leaking first, then fix that, not everything.',
+      'It also means I teach around a hospital rota. My students hear about the night shifts. They also get a teacher who still sits exams, still revises, and still uses the system every week.',
     ],
   },
   {
@@ -59,9 +60,39 @@ const JOURNEY = [
     photo: '/photos/waleed-desk-calm.jpg',
     alt: 'Dr Waleed Ahmad teaching online from his desk',
     body: [
-      "Over 6 years I have worked with more than 1,000 A-level students, and the same pattern keeps appearing: students who work hard but underperform, because nobody ever taught them how to study. So I built the system I needed at 17, and I hold every session to that standard.",
-      '[How it actually started: your first students, why you kept going, and the moment it became A-Level Accelerators.]',
+      'I started tutoring six years ago, in medical school, one GCSE and A-level student at a time. It was mostly subject support, and it worked: grades went up. But I was only ever fixing the knowledge side. What I really wanted was to fix how my students studied.',
+      'Once I started teaching the system instead of the subject, the results became consistent. It\'s why, on average, my students jump two grades within four months, and 96% get their first-choice university offer. More than 1,000 students later, that system is A-Level Accelerators.',
     ],
+  },
+]
+
+/* Current Top 1% Mentorship students, from recorded coaching sessions
+   (dashboard/data/testimonials-master.md, 29 Sep to 2 Oct 2026). First
+   names only, minors; Waleed is getting their consent before go-live. */
+const MENTORSHIP_VOICES = [
+  {
+    name: 'Leighton',
+    role: 'Year 13 · two weeks into the Top 1% Mentorship',
+    quote:
+      'I got 65% on my physics test. I was quite pleased with that. I didn\'t think I was going to get anywhere near that.',
+    detail:
+      'I was using the blurting method. At first I had nothing on the page. I was trying what you suggested, and it was slowly coming to me more and more. And we had a six marker on stuff exactly to do with that, and I just remembered.',
+  },
+  {
+    name: 'Azka',
+    role: 'Year 12 · Top 1% Mentorship',
+    quote:
+      'It really did help me find out the minuscule bits that I was forgetting, or that I pretty much didn\'t even know about.',
+    detail:
+      'I didn\'t know about any of this. Now that I see it, there\'s a lot more to it than just the content.',
+  },
+  {
+    name: 'Angela',
+    role: 'Year 13 · Top 1% Mentorship',
+    quote:
+      'Setting a timer and using subheadings, trying to get everything out. I think it was good.',
+    detail:
+      'Angela rated her confidence on a psychology case study at 7 out of 10. One 45-minute blurt cycle with Dr Waleed later, she rated it 10.',
   },
 ]
 
@@ -84,9 +115,9 @@ export default function AboutDrWaleed() {
               <span className="italic text-brand-gold">the hard way.</span>
             </h1>
             <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-brand-text/75 md:mx-0 md:text-xl">
-              I&apos;m Dr Waleed Ahmad, an NHS doctor, a former A-level student whose hard work
-              very nearly wasn&apos;t enough, and the founder of A-Level Accelerators. This is the
-              story, and the proof.
+              I&apos;m Dr Waleed Ahmad: NHS doctor, two A*s and two As at A-level earned the
+              exhausting way, and the founder of A-Level Accelerators. This is the story, and
+              the proof.
             </p>
             <div className="mt-8 flex flex-col items-center gap-3 sm:flex-row md:justify-start justify-center">
               <a
@@ -186,13 +217,23 @@ export default function AboutDrWaleed() {
               The results
             </p>
             <h2 className="mt-3 font-serif text-3xl font-bold text-brand-gold sm:text-4xl">
-              On average, our students jump two grades.
+              On average, our students jump two grades within four months.
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl leading-relaxed text-brand-cream/90">
-              Over 6 years, we&apos;ve helped 1,000+ students towards top grades and first-choice
-              university offers. And every programme is backed by the same guarantee: join the
-              first session, and if you&apos;re not completely satisfied, you get your money back,
-              no questions asked.
+            <div className="mx-auto mt-8 grid max-w-2xl gap-4 sm:grid-cols-3">
+              {[
+                ['1,000+', 'students over 6 years'],
+                ['2 grades', 'average jump, within 4 months'],
+                ['96%', 'get their first-choice university offer'],
+              ].map(([stat, label]) => (
+                <div key={stat} className="rounded-2xl border border-brand-cream/15 bg-white/5 px-4 py-5">
+                  <p className="font-serif text-3xl font-bold text-brand-gold">{stat}</p>
+                  <p className="mt-1 text-sm text-brand-cream/80">{label}</p>
+                </div>
+              ))}
+            </div>
+            <p className="mx-auto mt-6 max-w-2xl leading-relaxed text-brand-cream/90">
+              And every programme is backed by the same guarantee: join the first session, and if
+              you&apos;re not completely satisfied, you get your money back, no questions asked.
             </p>
           </div>
         </section>
@@ -270,6 +311,60 @@ export default function AboutDrWaleed() {
                 </figcaption>
               </figure>
             </ScrollFade>
+          </div>
+
+          {/* What Vernon told us to tell parents */}
+          <ScrollFade>
+            <div className="mt-6 rounded-3xl bg-brand-purple p-8 text-brand-cream sm:p-10">
+              <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-cream/50">
+                For parents, in a student&apos;s words
+              </p>
+              <div className="mt-4 grid gap-6 md:grid-cols-2">
+                <blockquote className="leading-relaxed text-brand-cream/90">
+                  &ldquo;I would tell them definitely try it out, because it&apos;s definitely made
+                  an effect for me. And although it is an upfront investment, it will pay you back
+                  eventually. It&apos;s just cheaper than tutors as well. So it&apos;s just worth it
+                  for sure.&rdquo;
+                </blockquote>
+                <blockquote className="leading-relaxed text-brand-cream/90">
+                  &ldquo;First of all, they were like, oh, that much money, that&apos;s quite
+                  expensive. And actually they ended up saying, wow, that&apos;s quite a good deal.
+                  The main thing was they worried there would be no effect. But afterwards they were
+                  more than happy, because I definitely did improve.&rdquo;
+                </blockquote>
+              </div>
+              <p className="mt-5 text-sm font-semibold text-brand-gold">
+                Vernon, on what he would tell other parents, and on his own
+              </p>
+            </div>
+          </ScrollFade>
+
+          {/* Inside the mentorship, right now */}
+          <ScrollFade>
+            <div className="mt-14 text-center">
+              <p className={EYEBROW}>Inside the Top 1% Mentorship</p>
+              <h2 className="mt-3 font-serif text-3xl font-bold text-brand-purple">
+                What this year&apos;s students are saying, weeks in
+              </h2>
+            </div>
+          </ScrollFade>
+          <div className="mt-8 grid gap-4 md:grid-cols-3">
+            {MENTORSHIP_VOICES.map((v) => (
+              <ScrollFade key={v.name}>
+                <figure className="flex h-full flex-col rounded-2xl border-2 border-brand-gold/50 bg-white p-6 shadow-sm">
+                  <blockquote className="font-serif text-lg font-bold leading-snug text-brand-purple">
+                    &ldquo;{v.quote}&rdquo;
+                  </blockquote>
+                  <p className="mt-3 flex-1 text-sm leading-relaxed text-brand-text/75">
+                    {v.name === 'Angela' ? v.detail : <>&ldquo;{v.detail}&rdquo;</>}
+                  </p>
+                  <figcaption className="mt-4 border-t border-brand-purple/10 pt-3 text-sm">
+                    <span className="font-bold text-brand-purple">{v.name}</span>
+                    <span className="block text-brand-text/65">{v.role}</span>
+                  </figcaption>
+                </figure>
+              </ScrollFade>
+            ))}
           </div>
 
           {/* Shorter voices */}
