@@ -1,0 +1,33 @@
+{
+ "comment": "The free online workshop's dated emails (23 October 2026). W1 (day before) and W2 (one hour before) load as DRAFT campaigns to the workshop group: python3 scripts/email-engine/engine.py campaigns content/email-sequences/free-workshop --live (add --update to rewrite the drafts after editing). Schedule only on Waleed's go: engine.py schedule <campaign_id> 2026-10-31 18:00 --live and engine.py schedule <campaign_id> 2026-11-01 17:00 --live. W0 (instant) belongs to an automation that still needs its skeleton created in the MailerLite builder (see content/workshops/2026-10-24-kcl-medic-life/README.md); W3 (replay plus offer) is deliberately NOT loaded until Waleed settles the programme's name and price. Replace https://ZOOM-LINK-TBC everywhere in this folder before loading for real.",
+ "audiences": {
+  "workshop": [
+   "202138192036496596"
+  ]
+ },
+ "footers": {
+  "workshop": "You're getting this because you saved a place at the free Academic Accelerator Workshop at alevelaccelerators.com."
+ },
+ "campaigns": [
+  {
+   "key": "w1",
+   "name": "Workshop 2026-11-01 · W1 day before reminder",
+   "file": "01-tomorrow.md",
+   "audience": "workshop",
+   "send_hint": "Sat 31 Oct 18:00 UK (the day before)",
+   "campaign_id": "202139174270141495"
+  },
+  {
+   "key": "w2",
+   "name": "Workshop 2026-11-01 · W2 one hour before",
+   "file": "02-starting-in-one-hour.md",
+   "audience": "workshop",
+   "send_hint": "Sun 1 Nov 17:00 UK (one hour before)",
+   "campaign_id": "202139177244951666"
+  }
+ ],
+ "not_loaded": [
+  "00-youre-in.md (automation instant step, skeleton needed)",
+  "03-replay-and-next-step.md (programme price is a proposal)"
+ ]
+}
