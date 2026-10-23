@@ -50,9 +50,9 @@ export default function FreeWorkshopPage() {
     <main className="min-h-screen bg-brand-cream px-5 pb-16 pt-10 sm:pt-14">
       <div className="mx-auto max-w-2xl">
         {/* 1 · Save your free place */}
-        <p className={`${EYEBROW} text-center`}>Free Academic Accelerator Workshop</p>
-        <h1 className="mt-3 text-center font-serif text-4xl font-bold tracking-tight text-brand-purple sm:text-5xl">
-          Save your free place
+        <h1 className="text-center font-serif text-4xl font-bold leading-tight tracking-tight sm:text-5xl">
+          <span className="block text-brand-gold">Free Academic Accelerator Workshop</span>
+          <span className="mt-2 block text-3xl text-brand-purple sm:text-4xl">Save your free place</span>
         </h1>
         <p className="mx-auto mt-3 max-w-xl text-center leading-relaxed text-brand-text/70">
           {WORKSHOP.dateLabel}, {WORKSHOP.timeLabel}. {WORKSHOP.durationLabel} with Dr Waleed Ahmad. {WORKSHOP.strap}
