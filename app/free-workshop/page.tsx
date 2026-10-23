@@ -36,16 +36,15 @@ export default function FreeWorkshopPage() {
     <main className="min-h-screen bg-brand-cream px-5 pb-16 pt-8 sm:pt-12">
       <div className="mx-auto max-w-2xl">
         {/* Wordmark only: deliberately not a link, so there is nowhere to click through to */}
-        <div className="flex items-center justify-center gap-3">
+        <div className="flex justify-center">
           <Image
             src="/logo-header-new.png"
             alt="A-Level Accelerators"
-            width={44}
-            height={44}
+            width={220}
+            height={56}
             unoptimized
-            className="h-11 w-auto"
+            className="h-12 w-auto"
           />
-          <span className="font-serif text-lg font-bold text-brand-purple">A-Level Accelerators</span>
         </div>
 
         <p className="mt-8 text-center font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/60">
