@@ -43,7 +43,7 @@ export default function FreeWorkshopPage() {
             width={220}
             height={56}
             unoptimized
-            className="h-12 w-auto"
+            className="h-28 w-auto"
           />
         </div>
 
