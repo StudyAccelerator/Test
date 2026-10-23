@@ -84,8 +84,8 @@ export default function NewsletterPage() {
             <HeroFade delay={0.35}>
               <p className="mx-auto mt-4 max-w-2xl text-lg leading-relaxed text-brand-text/70">
                 Every Sunday at 5pm, one revision method you can use that same evening. A five minute
-                read for A-level students, written by a doctor who sat where you are sitting and came
-                top. Free, and it stays free.
+                read for A-level students, written by a doctor who sat where you are sitting and finished
+                in the top 10% of his year. Free, and it stays free.
               </p>
             </HeroFade>
             <HeroFade delay={0.5}>
