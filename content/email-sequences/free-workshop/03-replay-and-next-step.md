@@ -6,7 +6,7 @@ Subject B: {$name}, The Replay, And What Comes Next
 Preheader: The recording, the three things to do this week, and the door into working with me every week.
 Goal: deliver the replay to everyone (attended or not), restate the three actions, make the offer for the weekly group programme with the founding price and the deadline.
 Links: 3 (replay, programme page, programme page again in PS)
-Note: NOT loaded into MailerLite. The programme name, price, founding offer and page link below are the session's PROPOSAL (content/workshops/2026-10-24-kcl-medic-life/GROUP-PROGRAMME.md), not decisions. Waleed confirms or changes them, the programme page and Stripe link get built, REPLAY-LINK-TBC and PROGRAMME-PAGE-TBC are replaced, and only then is this loaded as a draft.
+Note: NOT loaded into MailerLite. Shape and prices are Waleed's own (23 October 2026: two live sessions a week, £100 a month founding then £150); the name Top 1% Live is still the session's proposal. Waleed confirms or changes them, the programme page and Stripe link get built, REPLAY-LINK-TBC and PROGRAMME-PAGE-TBC are replaced, and only then is this loaded as a draft.
 Written: 23 October 2026
 
 ---
@@ -37,21 +37,21 @@ If you do those three, you'll already be ahead of most of your year.
 **What comes next**
 Last night I taught you the system in 90 minutes. The honest truth is that knowing it and running it every week are two different things, which is exactly why I run the weekly version.
 
-It's called Top 1% Live. Every week there's one live session with me on Zoom, 75 minutes long.
+It's called Top 1% Live. Two live sessions with me every week on Zoom, which adds up to about 16 hours a month.
 
-Each week we take one part of your study system. How to revise a topic so it sticks, how to read a mark scheme, how to plan a week, how to prepare for mocks.
+The first is the method session. We take one part of your study system, like how to revise a topic so it sticks or how to read a mark scheme.
 
-You leave having done it for your own subjects, not just heard about it.
+Then you do it for your own subjects while I'm there.
 
-The replay goes up the same night. There's also a monthly bring-your-paper clinic, where you send me your actual work.
+The second is the clinic. You bring your actual work, a marked essay, a timed paper or your week plan, and I go through it live. Every session is recorded the same night.
 
-As a thank you for showing up and taking your grades seriously, the first 50 students from this workshop join at the founding rate of £49 a month. That rate stays yours for as long as you stay.
+As a thank you for showing up and taking your grades seriously, the founding cohort from this workshop joins at £100 a month. That rate stays yours for as long as you stay.
 
-After the 50 places go, or after Sunday, it's £69 a month.
+After the founding places go, or after Sunday, it's £150 a month.
 
 For comparison, one hour a week of 1:1 tutoring in one subject costs most families £160 to £200 a month. It only covers the content, never how you study.
 
-Top 1% Live covers every subject you take, for less than a third of that.
+Top 1% Live is 16 hours a month with me, on every subject you take, which works out at under £10 an hour.
 
 On average, our students jump two grades. And you're covered by the same guarantee as everything I run: join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
 
@@ -65,4 +65,4 @@ Kind regards,
 
 Waleed
 
-PS: The founding rate closes on Sunday night or when the 50 places go, whichever is first, and I'm not planning to run it again at that price. [Here's the page](https://PROGRAMME-PAGE-TBC). Whatever you decide, do the three things above this week, and reply to tell me how the priority map came out :)
+PS: The founding rate closes on Sunday night or when the founding places go, whichever is first, and I'm not planning to run it again at that price. [Here's the page](https://PROGRAMME-PAGE-TBC). Whatever you decide, do the three things above this week, and reply to tell me how the priority map came out :)

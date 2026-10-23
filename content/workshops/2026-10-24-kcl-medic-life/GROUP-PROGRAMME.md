@@ -1,128 +1,127 @@
-# The group programme: what to build, how to price it, how to sell it without sales calls
+# Top 1% Live: the group programme, and how cold Facebook leads get into it without sales calls
 
-Written 23 October 2026 for Waleed's question: a lecture-series version of the Top 1% Mentorship, pitched at the end of the free workshop, priced well under the £300 a month 1:1, and sold without the hundreds of calls that £10k a month would otherwise need. Everything below is a proposal. Where I give a number it is a recommendation or a labelled assumption, not a fact.
+Written 23 October 2026, revised the same evening after Waleed's decisions: two live sessions a week (four hours) is fine for him, pricing is £100 a month for the founding cohort then £150 a month (the anchor: 16 hours of teaching a month, so under £10 an hour), the bring-your-paper clinic is in, the Medic Life workshop is a one-off, and future students arrive cold from Facebook ads. Everything below is built on those. Numbers that are not his are labelled as assumptions.
 
 ## 1. The short version
 
-- **Build:** one live 75 minute session a week on Zoom (not two 2 hour sessions), a replay the same night, a monthly "bring your paper" clinic, and the WhatsApp community as the between-session layer. Working name: **Top 1% Live**.
-- **Price:** £49 a month founding rate for the first 50 (locked for as long as they stay), then £69 a month. Monthly, cancel any time, first session money-back guarantee. No annual plan at launch.
-- **Sell:** the free workshop is the sales call. Teach for 60 minutes, pitch for 10, close with a 72 hour founding deadline, and let the replay email and two follow-ups do the rest. No 1:1 calls in this funnel at all.
-- **Honest maths:** the KCL room on its own produces roughly £500 to £1,500 a month of recurring revenue, not £10k. The path to £10k is running the same free workshop every month as a repeatable funnel (ads, every Medic Life event, your email list), with the programme as the thing it always sells.
+- **Shape:** two live sessions a week on Zoom, two hours each. One is the **method session** (teach one part of the study system, then students do it for their own subjects while he is there). The other is the **clinic** (students send real work beforehand, marked essays, timed papers, week plans, and he goes through it live). Replays the same night, WhatsApp community between sessions.
+- **Price:** £100 a month founding cohort, locked for as long as they stay; £150 a month after. Monthly, cancel any time, first session money-back guarantee, no annual plan at launch.
+- **Cold traffic:** the recording of the 1 November workshop becomes the evergreen training that the Facebook ads send people to. Ad, registration form, watch the training, offer at the end, a five day email sequence, Stripe checkout. The sales call is replaced by a **free guest pass to one live session**, which costs him nothing because he is teaching anyway.
+- **The maths:** £10k a month is 67 members at £150 (or 100 at £100). With a third leaving within three months (assumption until there is data), holding 67 means adding roughly 20 a month, which at a 3 percent registration-to-member rate is about 650 registrations a month. That is the number the ad budget has to buy.
 
-## 2. Why not 2 x 2 hours a week
+## 2. Making four hours a week work for students
 
-Your instinct is generous and it will hurt you. Three reasons:
+Waleed's time is settled. The remaining risk is the students' time: a Year 12 with four subjects, homework and a life will not reliably attend four hours of lectures a week, and attendance decay is what kills group programmes. Two design choices fix that.
 
-1. **They will not come.** A Year 12 with four subjects, homework, a part time job and a social life does not have four live hours a week for a study skills course. Attendance decays fast on anything more than weekly; by week four you would be teaching eight people and the rest would feel guilty, then cancel. One session a week they can actually keep is worth more than four hours they feel bad about missing.
-2. **You will not sustain it.** You are an F2 on a rota. Two fixed evening slots a week, every week, through nights and on-calls, is not a promise you can keep, and a group programme lives or dies on the session happening when it says it will.
-3. **The content does not need it.** The study system is a small number of methods done repeatedly, not a syllabus. Four hours a week of "how to study" is padding; 75 minutes of one method taught and then done live on the student's own subjects is the right dose.
+**The two sessions are different kinds of session, not two lectures.** The method session is the teach. The clinic is the thing a student cannot get from a recording: their own work, looked at by him, in front of everyone (so everyone learns from every paper). Students who miss a method session watch the replay; students who miss a clinic can still send work in. Nobody feels they have "fallen behind" a lecture series.
 
-Two 2 hour sessions is what a subject course needs, because content is large. A method programme is different: short, weekly, applied, repeated.
+**Price on access, not attendance.** The anchor is 16 hours a month available, under £10 an hour, and the replays make every hour usable. A student who attends one session live and watches the other is still getting what they paid for. Say this plainly on the page: "two live sessions a week, every one recorded, join what you can".
 
-## 3. The shape
+Suggested slots, to be set by his rota: method session midweek evening (Tuesday or Wednesday, 7pm to 9pm), clinic Sunday 6pm to 8pm (the free workshop's own slot, so the cohort inherits the habit). The clinic's first hour is work review, the second is a live timed section or the week plan built together.
 
-**Weekly live session, 75 minutes, same slot every week** (Sunday 6pm fits the free workshop's slot and the students' week; pick the evening your rota can protect). Structure every session the same way, so the ritual does the work:
+**The method session, same running order every week:**
 
 | Minutes | What happens |
 |---|---|
-| 0 to 10 | Why this matters this week in the A-level calendar (first tests, predicted grades, mocks, exam season). The week's one idea named. |
-| 10 to 35 | The method, taught properly, with one worked example from a real subject. |
-| 35 to 60 | Do it live. Students apply it to their own subjects while you talk them through it. Breakout-free: everyone works, you narrate and answer. |
-| 60 to 70 | Q&A on what they just did. |
-| 70 to 75 | The one action for the week, said once, posted to the community. |
+| 0 to 10 | Why this matters this week in the A-level calendar. The week's one idea named. |
+| 10 to 45 | The method, taught properly, with a worked example from a real subject. |
+| 45 to 100 | Do it live. Students apply it to their own subjects while he narrates and answers. |
+| 100 to 115 | Q&A on what they just did. |
+| 115 to 120 | The one action for the week, posted to the community. |
 
-**Replay the same night**, posted in the community and emailed, so a missed week is never a lost week.
+**The clinic, same running order every week:**
 
-**Monthly clinic, 60 minutes:** students send one piece of real work beforehand (a marked essay, a timed paper, a week plan) and you go through four or five of them on screen. This is the piece that makes it feel like working with you rather than watching you, and it is the natural bridge to the mentorship.
+| Minutes | What happens |
+|---|---|
+| 0 to 60 | Four to six pieces of sent-in work on screen: what lost the marks, what to change, the pattern everyone should take from it. |
+| 60 to 100 | Live practice: a timed section, a mark scheme read, or the next week's plan, done together. |
+| 100 to 120 | Open questions. |
 
-**The WhatsApp community between sessions:** questions answered in public threads, the week's action pinned, students posting their priority maps. Admin-only posting in the announcement channel, one Q&A group with you answering in public. (Safeguarding rules below.)
+**Curriculum:** a rolling 12 week cycle that follows the year, so anyone can join in any week. The topics are the five systems the Revision Diagnostic already scores, plus the calendar: the priority map; high-yield and low-yield topics; blurt and fix; active recall and spaced review; reading a mark scheme like an examiner; marks per minute; the error log; planning a week that survives; mock preparation; mock review; predicted grades and teachers; burnout and the February problem. Then it loops, timed to the calendar (exam season in spring, the Year 12 to 13 bridge in summer). The Study Series content and the deck phases (Diagnose, Rebuild, Coach) are the raw material.
 
-**Curriculum:** a rolling 12 week cycle that follows the year rather than a fixed course, so anyone can join in any week. The topics are the five systems the Revision Diagnostic already scores, plus the calendar:
+**Against the mentorship (£300 a month):** the mentorship is him working directly with one student, fortnightly 1:1 follow-ups, five places. Top 1% Live is the same system taught to the group with his eyes on their work in the clinic, but no 1:1 time. At £150 the gap to £300 is narrow, so the 1:1 line has to be drawn clearly on the page, and the group becomes the natural pool for mentorship upgrades (and the natural downsell on a strategy call that does not close at £300).
 
-1. The priority map (which subject gets the hours, and why)
-2. High-yield and low-yield topics in each subject
-3. Blurt and fix: learning a topic so it sticks the first time
-4. Active recall and spaced review, and the weekly rhythm
-5. Reading a mark scheme like an examiner
-6. Timed sections and timed papers: marks per minute
-7. The error log: turning lost marks into a list
-8. Planning a week that survives (the Open Hour, the empty evening)
-9. Mock preparation, four weeks out
-10. Mock review: what the paper is telling you
-11. Predicted grades and talking to teachers
-12. Burnout, sleep, and the February problem
+## 3. Pricing: £100 founding, £150 standard
 
-Then it loops, timed to the calendar (exam season in the spring, the Year 12 to 13 bridge in the summer). Your existing Study Series content and the deck phases (Diagnose, Rebuild, Coach) are the raw material; nothing needs inventing.
+His numbers, and they hold up:
 
-**Where it sits against the mentorship.** The mentorship (£300 a month) is you working directly with one student, fortnightly follow-ups, five places. Top 1% Live is the same system taught to the group, with no 1:1 time. That is a clean line to draw on a sales page and it makes the mentorship the upgrade for the students who want you personally. Your 2 October ruling (route everyone to the mentorship first) still holds for the diagnostic funnel; the workshop funnel is different because its buyer is a student who just watched you teach for free, not a parent on a call.
+- **The hourly anchor works.** 16 hours a month at £150 is £9.38 an hour. One hour a week of 1:1 tutoring in one subject at £40 to £50 an hour is £160 to £200 a month, for content only. "Less than one tutor, every subject, sixteen hours with a doctor" is a sentence a parent can repeat to the other parent.
+- **The founding rate is the sales mechanism.** The 1 November room gets £100 locked for life, closing 72 hours after the workshop. Later cold cohorts get their own founding mechanism: a **monthly intake** with a real start date, and the price for that intake closes when the intake does. Real deadlines only; never a countdown timer.
+- **Keep it monthly.** No annual plan until there are three months of churn data. The mentorship already taught the market a monthly figure.
+- **Guarantee:** join the first session, and if you are not completely satisfied, full refund, no questions asked. Same as everything else.
+- **One risk to watch:** £150 a month from a cold parent who has only watched a recording is a bigger ask than £50. The guest pass (section 4) exists to close that gap, and the first two cold cohorts will tell you whether £150 converts cold or whether the founding £100 needs to stay open longer. Decide from the numbers, not in advance.
 
-## 4. Pricing
+**The MRR table** (members paying at once):
 
-**Recommendation: £49 a month founding, £69 a month standard.**
+| Monthly target | At £100 | At £150 |
+|---|---|---|
+| £2,000 | 20 | 14 |
+| £5,000 | 50 | 34 |
+| £10,000 | 100 | 67 |
+| £20,000 | 200 | 134 |
 
-Why those numbers:
+Zoom: 67 to 134 students in a session is fine on a Pro plan (100) only up to the first row; the Large Meeting add-on or a webinar licence is needed above it. Check this before the cohort reaches 90.
 
-- **Against 1:1 tutoring**, the comparison every parent already understands: one hour a week in one subject at £40 to £50 an hour is £160 to £200 a month, and covers content only. £49 for every subject, on the method, is an easy sentence to say and an easy one for a parent to agree to. (The mentorship sales framing already uses this anchor; keep it consistent.)
-- **Against the mentorship** at £300: the group has to be clearly a different tier, or it eats mentorship sales. Below a quarter of the price is clearly different.
-- **Against your own Skool plan** (£29 founding, £39 standard, for a community with no live teaching): a weekly live session with you has to sit above that, or the Skool plan can never launch.
-- **Against the parent's mental budget:** under £50 a month is "an app subscription"; over £100 is "a decision we need to talk about". Founding at £49 lands in the first bucket and the standard £69 is still inside what a parent will decide alone.
+## 4. The cold funnel: Facebook ad to paying member, no sales calls
 
-**The founding rate is the sales mechanism, not a discount.** Fifty places at £49 locked for life, for the people who were in the room, closing 72 hours after the workshop. It gives the workshop pitch a real deadline, it rewards the people who acted (which is how you already frame every free thing), and the locked rate makes cancelling feel like losing something.
+This is the part Waleed said he does not know how to do, so it is spelled out end to end. It is the standard evergreen training funnel, which is exactly what his free workshop already is, recorded.
 
-**Keep it monthly.** No annual plan at launch: the churn data from the first three months tells you whether an annual price makes sense, and a monthly figure is the one you have already taught the market with the mentorship.
+**Step 0, record the 1 November workshop properly.** Cloud recording on, slides clean, no "hello KCL" references in the teaching (say them in the first two minutes, which get cut). The 60 minutes of teaching plus the 10 minute pitch become the training that every cold lead watches. This recording is the most valuable asset the business will own this year, so do the pitch at the end as if the room were cold, because for the next thousand viewers it will be.
 
-**Guarantee:** the same one as everything else. Join the first session, and if you are not completely satisfied, full refund, no questions asked.
+**Step 1, the ad.** Parent-facing (the buyer), same account and audiences as the diagnostic ads. The promise is the training, not the programme: "Free 90 minute training from an NHS doctor: how your child gets ahead of Year 12 without burning out. Watch it tonight." Student-facing versions can run on Instagram later; parents first, because parents pay. Use the dynamic URL parameters already in use (`utm_source`, `utm_campaign={{campaign.name}}`, `utm_content={{ad.name}}`) so every member's source is known.
 
-**The MRR table.** Members needed at each price (standard rate, ignoring founding places) to reach a monthly figure:
+**Step 2, the registration page.** The same form the KCL page uses (name, email, year, subjects, optional WhatsApp), with one change: a parent tick box ("I'm a parent") so the emails can address them correctly. Registering joins a MailerLite group ("Workshop training: on demand") that is separate from the KCL group, so the sequences never collide.
 
-| Monthly target | At £49 | At £69 | At £99 |
-|---|---|---|---|
-| £2,000 | 41 | 29 | 21 |
-| £5,000 | 102 | 73 | 51 |
-| £10,000 | 204 | 145 | 101 |
+**Step 3, watch now.** The thank-you page plays the recording immediately (unlisted YouTube or Vimeo embed on a site page, `/workshop-training/`), with the programme offer and the Stripe link under the video from minute 60. No "pick a time" nonsense: cold leads watch now or never.
 
-So £10k a month at £69 is about 145 students paying at once. Churn on monthly student programmes is high (assume a third leave within three months until you have your own numbers), so holding 145 means adding roughly 40 to 50 a month. That is the real design constraint: **the acquisition has to be repeatable**, which is the next section.
+**Step 4, the five day sequence** (written and loaded by the email engine, same style as everything else):
 
-## 5. Selling it without sales calls
+| Day | Email | The one action |
+|---|---|---|
+| 0 | Here's your training (link, what to have in front of you) | watch |
+| 1 | The three things to do this week (the priority map, the high-yield list, one week) | reply with the priority map |
+| 2 | What comes next: Top 1% Live, the two sessions, £150, the hourly anchor, the guarantee, the intake date | join |
+| 3 | Your guest pass: come to this week's method session free, as my guest | book the guest seat |
+| 4 | Questions? (the five a parent always asks, answered) | join or reply |
+| 5 | The intake closes tonight | join |
 
-The free workshop is the sales call, done once for everyone in the room instead of once per family. The structure that converts a free online workshop is well known and it is not complicated:
+Replies go to Waleed's inbox and he answers them in batches; that is the only human time in the funnel.
 
-1. **Minutes 0 to 60: teach, genuinely.** The priority map, the 80/20, the week, the method. Give them the whole first lesson, as you promised from the stage. Have them do the priority map live for their own subjects. The more they do during the workshop, the more they buy at the end, because they have felt it work.
-2. **Minute 60: the bridge.** "You now know the system. The honest truth is knowing it and running it every week are two different things, which is exactly why I run the weekly version." Then describe Top 1% Live in five sentences (what, when, replay, clinic, community).
-3. **Minutes 62 to 70: the offer.** Price, founding rate for the room, the 1:1 tutoring comparison, the guarantee, the two-grade average, one real quote, and the link on screen (a Stripe payment link for the monthly subscription). Parents who are watching get a sentence of their own.
-4. **Minutes 70 to 75: Q&A**, which is where the objections surface and get answered in public. Stay until the questions stop.
-5. **The replay email the next morning** (W3 in the sequence folder) carries the replay, the three actions and the offer again. Then a "Questions?" email on day two and a final-day email on day three, exactly as the Ian Stanley playbook you already use prescribes around any deadline.
+**Step 5, the guest pass, which replaces the sales call.** A cold parent will not pay £150 a month from a recording alone, and he will not do hundreds of calls. The thing that bridges the gap is the thing he is already doing twice a week: let them sit in. "Come to Tuesday's session as my guest, no card, no commitment. Bring your son or daughter. If it's not for you, you've lost two hours." The guest joins the live Zoom (a separate guest link, muted, no breakout), sees him teach, sees the other students, and the next email asks them to join. Cap guests at ten per session so the paying cohort stays the room. This converts far better than a page because the product is the demo, and it costs zero extra hours.
 
-What you need in place before W3 can send: a programme page on the site (a section on /study-systems or its own page, with the Stripe subscription link), a MailerLite group for members, the first session date, and your decision on name and price. Give any session the word and it builds the page from this document in an afternoon.
+**Step 6, checkout.** A Stripe payment link for the monthly subscription (£150; a second link at £100 for the founding intake), card on file, cancel any time, the guarantee stated on the checkout page. The thank-you page after payment joins the "Top 1% Live members" MailerLite group (fed by a Stripe webhook later; by hand at first), which sends the welcome, the Zoom links and the community invite.
 
-**How much the KCL room is worth, honestly.** Assumptions, not data: 350 in the room, 40 to 60 percent sign up (140 to 210), 30 to 45 percent of those attend live (50 to 90), and 8 to 15 percent of attendees buy after a strong workshop (4 to 14). At £49 that is roughly £200 to £700 a month from this one room, more if the replay converts no-shows. It is a good first cohort and it proves the pitch. It is not £10k.
+**Step 7, the numbers to run it by** (assumptions until there is data, then replace them):
 
-**Where £10k comes from.** The same workshop, run every month, fed from four places:
+| Stage | Assumption | What to watch |
+|---|---|---|
+| Cost per registration | £5 to £15 (the diagnostic runs at £4 to £8) | Ads Manager cost per lead on the registration event |
+| Watched 20+ minutes | 40 percent of registrations | video analytics |
+| Guest pass taken | 10 percent of watchers | guest group size |
+| Became a member | 3 percent of registrations overall | Stripe |
+| Average tenure | 4 months | Stripe churn |
 
-1. **Every Medic Life event.** Ask them tomorrow whether you can be the study skills slot at every work experience day they run. Three hundred students a month from a trusted host is the best top of funnel you will ever get, and it is free.
-2. **The email list.** You have hundreds of active subscribers and over a thousand historical ones across the diagnostic, tracker, old workshop and lecture series groups. Every one of them gets invited to each monthly workshop.
-3. **The diagnostic.** Add the free workshop as the step after the report for students (the parent path keeps the strategy call).
-4. **Ads, once the pitch has converted twice.** A free workshop registration is a cheaper, more persuasive lead than a quiz completion, and your ad account already knows how to find these parents. Do not spend on it until the live pitch has converted a room you did not pay for.
+At those assumptions a member costs £170 to £500 in ads and is worth £600 over four months, which pays, and every improvement in the recording's pitch or the guest pass moves the whole table. If the registration-to-member rate comes in under 1 percent after 300 registrations, stop and fix the recording before spending more.
 
-That is a funnel you can run monthly from a rota: one 90 minute workshop, one weekly session, one monthly clinic, and the emails do the chasing.
+**What already exists and feeds this:** the diagnostic (add the training as the student's next step after the report; the parent path keeps the strategy call per the 12 October ruling), the email list (every past subscriber gets invited to the training once), the Sunday Session, and the Medic Life recording itself.
 
-## 6. The WhatsApp community: good idea, with four rules
+## 5. The WhatsApp community: good idea, with four rules
 
 Yes, worth doing, and the sign-up form already asks for the number only when they tick the box. The rules, because the members are 16 to 18:
 
-1. **Use a WhatsApp Community with an announcement channel plus one Q&A group.** Only admins post in the announcement channel. In the Q&A group, you answer in public. WhatsApp hides members' phone numbers from each other in community announcement groups; check the setting when you create it and say so on the page (the form already promises it).
-2. **No 1:1 DMs with students.** Same rule as your Skool plan. If a student messages you privately, answer in the group thread. Parents are welcome to join and should be told they can.
-3. **Admin-only posting in the main channel, with a second adult admin.** It stops the group becoming a chat room, and it protects you.
-4. **Say what it is on the way in**: the page and the confirmation email already do (public threads, admin-only channel, numbers hidden, leave with one tap). Keep every message in it about study. Never market the programme to the community more than once a week.
+1. **Use a WhatsApp Community with an announcement channel plus one Q&A group.** Only admins post in the announcement channel. In the Q&A group, he answers in public. WhatsApp hides members' phone numbers from each other in community announcement groups; check the setting when creating it and say so on the page (the form already promises it).
+2. **No 1:1 DMs with students.** Same rule as the Skool plan. A private message gets answered in the group thread. Parents are welcome to join and should be told they can.
+3. **Admin-only posting in the main channel, with a second adult admin.** It stops the group becoming a chat room and it protects him.
+4. **Say what it is on the way in.** The page and the confirmation email already do (public threads, admin-only channel, numbers hidden, leave with one tap). Every message in it is about study. The programme is mentioned at most once a week.
 
-Create the community in WhatsApp on your phone (Communities, New community, name it "Top 1% A-Levels" or similar, create the Q&A group inside it), copy the invite link, and paste it into the one constant in `lib/workshop.ts` and the confirmation email. Until the link exists the page hides the WhatsApp card entirely, so nothing is promised that does not exist yet.
+Create it in WhatsApp on the phone (Communities, New community, name it, create the Q&A group inside it), copy the invite link, and paste it into the one constant in `lib/workshop.ts` and the confirmation email. Until then the page hides the WhatsApp card.
 
-## 7. Decisions you need to make (in order)
+## 6. Decisions still open, in order
 
 1. The workshop date and time (the page says Sunday 1 November, 6pm).
-2. The Zoom meeting (create it, check the participant cap on your plan, paste the link).
+2. The Zoom meeting (create it, check the participant cap, paste the link).
 3. The WhatsApp community (create it, paste the link), or drop it.
 4. The programme name (Top 1% Live is the proposal).
-5. The price and founding offer (£49 founding for 50, £69 standard is the proposal).
-6. The weekly slot and first session date (the Sunday after the workshop keeps the momentum).
-7. Whether to ask The Medic Life for the standing slot at every event.
+5. The two weekly slots and the first session date (the Sunday after the workshop keeps the momentum).
+6. Whether the founding £100 is limited by number, by date, or both.
+7. The go for a session to build the programme page, the Stripe links, the on-demand training page and the five day sequence (about a day's work once the recording exists).

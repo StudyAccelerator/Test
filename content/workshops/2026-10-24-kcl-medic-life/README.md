@@ -3,12 +3,12 @@
 What this folder is: everything for the free workshop funnel Waleed pitches from the stage at KCL, built 23 October 2026. Three documents, one QR code, and a runbook.
 
 - `TALK-TRANSITION.md`: how to move from the F2 talk to the free workshop, and how to get the room to sign up. Read this first.
-- `GROUP-PROGRAMME.md`: the weekly group programme (shape, price, how it sells without calls), the honest revenue maths, and the WhatsApp community rules.
+- `GROUP-PROGRAMME.md`: the group programme on Waleed's decisions (two live sessions a week, £100 founding then £150 a month, the clinic), the cold Facebook-ads funnel that replaces sales calls, the revenue maths, and the WhatsApp community rules.
 - `qr-alevelaccelerators-kcl.png` and `.svg`: the QR code for the slide. It points at `alevelaccelerators.com/kcl`.
 
 ## What is already built
 
-- **The sign-up page** at `/free-workshop/` (short link `/kcl`, which tags sign-ups as KCL in MailerLite). Collects first name, email, year group, subjects, and an optional phone number that only appears when the student ticks the WhatsApp community box. Thank-you state shows the date, calendar buttons (Google, Apple/Outlook), the Zoom link once it exists, the WhatsApp card once its link exists, a copy-the-link share button, and the diagnostic. Code: `app/free-workshop/page.tsx`, `components/workshop/workshop-form.tsx`, `lib/workshop.ts` (every date and link in one file), `subscribeWorkshop()` in `lib/mailerlite.ts`.
+- **The sign-up page** at `/free-workshop/` (short link `/kcl`, which tags sign-ups as KCL in MailerLite). Collects first name, email, year group, subjects, and an optional phone number that only appears when the student ticks the WhatsApp community box. Deliberately a plain form (Waleed sells the workshop from the stage, 23 October). Thank-you state shows the date, calendar buttons (Google, Apple/Outlook), the Zoom link once it exists, the WhatsApp card once its link exists, a copy-the-link share button, and the diagnostic. Code: `app/free-workshop/page.tsx`, `components/workshop/workshop-form.tsx`, `lib/workshop.ts` (every date and link in one file), `subscribeWorkshop()` in `lib/mailerlite.ts`.
 - **MailerLite group** "Free Workshop: Year 12 Head Start (Nov 2026)", id `202138192036496596`, and two new fields `workshop_source` and `workshop_whatsapp`. The group is deliberately NOT watched by the lead-alert webhook (350 sign-ups must not ring the phone 350 times).
 - **Four emails** in `content/email-sequences/free-workshop/`: W0 instant confirmation (Zoom link, one reply ask, WhatsApp link), W1 the day before, W2 one hour before, W3 the replay plus the programme offer. W1 and W2 are loaded as DRAFT campaigns (ids `202139174270141495` and `202139177244951666`), unscheduled. W0 needs its automation skeleton (step 6 below). W3 waits for the programme decision.
 - The page is on the session branch `claude/kcl-workshop-sales-funnel-fizwlg`, built and verified. It is NOT live until that branch is merged into `main` (step 2).
@@ -53,7 +53,7 @@ What this folder is: everything for the free workshop funnel Waleed pitches from
 **After Sunday**
 
 9. Upload the recording (Zoom cloud link or YouTube unlisted), replace `https://REPLAY-LINK-TBC` in W3.
-10. Decide the programme name and price (proposal in GROUP-PROGRAMME.md), have a session build the programme page and Stripe link, replace `https://PROGRAMME-PAGE-TBC`, load W3 as a draft and schedule it for 9am Monday 2 November, with a "Questions?" email on Tuesday and a final-day email on Wednesday.
+10. Confirm the programme name (price and shape are decided: two sessions a week, £100 founding then £150), have a session build the programme page and Stripe link, replace `https://PROGRAMME-PAGE-TBC`, load W3 as a draft and schedule it for 9am Monday 2 November, with a "Questions?" email on Tuesday and a final-day email on Wednesday.
 11. Record the real numbers (sign-ups from `/kcl`, attendance, sales) in this README so the next workshop is planned from data rather than the assumptions above.
 
 ## Numbers to record after the day
