@@ -146,6 +146,11 @@ export default function WorkshopForm() {
             ? ' Your Zoom link is below and in your inbox in the next couple of minutes.'
             : ' Your Zoom link lands in your inbox before the day, with a reminder the day before and an hour before we start.'}
         </p>
+        <div className="mt-4 rounded-xl bg-brand-gold/15 px-4 py-3 text-sm leading-relaxed text-brand-cream ring-1 ring-brand-gold/40">
+          <span className="font-semibold text-brand-gold">Can&apos;t see the email?</span> Check your spam or junk folder, and the
+          Promotions tab if you use Gmail. It comes from waleed@alevelaccelerators.com. Drag it into your inbox (or add the address
+          to your contacts) so the reminders land where you&apos;ll see them.
+        </div>
 
         {WORKSHOP.zoomUrl && (
           <a
