@@ -752,6 +752,20 @@
      "email": "content/email-sequences/programme-interest/04-the-decision.md"
     }
    ]
+  },
+  {
+   "key": "workshop-e0",
+   "name": "Workshop: instant confirmation (W0)",
+   "automation_id": null,
+   "replaces": null,
+   "trigger_group_id": "202138192036496596",
+   "trigger_group_name": "Free Workshop: Year 12 Head Start (Nov 2026)",
+   "footer": "You're getting this because you saved a place at the free Academic Accelerator Workshop at alevelaccelerators.com.",
+   "steps": [
+    {
+     "email": "content/email-sequences/free-workshop/00-youre-in.md"
+    }
+   ]
   }
  ]
 }

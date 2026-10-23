@@ -221,3 +221,52 @@ export async function subscribeNewsletter(email: string, name: string): Promise<
     return 'network-error'
   }
 }
+
+/* The free online workshop sign-up (23 October 2026): the page at
+   /free-workshop/ (short link /kcl for the lecture theatre QR code). Joins the
+   workshop group in lib/workshop.ts, which the reminder and replay emails send
+   to. Phone is optional and only ever sent when given (it is their ticket into
+   the WhatsApp community, recorded in workshop_whatsapp), so a blank never
+   wipes a number already stored on the subscriber. */
+export interface WorkshopSubscriber {
+  email: string
+  name: string
+  yearGroup: string
+  subjects: string
+  /* E.164 form from lib/phone.ts, or '' when they did not ask for WhatsApp */
+  phone: string
+  /* 'yes' when they ticked the WhatsApp community box and gave a number */
+  whatsapp: 'yes' | 'no'
+  /* Where the sign-up came from: 'kcl' from the QR code, else the ?src= value
+     or 'website' */
+  source: string
+  groupId: string
+}
+
+export async function subscribeWorkshop(sub: WorkshopSubscriber): Promise<SubscribeResult> {
+  try {
+    const fields: Record<string, string> = {
+      name: sub.name,
+      year_group: sub.yearGroup,
+      subjects: sub.subjects,
+      workshop_source: sub.source,
+      workshop_whatsapp: sub.whatsapp,
+    }
+    if (sub.phone) fields.phone = sub.phone
+    const res = await fetch('https://connect.mailerlite.com/api/subscribers', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${ML_API_KEY}`,
+      },
+      body: JSON.stringify({ email: sub.email, fields, groups: [sub.groupId] }),
+    })
+    if (res.ok) return 'ok'
+    if (res.status === 422) return 'invalid-email'
+    console.error('[workshop] MailerLite error:', res.status, await res.text())
+    return 'network-error'
+  } catch (err) {
+    console.error('[workshop] MailerLite fetch failed:', err)
+    return 'network-error'
+  }
+}

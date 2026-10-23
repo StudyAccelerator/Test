@@ -3,7 +3,7 @@
   "docs": [
     {
       "id": "reaudit",
-      "label": "Reaudit and road to \u00a31M",
+      "label": "Reaudit and road to £1M",
       "path": "content/business-audit/2026-07-16-reaudit-and-road-to-1m.md"
     },
     {
@@ -65,6 +65,11 @@
       "id": "lead-magnets",
       "label": "Lead magnet roadmap",
       "path": "content/lead-magnet-roadmap.md"
+    },
+    {
+      "id": "group-programme",
+      "label": "Group programme (Top 1% Live)",
+      "path": "content/workshops/2026-10-24-kcl-medic-life/GROUP-PROGRAMME.md"
     }
   ]
 }
