@@ -222,7 +222,7 @@ export default function WorkshopForm() {
   /* ── The form ─────────────────────────────────────────────────────────── */
   return (
     <form onSubmit={handleSubmit} noValidate className="rounded-3xl bg-white p-6 shadow-xl ring-1 ring-brand-purple/10 sm:p-8">
-      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/60">Save your free place</p>
+      <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-purple/60">Takes about 30 seconds</p>
       <h2 className="mt-2 font-serif text-2xl font-bold text-brand-purple">
         {WORKSHOP.dateLabel}, {WORKSHOP.timeLabel}
       </h2>
