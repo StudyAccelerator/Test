@@ -5,6 +5,7 @@ What this folder is: everything for the free workshop funnel Waleed pitches from
 - `TALK-TRANSITION.md`: how to move from the F2 talk to the free workshop, and how to get the room to sign up. Read this first.
 - `GROUP-PROGRAMME.md`: the group programme on Waleed's decisions (two live sessions a week, £100 founding then £150 a month, the clinic), the cold Facebook-ads funnel that replaces sales calls, the revenue maths, and the WhatsApp community rules.
 - `qr-alevelaccelerators-kcl.png` and `.svg`: the QR code for the slide. It points at `alevelaccelerators.com/kcl`.
+- `slide-what-you-leave-with.png` (16:9 with QR), `graphic-four-steps.png` (the four boxes as one panel) and `box-01.png` to `box-04.png` (each box on its own, transparent background) for the Canva deck.
 
 ## What is already built
 

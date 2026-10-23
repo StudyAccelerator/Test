@@ -4,9 +4,9 @@ Send: Instantly on joining group "Free Workshop: Year 12 Head Start (Nov 2026)" 
 Subject A: {$name}, You're In. Here's Your Workshop Link
 Subject B: {$name}, Your Free Workshop Place Is Saved
 Preheader: The Zoom link, the date, what to bring, and the one question I'd like you to answer before we start.
-Goal: confirm the place, deliver the Zoom link and calendar details, get one reply (Primary tab plus workshop content), point WhatsApp opt-ins at the community.
-Links: 2 (Zoom join link in body and PS; WhatsApp community link once)
-Note: WHATSAPP-LINK-TBC is a placeholder. Replace it across this folder and lib/workshop.ts the moment Waleed has the real links (one sed, see the README), then render and load again. This email is the instant step of a NEW automation that does not exist yet: creating the skeleton is a 3 click job in the MailerLite builder (runbook in content/workshops/2026-10-24-kcl-medic-life/README.md).
+Goal: confirm the place, deliver the Zoom link and calendar details, get one reply (Primary tab plus workshop content). No WhatsApp mention: Waleed sends his own personal email when the community is ready (his instruction, 24 October 2026).
+Links: 2 (Zoom join link in body and PS)
+Note: loaded into automation 202163137955234961 (ON). Reloading means disable, load, enable (POST /automations/{id}/disable and /enable).
 Written: 23 October 2026
 
 ---
@@ -31,17 +31,12 @@ School teaches you what to learn, but nobody ever teaches you how to learn it. T
 
 I'll show you which of your subjects should get your hours this term, and why. Then the high-yield topics in each one. Then how to build a week that still works in February, when most of Year 12 is running on empty.
 
-It's the system that took me from an average student to top of my year. I've taught it to over 1,000 A-level students in the past 6 years, and on average our students jump two grades.
+It's the system that took me from an average student to the top 10% of my year. I've taught it to over 1,000 A-level students in the past 6 years, and on average our students jump two grades.
 
 **One favour before Saturday**
 Reply to this email with the one thing about Year 12 that worries you most right now. One line is plenty.
 
 I build the examples around what people send me, so the more honest you are, the more useful Saturday is for you.
-
-**If you ticked the WhatsApp box**
-Here's the community: [Join the WhatsApp community](https://WHATSAPP-LINK-TBC). I answer study questions in there in public threads between workshops, so everyone learns from every answer.
-
-Only admins can post in the main channel. Your number stays hidden from other members, and you can leave with one tap.
 
 Forward this to a friend who was in the room, and to your parents too, because they're very welcome to sit in.
 
