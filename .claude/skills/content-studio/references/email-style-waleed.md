@@ -98,3 +98,7 @@ None of the above licenses invented numbers or fabricated student results. The a
 ## The test before loading
 
 Read each email once as if he's saying it on a call. Then check: Hi + intro right? Any fragment pairs? Any defensive line? Is the free thing a reward? Is the call named as the strategy plan? Is there a PS with one action and some character? One smiley at most? Would he say every sentence out loud?
+
+## 24 October 2026: his own result, stated honestly
+
+Never write that Waleed "finished top of his year" or "came top". His correction: it is not true. Use "the top 10% of my year" or "one of the top students in my year". The approved shape of the story is: average Year 12, rebuilt how he studied, top 10% of his year, got into medicine.

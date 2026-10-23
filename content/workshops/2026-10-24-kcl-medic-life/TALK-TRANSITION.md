@@ -41,7 +41,7 @@ This is the join. It comes at the natural end of the F2 story, in the slot where
 >
 > What changed wasn't effort. I had plenty of effort. What changed was realising that studying is a skill with a method, exactly like taking a history or reading an ECG, and that nobody had ever taught me the method. School had taught me what to learn. Nobody had taught me how.
 >
-> I rebuilt how I studied, I finished top of my year, and I got in. And for the last six years, alongside the day job, I've taught that system to over a thousand A-level students. On average, they jump two grades.
+> I rebuilt how I studied, I finished in the top 10% of my year, and I got in. And for the last six years, alongside the day job, I've taught that system to over a thousand A-level students. On average, they jump two grades.
 >
 > The Medic Life have very kindly said I can tell you about what I do. So I'm going to, but I'm not going to try and sell you anything today. Instead I'd rather just give you the first lesson. All of it. For free.
 
