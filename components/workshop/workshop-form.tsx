@@ -6,7 +6,9 @@ import { trackLead } from '@/lib/analytics'
 import { checkPhone } from '@/lib/phone'
 import { WORKSHOP, googleCalendarUrl, icsDataUrl, workshopSource } from '@/lib/workshop'
 
-/* The sign-up form for the free workshop and its thank-you state. Collects
+/* The sign-up form for the free workshop and its thank-you state. The page
+   is standalone (no site navigation, Waleed's call), so nothing here links
+   into the site either. Collects
    what Waleed asked for on 23 October 2026: name, email, year, subjects, and
    an OPTIONAL phone number that only appears once they tick the WhatsApp
    community box, so nobody is asked for a number they have no reason to give.
@@ -210,12 +212,8 @@ export default function WorkshopForm() {
         </div>
 
         <p className="mt-6 text-sm leading-relaxed text-brand-cream/75">
-          While you wait, the free{' '}
-          <a href="/revision-diagnostic/" className="font-semibold text-brand-gold underline underline-offset-4">
-            Revision Diagnostic
-          </a>{' '}
-          takes 4 minutes and tells you which part of your study system is leaking marks. Bring your result to
-          the workshop and I&apos;ll tell you what I&apos;d fix first.
+          One small favour: reply to the confirmation email with the one thing about Year 12 that worries you
+          most. I build the examples around what people send me.
         </p>
       </div>
     )

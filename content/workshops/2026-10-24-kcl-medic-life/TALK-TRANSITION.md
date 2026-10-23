@@ -51,13 +51,13 @@ That last paragraph does the work. You have named the sponsorship openly, which 
 
 Now be specific. Vague free things get ignored; specific free things get signed up for. Say what it is, when it is, what they will leave with, who it is for, and then show the QR code. Have the slide ready to click to on the word "workshop".
 
-> Next Sunday, the 1st of November, 6pm, I'm running a free online workshop. Ninety minutes on Zoom. It's called the Academic Accelerator Workshop, and it's specifically about getting ahead of Year 12 without burning out by February, which is when it hits most people.
+> Next Saturday, the 31st of October, 1pm, I'm running a free online workshop. Ninety minutes on Zoom. It's called the Free Academic Accelerator Workshop, and it's specifically about getting ahead of Year 12 without burning out by February, which is when it hits most people.
 >
 > You'll leave with four things. One: a priority map, which of your subjects should actually get your hours this term and why, because almost everyone splits their time equally and that's exactly how the weakest subject stays weak until mocks. Two: the high-yield topics in each of your subjects, the triage I was talking about earlier, what carries the marks and what eats your evenings for nothing. Three: a week that doesn't collapse, how many hours Year 12 actually needs and where they go. And four: how to learn, not just what. The method. The thing nobody teaches.
 >
 > If you're in Year 12, this is for you, this is your year. Year 11, this is the head start before you arrive, so you walk in already knowing how to do it. Year 13, the prioritising and the method go straight into your mocks, so come. And bring your parents. Genuinely. The plan is far easier to keep when the people at home have heard it too, and they ask the best questions.
 >
-> Everyone who signs up gets the replay, so if you can't make 6pm on Sunday, sign up anyway.
+> Everyone who signs up gets the replay, so if you can't make 1pm on Saturday, sign up anyway.
 
 Then the QR slide, and the most important 60 seconds of the day.
 
@@ -87,7 +87,7 @@ Never invent scarcity. The room includes future medics and they can smell it.
 
 ## The 30 second version, for the end of Q&A
 
-> Last thing. If you put your hand up earlier as someone working hard without the marks to show for it, next Sunday 6pm is for you. Free, ninety minutes, online, I'll teach you how to prioritise your subjects and how to actually learn. Scan the code or go to alevelaccelerators dot com slash K C L. Bring your parents. See you Sunday.
+> Last thing. If you put your hand up earlier as someone working hard without the marks to show for it, next Saturday 1pm is for you. Free, ninety minutes, online, I'll teach you how to prioritise your subjects and how to actually learn. Scan the code or go to alevelaccelerators dot com slash K C L. Bring your parents. See you Saturday.
 
 ## Things that kill sign-ups
 
@@ -100,10 +100,10 @@ Never invent scarcity. The room includes future medics and they can smell it.
 
 ## The slide
 
-One slide, kept simple, brand purple on cream. Use the QR code saved next to this file (`qr-alevelaccelerators-kcl.png`, or the `.svg` for a sharper print).
+Two ready-made slides sit next to this file: `slide-what-you-leave-with.png` (the four things the workshop covers, with the date, QR code and short link) and `slide-qr-only.png` (QR, link and date, nothing else, for the last slide). Both are 1920 x 1080 and drop straight into the Canva deck. The QR code on its own is `qr-alevelaccelerators-kcl.png` (or the `.svg` for a sharper print). If you build your own slide instead, this is the content:
 
 - Headline: **Free workshop: how to get ahead of Year 12 (without burning out)**
-- Line two: Sunday 1 November · 6pm to 7:30pm · live on Zoom · 90 minutes
+- Line two: Saturday 31 October · 1pm to 2:30pm · live on Zoom · 90 minutes
 - The QR code, large, centred
 - Under it, in big type: **alevelaccelerators.com/kcl**
 - Bottom line: Parents welcome · Replay for everyone who signs up · Dr Waleed Ahmad
@@ -112,4 +112,4 @@ The short link redirects to the sign-up page and tags everyone who uses it as a 
 
 ## If the date moves
 
-Everything above says Sunday 1 November 6pm. If you change the date, change it in one file on the site (`lib/workshop.ts`) and the page, calendar buttons and your slide all need to say the same thing. The two reminder emails name the date too. The README beside this file has the exact steps.
+Everything above says Saturday 31 October 1pm. If you change the date, change it in one file on the site (`lib/workshop.ts`) and the page, calendar buttons and your slide all need to say the same thing. The two reminder emails name the date too. The README beside this file has the exact steps.

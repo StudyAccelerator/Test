@@ -1,6 +1,6 @@
 # W3 · The replay, and the next step
 
-Send: The morning after the workshop, 9am UK (campaign to the workshop group)
+Send: The morning after the workshop (Sunday 1 November), 9am UK (campaign to the workshop group)
 Subject A: {$name}, Your Workshop Replay And Slides
 Subject B: {$name}, The Replay, And What Comes Next
 Preheader: The recording, the three things to do this week, and the door into working with me every week.
@@ -13,7 +13,7 @@ Written: 23 October 2026
 
 Hi {$name},
 
-Thank you for last night. The room was brilliant, the questions were better, and a few of you clearly stayed up afterwards doing the priority map, which made my morning.
+Thank you for yesterday. The room was brilliant, the questions were better, and a few of you clearly stayed up afterwards doing the priority map, which made my morning.
 
 Here's the replay, with the slides, for anyone who missed it or wants to go through it again at their own pace.
 
@@ -35,7 +35,7 @@ Plan this week only, with your deep sessions on the weakest subject, and leave o
 If you do those three, you'll already be ahead of most of your year.
 
 **What comes next**
-Last night I taught you the system in 90 minutes. The honest truth is that knowing it and running it every week are two different things, which is exactly why I run the weekly version.
+Yesterday I taught you the system in 90 minutes. The honest truth is that knowing it and running it every week are two different things, which is exactly why I run the weekly version.
 
 It's called Top 1% Live. Two live sessions with me every week on Zoom, which adds up to about 16 hours a month.
 
@@ -47,7 +47,7 @@ The second is the clinic. You bring your actual work, a marked essay, a timed pa
 
 As a thank you for showing up and taking your grades seriously, the founding cohort from this workshop joins at £100 a month. That rate stays yours for as long as you stay.
 
-After the founding places go, or after Sunday, it's £150 a month.
+After the founding places go, or after Tuesday night, it's £150 a month.
 
 For comparison, one hour a week of 1:1 tutoring in one subject costs most families £160 to £200 a month. It only covers the content, never how you study.
 
@@ -65,4 +65,4 @@ Kind regards,
 
 Waleed
 
-PS: The founding rate closes on Sunday night or when the founding places go, whichever is first, and I'm not planning to run it again at that price. [Here's the page](https://PROGRAMME-PAGE-TBC). Whatever you decide, do the three things above this week, and reply to tell me how the priority map came out :)
+PS: The founding rate closes on Tuesday night or when the founding places go, whichever is first, and I'm not planning to run it again at that price. [Here's the page](https://PROGRAMME-PAGE-TBC). Whatever you decide, do the three things above this week, and reply to tell me how the priority map came out :)

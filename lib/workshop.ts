@@ -14,24 +14,23 @@
 
 export const WORKSHOP = {
   /* Shown in the page title and the thank-you state */
-  title: 'The Academic Accelerator Workshop',
+  title: 'Free Academic Accelerator Workshop',
   strap: 'How to get ahead of Year 12, prioritise your subjects and avoid the burnout that hits most students after Christmas.',
 
-  /* ISO date and UK local times. Proposed Sunday 1 November 2026, 6pm to
-     7:30pm: eight days after KCL, close enough to keep the room's momentum,
-     Sunday evening because that is when students are home. Waleed confirms
-     or moves it; nothing else needs to change when he does. */
-  dateISO: '2026-11-01',
-  startTime: '18:00',
-  endTime: '19:30',
+  /* ISO date and UK local times. Waleed's date (23 October 2026): Saturday
+     31 October, 1pm to 2:30pm, a week after KCL. Change these five values
+     together and the page, calendar buttons and labels follow. */
+  dateISO: '2026-10-31',
+  startTime: '13:00',
+  endTime: '14:30',
   /* Human labels, kept in step with the three values above */
-  dateLabel: 'Sunday 1 November',
-  timeLabel: '6pm to 7:30pm (UK time)',
+  dateLabel: 'Saturday 31 October',
+  timeLabel: '1pm to 2:30pm (UK time)',
   durationLabel: '90 minutes, live on Zoom',
 
-  /* Paste the Zoom join link here once the meeting exists. Empty means
+  /* The Zoom join link (Waleed's meeting, 23 October 2026). Empty would mean
      "arrives by email". */
-  zoomUrl: '',
+  zoomUrl: 'https://us06web.zoom.us/j/81629496409?pwd=aaPYuN2htZxufi9Vpy19LRlleisDeL.1',
 
   /* Paste the WhatsApp community invite link here once the community exists.
      Empty hides the WhatsApp card and the phone field's promise. */
