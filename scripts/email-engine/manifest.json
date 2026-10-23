@@ -756,7 +756,7 @@
   {
    "key": "workshop-e0",
    "name": "Workshop: instant confirmation (W0)",
-   "automation_id": null,
+   "automation_id": "202163137955234961",
    "replaces": null,
    "trigger_group_id": "202138192036496596",
    "trigger_group_name": "Free Workshop: Year 12 Head Start (Nov 2026)",
