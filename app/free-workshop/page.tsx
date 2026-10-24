@@ -93,7 +93,7 @@ export default function FreeWorkshopPage() {
             <p>
               Medical school forced me to learn properly: active recall, spaced repetition, working to the mark
               scheme. Same hours, pointed at the right work. That system is what I have taught to over 1,000
-              A-level students in the last six years, and on average our students jump two grades.
+              A-level students in the last six years.
             </p>
             <p>This workshop is the first lesson of it, free, because Year 12 is the year to get it right.</p>
           </div>
