@@ -208,6 +208,8 @@ Growth through partnerships is a standing play: established education companies 
 
 ## Handing over finished work (standing rule, added 3 August 2026)
 
+**No Markdown files for Waleed (his instruction, 24 October 2026).** He finds .md files hard to open and read. Give him the key points directly in the chat reply, and when more detail is needed hand over a short, well laid out PDF (render it from HTML with headless Chrome: `chromium --headless=new --no-pdf-header-footer --print-to-pdf=out.pdf file://page.html`). Markdown stays fine as the repo's working record for sessions, but it is never the thing he is sent to read. He also dislikes long-winded documents: lead with what he needs to know, keep the PDF to a few pages, tables over prose.
+
 Never finish a piece of work by telling Waleed where the files live. Hand them over so he can open them in one click: send the actual files with the file-delivery tool (zip the folder when there are many), and write every repo path in your summary as a clickable markdown link, never as bare text. He should not have to go hunting through Finder for something a session just built.
 
 A deliverable is also not finished until it is whole. Creatives ship WITH the copy that runs alongside them (primary text, headline, description, call to action button, destination URL, and which text pairs with which image). Documents ship as the rendered file, not only the source. Anything he is meant to act on says plainly what to do with it and in what order. If part of a pack is deliberately missing, say so in the summary rather than letting him discover the gap.

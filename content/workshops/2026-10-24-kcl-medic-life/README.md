@@ -61,10 +61,10 @@ What this folder is: everything for the free workshop funnel Waleed pitches from
 
 | Measure | Value |
 |---|---|
-| In the room | 350 (The Medic Life's figure) |
-| Signed up via /kcl (MailerLite workshop_source = kcl) | |
+| In the room | about 300 (Waleed's count on the day; 350 was the advance figure) |
+| Signed up via /kcl (MailerLite workshop_source = kcl) | 219 by 9:30pm on the day (222 real sign-ups in the group in total, 74% of the room) |
 | Signed up another way | |
-| Ticked WhatsApp | |
+| Ticked WhatsApp | 173 with a valid number |
 | Attended live | |
 | Watched the replay | |
 | Bought the programme | |
