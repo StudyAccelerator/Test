@@ -31,7 +31,7 @@ School teaches you what to learn, but nobody ever teaches you how to learn it. T
 
 I'll show you which of your subjects should get your hours this term, and why. Then the high-yield topics in each one. Then how to plan a week you can actually stick to for the whole year, without burning out.
 
-It's the system that took me from an average student to the top 10% of my year, and I've taught it to over 1,000 A-level students in the past 6 years.
+It's the system that took me from an average student to the top 10% of my year. I've taught it to over 1,000 A-level students in the past 6 years.
 
 **One favour before Saturday**
 Reply to this email with the one thing about Year 12 that worries you most right now. One line is plenty.
