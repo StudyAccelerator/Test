@@ -29,9 +29,9 @@ Save this email, because the same link is in your reminders the day before and a
 **What we're covering**
 School teaches you what to learn, but nobody ever teaches you how to learn it. That's what the 90 minutes are for.
 
-I'll show you which of your subjects should get your hours this term, and why. Then the high-yield topics in each one. Then how to build a week that still works in February, when most of Year 12 is running on empty.
+I'll show you which of your subjects should get your hours this term, and why. Then the high-yield topics in each one. Then how to plan a week you can actually stick to for the whole year, without burning out.
 
-It's the system that took me from an average student to the top 10% of my year. I've taught it to over 1,000 A-level students in the past 6 years, and on average our students jump two grades.
+It's the system that took me from an average student to the top 10% of my year, and I've taught it to over 1,000 A-level students in the past 6 years.
 
 **One favour before Saturday**
 Reply to this email with the one thing about Year 12 that worries you most right now. One line is plenty.
@@ -46,4 +46,4 @@ Kind regards,
 
 Waleed
 
-PS: Put it in your calendar now, while you're thinking about it. I'm a full time doctor, so I'll be coming straight from a shift to teach this. That means I'll be running on coffee and I'll need you there on time haha. [Here's the Zoom link again](https://us06web.zoom.us/j/81629496409?pwd=aaPYuN2htZxufi9Vpy19LRlleisDeL.1).
+PS: Put it in your calendar now, while you're thinking about it. I forget things all the time if they're not written down, and I'd hate for you to miss this one. [Here's the Zoom link again](https://us06web.zoom.us/j/81629496409?pwd=aaPYuN2htZxufi9Vpy19LRlleisDeL.1).
