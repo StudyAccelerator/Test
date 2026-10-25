@@ -1,4 +1,4 @@
-# Top 1% Live: the group programme, and how cold Facebook leads get into it without sales calls
+# Top 1% Academy: the group programme, and how cold Facebook leads get into it without sales calls
 
 Written 23 October 2026, revised the same evening after Waleed's decisions: two live sessions a week (four hours) is fine for him, pricing is £100 a month for the founding cohort then £150 a month (the anchor: 16 hours of teaching a month, so under £10 an hour), the bring-your-paper clinic is in, the Medic Life workshop is a one-off, and future students arrive cold from Facebook ads. Everything below is built on those. Numbers that are not his are labelled as assumptions.
 
@@ -39,7 +39,7 @@ Suggested slots, to be set by his rota: method session midweek evening (Tuesday 
 
 **Curriculum:** a rolling 12 week cycle that follows the year, so anyone can join in any week. The topics are the five systems the Revision Diagnostic already scores, plus the calendar: the priority map; high-yield and low-yield topics; blurt and fix; active recall and spaced review; reading a mark scheme like an examiner; marks per minute; the error log; planning a week that survives; mock preparation; mock review; predicted grades and teachers; burnout and the February problem. Then it loops, timed to the calendar (exam season in spring, the Year 12 to 13 bridge in summer). The Study Series content and the deck phases (Diagnose, Rebuild, Coach) are the raw material.
 
-**Against the mentorship (£300 a month):** the mentorship is him working directly with one student, fortnightly 1:1 follow-ups, five places. Top 1% Live is the same system taught to the group with his eyes on their work in the clinic, but no 1:1 time. At £150 the gap to £300 is narrow, so the 1:1 line has to be drawn clearly on the page, and the group becomes the natural pool for mentorship upgrades (and the natural downsell on a strategy call that does not close at £300).
+**Against the mentorship (£300 a month):** the mentorship is him working directly with one student, fortnightly 1:1 follow-ups, five places. Top 1% Academy is the same system taught to the group with his eyes on their work in the clinic, but no 1:1 time. At £150 the gap to £300 is narrow, so the 1:1 line has to be drawn clearly on the page, and the group becomes the natural pool for mentorship upgrades (and the natural downsell on a strategy call that does not close at £300).
 
 ## 3. Pricing: £100 founding, £150 standard
 
@@ -80,7 +80,7 @@ This is the part Waleed said he does not know how to do, so it is spelled out en
 |---|---|---|
 | 0 | Here's your training (link, what to have in front of you) | watch |
 | 1 | The three things to do this week (the priority map, the high-yield list, one week) | reply with the priority map |
-| 2 | What comes next: Top 1% Live, the two sessions, £150, the hourly anchor, the guarantee, the intake date | join |
+| 2 | What comes next: Top 1% Academy, the two sessions, £150, the hourly anchor, the guarantee, the intake date | join |
 | 3 | Your guest pass: come to this week's method session free, as my guest | book the guest seat |
 | 4 | Questions? (the five a parent always asks, answered) | join or reply |
 | 5 | The intake closes tonight | join |
@@ -89,7 +89,7 @@ Replies go to Waleed's inbox and he answers them in batches; that is the only hu
 
 **Step 5, the guest pass, which replaces the sales call.** A cold parent will not pay £150 a month from a recording alone, and he will not do hundreds of calls. The thing that bridges the gap is the thing he is already doing twice a week: let them sit in. "Come to Tuesday's session as my guest, no card, no commitment. Bring your son or daughter. If it's not for you, you've lost two hours." The guest joins the live Zoom (a separate guest link, muted, no breakout), sees him teach, sees the other students, and the next email asks them to join. Cap guests at ten per session so the paying cohort stays the room. This converts far better than a page because the product is the demo, and it costs zero extra hours.
 
-**Step 6, checkout.** A Stripe payment link for the monthly subscription (£150; a second link at £100 for the founding intake), card on file, cancel any time, the guarantee stated on the checkout page. The thank-you page after payment joins the "Top 1% Live members" MailerLite group (fed by a Stripe webhook later; by hand at first), which sends the welcome, the Zoom links and the community invite.
+**Step 6, checkout.** A Stripe payment link for the monthly subscription (£150; a second link at £100 for the founding intake), card on file, cancel any time, the guarantee stated on the checkout page. The thank-you page after payment joins the "Top 1% Academy members" MailerLite group (fed by a Stripe webhook later; by hand at first), which sends the welcome, the Zoom links and the community invite.
 
 **Step 7, the numbers to run it by** (assumptions until there is data, then replace them):
 
@@ -121,7 +121,7 @@ Create it in WhatsApp on the phone (Communities, New community, name it, create 
 1. The workshop date and time (the page says Sunday 1 November, 6pm).
 2. The Zoom meeting (create it, check the participant cap, paste the link).
 3. The WhatsApp community (create it, paste the link), or drop it.
-4. The programme name (Top 1% Live is the proposal).
+4. The programme name (Top 1% Academy is the proposal).
 5. The two weekly slots and the first session date (the Sunday after the workshop keeps the momentum).
 6. Whether the founding £100 is limited by number, by date, or both.
 7. The go for a session to build the programme page, the Stripe links, the on-demand training page and the five day sequence (about a day's work once the recording exists).
