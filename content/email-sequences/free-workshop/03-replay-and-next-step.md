@@ -1,28 +1,28 @@
 # W3 · The replay, and the next step
 
 Send: The morning after the workshop (Sunday 1 November), 9am UK (campaign to the workshop group)
-Subject A: {$name}, Your Workshop Replay And Slides
-Subject B: {$name}, The Replay, And What Comes Next
+Subject A: {$name}, Your Workshop Replay And What Comes Next
+Subject B: {$name}, The Replay, Plus Your Founding Place
 Preheader: The recording, the three things to do this week, and the door into working with me every week.
-Goal: deliver the replay to everyone (attended or not), restate the three actions, make the offer for the weekly group programme with the founding price and the deadline.
-Links: 3 (replay, programme page, programme page again in PS)
-Note: NOT loaded into MailerLite. Shape and prices are Waleed's own (23 October 2026: two live sessions a week, £100 a month founding then £150); the name Top 1% Academy is still the session's proposal. Waleed confirms or changes them, the programme page and Stripe link get built, REPLAY-LINK-TBC and PROGRAMME-PAGE-TBC are replaced, and only then is this loaded as a draft.
-Written: 23 October 2026
+Goal: deliver the replay to everyone (attended or not), restate the three actions, make the Top 1% Academy offer with the founding price and the Tuesday deadline.
+Links: 3 (replay, the Academy page, the Academy page again in PS)
+Note: Shape, prices and dates are Waleed's (25 October 2026): Tuesday 7pm to 9pm teaching plus Hot Seat, Saturday 2pm to 4pm The Marks Clinic, £100 a month founding then £150, closes Tuesday 3 November 11:59pm, 7 day money-back guarantee. Load as a DRAFT only once REPLAY-LINK-TBC is replaced with the Zoom recording link; schedule on his go.
+Written: 23 October 2026, rewritten 26 October 2026
 
 ---
 
 Hi {$name},
 
-Thank you for yesterday. The room was brilliant, the questions were better, and a few of you clearly stayed up afterwards doing the priority map, which made my morning.
+Thank you for yesterday. The questions were brilliant, and a few of you clearly stayed up afterwards doing the priority map, which made my morning.
 
-Here's the replay, with the slides, for anyone who missed it or wants to go through it again at their own pace.
+Here's the replay for anyone who missed it, or who wants to go through it again at their own pace.
 
 [BUTTON: Watch the workshop replay -> https://REPLAY-LINK-TBC]
 
 **The three things to do this week**
 
 **1. Finish your priority map**
-One line per subject: confidence out of 10, the gap to your target grade, and how much of the final grade this term's topics carry.
+One line per subject: your confidence out of 10, the gap to your target grade, and how much of the final grade this term's topics carry.
 
 The subject with the biggest gap and the biggest weight gets the most hours. It never gets equal time with the others.
 
@@ -30,34 +30,36 @@ The subject with the biggest gap and the biggest weight gets the most hours. It 
 For each subject, write down the five topics that come up in almost every paper. Those are the ones you learn properly first. Everything else waits its turn.
 
 **3. Build one week, not a term**
-Plan this week only, with your deep sessions on the weakest subject, and leave one evening empty on purpose. That empty evening is what stops the February crash.
+Plan this week only, with your deep sessions on your weakest subject, and leave one evening empty on purpose. That empty evening is what stops the February crash.
 
-If you do those three, you'll already be ahead of most of your year.
+Do those three and you're already ahead of most of your year.
 
 **What comes next**
-Yesterday I taught you the system in 90 minutes. The honest truth is that knowing it and running it every week are two different things, which is exactly why I run the weekly version.
+Yesterday I taught you the system in 90 minutes. Knowing it and running it every week are two different things, which is exactly why I run the weekly version.
 
-It's called Top 1% Academy. Two live sessions with me every week on Zoom, which adds up to about 16 hours a month.
+It's called the Top 1% Academy, and it's two live sessions with me every week on Zoom.
 
-The first is the method session. We take one part of your study system, like how to revise a topic so it sticks or how to read a mark scheme.
+Tuesday, 7pm to 9pm. For the first hour I teach one part of the study system properly. The second hour is the Hot Seat, where you bring your actual problem and we fix it live.
 
-Then you do it for your own subjects while I'm there.
+Saturday, 2pm to 4pm, is The Marks Clinic. You send in a piece of real work, a marked paper, an essay or your week plan, and I go through it on screen. Everyone learns from every paper.
 
-The second is the clinic. You bring your actual work, a marked essay, a timed paper or your week plan, and I go through it live. Every session is recorded the same night.
+Every session is recorded and in the library the same night, so a clash never costs you anything.
 
-As a thank you for showing up and taking your grades seriously, the founding cohort from this workshop joins at £100 a month. That rate stays yours for as long as you stay.
+As a thank you for showing up yesterday and taking your grades seriously, the founding cohort from this workshop joins at £100 a month. That price stays yours for as long as you stay, even once it goes up to £150 for everyone else.
 
-After the founding places go, or after Tuesday night, it's £150 a month.
+The founding price closes on Tuesday night at 11:59pm, and the first session is Tuesday at 7pm.
 
-For comparison, one hour a week of 1:1 tutoring in one subject costs most families £160 to £200 a month. It only covers the content, never how you study.
+For comparison, one tutor for one subject at two hours a week costs most families £320 to £400 a month, and it only ever covers the content.
 
-Top 1% Academy is 16 hours a month with me, on every subject you take, which works out at under £10 an hour.
+The Academy is about 16 hours a month with me, on how you study, across every subject you take.
 
-On average, our students jump two grades. And you're covered by the same guarantee as everything I run: join the first session, and if you're not completely satisfied, you get your money back, no questions asked.
+I've worked with over 1,000 A-level students in the past six years, and on average they jump two grades within four months.
 
-[LINK: Read about Top 1% Academy and take a founding place -> https://PROGRAMME-PAGE-TBC]
+You're also covered by a 7 day money-back guarantee. Come to your first week of sessions, and if it isn't for you, email me and you get every penny back.
 
-Parents reading this: you're welcome to join the first session too, and if you'd rather talk it through with me first, reply to this email and I'll sort a time.
+[LINK: Take your founding place in the Top 1% Academy -> https://alevelaccelerators.com/top-1-academy/]
+
+Parents reading this: you're very welcome to sit in on any session, and the page has a short section written for you.
 
 Speak soon!
 
@@ -65,4 +67,4 @@ Kind regards,
 
 Waleed
 
-PS: The founding rate closes on Tuesday night or when the founding places go, whichever is first, and I'm not planning to run it again at that price. [Here's the page](https://PROGRAMME-PAGE-TBC). Whatever you decide, do the three things above this week, and reply to tell me how the priority map came out :)
+PS: The founding price closes on Tuesday night, and I'm not planning to run it at £100 again. [Here's the page](https://alevelaccelerators.com/top-1-academy/). Whatever you decide, do the three things above this week, and reply to tell me how the priority map came out :)

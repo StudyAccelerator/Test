@@ -2,6 +2,8 @@
 
 Written 23 October 2026, revised the same evening after Waleed's decisions: two live sessions a week (four hours) is fine for him, pricing is £100 a month for the founding cohort then £150 a month (the anchor: 16 hours of teaching a month, so under £10 an hour), the bring-your-paper clinic is in, the Medic Life workshop is a one-off, and future students arrive cold from Facebook ads. Everything below is built on those. Numbers that are not his are labelled as assumptions.
 
+**26 October 2026:** the launch kit for this programme (Skool setup, classroom, posts, Stripe billing in pounds, the page, the emails) is `content/skool/top-1-academy/`; the session shape was refined on 25 October to Tuesday 7pm to 9pm (teaching, then the Hot Seat) and Saturday 2pm to 4pm (The Marks Clinic) with a 7 day money-back guarantee. Where this file and that folder differ, the folder wins.
+
 ## 1. The short version
 
 - **Shape:** two live sessions a week on Zoom, two hours each. One is the **method session** (teach one part of the study system, then students do it for their own subjects while he is there). The other is the **clinic** (students send real work beforehand, marked essays, timed papers, week plans, and he goes through it live). Replays the same night, WhatsApp community between sessions.

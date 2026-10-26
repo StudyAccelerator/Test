@@ -1,5 +1,5 @@
 {
- "comment": "The free online workshop's dated emails (23 October 2026). W1 (day before) and W2 (one hour before) load as DRAFT campaigns to the workshop group: python3 scripts/email-engine/engine.py campaigns content/email-sequences/free-workshop --live (add --update to rewrite the drafts after editing). Schedule only on Waleed's go: engine.py schedule <campaign_id> 2026-10-30 18:00 --live and engine.py schedule <campaign_id> 2026-10-31 12:00 --live. W0 (instant) belongs to an automation that still needs its skeleton created in the MailerLite builder (see content/workshops/2026-10-24-kcl-medic-life/README.md); W3 (replay plus offer) is deliberately NOT loaded until Waleed settles the programme's name and price.",
+ "comment": "The free online workshop's dated emails (23 October 2026). W1 (day before) and W2 (one hour before) load as DRAFT campaigns to the workshop group: python3 scripts/email-engine/engine.py campaigns content/email-sequences/free-workshop --live (add --update to rewrite the drafts after editing). Schedule only on Waleed's go: engine.py schedule <campaign_id> 2026-10-30 18:00 --live and engine.py schedule <campaign_id> 2026-10-31 12:00 --live. W0 (instant) is automation 202163137955234961 (ON). W3 (replay plus the Top 1% Academy offer), W4 (Questions?) and W5 (founding closes tonight) are listed below but load ONLY once REPLAY-LINK-TBC in W3 is replaced with the Zoom recording link, then schedule on Waleed's go: W3 Sun 1 Nov 09:00, W4 Mon 2 Nov 18:00, W5 Tue 3 Nov 09:00.",
  "audiences": {
   "workshop": [
    "202138192036496596"
@@ -24,10 +24,30 @@
    "audience": "workshop",
    "send_hint": "Sat 31 Oct 12:00 UK (one hour before)",
    "campaign_id": "202139177244951666"
+  },
+  {
+   "key": "w3",
+   "name": "Workshop 2026-10-31 · W3 replay + Academy offer",
+   "file": "03-replay-and-next-step.md",
+   "audience": "workshop",
+   "send_hint": "Sun 1 Nov 09:00 UK (replay, needs the recording link first)"
+  },
+  {
+   "key": "w4",
+   "name": "Workshop 2026-10-31 · W4 Questions?",
+   "file": "04-questions.md",
+   "audience": "workshop",
+   "send_hint": "Mon 2 Nov 18:00 UK"
+  },
+  {
+   "key": "w5",
+   "name": "Workshop 2026-10-31 · W5 founding closes tonight",
+   "file": "05-founding-closes-tonight.md",
+   "audience": "workshop",
+   "send_hint": "Tue 3 Nov 09:00 UK"
   }
  ],
  "not_loaded": [
-  "00-youre-in.md (automation instant step, skeleton needed)",
-  "03-replay-and-next-step.md (programme price is a proposal)"
+  "03-replay-and-next-step.md, 04-questions.md, 05-founding-closes-tonight.md: run `engine.py campaigns content/email-sequences/free-workshop --live` only after REPLAY-LINK-TBC is replaced; the engine skips entries that already carry a campaign_id, so W1 and W2 are untouched"
  ]
 }
