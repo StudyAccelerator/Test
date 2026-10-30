@@ -21,7 +21,7 @@ Nothing else wants a camera this week.
 >
 > Everything is recorded and in the Classroom the same night, so if a session clashes with something, you've lost nothing.
 >
-> Three things to do right now. One: introduce yourself in Start Here. Year, subjects, and the one thing you'd fix about your studying. Two: watch lesson one of the Workshop Replay and do the priority map, even if you did it on Saturday. Three: post your first problem in the Hot Seat before Tuesday.
+> Three things to do right now. One: introduce yourself in Start Here. Year, subjects, and the one thing you'd fix about your studying. Two: watch lesson one of the Workshop Replay and do the priority map, even if you did it on Saturday. Three: post your first problem in the Hot Seat before Wednesday.
 >
 > That's it. Get stuck in. I'll see you Tuesday at 7.
 
@@ -39,11 +39,11 @@ Course description:
 
 > Two live sessions a week, six categories, one habit.
 >
-> **Tuesday 7pm to 9pm. Teaching + Hot Seat.** Hour one I teach one method. Hour two you bring your problem. Post it in 🔥 Hot Seat before 6pm on Tuesday: one post, one problem, as specific as you can ("I can't get past 6/10 on 6 mark Biology questions" beats "Biology is hard").
+> **Wednesday 7pm to 9pm. Teaching + Hot Seat.** Hour one I teach one method. Hour two you bring your problem. Post it in 🔥 Hot Seat before 6pm on Wednesday: one post, one problem, as specific as you can ("I can't get past 6/10 on 6 mark Biology questions" beats "Biology is hard").
 >
-> **Saturday 2pm to 4pm. The Marks Clinic.** Upload the work you want me to look at in 🩺 Marks Clinic by Friday 6pm: a photo or PDF of a marked paper, an essay, a plan. I take four to six on screen, then we do a timed section together.
+> **Sunday 10am to 12pm. The Marks Clinic.** Upload the work you want me to look at in 🩺 Marks Clinic by Saturday 6pm: a photo or PDF of a marked paper, an essay, a plan. I take four to six on screen, then we do a timed section together.
 >
-> **Every session is recorded** and lands in the Classroom the same night: Method Library for Tuesdays, Marks Clinic Replays for Saturdays.
+> **Every session is recorded** and lands in the Classroom the same night: Method Library for Wednesdays, Marks Clinic Replays for Sundays.
 >
 > 🗓️ Weekly Plans: Monday you post your plan, Sunday you post how it went. 🏆 Wins: post them, we celebrate properly. 💬 General: anything sixth form. 📌 Start Here: you're in it.
 >
@@ -57,10 +57,10 @@ Course description:
 >
 > 1. Introduce yourself in Start Here (year, subjects, the one thing you'd fix)
 > 2. Watch lesson 1 of the Workshop Replay and finish your priority map
-> 3. Post one specific problem in Hot Seat before Tuesday 6pm
+> 3. Post one specific problem in Hot Seat before Wednesday 6pm
 > 4. Come to Tuesday's session live if you can (7pm), or watch it that night
-> 5. Upload one piece of real work to Marks Clinic by Friday 6pm
-> 6. Come to Saturday's Clinic (2pm)
+> 5. Upload one piece of real work to Marks Clinic by Saturday 6pm
+> 6. Come to Sunday's Clinic (2pm)
 > 7. Sunday: post how the week went in Weekly Plans, and your plan for next week
 >
 > Do those seven and you'll know exactly what the Academy is by the end of the week. Which matters, because the 7 day guarantee runs for exactly that long (next module).
@@ -113,7 +113,7 @@ Trim the Zoom cloud recording into four clips at the chapter points (cut the fir
 
 > Learn it once so it sticks, instead of relearning the same topic three times before the exam. Close the notes, write what you know, hunt the gaps, fix them, then test again two days later.
 >
-> **Do this now:** pick the single topic that's worried you most this week and run the method on it tonight. Bring the result to Tuesday's Hot Seat.
+> **Do this now:** pick the single topic that's worried you most this week and run the method on it tonight. Bring the result to Wednesday's Hot Seat.
 
 ### Lesson 3: How to learn topics 80% faster
 
@@ -125,13 +125,13 @@ Trim the Zoom cloud recording into four clips at the chapter points (cut the fir
 
 > Every lost mark gets a line: what the question wanted, what you wrote, the exact gap, and the fix. Then you retest it. The habit that turns every mistake into a mark you keep.
 >
-> **Do this now:** take your last marked piece of work and log its three biggest lost marks. That's your first upload for Saturday's Marks Clinic.
+> **Do this now:** take your last marked piece of work and log its three biggest lost marks. That's your first upload for Sunday's Marks Clinic.
 
-## Course 3: Method Library (grows every Tuesday)
+## Course 3: Method Library (grows every Wednesday)
 
 Course description:
 
-> Every Tuesday teaching hour, recorded, in order. Hour two (the Hot Seat) sits under each one as a second video.
+> Every Wednesday teaching hour, recorded, in order. Hour two (the Hot Seat) sits under each one as a second video.
 
 Create one module per Tuesday after the session. Each module: the teaching video, the Hot Seat video, and three lines of text: the one idea, the one action for the week, and the timestamps of the Hot Seat problems. The first seven Tuesdays to Christmas (Waleed may reorder from what the room asks for):
 
@@ -145,10 +145,10 @@ Create one module per Tuesday after the session. Each module: the teaching video
 | 8 Dec | The Error Log | Never lose the same mark twice, as a weekly habit |
 | 15 Dec | Mocks: the two week plan | How to prepare for January mocks without the Christmas crash |
 
-## Course 4: Marks Clinic Replays (grows every Saturday)
+## Course 4: Marks Clinic Replays (grows every Sunday)
 
 Course description:
 
-> Every Saturday Marks Clinic, recorded. Watch other people's papers: it's the fastest way to spot your own patterns.
+> Every Sunday Marks Clinic, recorded. Watch other people's papers: it's the fastest way to spot your own patterns.
 
 One module per Saturday: the recording, then a list of the papers covered ("Biology 6 marker, 4/6; Chemistry calculation, 2/5; History essay plan") with timestamps, and the pattern of the week in one line.

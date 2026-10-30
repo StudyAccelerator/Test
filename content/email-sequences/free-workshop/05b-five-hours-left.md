@@ -1,9 +1,9 @@
 # W5b · Closes at midnight
 
-Send: Tuesday 3 November, 5pm UK (campaign to the workshop group)
-Subject A: {$name}, First Session In Two Hours
+Send: Saturday 7 November, 7pm UK (campaign to the workshop group)
+Subject A: {$name}, Five Hours Left At £100
 Subject B: {$name}, £100 Closes At Midnight Tonight
-Preheader: Join before 7pm and you're in tonight's session. The founding price ends at 11:59pm.
+Preheader: The founding price ends at 11:59pm tonight. First session Wednesday at 7pm.
 Goal: the last-hours email: two facts, one link.
 Links: 2 (the Academy page in body and PS)
 Written: 30 October 2026
@@ -12,9 +12,9 @@ Written: 30 October 2026
 
 Hi {$name},
 
-Two hours until the first Top 1% Academy session, and seven until the founding price closes.
+Five hours until the founding price closes.
 
-Tonight at 7pm I'm teaching the priority map properly, and then the first Hot Seat. If you join before 7pm, you're in the room tonight.
+On Wednesday at 7pm I'm teaching the RAG list and the priority map properly, and then the first Hot Seat. Join tonight and you're in that room.
 
 After 11:59pm tonight the price is £150 a month for everyone who joins later. If you join now, £100 is your price for as long as you stay.
 
@@ -22,10 +22,10 @@ After 11:59pm tonight the price is £150 a month for everyone who joins later. I
 
 You're covered by the 7 day money-back guarantee either way.
 
-Speak soon, hopefully at 7!
+Speak soon, hopefully on Wednesday!
 
 Kind regards,
 
 Waleed
 
-PS: If you're on the fence, come tonight. Join now, come to the session, and if it isn't for you, email me and you get every penny back. [Here's the page](https://alevelaccelerators.com/top-1-academy/).
+PS: If you're on the fence, join now and come on Wednesday. If it isn't for you, email me within 7 days and you get every penny back. [Here's the page](https://alevelaccelerators.com/top-1-academy/).

@@ -21,7 +21,7 @@ If you only rewatch one part, make it the priority map. It's the bit most people
 
 Then do the map for your own subjects, if you haven't already, and reply to this email with which subject came out on top. I read every reply and I'll tell you if I'd have put it there too.
 
-One more thing. The founding place in the Top 1% Academy, £100 a month instead of £150, locked for as long as you stay, closes on Tuesday night at 11:59pm. The first session is Tuesday at 7pm.
+One more thing. The founding place in the Top 1% Academy, £100 a month instead of £150, locked for as long as you stay, closes on Saturday 7 November at 11:59pm. The first session is Wednesday 11 November at 7pm.
 
 [LINK: Read about the Top 1% Academy -> https://alevelaccelerators.com/top-1-academy/]
 
@@ -31,4 +31,4 @@ Kind regards,
 
 Waleed
 
-PS: I'm on the ward today, so replies get answered this evening. If you already know you're in, [here's the page](https://alevelaccelerators.com/top-1-academy/), and I'll see you Tuesday at 7.
+PS: I'm on the ward today, so replies get answered this evening. If you already know you're in, [here's the page](https://alevelaccelerators.com/top-1-academy/), and I'll see you Wednesday the 11th at 7.

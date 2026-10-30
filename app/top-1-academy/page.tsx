@@ -18,7 +18,7 @@ const H2 = 'mt-3 font-serif text-3xl font-bold leading-tight tracking-tight text
 export const metadata: Metadata = {
   title: 'Top 1% Academy: weekly live coaching on how to study, with Dr Waleed',
   description:
-    'Two live sessions a week on Zoom with Dr Waleed Ahmad: Tuesday teaching and Hot Seat, Saturday Marks Clinic. Every session recorded. Monthly, cancel any time, 7 day money-back guarantee.',
+    'Two live sessions a week on Zoom with Dr Waleed Ahmad: Wednesday teaching and Hot Seat, Sunday Marks Clinic. Every session recorded. Monthly, cancel any time, 7 day money-back guarantee.',
   alternates: { canonical: 'https://alevelaccelerators.com/top-1-academy/' },
   robots: { index: false, follow: false },
   openGraph: {
@@ -80,7 +80,7 @@ export default function AcademyPage() {
         <section className="mt-16">
           <p className={EYEBROW}>Every week</p>
           <h2 className={H2}>
-            Two sessions. <span className="italic text-brand-gold">About 16 hours a month.</span>
+            Two sessions. <span className="italic text-brand-gold">16 hours a month.</span>
           </h2>
           <div className="mt-6 grid gap-4 sm:grid-cols-2">
             {ACADEMY.sessions.map((s) => (
@@ -94,7 +94,7 @@ export default function AcademyPage() {
             ))}
           </div>
           <p className="mt-4 text-sm leading-relaxed text-brand-text/60">
-            First sessions: {ACADEMY.firstTuesdayLabel} and {ACADEMY.firstSaturdayLabel}. Term time, UK time. Every
+            First sessions: {ACADEMY.firstSessionLabel} and {ACADEMY.firstClinicLabel}. Term time, UK time. Every
             session is recorded and in the library the same night.
           </p>
         </section>
@@ -123,7 +123,7 @@ export default function AcademyPage() {
                 <tr>
                   <td className="px-4 py-3 font-semibold text-brand-purple">Time with a teacher</td>
                   <td className="px-4 py-3">About 8 hours a month</td>
-                  <td className="px-4 py-3">About 16 hours a month, plus the replays</td>
+                  <td className="px-4 py-3">16 hours a month, plus the replays</td>
                 </tr>
                 <tr>
                   <td className="px-4 py-3 font-semibold text-brand-purple">Cost a month</td>
@@ -191,8 +191,8 @@ export default function AcademyPage() {
             What you&apos;re paying for, in plain words
           </h2>
           <p className="mt-4 leading-relaxed text-brand-text/80">
-            Two live group sessions a week with Dr Waleed, recorded, plus a private community where every question is
-            answered in public. It teaches how to study and how to perform in exams, across every subject your child
+            Two live group sessions a week with Dr Waleed, recorded, plus 24/7 access to him in the private community,
+            where every question is answered in public the same day. It teaches how to study and how to perform in exams, across every subject your child
             takes. It is not subject tutoring and there are no private messages between members and the teacher.
           </p>
           <p className="mt-3 leading-relaxed text-brand-text/80">

@@ -2,7 +2,7 @@
 
 Written 26 October 2026 for the founding cohort from the KCL workshop (Saturday 31 October). Work top to bottom with skool.com open. Budget one sitting of about 60 minutes for the group, plus 20 minutes in Stripe (file 04) and 10 minutes in Zoom. Nothing here needs you to write a word yourself.
 
-Decisions this file is built on (all Waleed's, 23 to 25 October 2026): two live sessions a week on Zoom (Tuesday 7pm to 9pm: one hour of teaching then one hour of Hot Seat; Saturday 2pm to 4pm: The Marks Clinic), £100 a month for the founding cohort then £150 a month, the founding price closes Tuesday 3 November at 11:59pm, first session Tuesday 3 November, 7-day money-back guarantee, name Top 1% Academy, tagline "Weekly live coaching on how to study, with Dr Waleed".
+Decisions this file is built on (all Waleed's, 23 to 25 October 2026): two live sessions a week on Zoom (Wednesday 7pm to 9pm: one hour of teaching then one hour of Hot Seat; Sunday 10am to 12pm: The Marks Clinic), £100 a month for the founding cohort then £150 a month, the founding price closes Wednesday 11 November at 11:59pm, first session Wednesday 11 November, 7-day money-back guarantee, name Top 1% Academy, tagline "Weekly live coaching on how to study, with Dr Waleed".
 
 ## 0. Account, plan and the billing decision
 
@@ -39,8 +39,8 @@ Paste as the group description. The About page can carry a video at the top: the
 >
 > **What happens inside, every week:**
 >
-> - **Tuesday, 7pm to 9pm.** Hour one, I teach one part of the study system properly, with a worked example from a real subject. Hour two is the Hot Seat: you bring your specific problem and we fix it live.
-> - **Saturday, 2pm to 4pm. The Marks Clinic.** You send in real work before the session, a marked essay, a timed paper, a week plan, and I go through it on screen. Everyone learns from every paper.
+> - **Wednesday, 7pm to 9pm.** Hour one, I teach one part of the study system properly, with a worked example from a real subject. Hour two is the Hot Seat: you bring your specific problem and we fix it live.
+> - **Sunday, 10am to 12pm. The Marks Clinic.** You send in real work before the session, a marked essay, a timed paper, a week plan, and I go through it on screen. Everyone learns from every paper.
 > - **Every session recorded** and in the Classroom the same night, so a missed session is never a lost one.
 > - **Ask me anything in the feed.** I answer in public so everyone gets the benefit.
 > - **The Workshop Replay** as your Start Here course, split into four lessons.
@@ -68,8 +68,8 @@ Rename the default and add until you have these six. Admin-only posting where ma
 | Category | Emoji | Description line | Posting |
 | --- | --- | --- | --- |
 | Start Here | 📌 | New? Watch the welcome, read the pinned post, introduce yourself. | Admin only |
-| Hot Seat | 🔥 | Post the problem you want fixed in Tuesday's Hot Seat. One post, one problem, as specific as you can. | Everyone |
-| Marks Clinic | 🩺 | Upload the work you want me to go through on Saturday (a photo or PDF of a marked paper, essay or plan) by Friday 6pm. | Everyone |
+| Hot Seat | 🔥 | Post the problem you want fixed in Wednesday's Hot Seat. One post, one problem, as specific as you can. | Everyone |
+| Marks Clinic | 🩺 | Upload the work you want me to go through on Saturday (a photo or PDF of a marked paper, essay or plan) by Saturday 6pm. | Everyone |
 | Weekly Plans | 🗓️ | Monday: post your plan for the week. Sunday: post how it went. This habit is the whole system. | Everyone |
 | Wins | 🏆 | Beat a past paper score? Moved a topic from Struggling to Solid? Post it. We celebrate properly. | Everyone |
 | General | 💬 | Anything sixth form. Keep it useful, keep it kind. | Everyone |
@@ -98,8 +98,8 @@ Create the two Zoom meetings first (section 8), then these events with the join 
 
 | Event | When | Description |
 | --- | --- | --- |
-| Tuesday Session: Teaching + Hot Seat | Every Tuesday 7pm to 9pm, first one **Tuesday 3 November** | Hour one: this week's method, taught properly with a worked example. Hour two: the Hot Seat. Post your problem in the Hot Seat category before 6pm and I'll take as many as the hour allows. Recorded. Zoom: [link] |
-| The Marks Clinic | Every Saturday 2pm to 4pm, first one **Saturday 7 November** | Bring your paper. Upload the work you want me to go through to the Marks Clinic category by Friday 6pm: a marked essay, a timed paper, a week plan. I go through four to six on screen, then we do a live timed section together. Recorded. Zoom: [link] |
+| Wednesday Session: Teaching + Hot Seat | Every Wednesday 7pm to 9pm, first one **Wednesday 11 November** | Hour one: this week's method, taught properly with a worked example. Hour two: the Hot Seat. Post your problem in the Hot Seat category before 6pm and I'll take as many as the hour allows. Recorded. Zoom: [link] |
+| The Marks Clinic | Every Sunday 10am to 12pm, first one **Sunday 15 November** | Bring your paper. Upload the work you want me to go through to the Marks Clinic category by Saturday 6pm: a marked essay, a timed paper, a week plan. I go through four to six on screen, then we do a live timed section together. Recorded. Zoom: [link] |
 
 Term time only. Holiday weeks are announced in the feed a week ahead and never cancelled silently: if a shift breaks a session, it moves or ships as a recorded teach, and the feed says so the same day.
 
@@ -116,7 +116,7 @@ Paste into the rules section; they also live in the pinned welcome post (file 03
 
 ## 8. Zoom: two recurring meetings
 
-In Zoom (Meetings, Schedule, Recurring meeting, weekly, no fixed end date): "Top 1% Academy: Tuesday Session" at 19:00 for 120 minutes, and "Top 1% Academy: The Marks Clinic" at 14:00 Saturdays for 120 minutes. Settings on both: mute on entry, waiting room off, allow join before host (10 minutes), **cloud recording ON** (the recording is the Classroom module), screen share host only, chat on. A Pro plan holds 100 participants, which covers the founding cohort; check the cap before the group passes 90.
+In Zoom (Meetings, Schedule, Recurring meeting, weekly, no fixed end date): "Top 1% Academy: Wednesday Session" at 19:00 for 120 minutes, and "Top 1% Academy: The Marks Clinic" at 14:00 Saturdays for 120 minutes. Settings on both: mute on entry, waiting room off, allow join before host (10 minutes), **cloud recording ON** (the recording is the Classroom module), screen share host only, chat on. A Pro plan holds 100 participants, which covers the founding cohort; check the cap before the group passes 90.
 
 Paste both join links into the two calendar events (section 6), the welcome email (`content/email-sequences/top-1-academy/00-welcome.md`), and `lib/academy.ts` on the site is not needed (the page never shows Zoom links; members get them inside).
 

@@ -1,8 +1,10 @@
 # Top 1% Academy: the Skool pack (26 October 2026)
 
+**Schedule change, 30 October 2026 (Waleed):** sessions are now **Wednesday 7pm to 9pm** (teaching, then the Hot Seat) and **Sunday 10am to 12pm** (The Marks Clinic); first session **Wednesday 11 November**, first Clinic **Sunday 15 November** (he is on nights the weekend of 7 and 8 November); the founding price closes **Saturday 7 November at 11:59pm**, one week after the workshop, no cap on places; the community is sold as 24/7 access to Dr Waleed with same-day replies; founding members also get his grade guarantee (six months, free until they get the grades for their offer). Any Tuesday/Saturday/3 November wording left in these files is stale and this note wins.
+
 The live play. Supersedes the August "Top 1% A-Levels" free-community plan in the parent folder (kept for its posts, parent letter and June play, which this pack reuses). Everything needed to open the Skool community for the founding cohort from the 31 October workshop, bill it, fill it and run it.
 
-Decisions (Waleed, 23 to 25 October 2026): name Top 1% Academy, tagline "Weekly live coaching on how to study, with Dr Waleed"; Tuesday 7pm to 9pm (teaching, then the Hot Seat), Saturday 2pm to 4pm (The Marks Clinic); £100 a month founding (closes Tuesday 3 November 11:59pm, locked while they stay) then £150; 7-day money-back guarantee; first session Tuesday 3 November.
+Decisions (Waleed, 23 to 25 October 2026): name Top 1% Academy, tagline "Weekly live coaching on how to study, with Dr Waleed"; Wednesday 7pm to 9pm (teaching, then the Hot Seat), Sunday 10am to 12pm (The Marks Clinic); £100 a month founding (closes Wednesday 11 November 11:59pm, locked while they stay) then £150; 7-day money-back guarantee; first session Wednesday 11 November.
 
 Decision made in this pack (26 October, for Waleed to confirm by using it): **bill in pounds through his own Stripe, not through Skool**, because Skool charges members in US dollars only. Skool stays a private, approval-only group on the $9 Hobby plan. Full reasoning in file 04.
 

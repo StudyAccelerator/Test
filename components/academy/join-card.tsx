@@ -12,10 +12,10 @@ import { ACADEMY, foundingOpen } from '@/lib/academy'
    dead link. */
 
 const INCLUDED = [
-  'Tuesday 7pm to 9pm: one hour of teaching, one hour of Hot Seat',
-  'Saturday 2pm to 4pm: The Marks Clinic, your real work on screen',
+  'Wednesday 7pm to 9pm: one hour of teaching, one hour of Hot Seat',
+  'Sunday 10am to 12pm: The Marks Clinic, your real work on screen',
   'Every session recorded and in the library the same night',
-  'Ask Dr Waleed anything in the community, answered in public',
+  '24/7 access to Dr Waleed in the community, replies the same day',
   'The Workshop Replay as your Start Here course',
 ]
 
@@ -53,7 +53,7 @@ export default function JoinCard({ compact = false }: { compact?: boolean }) {
         <p className="mt-3 leading-relaxed text-brand-cream/80">
           {founding
             ? `Join from the workshop and £${ACADEMY.foundingPrice} a month is your price for as long as you stay, even after it rises to £${ACADEMY.standardPrice}.`
-            : 'Monthly, cancel any time. Your first live session is the next Tuesday after you join.'}
+            : 'Monthly, cancel any time. Your first live session is the next Wednesday after you join.'}
         </p>
 
         {!compact && (
@@ -86,6 +86,7 @@ export default function JoinCard({ compact = false }: { compact?: boolean }) {
             {ACADEMY.guaranteeDays}{' '}day money-back guarantee. Come to your first week of sessions, and if it isn&apos;t
             for you, email Dr Waleed and you get every penny back.
           </p>
+          {founding && <p className="mt-2 text-center text-sm text-brand-gold/90">{ACADEMY.gradeGuarantee}</p>}
         </div>
       </div>
     </div>

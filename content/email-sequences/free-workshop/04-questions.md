@@ -33,16 +33,16 @@ Year 12 is the ideal time to start, but your mocks and your real papers are exac
 **My parents want to know what they're paying for**
 There's a short section on the page written for them.
 
-In one line: two live sessions a week with me, recorded, about 16 hours a month, for less than most families pay one tutor for one subject.
+In one line: two live sessions a week with me, recorded, 16 hours a month, plus 24/7 access to me in the community.
+
+All of that for less than most families pay one tutor for one subject.
 
 **What if it isn't for me?**
 Come to your first week of sessions. If it isn't for you, email me within 7 days and you get every penny back.
 
 After that it's monthly and you can cancel any time, with no notice period.
 
-The founding price of £100 a month closes tomorrow night at 11:59pm, and the first session is tomorrow at 7pm.
-
-If you join before then, you're in that session.
+The founding price of £100 a month closes on Saturday night at 11:59pm, and the first session is Wednesday 11 November at 7pm.
 
 [LINK: Take your founding place in the Top 1% Academy -> https://alevelaccelerators.com/top-1-academy/]
 
@@ -54,4 +54,4 @@ Kind regards,
 
 Waleed
 
-PS: I'm working tomorrow, so I'll be running straight from the ward to the first session at 7pm, haha. [Here's the page](https://alevelaccelerators.com/top-1-academy/) if you'd like to be in it.
+PS: I'm on nights this weekend, which is exactly why the first session is the Wednesday after, haha. [Here's the page](https://alevelaccelerators.com/top-1-academy/) if you'd like to be in it.

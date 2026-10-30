@@ -29,7 +29,7 @@ If you ever prefer Skool's native billing (members never leave Skool, upgrades a
 3. **Paste the two links** into `lib/academy.ts` (`stripeFoundingUrl`, `stripeStandardUrl`) and have a session deploy the page. The page shows the founding price until the deadline passes, then the standard one.
 4. **Customer portal ON** (Settings, Billing, Customer portal) so a member can cancel from the link in their receipt without emailing you. Allow cancellation at period end; no plan switching.
 5. **Email receipts ON**, and your own notification for successful payments ON, because that email is your cue to approve the member (section 3).
-6. **Tuesday 3 November, 11:59pm:** deactivate the £100 payment link in Stripe (Payment links, the link, Deactivate). The page flips to £150 on its own from `foundingDeadlineISO`. Existing founding members keep £100 for as long as they stay: Stripe never changes a live subscription's price unless you do.
+6. **Wednesday 11 November, 11:59pm:** deactivate the £100 payment link in Stripe (Payment links, the link, Deactivate). The page flips to £150 on its own from `foundingDeadlineISO`. Existing founding members keep £100 for as long as they stay: Stripe never changes a live subscription's price unless you do.
 
 ## 3. The join flow, member by member
 

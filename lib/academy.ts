@@ -23,33 +23,39 @@ export const ACADEMY = {
 
   foundingPrice: 100,
   standardPrice: 150,
-  /* The founding price closes 48 to 72 hours after the 31 October workshop
-     (Waleed, 25 October): end of Tuesday 3 November, UK time (GMT). After
-     this instant the page shows the standard price and link. */
-  foundingDeadlineISO: '2026-11-03T23:59:59+00:00',
-  foundingDeadlineLabel: 'Tuesday 3 November at 11:59pm',
+  /* The founding price runs for one week after the 31 October workshop
+     (Waleed, 30 October): end of Saturday 7 November, UK time (GMT). After
+     this instant the page shows the standard price and link. Sessions moved
+     the same day to Wednesday 7pm to 9pm and Sunday 10am to 12pm, first
+     session Wednesday 11 November (he is on nights the weekend of 7 and 8). */
+  foundingDeadlineISO: '2026-11-07T23:59:59+00:00',
+  foundingDeadlineLabel: 'Saturday 7 November at 11:59pm',
 
-  firstTuesdayLabel: 'Tuesday 3 November',
-  firstSaturdayLabel: 'Saturday 7 November',
+  firstSessionLabel: 'Wednesday 11 November',
+  firstClinicLabel: 'Sunday 15 November',
 
   sessions: [
     {
-      day: 'Tuesday',
+      day: 'Wednesday',
       time: '7pm to 9pm',
       name: 'Teaching + Hot Seat',
       body:
         'Hour one, Dr Waleed teaches one part of the study system properly, with a worked example from a real subject. Hour two is the Hot Seat: you bring your specific problem and it gets fixed live.',
     },
     {
-      day: 'Saturday',
-      time: '2pm to 4pm',
+      day: 'Sunday',
+      time: '10am to 12pm',
       name: 'The Marks Clinic',
       body:
-        'Bring your paper. Upload a piece of real marked work before the weekend, a timed paper, an essay, a week plan, and Dr Waleed goes through it on screen. Everyone learns from every paper.',
+        'Bring your paper. Upload a piece of real marked work by Saturday evening, a timed paper, an essay, a week plan, and Dr Waleed goes through it on screen. Everyone learns from every paper.',
     },
   ],
 
   guaranteeDays: 7,
+  /* Waleed's second guarantee for the founding cohort (30 October 2026),
+     in his words. Terms beyond this line are his to define. */
+  gradeGuarantee:
+    'Founding members also get the grade guarantee: work with Dr Waleed for six months, and if you do not get the grades you need for your university offer, he keeps working with you for free until you do.',
   contactEmail: 'waleed@alevelaccelerators.com',
 
   /* Waleed pastes these in. Empty is handled by the page. */

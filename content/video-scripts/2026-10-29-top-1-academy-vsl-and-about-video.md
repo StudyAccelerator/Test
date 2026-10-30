@@ -49,15 +49,15 @@ Target: 7 to 8 minutes. Spoken track about 1,550 words. Record in one take if yo
 
 > Okay, so what is the Academy. It's two live sessions a week with me on Zoom. Every single one is recorded. And between the sessions there's a community where I answer every question in public. Let me walk you through a week.
 
-**Slide 6. Tuesday**
+**Slide 6. Wednesday**
 
-> Tuesday, seven till nine. The first hour, I teach. One part of the study system, properly, with a worked example from a real subject. So one week it's how to revise a topic so it actually sticks. The next week it's how to read a mark scheme like an examiner.
+> Wednesday, seven till nine. The first hour, I teach. One part of the study system, properly, with a worked example from a real subject. So one week it's how to revise a topic so it actually sticks. The next week it's how to read a mark scheme like an examiner.
 >
 > And then the second hour is the Hot Seat. This is my favourite bit. You post your problem before the session. Your actual problem. "I can't get past six out of ten on the six markers in Biology." Or "Chemistry's my weakest subject but my Maths mock is in three weeks, which wins?" And we fix it live, in front of everyone. Because the student watching has usually got the exact same problem, right?
 
-**Slide 7. Saturday, The Marks Clinic**
+**Slide 7. Sunday, The Marks Clinic**
 
-> Saturday, two till four, is The Marks Clinic. And this is the thing you can't get from a recording or a textbook.
+> Sunday, ten till twelve, is The Marks Clinic. And this is the thing you can't get from a recording or a textbook.
 >
 > You upload a piece of real work before the weekend. A timed paper you got marked. An essay. Your week plan. And I go through it on screen. Where did the marks go, what did the examiner actually want, what do you change next time.
 >
@@ -65,7 +65,7 @@ Target: 7 to 8 minutes. Spoken track about 1,550 words. Record in one take if yo
 
 **Slide 8. Between sessions**
 
-> Between the sessions you've got the community. Ask me anything, I answer in public so everyone gets the benefit. Every session goes into the replay library the same night, so if you miss one you've lost nothing. And your Start Here course is the free workshop, split into four lessons, so you can go back through it at your own pace.
+> Between the sessions you've got 24/7 access to me in the community. Message me any time, I reply the same day, and I answer in public so everyone gets the benefit. Every session goes into the replay library the same night, so if you miss one you've lost nothing. And your Start Here course is the free workshop, split into four lessons, so you can go back through it at your own pace.
 
 **Slide 9. Who it's for**
 
@@ -100,12 +100,12 @@ Target: 7 to 8 minutes. Spoken track about 1,550 words. Record in one take if yo
 **[A: founding]**
 > So here's what the Academy costs. The standard price is a hundred and fifty pounds a month. But because you came to the workshop, and because you're one of the first people in, your price is a hundred pounds a month. And that stays your price for as long as you stay a member. Even once everyone else is paying a hundred and fifty.
 >
-> That's about sixteen hours a month with me, on every subject you take, for a hundred pounds. Work that out and it's about six pounds an hour. Compare that to fifty.
+> That's sixteen hours a month with me, on every subject you take, for a hundred pounds. Work that out and it's about six pounds an hour. Compare that to fifty.
 >
-> The founding price closes on Tuesday the third of November at midnight. Not because I'm trying to rush you. It's because the first session is that Tuesday at seven, and I want the founding group in the room from day one.
+> The founding price closes on Saturday the seventh of November at midnight. That gives you a week. The first session is Wednesday the eleventh at seven, and I want the founding group in the room from day one.
 
 **[B: standard]**
-> So here's what the Academy costs. A hundred and fifty pounds a month. That's about sixteen hours a month with me, on every subject you take. Work that out and it's under ten pounds an hour. Compare that to fifty.
+> So here's what the Academy costs. A hundred and fifty pounds a month. That's sixteen hours a month with me, on every subject you take. Work that out and it's under ten pounds an hour. Compare that to fifty.
 >
 > It's monthly, and you can cancel any time. No contract, no notice period.
 
@@ -115,7 +115,7 @@ Target: 7 to 8 minutes. Spoken track about 1,550 words. Record in one take if yo
 >
 > The first one's on the screen. Join, come to your first week of sessions, and if it isn't for you, email me within seven days and you get every penny back. No questions asked.
 >
-> [The second guarantee, spoken, not on the slide.] The second one I'm just gonna say to you. If you work with us properly for six months, and you don't get the grades you need for your university offer, we keep working with you for free until you do. [Waleed to settle the exact terms before filming: what "properly" means, and whether "until you do" means until results day or until the resit. See the note at the end.]
+> [A: founding] The second one is for founding members. If you work with me for six months, and you don't get the grades you need for your university offer, I keep working with you for free until you do. [Waleed to settle the exact terms before filming: see the note at the end.]
 >
 > And the reason I can offer that is simple. I'm that confident. Ninety six percent of my students get their first choice. So worst case, if you're in the four percent who don't, you've lost nothing, and I'm still with you.
 
@@ -123,19 +123,19 @@ Target: 7 to 8 minutes. Spoken track about 1,550 words. Record in one take if yo
 
 > So here's how you join. Go to alevelaccelerators.com slash top-1-academy. The link's under this video. Join. Then you'll be sent to the community, and you request access with the same email you paid with. I let you in the same day, usually within the hour.
 >
-> And then you've got three jobs. Introduce yourself in Start Here. Finish your priority map from the workshop. And post your first problem in the Hot Seat before Tuesday. Do those three and you'll get more out of your first week than most people get out of a term.
+> And then you've got three jobs. Introduce yourself in Start Here. Finish your priority map from the workshop. And post your first problem in the Hot Seat before Wednesday. Do those three and you'll get more out of your first week than most people get out of a term.
 
 **Slide 16. Close**
 
 **[A: founding]**
-> That's it. A hundred pounds a month, locked, closes Tuesday at midnight. First session Tuesday at seven. If you've got a question I haven't answered, reply to the email that sent you here and I'll answer it personally.
+> That's it. A hundred pounds a month, locked, closes Saturday at midnight. First session Wednesday the eleventh at seven. If you've got a question I haven't answered, reply to the email that sent you here and I'll answer it personally.
 >
-> I'll see you Tuesday at seven.
+> I'll see you Wednesday at seven.
 
 **[B: standard]**
-> That's it. A hundred and fifty pounds a month, cancel any time, seven day guarantee. Your first session is the next Tuesday after you join. If you've got a question I haven't answered, email me, the address is on the page, and I'll answer it personally.
+> That's it. A hundred and fifty pounds a month, cancel any time, seven day guarantee. Your first session is the next Wednesday after you join. If you've got a question I haven't answered, email me, the address is on the page, and I'll answer it personally.
 >
-> I'll see you Tuesday at seven.
+> I'll see you Wednesday at seven.
 
 ---
 
@@ -151,25 +151,25 @@ Target: about 2 minutes. Spoken track about 400 words. Film on your phone, strai
 >
 > Here's what to expect.
 >
-> Tuesday, seven till nine. First hour I teach one part of the system properly. Second hour is the Hot Seat. You post your actual problem before the session, and we fix it live.
+> Wednesday, seven till nine. First hour I teach one part of the system properly. Second hour is the Hot Seat. You post your actual problem before the session, and we fix it live.
 >
-> Saturday, two till four, is The Marks Clinic. You upload a real piece of marked work by Friday. A paper, an essay, your week plan. And I go through it on screen. You'll learn as much from everyone else's paper as your own, I promise.
+> Sunday, ten till twelve, is The Marks Clinic. You upload a real piece of marked work by Friday. A paper, an essay, your week plan. And I go through it on screen. You'll learn as much from everyone else's paper as your own, I promise.
 >
 > Everything's recorded and in the Classroom the same night. So if you miss one, you've lost nothing.
 >
 > And in between, you ask me anything in the feed. I answer in public, so everyone gets the benefit. One rule on that. I don't coach in DMs. If you message me privately, I'll point you back to the feed. That's not me being cold. A public answer helps the whole Academy instead of one person.
 >
-> Now, what I need from you. This isn't a course you watch. It's a room you show up to. So three things when you get in. Introduce yourself in Start Here. Watch lesson one of the Workshop Replay and do your priority map. And post your first problem in the Hot Seat before Tuesday.
+> Now, what I need from you. This isn't a course you watch. It's a room you show up to. So three things when you get in. Introduce yourself in Start Here. Watch lesson one of the Workshop Replay and do your priority map. And post your first problem in the Hot Seat before Wednesday.
 >
 > And if you're still deciding, here's the deal. Join, come to your first week, and if it's not for you, email me within seven days and you get every penny back.
 >
-> That's it. Get stuck in. I'll see you Tuesday at seven.
+> That's it. Get stuck in. I'll see you Wednesday at seven.
 
 ---
 
 ## Before filming
 
 1. **The second guarantee needs its terms fixed.** Decide "six months" from when (joining date), what counts as working with us properly (attendance, Clinic uploads), which offer counts (the firm choice at the time), and what free means (membership continues free until results day, or until the resit). Students will repeat it to parents word for word, and some parents will ask for it in writing before paying. Have a one-line version ready to send.
-2. **Tutor maths:** £50 an hour x 2 hours a week x 4 weeks = £400 a month for one subject. Two or three subjects = £800 to £1,200. Academy: about 16 hours a month, £100 is about £6 an hour, £150 is under £10 an hour. These are the figures on the slides; keep the spoken ones matching.
+2. **Tutor maths:** £50 an hour x 2 hours a week x 4 weeks = £400 a month for one subject. Two or three subjects = £800 to £1,200. Academy: 16 hours a month, £100 is about £6 an hour, £150 is under £10 an hour. These are the figures on the slides; keep the spoken ones matching.
 3. **Word counts:** VSL about 1,550 spoken words (about 7.5 minutes at his rate); About video about 400 words (about 2 minutes).
 4. Read each script aloud once and cut anything your mouth trips on.

@@ -9,20 +9,20 @@ Title: `Start here: welcome to the Top 1% Academy`
 > Welcome in. You're one of the founding members, which means two things: you pay £100 a month for as long as you stay, and you get to shape how this runs.
 >
 > **Every week:**
-> 🔥 Tuesday 7pm to 9pm: I teach one method for an hour, then the Hot Seat, where you bring your actual problem and we fix it live. Post your problem in the Hot Seat category before 6pm on Tuesday.
-> 🩺 Saturday 2pm to 4pm: The Marks Clinic. Upload a piece of real work to the Marks Clinic category by Friday 6pm and I'll go through it on screen.
+> 🔥 Wednesday 7pm to 9pm: I teach one method for an hour, then the Hot Seat, where you bring your actual problem and we fix it live. Post your problem in the Hot Seat category before 6pm on Wednesday.
+> 🩺 Sunday 10am to 12pm: The Marks Clinic. Upload a piece of real work to the Marks Clinic category by Saturday 6pm and I'll go through it on screen.
 > Both are recorded and in the Classroom the same night. Zoom links are in the Calendar tab.
 >
 > **Your first three jobs:**
 > 1. Reply to this post: your year, your subjects, and the one thing you'd fix about your studying tomorrow if you could.
 > 2. Watch lesson 1 of the Workshop Replay in the Classroom and finish your priority map.
-> 3. Post one specific problem in Hot Seat before Tuesday.
+> 3. Post one specific problem in Hot Seat before Wednesday.
 >
 > **The rules, short version:** real names, school-corridor standard, ask in public (I don't coach in DMs), what's shared here stays here, no selling. The full list is in the About tab.
 >
 > **The guarantee:** come to your first week of sessions, and if it isn't for you, email me within 7 days and you get every penny back.
 >
-> See you Tuesday at 7. Dr Waleed
+> See you Wednesday at 7. Dr Waleed
 
 ## Launch fortnight
 
@@ -36,7 +36,7 @@ Category: General. Title: `Who's here? Say hello`
 
 ### Monday 2 November
 
-Category: Hot Seat. Title: `Tuesday's Hot Seat is open: drop your problem here`
+Category: Hot Seat. Title: `Wednesday's Hot Seat is open: drop your problem here`
 
 > First Hot Seat is tomorrow at 8pm, straight after the teaching hour. One post each, one problem, as specific as you can manage.
 >
@@ -45,7 +45,7 @@ Category: Hot Seat. Title: `Tuesday's Hot Seat is open: drop your problem here`
 >
 > I'll take as many as the hour allows, in the order they land.
 
-### Tuesday 3 November, 5pm
+### Wednesday 11 November, 5pm
 
 Category: General. Title: `Live in two hours: the Priority Map, properly`
 
@@ -53,13 +53,13 @@ Category: General. Title: `Live in two hours: the Priority Map, properly`
 
 ### Wednesday 4 November
 
-Category: Marks Clinic. Title: `Saturday's Marks Clinic: upload your work by Friday 6pm`
+Category: Marks Clinic. Title: `Sunday's Marks Clinic: upload your work by Saturday 6pm`
 
 > First Clinic is Saturday at 2pm. Upload a photo or PDF of one piece of real, marked work below: a past paper question you lost marks on, an essay, a plan a teacher commented on. Tell me the subject, the mark you got, and what you think went wrong.
 >
 > I'll take four to six on screen. Don't tidy it up first. The messy ones teach everyone the most.
 
-### Saturday 7 November, 12pm
+### Sunday 15 November, 12pm
 
 Category: General. Title: `Marks Clinic at 2pm: who's on screen`
 
@@ -81,9 +81,9 @@ Category: Weekly Plans. Title: `Sunday Reset: how did week one go?`
 | Day | Category | Title | What it says |
 | --- | --- | --- | --- |
 | Monday 8am | Weekly Plans | `This week's plan: post yours` | Plan the week around the priority map. Deep sessions on the weakest subject, one evening empty on purpose. Photo of the plan or three lines. |
-| Monday 8am | Hot Seat | `Tuesday's Hot Seat is open` | One post, one problem, as specific as you can. Taken in order on Tuesday from 8pm. |
-| Tuesday 5pm | General | `Live at 7pm: <this week's method>` | What to have in front of you. Link in the Calendar tab. Recording tonight if you can't make it. |
-| Wednesday 6pm | Marks Clinic | `Saturday's Clinic: upload by Friday 6pm` | One piece of real marked work, subject, mark, what you think went wrong. |
+| Monday 8am | Hot Seat | `Wednesday's Hot Seat is open` | One post, one problem, as specific as you can. Taken in order on Wednesday from 8pm. |
+| Wednesday 5pm | General | `Live at 7pm: <this week's method>` | What to have in front of you. Link in the Calendar tab. Recording tonight if you can't make it. |
+| Wednesday 6pm | Marks Clinic | `Sunday's Clinic: upload by Saturday 6pm` | One piece of real marked work, subject, mark, what you think went wrong. |
 | Sunday 6pm | Weekly Plans | `Sunday Reset` | The three questions. Then build next week. |
 
 Plus the two recordings posted into the Classroom the same night as each session, with a one-line "it's up" post in General.
