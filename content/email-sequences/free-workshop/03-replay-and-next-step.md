@@ -32,7 +32,9 @@ Plan this week only, with your deep sessions on your weakest subject, and leave 
 Do those three and you're already ahead of most of your year.
 
 **What comes next**
-Today I taught you the system in 90 minutes. Knowing it and running it every week are two different things, which is exactly why I run the weekly version.
+Today I taught you the system in 90 minutes.
+
+Knowing it and running it every week are two different things, which is exactly why I run the weekly version.
 
 It's called the Top 1% Academy, and it's two live sessions with me every week on Zoom.
 
@@ -46,7 +48,9 @@ As a thank you for showing up today and taking your grades seriously, the foundi
 
 The founding price closes next Saturday, 7 November, at 11:59pm. The first session is Wednesday 11 November at 7pm.
 
-For comparison, one tutor for one subject at two hours a week costs most families £320 to £400 a month, and it only ever covers the content.
+For comparison, one tutor for one subject at two hours a week costs most families £320 to £400 a month.
+
+And it only ever covers the content of that one subject.
 
 The Academy is 16 hours a month with me, on how you study, across every subject you take.
 
