@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Skool classroom cover: The Method Library. 1460 x 752. Render:
+  chromium --headless=new --no-sandbox --screenshot=method-library.png --window-size=1460,752 --hide-scrollbars file://$PWD/method-library-src.html -->
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1460px;height:752px;overflow:hidden}
+body{background:linear-gradient(135deg,#2E2557 0%,#3d3370 100%);font-family:Georgia,'Times New Roman',serif;position:relative}
+.glow{position:absolute;top:-220px;left:520px;width:900px;height:560px;background:radial-gradient(ellipse,rgba(201,169,110,.20),transparent 70%)}
+.text{position:absolute;left:96px;top:0;bottom:0;width:560px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:#C9A96E;font-weight:700}
+h1{margin-top:22px;font-size:92px;line-height:1;color:#FBF8F3;font-weight:700}
+h1 em{color:#C9A96E}
+.sub{margin-top:26px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:26px;line-height:1.45;color:rgba(251,248,243,.82)}
+.shelf{position:absolute;right:80px;bottom:120px;display:flex;align-items:flex-end;gap:12px}
+.plank{position:absolute;right:56px;bottom:96px;width:720px;height:24px;background:#C9A96E;border-radius:4px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.book{width:92px;border-radius:6px 6px 2px 2px;display:flex;align-items:center;justify-content:center;box-shadow:inset -8px 0 0 rgba(0,0,0,.12),0 6px 18px rgba(0,0,0,.25);position:relative}
+.book span{writing-mode:vertical-rl;transform:rotate(180deg);font-family:'Helvetica Neue',Arial,sans-serif;font-weight:800;font-size:25px;letter-spacing:.04em;white-space:nowrap}
+.book::before,.book::after{content:'';position:absolute;left:12px;right:12px;height:3px;background:rgba(255,255,255,.35)}
+.book::before{top:22px}.book::after{bottom:22px}
+.lean{transform:rotate(8deg);transform-origin:bottom left;margin-left:6px}
+</style></head><body>
+<div class="glow"></div>
+<div class="text">
+  <div class="eyebrow">Every Wednesday · 7pm</div>
+  <h1>The Method <em>Library</em></h1>
+  <p class="sub">Every Wednesday lesson and Hot Seat, recorded and on the shelf the same night.</p>
+</div>
+<div class="plank"></div>
+<div class="shelf">
+  <div class="book" style="height:400px;background:#c94a4a;color:#fff"><span>RAG List</span></div>
+  <div class="book" style="height:440px;background:#e0a33a;color:#2E2557"><span>Blurt Cycle</span></div>
+  <div class="book" style="height:380px;background:#4f9a6a;color:#fff"><span>Strategy Stacking</span></div>
+  <div class="book" style="height:450px;background:#FBF8F3;color:#2E2557"><span>The Four Tiers</span></div>
+  <div class="book" style="height:410px;background:#C9A96E;color:#2E2557"><span>Mark Schemes</span></div>
+  <div class="book" style="height:395px;background:#6b5fb0;color:#fff"><span>Spaced Repetition</span></div>
+  <div class="book lean" style="height:360px;background:#8a3b57;color:#fff"><span>Marks per Minute</span></div>
+</div>
+</body></html>
