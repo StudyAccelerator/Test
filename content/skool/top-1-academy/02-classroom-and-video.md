@@ -39,7 +39,7 @@ Course description:
 
 > Two live sessions a week, six categories, one habit.
 >
-> **Wednesday 7pm to 9pm. Teaching + Hot Seat.** Hour one I teach one method. Hour two you bring your problem. Post it in 🔥 Hot Seat before 6pm on Wednesday: one post, one problem, as specific as you can ("I can't get past 6/10 on 6 mark Biology questions" beats "Biology is hard").
+> **Wednesday 7pm to 9pm. Study Academy + Hot Seat.** Hour one I teach one method. Hour two you bring your problem. Post it in 🔥 Hot Seat before 6pm on Wednesday: one post, one problem, as specific as you can ("I can't get past 6/10 on 6 mark Biology questions" beats "Biology is hard").
 >
 > **Sunday 10am to 12pm. The Marks Clinic.** Upload the work you want me to look at in 🩺 Marks Clinic by Saturday 6pm: a photo or PDF of a marked paper, an essay, a plan. I take four to six on screen, then we do a timed section together.
 >

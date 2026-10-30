@@ -38,7 +38,7 @@ export const ACADEMY = {
     {
       day: 'Wednesday',
       time: '7pm to 9pm',
-      name: 'Teaching + Hot Seat',
+      name: 'Study Academy + Hot Seat',
       body:
         'Hour one, Dr Waleed teaches one part of the study system properly, with a worked example from a real subject. Hour two is the Hot Seat: you bring your specific problem and it gets fixed live.',
     },
@@ -62,6 +62,9 @@ export const ACADEMY = {
   stripeFoundingUrl: '',
   stripeStandardUrl: '',
   skoolUrl: '',
+  /* The VSL embed (Loom share URL or an unlisted YouTube embed URL). Empty
+     shows the poster image with a play badge in its place. */
+  vslEmbedUrl: '',
 } as const
 
 /* True while the founding price is still open. Evaluated in the browser by

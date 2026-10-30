@@ -51,7 +51,7 @@ Target: 7 to 8 minutes. Spoken track about 1,550 words. Record in one take if yo
 
 **Slide 6. Wednesday**
 
-> Wednesday, seven till nine. The first hour, I teach. One part of the study system, properly, with a worked example from a real subject. So one week it's how to revise a topic so it actually sticks. The next week it's how to read a mark scheme like an examiner.
+> Wednesday, seven till nine. The first hour is the Study Academy. I teach one part of the study system, properly, with a worked example from a real subject. So one week it's how to revise a topic so it actually sticks. The next week it's how to read a mark scheme like an examiner.
 >
 > And then the second hour is the Hot Seat. This is my favourite bit. You post your problem before the session. Your actual problem. "I can't get past six out of ten on the six markers in Biology." Or "Chemistry's my weakest subject but my Maths mock is in three weeks, which wins?" And we fix it live, in front of everyone. Because the student watching has usually got the exact same problem, right?
 
@@ -151,7 +151,7 @@ Target: about 2 minutes. Spoken track about 400 words. Film on your phone, strai
 >
 > Here's what to expect.
 >
-> Wednesday, seven till nine. First hour I teach one part of the system properly. Second hour is the Hot Seat. You post your actual problem before the session, and we fix it live.
+> Wednesday, seven till nine. First hour is the Study Academy, where I teach one part of the system properly. Second hour is the Hot Seat. You post your actual problem before the session, and we fix it live.
 >
 > Sunday, ten till twelve, is The Marks Clinic. You upload a real piece of marked work by Friday. A paper, an essay, your week plan. And I go through it on screen. You'll learn as much from everyone else's paper as your own, I promise.
 >

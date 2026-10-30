@@ -25,7 +25,7 @@ This is where it all lives: the calendar, the replays, the Hot Seat and the Mark
 Use the same email you paid with, and I'll let you in the same day.
 
 **2. Your Zoom links**
-Wednesday, 7pm to 9pm, teaching then the Hot Seat: [Join the Wednesday session](https://ZOOM-WEDNESDAY-TBC)
+Wednesday, 7pm to 9pm, Study Academy, then the Hot Seat: [Join the Wednesday session](https://ZOOM-WEDNESDAY-TBC)
 
 Sunday, 10am to 12pm, The Marks Clinic: [Join the Marks Clinic](https://ZOOM-SUNDAY-TBC)
 

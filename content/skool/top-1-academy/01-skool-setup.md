@@ -98,7 +98,7 @@ Create the two Zoom meetings first (section 8), then these events with the join 
 
 | Event | When | Description |
 | --- | --- | --- |
-| Wednesday Session: Teaching + Hot Seat | Every Wednesday 7pm to 9pm, first one **Wednesday 11 November** | Hour one: this week's method, taught properly with a worked example. Hour two: the Hot Seat. Post your problem in the Hot Seat category before 6pm and I'll take as many as the hour allows. Recorded. Zoom: [link] |
+| Wednesday Session: Study Academy + Hot Seat | Every Wednesday 7pm to 9pm, first one **Wednesday 11 November** | Hour one: this week's method, taught properly with a worked example. Hour two: the Hot Seat. Post your problem in the Hot Seat category before 6pm and I'll take as many as the hour allows. Recorded. Zoom: [link] |
 | The Marks Clinic | Every Sunday 10am to 12pm, first one **Sunday 15 November** | Bring your paper. Upload the work you want me to go through to the Marks Clinic category by Saturday 6pm: a marked essay, a timed paper, a week plan. I go through four to six on screen, then we do a live timed section together. Recorded. Zoom: [link] |
 
 Term time only. Holiday weeks are announced in the feed a week ahead and never cancelled silently: if a shift breaks a session, it moves or ships as a recorded teach, and the feed says so the same day.
