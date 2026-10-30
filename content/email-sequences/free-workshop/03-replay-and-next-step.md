@@ -1,23 +1,20 @@
-# W3 · The replay, and the next step
+# W3 · What comes next (same evening)
 
-Send: The morning after the workshop (Sunday 1 November), 9am UK (campaign to the workshop group)
-Subject A: {$name}, Your Workshop Replay And What Comes Next
-Subject B: {$name}, The Replay, Plus Your Founding Place
-Preheader: The recording, the three things to do this week, and the door into working with me every week.
-Goal: deliver the replay to everyone (attended or not), restate the three actions, make the Top 1% Academy offer with the founding price and the Tuesday deadline.
-Links: 3 (replay, the Academy page, the Academy page again in PS)
-Note: Shape, prices and dates are Waleed's (25 October 2026): Tuesday 7pm to 9pm teaching plus Hot Seat, Saturday 2pm to 4pm The Marks Clinic, £100 a month founding then £150, closes Tuesday 3 November 11:59pm, 7 day money-back guarantee. Load as a DRAFT only once REPLAY-LINK-TBC is replaced with the Zoom recording link; schedule on his go.
-Written: 23 October 2026, rewritten 26 October 2026
+Send: Saturday 31 October, 6pm UK (campaign to the workshop group)
+Subject A: {$name}, Thank You For Today, And What Comes Next
+Subject B: {$name}, Your Founding Place In The Top 1% Academy
+Preheader: The three things to do this week, and the door into working with me every week. The replay lands tomorrow morning.
+Goal: same-evening offer while it's warm: restate the three actions, make the Top 1% Academy offer with the founding price and the Tuesday deadline. No replay link needed (it comes tomorrow in W3b).
+Links: 2 (the Academy page in body and PS)
+Written: 23 October 2026, rewritten 30 October 2026
 
 ---
 
 Hi {$name},
 
-Thank you for yesterday. The questions were brilliant, and a few of you clearly stayed up afterwards doing the priority map, which made my morning.
+Thank you for today. The questions were brilliant, and I could see a lot of you doing the priority map live, which made my afternoon.
 
-Here's the replay for anyone who missed it, or who wants to go through it again at their own pace.
-
-[BUTTON: Watch the workshop replay -> https://REPLAY-LINK-TBC]
+The replay lands in your inbox tomorrow morning, for anyone who missed it or wants to go through it again.
 
 **The three things to do this week**
 
@@ -35,7 +32,7 @@ Plan this week only, with your deep sessions on your weakest subject, and leave 
 Do those three and you're already ahead of most of your year.
 
 **What comes next**
-Yesterday I taught you the system in 90 minutes. Knowing it and running it every week are two different things, which is exactly why I run the weekly version.
+Today I taught you the system in 90 minutes. Knowing it and running it every week are two different things, which is exactly why I run the weekly version.
 
 It's called the Top 1% Academy, and it's two live sessions with me every week on Zoom.
 
@@ -45,7 +42,7 @@ Saturday, 2pm to 4pm, is The Marks Clinic. You send in a piece of real work, a m
 
 Every session is recorded and in the library the same night, so a clash never costs you anything.
 
-As a thank you for showing up yesterday and taking your grades seriously, the founding cohort from this workshop joins at £100 a month. That price stays yours for as long as you stay, even once it goes up to £150 for everyone else.
+As a thank you for showing up today and taking your grades seriously, the founding cohort from this workshop joins at £100 a month. That price stays yours for as long as you stay, even once it goes up to £150 for everyone else.
 
 The founding price closes on Tuesday night at 11:59pm, and the first session is Tuesday at 7pm.
 

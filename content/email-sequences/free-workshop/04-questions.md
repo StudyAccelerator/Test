@@ -13,7 +13,7 @@ Written: 26 October 2026
 
 Hi {$name},
 
-Since yesterday's email, the same five questions have come back from a lot of you, so here they are with straight answers.
+Since the workshop, the same five questions have come back from a lot of you, so here they are with straight answers.
 
 **What if I can't make a session?**
 Every session is recorded and in the library the same night.
