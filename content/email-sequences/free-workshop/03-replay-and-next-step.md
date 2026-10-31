@@ -72,7 +72,7 @@ As a doctor, I'd never treat a patient before I'd diagnosed them. Your grades wo
 
 **What the Top 1% Academy is, and who it's for**
 
-Today was one session. The Academy is that session every week for the rest of the year, with me, so the system gets built properly and applied to your actual subjects.
+Today was one session. The Academy is a new session every week for the rest of the year, with me. Each week builds the next part of the system and applies it to your actual subjects.
 
 Wednesday, 7pm to 9pm: one hour teaching the next part of the system, then the Hot Seat, where you bring your specific problem and we fix it live.
 
