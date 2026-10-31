@@ -54,7 +54,7 @@ export default function StickyJoinBar() {
             {founding ? `Founding price closes ${ACADEMY.foundingDeadlineLabel}` : 'Cancel any time'}
           </p>
         </div>
-        <JoinButton placement="sticky_bar" size="md" label="Join now" className="flex-none" />
+        <JoinButton placement="sticky_bar" size="md" to="pricing" label="Secure your place" className="flex-none" />
       </div>
     </div>
   )

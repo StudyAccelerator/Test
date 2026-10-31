@@ -31,18 +31,24 @@ export default function JoinButton({
   label,
   size = 'lg',
   tone = 'purple',
+  to = 'checkout',
   className = '',
 }: {
   placement: string
   label?: string
   size?: 'md' | 'lg' | 'xl'
   tone?: 'purple' | 'gold'
+  /* "pricing" scrolls to the price block (Waleed, 31 October: every button
+     above it reads "Secure your place now" and takes the reader down to the
+     offer); "checkout" is the Stripe link itself, used on the price card. */
+  to?: 'pricing' | 'checkout'
   className?: string
 }) {
   const founding = useFounding()
   const price = founding ? ACADEMY.foundingPrice : ACADEMY.standardPrice
-  const href = founding ? ACADEMY.stripeFoundingUrl : ACADEMY.stripeStandardUrl
-  const text = label ?? `Join the Top 1% Academy, £${price} a month`
+  const stripe = founding ? ACADEMY.stripeFoundingUrl : ACADEMY.stripeStandardUrl
+  const href = to === 'pricing' ? '#pricing' : stripe
+  const text = label ?? (to === 'pricing' ? 'Secure your place now' : founding ? 'Become a founding member' : `Join the Top 1% Academy, £${price} a month`)
 
   const sizes = {
     md: 'px-6 py-3 text-base',
@@ -60,7 +66,7 @@ export default function JoinButton({
       <p
         className={`inline-flex max-w-md items-center justify-center rounded-full border border-brand-gold/50 px-6 py-3 text-center text-sm font-semibold text-brand-purple ${className}`}
       >
-        Founding places open straight after the workshop. The join link lands in your email.
+        Membership opens again shortly. Email {ACADEMY.contactEmail} to join.
       </p>
     )
   }
@@ -70,7 +76,7 @@ export default function JoinButton({
       href={href}
       onClick={() => {
         try {
-          window.gtag?.('event', 'academy_join_click', { placement, founding: founding ? 'yes' : 'no', price })
+          window.gtag?.('event', 'academy_join_click', { placement, to, founding: founding ? 'yes' : 'no', price })
         } catch {}
       }}
       className={`inline-flex items-center justify-center rounded-full font-semibold transition-all hover:-translate-y-0.5 ${sizes} ${tones} ${className}`}

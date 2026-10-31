@@ -59,9 +59,9 @@ export const ACADEMY = {
   contactEmail: 'waleed@alevelaccelerators.com',
 
   /* Waleed pastes these in. Empty is handled by the page. */
-  stripeFoundingUrl: '',
+  stripeFoundingUrl: 'https://buy.stripe.com/5kQ5kEghQbe647obDec3m0h',
   stripeStandardUrl: '',
-  skoolUrl: '',
+  skoolUrl: 'https://www.skool.com/top-1-academy-7066/about',
   /* The VSL embed (Loom share URL or an unlisted YouTube embed URL). Empty
      shows the poster image with a play badge in its place. */
   vslEmbedUrl: '',

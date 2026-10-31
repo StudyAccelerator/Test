@@ -90,7 +90,7 @@ export default function PriceCard() {
           )}
 
           <div className="mt-8">
-            <JoinButton placement="price_card" size="xl" tone="gold" className="w-full" />
+            <JoinButton placement="price_card" size="xl" tone="gold" to="checkout" className="w-full" />
           </div>
           <p className="mt-4 text-center text-sm text-brand-cream/65">
             Secure checkout with Stripe. Monthly, cancel any time, no notice period.

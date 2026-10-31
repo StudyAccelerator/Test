@@ -54,6 +54,9 @@
   "functions": {
     "api/lead-alert.js": {
       "includeFiles": "lib/mailerlite.ts"
+    },
+    "api/academy-paid.js": {
+      "includeFiles": "lib/mailerlite.ts"
     }
   }
 }

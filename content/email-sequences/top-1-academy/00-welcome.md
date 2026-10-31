@@ -1,45 +1,49 @@
 # A0 · Welcome to the Top 1% Academy (instant, on joining the members group)
 
-Send: Instantly on joining group "Top 1% Academy members" (Waleed adds each paid member by hand after approving them in Skool; see content/skool/top-1-academy/04-billing-and-join-flow.md)
-Subject A: {$name}, You're In: Your Academy Links And First Three Jobs
+Send: Instantly on joining group "Top 1% Academy members" (202397742297777684). The group is fed by the Stripe webhook function `api/academy-paid.js` on every completed checkout, and by hand if that ever fails (add the paid email to the group in MailerLite).
+Subject A: {$name}, You're In: Here's How To Get Into The Top 1% Academy
 Subject B: {$name}, Welcome To The Top 1% Academy
-Preheader: The community link, both Zoom links, your first session, and the three things to do before Wednesday.
-Goal: deliver the community link and the two Zoom links, set the first session, give three jobs, restate the guarantee plainly.
-Links: 3 (the Skool group, the Wednesday Zoom, the Sunday Zoom; PS repeats the Skool group)
-Note: NOT loaded. The automation skeleton EXISTS and is OFF: "Academy: welcome (A0)" 202397778692801649, trigger = joins group "Top 1% Academy members" 202397742297777684, one email step (email_id 202397780374718124), manifest key academy-a0. Replace SKOOL-LINK-TBC, ZOOM-WEDNESDAY-TBC and ZOOM-SUNDAY-TBC once they exist, then `engine.py load academy-a0 --live`, `verify academy-a0`, and POST /automations/202397778692801649/enable.
-Written: 26 October 2026
+Preheader: Thank you for joining. The community link, what to expect each week, and the one thing to do right now.
+Goal: thank them, set what to expect, send them to the Skool community with the same email they paid with, promise access within 24 hours, restate both guarantees.
+Links: 2 (the Skool community in body and PS)
+Note: Waleed's brief, 31 October 2026. Loaded into automation 202397778692801649 "Academy: welcome (A0)" (manifest key academy-a0). Zoom links are deliberately not in this email: they live in the community calendar.
+Written: 31 October 2026
 
 ---
 
 Hi {$name},
 
-Welcome to the Top 1% Academy. You're a founding member, so your price is locked for as long as you stay, and you get a say in how this runs.
+Thank you for joining the Top 1% Academy, and well done. Most students know how they study isn't working and never do a thing about it. You just did.
 
-Here's everything you need.
+Here's what happens next.
 
-**1. The community**
-This is where it all lives: the calendar, the replays, the Hot Seat and the Marks Clinic. Message me in there any time, and I reply the same day.
+**1. Request access to the community**
+It all lives in the Top 1% Academy community: the calendar with the Zoom links, every replay, the Hot Seat and the Marks Clinic.
 
-[BUTTON: Request access to the Academy -> https://SKOOL-LINK-TBC]
+[BUTTON: Request access to the Top 1% Academy -> https://www.skool.com/top-1-academy-7066/about]
 
-Use the same email you paid with, and I'll let you in the same day.
+Sign up with the same email you paid with, so I can match you up. I let every member in myself, and you'll be in within 24 hours.
 
-**2. Your Zoom links**
-Wednesday, 7pm to 9pm, Study Academy, then the Hot Seat: [Join the Wednesday session](https://ZOOM-WEDNESDAY-TBC)
+If 24 hours pass and you're still waiting, reply to this email and I'll sort it straight away.
 
-Sunday, 10am to 12pm, The Marks Clinic: [Join the Marks Clinic](https://ZOOM-SUNDAY-TBC)
+**2. What to expect every week**
+Wednesday, 7pm to 9pm, is the Study Academy. For the first hour I teach one part of the study system properly. The second hour is the Hot Seat, where you bring your actual problem and we fix it live.
 
-Both links stay the same every week, and they're in the calendar too. Every session is recorded and in the library the same night.
+Sunday, 10am to 12pm, is The Marks Clinic. You upload a piece of real marked work by Saturday evening, and I go through it on screen.
 
-**3. Before Wednesday, three jobs**
-Say hello under the pinned post: your year, your subjects, and the one thing you'd fix about how you study.
+Every session is recorded and in the Method Library the same night, so a clash never costs you a thing. In between, message me any time and I'll reply the same day.
 
-Watch lesson one of the Workshop Replay in the Classroom and finish your priority map.
+**3. Your first three jobs once you're in**
+Say hello under the pinned post with your year, your subjects, and the one thing you'd fix about how you study.
 
-Post one real problem in the Hot Seat before Wednesday 6pm. The more exact it is, the more useful Wednesday is for you.
+Watch lesson one of the Workshop Replay in the Classroom and finish your RAG list.
 
-**The guarantee, in plain words**
+Post one real problem in the Hot Seat before Wednesday 6pm.
+
+**Your guarantees, in plain words**
 Come to your first week of sessions. If it isn't for you, reply to this email within 7 days and you get every penny back, no questions asked.
+
+And as a founding member, you have my grade guarantee too. Work with me for six months, and if you don't get the grades you need for your offer, I keep working with you for free until you do.
 
 Speak soon!
 
@@ -47,4 +51,4 @@ Kind regards,
 
 Waleed
 
-PS: Send this on to your parents, because they're welcome to sit in on any session. If the link gives you any trouble, reply here and I'll sort it between patients. [Here it is again](https://SKOOL-LINK-TBC).
+PS: Send this on to your parents, because they're welcome to sit in on any session. And if the community link gives you any trouble, reply here and I'll sort it between patients. [Here it is again](https://www.skool.com/top-1-academy-7066/about).

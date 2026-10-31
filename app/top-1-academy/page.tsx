@@ -98,7 +98,7 @@ const FAQ: [string, string][] = [
   ],
   [
     'Which years is it for?',
-    'Year 12 first, because this is the year to get the system right. Year 13 students are welcome, and the Clinic was built with your mocks and real papers in mind.',
+    'Any student who wants to improve their grades. Most members are in Year 12 and Year 13, but the earlier you build the system the longer it pays you back, so Year 10 and 11 students are very welcome, and the Marks Clinic works on any marked paper from any year.',
   ],
   [
     'What happens after I pay?',
@@ -139,21 +139,23 @@ export default function AcademyPage() {
           </HeroFade>
           <h1 className="mx-auto mt-5 max-w-4xl text-center font-serif text-4xl font-bold leading-[1.05] tracking-tight text-brand-purple sm:text-5xl lg:text-[4.25rem]">
             <HeroHeadline>
-              <HeroWord>Hard</HeroWord> <HeroWord>work</HeroWord> <HeroWord>isn&apos;t</HeroWord> <HeroWord>the</HeroWord>{' '}
-              <HeroWord>problem.</HeroWord> <HeroWord className="italic text-brand-gold">Your</HeroWord>{' '}
-              <HeroWord className="italic text-brand-gold">study</HeroWord>{' '}
-              <HeroWord className="italic text-brand-gold">system</HeroWord> <HeroWord>is.</HeroWord>
+              <HeroWord>Turn</HeroWord> <HeroWord>your</HeroWord> <HeroWord>knowledge</HeroWord> <HeroWord>into</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">marks</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">in</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">the</HeroWord>{' '}
+              <HeroWord className="italic text-brand-gold">exam.</HeroWord>
             </HeroHeadline>
           </h1>
           <HeroFade delay={0.45}>
             <p className="mx-auto mt-6 max-w-2xl text-center text-lg leading-relaxed text-brand-text/75 md:text-xl">
-              Weekly live coaching on how to study, with the NHS doctor who has taught the system to over 1,000
-              A-level students. Two live sessions a week, every one recorded, and 24/7 access to him in between.
+              Learn the study system I&apos;ve taught to over 1,000 students, who jump two grades on average within four
+              months. 96% of them get their first-choice university offer. Two live sessions a week with me, every one
+              recorded, and 24/7 access in between.
             </p>
           </HeroFade>
           <HeroFade delay={0.6}>
             <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <JoinButton placement="hero" />
+              <JoinButton placement="hero" to="pricing" />
               <a
                 href="#how"
                 className="inline-flex items-center justify-center rounded-full border border-brand-purple/20 bg-white px-7 py-4 text-lg font-semibold text-brand-purple transition hover:border-brand-gold"
@@ -248,7 +250,7 @@ export default function AcademyPage() {
               subject you take.
             </p>
             <div className="mt-8">
-              <JoinButton placement="tiers" />
+              <JoinButton placement="tiers" to="pricing" />
             </div>
           </div>
         </section>
@@ -269,7 +271,7 @@ export default function AcademyPage() {
                   beautiful notes. And I was sitting on Bs.
                 </p>
                 <p>
-                  Then I rebuilt how I studied. Same hours, pointed at the right work. I finished in the top 10% of my
+                  Then I rebuilt how I studied. Same hours, pointed at the right work. I finished in the top 1% of my
                   year and got into medicine. Medical school then forced me to learn properly: active recall, spaced
                   repetition, working to the mark scheme.
                 </p>
@@ -356,7 +358,7 @@ export default function AcademyPage() {
               </div>
             </div>
             <div className="mt-10 text-center">
-              <JoinButton placement="inside" />
+              <JoinButton placement="inside" to="pricing" />
             </div>
           </ScrollFade>
         </div>
@@ -397,7 +399,7 @@ export default function AcademyPage() {
                 <p className="font-serif text-2xl font-bold text-brand-purple">The Academy is for you if</p>
                 <ul className="mt-4 space-y-3">
                   {[
-                    'You\'re in Year 12 or Year 13 and keen to improve your grades',
+                    'You\'re keen to improve your grades, whatever year you\'re in',
                     'You work hard and the marks don\'t match the hours',
                     'You want someone to show you how, every week, rather than once',
                     'You\'d rather fix how you study than pay for one more subject tutor',
@@ -587,7 +589,7 @@ export default function AcademyPage() {
               you&apos;ll get more out of your first week than most students get out of a term.
             </p>
             <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:items-center">
-              <JoinButton placement="close" tone="gold" />
+              <JoinButton placement="close" tone="gold" to="pricing" />
               <a href="#pricing" className="text-center text-sm font-semibold text-brand-cream/80 underline underline-offset-4 sm:text-left">
                 See what&apos;s included
               </a>
