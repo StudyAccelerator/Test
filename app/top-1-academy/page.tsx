@@ -41,8 +41,26 @@ const CARD =
 const EYEBROW = 'font-mono text-xs uppercase tracking-[0.2em] text-brand-purple/60'
 const H2 = 'font-serif tracking-tight text-3xl md:text-5xl text-brand-purple leading-tight'
 
+const FOR_STUDENTS = [
+  'You know you\'re capable of more than your grades show',
+  'You want a clear plan for what to revise, and when',
+  'You want someone to show you how, every week, rather than once',
+  'You want to stop revising for hours and still forgetting it in the exam',
+  'You want your first-choice university offer, and the grades to meet it',
+]
+
+/* The worries parents raise most on Waleed's strategy calls (September and
+   October 2026 calls; the private analysis stays out of the repo). */
+const FOR_PARENTS = [
+  'You can see they\'re bright, but the grades don\'t show it',
+  'You never know whether they\'re revising properly, or at all',
+  'Revision has become an argument at home',
+  'You\'ve paid for a tutor and the grade barely moved',
+  'A-levels are past the point where you can help at home, and their university offer depends on them',
+]
+
 const MIRROR = [
-  'Works hard every evening and is still sitting on a B',
+  'Clearly bright, and still not getting the grades they\'re capable of',
   'Knows a topic at home, then can\'t bring it back in the exam',
   'Loses marks on questions they understood, because the wording wasn\'t what the examiner wanted',
   'Has had a tutor for one subject and the grade barely moved',
@@ -185,17 +203,64 @@ export default function AcademyPage() {
         </div>
       </section>
 
+      {/* ── 1b · Who it's for: students and parents (Waleed, 31 October:
+           address the parents' worries early, in the words he uses on his
+           slides) ───────────────────────────────────────────────────────── */}
+      <section className="px-6 pb-4">
+        <div className="mx-auto grid max-w-5xl gap-4 md:grid-cols-2">
+          <ScrollFade>
+            <div className={`${CARD} h-full p-6 md:p-8`}>
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">For students</p>
+              <p className="mt-2 font-serif text-2xl font-bold leading-snug text-brand-purple">
+                Who want top grades and are keen to put the work in.
+              </p>
+              <ul className="mt-4 space-y-2.5">
+                {FOR_STUDENTS.map((t) => (
+                  <li key={t} className="flex gap-3 leading-relaxed text-brand-text/80">
+                    <span className="mt-1 flex h-5 w-5 flex-none items-center justify-center rounded-full bg-brand-gold text-[11px] font-bold text-brand-purple">
+                      ✓
+                    </span>
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </ScrollFade>
+          <ScrollFade delay={0.1}>
+            <div className="h-full rounded-2xl bg-brand-purple p-6 text-brand-cream shadow-xl md:p-8">
+              <p className="font-mono text-xs uppercase tracking-[0.2em] text-brand-gold">For parents</p>
+              <p className="mt-2 font-serif text-2xl font-bold leading-snug">
+                Who want a stress-free year, knowing their child will walk into the exams{' '}
+                <span className="italic text-brand-gold">confident and prepared, like the top 1%.</span>
+              </p>
+              <p className="mt-4 text-sm font-semibold uppercase tracking-[0.12em] text-brand-cream/60">
+                If any of these sound like home
+              </p>
+              <ul className="mt-3 space-y-2.5">
+                {FOR_PARENTS.map((t) => (
+                  <li key={t} className="flex gap-3 leading-relaxed text-brand-cream/85">
+                    <span className="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-brand-gold" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </ScrollFade>
+        </div>
+      </section>
+
       {/* ── 2 · The mirror ─────────────────────────────────────────────── */}
       <ScrollFade>
         <section className="px-6 py-16 md:py-24">
           <div className="mx-auto max-w-5xl">
             <p className={EYEBROW}>Does this sound familiar?</p>
             <h2 className={`${H2} mt-4 max-w-3xl`}>
-              Think of a student who&apos;s revising every evening <span className="italic text-brand-gold">and still sitting on a B.</span>
+              Think of a student who&apos;s bright, <span className="italic text-brand-gold">but still not achieving top grades.</span>
             </h2>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-brand-text/75">
-              Maybe that&apos;s you. Or if you&apos;re a parent reading this, maybe it&apos;s your son or daughter. They&apos;re
-              doing all the right things. And the grade isn&apos;t moving.
+              Maybe that&apos;s you. Or if you&apos;re a parent reading this, maybe it&apos;s your son or daughter. The ability
+              is clearly there. Some weeks the effort is too, and some weeks it isn&apos;t. Either way, the grade isn&apos;t
+              moving.
             </p>
             <ul className="mt-10 grid gap-4 md:grid-cols-2">
               {MIRROR.map((line) => (
@@ -209,7 +274,7 @@ export default function AcademyPage() {
             </ul>
             <div className="mt-10 rounded-3xl bg-brand-purple p-7 text-brand-cream md:p-10">
               <p className="font-serif text-2xl font-bold leading-snug md:text-3xl">
-                It isn&apos;t ability. It isn&apos;t effort.{' '}
+                It isn&apos;t ability.{' '}
                 <span className="text-brand-gold">School teaches you what to learn. Nobody teaches you how to learn it.</span>
               </p>
               <p className="mt-4 max-w-2xl text-brand-cream/80">
