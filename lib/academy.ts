@@ -55,7 +55,7 @@ export const ACADEMY = {
   /* Waleed's second guarantee for the founding cohort (30 October 2026),
      in his words. Terms beyond this line are his to define. */
   gradeGuarantee:
-    'Founding members also get the grade guarantee: work with Dr Waleed for six months, and if you do not get the grades you need for your university offer, he keeps working with you for free until you do.',
+    'Founding members also get the grade guarantee: work with Dr Waleed for the rest of this academic year, right up to your exams, and if you do not get the grades you need for your university offer, he keeps working with you for free until you do.',
   contactEmail: 'waleed@alevelaccelerators.com',
 
   /* Waleed pastes these in. Empty is handled by the page. */

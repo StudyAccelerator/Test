@@ -126,8 +126,8 @@ export default function PriceCard() {
               <div className="rounded-2xl border border-brand-gold/50 bg-brand-gold/10 p-5">
                 <p className="font-serif text-lg font-bold text-brand-gold">The founding cohort grade guarantee</p>
                 <p className="mt-1 text-sm leading-relaxed text-brand-cream/80">
-                  Work with Dr Waleed for six months, and if you don&apos;t get the grades you need for your university
-                  offer, he keeps working with you for free until you do.
+                  Work with Dr Waleed for the rest of this academic year, right up to your exams, and if you don&apos;t get the
+                  grades you need for your university offer, he keeps working with you for free until you do.
                 </p>
               </div>
             )}
