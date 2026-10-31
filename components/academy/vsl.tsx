@@ -44,7 +44,7 @@ export default function Vsl() {
         </span>
       </div>
       <div className="absolute inset-x-0 bottom-0 p-5 sm:p-7">
-        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold">Watch first · 6 minutes</p>
+        <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-brand-gold">Watch first · 10 minutes</p>
         <p className="mt-1 font-serif text-xl font-bold text-brand-cream sm:text-2xl">
           Dr Waleed explains exactly what happens inside the Academy
         </p>
