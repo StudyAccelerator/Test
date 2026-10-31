@@ -282,6 +282,9 @@ export default function AcademyPage() {
                 don&apos;t do more. They do things better. And every one of those things can be taught.
               </p>
             </div>
+            <div className="mt-8 text-center">
+              <JoinButton placement="mirror" to="pricing" />
+            </div>
           </div>
         </section>
       </ScrollFade>
@@ -368,6 +371,9 @@ export default function AcademyPage() {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="mx-auto mt-10 max-w-5xl text-center">
+            <JoinButton placement="teacher" to="pricing" />
           </div>
         </section>
       </ScrollFade>
@@ -495,6 +501,9 @@ export default function AcademyPage() {
                   ))}
                 </ul>
               </div>
+            </div>
+            <div className="mt-10 text-center">
+              <JoinButton placement="for_you" to="pricing" />
             </div>
           </div>
         </section>
