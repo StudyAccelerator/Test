@@ -1,6 +1,6 @@
 # W3b · Your replay
 
-Send: Saturday 31 October evening once Zoom has processed it (fallback Sunday 1 November, 10am UK) (campaign to the workshop group)
+Send: Saturday 31 October, 5pm UK (Waleed's instruction) (campaign to the workshop group)
 Subject A: {$name}, Your Workshop Replay Is Here
 Subject B: {$name}, The Replay, And One Question For You
 Preheader: The full recording, the one bit to rewatch, and your founding place.
@@ -31,4 +31,4 @@ Kind regards,
 
 Waleed
 
-PS: I'm on the ward today, so replies get answered this evening. If you already know you're in, [here's the page](https://alevelaccelerators.com/top-1-academy/), and I'll see you Wednesday the 11th at 7.
+PS: If the replies are ever a little late, it's probably because I'm on the wards. If you already know you're in, [here's the page](https://alevelaccelerators.com/top-1-academy/), and I'll see you Wednesday the 11th at 7pm.
