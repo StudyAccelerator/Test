@@ -64,7 +64,8 @@ export const ACADEMY = {
   skoolUrl: 'https://www.skool.com/top-1-academy-7066/about',
   /* The VSL embed (Loom share URL or an unlisted YouTube embed URL). Empty
      shows the poster image with a play badge in its place. */
-  vslEmbedUrl: '',
+  vslEmbedUrl:
+    'https://www.loom.com/embed/0864296a87bf4177ab7b04828801050d?hide_owner=true&hide_share=true&hide_title=true&hideEmbedTopBar=true',
 } as const
 
 /* True while the founding price is still open. Evaluated in the browser by
