@@ -115,7 +115,7 @@ Target: 7 to 8 minutes. Spoken track about 1,550 words. Record in one take if yo
 >
 > The first one's on the screen. Join, come to your first week of sessions, and if it isn't for you, email me within seven days and you get every penny back. No questions asked.
 >
-> [A: founding] The second one is for founding members. If you work with me for six months, and you don't get the grades you need for your university offer, I keep working with you for free until you do. [Waleed to settle the exact terms before filming: see the note at the end.]
+> [A: founding] The second one is for founding members. If you work with me for the rest of this academic year, right up to your exams, and you don't get the grades you need for your university offer, I keep working with you for free until you do. [Waleed to settle the exact terms before filming: see the note at the end.]
 >
 > And the reason I can offer that is simple. I'm that confident. Ninety six percent of my students get their first choice. So worst case, if you're in the four percent who don't, you've lost nothing, and I'm still with you.
 
@@ -169,7 +169,7 @@ Target: about 2 minutes. Spoken track about 400 words. Film on your phone, strai
 
 ## Before filming
 
-1. **The second guarantee needs its terms fixed.** Decide "six months" from when (joining date), what counts as working with us properly (attendance, Clinic uploads), which offer counts (the firm choice at the time), and what free means (membership continues free until results day, or until the resit). Students will repeat it to parents word for word, and some parents will ask for it in writing before paying. Have a one-line version ready to send.
+1. **The second guarantee needs its terms fixed.** Settled 31 October: the rest of the academic year, up to their exams. Still decide what counts as working with us properly (attendance, Clinic uploads), which offer counts (the firm choice at the time), and what free means (membership continues free until results day, or until the resit). Students will repeat it to parents word for word, and some parents will ask for it in writing before paying. Have a one-line version ready to send.
 2. **Tutor maths:** £50 an hour x 2 hours a week x 4 weeks = £400 a month for one subject. Two or three subjects = £800 to £1,200. Academy: 16 hours a month, £100 is about £6 an hour, £150 is under £10 an hour. These are the figures on the slides; keep the spoken ones matching.
 3. **Word counts:** VSL about 1,550 spoken words (about 7.5 minutes at his rate); About video about 400 words (about 2 minutes).
 4. Read each script aloud once and cut anything your mouth trips on.

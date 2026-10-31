@@ -58,7 +58,9 @@ I've worked with over 1,000 A-level students in the past six years, and on avera
 
 You're covered by a 7 day money-back guarantee. Come to your first week of sessions, and if it isn't for you, email me and you get every penny back.
 
-And founding members get my grade guarantee on top. Work with me for six months, and if you don't get the grades you need for your offer, I keep working with you for free until you do.
+And founding members get my grade guarantee on top. Stay with me for the rest of this academic year, right up to your exams.
+
+If you don't get the grades you need for your offer, I keep working with you for free until you do.
 
 I can offer that because 96% of my students get their first-choice offer. If you're ever in the other 4%, I'm still with you.
 

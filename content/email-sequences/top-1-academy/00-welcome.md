@@ -43,7 +43,9 @@ Post one real problem in the Hot Seat before Wednesday 6pm.
 **Your guarantees, in plain words**
 Come to your first week of sessions. If it isn't for you, reply to this email within 7 days and you get every penny back, no questions asked.
 
-And as a founding member, you have my grade guarantee too. Work with me for six months, and if you don't get the grades you need for your offer, I keep working with you for free until you do.
+And as a founding member, you have my grade guarantee too. Stay with me for the rest of this academic year, right up to your exams.
+
+If you don't get the grades you need for your offer, I keep working with you for free until you do.
 
 Speak soon!
 

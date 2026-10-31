@@ -118,7 +118,7 @@ const FAQ: [string, string][] = [
   ],
   [
     'How does the grade guarantee work?',
-    'It is for the founding cohort. Work with Dr Waleed for six months, and if you do not get the grades you need for your university offer, he keeps working with you for free until you do. He offers it because 96% of his students get their first-choice offer.',
+    'It is for the founding cohort. Work with Dr Waleed for the rest of this academic year, right up to your exams, and if you do not get the grades you need for your university offer, he keeps working with you for free until you do. He offers it because 96% of his students get their first-choice offer.',
   ],
 ]
 
