@@ -16,6 +16,8 @@ export default function Vsl() {
             title="Dr Waleed explains the Top 1% Academy"
             allow="autoplay; fullscreen; picture-in-picture"
             allowFullScreen
+            loading="eager"
+            style={{ border: 0 }}
             className="absolute inset-0 h-full w-full"
           />
         </div>
