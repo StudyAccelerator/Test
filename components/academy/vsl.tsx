@@ -66,13 +66,16 @@ export default function Vsl() {
             {src && (
               <>
                 <span className="absolute inset-0 bg-black/0 transition-colors group-hover:bg-black/10" />
-                <span className="absolute left-1/2 top-1/2 flex h-20 w-20 -translate-x-1/2 -translate-y-1/2 items-center justify-center rounded-full bg-brand-gold text-brand-purple shadow-2xl ring-8 ring-white/25 transition-transform group-hover:scale-110 sm:h-24 sm:w-24">
-                  <svg viewBox="0 0 24 24" className="ml-1 h-9 w-9 fill-current" aria-hidden="true">
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </span>
-                <span className="absolute bottom-4 left-4 rounded-full bg-black/55 px-3 py-1.5 font-mono text-[11px] uppercase tracking-[0.15em] text-white backdrop-blur sm:bottom-6 sm:left-6">
-                  Watch · 10 minutes
+                <span className="absolute bottom-3 left-3 flex items-center gap-2.5 rounded-full bg-black/60 py-1.5 pl-1.5 pr-4 text-white shadow-xl backdrop-blur transition-transform group-hover:scale-105 sm:bottom-6 sm:left-6 sm:gap-3 sm:py-2 sm:pl-2 sm:pr-5">
+                  <span className="flex h-10 w-10 items-center justify-center rounded-full bg-brand-gold text-brand-purple sm:h-14 sm:w-14">
+                    <svg viewBox="0 0 24 24" className="ml-0.5 h-5 w-5 fill-current sm:h-7 sm:w-7" aria-hidden="true">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </span>
+                  <span className="text-left">
+                    <span className="block text-sm font-semibold leading-tight sm:text-base">Watch the video</span>
+                    <span className="block font-mono text-[10px] uppercase tracking-[0.15em] text-white/75 sm:text-[11px]">10 minutes</span>
+                  </span>
                 </span>
               </>
             )}
