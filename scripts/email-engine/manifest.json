@@ -766,6 +766,20 @@
      "email": "content/email-sequences/free-workshop/00-youre-in.md"
     }
    ]
+  },
+  {
+   "key": "academy-a0",
+   "name": "Academy: welcome (A0)",
+   "automation_id": "202397778692801649",
+   "replaces": null,
+   "trigger_group_id": "202397742297777684",
+   "trigger_group_name": "Top 1% Academy members",
+   "footer": "You're getting this because you joined the Top 1% Academy at alevelaccelerators.com.",
+   "steps": [
+    {
+     "email": "content/email-sequences/top-1-academy/00-welcome.md"
+    }
+   ]
   }
  ]
 }

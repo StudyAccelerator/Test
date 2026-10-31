@@ -54,7 +54,7 @@ What this folder is: everything for the free workshop funnel Waleed pitches from
 **After Sunday**
 
 9. Upload the recording (Zoom cloud link or YouTube unlisted), replace `https://REPLAY-LINK-TBC` in W3.
-10. Confirm the programme name (price and shape are decided: two sessions a week, £100 founding then £150), have a session build the programme page and Stripe link, replace `https://PROGRAMME-PAGE-TBC`, load W3 as a draft and schedule it for 9am Sunday 1 November, with a "Questions?" email on Monday and a final-day email on Tuesday.
+10. DONE 26 October: the programme is the Top 1% Academy; its page, Skool pack, members group, welcome automation and the W3/W4/W5 emails are built (see `content/skool/top-1-academy/README.md` for the order of work). Remaining: paste the Stripe and Skool links, replace `https://REPLAY-LINK-TBC` in W3, load the three drafts and schedule them (Sun 9am, Mon 6pm, Tue 9am) on Waleed's go.
 11. Record the real numbers (sign-ups from `/kcl`, attendance, sales) in this README so the next workshop is planned from data rather than the assumptions above.
 
 ## Numbers to record after the day

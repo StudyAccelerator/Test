@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!-- Skool classroom cover: The Marks Clinic. 1460 x 752. Render:
+  chromium --headless=new --no-sandbox --screenshot=marks-clinic.png --window-size=1460,752 --hide-scrollbars file://$PWD/marks-clinic-src.html -->
+<html><head><meta charset="utf-8"><style>
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{width:1460px;height:752px;overflow:hidden}
+body{background:linear-gradient(135deg,#2E2557 0%,#3d3370 100%);font-family:Georgia,'Times New Roman',serif;position:relative}
+.glow{position:absolute;top:-200px;left:560px;width:900px;height:560px;background:radial-gradient(ellipse,rgba(201,169,110,.20),transparent 70%)}
+.text{position:absolute;left:96px;top:0;bottom:0;width:560px;display:flex;flex-direction:column;justify-content:center}
+.eyebrow{font-family:'Helvetica Neue',Arial,sans-serif;font-size:20px;letter-spacing:.16em;text-transform:uppercase;color:#C9A96E;font-weight:700;display:flex;align-items:center;gap:14px}
+.cross{width:30px;height:30px;position:relative}
+.cross::before,.cross::after{content:'';position:absolute;background:#C9A96E;border-radius:2px}
+.cross::before{left:11px;top:0;width:8px;height:30px}.cross::after{top:11px;left:0;width:30px;height:8px}
+h1{margin-top:22px;font-size:104px;line-height:1;color:#FBF8F3;font-weight:700}
+h1 em{color:#C9A96E}
+.sub{margin-top:26px;font-family:'Helvetica Neue',Arial,sans-serif;font-size:26px;line-height:1.45;color:rgba(251,248,243,.82)}
+.paper{position:absolute;right:110px;top:84px;width:560px;height:620px;background:#FBF8F3;border-radius:10px;transform:rotate(4deg);box-shadow:0 30px 60px rgba(0,0,0,.4);padding:44px 48px;font-family:'Helvetica Neue',Arial,sans-serif;color:#1a1535}
+.paper2{position:absolute;right:150px;top:110px;width:540px;height:600px;background:#e8e2d6;border-radius:10px;transform:rotate(-3deg);box-shadow:0 20px 40px rgba(0,0,0,.3)}
+.qh{font-weight:800;font-size:22px;display:flex;justify-content:space-between}
+.qh .m{font-weight:600;color:#5d5878}
+.line{height:12px;border-radius:6px;background:#d9d2c4;margin-top:16px}
+.ans{margin-top:22px;position:relative;padding-left:4px}
+.tick{position:absolute;left:-34px;font-size:32px;color:#c0392b;font-weight:900;font-family:Arial}
+.score{position:absolute;right:30px;top:150px;width:140px;height:140px;border:6px solid #c0392b;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:rotate(-10deg);color:#c0392b;font-weight:900;font-size:54px;font-family:Georgia,serif}
+.note{margin-top:30px;color:#c0392b;font-family:'Bradley Hand','Segoe Print','Comic Sans MS',cursive;font-size:30px;font-weight:700;transform:rotate(-2deg)}
+.under{display:inline-block;border-bottom:4px solid #c0392b}
+</style></head><body>
+<div class="glow"></div>
+<div class="text">
+  <div class="eyebrow"><span class="cross"></span>Every Sunday · 10am</div>
+  <h1>The Marks <em>Clinic</em></h1>
+  <p class="sub">Your real papers, on screen. Find where the marks went, and never lose them twice.</p>
+</div>
+<div class="paper2"></div>
+<div class="paper">
+  <div class="qh"><span>Question 4</span><span class="m">[6 marks]</span></div>
+  <div class="ans">
+    <span class="tick" style="top:2px">✓</span>
+    <div class="line" style="width:92%;margin-top:4px"></div>
+    <span class="tick" style="top:30px">✓</span>
+    <div class="line" style="width:84%"></div>
+    <span class="tick" style="top:58px">✗</span>
+    <div class="line" style="width:95%;background:#f0c9c4"></div>
+    <div class="line" style="width:70%"></div>
+    <span class="tick" style="top:114px">✓</span>
+    <div class="line" style="width:88%"></div>
+    <span class="tick" style="top:142px">✗</span>
+    <div class="line" style="width:60%;background:#f0c9c4"></div>
+  </div>
+  <div class="score">4/6</div>
+  <div class="note">Knew it. Didn't use the <span class="under">mark scheme words</span>. Tier 3.</div>
+  <div class="ans" style="margin-top:30px">
+    <div class="qh" style="font-size:20px"><span>Question 5</span><span class="m">[4 marks]</span></div>
+    <div class="line" style="width:90%"></div>
+    <div class="line" style="width:78%"></div>
+  </div>
+</div>
+</body></html>

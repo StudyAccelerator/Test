@@ -1,5 +1,7 @@
 # The Skool launch pack
 
+**26 October 2026: the live Skool play is the Top 1% Academy, the paid weekly group programme. Its pack is in [top-1-academy/](top-1-academy/README.md). The August plan below (free community plus a £29 tier) was never launched and is kept for the material the Academy pack reuses.**
+
 Built 5 August 2026. Everything needed to open, fill and monetise a Skool community under Waleed's own name, written end to end. Nothing in this pack is live; nothing goes live until Waleed approves it.
 
 ## The decisions, at a glance

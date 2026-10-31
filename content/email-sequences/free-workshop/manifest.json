@@ -1,5 +1,5 @@
 {
- "comment": "The free online workshop's dated emails (23 October 2026). W1 (day before) and W2 (one hour before) load as DRAFT campaigns to the workshop group: python3 scripts/email-engine/engine.py campaigns content/email-sequences/free-workshop --live (add --update to rewrite the drafts after editing). Schedule only on Waleed's go: engine.py schedule <campaign_id> 2026-10-30 18:00 --live and engine.py schedule <campaign_id> 2026-10-31 12:00 --live. W0 (instant) belongs to an automation that still needs its skeleton created in the MailerLite builder (see content/workshops/2026-10-24-kcl-medic-life/README.md); W3 (replay plus offer) is deliberately NOT loaded until Waleed settles the programme's name and price.",
+ "comment": "The free online workshop's dated emails (23 October 2026, extended 30 October on Waleed's schedule). Campaigns to the workshop group: python3 scripts/email-engine/engine.py campaigns content/email-sequences/free-workshop --live (new entries are created as DRAFTS; add --update to rewrite existing drafts). Schedule only on Waleed's go: engine.py schedule <campaign_id> <date> <HH:MM> --live. W0 (instant) is automation 202163137955234961 (ON). W3b (replay), W6 and W7 carry placeholders Waleed fills after the sessions, so they stay out of this list until then.",
  "audiences": {
   "workshop": [
    "202138192036496596"
@@ -24,10 +24,66 @@
    "audience": "workshop",
    "send_hint": "Sat 31 Oct 12:00 UK (one hour before)",
    "campaign_id": "202139177244951666"
+  },
+  {
+   "key": "w1b",
+   "file": "01b-tonight.md",
+   "audience": "workshop",
+   "name": "Workshop 2026-10-31 · W1b Friday night",
+   "send_hint": "Fri 30 Oct 20:30 UK",
+   "campaign_id": "202752321080264197"
+  },
+  {
+   "key": "w1c",
+   "file": "01c-this-afternoon.md",
+   "audience": "workshop",
+   "name": "Workshop 2026-10-31 · W1c Saturday morning",
+   "send_hint": "Sat 31 Oct 09:00 UK",
+   "campaign_id": "202752322920515004"
+  },
+  {
+   "key": "w2b",
+   "file": "02b-fifteen-minutes.md",
+   "audience": "workshop",
+   "name": "Workshop 2026-10-31 · W2b 15 minutes",
+   "send_hint": "Sat 31 Oct 12:45 UK",
+   "campaign_id": "202752324783835023"
+  },
+  {
+   "key": "w3",
+   "name": "Workshop 2026-10-31 · W3 what comes next (Academy offer)",
+   "file": "03-replay-and-next-step.md",
+   "audience": "workshop",
+   "send_hint": "Sat 31 Oct 18:00 UK",
+   "campaign_id": "202752327022544632"
+  },
+  {
+   "key": "w4",
+   "name": "Workshop 2026-10-31 · W4 Questions?",
+   "file": "04-questions.md",
+   "audience": "workshop",
+   "send_hint": "Mon 2 Nov 18:00 UK",
+   "campaign_id": "202752328817706711"
+  },
+  {
+   "key": "w5",
+   "name": "Workshop 2026-10-31 · W5 founding closes tonight",
+   "file": "05-founding-closes-tonight.md",
+   "audience": "workshop",
+   "send_hint": "Sat 7 Nov 09:00 UK (founding closes tonight)",
+   "campaign_id": "202752330749183546"
+  },
+  {
+   "key": "w5b",
+   "file": "05b-five-hours-left.md",
+   "audience": "workshop",
+   "name": "Workshop 2026-10-31 · W5b closes at midnight",
+   "send_hint": "Sat 7 Nov 19:00 UK (five hours left)",
+   "campaign_id": "202752332609357242"
   }
  ],
  "not_loaded": [
-  "00-youre-in.md (automation instant step, skeleton needed)",
-  "03-replay-and-next-step.md (programme price is a proposal)"
+  "03b-your-replay.md (needs the recording link in place of REPLAY-LINK-TBC)",
+  "06-after-the-first-session.md and 07-the-first-clinic.md (Waleed fills the real Hot Seat question and Clinic pattern first)"
  ]
 }
