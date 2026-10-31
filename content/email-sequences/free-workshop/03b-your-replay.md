@@ -1,21 +1,21 @@
 # W3b · Your replay
 
-Send: Sunday 1 November, 10am UK (campaign to the workshop group)
+Send: Saturday 31 October evening once Zoom has processed it (fallback Sunday 1 November, 10am UK) (campaign to the workshop group)
 Subject A: {$name}, Your Workshop Replay Is Here
 Subject B: {$name}, The Replay, And One Question For You
 Preheader: The full recording, the one bit to rewatch, and your founding place.
 Goal: deliver the replay to everyone (attended or not), point at the one section to rewatch, restate the offer in two lines.
 Links: 3 (replay, the Academy page, the Academy page again in PS)
-Note: Replace https://REPLAY-LINK-TBC with the Zoom cloud recording link (or an unlisted YouTube link) before loading. Zoom usually takes 30 to 60 minutes after the session to process it.
+Note: Replace https://us06web.zoom.us/rec/share/u5LKPG3SppJ7dtI6tsWPQqY-huiPKc7QgUyQU3opyPUHGFble3kPJA_FNx3YOJzQ.em05pACw0sj69OwZ?pwd=DMQFeBTr2tmKaGBqKAAAIAAAAM1rcKofG71Gjol5x35q7CvuyV8tPNcmraNU4w4TvwURulFcCzfyuS6IEdRbLz75aTAwMDAwNA with the Zoom cloud recording link (or an unlisted YouTube link) before loading. Zoom usually takes 30 to 60 minutes after the session to process it.
 Written: 30 October 2026
 
 ---
 
 Hi {$name},
 
-Here's yesterday's replay, as promised.
+Here's today's replay, as promised.
 
-[BUTTON: Watch the workshop replay -> https://REPLAY-LINK-TBC]
+[BUTTON: Watch the workshop replay -> https://us06web.zoom.us/rec/share/u5LKPG3SppJ7dtI6tsWPQqY-huiPKc7QgUyQU3opyPUHGFble3kPJA_FNx3YOJzQ.em05pACw0sj69OwZ?pwd=DMQFeBTr2tmKaGBqKAAAIAAAAM1rcKofG71Gjol5x35q7CvuyV8tPNcmraNU4w4TvwURulFcCzfyuS6IEdRbLz75aTAwMDAwNA]
 
 If you only rewatch one part, make it the priority map. It's the bit most people get wrong, and it decides where every other hour goes.
 

@@ -11,7 +11,7 @@
  "campaigns": [
   {
    "key": "w1",
-   "name": "Workshop 2026-10-31 · W1 day before reminder",
+   "name": "Workshop 2026-10-31 \u00b7 W1 day before reminder",
    "file": "01-tomorrow.md",
    "audience": "workshop",
    "send_hint": "Fri 30 Oct 18:00 UK (the day before)",
@@ -19,7 +19,7 @@
   },
   {
    "key": "w2",
-   "name": "Workshop 2026-10-31 · W2 one hour before",
+   "name": "Workshop 2026-10-31 \u00b7 W2 one hour before",
    "file": "02-starting-in-one-hour.md",
    "audience": "workshop",
    "send_hint": "Sat 31 Oct 12:00 UK (one hour before)",
@@ -29,7 +29,7 @@
    "key": "w1b",
    "file": "01b-tonight.md",
    "audience": "workshop",
-   "name": "Workshop 2026-10-31 · W1b Friday night",
+   "name": "Workshop 2026-10-31 \u00b7 W1b Friday night",
    "send_hint": "Fri 30 Oct 20:30 UK",
    "campaign_id": "202752321080264197"
   },
@@ -37,7 +37,7 @@
    "key": "w1c",
    "file": "01c-this-afternoon.md",
    "audience": "workshop",
-   "name": "Workshop 2026-10-31 · W1c Saturday morning",
+   "name": "Workshop 2026-10-31 \u00b7 W1c Saturday morning",
    "send_hint": "Sat 31 Oct 09:00 UK",
    "campaign_id": "202752322920515004"
   },
@@ -45,13 +45,13 @@
    "key": "w2b",
    "file": "02b-fifteen-minutes.md",
    "audience": "workshop",
-   "name": "Workshop 2026-10-31 · W2b 15 minutes",
+   "name": "Workshop 2026-10-31 \u00b7 W2b 15 minutes",
    "send_hint": "Sat 31 Oct 12:45 UK",
    "campaign_id": "202752324783835023"
   },
   {
    "key": "w3",
-   "name": "Workshop 2026-10-31 · W3 what comes next (Academy offer)",
+   "name": "Workshop 2026-10-31 \u00b7 W3 what comes next (Academy offer)",
    "file": "03-replay-and-next-step.md",
    "audience": "workshop",
    "send_hint": "Sat 31 Oct 18:00 UK",
@@ -59,7 +59,7 @@
   },
   {
    "key": "w4",
-   "name": "Workshop 2026-10-31 · W4 Questions?",
+   "name": "Workshop 2026-10-31 \u00b7 W4 Questions?",
    "file": "04-questions.md",
    "audience": "workshop",
    "send_hint": "Mon 2 Nov 18:00 UK",
@@ -67,7 +67,7 @@
   },
   {
    "key": "w5",
-   "name": "Workshop 2026-10-31 · W5 founding closes tonight",
+   "name": "Workshop 2026-10-31 \u00b7 W5 founding closes tonight",
    "file": "05-founding-closes-tonight.md",
    "audience": "workshop",
    "send_hint": "Sat 7 Nov 09:00 UK (founding closes tonight)",
@@ -77,9 +77,17 @@
    "key": "w5b",
    "file": "05b-five-hours-left.md",
    "audience": "workshop",
-   "name": "Workshop 2026-10-31 · W5b closes at midnight",
+   "name": "Workshop 2026-10-31 \u00b7 W5b closes at midnight",
    "send_hint": "Sat 7 Nov 19:00 UK (five hours left)",
    "campaign_id": "202752332609357242"
+  },
+  {
+   "key": "w3b",
+   "file": "03b-your-replay.md",
+   "audience": "workshop",
+   "name": "Workshop 2026-10-31 \u00b7 W3b your replay",
+   "send_hint": "Sat 31 Oct evening, on Waleed's go (fallback Sun 1 Nov 10:00 UK)",
+   "campaign_id": "202852596047677379"
   }
  ],
  "not_loaded": [
