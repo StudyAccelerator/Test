@@ -6,6 +6,29 @@ Format per entry: GSC totals, top movers, SERP spot checks, AEO probes, indexati
 
 ---
 
+## 2026-11-01 (on-demand check, requested by Waleed; GA4 monthly emails only)
+
+**Google Search Console: NOT read this run.** This was a cloud session with no Chrome, the Ahrefs connector's plan does not cover its Search Console or Site Explorer endpoints ("Insufficient plan" on every call, including the free domain-rating one), and Google sends no Search Console summary emails to the mailbox. The last ground-truth GSC read is still 17 September (234 clicks, 30,900 impressions, position 9.7, 636 queries, 28 days to 15 September). The weekly optimiser task was disabled on 7 October on Waleed's instruction, so nobody has measured organic since. Six weeks without a GSC read is the gap to close first.
+
+**GA4, from Google's own monthly performance emails to waleed@alevelaccelerators.com** (property 538386511; whole-site numbers, every channel including Meta ads, so NOT an organic measure):
+
+| Window | Active users | New users | Avg engagement | Events |
+|---|---|---|---|---|
+| 10 Jul to 6 Aug | about 388 (implied by the next row's +431%) | | | |
+| 7 Aug to 3 Sep | 2,061 | 2,044 | 58s | 10,042 |
+| 4 Sep to 1 Oct | 1,574 | 1,545 | 1m 1s | 8,013 |
+| 2 Oct to 29 Oct | 2,706 | 2,681 | 54s | 13,526 |
+
+October top pages (views / active users / bounce): revision diagnostic 2,179 / 1,959 / 74.8%; free-workshop sign-up page 377 / 269 / 28.2% (the KCL funnel, noindex, live from 23 October); homepage 292 / 121 / 30%; revision tracker 247 / 132 / 45.5%; study-systems 127 / 68 / 27.1%; the wave 2 post "Predicted grades lower than expected" 97 / 45 / 38.4% (published 22 September, already a top-seven page); subject-accelerators 84 / 49 / 20.3%. In September the top blog pages were the predicted-grades-before-UCAS post (95 views) and the hours-a-day post (87); in August the appeals post (231) and the resit hub (185), i.e. the results cluster doing exactly what it was built for, then fading with the season.
+
+**Reading:** the October rise is mostly paid and workshop traffic (the diagnostic page alone is 72% of October users, and Meta ads point at it), not organic. The one organic signal in the emails is that blog posts keep appearing in the top-seven pages and rotate with the season, and a wave 2 post got there within five weeks. The organic verdict from 17 September (clicks about 4x and impressions about 10x in six weeks, average position onto page 1, driven by the on-site batches) stands until a fresh GSC read either confirms or retires it.
+
+**Off-site (Pragya):** last reviewed 5 October (round 13). Her one-month execution test against the in-house target list (2 October) has run its month; no round 14 review exists and the Upwork chat is only readable from Waleed's Chrome. Her measured contribution to 23 September was 20 to 30 referral sessions a month and zero recorded sign-ups.
+
+**Live checks (direct fetch, facts):** sitemap serves 40 URLs (25 blog posts); resit hub, Biology guide, /free-workshop/ and /top-1-academy/ all HTTP 200.
+
+---
+
 ## 2026-09-24 (batch shipped: blog wave 2 live, 24 posts total)
 
 **A change record, not a measurement.** The six wave 2 posts went live on main the same day as the diagnostic CTA batch, verified on production (all six HTTP 200, correct dates in their JSON-LD, all six in the live sitemap, blog index now listing 24 posts). IndexNow pinged for the six plus the blog index and sitemap (HTTP 200).
