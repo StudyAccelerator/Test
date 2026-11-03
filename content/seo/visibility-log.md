@@ -6,6 +6,16 @@ Format per entry: GSC totals, top movers, SERP spot checks, AEO probes, indexati
 
 ---
 
+## 2026-11-03 (buyer check: which channel produces leads and payers, from MailerLite)
+
+**Question asked by Waleed: are the organic impressions people who actually buy?** Answered from the lead records, not GSC (still unread; this cloud session has no Chrome and no Remote Control folder on his Mac).
+
+Diagnostic leads 3 October to 3 November (both master groups, since the `diag_source` attribution shipped): **85**. Paid Facebook 63. No source recorded 12 (resumed older runs or shared links). "Referral: alevelaccelerators.com" 9, i.e. they reached the diagnostic from another page on the site; 3 of those carry an ad campaign, so at most **6 leads in a month could have started on Google**, and **none recorded Google as the source**. Revision tracker sign-ups (22 since 1 October, the page the "revision planner" queries feed) carry no source field and are students.
+
+Paying customers: the three Top 1% Academy members came from the KCL workshop (2) and a Facebook-ad diagnostic parent (1). None from organic search.
+
+**Reading:** organic is producing visibility and student traffic, not buyers yet. The impressions sit on student and resit queries (planner, timetable, resits, appeals); the buyer queries (subject tutor terms, about 880 searches a month for "a level chemistry tutor") were last seen around position 28. Two limits on this reading: the attribution only records the referrer on the diagnostic page itself, so a Google visitor who read a blog post first shows as an internal referral, and the tracker form sends no source at all.
+
 ## 2026-11-01 (on-demand check, requested by Waleed; GA4 monthly emails only)
 
 **Google Search Console: NOT read this run.** This was a cloud session with no Chrome, the Ahrefs connector's plan does not cover its Search Console or Site Explorer endpoints ("Insufficient plan" on every call, including the free domain-rating one), and Google sends no Search Console summary emails to the mailbox. The last ground-truth GSC read is still 17 September (234 clicks, 30,900 impressions, position 9.7, 636 queries, 28 days to 15 September). The weekly optimiser task was disabled on 7 October on Waleed's instruction, so nobody has measured organic since. Six weeks without a GSC read is the gap to close first.
