@@ -40,4 +40,4 @@ Kind regards,
 
 Waleed
 
-PS: I've literally just finished a night shift, and I'm writing this on the verge of passing out, haha. If I can stay awake for five minutes to send it, you can take two to secure the grades for your dream university. [Secure your seat here](https://alevelaccelerators.com/top-1-academy/). Right, I'm off to bed. See you Wednesday at 7!
+PS: I've just finished a night shift and I'm writing this on the verge of passing out, haha. If I can stay awake five minutes to send it, you can take two to secure the grades for your dream university. [Secure your seat here](https://alevelaccelerators.com/top-1-academy/). Right, bed!
