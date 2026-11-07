@@ -88,6 +88,14 @@
    "name": "Workshop 2026-10-31 \u00b7 W3b your replay",
    "send_hint": "Sat 31 Oct evening, on Waleed's go (fallback Sun 1 Nov 10:00 UK)",
    "campaign_id": "202852596047677379"
+  },
+  {
+   "key": "w5c",
+   "file": "05c-not-good-enough.md",
+   "audience": "workshop",
+   "name": "Workshop 2026-10-31 \u00b7 W5c not good enough (midday story)",
+   "send_hint": "Sat 7 Nov 12:00 UK",
+   "campaign_id": "203460257243989235"
   }
  ],
  "not_loaded": [
