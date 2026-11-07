@@ -64,7 +64,7 @@ The best time to learn how to learn was five years ago. The second best time is 
 
 That's what the Top 1% Academy is for. The founding place closes tonight at 11:59pm, and if you're keen to learn this properly, with me, every week, this is the week to start.
 
-[LINK: Take your founding place before midnight -> https://alevelaccelerators.com/top-1-academy/]
+[LINK: Secure your founding cohort seat before midnight -> https://alevelaccelerators.com/top-1-academy/]
 
 Speak soon!
 

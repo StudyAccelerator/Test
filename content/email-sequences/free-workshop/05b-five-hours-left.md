@@ -24,7 +24,7 @@ Join now and two things are yours. £100 stays your price for however long you w
 
 Stay with me until your exams, and if you don't get the grades you need for your offer, I keep working with you for free until you do.
 
-[LINK: Take your founding place before midnight -> https://alevelaccelerators.com/top-1-academy/]
+[LINK: Secure your founding cohort seat before midnight -> https://alevelaccelerators.com/top-1-academy/]
 
 You're covered by the 7 day money-back guarantee either way.
 
