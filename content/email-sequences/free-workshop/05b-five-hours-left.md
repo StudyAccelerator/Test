@@ -1,9 +1,9 @@
 # W5b · Closes at midnight
 
 Send: Saturday 7 November, 7pm UK (campaign to the workshop group, excluding paid members)
-Subject A: {$name}, Five Hours Left At £100
-Subject B: {$name}, £100 Closes At Midnight Tonight
-Preheader: The founding price ends at 11:59pm tonight. First session Wednesday at 7pm: the 80/20 rule.
+Subject A: {$name}, Last Chance To Secure Your Founding Cohort Seat
+Subject B: {$name}, Your Founding Cohort Seat Closes At Midnight
+Preheader: Less than five hours left at £100. First session Wednesday at 7pm: the 80/20 rule.
 Goal: the last-hours email: the session, the deadline, the lock and the guarantee, one link.
 Links: 2 (the Academy page in body and PS)
 Written: 30 October 2026, rewritten 7 November 2026 to match W5 (80/20 first session, "never as low as £100 again", lock plus guarantee)
@@ -12,7 +12,7 @@ Written: 30 October 2026, rewritten 7 November 2026 to match W5 (80/20 first ses
 
 Hi {$name},
 
-Five hours until the founding price closes.
+There are less than five hours left to secure your founding cohort seat.
 
 On Wednesday at 7pm I'm teaching the 80/20 rule: how to find the slice of each subject that carries most of the marks, and pair it with your RAG list so your hours go where the grade moves.
 
