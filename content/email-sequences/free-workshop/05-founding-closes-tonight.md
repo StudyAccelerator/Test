@@ -14,7 +14,7 @@ Hi {$name},
 
 Last Saturday I showed you how to find your red topics. On Wednesday at 7pm, I'm going to show you what to do with them.
 
-The first Study Academy session is on the 80/20 rule: the small slice of every subject that carries most of the marks, and how to find it in your own spec.
+The first Top 1% Academy session is on the 80/20 rule: the small slice of every subject that carries most of the marks, and how to find it in your own spec.
 
 Pair that with the RAG list you built this week, and your exam preparation goes from "revise everything" to "revise the 20% that moves the grade".
 
