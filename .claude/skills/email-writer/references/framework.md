@@ -67,3 +67,13 @@ The PS always exists, restates the one action, and carries his real life plus th
 ## Length
 
 The Sunday Session runs 650 to 750 words. Sequence teaching emails 350 to 600. Dailies 150 to 350. Shorter is fine; longer needs a reason.
+
+## 9. Deadline and promo-week emails (added 7 November 2026)
+
+The eight parts still apply, with these changes, all from Waleed's edits to the Top 1% Academy closing-day emails (full rulings in `../../content-studio/references/email-style-waleed.md`, the 31 October to 7 November section):
+
+- Part 1 opens on the next session and its benefit, paired with the free thing the reader already has (the RAG list, the diagnostic report). The deadline never opens the email; it gets a bold heading further down ("Today is the last day at £100").
+- The price rise is stated as a fact about the price ("will never be as low as £100 again"), followed by the two things securing the seat does: the price lock for however long they work with him, and the founding cohort guarantee, explained in full.
+- The button is "Secure your founding cohort seat before midnight". The sessions are "Top 1% Academy sessions".
+- Shape of a closing day: 9am sell (session, deadline, lock, guarantee, lighthearted true-to-the-day PS), 12pm deposit (a story with the link only at the end), 7pm last-hours sell ("Last Chance To Secure Your Founding Cohort Seat", opening "There are less than five hours left").
+- Every promo send excludes the group of people who have already paid. In MailerLite this is the campaign `filter` (see CLAUDE.md, 7 November 2026, for the API shape).
