@@ -24,7 +24,7 @@ export default function PricingSection() {
     {
       name: 'Top 1% Mentorship',
       tagline: 'Optimise and Accelerate',
-      price: '£300/month',
+      price: '£500/month',
       description: 'Best for: Serious students aiming for top grades and competitive universities',
       features: [
         'Personalised performance plan',
