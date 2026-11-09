@@ -34,7 +34,7 @@ That's £400 a month, per subject. And it goes into re-teaching content, an area
 **What I recommend instead**
 The Top 1% Mentorship. {$diag_child_name|default('Your child')} works directly with me all month long: I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck.
 
-It's £300 a month. Less than one subject's tutoring, spent on the thing their report actually found.
+It's £500 a month. Less than two subjects' tutoring, spent on the thing their report actually found.
 
 I only keep five places on it, because that's how many students I can work with this closely.
 

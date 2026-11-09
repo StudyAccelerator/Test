@@ -36,7 +36,7 @@ How to learn so it sticks. Testing yourself instead of re-reading, going back to
 
 The way I do that is the Top 1% Mentorship. The student works directly with me all month long. I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck.
 
-It's £300 a month. I only keep five places on it. That's the honest limit of how many students I can work with this closely.
+It's £500 a month. I only keep five places on it. That's the honest limit of how many students I can work with this closely.
 
 If you'd like the Study System detail in full, reply with the word "system" and I'll send it.
 

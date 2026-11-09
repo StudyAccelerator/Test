@@ -48,13 +48,13 @@ The re-learning loop alone, learn it, forget it, re-learn it, means you're payin
 
 Students on this system tend to end up studying fewer hours, not more. That's the point.
 
-**"Is £300 a month really worth it?"**
+**"Is £500 a month really worth it?"**
 
 It depends what you'd do instead, so here's how it compares.
 
 The UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week. That's £400 a month, per subject, and it lifts one subject's content while changing nothing about how you study.
 
-The Top 1% Mentorship is £300 a month. You work directly with me all month long: I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
+The Top 1% Mentorship is £500 a month. You work directly with me all month long: I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
 
 That's less than one subject's tutoring, spent on the way each subject runs. This year, next year, and to be honest at uni too.
 
@@ -82,7 +82,7 @@ It installs the same approach I had to learn the hard way at medical school: tes
 
 I'm confident we can help with this.
 
-Your child works directly with me all month long. I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck. It's £300 a month, and I only keep five places on it.
+Your child works directly with me all month long. I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck. It's £500 a month, and I only keep five places on it.
 
 The first session is covered by our satisfaction guarantee.
 

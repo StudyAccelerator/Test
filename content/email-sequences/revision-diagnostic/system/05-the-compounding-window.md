@@ -37,7 +37,7 @@ And when the autumn tests come, the ones that set predicted grades, they meet a 
 So, plainly, the two ways to do it.
 
 **The full setup: the Top 1% Mentorship**
-You work directly with me all month long for £300 a month. I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
+You work directly with me all month long for £500 a month. I build your study system with you, fortnightly follow-ups keep it running, and you can reach me between sessions whenever you're stuck.
 
 All I said about it two emails ago stands, including the five places. That's the honest limit of how closely I can work with each student.
 

@@ -39,7 +39,7 @@ You work directly with me all month long. I build your study system with you, fo
 
 It exists because for most students the follow through, not the knowledge, is the part that breaks.
 
-It's £300 a month, and I only keep five places on it. It comes with our satisfaction guarantee: if the first session isn't helpful, you get a full refund.
+It's £500 a month, and I only keep five places on it. It comes with our satisfaction guarantee: if the first session isn't helpful, you get a full refund.
 
 For scale, the UK average for 1:1 tutoring is about £50 an hour, and most parents book 2 hours a week. That's £400 a month spent patching one subject, against £300 spent on the way every subject runs.
 
