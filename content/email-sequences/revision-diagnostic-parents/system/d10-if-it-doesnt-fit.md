@@ -35,7 +35,7 @@ Week three is the very reason the mentorship runs the way it does. The fade isn'
 
 The fortnightly follow-ups exist to catch it. And between them, {$diag_child_name|default('your child')} can reach me directly whenever they're stuck.
 
-**"What if £300 a month isn't in the budget?"**
+**"What if £500 a month isn't in the budget?"**
 
 Then say so on the call, and I'll point you somewhere smaller instead. The Study Series teaches the same method across four live sessions for £119, for a student who'll run it themselves once shown.
 

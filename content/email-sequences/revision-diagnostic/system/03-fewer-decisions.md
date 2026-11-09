@@ -48,7 +48,7 @@ Most families answer this problem with a tutor. The UK average is about £50 an 
 
 That's £400 a month, per subject. And it goes into re-teaching content, which was never your real problem.
 
-The mentorship is £300 a month. Less than one subject's tutoring, spent on the way every subject runs, this year and next.
+The mentorship is £500 a month. Less than two subjects' tutoring, spent on the way every subject runs, this year and next.
 
 I only keep five places on it, because that's the honest limit of how many students I can work with this closely.
 

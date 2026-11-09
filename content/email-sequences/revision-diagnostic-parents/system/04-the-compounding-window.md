@@ -29,7 +29,7 @@ Fix it this month and {$diag_child_name|default('your child')} gets each of the 
 **Where that leaves the mentorship**
 I keep five places on the Top 1% Mentorship, where {$diag_child_name|default('your child')} works directly with me all month long, with fortnightly follow-ups. That's the honest limit of how closely I can work with each student.
 
-It's £300 a month, less than most families spend on tutoring for one subject, and it comes with my satisfaction guarantee on the first session. The detail is on [the Study System page](https://alevelaccelerators.com/study-systems/).
+It's £500 a month, less than many families spend on tutoring for two subjects, and it comes with my satisfaction guarantee on the first session. The detail is on [the Study System page](https://alevelaccelerators.com/study-systems/).
 
 If you think it might be right, the step is the free call. We look at the report side by side, and I'll tell you straight whether the mentorship fits {$diag_child_name|default('your child')}.
 

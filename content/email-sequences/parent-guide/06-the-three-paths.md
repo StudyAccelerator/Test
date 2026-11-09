@@ -40,7 +40,7 @@ If it's exam skills in Biology, Chemistry or Maths, the Subject Accelerator. Twe
 
 If it's the method itself, the Top 1% Mentorship. Your child works directly with me all month long: I build their study system with them, fortnightly follow-ups keep it running, and they can reach me between sessions whenever they're stuck.
 
-It's £300 a month, less than one subject's tutoring, and I only keep five places on it.
+It's £500 a month, less than two subjects' tutoring, and I only keep five places on it.
 
 Each one costs less than the tutoring it replaces, and each one treats the cause rather than the symptom. Both come with our satisfaction guarantee on the first session.
 

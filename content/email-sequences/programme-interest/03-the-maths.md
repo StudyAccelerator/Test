@@ -29,10 +29,10 @@ Two subjects are £629 and three are £849, so the bundles work out cheaper per 
 
 The difference from 1:1 is that the Accelerator is a small group. And the group is a strength in itself, because most students make the same mistakes, and watching them get fixed is training too.
 
-**The Top 1% Mentorship: £300 a month, working with me**
-Now set that against it. One subject's tutoring is £400 a month, and it goes on re-teaching content.
+**The Top 1% Mentorship: £500 a month, working with me**
+Now set that against it. Two subjects' tutoring is £800 a month, and it goes on re-teaching content.
 
-The mentorship is £300 a month all in. I build the student's study system with them.
+The mentorship is £500 a month all in, across every subject. I build the student's study system with them.
 
 Fortnightly follow-ups keep it running. And when they get stuck between sessions, they can reach me there and then.
 

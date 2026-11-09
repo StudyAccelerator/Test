@@ -3,8 +3,8 @@
 Send: Day 7
 Subject A: {$name}, The £50 An Hour Question
 Subject B: What Tutoring Money Buys, And What It Doesn't
-Preheader: £400 a month for a tutor, or £300 a month working directly with me. The sums in plain numbers.
-Goal: the money email, restructured to the Top 1% Mentorship on Waleed's 14 September instruction. The £400 a month per subject tutoring anchor against £300 a month all in. One CTA: the call.
+Preheader: £800 a month for two tutors, or £500 a month working directly with me. The sums in plain numbers.
+Goal: the money email, restructured to the Top 1% Mentorship on Waleed's 14 September instruction. The £400 a month per subject tutoring anchor against £500 a month all in (price raised to £500 on Waleed's 9 November 2026 ruling). One CTA: the call.
 Links: 3 (call button, study systems page, call in the PS)
 Revised: 6 September 2026 (Waleed's style pass: industry digs out)
 Revised: 13 September 2026 (email-writer voice and readability pass)
@@ -29,7 +29,7 @@ A tutor patches one subject while the method keeps wasting hours in all of them.
 The tutor isn't bad. The thing being treated just isn't the thing that's broken.
 
 **The mentorship, next to that**
-The Top 1% Mentorship is £300 a month. For less than one subject's tutoring, {$diag_child_name|default('your child')} works directly with me all month long.
+The Top 1% Mentorship is £500 a month. For less than two subjects' tutoring, {$diag_child_name|default('your child')} works directly with me all month long, on every subject they take.
 
 I build their study system with them. Fortnightly follow-ups keep it running. And between sessions, they can reach me whenever they're stuck.
 
