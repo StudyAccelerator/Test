@@ -1,6 +1,6 @@
 # W6 · What Tuesday was like
 
-Send: Thursday 12 November, 6pm UK (campaign to the workshop group)
+Send: Thursday 10 December, 6pm UK (first session moved to 9 December, Waleed, 11 November) (campaign to the workshop group)
 Subject A: {$name}, What Happened In The First Session
 Subject B: {$name}, The Hot Seat Question Everyone Had
 Preheader: The question that came up most on Wednesday, what I told them, and your place before Sunday's Marks Clinic.

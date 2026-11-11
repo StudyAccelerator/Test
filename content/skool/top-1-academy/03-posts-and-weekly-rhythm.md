@@ -45,27 +45,27 @@ Category: Hot Seat. Title: `Wednesday's Hot Seat is open: drop your problem here
 >
 > I'll take as many as the hour allows, in the order they land.
 
-### Wednesday 11 November, 5pm
+### Wednesday 9 December, 5pm
 
 Category: General. Title: `Live in two hours: the Priority Map, properly`
 
 > 7pm on Zoom, link in the Calendar tab. Have your priority map from Saturday in front of you, plus your mock dates if you know them. Cameras off is fine. If you can't make it live, the recording is in the Method Library tonight.
 
-### Wednesday 4 November
+### Wednesday 2 December
 
 Category: Marks Clinic. Title: `Sunday's Marks Clinic: upload your work by Saturday 6pm`
 
-> First Clinic is Saturday at 2pm. Upload a photo or PDF of one piece of real, marked work below: a past paper question you lost marks on, an essay, a plan a teacher commented on. Tell me the subject, the mark you got, and what you think went wrong.
+> First Clinic is Sunday 13 December at 10am. Upload a photo or PDF of one piece of real, marked work below: a past paper question you lost marks on, an essay, a plan a teacher commented on. Tell me the subject, the mark you got, and what you think went wrong.
 >
 > I'll take four to six on screen. Don't tidy it up first. The messy ones teach everyone the most.
 
-### Sunday 15 November, 12pm
+### Sunday 13 December, 12pm
 
-Category: General. Title: `Marks Clinic at 2pm: who's on screen`
+Category: General. Title: `Marks Clinic at 10am: who's on screen`
 
 > List the papers you'll cover (subject and question type, no names) and the live timed section planned for the second hour. Link in the Calendar tab.
 
-### Sunday 8 November
+### Sunday 6 December
 
 Category: Weekly Plans. Title: `Sunday Reset: how did week one go?`
 

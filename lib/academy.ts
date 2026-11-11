@@ -27,12 +27,18 @@ export const ACADEMY = {
      (Waleed, 30 October): end of Saturday 7 November, UK time (GMT). After
      this instant the page shows the standard price and link. Sessions moved
      the same day to Wednesday 7pm to 9pm and Sunday 10am to 12pm, first
-     session Wednesday 11 November (he is on nights the weekend of 7 and 8). */
+     session Wednesday 11 November (he is on nights the weekend of 7 and 8).
+     POSTPONED by Waleed on 11 November 2026: the first session is now
+     Wednesday 9 December (first Marks Clinic Sunday 13 December), so he can
+     fill the founding group through one-to-one calls first. `firstSessionISO`
+     lets the page say "the first live session is..." until that evening and
+     "the next Wednesday after you join" from then on. */
   foundingDeadlineISO: '2026-11-07T23:59:59+00:00',
   foundingDeadlineLabel: 'Saturday 7 November at 11:59pm',
 
-  firstSessionLabel: 'Wednesday 11 November',
-  firstClinicLabel: 'Sunday 15 November',
+  firstSessionISO: '2026-12-09T19:00:00+00:00',
+  firstSessionLabel: 'Wednesday 9 December',
+  firstClinicLabel: 'Sunday 13 December',
 
   sessions: [
     {
@@ -73,4 +79,9 @@ export const ACADEMY = {
    freeze). */
 export function foundingOpen(now: Date = new Date()): boolean {
   return now.getTime() < Date.parse(ACADEMY.foundingDeadlineISO)
+}
+
+/* True until the first live session has happened. */
+export function beforeFirstSession(now: Date = new Date()): boolean {
+  return now.getTime() < Date.parse(ACADEMY.firstSessionISO)
 }

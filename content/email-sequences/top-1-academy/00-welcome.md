@@ -7,7 +7,7 @@ Preheader: Thank you for joining. The community link, what to expect each week, 
 Goal: thank them, set what to expect, send them to the Skool community with the same email they paid with, promise access within 24 hours, restate both guarantees.
 Links: 2 (the Skool community in body and PS)
 Note: Waleed's brief, 31 October 2026. Loaded into automation 202397778692801649 "Academy: welcome (A0)" (manifest key academy-a0). Zoom links are deliberately not in this email: they live in the community calendar.
-Written: 31 October 2026
+Written: 31 October 2026. Revised 11 November 2026: first session postponed to Wednesday 9 December (Waleed), first Clinic Sunday 13 December; the dated line comes out once the sessions are running.
 
 ---
 
@@ -27,6 +27,10 @@ Sign up with the same email you paid with, so I can match you up. I let every me
 If 24 hours pass and you're still waiting, reply to this email and I'll sort it straight away.
 
 **2. What to expect every week**
+The first live session is Wednesday 9 December at 7pm, and the first Marks Clinic is Sunday 13 December at 10am.
+
+Until then, the community is open, the workshop replay is in the Classroom, and you can message me any time.
+
 Wednesday, 7pm to 9pm, is the Study Academy. For the first hour I teach one part of the study system properly. The second hour is the Hot Seat, where you bring your actual problem and we fix it live.
 
 Sunday, 10am to 12pm, is The Marks Clinic. You upload a piece of real marked work by Saturday evening, and I go through it on screen.
@@ -38,7 +42,7 @@ Say hello under the pinned post with your year, your subjects, and the one thing
 
 Watch lesson one of the Workshop Replay in the Classroom and finish your RAG list.
 
-Post one real problem in the Hot Seat before Wednesday 6pm.
+Post one real problem in the Hot Seat before the first session.
 
 **Your guarantees, in plain words**
 Come to your first week of sessions. If it isn't for you, reply to this email within 7 days and you get every penny back, no questions asked.

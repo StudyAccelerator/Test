@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { ACADEMY } from '@/lib/academy'
+import { ACADEMY, beforeFirstSession } from '@/lib/academy'
 import JoinButton, { useFounding } from '@/components/academy/join-button'
 
 /* The pricing block: standard price struck through, founding price large and
@@ -38,6 +38,10 @@ function countdownLabel(ms: number): string {
 
 export default function PriceCard() {
   const founding = useFounding()
+  const [notStarted, setNotStarted] = useState(true)
+  useEffect(() => {
+    setNotStarted(beforeFirstSession())
+  }, [])
   const left = useCountdown(ACADEMY.foundingDeadlineISO)
 
   return (
@@ -84,7 +88,10 @@ export default function PriceCard() {
                 <span className="pb-2 text-lg text-brand-cream/80">a month</span>
               </p>
               <p className="mt-5 text-lg leading-relaxed text-brand-cream/85">
-                Monthly, cancel any time. Your first live session is the next Wednesday after you join.
+                Monthly, cancel any time.{' '}
+                {notStarted
+                  ? `The first live session is ${ACADEMY.firstSessionLabel} at 7pm, and the first Marks Clinic is ${ACADEMY.firstClinicLabel} at 10am.`
+                  : 'Your first live session is the next Wednesday after you join.'}
               </p>
             </>
           )}
