@@ -42,7 +42,7 @@ Come to your first week of sessions. If it isn't for you, email me within 7 days
 
 After that it's monthly and you can cancel any time, with no notice period.
 
-The founding price of £100 a month closes on Saturday night at 11:59pm, and the first session is Wednesday 11 November at 7pm.
+The founding price of £100 a month closes on Saturday night at 11:59pm, and the first session is Wednesday 9 December at 7pm.
 
 [LINK: Take your founding place in the Top 1% Academy -> https://alevelaccelerators.com/top-1-academy/]
 

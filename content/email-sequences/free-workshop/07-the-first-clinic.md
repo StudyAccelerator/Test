@@ -1,6 +1,6 @@
 # W7 · What the Marks Clinic found
 
-Send: Monday 16 November, 6pm UK (campaign to the workshop group)
+Send: Monday 14 December, 6pm UK (first Clinic moved to 13 December, Waleed, 11 November) (campaign to the workshop group)
 Subject A: {$name}, The Mark Everyone Lost On Sunday
 Subject B: {$name}, What The First Marks Clinic Found
 Preheader: One pattern from the first Clinic that's probably costing you marks too, and how to fix it this week.
