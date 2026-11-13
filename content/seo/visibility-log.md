@@ -6,6 +6,23 @@ Format per entry: GSC totals, top movers, SERP spot checks, AEO probes, indexati
 
 ---
 
+## 2026-11-13 (on-demand snapshot after Waleed ended the Pragya contract; GSC and GA4 read live via Chrome)
+
+**Google Search Console** (sc-domain:alevelaccelerators.com, last 28 days, 14 October to 10 November 2026, ground truth): **264 clicks, 31,900 impressions, CTR 0.8%, average position 8.8, 744 queries**, 42 pages. Against 17 September (234 clicks, 30,900 impressions, position 9.7, 636 queries): clicks +13%, impressions +3%, position up 0.9, queries +17%. **Organic has plateaued**: the July to September climb (about 4x clicks, 10x impressions) has flattened into slow gains since the last content wave on 24 September.
+
+- **Where the clicks come from:** /revision-tracker/ takes 122 of 264 clicks (46%) on planner and timetable queries ("a level revision planner" 23 clicks at position 4.5, "a level revision timetable" 9 at 6.9). The planner/timetable cluster: 52 queries, 1,216 impressions, 55 clicks. These are students.
+- **Big impression pages, few clicks:** hours-a-day post 7,383 impressions (position 5.9, 22 clicks), resit hub 4,888 (10.3, 19), predicted grades 4,144 (8.0, 24), UCAS personal statement 1,884 (8.0, 5), predicted-grades-lower 1,739 (7.6, 16), blurting 1,654 (9.6, 8). The resit query cluster alone is 146 queries and 1,842 impressions with zero query-level clicks.
+- **Buyer queries:** 125 queries containing tutor, tuition or tutoring: 1,271 impressions, **0 clicks**, impression-weighted position 25.9. The one buyer page near page 1 is /blog/how-much-does-a-level-tutoring-cost/ (2,069 impressions, position 14.0, 9 clicks) on price queries ("a level maths tutor prices" 82 impressions at 19.8, "one on one a level tutoring" 80 at 14.8). Subject pages: /a-level-chemistry-tutoring/ position 62.1 (144 impressions), biology 26.2, maths 6.3 (12 impressions). /revision-diagnostic/ gets 9 search impressions: the money page has no organic presence.
+- **Links report:** 133 external links. Top linking sites golden-forum.com 48, writeupcafe.com 4, behance.net 3, bresdel.com 3. The 48 from one forum are the Pragya-era profile/forum layer; Google normally ignores such links, no disavow needed.
+
+**GA4** (traffic acquisition, last 28 days, 16 October to 12 November, all channels): 2,110 sessions, 304 key events. Paid Social 904 sessions / 41 key events; Direct 754 / 215 (workshop and resumed diagnostic runs land here); **Organic Search 341 sessions / 46 key events** (61% engagement, 1m 48s, the most engaged channel); Referral 68 / **0**; Organic Social 38 / 2; AI Assistant 4 / 0. Organic key events are overwhelmingly revision tracker sign-ups by students (the tracker fires generate_lead); MailerLite still records no diagnostic lead with Google as its source (3 November check).
+
+**Google Ads:** no account exists on either Google login (checked 13 November). The 2 October search test was never launched.
+
+**Reading:** organic is a real, engaged, free student audience that has stopped growing, and it is not yet producing parent buyers. Referral traffic, the channel the link building fed, produced zero key events. Waleed ended Pragya's contract on 13 November (round 14 verdict).
+
+---
+
 ## 2026-11-03 (buyer check: which channel produces leads and payers, from MailerLite)
 
 **Question asked by Waleed: are the organic impressions people who actually buy?** Answered from the lead records, not GSC (still unread; this cloud session has no Chrome and no Remote Control folder on his Mac).
