@@ -208,3 +208,23 @@ She sent a 26 page "Management Proposal" PDF for Google Ads plus a Keyword Plann
 **The proposal is a recycled template, not work for us.** Page 8 presents "your competitor" as everythingkitchens.com, a kitchen retailer left in from a previous client. It pitches Shopping campaigns with Merchant Centre and shipping setup (not applicable to tutoring), Display, Video and Demand Gen, and garbled filler text. The budget page proposes £60 a day (£1,800 a month) and forecasts "22 to 25 conversions a month", a number nobody can forecast pre-launch and an 11 percent click to conversion assumption with no basis. The process page asks for access to the Google Ads account, Google Analytics, and Google Tag Manager setup "into your website". Ruled: GA4, tag and site access are never handed over (only GSC read access exists, 20 September); conversion tracking is already wired and key events live.
 
 **The decision drafted for Waleed:** run Google Ads in house per the existing spec (£10 a day test, his own account, GA4 key events imported); take her keyword research with thanks; decline management, decline all access; do not widen her remit while the one month backlink execution test is running. Reply drafted accordingly.
+
+## Round 14 (13 November 2026): the five October and November reports, and the recommendation to end
+
+Waleed uploaded her five weekly spreadsheets (13, 19 and 27 October, 2 and 9 November) and asked whether to continue. 120 links reported, 118 different pages. Every one was fetched directly and in a real browser on 13 November and checked for a live link to the site, nofollow status, the page's robots setting and address data.
+
+| Verdict | Pages |
+|---|---|
+| Indexable followed link to the site (could help rankings) | 37 |
+| Links, but nofollow or the page is noindexed | 45 |
+| No link to the site at all (tier-two posts linking to her own placements) | 19 |
+| Dead, empty or behind a bot wall | 17 |
+
+- **Zero placements on the 2 October target list.** The brief was ignored for six weeks after Waleed's 24 September condition.
+- 30 of the 37 useful links are pages she created herself under the brand on free platforms. The other 7 are open-submission sites (two bookmarking sites, one directory, posteezy, and three Whizolosophy posts filed under Crime and Punishment and Poetry).
+- 30 links reported as Do Follow are not.
+- **Standing rule 2 broken in October:** the website versions of the articles were published verbatim (8 pages copy 20 to 90 percent of the live predicted grades post, measured by 8-word overlap). From 2 November she used the approved pack 2 twins.
+- Privacy clean: no home address on any listing (they read "Surrey, London" or the business email).
+- **Results:** no MailerLite lead ever recorded a referrer from any of her domains; no diagnostic lead since 3 October recorded Google; the nine paying Academy members came from the KCL workshop (5) and 4 with no source recorded, none from search. Tutor-term SERP spot checks (estimates): site absent, held by The Profs, MyTutor, Tutorful, GoStudent, StudyMind, Tutopiya.
+
+**Recommendation to Waleed:** end the contract; keep SEO in house aimed at parent tutor searches; spend the same £70 a week on the Google Ads tutor-term test (content/google-ads/2026-10-02-search-test.md) to learn whether tutor searchers buy; get the few real editorial links himself; read Search Console from his Mac to set a baseline; ship first-touch attribution. The verdict PDF and the drafted closing reply (asks her to remove the verbatim copies and hand over the list of accounts made under the brand) are in content/seo/2026-11-13-pragya-verdict/. The decision is Waleed's; record it here and in CLAUDE.md when he makes it.
